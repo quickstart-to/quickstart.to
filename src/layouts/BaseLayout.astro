@@ -11,6 +11,7 @@ interface Props {
   lang?: Lang;
   canonicalUrl?: string;
   alternateUrls?: { lang: Lang; url: string }[];
+  id?: string;
 }
 
 const {
@@ -19,6 +20,7 @@ const {
   lang = defaultLang,
   canonicalUrl,
   alternateUrls = [],
+  id,
 } = Astro.props;
 
 const fullTitle = title === 'quickstart.to' ? title : `${title} | quickstart.to`;
@@ -28,6 +30,20 @@ const fullTitle = title === 'quickstart.to' ? title : `${title} | quickstart.to`
 <html lang={lang}>
   <head>
     <meta charset="UTF-8" />
+    <!-- Prevent flash of wrong theme -->
+    <script is:inline>
+      (function() {
+        try {
+          const stored = localStorage.getItem('theme-preference') || 'auto';
+          let theme = stored;
+          if (stored === 'auto') {
+            theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+          }
+          document.documentElement.setAttribute('data-theme', theme);
+          document.documentElement.setAttribute('data-theme-preference', stored);
+        } catch {}
+      })();
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
@@ -56,10 +72,73 @@ const fullTitle = title === 'quickstart.to' ? title : `${title} | quickstart.to`
     <meta name="twitter:description" content={description} />
   </head>
   <body>
-    <Header lang={lang} />
+    <Header lang={lang} id={id} />
     <main>
       <slot />
     </main>
     <Footer lang={lang} />
+
+    <script is:inline>
+    // Code block copy functionality
+    (function() {
+      function initCodeCopy() {
+        const codeBlocks = document.querySelectorAll('pre.astro-code');
+
+        codeBlocks.forEach((pre) => {
+          // Skip if already wrapped
+          if (pre.parentElement?.classList.contains('code-block-wrapper')) return;
+
+          // Create wrapper
+          const wrapper = document.createElement('div');
+          wrapper.className = 'code-block-wrapper';
+          pre.parentNode?.insertBefore(wrapper, pre);
+          wrapper.appendChild(pre);
+
+          // Create copy button
+          const copyBtn = document.createElement('button');
+          copyBtn.className = 'code-copy-btn';
+          copyBtn.setAttribute('aria-label', 'Copy code');
+          copyBtn.innerHTML = `
+            <svg class="icon-copy" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+            <svg class="icon-check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          `;
+
+          wrapper.appendChild(copyBtn);
+
+          // Click handler
+          copyBtn.addEventListener('click', async () => {
+            const code = pre.querySelector('code');
+            if (!code) return;
+
+            try {
+              await navigator.clipboard.writeText(code.textContent || '');
+              copyBtn.classList.add('copied');
+
+              setTimeout(() => {
+                copyBtn.classList.remove('copied');
+              }, 2000);
+            } catch (err) {
+              console.error('Failed to copy:', err);
+            }
+          });
+        });
+      }
+
+      // Initialize on page load
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initCodeCopy);
+      } else {
+        initCodeCopy();
+      }
+
+      // Support Astro page transitions
+      document.addEventListener('astro:page-load', initCodeCopy);
+    })();
+    </script>
   </body>
 </html>

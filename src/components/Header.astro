@@ -1,26 +1,31 @@
 ---
 import { type Lang, languages } from '@i18n/config';
 import { t } from '@utils/language';
+import ThemeToggle from './ThemeToggle.astro';
 
 interface Props {
   lang: Lang;
+  id?: string;
 }
 
-const { lang } = Astro.props;
+const { lang, id } = Astro.props;
 ---
 
 <header class="header">
   <div class="header-container container">
     <a href="/" class="logo">
       <span class="logo-text">quickstart.to</span>
+      {id && <span class="logo-separator">/</span>}
+      {id && <span class="logo-id">{id}</span>}
     </a>
 
-    <nav class="nav">
+    <nav class="nav nav-desktop">
       <a href="/" class="nav-link">{t(lang, 'nav.home')}</a>
       <a href="/contributors" class="nav-link">{t(lang, 'nav.contributors')}</a>
     </nav>
 
     <div class="header-actions">
+      <ThemeToggle />
       <a
         href="https://github.com/quickstart-to/quickstart.to"
         target="_blank"
@@ -40,9 +45,41 @@ const { lang } = Astro.props;
           ></path>
         </svg>
       </a>
+
+      <button class="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false">
+        <svg class="icon-menu" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+        <svg class="icon-close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
     </div>
   </div>
+
+  <nav class="nav-mobile">
+    <a href="/" class="nav-link">{t(lang, 'nav.home')}</a>
+    <a href="/contributors" class="nav-link">{t(lang, 'nav.contributors')}</a>
+  </nav>
 </header>
+
+<script is:inline>
+(function() {
+  const menuBtn = document.querySelector('.mobile-menu-btn');
+  const mobileNav = document.querySelector('.nav-mobile');
+
+  if (menuBtn && mobileNav) {
+    menuBtn.addEventListener('click', () => {
+      const isOpen = mobileNav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', isOpen.toString());
+      menuBtn.classList.toggle('open', isOpen);
+    });
+  }
+})();
+</script>
 
 <style>
   .header {
@@ -72,6 +109,17 @@ const { lang } = Astro.props;
   .logo:hover {
     text-decoration: none;
     color: var(--color-primary);
+  }
+
+  .logo-separator {
+    color: var(--color-text-secondary);
+    margin: 0 0.125rem;
+    font-weight: 400;
+  }
+
+  .logo-id {
+    color: var(--color-primary);
+    font-weight: 600;
   }
 
   .nav {
@@ -106,9 +154,80 @@ const { lang } = Astro.props;
     color: var(--color-text);
   }
 
+  /* Mobile menu button */
+  .mobile-menu-btn {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: var(--color-text-secondary);
+    cursor: pointer;
+  }
+
+  .mobile-menu-btn:hover {
+    color: var(--color-text);
+  }
+
+  .mobile-menu-btn .icon-close {
+    display: none;
+  }
+
+  .mobile-menu-btn.open .icon-menu {
+    display: none;
+  }
+
+  .mobile-menu-btn.open .icon-close {
+    display: block;
+  }
+
+  /* Mobile dropdown menu */
+  .nav-mobile {
+    display: none;
+    flex-direction: column;
+    padding: 0.75rem 1rem;
+    border-top: 1px solid var(--color-border);
+    background-color: var(--color-bg);
+  }
+
+  .nav-mobile .nav-link {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .nav-mobile .nav-link:last-child {
+    border-bottom: none;
+  }
+
   @media (max-width: 640px) {
-    .nav {
+    .nav-desktop {
       display: none;
+    }
+
+    .mobile-menu-btn {
+      display: flex;
+    }
+
+    .nav-mobile.open {
+      display: flex;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .logo {
+      font-size: 1.125rem;
+    }
+
+    .header-actions {
+      gap: 0.5rem;
+    }
+
+    .github-link svg {
+      width: 20px;
+      height: 20px;
     }
   }
 </style>
