@@ -1,0 +1,164 @@
+---
+---
+
+<div class="theme-toggle" data-theme-toggle>
+  <button
+    class="theme-btn"
+    data-theme="auto"
+    title="Auto (follow system)"
+    aria-label="Auto theme"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+      <line x1="8" y1="21" x2="16" y2="21"></line>
+      <line x1="12" y1="17" x2="12" y2="21"></line>
+    </svg>
+  </button>
+  <button
+    class="theme-btn"
+    data-theme="light"
+    title="Light mode"
+    aria-label="Light theme"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </button>
+  <button
+    class="theme-btn"
+    data-theme="dark"
+    title="Dark mode"
+    aria-label="Dark theme"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+  </button>
+</div>
+
+<script is:inline>
+(function() {
+  const STORAGE_KEY = 'theme-preference';
+
+  function getStoredTheme() {
+    try {
+      return localStorage.getItem(STORAGE_KEY) || 'auto';
+    } catch {
+      return 'auto';
+    }
+  }
+
+  function getSystemTheme() {
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+
+  function getEffectiveTheme(preference) {
+    if (preference === 'auto') {
+      return getSystemTheme();
+    }
+    return preference;
+  }
+
+  function applyTheme(preference) {
+    const effectiveTheme = getEffectiveTheme(preference);
+    document.documentElement.setAttribute('data-theme', effectiveTheme);
+    document.documentElement.setAttribute('data-theme-preference', preference);
+
+    // Update button states
+    document.querySelectorAll('[data-theme-toggle] .theme-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.theme === preference);
+    });
+  }
+
+  function setTheme(preference) {
+    try {
+      localStorage.setItem(STORAGE_KEY, preference);
+    } catch {}
+    applyTheme(preference);
+  }
+
+  // Initialize buttons
+  function initButtons() {
+    const preference = getStoredTheme();
+    applyTheme(preference);
+
+    document.querySelectorAll('[data-theme-toggle] .theme-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        setTheme(btn.dataset.theme);
+      });
+    });
+  }
+
+  // Listen for system theme changes
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+    if (getStoredTheme() === 'auto') {
+      applyTheme('auto');
+    }
+  });
+
+  // Initialize
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initButtons);
+  } else {
+    initButtons();
+  }
+
+  // Support Astro page transitions
+  document.addEventListener('astro:page-load', initButtons);
+})();
+</script>
+
+<style>
+  .theme-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.125rem;
+    padding: 0.25rem;
+    background-color: var(--color-bg-secondary);
+    border-radius: var(--radius);
+  }
+
+  .theme-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.75rem;
+    height: 1.75rem;
+    border: none;
+    background: transparent;
+    color: var(--color-text-secondary);
+    border-radius: calc(var(--radius) - 0.125rem);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .theme-btn:hover {
+    color: var(--color-text);
+    background-color: var(--color-bg);
+  }
+
+  .theme-btn.active {
+    color: var(--color-primary);
+    background-color: var(--color-bg);
+  }
+
+  @media (max-width: 480px) {
+    .theme-btn {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+
+    .theme-btn svg {
+      width: 14px;
+      height: 14px;
+    }
+  }
+</style>

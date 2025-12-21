@@ -39,6 +39,7 @@ const alternateUrls = availableLanguages.map((l) => ({
   title={title}
   description={description}
   lang={lang}
+  id={id}
   canonicalUrl={canonicalUrl}
   alternateUrls={alternateUrls}
 >
@@ -121,5 +122,33 @@ const alternateUrls = availableLanguages.map((l) => ({
     margin-top: 3rem;
     padding-top: 2rem;
     border-top: 1px solid var(--color-border);
+  }
+
+  @media (max-width: 640px) {
+    .quickstart {
+      padding: 1.5rem 0.75rem;
+    }
+
+    .quickstart-header {
+      margin-bottom: 1.5rem;
+    }
+
+    .quickstart-meta {
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .quickstart-description {
+      font-size: 1rem;
+    }
+
+    .quickstart-content-wrapper {
+      gap: 1.5rem;
+    }
+
+    .quickstart-footer {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+    }
   }
 </style>
