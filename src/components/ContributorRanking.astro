@@ -22,22 +22,18 @@ const contributors = await getAllContributors();
           <ContributorAvatar
             name={contributor.name}
             avatar={contributor.avatar}
-            github={contributor.github}
+            login={contributor.login}
             size="lg"
           />
           <div class="ranking-info">
             <h3 class="ranking-name">
-              {contributor.github ? (
-                <a
-                  href={`https://github.com/${contributor.github}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {contributor.name}
-                </a>
-              ) : (
-                contributor.name
-              )}
+              <a
+                href={`https://github.com/${contributor.login}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {contributor.name}
+              </a>
             </h3>
             <div class="ranking-stats">
               <span>

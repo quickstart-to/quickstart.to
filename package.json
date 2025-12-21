@@ -7,6 +7,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "prebuild": "tsx scripts/contributors/extract.ts",
+    "contributors": "tsx scripts/contributors/extract.ts",
+    "contributors:full": "FORCE_FULL_FETCH=1 tsx scripts/contributors/extract.ts",
     "new": "tsx scripts/new-quickstart.ts",
     "validate": "tsx scripts/validate/index.ts",
     "astro": "astro"

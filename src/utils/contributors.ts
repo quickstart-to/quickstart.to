@@ -6,12 +6,10 @@ async function loadCache(): Promise<ContributorCache> {
   if (cache) return cache;
 
   try {
-    // In production, this will be bundled
     const data = await import('../../scripts/contributors/cache.json');
     cache = data.default as ContributorCache;
     return cache;
   } catch {
-    // Return empty cache if file doesn't exist
     return {
       generatedAt: new Date().toISOString(),
       contributors: [],
@@ -30,10 +28,10 @@ export async function getContributorsForFile(filePath: string): Promise<Contribu
 
   // Normalize path
   const normalizedPath = filePath.replace(/^\//, '');
-  const emails = data.fileContributors[normalizedPath] ?? [];
+  const logins = data.fileContributors[normalizedPath] ?? [];
 
-  return emails
-    .map((email) => data.contributors.find((c) => c.email === email))
+  return logins
+    .map((login) => data.contributors.find((c) => c.login === login))
     .filter(Boolean) as Contributor[];
 }
 

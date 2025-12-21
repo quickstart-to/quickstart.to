@@ -6,10 +6,10 @@ export interface ContributorFile {
 }
 
 export interface Contributor {
+  login: string;
   name: string;
-  email: string;
-  github?: string;
-  avatar?: string;
+  avatar: string;
+  htmlUrl: string;
   files: ContributorFile[];
   totalCommits: number;
   totalAdditions: number;
@@ -19,6 +19,7 @@ export interface Contributor {
 
 export interface ContributorCache {
   generatedAt: string;
+  lastCommitSha?: string;
   contributors: Contributor[];
-  fileContributors: Record<string, string[]>; // filePath -> contributor emails
+  fileContributors: Record<string, string[]>; // filePath -> contributor logins
 }

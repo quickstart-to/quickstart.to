@@ -1,182 +1,186 @@
-import { execSync } from 'child_process';
 import { writeFileSync, readFileSync, existsSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import { GitHubAPIClient, type GitHubCommit } from './github-api.js';
 import type { Contributor, ContributorCache, ContributorFile } from './types.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const CACHE_PATH = join(__dirname, 'cache.json');
-const CONTENT_GLOB = 'src/content/**/*.md';
+const CONTENT_PREFIX = 'src/content/';
 
-function exec(cmd: string): string {
+function loadCache(): ContributorCache | null {
+  if (!existsSync(CACHE_PATH)) {
+    return null;
+  }
+
   try {
-    return execSync(cmd, { encoding: 'utf-8', cwd: process.cwd() }).trim();
+    const content = readFileSync(CACHE_PATH, 'utf-8');
+    return JSON.parse(content) as ContributorCache;
   } catch {
-    return '';
+    return null;
   }
 }
 
-function parseMailmap(): Map<string, string> {
-  const mailmapPath = join(process.cwd(), '.mailmap');
-  const map = new Map<string, string>();
+function saveCache(cache: ContributorCache): void {
+  writeFileSync(CACHE_PATH, JSON.stringify(cache, null, 2));
+}
 
-  if (!existsSync(mailmapPath)) {
-    return map;
-  }
+async function fetchCommitDetails(
+  client: GitHubAPIClient,
+  commits: GitHubCommit[]
+): Promise<GitHubCommit[]> {
+  const detailed: GitHubCommit[] = [];
 
-  const content = readFileSync(mailmapPath, 'utf-8');
-  const lines = content.split('\n').filter((l) => l.trim() && !l.startsWith('#'));
+  for (let i = 0; i < commits.length; i++) {
+    const commit = commits[i];
+    console.log(`Fetching commit details ${i + 1}/${commits.length}: ${commit.sha.slice(0, 7)}`);
 
-  for (const line of lines) {
-    // Format: Proper Name <proper@email> <commit@email>
-    const match = line.match(/<([^>]+)>\s+<([^>]+)>/);
-    if (match) {
-      map.set(match[2], match[1]);
+    try {
+      const detail = await client.getCommitDetail(commit.sha);
+      detailed.push(detail);
+    } catch (error) {
+      console.warn(`Failed to fetch details for ${commit.sha}: ${error}`);
     }
   }
 
-  return map;
+  return detailed;
 }
 
-function getGitHubFromEmail(email: string): string | undefined {
-  // GitHub noreply format: username@users.noreply.github.com
-  const match = email.match(/^([^@]+)@users\.noreply\.github\.com$/);
-  if (match) {
-    return match[1];
-  }
-
-  // Also check for number+username format
-  const match2 = email.match(/^\d+\+([^@]+)@users\.noreply\.github\.com$/);
-  if (match2) {
-    return match2[1];
-  }
-
-  return undefined;
-}
-
-function getContributors(): Contributor[] {
-  const mailmap = parseMailmap();
+function processCommits(commits: GitHubCommit[]): {
+  contributors: Contributor[];
+  fileContributors: Record<string, string[]>;
+} {
   const contributorMap = new Map<string, Contributor>();
 
-  // Get all commits with file stats for content files
-  const logOutput = exec(
-    `git log --format='COMMIT:%an|%ae|%aI' --numstat -- '${CONTENT_GLOB}'`
-  );
+  for (const commit of commits) {
+    // Skip commits without GitHub author association
+    if (!commit.author) {
+      continue;
+    }
 
-  if (!logOutput) {
-    console.log('No git history found for content files');
-    return [];
-  }
+    // Filter content files
+    const contentFiles = commit.files?.filter(
+      (f) => f.filename.startsWith(CONTENT_PREFIX) && f.filename.endsWith('.md')
+    );
 
-  let currentAuthor: { name: string; email: string; date: string } | null = null;
+    if (!contentFiles || contentFiles.length === 0) {
+      continue;
+    }
 
-  for (const line of logOutput.split('\n')) {
-    if (line.startsWith('COMMIT:')) {
-      const parts = line.slice(7).split('|');
-      if (parts.length >= 3) {
-        currentAuthor = {
-          name: parts[0],
-          email: mailmap.get(parts[1]) ?? parts[1],
-          date: parts[2],
-        };
-      }
-    } else if (currentAuthor && line.trim()) {
-      const [additions, deletions, filePath] = line.split('\t');
-      if (!filePath || !filePath.startsWith('src/content/')) continue;
+    const login = commit.author.login;
+    let contributor = contributorMap.get(login);
 
-      const email = currentAuthor.email;
-      let contributor = contributorMap.get(email);
+    if (!contributor) {
+      contributor = {
+        login,
+        name: commit.commit.author.name,
+        avatar: commit.author.avatar_url,
+        htmlUrl: commit.author.html_url,
+        files: [],
+        totalCommits: 0,
+        totalAdditions: 0,
+        totalDeletions: 0,
+        lastActive: commit.commit.author.date,
+      };
+      contributorMap.set(login, contributor);
+    }
 
-      if (!contributor) {
-        contributor = {
-          name: currentAuthor.name,
-          email,
-          github: getGitHubFromEmail(email),
-          files: [],
-          totalCommits: 0,
-          totalAdditions: 0,
-          totalDeletions: 0,
-          lastActive: currentAuthor.date,
-        };
-        contributorMap.set(email, contributor);
-      }
+    // Update last active
+    if (commit.commit.author.date > contributor.lastActive) {
+      contributor.lastActive = commit.commit.author.date;
+    }
 
-      // Update last active
-      if (currentAuthor.date > contributor.lastActive) {
-        contributor.lastActive = currentAuthor.date;
-      }
+    // Process each content file
+    for (const file of contentFiles) {
+      let fileEntry = contributor.files.find((f) => f.path === file.filename);
 
-      // Find or create file entry
-      let fileEntry = contributor.files.find((f) => f.path === filePath);
       if (!fileEntry) {
-        fileEntry = { path: filePath, commits: 0, additions: 0, deletions: 0 };
+        fileEntry = { path: file.filename, commits: 0, additions: 0, deletions: 0 };
         contributor.files.push(fileEntry);
       }
 
-      const add = parseInt(additions) || 0;
-      const del = parseInt(deletions) || 0;
-
       fileEntry.commits++;
-      fileEntry.additions += add;
-      fileEntry.deletions += del;
+      fileEntry.additions += file.additions;
+      fileEntry.deletions += file.deletions;
 
       contributor.totalCommits++;
-      contributor.totalAdditions += add;
-      contributor.totalDeletions += del;
+      contributor.totalAdditions += file.additions;
+      contributor.totalDeletions += file.deletions;
     }
   }
 
-  // Set avatar URLs for GitHub users
+  // Build file contributors map
+  const fileContributors: Record<string, Set<string>> = {};
+
   for (const contributor of contributorMap.values()) {
-    if (contributor.github) {
-      contributor.avatar = `https://github.com/${contributor.github}.png?size=80`;
+    for (const file of contributor.files) {
+      if (!fileContributors[file.path]) {
+        fileContributors[file.path] = new Set();
+      }
+      fileContributors[file.path].add(contributor.login);
     }
   }
 
-  // Sort by total commits (descending)
-  return Array.from(contributorMap.values()).sort(
+  // Convert Sets to Arrays
+  const fileContributorsArray: Record<string, string[]> = {};
+  for (const [path, logins] of Object.entries(fileContributors)) {
+    fileContributorsArray[path] = Array.from(logins);
+  }
+
+  // Sort contributors by total commits
+  const contributors = Array.from(contributorMap.values()).sort(
     (a, b) => b.totalCommits - a.totalCommits
   );
+
+  return { contributors, fileContributors: fileContributorsArray };
 }
 
-function buildFileContributorMap(contributors: Contributor[]): Record<string, string[]> {
-  const fileMap: Record<string, Set<string>> = {};
+async function main() {
+  const forceFullFetch = process.env.FORCE_FULL_FETCH === '1';
+  const client = new GitHubAPIClient();
+  const existingCache = loadCache();
 
-  for (const contributor of contributors) {
-    for (const file of contributor.files) {
-      if (!fileMap[file.path]) {
-        fileMap[file.path] = new Set();
-      }
-      fileMap[file.path].add(contributor.email);
+  console.log('Extracting contributors from GitHub API...');
+  console.log(`Token: ${process.env.GITHUB_TOKEN ? 'provided' : 'not provided'}`);
+
+  let commits: GitHubCommit[];
+
+  if (forceFullFetch || !existingCache?.lastCommitSha) {
+    console.log('Performing full fetch...');
+    const allCommits = await client.getAllCommits();
+    commits = await fetchCommitDetails(client, allCommits);
+  } else {
+    console.log(`Incremental fetch since ${existingCache.lastCommitSha.slice(0, 7)}...`);
+    const newCommits = await client.getCommitsSince(existingCache.lastCommitSha);
+
+    if (newCommits.length === 0) {
+      console.log('No new commits found.');
+      return;
     }
+
+    commits = await fetchCommitDetails(client, newCommits);
   }
 
-  // Convert Sets to Arrays and sort by contribution
-  const result: Record<string, string[]> = {};
-  for (const [path, emails] of Object.entries(fileMap)) {
-    result[path] = Array.from(emails);
-  }
-
-  return result;
-}
-
-function main() {
-  console.log('Extracting contributors from git history...');
-
-  const contributors = getContributors();
-  const fileContributors = buildFileContributorMap(contributors);
+  const { contributors, fileContributors } = processCommits(commits);
 
   const cache: ContributorCache = {
     generatedAt: new Date().toISOString(),
+    lastCommitSha: commits[0]?.sha,
     contributors,
     fileContributors,
   };
 
-  writeFileSync(CACHE_PATH, JSON.stringify(cache, null, 2));
+  saveCache(cache);
 
+  const rateLimit = client.getRateLimitInfo();
+  console.log(`\nDone!`);
   console.log(`Found ${contributors.length} contributors`);
   console.log(`Mapped ${Object.keys(fileContributors).length} content files`);
+  console.log(`API rate limit remaining: ${rateLimit.remaining}`);
   console.log(`Cache written to ${CACHE_PATH}`);
 }
 
-main();
+main().catch((error) => {
+  console.error('Error:', error);
+  process.exit(1);
+});

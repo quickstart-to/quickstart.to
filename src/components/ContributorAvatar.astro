@@ -2,11 +2,11 @@
 interface Props {
   name: string;
   avatar?: string;
-  github?: string;
+  login?: string;
   size?: 'sm' | 'md' | 'lg';
 }
 
-const { name, avatar, github, size = 'md' } = Astro.props;
+const { name, avatar, login, size = 'md' } = Astro.props;
 
 const sizeClass = {
   sm: 'avatar-sm',
@@ -14,7 +14,7 @@ const sizeClass = {
   lg: 'avatar-lg',
 }[size];
 
-const href = github ? `https://github.com/${github}` : undefined;
+const href = login ? `https://github.com/${login}` : undefined;
 const initials = name
   .split(' ')
   .map((n) => n[0])
