@@ -109,36 +109,89 @@ async function main() {
     ? tagsInput.split(',').map((t) => t.trim()).filter(Boolean)
     : [];
 
-  // Generate content
-  const content = `---
+  // Generate content based on category
+  const techContent = `---
 title: "${title}"
 description: "${description}"
 tags: [${tags.map((t) => `"${t}"`).join(', ')}]
 ---
 
-## Overview
+## TL;DR
 
-Brief introduction to ${title}.
+**What**: One-line definition of ${title}.
 
-## Prerequisites
+**Why**: What problem it solves.
 
-- Prerequisite 1
-- Prerequisite 2
+## Quick Start
 
-## Steps
+\`\`\`bash
+# Install
+brew install example
 
-### Step 1: Getting Started
+# Run
+example init
+\`\`\`
 
-Your first step here.
+## Cheatsheet
 
-### Step 2: Next Step
+| Command | Description |
+|---------|-------------|
+| \`example start\` | Start service |
+| \`example stop\` | Stop service |
+| \`example status\` | Check status |
 
-Continue with the next step.
+## Gotchas
 
-## Summary
+### Common Issue
 
-Quick recap of what was accomplished.
+How to fix it.
+
+## Next Steps
+
+- [Official Docs](https://example.com/docs)
 `;
+
+  const lifeContent = `---
+title: "${title}"
+description: "${description}"
+tags: [${tags.map((t) => `"${t}"`).join(', ')}]
+---
+
+## TL;DR
+
+**What**: One-line definition of ${title}.
+
+**Why**: Why it matters.
+
+## Quick Start
+
+**Prepare**:
+- Item 1
+- Item 2
+
+**Steps**:
+1. First step
+2. Second step
+3. Third step
+
+## Cheatsheet
+
+- **Tip 1**: Description
+- **Tip 2**: Description
+- **Tip 3**: Description
+
+## Gotchas
+
+### Common Mistake
+
+How to avoid or fix it.
+
+## Next Steps
+
+- [Learn More](https://example.com)
+`;
+
+  const content = category === 'tech' ? techContent : lifeContent;
 
   writeFileSync(langFile, content);
   console.log(`\n✅ Created: ${langFile}\n`);

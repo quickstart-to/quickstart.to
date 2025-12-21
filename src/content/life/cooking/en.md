@@ -4,37 +4,49 @@ description: "Learn fundamental cooking techniques in 5 minutes"
 tags: ["cooking", "food"]
 ---
 
-## Overview
+## TL;DR
 
-Master the basics of cooking to prepare simple, delicious meals.
+**What**: Essential cooking techniques everyone should know.
 
-## What You'll Need
+**Why**: Save money, eat healthier, impress your friends.
 
-- A stove or hot plate
-- Basic cookware (pan, pot)
-- Cooking utensils (spatula, knife)
+## Quick Start
 
-## Steps
+**Prepare**:
+- Pan or pot
+- Spatula, knife
+- Oil, salt, pepper
 
-### Step 1: Heat Control
+**Steps**:
+1. Heat pan over medium heat
+2. Add a bit of oil
+3. Add food when oil shimmers
+4. Season while cooking
+5. Don't flip too often
 
-Learn the difference between low, medium, and high heat:
-- **Low**: Simmering, melting
-- **Medium**: Most cooking
-- **High**: Searing, boiling
+## Cheatsheet
 
-### Step 2: Basic Techniques
+- **Low heat**: Simmering, melting butter, slow cooking
+- **Medium heat**: Most cooking - eggs, vegetables, sauces
+- **High heat**: Searing meat, boiling water, stir-frying
+- **Oil shimmers**: Ready to cook
+- **Meat sizzles**: Don't flip yet, wait for release
 
-1. **Sautéing**: Cook quickly in a little oil
-2. **Boiling**: Cook in water at 100°C/212°F
-3. **Simmering**: Cook just below boiling
+## Gotchas
 
-## Tips
+### Food sticking to pan
 
-- Always preheat your pan
-- Don't overcrowd the pan
-- Season as you cook, not just at the end
+Pan wasn't hot enough. Preheat properly, oil should shimmer.
 
-## Summary
+### Vegetables are soggy
 
-You now know the fundamentals. Practice these techniques to build confidence!
+Pan was overcrowded. Cook in batches.
+
+### Burned outside, raw inside
+
+Heat too high. Lower heat and cook longer.
+
+## Next Steps
+
+- [Knife Skills](https://www.youtube.com/results?search_query=basic+knife+skills)
+- [Simple Recipes for Beginners](https://www.allrecipes.com/recipes/1947/everyday-cooking/quick-and-easy/)

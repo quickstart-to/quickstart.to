@@ -4,25 +4,37 @@ description: "A brief description of this quickstart guide (10-200 characters)"
 tags: []
 ---
 
-## Overview
+## TL;DR
 
-Brief introduction to the topic.
+**What**: One-line definition.
 
-## Prerequisites
+**Why**: What problem it solves.
 
-- Prerequisite 1
-- Prerequisite 2
+## Quick Start
 
-## Steps
+```bash
+# Install
+brew install example
 
-### Step 1: Getting Started
+# Run
+example init
+```
 
-Your first step here.
+## Cheatsheet
 
-### Step 2: Next Step
+| Command | Description |
+|---------|-------------|
+| `example start` | Start service |
+| `example stop` | Stop service |
+| `example status` | Check status |
 
-Continue with the next step.
+## Gotchas
 
-## Summary
+### Common Issue
 
-Quick recap of what was accomplished.
+How to fix it.
+
+## Next Steps
+
+- [Official Docs](https://example.com/docs)
+- [Advanced Usage](https://example.com/advanced)

@@ -4,40 +4,66 @@ description: "5 分钟快速入门 Docker 容器"
 tags: ["containers", "devops"]
 ---
 
-## 概述
+## TL;DR
 
-Docker 可以将应用程序打包到容器中——这是一种标准化的可执行组件，将源代码与操作系统库和依赖项组合在一起。
+**What**: 将应用打包成可移植的容器，在任何地方运行。
 
-## 前提条件
+**Why**: "在我电脑上能跑" → 在哪都能跑。
 
-- 一台运行 macOS、Windows 或 Linux 的电脑
-- 管理员/sudo 权限
+## Quick Start
 
-## 步骤
+**安装**:
 
-### 第一步：安装 Docker
+macOS/Windows: 下载 [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 
-**macOS/Windows**：下载 [Docker Desktop](https://www.docker.com/products/docker-desktop/)
-
-**Linux**：
+Linux:
 ```bash
 curl -fsSL https://get.docker.com | sh
 sudo usermod -aG docker $USER
 ```
 
-### 第二步：验证安装
-
+**第一个容器**:
 ```bash
-docker --version
 docker run hello-world
 ```
 
-### 第三步：运行第一个容器
+## Cheatsheet
+
+| 命令 | 说明 |
+|---------|-------------|
+| `docker run IMAGE` | 运行容器 |
+| `docker ps` | 列出运行中的容器 |
+| `docker ps -a` | 列出所有容器 |
+| `docker images` | 列出镜像 |
+| `docker pull IMAGE` | 下载镜像 |
+| `docker stop ID` | 停止容器 |
+| `docker rm ID` | 删除容器 |
+| `docker rmi IMAGE` | 删除镜像 |
+
+## Gotchas
+
+### Linux 权限问题
 
 ```bash
-docker run -it ubuntu bash
+sudo usermod -aG docker $USER
+# 然后注销重新登录
 ```
 
-## 总结
+### 端口被占用
 
-现在你已经安装了 Docker，可以运行容器了。下一步：学习 Dockerfile 和 docker-compose。
+```bash
+docker run -p 3001:80 nginx  # 换一个宿主机端口
+```
+
+### 容器立即退出
+
+```bash
+docker run -it IMAGE bash  # 交互式运行
+docker logs CONTAINER_ID   # 查看日志
+```
+
+## Next Steps
+
+- [Dockerfile 指南](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
+- [Docker Compose](https://docs.docker.com/compose/)
+- [Docker Hub](https://hub.docker.com/)

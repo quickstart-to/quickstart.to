@@ -3,6 +3,7 @@ import { validateIdNaming } from './id-naming.js';
 import { validateIdConflicts } from './id-conflicts.js';
 import { validateFrontmatter } from './frontmatter.js';
 import { validateAssets } from './assets.js';
+import { validateStructure } from './structure.js';
 import type { ValidationError } from './types.js';
 
 const CONTENT_DIR = join(process.cwd(), 'src', 'content');
@@ -24,6 +25,7 @@ function main() {
     ...validateIdConflicts(CONTENT_DIR),
     ...validateFrontmatter(CONTENT_DIR),
     ...validateAssets(CONTENT_DIR),
+    ...validateStructure(CONTENT_DIR),
   ];
 
   if (errors.length === 0) {

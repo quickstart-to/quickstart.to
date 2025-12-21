@@ -4,25 +4,35 @@ description: "A brief description of this quickstart guide (10-200 characters)"
 tags: []
 ---
 
-## Overview
+## TL;DR
 
-Brief introduction to the topic.
+**What**: One-line definition.
 
-## What You'll Need
+**Why**: Why it matters.
 
+## Quick Start
+
+**Prepare**:
 - Item 1
 - Item 2
 
-## Steps
+**Steps**:
+1. First step
+2. Second step
+3. Third step
 
-### Step 1: Getting Started
+## Cheatsheet
 
-Your first step here.
+- **Tip 1**: Description
+- **Tip 2**: Description
+- **Tip 3**: Description
 
-### Step 2: Next Step
+## Gotchas
 
-Continue with the next step.
+### Common Mistake
 
-## Tips
+How to avoid or fix it.
 
-Helpful tips and tricks.
+## Next Steps
+
+- [Learn More](https://example.com)

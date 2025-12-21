@@ -73,6 +73,17 @@ tags: ["containers", "devops"]                    # Optional
 - Extensions: `.png`, `.jpg`, `.jpeg`, `.gif`, `.svg`, `.webp`
 - No subdirectories (flat structure)
 
+## Content Structure
+
+All quickstarts must follow this structure:
+```markdown
+## TL;DR
+## Quick Start
+## Cheatsheet
+## Gotchas
+## Next Steps
+```
+
 ## Validation
 
 The `pnpm validate` command checks:
@@ -80,6 +91,7 @@ The `pnpm validate` command checks:
 2. **id-conflicts** - Duplicate IDs across categories
 3. **frontmatter** - Required fields, description length
 4. **assets** - File naming conventions
+5. **structure** - Required sections (TL;DR, Quick Start, Cheatsheet, Gotchas, Next Steps)
 
 ## GitHub API Integration
 

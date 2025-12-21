@@ -69,24 +69,31 @@ tags: ["tag1", "tag2"]
 
 ### 4. Content Structure
 
+All quickstarts must follow this structure:
+
 ```markdown
-## Overview
-Brief introduction.
+## TL;DR
 
-## Prerequisites
-- Item 1
-- Item 2
+**What**: One-line definition.
 
-## Steps
+**Why**: What problem it solves.
 
-### Step 1: First Step
-Instructions here.
+## Quick Start
 
-### Step 2: Next Step
-More instructions.
+Installation and first example.
 
-## Summary
-Quick recap.
+## Cheatsheet
+
+Common commands or tips in a table/list format.
+
+## Gotchas
+
+Common problems and how to fix them.
+
+## Next Steps
+
+- [Link to docs](url)
+- [Link to more resources](url)
 ```
 
 ### 5. Validate Your Content
@@ -146,6 +153,7 @@ npm install package
 | Frontmatter | title and description required |
 | Description | 10-200 characters |
 | Assets | Lowercase names with hyphens |
+| Structure | Must have: TL;DR, Quick Start, Cheatsheet, Gotchas, Next Steps |
 
 ## Need Help?
 
