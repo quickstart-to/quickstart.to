@@ -1,0 +1,92 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import QuickstartCard from '@components/QuickstartCard.astro';
+import Search from '@components/Search.astro';
+import TopContributors from '@components/TopContributors.astro';
+import { getAllQuickstarts, getAvailableLanguages } from '@utils/content';
+import { defaultLang, type Lang } from '@i18n/config';
+import { t } from '@utils/language';
+
+const lang = defaultLang;
+const allQuickstarts = await getAllQuickstarts();
+
+// Get unique quickstarts for default language, or fallback
+const uniqueIds = [...new Set(allQuickstarts.map((q) => q.id))];
+const quickstarts = await Promise.all(
+  uniqueIds.map(async (id) => {
+    const entry = allQuickstarts.find((q) => q.id === id && q.lang === lang) ??
+      allQuickstarts.find((q) => q.id === id);
+    if (!entry) return null;
+
+    const availableLanguages = await getAvailableLanguages(id);
+    return {
+      ...entry,
+      availableLanguages,
+    };
+  })
+);
+
+const validQuickstarts = quickstarts.filter(Boolean);
+---
+
+<BaseLayout title="quickstart.to" lang={lang}>
+  <section class="hero container">
+    <h1 class="hero-title">quickstart.to</h1>
+    <p class="hero-subtitle">{t(lang, 'site.description')}</p>
+    <Search lang={lang} />
+  </section>
+
+  <section class="quickstarts container">
+    <div class="quickstart-grid">
+      {
+        validQuickstarts.map((q) => (
+          <QuickstartCard
+            id={q!.id}
+            title={q!.entry.data.title}
+            description={q!.entry.data.description}
+            category={q!.category}
+            lang={q!.lang}
+            availableLanguages={q!.availableLanguages}
+          />
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="container">
+    <TopContributors lang={lang} />
+  </section>
+</BaseLayout>
+
+<style>
+  .hero {
+    text-align: center;
+    padding: 4rem 1rem;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    background: linear-gradient(135deg, var(--color-primary), #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--color-text-secondary);
+    margin: 0 0 2rem 0;
+  }
+
+  .quickstarts {
+    padding: 2rem 1rem 4rem;
+  }
+
+  .quickstart-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+</style>

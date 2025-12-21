@@ -1,0 +1,22 @@
+{
+  "site.title": "quickstart.to",
+  "site.description": "El TL;DR de todo",
+  "nav.home": "Inicio",
+  "nav.contributors": "Colaboradores",
+  "nav.search": "Buscar",
+  "category.tech": "Tecnología",
+  "category.life": "Vida",
+  "content.toc": "Tabla de contenidos",
+  "content.contributors": "Colaboradores",
+  "content.lastUpdated": "Última actualización",
+  "footer.tagline": "El TL;DR de todo",
+  "footer.contribute": "Contribuir en GitHub",
+  "search.placeholder": "Buscar quickstarts...",
+  "search.noResults": "No se encontraron resultados",
+  "contributors.title": "Colaboradores",
+  "contributors.description": "Gracias a todos nuestros colaboradores",
+  "contributors.quickstarts": "Quickstarts",
+  "contributors.commits": "Commits",
+  "error.notFound": "Página no encontrada",
+  "error.backHome": "Volver al inicio"
+}

@@ -1,0 +1,95 @@
+---
+import { type Lang } from '@i18n/config';
+import { t } from '@utils/language';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="footer-container container">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <span class="footer-logo">quickstart.to</span>
+        <p class="footer-tagline">{t(lang, 'footer.tagline')}</p>
+      </div>
+
+      <div class="footer-links">
+        <a
+          href="https://github.com/quickstart-to/quickstart.to"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {t(lang, 'footer.contribute')}
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; {currentYear} quickstart.to. MIT License.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    border-top: 1px solid var(--color-border);
+    background-color: var(--color-bg-secondary);
+    margin-top: auto;
+  }
+
+  .footer-container {
+    padding: 2rem 1rem;
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .footer-logo {
+    font-weight: 700;
+    font-size: 1.125rem;
+    color: var(--color-text);
+  }
+
+  .footer-tagline {
+    color: var(--color-text-secondary);
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .footer-links a {
+    color: var(--color-text-secondary);
+    font-size: 0.875rem;
+  }
+
+  .footer-links a:hover {
+    color: var(--color-text);
+  }
+
+  .footer-bottom {
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-border);
+    text-align: center;
+  }
+
+  .footer-bottom p {
+    color: var(--color-text-secondary);
+    font-size: 0.875rem;
+    margin: 0;
+  }
+</style>

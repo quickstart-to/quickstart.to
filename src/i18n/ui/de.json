@@ -1,0 +1,22 @@
+{
+  "site.title": "quickstart.to",
+  "site.description": "Das TL;DR von allem",
+  "nav.home": "Startseite",
+  "nav.contributors": "Mitwirkende",
+  "nav.search": "Suche",
+  "category.tech": "Technik",
+  "category.life": "Leben",
+  "content.toc": "Inhaltsverzeichnis",
+  "content.contributors": "Mitwirkende",
+  "content.lastUpdated": "Zuletzt aktualisiert",
+  "footer.tagline": "Das TL;DR von allem",
+  "footer.contribute": "Auf GitHub beitragen",
+  "search.placeholder": "Quickstarts durchsuchen...",
+  "search.noResults": "Keine Ergebnisse gefunden",
+  "contributors.title": "Mitwirkende",
+  "contributors.description": "Danke an alle Mitwirkenden",
+  "contributors.quickstarts": "Quickstarts",
+  "contributors.commits": "Commits",
+  "error.notFound": "Seite nicht gefunden",
+  "error.backHome": "Zurück zur Startseite"
+}

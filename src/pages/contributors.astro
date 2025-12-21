@@ -1,0 +1,45 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import ContributorRanking from '@components/ContributorRanking.astro';
+import { defaultLang } from '@i18n/config';
+import { t } from '@utils/language';
+
+const lang = defaultLang;
+---
+
+<BaseLayout
+  title={t(lang, 'contributors.title')}
+  description={t(lang, 'contributors.description')}
+  lang={lang}
+>
+  <section class="contributors-page container">
+    <header class="page-header">
+      <h1>{t(lang, 'contributors.title')}</h1>
+      <p>{t(lang, 'contributors.description')}</p>
+    </header>
+
+    <ContributorRanking lang={lang} />
+  </section>
+</BaseLayout>
+
+<style>
+  .contributors-page {
+    padding: 2rem 1rem 4rem;
+    max-width: 48rem;
+  }
+
+  .page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .page-header h1 {
+    font-size: 2rem;
+    margin: 0 0 0.5rem 0;
+  }
+
+  .page-header p {
+    color: var(--color-text-secondary);
+    margin: 0;
+  }
+</style>

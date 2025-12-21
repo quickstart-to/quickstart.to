@@ -1,0 +1,22 @@
+{
+  "site.title": "quickstart.to",
+  "site.description": "The TL;DR of everything",
+  "nav.home": "Home",
+  "nav.contributors": "Contributors",
+  "nav.search": "Search",
+  "category.tech": "Tech",
+  "category.life": "Life",
+  "content.toc": "Table of Contents",
+  "content.contributors": "Contributors",
+  "content.lastUpdated": "Last updated",
+  "footer.tagline": "The TL;DR of everything",
+  "footer.contribute": "Contribute on GitHub",
+  "search.placeholder": "Search quickstarts...",
+  "search.noResults": "No results found",
+  "contributors.title": "Contributors",
+  "contributors.description": "Thanks to all our contributors",
+  "contributors.quickstarts": "Quickstarts",
+  "contributors.commits": "Commits",
+  "error.notFound": "Page not found",
+  "error.backHome": "Back to home"
+}

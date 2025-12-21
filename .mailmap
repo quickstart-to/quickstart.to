@@ -1,0 +1,9 @@
+# GitHub account mappings
+# Format: Proper Name <proper@email> <commit@email>
+#
+# This file maps commit emails to GitHub usernames for the contributor system.
+# When contributors use GitHub's noreply email, their GitHub username is
+# automatically extracted. For other emails, add mappings here.
+#
+# Example:
+# John Doe <johndoe@users.noreply.github.com> <john.doe@company.com>

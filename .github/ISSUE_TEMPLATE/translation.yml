@@ -1,0 +1,66 @@
+name: Translation Request
+description: Request or offer to translate an existing quickstart
+title: "[Translation] "
+labels: ["translation"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping with translations! Please fill out the details below.
+
+  - type: input
+    id: quickstart
+    attributes:
+      label: Quickstart
+      description: Which quickstart do you want to translate?
+      placeholder: docker
+    validations:
+      required: true
+
+  - type: dropdown
+    id: source-language
+    attributes:
+      label: Source Language
+      description: The language of the existing quickstart
+      options:
+        - en (English)
+        - zh (中文)
+        - de (Deutsch)
+        - fr (Français)
+        - es (Español)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: target-language
+    attributes:
+      label: Target Language
+      description: The language you want to translate to
+      options:
+        - en (English)
+        - zh (中文)
+        - de (Deutsch)
+        - fr (Français)
+        - es (Español)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type
+      description: Are you requesting a translation or offering to do it?
+      options:
+        - I will translate this
+        - Requesting someone to translate
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: guidelines
+    attributes:
+      label: Guidelines
+      options:
+        - label: I have read the CONTRIBUTING guidelines
+          required: true

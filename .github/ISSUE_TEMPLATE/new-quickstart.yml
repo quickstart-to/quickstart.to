@@ -1,0 +1,63 @@
+name: New Quickstart Proposal
+description: Propose a new quickstart guide
+title: "[New] "
+labels: ["new-quickstart"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for proposing a new quickstart! Please fill out the details below.
+
+  - type: input
+    id: title
+    attributes:
+      label: Title
+      description: The title of the quickstart (e.g., "Docker", "Git", "How to Cook Rice")
+      placeholder: Docker
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: Which category does this belong to?
+      options:
+        - tech
+        - life
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A brief description of what this quickstart will cover (10-200 characters)
+      placeholder: Get started with Docker containers in 5 minutes
+    validations:
+      required: true
+
+  - type: dropdown
+    id: language
+    attributes:
+      label: Language
+      description: Which language will you write this in?
+      options:
+        - en (English)
+        - zh (中文)
+        - de (Deutsch)
+        - fr (Français)
+        - es (Español)
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: commitment
+    attributes:
+      label: Commitment
+      options:
+        - label: I will submit a PR for this quickstart within 2 weeks
+          required: true
+        - label: I have read the CONTRIBUTING guidelines
+          required: true

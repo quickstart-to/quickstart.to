@@ -1,0 +1,74 @@
+---
+import { type Lang } from '@i18n/config';
+import { t } from '@utils/language';
+
+interface Props {
+  headings: { depth: number; slug: string; text: string }[];
+  lang: Lang;
+}
+
+const { headings, lang } = Astro.props;
+
+// Only show h2 and h3
+const filteredHeadings = headings.filter((h) => h.depth >= 2 && h.depth <= 3);
+---
+
+{
+  filteredHeadings.length > 0 && (
+    <nav class="toc" aria-label={t(lang, 'content.toc')}>
+      <h2 class="toc-title">{t(lang, 'content.toc')}</h2>
+      <ul class="toc-list">
+        {filteredHeadings.map((heading) => (
+          <li class={`toc-item depth-${heading.depth}`}>
+            <a href={`#${heading.slug}`} class="toc-link">
+              {heading.text}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  )
+}
+
+<style>
+  .toc {
+    padding: 1rem;
+    background-color: var(--color-bg-secondary);
+    border-radius: var(--radius);
+  }
+
+  .toc-title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin: 0 0 0.75rem 0;
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .toc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .toc-item {
+    margin: 0;
+  }
+
+  .toc-item.depth-3 {
+    padding-left: 1rem;
+  }
+
+  .toc-link {
+    display: block;
+    padding: 0.25rem 0;
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+    line-height: 1.4;
+  }
+
+  .toc-link:hover {
+    color: var(--color-text);
+  }
+</style>

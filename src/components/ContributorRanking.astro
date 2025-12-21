@@ -1,0 +1,121 @@
+---
+import ContributorAvatar from './ContributorAvatar.astro';
+import { getAllContributors, getContributorQuickstartCount } from '@utils/contributors';
+import { type Lang } from '@i18n/config';
+import { t } from '@utils/language';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+
+const contributors = await getAllContributors();
+---
+
+<section class="ranking">
+  <div class="ranking-list">
+    {
+      contributors.map((contributor, index) => (
+        <div class="ranking-item">
+          <span class="ranking-position">{index + 1}</span>
+          <ContributorAvatar
+            name={contributor.name}
+            avatar={contributor.avatar}
+            github={contributor.github}
+            size="lg"
+          />
+          <div class="ranking-info">
+            <h3 class="ranking-name">
+              {contributor.github ? (
+                <a
+                  href={`https://github.com/${contributor.github}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {contributor.name}
+                </a>
+              ) : (
+                contributor.name
+              )}
+            </h3>
+            <div class="ranking-stats">
+              <span>
+                {getContributorQuickstartCount(contributor)} {t(lang, 'contributors.quickstarts')}
+              </span>
+              <span class="stat-separator">·</span>
+              <span>
+                {contributor.totalCommits} {t(lang, 'contributors.commits')}
+              </span>
+            </div>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  .ranking-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .ranking-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+  }
+
+  .ranking-position {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text-secondary);
+    width: 2.5rem;
+    text-align: center;
+  }
+
+  .ranking-item:nth-child(1) .ranking-position {
+    color: #fbbf24;
+  }
+
+  .ranking-item:nth-child(2) .ranking-position {
+    color: #94a3b8;
+  }
+
+  .ranking-item:nth-child(3) .ranking-position {
+    color: #d97706;
+  }
+
+  .ranking-info {
+    flex: 1;
+  }
+
+  .ranking-name {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 0 0.25rem 0;
+  }
+
+  .ranking-name a {
+    color: var(--color-text);
+  }
+
+  .ranking-name a:hover {
+    color: var(--color-primary);
+  }
+
+  .ranking-stats {
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+  }
+
+  .stat-separator {
+    margin: 0 0.25rem;
+  }
+</style>

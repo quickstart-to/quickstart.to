@@ -1,0 +1,137 @@
+---
+import { type Lang } from '@i18n/config';
+import { t } from '@utils/language';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+---
+
+<div class="search">
+  <input
+    type="search"
+    id="search-input"
+    placeholder={t(lang, 'search.placeholder')}
+    class="search-input"
+  />
+  <div id="search-results" class="search-results"></div>
+</div>
+
+<script is:inline>
+  // Pagefind integration - loaded dynamically after build
+  (async function initSearch() {
+    const searchInput = document.getElementById('search-input');
+    const searchResults = document.getElementById('search-results');
+
+    if (!searchInput || !searchResults) return;
+
+    let pagefind = null;
+
+    // Try to load Pagefind (only available after build with pagefind CLI)
+    try {
+      pagefind = await import('/pagefind/pagefind.js');
+    } catch {
+      console.log('Pagefind not available - search disabled in development');
+      return;
+    }
+
+    searchInput.addEventListener('input', async (e) => {
+      const query = e.target.value;
+
+      if (!query) {
+        searchResults.innerHTML = '';
+        return;
+      }
+
+      const search = await pagefind.search(query);
+      const results = await Promise.all(search.results.slice(0, 5).map((r) => r.data()));
+
+      searchResults.innerHTML = results
+        .map(
+          (result) => `
+          <a href="${result.url}" class="search-result">
+            <div class="search-result-title">${result.meta.title}</div>
+            <div class="search-result-excerpt">${result.excerpt}</div>
+          </a>
+        `
+        )
+        .join('');
+    });
+  })();
+</script>
+
+<style>
+  .search {
+    position: relative;
+    width: 100%;
+    max-width: 24rem;
+  }
+
+  .search-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .search-input:focus {
+    border-color: var(--color-primary);
+  }
+
+  .search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin-top: 0.5rem;
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-height: 24rem;
+    overflow-y: auto;
+    z-index: 100;
+  }
+
+  .search-results:empty {
+    display: none;
+  }
+
+  :global(.search-result) {
+    display: block;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--color-border);
+    text-decoration: none;
+  }
+
+  :global(.search-result:last-child) {
+    border-bottom: none;
+  }
+
+  :global(.search-result:hover) {
+    background-color: var(--color-bg-secondary);
+  }
+
+  :global(.search-result-title) {
+    font-weight: 500;
+    color: var(--color-text);
+    margin-bottom: 0.25rem;
+  }
+
+  :global(.search-result-excerpt) {
+    font-size: 0.75rem;
+    color: var(--color-text-secondary);
+  }
+
+  :global(.search-result-excerpt mark) {
+    background-color: rgba(59, 130, 246, 0.2);
+    color: inherit;
+  }
+</style>
