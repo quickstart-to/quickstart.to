@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
+    "postbuild": "pagefind --site dist",
     "preview": "astro preview",
     "prebuild": "tsx scripts/contributors/extract.ts",
     "contributors": "tsx scripts/contributors/extract.ts",
@@ -19,6 +20,7 @@
   },
   "devDependencies": {
     "@types/node": "^22.10.2",
+    "pagefind": "^1.4.0",
     "tsx": "^4.19.2",
     "typescript": "^5.7.2"
   }
