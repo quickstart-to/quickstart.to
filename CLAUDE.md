@@ -91,9 +91,32 @@ Templates are stored in `src/templates/` as Markdown files. Each content file mu
 
 ### Writing Guidelines
 
-1. **说人话** - 清晰易懂简洁，避免晦涩术语
-2. **信息准确** - 更新时搜索官网验证版本、API、命令
-3. **价值优先** - 内核、实战、决策能力
+1. **Plain language** - Clear, concise, and easy to understand; avoid jargon
+2. **Accuracy** - Verify versions, APIs, and commands from official sources
+3. **Value-first** - Focus on core concepts, practical skills, and decision-making
+
+### ⚠️ MANDATORY: Technical Content Accuracy
+
+**When writing or updating tech category quickstart content, you MUST search official documentation online to ensure accuracy.** This is a mandatory requirement and cannot be skipped.
+
+Applies to templates: `tool`, `language`, `framework`, `service`, `concept`
+
+Requirements:
+1. **Version numbers** - Must query official site for latest stable version; never use memorized outdated versions
+2. **Install commands** - Must copy from official docs; package manager commands may change
+3. **API/Config** - Must verify current APIs, config options, and parameter names
+4. **URLs** - Must verify official links are accessible and point to correct pages
+5. **Best practices** - Reference official recommended practices, not outdated community conventions
+
+Source priority:
+1. Official documentation (e.g., docs.docker.com, react.dev)
+2. Official GitHub repository
+3. Official blog/announcements
+
+**Prohibited:**
+- ❌ Writing version numbers, commands, or APIs from memory alone
+- ❌ Using unverified third-party tutorial content
+- ❌ Skipping online verification before generating content
 
 ## Validation
 
