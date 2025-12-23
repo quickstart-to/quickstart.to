@@ -1,6 +1,7 @@
 ---
 title: "JWT"
 description: "Get started with JWT in 5 minutes"
+template: "tool"
 tags: ["security", "authentication", "tokens"]
 ---
 

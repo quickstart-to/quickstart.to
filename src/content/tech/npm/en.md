@@ -1,6 +1,7 @@
 ---
 title: "npm"
 description: "Get started with npm package manager in 5 minutes"
+template: "tool"
 tags: ["nodejs", "package-manager", "javascript"]
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: "Jest"
 description: "Get started with Jest testing framework in 5 minutes"
+template: "tool"
 tags: ["testing", "javascript", "frontend"]
 ---
 

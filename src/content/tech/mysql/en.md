@@ -1,6 +1,7 @@
 ---
 title: "MySQL"
 description: "Get started with MySQL database in 5 minutes"
+template: "tool"
 tags: ["database", "sql", "relational"]
 ---
 

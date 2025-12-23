@@ -1,6 +1,7 @@
 ---
 title: "Expo"
 description: "Get started with Expo in 5 minutes"
+template: "tool"
 tags: ["mobile", "react-native", "cross-platform"]
 ---
 

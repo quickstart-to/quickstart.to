@@ -1,6 +1,7 @@
 ---
 title: "OpenAPI"
 description: "5 分钟快速入门 OpenAPI/Swagger"
+template: "tool"
 tags: ["api", "documentation", "specification"]
 ---
 

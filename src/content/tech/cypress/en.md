@@ -1,6 +1,7 @@
 ---
 title: "Cypress"
 description: "Get started with Cypress E2E testing in 5 minutes"
+template: "tool"
 tags: ["testing", "e2e", "javascript"]
 ---
 

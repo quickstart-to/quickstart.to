@@ -1,6 +1,7 @@
 ---
 title: "PostgreSQL"
 description: "快速入门 PostgreSQL 关系型数据库"
+template: "tool"
 tags: ["database", "sql", "backend"]
 ---
 

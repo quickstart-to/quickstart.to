@@ -1,6 +1,7 @@
 ---
 title: "Celery"
 description: "5 分钟快速入门 Celery 任务队列"
+template: "tool"
 tags: ["python", "queue", "async"]
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: "SSH"
 description: "Get started with SSH for secure remote connections"
+template: "tool"
 tags: ["security", "remote", "networking"]
 ---
 

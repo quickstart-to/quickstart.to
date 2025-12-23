@@ -1,6 +1,7 @@
 ---
 title: "Nginx"
 description: "Get started with Nginx web server and reverse proxy"
+template: "tool"
 tags: ["web-server", "reverse-proxy", "devops"]
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: "Apache Kafka"
 description: "Get started with Apache Kafka messaging in 5 minutes"
+template: "tool"
 tags: ["messaging", "streaming", "distributed"]
 ---
 

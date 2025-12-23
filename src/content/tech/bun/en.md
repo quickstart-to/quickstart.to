@@ -1,6 +1,7 @@
 ---
 title: "Bun"
 description: "Get started with Bun JavaScript runtime in 5 minutes"
+template: "tool"
 tags: ["javascript", "runtime", "typescript"]
 ---
 

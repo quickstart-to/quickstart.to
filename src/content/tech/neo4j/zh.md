@@ -1,6 +1,7 @@
 ---
 title: "Neo4j"
 description: "5 分钟快速入门 Neo4j 图数据库"
+template: "tool"
 tags: ["database", "graph", "nosql"]
 ---
 

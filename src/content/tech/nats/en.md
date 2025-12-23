@@ -1,6 +1,7 @@
 ---
 title: "NATS"
 description: "Get started with NATS messaging in 5 minutes"
+template: "tool"
 tags: ["messaging", "cloud-native", "microservices"]
 ---
 

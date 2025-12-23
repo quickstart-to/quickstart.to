@@ -1,6 +1,7 @@
 ---
 title: "Prisma"
 description: "5 分钟快速入门 Prisma ORM"
+template: "tool"
 tags: ["orm", "database", "typescript"]
 ---
 

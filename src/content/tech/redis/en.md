@@ -1,6 +1,7 @@
 ---
 title: "Redis"
 description: "Get started with Redis in-memory data store"
+template: "tool"
 tags: ["database", "cache", "backend"]
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: "MongoDB"
 description: "Get started with MongoDB database in 5 minutes"
+template: "tool"
 tags: ["database", "nosql", "document"]
 ---
 

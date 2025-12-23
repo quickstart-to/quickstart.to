@@ -1,6 +1,7 @@
 ---
 title: "OAuth 2.0"
 description: "5 分钟快速入门 OAuth 2.0"
+template: "tool"
 tags: ["security", "authentication", "authorization"]
 ---
 

@@ -1,117 +1,133 @@
 ---
 title: "Google Cloud"
 description: "Get started with Google Cloud Platform in 5 minutes"
+template: "service"
 tags: ["cloud", "devops", "google"]
 ---
 
 ## TL;DR
 
-**What**: Google's cloud computing platform with 100+ services.
+**One-liner**: Google Cloud is Google's cloud platform with 100+ services - the birthplace of Kubernetes and leader in data/ML.
 
-**Why**: Big data/ML leadership, Kubernetes origin, global network, competitive pricing.
+**Core Capabilities**:
+- Compute - VMs, containers, serverless (Cloud Run is excellent)
+- Data - BigQuery for analytics, Firestore for NoSQL
+- ML/AI - Vertex AI, pre-trained models
+- Kubernetes - GKE, the best managed K8s experience
+
+## Architecture
+
+### Service Categories
+
+- **Compute**: Compute Engine (VMs), Cloud Run (serverless), GKE (Kubernetes), Cloud Functions
+- **Storage**: Cloud Storage (objects), Persistent Disk, Filestore
+- **Database**: Cloud SQL (relational), Firestore (NoSQL), Bigtable, Spanner
+- **Analytics**: BigQuery, Dataflow, Pub/Sub, Dataproc
+- **ML/AI**: Vertex AI, Vision AI, Speech-to-Text, Translation
+
+### Core Concepts
+
+- **Project**: Container for resources and billing
+- **Region/Zone**: Geographic locations for resources
+- **Service Account**: Identity for applications (not users)
+- **IAM**: Identity and Access Management - roles and permissions
 
 ## Quick Start
 
-**Install gcloud CLI**:
+### Create Account
+
+1. Go to [cloud.google.com](https://cloud.google.com/)
+2. Click "Get started for free" ($300 credit for 90 days)
+3. Create a project in Cloud Console
+4. Enable billing for the project
+
+### Install CLI
+
 ```bash
 # macOS
 brew install google-cloud-sdk
 
 # Linux
 curl https://sdk.cloud.google.com | bash
+exec -l $SHELL
 
 # Verify
 gcloud --version
 ```
 
-**Initialize and authenticate**:
+### Initialize and Authenticate
+
 ```bash
-# Initialize (opens browser)
+# Initialize (opens browser for auth)
 gcloud init
 
 # Set project
 gcloud config set project PROJECT_ID
 
-# List configurations
+# Verify
 gcloud config list
 ```
 
-## Cheatsheet
+### First Commands
 
-| Command | Description |
-|---------|-------------|
-| `gcloud init` | Initialize SDK |
-| `gcloud auth login` | Authenticate |
-| `gcloud projects list` | List projects |
-| `gcloud compute instances list` | List VMs |
-| `gcloud container clusters list` | List GKE clusters |
-| `gcloud functions list` | List Cloud Functions |
-| `gcloud run services list` | List Cloud Run services |
+```bash
+# List projects
+gcloud projects list
+
+# List compute instances
+gcloud compute instances list
+```
+
+## Core Services
+
+### Compute
+
+| Service | Use Case | Pricing Model |
+|---------|----------|---------------|
+| Compute Engine | Virtual machines | Per second |
+| Cloud Run | Serverless containers | Per request + CPU/memory |
+| GKE | Managed Kubernetes | Cluster + nodes |
+| Cloud Functions | Event-driven functions | Per invocation |
+
+### Storage & Database
+
+| Service | Use Case | Pricing Model |
+|---------|----------|---------------|
+| Cloud Storage | Object storage | Per GB + operations |
+| Cloud SQL | Managed MySQL/PostgreSQL | Instance + storage |
+| Firestore | NoSQL document DB | Per operation + storage |
+| BigQuery | Data warehouse | Per query (TB scanned) |
 
 ## Gotchas
 
-### Core services
+### Cost Traps
 
-```
-Compute:     Compute Engine, Cloud Run, GKE, Cloud Functions
-Storage:     Cloud Storage, Persistent Disk, Filestore
-Database:    Cloud SQL, Firestore, Bigtable, Spanner
-Analytics:   BigQuery, Dataflow, Pub/Sub
-ML/AI:       Vertex AI, Vision AI, Natural Language
-```
+- **BigQuery queries**: Scan entire columns → **Use LIMIT, partitioning, and preview**
+- **Idle GKE clusters**: Control plane charges → **Use Autopilot or delete unused clusters**
+- **Network egress**: Cross-region charges → **Keep resources in same region**
+- **Persistent disks**: Unattached disks still charge → **Delete unused disks**
 
-### Cloud Storage (GCS)
+### Permission Issues
 
-```bash
-# Create bucket
-gcloud storage buckets create gs://my-bucket-name
+- **403 Forbidden**: Check IAM roles → Ensure service account has correct roles
+- **API not enabled**: Enable API in console or `gcloud services enable SERVICE_NAME`
 
-# Upload file
-gcloud storage cp file.txt gs://my-bucket/
-
-# List objects
-gcloud storage ls gs://my-bucket/
-
-# Download file
-gcloud storage cp gs://my-bucket/file.txt ./
-```
-
-### Compute Engine
+### Common Errors
 
 ```bash
-# Create VM
-gcloud compute instances create my-vm \
-  --zone=us-central1-a \
-  --machine-type=e2-micro \
-  --image-family=debian-11 \
-  --image-project=debian-cloud
+# "The project PROJECT_ID does not exist"
+gcloud projects list  # Verify project name
 
-# SSH to VM
-gcloud compute ssh my-vm --zone=us-central1-a
+# "PERMISSION_DENIED: Request had insufficient authentication"
+gcloud auth login  # Re-authenticate
 
-# Stop/Delete VM
-gcloud compute instances stop my-vm --zone=us-central1-a
-gcloud compute instances delete my-vm --zone=us-central1-a
-```
-
-### Cloud Run
-
-```bash
-# Deploy from source
-gcloud run deploy my-service \
-  --source . \
-  --region us-central1 \
-  --allow-unauthenticated
-
-# Deploy container
-gcloud run deploy my-service \
-  --image gcr.io/PROJECT_ID/my-image \
-  --region us-central1
+# "API not enabled"
+gcloud services enable compute.googleapis.com
 ```
 
 ## Next Steps
 
-- [Google Cloud Documentation](https://cloud.google.com/docs) - Official docs
-- [Google Cloud Free Tier](https://cloud.google.com/free) - Free resources
-- [Google Cloud Skills Boost](https://www.cloudskillsboost.google/) - Training
-- [Google Cloud Architecture Center](https://cloud.google.com/architecture) - Best practices
+- [Google Cloud Documentation](https://cloud.google.com/docs)
+- [Google Cloud Free Tier](https://cloud.google.com/free)
+- [Google Cloud Skills Boost](https://www.cloudskillsboost.google/)
+- [Google Cloud Architecture Center](https://cloud.google.com/architecture)

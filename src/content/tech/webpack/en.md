@@ -1,6 +1,7 @@
 ---
 title: "Webpack"
 description: "Get started with Webpack bundler in 5 minutes"
+template: "tool"
 tags: ["bundler", "frontend", "build-tool"]
 ---
 

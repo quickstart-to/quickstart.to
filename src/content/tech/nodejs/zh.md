@@ -1,6 +1,7 @@
 ---
 title: "Node.js"
 description: "5 分钟快速入门 Node.js 运行时"
+template: "tool"
 tags: ["javascript", "runtime", "backend"]
 ---
 

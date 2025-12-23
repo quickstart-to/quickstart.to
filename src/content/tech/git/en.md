@@ -1,18 +1,23 @@
 ---
 title: "Git"
 description: "Learn Git version control basics in 5 minutes"
+template: "tool"
 tags: ["version-control", "devops"]
 ---
 
 ## TL;DR
 
-**What**: Track code changes and collaborate with others.
+**One-liner**: Git tracks every change to your code, lets you undo mistakes, and makes collaboration possible.
 
-**Why**: Never lose work, undo mistakes, work with a team.
+**Core Value**:
+- History - every change is recorded
+- Undo - go back to any previous state
+- Branches - work on features without breaking main code
+- Collaboration - merge work from multiple people
 
 ## Quick Start
 
-**Install**:
+### Install
 
 macOS:
 ```bash
@@ -26,15 +31,19 @@ Linux:
 sudo apt install git  # Debian/Ubuntu
 ```
 
-**Configure**:
+### Configure
+
 ```bash
 git config --global user.name "Your Name"
 git config --global user.email "you@example.com"
 ```
 
-**First repo**:
+### First Repo
+
 ```bash
+mkdir myproject && cd myproject
 git init
+echo "# My Project" > README.md
 git add .
 git commit -m "Initial commit"
 ```
@@ -43,7 +52,7 @@ git commit -m "Initial commit"
 
 | Command | Description |
 |---------|-------------|
-| `git init` | Create a new repo |
+| `git init` | Create new repo |
 | `git clone URL` | Clone a repo |
 | `git status` | Check current state |
 | `git add FILE` | Stage changes |
@@ -51,8 +60,15 @@ git commit -m "Initial commit"
 | `git commit -m "msg"` | Commit changes |
 | `git push` | Push to remote |
 | `git pull` | Pull from remote |
-| `git log` | View history |
-| `git diff` | View changes |
+| `git branch` | List branches |
+| `git branch NAME` | Create branch |
+| `git checkout NAME` | Switch branch |
+| `git checkout -b NAME` | Create and switch |
+| `git merge NAME` | Merge branch |
+| `git log --oneline` | View history |
+| `git diff` | View unstaged changes |
+| `git stash` | Save changes temporarily |
+| `git stash pop` | Restore stashed changes |
 
 ## Gotchas
 
@@ -60,13 +76,13 @@ git commit -m "Initial commit"
 
 ```bash
 git add forgotten-file
-git commit --amend
+git commit --amend --no-edit
 ```
 
 ### Wrong commit message
 
 ```bash
-git commit --amend -m "New message"
+git commit --amend -m "Correct message"
 ```
 
 ### Undo last commit (keep changes)
@@ -75,12 +91,28 @@ git commit --amend -m "New message"
 git reset --soft HEAD~1
 ```
 
+### Undo last commit (discard changes)
+
+```bash
+git reset --hard HEAD~1
+```
+
 ### Merge conflicts
 
-Edit the conflicting files, then:
+Edit the conflicting files (look for `<<<<<<<`), then:
 ```bash
 git add .
-git commit
+git commit -m "Resolve conflicts"
+```
+
+### Accidentally committed to wrong branch
+
+```bash
+# Move commit to correct branch
+git checkout correct-branch
+git cherry-pick COMMIT_HASH
+git checkout wrong-branch
+git reset --hard HEAD~1
 ```
 
 ## Next Steps
@@ -88,3 +120,4 @@ git commit
 - [Git Branching](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell)
 - [GitHub Quickstart](https://docs.github.com/en/get-started/quickstart)
 - [Pro Git Book](https://git-scm.com/book/en/v2)
+- [Oh Shit, Git!?!](https://ohshitgit.com/)

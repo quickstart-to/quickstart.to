@@ -1,6 +1,7 @@
 ---
 title: "Pytest"
 description: "Get started with Pytest in 5 minutes"
+template: "tool"
 tags: ["python", "testing", "automation"]
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: "cURL"
 description: "5 分钟快速入门 cURL"
+template: "tool"
 tags: ["cli", "http", "networking"]
 ---
 

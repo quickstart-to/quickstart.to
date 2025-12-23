@@ -1,6 +1,7 @@
 ---
 title: "Linux Commands"
 description: "Essential Linux commands every developer should know"
+template: "tool"
 tags: ["linux", "terminal", "shell"]
 ---
 

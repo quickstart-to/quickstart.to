@@ -1,6 +1,7 @@
 ---
 title: "Prometheus"
 description: "5 分钟快速入门 Prometheus 监控"
+template: "tool"
 tags: ["devops", "monitoring", "observability"]
 ---
 

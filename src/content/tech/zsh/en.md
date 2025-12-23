@@ -1,6 +1,7 @@
 ---
 title: "Zsh"
 description: "Get started with Zsh shell in 5 minutes"
+template: "tool"
 tags: ["cli", "shell", "productivity"]
 ---
 

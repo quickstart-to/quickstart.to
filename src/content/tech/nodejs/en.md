@@ -1,6 +1,7 @@
 ---
 title: "Node.js"
 description: "Get started with Node.js runtime in 5 minutes"
+template: "tool"
 tags: ["javascript", "runtime", "backend"]
 ---
 

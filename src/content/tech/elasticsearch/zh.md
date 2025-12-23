@@ -1,6 +1,7 @@
 ---
 title: "Elasticsearch"
 description: "5 分钟快速入门 Elasticsearch"
+template: "tool"
 tags: ["database", "search", "analytics"]
 ---
 

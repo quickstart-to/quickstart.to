@@ -1,124 +1,298 @@
 ---
 title: "Swift"
 description: "Get started with Swift programming language in 5 minutes"
+template: "language"
 tags: ["programming", "apple", "ios", "macos"]
 ---
 
 ## TL;DR
 
-**What**: A powerful, intuitive programming language for Apple platforms.
+**One-liner**: Swift is Apple's modern language - safe, fast, and the only choice for iOS/macOS.
 
-**Why**: Modern syntax, memory safety, fast performance, required for iOS/macOS development.
+**Core Strengths**:
+- Memory safety without garbage collection
+- Modern syntax with type inference
+- Fast - often faster than C++
+- Official language for Apple platforms
+
+## Philosophy
+
+Swift was built to replace Objective-C:
+
+- **Safety first** - Optionals force you to handle nil. No more crashes from null pointers.
+- **Fast by default** - Value types, copy-on-write, optimized for performance
+- **Modern syntax** - Clean, expressive, feels like a scripting language
+- **Protocol-oriented** - Composition over inheritance
+
+Swift 6 brings strict concurrency checking by default, making async code safer.
 
 ## Quick Start
 
-**Install**:
+### Install
 
-macOS (Xcode required):
 ```bash
+# macOS (with Xcode)
 xcode-select --install
+
+# Linux
+curl -sL https://swift.org/install.sh | bash
+
+# Or download from swift.org
 ```
 
-Linux:
+### Verify (latest: 6.2)
+
 ```bash
-# Download from swift.org
-wget https://download.swift.org/swift-5.9-release/ubuntu2204/swift-5.9-RELEASE/swift-5.9-RELEASE-ubuntu22.04.tar.gz
-tar xzf swift-5.9-RELEASE-ubuntu22.04.tar.gz
-export PATH=$PATH:/path/to/swift/usr/bin
+swift --version  # Swift version 6.2
 ```
 
-**Verify installation**:
-```bash
-swift --version
-```
-
-**Hello World**:
+### First Program
 
 Create `hello.swift`:
 ```swift
 print("Hello, World!")
 ```
 
-Run it:
 ```bash
 swift hello.swift
 ```
 
-**Swift REPL**:
+### Swift REPL
+
 ```bash
 swift
+> print("Hello")
+Hello
 ```
 
-## Cheatsheet
+## Language Essentials
 
-| Command | Description |
-|---------|-------------|
-| `swift file.swift` | Run Swift file |
-| `swift` | Interactive REPL |
-| `swiftc file.swift` | Compile to binary |
-| `swift build` | Build package |
-| `swift run` | Build and run |
-| `swift test` | Run tests |
-| `swift package init` | Create package |
-
-## Gotchas
-
-### Optionals must be unwrapped
+### Variables & Types
 
 ```swift
-var name: String? = "John"
+// Constants (preferred)
+let name = "Alice"    // Type inferred
+let age: Int = 25     // Explicit type
 
-// Force unwrap (crashes if nil)
-print(name!)
+// Variables
+var count = 0
+count += 1
 
-// Safe unwrap
-if let unwrapped = name {
-    print(unwrapped)
+// Collections
+let array = [1, 2, 3]
+let dict = ["a": 1, "b": 2]
+let set: Set = [1, 2, 3]
+```
+
+### Optionals
+
+```swift
+// Optionals represent "might be nil"
+var name: String? = "Alice"
+var empty: String? = nil
+
+// Unwrapping
+if let name = name {
+    print(name)  // Safe
 }
 
 // Nil coalescing
-print(name ?? "Unknown")
+let displayName = name ?? "Guest"
+
+// Guard for early exit
+guard let name = name else { return }
+print(name)  // name is unwrapped here
 ```
 
-### let vs var
+### Control Flow
 
 ```swift
-let constant = 10   // Immutable
-var variable = 10   // Mutable
-
-// constant = 20    // Error!
-variable = 20       // OK
-```
-
-### Structs are value types
-
-```swift
-struct Point {
-    var x: Int
-    var y: Int
+// if-else
+if age >= 18 {
+    print("Adult")
+} else {
+    print("Minor")
 }
 
-var p1 = Point(x: 0, y: 0)
-var p2 = p1      // p2 is a copy
-p2.x = 10        // p1.x is still 0
+// switch (exhaustive)
+switch value {
+case 1:
+    print("one")
+case 2, 3:
+    print("two or three")
+case 4...10:
+    print("four to ten")
+default:
+    print("other")
+}
+
+// for-in
+for i in 1...5 {
+    print(i)
+}
+
+for item in array {
+    print(item)
+}
 ```
 
-### guard for early exit
+### Functions
 
 ```swift
-func process(_ value: Int?) {
-    guard let value = value else {
-        print("No value")
-        return
+// Basic function
+func greet(name: String) -> String {
+    return "Hello, \(name)!"
+}
+
+// External/internal parameter names
+func greet(person name: String) -> String {
+    return "Hello, \(name)!"
+}
+greet(person: "Alice")
+
+// Default parameters
+func greet(_ name: String, with greeting: String = "Hello") -> String {
+    "\(greeting), \(name)!"
+}
+
+// Closures
+let add = { (a: Int, b: Int) -> Int in
+    a + b
+}
+```
+
+### Structs & Classes
+
+```swift
+// Struct (value type, preferred)
+struct User {
+    let name: String
+    var age: Int
+
+    func greet() -> String {
+        "Hi, I'm \(name)"
     }
-    // value is now unwrapped
-    print(value)
+}
+
+var user = User(name: "Alice", age: 25)
+var copy = user  // Independent copy
+copy.age = 26    // user.age is still 25
+
+// Class (reference type)
+class Account {
+    var balance: Double
+
+    init(balance: Double) {
+        self.balance = balance
+    }
 }
 ```
+
+### Async/Await
+
+```swift
+// Async function
+func fetchData() async throws -> Data {
+    let url = URL(string: "https://api.example.com")!
+    let (data, _) = try await URLSession.shared.data(from: url)
+    return data
+}
+
+// Calling async code
+Task {
+    do {
+        let data = try await fetchData()
+        print(data)
+    } catch {
+        print(error)
+    }
+}
+```
+
+## Gotchas
+
+### Structs vs Classes
+
+```swift
+// Structs are copied (value semantics)
+var a = Point(x: 0, y: 0)
+var b = a
+b.x = 10  // a.x is still 0
+
+// Classes are shared (reference semantics)
+var account1 = Account(balance: 100)
+var account2 = account1
+account2.balance = 50  // account1.balance is also 50!
+```
+
+### Force unwrap crashes
+
+```swift
+var name: String? = nil
+// name!  // CRASH! Fatal error
+
+// Always prefer safe unwrapping
+if let name = name {
+    print(name)
+}
+```
+
+### Mutating struct methods
+
+```swift
+struct Counter {
+    var count = 0
+
+    mutating func increment() {  // Must mark as mutating
+        count += 1
+    }
+}
+```
+
+## When to Choose
+
+**Best for**:
+- iOS/macOS/watchOS/tvOS apps
+- High-performance applications
+- Server-side Swift (Vapor)
+- CLI tools on macOS
+
+**Not ideal for**:
+- Android development (use Kotlin)
+- Web frontend (use JavaScript)
+- Cross-platform mobile (use Flutter)
+
+**Comparison**:
+| Aspect | Swift | Kotlin | Rust |
+|--------|-------|--------|------|
+| Platform | Apple | JVM/Android | Cross-platform |
+| Memory | ARC | GC | Manual |
+| Learning | Medium | Easy | Hard |
+| Speed | Fast | Fast | Fastest |
 
 ## Next Steps
 
-- [Swift.org](https://swift.org/documentation/) - Official documentation
-- [Swift Playgrounds](https://developer.apple.com/swift-playgrounds/) - Interactive learning
-- [The Swift Book](https://docs.swift.org/swift-book/) - Language guide
-- [SwiftUI Tutorials](https://developer.apple.com/tutorials/swiftui) - UI framework
+- [Swift.org](https://swift.org/documentation/)
+- [The Swift Book](https://docs.swift.org/swift-book/)
+- [SwiftUI Tutorials](https://developer.apple.com/tutorials/swiftui)
+- [Swift Playgrounds](https://developer.apple.com/swift-playgrounds/)
+
+## Ecosystem
+
+### Package Management
+
+```bash
+# Swift Package Manager
+swift package init              # Create package
+swift build                     # Build
+swift run                       # Run
+swift test                      # Test
+swift package add <url>         # Add dependency
+```
+
+### Popular Frameworks
+
+- **UI**: SwiftUI, UIKit
+- **Server**: Vapor, Hummingbird
+- **Networking**: Alamofire, URLSession
+- **Testing**: XCTest, Quick/Nimble

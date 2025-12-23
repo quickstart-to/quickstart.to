@@ -1,6 +1,7 @@
 ---
 title: "DynamoDB"
 description: "Get started with Amazon DynamoDB in 5 minutes"
+template: "tool"
 tags: ["database", "nosql", "aws", "serverless"]
 ---
 

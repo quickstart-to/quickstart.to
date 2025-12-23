@@ -1,6 +1,7 @@
 ---
 title: "RabbitMQ"
 description: "Get started with RabbitMQ messaging in 5 minutes"
+template: "tool"
 tags: ["messaging", "queue", "amqp"]
 ---
 

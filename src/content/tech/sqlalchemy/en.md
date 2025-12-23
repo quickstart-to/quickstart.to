@@ -1,6 +1,7 @@
 ---
 title: "SQLAlchemy"
 description: "Get started with SQLAlchemy in 5 minutes"
+template: "tool"
 tags: ["python", "orm", "database"]
 ---
 

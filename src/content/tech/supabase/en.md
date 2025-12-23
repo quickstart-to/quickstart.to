@@ -1,6 +1,7 @@
 ---
 title: "Supabase"
 description: "Get started with Supabase in 5 minutes"
+template: "tool"
 tags: ["database", "backend", "baas"]
 ---
 

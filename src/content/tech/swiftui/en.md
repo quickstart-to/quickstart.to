@@ -1,6 +1,7 @@
 ---
 title: "SwiftUI"
 description: "Get started with SwiftUI in 5 minutes"
+template: "tool"
 tags: ["ios", "macos", "apple"]
 ---
 

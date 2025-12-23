@@ -1,6 +1,7 @@
 ---
 title: "Linux 命令"
 description: "开发者必备的 Linux 命令速查"
+template: "tool"
 tags: ["linux", "terminal", "shell"]
 ---
 

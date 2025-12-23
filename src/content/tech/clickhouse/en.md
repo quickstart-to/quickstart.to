@@ -1,6 +1,7 @@
 ---
 title: "ClickHouse"
 description: "Get started with ClickHouse in 5 minutes"
+template: "tool"
 tags: ["database", "analytics", "olap"]
 ---
 

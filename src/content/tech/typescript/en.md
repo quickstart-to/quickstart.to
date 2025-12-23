@@ -1,27 +1,41 @@
 ---
 title: "TypeScript"
 description: "Get started with TypeScript in 5 minutes"
+template: "language"
 tags: ["javascript", "types", "programming"]
 ---
 
 ## TL;DR
 
-**What**: JavaScript with static type checking - catches errors before runtime.
+**One-liner**: TypeScript is JavaScript with types - catch bugs before your code runs.
 
-**Why**: Better tooling, fewer bugs, improved code maintainability.
+**Core Strengths**:
+- Catch errors at compile time, not runtime
+- Better IDE support (autocomplete, refactoring)
+- Self-documenting code through types
+- Gradually adoptable - valid JS is valid TS
+
+## Philosophy
+
+TypeScript's design goals:
+
+- **Superset of JavaScript** - Any JS code is valid TS. Migrate incrementally.
+- **Structural typing** - Types are compared by shape, not by name
+- **Type inference** - Compiler figures out types when possible
+- **Strictness is optional** - Start loose, tighten over time
+
+TypeScript doesn't change runtime behavior. It only adds compile-time checks.
 
 ## Quick Start
 
-**Install**:
+### Install
 
 ```bash
 npm install -g typescript
-
-# Verify
-tsc --version
+tsc --version  # Version 5.9.x
 ```
 
-**First TypeScript file**:
+### First Program
 
 ```typescript
 // hello.ts
@@ -32,54 +46,123 @@ function greet(name: string): string {
 console.log(greet("World"));
 ```
 
-**Compile and run**:
-
 ```bash
-tsc hello.ts        # Compiles to hello.js
-node hello.js       # Run the output
+tsc hello.ts     # Compiles to hello.js
+node hello.js    # Run it
 ```
 
-**Initialize a project**:
+### Run Directly (without compiling)
 
 ```bash
-tsc --init          # Creates tsconfig.json
-```
-
-**Run directly (without compiling)**:
-
-```bash
+npx tsx hello.ts    # Fast, recommended
+# or
 npx ts-node hello.ts
-# Or with tsx (faster)
-npx tsx hello.ts
 ```
 
-## Cheatsheet
+### Initialize a Project
 
-| Type | Example |
-|------|---------|
-| Primitives | `string`, `number`, `boolean` |
-| Array | `number[]` or `Array<number>` |
-| Object | `{ name: string; age: number }` |
-| Function | `(x: number) => string` |
-| Union | `string \| number` |
-| Optional | `name?: string` |
-| Any | `any` (avoid if possible) |
-| Unknown | `unknown` (safer than any) |
+```bash
+tsc --init  # Creates tsconfig.json
+```
+
+## Language Essentials
+
+### Basic Types
 
 ```typescript
-// Interface
+// Primitives
+const name: string = "Alice";
+const age: number = 25;
+const active: boolean = true;
+
+// Arrays
+const numbers: number[] = [1, 2, 3];
+const names: Array<string> = ["a", "b"];
+
+// Object
+const user: { name: string; age: number } = {
+  name: "Alice",
+  age: 25
+};
+
+// Any and Unknown
+let data: any = "anything";     // avoid
+let safe: unknown = getData();  // safer, requires type check
+```
+
+### Interfaces & Types
+
+```typescript
+// Interface (for objects)
 interface User {
   name: string;
   age: number;
-  email?: string;  // Optional
+  email?: string;  // optional
 }
 
 // Type alias
 type ID = string | number;
 
-// Generics
+// Union types
+type Status = "pending" | "active" | "done";
+
+// Intersection
+type Admin = User & { role: "admin" };
+```
+
+### Functions
+
+```typescript
+// Typed function
+function add(a: number, b: number): number {
+  return a + b;
+}
+
+// Arrow function
+const multiply = (a: number, b: number): number => a * b;
+
+// Optional and default parameters
+function greet(name: string, greeting: string = "Hello"): string {
+  return `${greeting}, ${name}!`;
+}
+
+// Function type
+type MathFn = (a: number, b: number) => number;
+```
+
+### Generics
+
+```typescript
+// Generic function
 function first<T>(arr: T[]): T | undefined {
   return arr[0];
+}
+
+first<number>([1, 2, 3]);  // 1
+first(["a", "b"]);         // "a" (inferred)
+
+// Generic interface
+interface Response<T> {
+  data: T;
+  status: number;
+}
+```
+
+### Control Flow
+
+```typescript
+// Type narrowing
+function process(value: string | number) {
+  if (typeof value === "string") {
+    console.log(value.toUpperCase());  // string methods available
+  } else {
+    console.log(value.toFixed(2));     // number methods available
+  }
+}
+
+// Type guards
+function isUser(obj: unknown): obj is User {
+  return typeof obj === "object" && obj !== null && "name" in obj;
 }
 ```
 
@@ -88,52 +171,69 @@ function first<T>(arr: T[]): T | undefined {
 ### Type 'X' is not assignable to type 'Y'
 
 ```typescript
-// Most common error - type mismatch
 let num: number = "5";  // Error!
 
-// Fix: use correct type or convert
+// Fix: use correct type
 let num: number = Number("5");
 ```
 
 ### Object is possibly 'undefined'
 
 ```typescript
-// Enable strict null checks catches this
 const user = users.find(u => u.id === 1);
-console.log(user.name);  // Error!
+console.log(user.name);  // Error! user might be undefined
 
-// Fix: check for undefined
+// Fix: check first
 if (user) {
   console.log(user.name);
 }
-// Or use optional chaining
+// Or optional chaining
 console.log(user?.name);
 ```
 
-### Property does not exist on type
+### Type assertions (use sparingly)
 
 ```typescript
-// TypeScript doesn't know the shape
-const data: any = fetchData();
-console.log(data.name);  // Works but unsafe
+// When you know better than the compiler
+const input = document.getElementById("input") as HTMLInputElement;
+input.value = "hello";
 
-// Better: define the type
-interface Data { name: string }
-const data: Data = fetchData();
+// Non-null assertion (dangerous)
+const element = document.getElementById("app")!;
 ```
 
 ### Migrating from JavaScript
 
-```javascript
-// Start with allowJs and checkJs in tsconfig.json
+```json
+// tsconfig.json - start loose
 {
   "compilerOptions": {
     "allowJs": true,
     "checkJs": true,
-    "strict": false  // Enable gradually
+    "strict": false
   }
 }
 ```
+
+## When to Choose
+
+**Best for**:
+- Any JavaScript project (browsers, Node.js)
+- Large codebases with multiple developers
+- Long-lived projects needing maintainability
+- Full-stack with shared types (frontend/backend)
+
+**Not ideal for**:
+- Quick scripts (use plain JS)
+- Tiny projects where overhead isn't worth it
+
+**Comparison**:
+| Aspect | TypeScript | JavaScript | Flow |
+|--------|------------|------------|------|
+| Type system | Structural | None | Structural |
+| Adoption | Huge | Universal | Declining |
+| Tooling | Excellent | Good | Limited |
+| Runtime | Compiles to JS | Native | Stripped |
 
 ## Next Steps
 
@@ -141,3 +241,20 @@ const data: Data = fetchData();
 - [TypeScript Playground](https://www.typescriptlang.org/play)
 - [Type Challenges](https://github.com/type-challenges/type-challenges)
 - [Total TypeScript](https://www.totaltypescript.com/)
+
+## Ecosystem
+
+### Running TypeScript
+
+```bash
+npx tsx file.ts       # Fast, modern
+npx ts-node file.ts   # Classic
+tsc && node dist/     # Compile first
+```
+
+### Popular Tools
+
+- **Runtime**: tsx, ts-node, Deno, Bun
+- **Build**: tsc, esbuild, swc
+- **Framework types**: @types/* packages
+- **Validation**: Zod, io-ts, Yup

@@ -1,6 +1,7 @@
 ---
 title: "ArgoCD"
 description: "Get started with ArgoCD GitOps in 5 minutes"
+template: "tool"
 tags: ["kubernetes", "gitops", "devops"]
 ---
 

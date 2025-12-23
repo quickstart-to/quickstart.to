@@ -1,6 +1,7 @@
 ---
 title: "SQLite"
 description: "5 分钟快速入门 SQLite 数据库"
+template: "tool"
 tags: ["database", "sql", "embedded"]
 ---
 

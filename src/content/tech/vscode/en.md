@@ -1,32 +1,46 @@
 ---
 title: "VS Code"
 description: "Get started with Visual Studio Code editor in 5 minutes"
+template: "tool"
 tags: ["editor", "ide", "development"]
 ---
 
 ## TL;DR
 
-**What**: A free, powerful, and extensible code editor from Microsoft.
+**One-liner**: VS Code is a free, fast, and extensible code editor from Microsoft - the most popular editor for web development.
 
-**Why**: Fast, cross-platform, excellent extensions, built-in Git, and integrated terminal.
+**Core Value**:
+- Speed - opens instantly, handles large projects
+- Extensions - 40,000+ extensions for any language
+- IntelliSense - smart code completion
+- Built-in Git - version control without leaving the editor
 
 ## Quick Start
 
-**Install**:
+### Install
 
-macOS: `brew install --cask visual-studio-code`
+macOS:
+```bash
+brew install --cask visual-studio-code
+```
 
-Windows: `winget install Microsoft.VisualStudioCode`
+Windows:
+```bash
+winget install Microsoft.VisualStudioCode
+```
 
 Linux: Download from [code.visualstudio.com](https://code.visualstudio.com/)
 
-**Open a folder**:
+### Open a Folder
+
 ```bash
 code .           # Open current directory
 code myproject   # Open specific folder
 ```
 
-**Essential extensions** (search in Extensions panel: Cmd/Ctrl+Shift+X):
+### Essential Extensions
+
+Search in Extensions panel (Cmd/Ctrl+Shift+X):
 - Prettier - Code formatter
 - ESLint - JavaScript linting
 - GitLens - Git supercharged
@@ -46,6 +60,9 @@ code myproject   # Open specific folder
 | `Cmd+B` / `Ctrl+B` | Toggle sidebar |
 | `` Ctrl+` `` | Toggle terminal |
 | `Cmd+,` / `Ctrl+,` | Open settings |
+| `F12` | Go to definition |
+| `Shift+F12` | Find all references |
+| `Cmd+Shift+L` / `Ctrl+Shift+L` | Select all occurrences |
 
 ## Gotchas
 
@@ -66,10 +83,20 @@ code myproject   # Open specific folder
 ### Change default terminal
 
 ```json
-// settings.json
+// settings.json (Cmd+, → click icon in top right)
 {
   "terminal.integrated.defaultProfile.osx": "zsh",
   "terminal.integrated.defaultProfile.windows": "PowerShell"
+}
+```
+
+### Format on save
+
+```json
+// settings.json
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }
 ```
 

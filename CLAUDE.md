@@ -57,6 +57,7 @@ src/content/{category}/{id}/assets/   # Optional images
 ---
 title: "Docker"
 description: "Get started with Docker containers" # 10-200 chars
+template: "tool"                                  # Required: tool/language/framework/service/concept/life
 tags: ["containers", "devops"]                    # Optional
 ---
 ```
@@ -73,25 +74,35 @@ tags: ["containers", "devops"]                    # Optional
 - Extensions: `.png`, `.jpg`, `.jpeg`, `.gif`, `.svg`, `.webp`
 - No subdirectories (flat structure)
 
-## Content Structure
+## Template System
 
-All quickstarts must follow this structure:
-```markdown
-## TL;DR
-## Quick Start
-## Cheatsheet
-## Gotchas
-## Next Steps
-```
+Templates are stored in `src/templates/` as Markdown files. Each content file must specify a `template` field in frontmatter.
+
+### Available Templates
+
+| Template | Use For | Required Sections |
+|----------|---------|-------------------|
+| `tool` | CLI tools, utilities (Docker, Git, Vim) | TL;DR, Quick Start, Cheatsheet, Gotchas, Next Steps |
+| `language` | Programming languages (Python, Go, Rust) | TL;DR, Philosophy, Quick Start, Language Essentials, Gotchas, When to Choose, Next Steps |
+| `framework` | Web frameworks, UI libs (React, Django) | TL;DR, Core Concepts, Quick Start, Gotchas, When to Use, Next Steps |
+| `service` | Cloud platforms (AWS, GCP, Vercel) | TL;DR, Architecture, Quick Start, Core Services, Gotchas, Next Steps |
+| `concept` | Protocols, specs (GraphQL, OAuth) | TL;DR, How It Works, Quick Start, Key Concepts, Gotchas, Next Steps |
+| `life` | Non-tech content (Cooking) | TL;DR, Fundamentals, Getting Started, Common Mistakes, Next Steps |
+
+### Writing Guidelines
+
+1. **说人话** - 清晰易懂简洁，避免晦涩术语
+2. **信息准确** - 更新时搜索官网验证版本、API、命令
+3. **价值优先** - 内核、实战、决策能力
 
 ## Validation
 
 The `pnpm validate` command checks:
 1. **id-naming** - ID length, characters, reserved words
 2. **id-conflicts** - Duplicate IDs across categories
-3. **frontmatter** - Required fields, description length
+3. **frontmatter** - Required fields (title, description, template), description length
 4. **assets** - File naming conventions
-5. **structure** - Required sections (TL;DR, Quick Start, Cheatsheet, Gotchas, Next Steps)
+5. **structure** - Required sections based on template type
 
 ## GitHub API Integration
 

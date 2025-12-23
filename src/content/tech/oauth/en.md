@@ -1,6 +1,7 @@
 ---
 title: "OAuth 2.0"
 description: "Get started with OAuth 2.0 in 5 minutes"
+template: "tool"
 tags: ["security", "authentication", "authorization"]
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: "PlanetScale"
 description: "5 分钟快速入门 PlanetScale"
+template: "tool"
 tags: ["database", "mysql", "serverless"]
 ---
 

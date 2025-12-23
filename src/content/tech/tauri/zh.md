@@ -1,6 +1,7 @@
 ---
 title: "Tauri"
 description: "5 分钟快速入门 Tauri"
+template: "tool"
 tags: ["desktop", "rust", "cross-platform"]
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: "Vitest"
 description: "Get started with Vitest testing in 5 minutes"
+template: "tool"
 tags: ["testing", "vite", "javascript"]
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: "Neo4j"
 description: "Get started with Neo4j graph database in 5 minutes"
+template: "tool"
 tags: ["database", "graph", "nosql"]
 ---
 

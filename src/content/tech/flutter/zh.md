@@ -1,6 +1,7 @@
 ---
 title: "Flutter"
 description: "5 分钟快速入门 Flutter 移动开发"
+template: "tool"
 tags: ["mobile", "dart", "cross-platform"]
 ---
 

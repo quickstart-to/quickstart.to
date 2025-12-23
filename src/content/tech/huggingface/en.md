@@ -1,6 +1,7 @@
 ---
 title: "Hugging Face"
 description: "Get started with Hugging Face Transformers in 5 minutes"
+template: "tool"
 tags: ["ai", "nlp", "transformers"]
 ---
 

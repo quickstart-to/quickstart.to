@@ -1,6 +1,7 @@
 ---
 title: "jq"
 description: "5 分钟快速入门 jq JSON 处理器"
+template: "tool"
 tags: ["cli", "json", "data-processing"]
 ---
 

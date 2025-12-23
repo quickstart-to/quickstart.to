@@ -1,6 +1,7 @@
 ---
 title: "GitHub Actions"
 description: "Get started with GitHub Actions CI/CD in 5 minutes"
+template: "tool"
 tags: ["devops", "ci-cd", "automation"]
 ---
 

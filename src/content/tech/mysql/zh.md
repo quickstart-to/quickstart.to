@@ -1,6 +1,7 @@
 ---
 title: "MySQL"
 description: "5 分钟快速入门 MySQL 数据库"
+template: "tool"
 tags: ["database", "sql", "relational"]
 ---
 

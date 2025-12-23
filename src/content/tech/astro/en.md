@@ -1,102 +1,79 @@
 ---
 title: "Astro"
 description: "Get started with Astro web framework in 5 minutes"
+template: "framework"
 tags: ["frontend", "static-site", "framework"]
 ---
 
 ## TL;DR
 
-**What**: A web framework for content-driven websites with minimal JavaScript.
+**One-liner**: Astro is the web framework for content-driven sites - ships zero JavaScript by default, hydrates only what needs to be interactive.
 
-**Why**: Zero JS by default, island architecture, use any UI framework, great for blogs/docs.
+**Core Strengths**:
+- Zero JS by default - static HTML, 100 Lighthouse scores
+- Island architecture - hydrate only interactive components
+- Use any framework - React, Vue, Svelte, Solid in the same project
+- Content collections - type-safe Markdown/MDX with validation
 
-## Quick Start
+## Core Concepts
 
-**Create new project**:
-```bash
-npm create astro@latest my-app
-cd my-app
-npm run dev
-```
+### Concept 1: Islands Architecture
 
-Open http://localhost:4321
-
-## Cheatsheet
-
-| Command | Description |
-|---------|-------------|
-| `npm run dev` | Start dev server |
-| `npm run build` | Build for production |
-| `npm run preview` | Preview build |
-| `npx astro add react` | Add React integration |
-| `npx astro add tailwind` | Add Tailwind CSS |
-
-**File-based routing**:
-```
-src/pages/
-├── index.astro       → /
-├── about.astro       → /about
-├── blog/[slug].astro → /blog/:slug
-└── [...slug].astro   → catch-all
-```
-
-## Gotchas
-
-### Astro component structure
-
-```astro
----
-// Component Script (runs at build time)
-const name = "World";
-const items = ["a", "b", "c"];
----
-
-<!-- Component Template -->
-<html>
-  <body>
-    <h1>Hello {name}!</h1>
-    <ul>
-      {items.map(item => <li>{item}</li>)}
-    </ul>
-  </body>
-</html>
-
-<style>
-  /* Scoped by default */
-  h1 { color: blue; }
-</style>
-```
-
-### Island architecture
+Components are static by default. Add interactivity selectively:
 
 ```astro
 ---
 import ReactCounter from './Counter.jsx';
+import VueModal from './Modal.vue';
 ---
 
-<!-- Static by default -->
-<h1>Static content</h1>
+<!-- Static - zero JS shipped -->
+<h1>My Blog</h1>
+<p>This content is pure HTML</p>
 
-<!-- Interactive when visible -->
-<ReactCounter client:visible />
-
-<!-- Interactive on page load -->
-<ReactCounter client:load />
-
-<!-- Interactive on idle -->
-<ReactCounter client:idle />
+<!-- Islands - JS only for these -->
+<ReactCounter client:visible />  <!-- Hydrate when visible -->
+<VueModal client:load />         <!-- Hydrate on page load -->
+<ReactCounter client:idle />     <!-- Hydrate when browser idle -->
 ```
 
-### Content collections
+### Concept 2: .astro Components
+
+Server-rendered by default. Frontmatter for logic, template for markup:
+
+```astro
+---
+// Runs at build time (server-side)
+const response = await fetch('https://api.example.com/posts');
+const posts = await response.json();
+---
+
+<ul>
+  {posts.map(post => (
+    <li><a href={`/blog/${post.slug}`}>{post.title}</a></li>
+  ))}
+</ul>
+
+<style>
+  /* Scoped to this component */
+  li { margin-bottom: 0.5rem; }
+</style>
+```
+
+### Concept 3: Content Collections
+
+Type-safe content with Zod validation:
 
 ```typescript
 // src/content/config.ts
 import { defineCollection, z } from 'astro:content';
 
 const blog = defineCollection({
+  type: 'content',
   schema: z.object({
     title: z.string(),
     date: z.date(),
+    tags: z.array(z.string()).optional(),
   }),
 });
 
@@ -110,9 +87,117 @@ const posts = await getCollection('blog');
 ---
 ```
 
+## Quick Start
+
+### Create Project
+
+```bash
+npm create astro@latest my-blog
+cd my-blog
+```
+
+### Project Structure
+
+```
+src/
+├── pages/          # File-based routing
+│   ├── index.astro     → /
+│   ├── about.astro     → /about
+│   └── blog/[slug].astro → /blog/:slug
+├── components/     # Reusable components
+├── layouts/        # Page layouts
+└── content/        # Content collections
+```
+
+### Run
+
+```bash
+npm run dev
+# Open http://localhost:4321
+```
+
+## Gotchas
+
+### File-based routing rules
+
+```
+src/pages/
+├── index.astro           → /
+├── about.astro           → /about
+├── blog/index.astro      → /blog
+├── blog/[slug].astro     → /blog/my-post
+└── [...slug].astro       → /any/nested/path (catch-all)
+```
+
+### Choosing the right client directive
+
+```astro
+<!-- Most common - load when visible in viewport -->
+<Component client:visible />
+
+<!-- Critical interactivity - load immediately -->
+<Component client:load />
+
+<!-- Non-critical - load when browser is idle -->
+<Component client:idle />
+
+<!-- Only on specific media query -->
+<Component client:media="(max-width: 768px)" />
+```
+
+### Dynamic routes need getStaticPaths
+
+```astro
+---
+// src/pages/blog/[slug].astro
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map(post => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+---
+```
+
+## When to Use
+
+**Best for**:
+- Blogs and documentation sites
+- Marketing/landing pages
+- Content-heavy websites
+- Sites where performance is critical
+
+**Not ideal for**:
+- Highly interactive apps (dashboards, SPAs)
+- Real-time applications
+- Apps needing client-side routing
+
+**Comparison**:
+| Feature | Astro | Next.js | Gatsby |
+|---------|-------|---------|--------|
+| Default JS | Zero | Full React | Full React |
+| Framework lock-in | None | React | React |
+| Build speed | Fast | Medium | Slow |
+| Use case | Content | Apps + Content | Content |
+
 ## Next Steps
 
-- [Astro Documentation](https://docs.astro.build/) - Official docs
-- [Astro Tutorial](https://docs.astro.build/en/tutorial/0-introduction/) - Learn Astro
-- [Astro Themes](https://astro.build/themes/) - Starter templates
-- [Astro Integrations](https://astro.build/integrations/) - Plugins
+- [Astro Documentation](https://docs.astro.build/)
+- [Astro Tutorial](https://docs.astro.build/en/tutorial/)
+- [Astro Themes](https://astro.build/themes/)
+- [Astro Integrations](https://astro.build/integrations/)
+
+## Cheatsheet
+
+| Pattern | Code |
+|---------|------|
+| Static component | `<Component />` |
+| Hydrate on visible | `<Component client:visible />` |
+| Hydrate on load | `<Component client:load />` |
+| Hydrate on idle | `<Component client:idle />` |
+| Add integration | `npx astro add react` |
+| Build | `npm run build` |
+| Preview | `npm run preview` |

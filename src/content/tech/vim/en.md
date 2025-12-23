@@ -1,31 +1,36 @@
 ---
 title: "Vim"
 description: "Get started with Vim text editor essentials"
+template: "tool"
 tags: ["editor", "terminal", "productivity"]
 ---
 
 ## TL;DR
 
-**What**: Modal text editor - fast, efficient, available everywhere.
+**One-liner**: Vim is a modal text editor that's fast, efficient, and available on every Unix system - mastering it makes you faster at editing text forever.
 
-**Why**: Edit files on any server, powerful keyboard-driven workflow.
+**Core Value**:
+- Speed - keyboard-only workflow, no mouse needed
+- Ubiquity - installed on virtually every server
+- Composability - commands combine like a language
+- Efficiency - do complex edits with few keystrokes
 
 ## Quick Start
 
-**Open Vim**:
+### Open Vim
 
 ```bash
 vim filename.txt    # Open/create file
 vim                 # Open empty buffer
 ```
 
-**The three essential modes**:
+### Three Essential Modes
 
 - **Normal mode** (default): Navigate and run commands
 - **Insert mode**: Type text (press `i` to enter)
 - **Command mode**: Run commands (press `:` to enter)
 
-**Survival basics**:
+### Survival Basics
 
 ```
 i          → Enter insert mode (start typing)
@@ -36,7 +41,7 @@ Esc        → Return to normal mode
 :q!        → Quit without saving
 ```
 
-**First edit**:
+### First Edit
 
 ```bash
 vim hello.txt      # Open file
@@ -62,6 +67,9 @@ Esc                # Return to normal mode
 | `Ctrl+r` | Redo |
 | `/pattern` | Search forward |
 | `n` / `N` | Next/previous match |
+| `ciw` | Change inner word |
+| `diw` | Delete inner word |
+| `.` | Repeat last command |
 
 **Insert mode shortcuts**:
 
@@ -72,6 +80,7 @@ Esc                # Return to normal mode
 | `o` | New line below |
 | `O` | New line above |
 | `A` | Insert at end of line |
+| `I` | Insert at start of line |
 
 ## Gotchas
 
@@ -80,13 +89,6 @@ Esc                # Return to normal mode
 ```
 Esc        → Make sure you're in normal mode
 :q!        → Force quit without saving
-```
-
-### Accidentally in replace mode
-
-```
-Esc        → Return to normal mode
-u          → Undo changes
 ```
 
 ### Can't type anything
@@ -107,11 +109,20 @@ i          → Enter insert mode to type
 ### Enable line numbers
 
 ```vim
-:set number       " Show line numbers
-:set relativenumber " Relative line numbers
+:set number           " Show line numbers
+:set relativenumber   " Relative line numbers
 
 " Add to ~/.vimrc to make permanent
 set number
+```
+
+### Paste from clipboard
+
+```vim
+" Before pasting external text:
+:set paste
+" Paste your text
+:set nopaste
 ```
 
 ## Next Steps
@@ -119,4 +130,4 @@ set number
 - [Vim Adventures (Game)](https://vim-adventures.com/)
 - [OpenVim Tutorial](https://www.openvim.com/)
 - [Vim Cheat Sheet](https://vim.rtorr.com/)
-- [Neovim (Modern Fork)](https://neovim.io/)
+- [Neovim](https://neovim.io/)

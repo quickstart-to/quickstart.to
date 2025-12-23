@@ -1,6 +1,7 @@
 ---
 title: "Grafana"
 description: "Get started with Grafana dashboards in 5 minutes"
+template: "tool"
 tags: ["devops", "monitoring", "visualization"]
 ---
 

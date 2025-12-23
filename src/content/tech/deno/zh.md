@@ -1,6 +1,7 @@
 ---
 title: "Deno"
 description: "5 分钟快速入门 Deno"
+template: "tool"
 tags: ["javascript", "typescript", "runtime"]
 ---
 

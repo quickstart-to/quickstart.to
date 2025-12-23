@@ -1,6 +1,7 @@
 ---
 title: "Homebrew"
 description: "快速入门 macOS 包管理器 Homebrew"
+template: "tool"
 tags: ["macos", "package-manager", "tools"]
 ---
 

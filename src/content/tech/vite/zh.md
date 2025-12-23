@@ -1,6 +1,7 @@
 ---
 title: "Vite"
 description: "5 分钟快速入门 Vite 构建工具"
+template: "tool"
 tags: ["bundler", "frontend", "build-tool"]
 ---
 

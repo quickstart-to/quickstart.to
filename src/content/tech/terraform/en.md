@@ -1,6 +1,7 @@
 ---
 title: "Terraform"
 description: "Get started with Terraform infrastructure as code in 5 minutes"
+template: "tool"
 tags: ["devops", "infrastructure", "iac"]
 ---
 

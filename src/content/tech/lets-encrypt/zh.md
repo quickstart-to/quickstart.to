@@ -1,6 +1,7 @@
 ---
 title: "Let's Encrypt"
 description: "5 分钟快速入门 Let's Encrypt"
+template: "tool"
 tags: ["security", "ssl", "certificates"]
 ---
 

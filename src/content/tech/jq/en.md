@@ -1,6 +1,7 @@
 ---
 title: "jq"
 description: "Get started with jq JSON processor in 5 minutes"
+template: "tool"
 tags: ["cli", "json", "data-processing"]
 ---
 
