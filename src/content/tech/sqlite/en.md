@@ -1,6 +1,7 @@
 ---
 title: "SQLite"
 description: "Get started with SQLite database in 5 minutes"
+template: "tool"
 tags: ["database", "sql", "embedded"]
 ---
 

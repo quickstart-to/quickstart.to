@@ -1,6 +1,7 @@
 ---
 title: "WebAssembly"
 description: "Get started with WebAssembly in 5 minutes"
+template: "tool"
 tags: ["wasm", "performance", "web"]
 ---
 

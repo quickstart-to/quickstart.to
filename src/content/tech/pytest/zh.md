@@ -1,6 +1,7 @@
 ---
 title: "Pytest"
 description: "5 分钟快速入门 Pytest"
+template: "tool"
 tags: ["python", "testing", "automation"]
 ---
 

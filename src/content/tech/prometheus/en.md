@@ -1,6 +1,7 @@
 ---
 title: "Prometheus"
 description: "Get started with Prometheus monitoring in 5 minutes"
+template: "tool"
 tags: ["devops", "monitoring", "observability"]
 ---
 

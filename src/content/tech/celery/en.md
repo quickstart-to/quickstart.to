@@ -1,6 +1,7 @@
 ---
 title: "Celery"
 description: "Get started with Celery task queue in 5 minutes"
+template: "tool"
 tags: ["python", "queue", "async"]
 ---
 

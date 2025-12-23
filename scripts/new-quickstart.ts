@@ -1,10 +1,22 @@
-import { mkdirSync, writeFileSync, existsSync } from 'fs';
-import { join } from 'path';
+import { mkdirSync, writeFileSync, existsSync, readFileSync, readdirSync } from 'fs';
+import { join, basename } from 'path';
 import { createInterface } from 'readline';
 
 const CONTENT_DIR = join(process.cwd(), 'src', 'content');
+const TEMPLATES_DIR = join(process.cwd(), 'src', 'templates');
 const CATEGORIES = ['tech', 'life'];
 const LANGUAGES = ['en', 'zh', 'de', 'fr', 'es'];
+
+// Get available templates from src/templates/
+function getAvailableTemplates(): string[] {
+  try {
+    return readdirSync(TEMPLATES_DIR)
+      .filter(f => f.endsWith('.md'))
+      .map(f => basename(f, '.md'));
+  } catch {
+    return ['tool', 'language', 'framework', 'service', 'concept', 'life'];
+  }
+}
 
 const rl = createInterface({
   input: process.stdin,
@@ -29,8 +41,78 @@ function validateId(id: string): string | null {
   return null;
 }
 
+// Read template file and replace placeholders
+function getTemplateContent(templateName: string, title: string, description: string, tags: string[]): string {
+  const templatePath = join(TEMPLATES_DIR, `${templateName}.md`);
+
+  if (existsSync(templatePath)) {
+    let content = readFileSync(templatePath, 'utf-8');
+
+    // Replace template frontmatter with actual values
+    const frontmatter = `---
+title: "${title}"
+description: "${description}"
+template: "${templateName}"
+tags: [${tags.map(t => `"${t}"`).join(', ')}]
+---`;
+
+    // Remove template's own frontmatter and prepend new one
+    content = content.replace(/^---\n[\s\S]*?\n---\n?/, '');
+
+    // Replace placeholders
+    content = content.replace(/\{语言名\}|\{工具名\}|\{框架名\}|\{服务名\}|\{概念名\}|\{主题\}/g, title);
+    content = content.replace(/\{lang\}/g, title.toLowerCase());
+    content = content.replace(/\{tool\}/g, title.toLowerCase());
+
+    return frontmatter + '\n\n' + content;
+  }
+
+  // Fallback content if template doesn't exist
+  return `---
+title: "${title}"
+description: "${description}"
+template: "${templateName}"
+tags: [${tags.map(t => `"${t}"`).join(', ')}]
+---
+
+## TL;DR
+
+**一句话**：${title} 是...
+
+**核心价值**：
+- 价值1
+- 价值2
+
+## Quick Start
+
+### 安装
+
+\`\`\`bash
+# 安装命令
+\`\`\`
+
+### 第一个示例
+
+\`\`\`
+# 示例代码
+\`\`\`
+
+## Gotchas
+
+### 常见问题
+
+解决方案...
+
+## Next Steps
+
+- [官方文档](https://...)
+`;
+}
+
 async function main() {
   console.log('\n📝 Create a new quickstart\n');
+
+  const TEMPLATES = getAvailableTemplates();
 
   // Get category
   console.log('Categories:', CATEGORIES.join(', '));
@@ -39,6 +121,16 @@ async function main() {
     category = await prompt('Category: ');
     if (!CATEGORIES.includes(category)) {
       console.log(`Invalid category. Choose from: ${CATEGORIES.join(', ')}`);
+    }
+  }
+
+  // Get template
+  console.log('\nTemplates:', TEMPLATES.join(', '));
+  let template = '';
+  while (!TEMPLATES.includes(template)) {
+    template = await prompt('Template: ');
+    if (!TEMPLATES.includes(template)) {
+      console.log(`Invalid template. Choose from: ${TEMPLATES.join(', ')}`);
     }
   }
 
@@ -109,89 +201,8 @@ async function main() {
     ? tagsInput.split(',').map((t) => t.trim()).filter(Boolean)
     : [];
 
-  // Generate content based on category
-  const techContent = `---
-title: "${title}"
-description: "${description}"
-tags: [${tags.map((t) => `"${t}"`).join(', ')}]
----
-
-## TL;DR
-
-**What**: One-line definition of ${title}.
-
-**Why**: What problem it solves.
-
-## Quick Start
-
-\`\`\`bash
-# Install
-brew install example
-
-# Run
-example init
-\`\`\`
-
-## Cheatsheet
-
-| Command | Description |
-|---------|-------------|
-| \`example start\` | Start service |
-| \`example stop\` | Stop service |
-| \`example status\` | Check status |
-
-## Gotchas
-
-### Common Issue
-
-How to fix it.
-
-## Next Steps
-
-- [Official Docs](https://example.com/docs)
-`;
-
-  const lifeContent = `---
-title: "${title}"
-description: "${description}"
-tags: [${tags.map((t) => `"${t}"`).join(', ')}]
----
-
-## TL;DR
-
-**What**: One-line definition of ${title}.
-
-**Why**: Why it matters.
-
-## Quick Start
-
-**Prepare**:
-- Item 1
-- Item 2
-
-**Steps**:
-1. First step
-2. Second step
-3. Third step
-
-## Cheatsheet
-
-- **Tip 1**: Description
-- **Tip 2**: Description
-- **Tip 3**: Description
-
-## Gotchas
-
-### Common Mistake
-
-How to avoid or fix it.
-
-## Next Steps
-
-- [Learn More](https://example.com)
-`;
-
-  const content = category === 'tech' ? techContent : lifeContent;
+  // Generate content from template
+  const content = getTemplateContent(template, title, description, tags);
 
   writeFileSync(langFile, content);
   console.log(`\n✅ Created: ${langFile}\n`);

@@ -1,6 +1,7 @@
 ---
 title: "Yarn"
 description: "Get started with Yarn package manager in 5 minutes"
+template: "tool"
 tags: ["nodejs", "package-manager", "javascript"]
 ---
 

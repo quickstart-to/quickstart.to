@@ -1,18 +1,48 @@
 ---
 title: "AWS"
 description: "Get started with Amazon Web Services in 5 minutes"
+template: "service"
 tags: ["cloud", "devops", "infrastructure"]
 ---
 
 ## TL;DR
 
-**What**: Amazon's comprehensive cloud computing platform with 200+ services.
+**One-liner**: AWS is Amazon's cloud platform with 200+ services - the industry leader powering Netflix, Airbnb, and millions of businesses.
 
-**Why**: Industry leader, vast service catalog, global infrastructure, pay-as-you-go pricing.
+**Core Capabilities**:
+- Compute - EC2 instances, Lambda serverless, containers
+- Storage - S3 object storage, EBS block storage
+- Database - RDS, DynamoDB, ElastiCache
+- Global infrastructure - 30+ regions, 100+ edge locations
+
+## Architecture
+
+### Service Categories
+
+- **Compute**: EC2 (virtual servers), Lambda (serverless), ECS/EKS (containers)
+- **Storage**: S3 (objects), EBS (block), EFS (file system), Glacier (archive)
+- **Database**: RDS (relational), DynamoDB (NoSQL), ElastiCache (in-memory)
+- **Networking**: VPC (virtual network), Route 53 (DNS), CloudFront (CDN)
+- **Security**: IAM (identity), KMS (encryption), Secrets Manager
+
+### Core Concepts
+
+- **Region**: Geographic area with multiple data centers (e.g., us-east-1)
+- **Availability Zone**: Isolated data center within a region
+- **ARN**: Amazon Resource Name - unique identifier for any resource
+- **IAM**: Identity and Access Management - controls who can do what
 
 ## Quick Start
 
-**Install AWS CLI**:
+### Create Account
+
+1. Go to [aws.amazon.com](https://aws.amazon.com/)
+2. Click "Create an AWS Account"
+3. Provide email, payment info (free tier available)
+4. Enable MFA for root account (Security → MFA)
+
+### Install CLI
+
 ```bash
 # macOS
 brew install awscli
@@ -25,95 +55,82 @@ unzip awscliv2.zip && sudo ./aws/install
 aws --version
 ```
 
-**Configure credentials**:
+### Configure Credentials
+
 ```bash
+# Create access key: IAM → Users → Security credentials → Create access key
 aws configure
-# Enter: Access Key ID, Secret Access Key, Region, Output format
+# Enter: Access Key ID, Secret Access Key, Region (e.g., us-east-1), Output format (json)
 ```
 
-**First commands**:
+### First Commands
+
 ```bash
+# Check identity
+aws sts get-caller-identity
+
 # List S3 buckets
 aws s3 ls
-
-# List EC2 instances
-aws ec2 describe-instances
 ```
 
-## Cheatsheet
+## Core Services
 
-| Command | Description |
-|---------|-------------|
-| `aws configure` | Set up credentials |
-| `aws s3 ls` | List S3 buckets |
-| `aws s3 cp file s3://bucket/` | Upload to S3 |
-| `aws ec2 describe-instances` | List EC2 instances |
-| `aws lambda list-functions` | List Lambda functions |
-| `aws iam list-users` | List IAM users |
-| `aws sts get-caller-identity` | Check current identity |
+### Compute
+
+| Service | Use Case | Pricing Model |
+|---------|----------|---------------|
+| EC2 | Virtual servers | Per hour/second |
+| Lambda | Serverless functions | Per request + duration |
+| ECS/EKS | Container orchestration | Underlying resources |
+| Lightsail | Simple VPS | Fixed monthly |
+
+### Storage
+
+| Service | Use Case | Pricing Model |
+|---------|----------|---------------|
+| S3 | Object storage, static hosting | Per GB + requests |
+| EBS | Block storage for EC2 | Per GB provisioned |
+| EFS | Shared file system | Per GB used |
+| Glacier | Archive storage | Per GB (cheap) |
+
+### Database
+
+| Service | Use Case | Pricing Model |
+|---------|----------|---------------|
+| RDS | Managed MySQL, PostgreSQL | Instance + storage |
+| DynamoDB | NoSQL, serverless | Per request or provisioned |
+| ElastiCache | Redis/Memcached | Instance hours |
 
 ## Gotchas
 
-### Core services
+### Cost Traps
 
-```
-Compute:     EC2, Lambda, ECS, EKS
-Storage:     S3, EBS, EFS
-Database:    RDS, DynamoDB, ElastiCache
-Networking:  VPC, Route 53, CloudFront
-Security:    IAM, KMS, Secrets Manager
-```
+- **Forgot to stop EC2**: Instances run 24/7 → **Set billing alerts and use auto-stop**
+- **NAT Gateway**: $0.045/hour + data → **Use NAT instances for dev environments**
+- **Data transfer out**: Charges add up → **Use CloudFront for heavy traffic**
+- **EBS snapshots**: Accumulate silently → **Automate cleanup with lifecycle policies**
 
-### S3 operations
+### Permission Issues
 
-```bash
-# Create bucket
-aws s3 mb s3://my-bucket-name
+- **AccessDenied**: Check IAM policies → Use `aws iam simulate-principal-policy` to debug
+- **Assume role failed**: Trust policy must allow the caller entity
 
-# Sync directory
-aws s3 sync ./local-dir s3://bucket/prefix
-
-# Download file
-aws s3 cp s3://bucket/file.txt ./
-
-# Delete bucket (must be empty)
-aws s3 rb s3://bucket-name
-```
-
-### EC2 basics
+### Common Errors
 
 ```bash
-# Launch instance
-aws ec2 run-instances \
-  --image-id ami-0abcdef1234567890 \
-  --instance-type t2.micro \
-  --key-name my-key
+# "Unable to locate credentials"
+aws configure  # Set up credentials
 
-# Stop instance
-aws ec2 stop-instances --instance-ids i-1234567890abcdef0
+# "An error occurred (UnauthorizedOperation)"
+# → Missing IAM permission, check policy
 
-# Terminate instance
-aws ec2 terminate-instances --instance-ids i-1234567890abcdef0
-```
-
-### IAM policies
-
-```json
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Action": "s3:GetObject",
-      "Resource": "arn:aws:s3:::bucket-name/*"
-    }
-  ]
-}
+# "The security token included in the request is expired"
+# → Refresh credentials or session token
 ```
 
 ## Next Steps
 
-- [AWS Documentation](https://docs.aws.amazon.com/) - Official docs
-- [AWS Free Tier](https://aws.amazon.com/free/) - Free resources
-- [AWS Skill Builder](https://skillbuilder.aws/) - Training
-- [AWS Well-Architected](https://aws.amazon.com/architecture/well-architected/) - Best practices
+- [AWS Documentation](https://docs.aws.amazon.com/)
+- [AWS Free Tier](https://aws.amazon.com/free/)
+- [AWS Pricing Calculator](https://calculator.aws/)
+- [AWS Well-Architected](https://aws.amazon.com/architecture/well-architected/)

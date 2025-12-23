@@ -1,6 +1,7 @@
 ---
 title: "PyTorch"
 description: "Get started with PyTorch deep learning in 5 minutes"
+template: "tool"
 tags: ["ai", "machine-learning", "python"]
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: "NATS"
 description: "5 分钟快速入门 NATS 消息系统"
+template: "tool"
 tags: ["messaging", "cloud-native", "microservices"]
 ---
 

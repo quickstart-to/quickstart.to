@@ -1,6 +1,7 @@
 ---
 title: "Flutter"
 description: "Get started with Flutter mobile development in 5 minutes"
+template: "tool"
 tags: ["mobile", "dart", "cross-platform"]
 ---
 

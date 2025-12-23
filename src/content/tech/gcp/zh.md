@@ -1,117 +1,133 @@
 ---
 title: "Google Cloud"
 description: "5 分钟快速入门 Google Cloud Platform"
+template: "service"
 tags: ["cloud", "devops", "google"]
 ---
 
 ## TL;DR
 
-**是什么**：谷歌的云计算平台，拥有 100+ 服务。
+**一句话**：Google Cloud 是谷歌的云平台，拥有 100+ 服务——Kubernetes 的发源地，数据/ML 领域的领导者。
 
-**为什么用**：大数据/ML 领先、Kubernetes 发源地、全球网络、有竞争力的定价。
+**核心能力**：
+- 计算 - 虚拟机、容器、无服务器（Cloud Run 很出色）
+- 数据 - BigQuery 分析、Firestore NoSQL
+- ML/AI - Vertex AI、预训练模型
+- Kubernetes - GKE，最佳托管 K8s 体验
+
+## Architecture
+
+### 服务分类
+
+- **计算**：Compute Engine（虚拟机）、Cloud Run（无服务器）、GKE（Kubernetes）、Cloud Functions
+- **存储**：Cloud Storage（对象）、Persistent Disk、Filestore
+- **数据库**：Cloud SQL（关系型）、Firestore（NoSQL）、Bigtable、Spanner
+- **分析**：BigQuery、Dataflow、Pub/Sub、Dataproc
+- **ML/AI**：Vertex AI、Vision AI、Speech-to-Text、Translation
+
+### 核心概念
+
+- **Project**：资源和计费的容器
+- **Region/Zone**：资源的地理位置
+- **Service Account**：应用程序的身份（不是用户）
+- **IAM**：身份和访问管理 - 角色和权限
 
 ## Quick Start
 
-**安装 gcloud CLI**：
+### 创建账号
+
+1. 访问 [cloud.google.com](https://cloud.google.com/)
+2. 点击"免费开始使用"（90 天 $300 额度）
+3. 在 Cloud Console 中创建项目
+4. 为项目启用结算
+
+### 安装 CLI
+
 ```bash
 # macOS
 brew install google-cloud-sdk
 
 # Linux
 curl https://sdk.cloud.google.com | bash
+exec -l $SHELL
 
 # 验证
 gcloud --version
 ```
 
-**初始化和认证**：
+### 初始化和认证
+
 ```bash
-# 初始化（打开浏览器）
+# 初始化（打开浏览器认证）
 gcloud init
 
 # 设置项目
 gcloud config set project PROJECT_ID
 
-# 列出配置
+# 验证
 gcloud config list
 ```
 
-## Cheatsheet
+### 第一个命令
 
-| 命令 | 描述 |
-|---------|-------------|
-| `gcloud init` | 初始化 SDK |
-| `gcloud auth login` | 认证 |
-| `gcloud projects list` | 列出项目 |
-| `gcloud compute instances list` | 列出虚拟机 |
-| `gcloud container clusters list` | 列出 GKE 集群 |
-| `gcloud functions list` | 列出 Cloud Functions |
-| `gcloud run services list` | 列出 Cloud Run 服务 |
+```bash
+# 列出项目
+gcloud projects list
+
+# 列出计算实例
+gcloud compute instances list
+```
+
+## Core Services
+
+### 计算
+
+| 服务 | 用途 | 定价模式 |
+|------|------|----------|
+| Compute Engine | 虚拟机 | 按秒 |
+| Cloud Run | 无服务器容器 | 按请求 + CPU/内存 |
+| GKE | 托管 Kubernetes | 集群 + 节点 |
+| Cloud Functions | 事件驱动函数 | 按调用 |
+
+### 存储和数据库
+
+| 服务 | 用途 | 定价模式 |
+|------|------|----------|
+| Cloud Storage | 对象存储 | 按 GB + 操作 |
+| Cloud SQL | 托管 MySQL/PostgreSQL | 实例 + 存储 |
+| Firestore | NoSQL 文档数据库 | 按操作 + 存储 |
+| BigQuery | 数据仓库 | 按查询（扫描 TB）|
 
 ## Gotchas
 
-### 核心服务
+### 费用陷阱
 
-```
-计算：       Compute Engine, Cloud Run, GKE, Cloud Functions
-存储：       Cloud Storage, Persistent Disk, Filestore
-数据库：     Cloud SQL, Firestore, Bigtable, Spanner
-分析：       BigQuery, Dataflow, Pub/Sub
-ML/AI：      Vertex AI, Vision AI, Natural Language
-```
+- **BigQuery 查询**：扫描整列 → **使用 LIMIT、分区和预览**
+- **空闲 GKE 集群**：控制平面收费 → **使用 Autopilot 或删除未用集群**
+- **网络出口**：跨区域收费 → **资源保持在同一区域**
+- **持久磁盘**：未挂载的磁盘仍收费 → **删除未用磁盘**
 
-### Cloud Storage (GCS)
+### 权限问题
 
-```bash
-# 创建存储桶
-gcloud storage buckets create gs://my-bucket-name
+- **403 Forbidden**：检查 IAM 角色 → 确保服务账号有正确角色
+- **API 未启用**：在控制台启用或 `gcloud services enable SERVICE_NAME`
 
-# 上传文件
-gcloud storage cp file.txt gs://my-bucket/
-
-# 列出对象
-gcloud storage ls gs://my-bucket/
-
-# 下载文件
-gcloud storage cp gs://my-bucket/file.txt ./
-```
-
-### Compute Engine
+### 常见错误
 
 ```bash
-# 创建虚拟机
-gcloud compute instances create my-vm \
-  --zone=us-central1-a \
-  --machine-type=e2-micro \
-  --image-family=debian-11 \
-  --image-project=debian-cloud
+# "The project PROJECT_ID does not exist"
+gcloud projects list  # 验证项目名称
 
-# SSH 到虚拟机
-gcloud compute ssh my-vm --zone=us-central1-a
+# "PERMISSION_DENIED: Request had insufficient authentication"
+gcloud auth login  # 重新认证
 
-# 停止/删除虚拟机
-gcloud compute instances stop my-vm --zone=us-central1-a
-gcloud compute instances delete my-vm --zone=us-central1-a
-```
-
-### Cloud Run
-
-```bash
-# 从源代码部署
-gcloud run deploy my-service \
-  --source . \
-  --region us-central1 \
-  --allow-unauthenticated
-
-# 部署容器
-gcloud run deploy my-service \
-  --image gcr.io/PROJECT_ID/my-image \
-  --region us-central1
+# "API not enabled"
+gcloud services enable compute.googleapis.com
 ```
 
 ## Next Steps
 
-- [Google Cloud 文档](https://cloud.google.com/docs) - 官方文档
-- [Google Cloud 免费套餐](https://cloud.google.com/free) - 免费资源
-- [Google Cloud Skills Boost](https://www.cloudskillsboost.google/) - 培训
-- [Google Cloud 架构中心](https://cloud.google.com/architecture) - 最佳实践
+- [Google Cloud 文档](https://cloud.google.com/docs)
+- [Google Cloud 免费套餐](https://cloud.google.com/free)
+- [Google Cloud Skills Boost](https://www.cloudskillsboost.google/)
+- [Google Cloud 架构中心](https://cloud.google.com/architecture)

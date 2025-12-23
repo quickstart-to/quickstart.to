@@ -1,6 +1,7 @@
 ---
 title: "Deno"
 description: "Get started with Deno in 5 minutes"
+template: "tool"
 tags: ["javascript", "typescript", "runtime"]
 ---
 

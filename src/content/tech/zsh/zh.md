@@ -1,6 +1,7 @@
 ---
 title: "Zsh"
 description: "5 分钟快速入门 Zsh shell"
+template: "tool"
 tags: ["cli", "shell", "productivity"]
 ---
 

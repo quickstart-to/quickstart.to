@@ -1,6 +1,7 @@
 ---
 title: "Tauri"
 description: "Get started with Tauri in 5 minutes"
+template: "tool"
 tags: ["desktop", "rust", "cross-platform"]
 ---
 

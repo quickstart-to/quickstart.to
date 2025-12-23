@@ -1,6 +1,7 @@
 ---
 title: "React Native"
 description: "Get started with React Native in 5 minutes"
+template: "tool"
 tags: ["mobile", "react", "cross-platform"]
 ---
 

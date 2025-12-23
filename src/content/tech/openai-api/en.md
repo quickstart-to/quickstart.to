@@ -1,6 +1,7 @@
 ---
 title: "OpenAI API"
 description: "Get started with OpenAI API in 5 minutes"
+template: "tool"
 tags: ["ai", "api", "gpt"]
 ---
 

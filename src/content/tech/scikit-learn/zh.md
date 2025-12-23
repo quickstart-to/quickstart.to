@@ -1,6 +1,7 @@
 ---
 title: "Scikit-learn"
 description: "5 分钟快速入门 Scikit-learn"
+template: "tool"
 tags: ["python", "machine-learning", "data-science"]
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: "Helm"
 description: "Get started with Helm Kubernetes package manager in 5 minutes"
+template: "tool"
 tags: ["kubernetes", "devops", "package-manager"]
 ---
 

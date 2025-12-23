@@ -1,6 +1,7 @@
 ---
 title: "Let's Encrypt"
 description: "Get started with Let's Encrypt in 5 minutes"
+template: "tool"
 tags: ["security", "ssl", "certificates"]
 ---
 

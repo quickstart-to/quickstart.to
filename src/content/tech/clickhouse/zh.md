@@ -1,6 +1,7 @@
 ---
 title: "ClickHouse"
 description: "5 分钟快速入门 ClickHouse"
+template: "tool"
 tags: ["database", "analytics", "olap"]
 ---
 

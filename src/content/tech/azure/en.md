@@ -1,18 +1,48 @@
 ---
 title: "Azure"
 description: "Get started with Microsoft Azure in 5 minutes"
+template: "service"
 tags: ["cloud", "devops", "microsoft"]
 ---
 
 ## TL;DR
 
-**What**: Microsoft's cloud computing platform with 200+ services.
+**One-liner**: Azure is Microsoft's cloud platform with 200+ services - best for enterprise, hybrid cloud, and .NET workloads.
 
-**Why**: Enterprise integration, hybrid cloud support, strong .NET ecosystem, AI/ML services.
+**Core Capabilities**:
+- Enterprise integration - Active Directory, Office 365, hybrid cloud
+- Compute - VMs, App Service, Functions, AKS
+- Data - SQL Database, Cosmos DB, Synapse Analytics
+- AI/ML - Azure OpenAI, Cognitive Services, ML Studio
+
+## Architecture
+
+### Service Categories
+
+- **Compute**: Virtual Machines, App Service, Functions, AKS (Kubernetes)
+- **Storage**: Blob Storage, File Storage, Disk Storage, Archive
+- **Database**: SQL Database, Cosmos DB, Cache for Redis, PostgreSQL
+- **Networking**: Virtual Network, Load Balancer, CDN, Front Door
+- **Identity**: Entra ID (Azure AD), Key Vault, Managed Identities
+
+### Core Concepts
+
+- **Subscription**: Billing container for Azure resources
+- **Resource Group**: Logical container grouping related resources
+- **Region**: Geographic location for resources
+- **Tenant**: Organization's instance of Entra ID
 
 ## Quick Start
 
-**Install Azure CLI**:
+### Create Account
+
+1. Go to [azure.microsoft.com](https://azure.microsoft.com/)
+2. Click "Start free" ($200 credit for 30 days)
+3. Sign in with Microsoft account
+4. Create a resource group in Azure Portal
+
+### Install CLI
+
 ```bash
 # macOS
 brew install azure-cli
@@ -27,7 +57,8 @@ winget install Microsoft.AzureCLI
 az --version
 ```
 
-**Login and configure**:
+### Login and Configure
+
 ```bash
 # Login (opens browser)
 az login
@@ -35,87 +66,70 @@ az login
 # Set subscription
 az account set --subscription "My Subscription"
 
-# List subscriptions
-az account list --output table
+# Verify
+az account show
 ```
 
-## Cheatsheet
-
-| Command | Description |
-|---------|-------------|
-| `az login` | Login to Azure |
-| `az account list` | List subscriptions |
-| `az group list` | List resource groups |
-| `az vm list` | List VMs |
-| `az storage account list` | List storage accounts |
-| `az webapp list` | List web apps |
-| `az aks list` | List AKS clusters |
-
-## Gotchas
-
-### Core services
-
-```
-Compute:     Virtual Machines, App Service, Functions, AKS
-Storage:     Blob Storage, File Storage, Disk Storage
-Database:    SQL Database, Cosmos DB, Cache for Redis
-Networking:  Virtual Network, Load Balancer, CDN
-Identity:    Entra ID (Azure AD), Key Vault
-```
-
-### Resource groups
+### First Commands
 
 ```bash
 # Create resource group
 az group create --name myResourceGroup --location eastus
 
-# List resources in group
-az resource list --resource-group myResourceGroup
-
-# Delete resource group
-az group delete --name myResourceGroup
+# List resource groups
+az group list --output table
 ```
 
-### Virtual machines
+## Core Services
+
+### Compute
+
+| Service | Use Case | Pricing Model |
+|---------|----------|---------------|
+| Virtual Machines | IaaS VMs | Per hour |
+| App Service | PaaS web hosting | Per plan |
+| Functions | Serverless | Per execution |
+| AKS | Managed Kubernetes | Control plane free |
+
+### Storage & Database
+
+| Service | Use Case | Pricing Model |
+|---------|----------|---------------|
+| Blob Storage | Object storage | Per GB + transactions |
+| SQL Database | Managed SQL Server | DTU or vCore |
+| Cosmos DB | Global NoSQL | RU/s + storage |
+| Cache for Redis | In-memory cache | Per instance |
+
+## Gotchas
+
+### Cost Traps
+
+- **Stopped VMs still charge for disks**: Deallocate instead of just stopping
+- **Public IP addresses**: Static IPs charge when not attached
+- **Cosmos DB RU/s**: Start low, scale as needed
+- **Premium storage**: Regular storage is much cheaper for dev
+
+### Permission Issues
+
+- **Insufficient privileges**: Check role assignments in IAM
+- **Resource provider not registered**: `az provider register --namespace Microsoft.Compute`
+
+### Common Errors
 
 ```bash
-# Create VM
-az vm create \
-  --resource-group myResourceGroup \
-  --name myVM \
-  --image Ubuntu2204 \
-  --admin-username azureuser \
-  --generate-ssh-keys
+# "The subscription is not registered to use namespace"
+az provider register --namespace Microsoft.Web
 
-# Start/Stop VM
-az vm start --resource-group myResourceGroup --name myVM
-az vm stop --resource-group myResourceGroup --name myVM
+# "AuthorizationFailed"
+# → Check role assignment in resource group IAM
 
-# Delete VM
-az vm delete --resource-group myResourceGroup --name myVM
-```
-
-### App Service
-
-```bash
-# Create web app
-az webapp create \
-  --resource-group myResourceGroup \
-  --plan myAppServicePlan \
-  --name myUniqueAppName \
-  --runtime "NODE:18-lts"
-
-# Deploy from Git
-az webapp deployment source config \
-  --name myUniqueAppName \
-  --resource-group myResourceGroup \
-  --repo-url https://github.com/user/repo \
-  --branch main
+# "Resource group not found"
+az group list --output table  # Verify group name
 ```
 
 ## Next Steps
 
-- [Azure Documentation](https://docs.microsoft.com/azure/) - Official docs
-- [Azure Free Account](https://azure.microsoft.com/free/) - Free tier
-- [Azure Learn](https://docs.microsoft.com/learn/azure/) - Training paths
-- [Azure Architecture Center](https://docs.microsoft.com/azure/architecture/) - Best practices
+- [Azure Documentation](https://docs.microsoft.com/azure/)
+- [Azure Free Account](https://azure.microsoft.com/free/)
+- [Microsoft Learn](https://docs.microsoft.com/learn/azure/)
+- [Azure Architecture Center](https://docs.microsoft.com/azure/architecture/)

@@ -1,6 +1,7 @@
 ---
 title: "Homebrew"
 description: "Get started with Homebrew package manager for macOS"
+template: "tool"
 tags: ["macos", "package-manager", "tools"]
 ---
 

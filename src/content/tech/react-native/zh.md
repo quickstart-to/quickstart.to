@@ -1,6 +1,7 @@
 ---
 title: "React Native"
 description: "5 分钟快速入门 React Native"
+template: "tool"
 tags: ["mobile", "react", "cross-platform"]
 ---
 

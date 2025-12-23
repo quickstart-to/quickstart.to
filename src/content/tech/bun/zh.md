@@ -1,6 +1,7 @@
 ---
 title: "Bun"
 description: "5 分钟快速入门 Bun JavaScript 运行时"
+template: "tool"
 tags: ["javascript", "runtime", "typescript"]
 ---
 

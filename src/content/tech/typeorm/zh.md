@@ -1,6 +1,7 @@
 ---
 title: "TypeORM"
 description: "5 分钟快速入门 TypeORM"
+template: "tool"
 tags: ["orm", "database", "typescript"]
 ---
 

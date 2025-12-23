@@ -1,6 +1,7 @@
 ---
 title: "MongoDB"
 description: "5 分钟快速入门 MongoDB 数据库"
+template: "tool"
 tags: ["database", "nosql", "document"]
 ---
 

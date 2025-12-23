@@ -1,6 +1,7 @@
 ---
 title: "Markdown"
 description: "快速入门 Markdown 文档写作"
+template: "tool"
 tags: ["documentation", "writing", "formatting"]
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: "Playwright"
 description: "Get started with Playwright testing in 5 minutes"
+template: "tool"
 tags: ["testing", "e2e", "automation"]
 ---
 

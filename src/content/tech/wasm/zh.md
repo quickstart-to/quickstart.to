@@ -1,6 +1,7 @@
 ---
 title: "WebAssembly"
 description: "5 分钟快速入门 WebAssembly"
+template: "tool"
 tags: ["wasm", "performance", "web"]
 ---
 

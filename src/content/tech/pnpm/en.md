@@ -1,6 +1,7 @@
 ---
 title: "pnpm"
 description: "Get started with pnpm package manager in 5 minutes"
+template: "tool"
 tags: ["nodejs", "package-manager", "javascript"]
 ---
 

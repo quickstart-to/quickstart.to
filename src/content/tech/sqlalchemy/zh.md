@@ -1,6 +1,7 @@
 ---
 title: "SQLAlchemy"
 description: "5 分钟快速入门 SQLAlchemy"
+template: "tool"
 tags: ["python", "orm", "database"]
 ---
 

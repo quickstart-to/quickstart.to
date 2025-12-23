@@ -1,6 +1,7 @@
 ---
 title: "DynamoDB"
 description: "5 分钟快速入门 Amazon DynamoDB"
+template: "tool"
 tags: ["database", "nosql", "aws", "serverless"]
 ---
 

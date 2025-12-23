@@ -1,6 +1,7 @@
 ---
 title: "Webpack"
 description: "5 分钟快速入门 Webpack 打包工具"
+template: "tool"
 tags: ["bundler", "frontend", "build-tool"]
 ---
 

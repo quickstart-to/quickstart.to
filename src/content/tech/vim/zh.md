@@ -1,31 +1,36 @@
 ---
 title: "Vim"
 description: "快速入门 Vim 文本编辑器"
+template: "tool"
 tags: ["editor", "terminal", "productivity"]
 ---
 
 ## TL;DR
 
-**是什么**：模式化文本编辑器 - 快速、高效、随处可用。
+**一句话**：Vim 是模式化文本编辑器，快速高效，在每台 Unix 系统上都有——掌握它让你永久提升编辑效率。
 
-**为什么**：在任何服务器上编辑文件，强大的键盘驱动工作流。
+**核心价值**：
+- 速度 - 纯键盘操作，不需要鼠标
+- 无处不在 - 几乎所有服务器都有安装
+- 可组合 - 命令像语言一样组合
+- 高效 - 用很少的按键完成复杂编辑
 
 ## Quick Start
 
-**打开 Vim**：
+### 打开 Vim
 
 ```bash
 vim filename.txt    # 打开/创建文件
 vim                 # 打开空缓冲区
 ```
 
-**三个核心模式**：
+### 三个核心模式
 
 - **普通模式**（默认）：导航和执行命令
 - **插入模式**：输入文本（按 `i` 进入）
 - **命令模式**：执行命令（按 `:` 进入）
 
-**生存必备**：
+### 生存必备
 
 ```
 i          → 进入插入模式（开始输入）
@@ -36,7 +41,7 @@ Esc        → 返回普通模式
 :q!        → 不保存退出
 ```
 
-**第一次编辑**：
+### 第一次编辑
 
 ```bash
 vim hello.txt      # 打开文件
@@ -62,6 +67,9 @@ Esc                # 返回普通模式
 | `Ctrl+r` | 重做 |
 | `/pattern` | 向前搜索 |
 | `n` / `N` | 下一个/上一个匹配 |
+| `ciw` | 修改当前单词 |
+| `diw` | 删除当前单词 |
+| `.` | 重复上一个命令 |
 
 **插入模式快捷键**：
 
@@ -72,6 +80,7 @@ Esc                # 返回普通模式
 | `o` | 在下方新建行 |
 | `O` | 在上方新建行 |
 | `A` | 在行尾插入 |
+| `I` | 在行首插入 |
 
 ## Gotchas
 
@@ -80,13 +89,6 @@ Esc                # 返回普通模式
 ```
 Esc        → 确保在普通模式
 :q!        → 强制退出不保存
-```
-
-### 意外进入替换模式
-
-```
-Esc        → 返回普通模式
-u          → 撤销更改
 ```
 
 ### 无法输入任何内容
@@ -107,11 +109,20 @@ i          → 进入插入模式开始输入
 ### 启用行号
 
 ```vim
-:set number       " 显示行号
-:set relativenumber " 相对行号
+:set number           " 显示行号
+:set relativenumber   " 相对行号
 
 " 添加到 ~/.vimrc 永久生效
 set number
+```
+
+### 从剪贴板粘贴
+
+```vim
+" 粘贴外部文本前：
+:set paste
+" 粘贴你的文本
+:set nopaste
 ```
 
 ## Next Steps
@@ -119,4 +130,4 @@ set number
 - [Vim Adventures（游戏）](https://vim-adventures.com/)
 - [OpenVim 教程](https://www.openvim.com/)
 - [Vim 速查表](https://vim.rtorr.com/)
-- [Neovim（现代分支）](https://neovim.io/)
+- [Neovim](https://neovim.io/)

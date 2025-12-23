@@ -1,6 +1,7 @@
 ---
 title: "Make"
 description: "5 分钟快速入门 Make 构建工具"
+template: "tool"
 tags: ["build", "automation", "cli"]
 ---
 

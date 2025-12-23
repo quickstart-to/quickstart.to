@@ -1,6 +1,7 @@
 ---
 title: "Ansible"
 description: "5 分钟快速入门 Ansible 自动化"
+template: "tool"
 tags: ["devops", "automation", "configuration"]
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: "JWT"
 description: "5 分钟快速入门 JWT"
+template: "tool"
 tags: ["security", "authentication", "tokens"]
 ---
 

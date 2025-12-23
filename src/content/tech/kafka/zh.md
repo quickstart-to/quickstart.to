@@ -1,6 +1,7 @@
 ---
 title: "Apache Kafka"
 description: "5 分钟快速入门 Apache Kafka 消息系统"
+template: "tool"
 tags: ["messaging", "streaming", "distributed"]
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: "Make"
 description: "Get started with Make build tool in 5 minutes"
+template: "tool"
 tags: ["build", "automation", "cli"]
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: "Hugging Face"
 description: "5 分钟快速入门 Hugging Face Transformers"
+template: "tool"
 tags: ["ai", "nlp", "transformers"]
 ---
 

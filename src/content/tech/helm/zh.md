@@ -1,6 +1,7 @@
 ---
 title: "Helm"
 description: "5 分钟快速入门 Helm Kubernetes 包管理器"
+template: "tool"
 tags: ["kubernetes", "devops", "package-manager"]
 ---
 

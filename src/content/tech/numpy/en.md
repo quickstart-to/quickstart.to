@@ -1,6 +1,7 @@
 ---
 title: "NumPy"
 description: "Get started with NumPy in 5 minutes"
+template: "tool"
 tags: ["python", "scientific-computing", "arrays"]
 ---
 

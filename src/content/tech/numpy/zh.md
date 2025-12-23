@@ -1,6 +1,7 @@
 ---
 title: "NumPy"
 description: "5 分钟快速入门 NumPy"
+template: "tool"
 tags: ["python", "scientific-computing", "arrays"]
 ---
 

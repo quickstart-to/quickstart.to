@@ -1,6 +1,7 @@
 ---
 title: "gRPC"
 description: "Get started with gRPC in 5 minutes"
+template: "tool"
 tags: ["api", "rpc", "protobuf"]
 ---
 

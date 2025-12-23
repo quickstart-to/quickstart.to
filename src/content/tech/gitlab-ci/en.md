@@ -1,6 +1,7 @@
 ---
 title: "GitLab CI"
 description: "Get started with GitLab CI/CD in 5 minutes"
+template: "tool"
 tags: ["ci-cd", "devops", "gitlab"]
 ---
 

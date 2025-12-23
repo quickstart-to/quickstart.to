@@ -1,6 +1,7 @@
 ---
 title: "Apache Cassandra"
 description: "5 分钟快速入门 Apache Cassandra"
+template: "tool"
 tags: ["database", "nosql", "distributed"]
 ---
 

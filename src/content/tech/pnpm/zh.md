@@ -1,6 +1,7 @@
 ---
 title: "pnpm"
 description: "5 分钟快速入门 pnpm 包管理器"
+template: "tool"
 tags: ["nodejs", "package-manager", "javascript"]
 ---
 

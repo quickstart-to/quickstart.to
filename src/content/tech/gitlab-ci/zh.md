@@ -1,6 +1,7 @@
 ---
 title: "GitLab CI"
 description: "5 分钟快速入门 GitLab CI/CD"
+template: "tool"
 tags: ["ci-cd", "devops", "gitlab"]
 ---
 

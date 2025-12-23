@@ -1,6 +1,7 @@
 ---
 title: "Pandas"
 description: "Get started with Pandas data analysis in 5 minutes"
+template: "tool"
 tags: ["python", "data-science", "analysis"]
 ---
 

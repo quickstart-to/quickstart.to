@@ -1,6 +1,7 @@
 ---
 title: "gRPC"
 description: "5 分钟快速入门 gRPC"
+template: "tool"
 tags: ["api", "rpc", "protobuf"]
 ---
 

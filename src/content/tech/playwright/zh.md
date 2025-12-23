@@ -1,6 +1,7 @@
 ---
 title: "Playwright"
 description: "5 分钟快速入门 Playwright 测试"
+template: "tool"
 tags: ["testing", "e2e", "automation"]
 ---
 

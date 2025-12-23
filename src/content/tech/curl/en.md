@@ -1,6 +1,7 @@
 ---
 title: "cURL"
 description: "Get started with cURL in 5 minutes"
+template: "tool"
 tags: ["cli", "http", "networking"]
 ---
 

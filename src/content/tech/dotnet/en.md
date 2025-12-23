@@ -1,6 +1,7 @@
 ---
 title: ".NET"
 description: "Get started with .NET platform in 5 minutes"
+template: "tool"
 tags: ["backend", "csharp", "framework"]
 ---
 

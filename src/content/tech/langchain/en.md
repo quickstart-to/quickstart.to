@@ -1,6 +1,7 @@
 ---
 title: "LangChain"
 description: "Get started with LangChain in 5 minutes"
+template: "tool"
 tags: ["ai", "llm", "python"]
 ---
 

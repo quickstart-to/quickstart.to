@@ -1,6 +1,7 @@
 ---
 title: "Jenkins"
 description: "Get started with Jenkins CI/CD in 5 minutes"
+template: "tool"
 tags: ["ci-cd", "devops", "automation"]
 ---
 

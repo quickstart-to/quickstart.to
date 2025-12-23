@@ -1,71 +1,44 @@
 ---
 title: "Electron"
 description: "Get started with Electron in 5 minutes"
+template: "framework"
 tags: ["desktop", "javascript", "cross-platform"]
 ---
 
 ## TL;DR
 
-**What**: Framework for building cross-platform desktop apps with web technologies.
+**One-liner**: Electron lets you build cross-platform desktop apps with JavaScript, HTML, and CSS - one codebase for Windows, macOS, and Linux.
 
-**Why**: Use JavaScript/HTML/CSS, single codebase for Windows/macOS/Linux, rich ecosystem.
+**Core Strengths**:
+- Web technologies - use your existing JS/HTML/CSS skills
+- Cross-platform - single codebase, three platforms
+- Native APIs - access filesystem, system tray, notifications
+- Rich ecosystem - VS Code, Slack, Discord built with Electron
 
-## Quick Start
+## Core Concepts
 
-**Install**:
-```bash
-mkdir my-electron-app && cd my-electron-app
-npm init -y
-npm install electron --save-dev
-```
+### Concept 1: Main vs Renderer Process
 
-**Create main.js**:
+Two types of processes with different APIs:
+
 ```javascript
+// Main process (main.js) - Node.js access, creates windows
 const { app, BrowserWindow } = require('electron');
 
-function createWindow() {
-  const win = new BrowserWindow({
-    width: 800,
-    height: 600,
-    webPreferences: {
-      nodeIntegration: true
-    }
-  });
-
+app.whenReady().then(() => {
+  const win = new BrowserWindow({ width: 800, height: 600 });
   win.loadFile('index.html');
-}
+});
 
-app.whenReady().then(createWindow);
+// Renderer process (in browser window) - DOM access, web APIs
+document.querySelector('#btn').addEventListener('click', () => {
+  console.log('Clicked!');
+});
 ```
 
-**Create index.html**:
-```html
-<!DOCTYPE html>
-<html>
-<head><title>Hello Electron</title></head>
-<body><h1>Hello, Electron!</h1></body>
-</html>
-```
+### Concept 2: IPC (Inter-Process Communication)
 
-**Run**:
-```bash
-npx electron .
-```
-
-## Cheatsheet
-
-| Concept | Description |
-|---------|-------------|
-| `BrowserWindow` | Create app windows |
-| `ipcMain` | Main process IPC |
-| `ipcRenderer` | Renderer process IPC |
-| `Menu` | Application menus |
-| `Tray` | System tray icon |
-| `dialog` | Native dialogs |
-
-## Gotchas
-
-### IPC communication
+Securely communicate between main and renderer:
 
 ```javascript
 // main.js
@@ -76,31 +49,80 @@ ipcMain.handle('read-file', async (event, path) => {
   return await fs.readFile(path, 'utf-8');
 });
 
-// preload.js
+// preload.js (bridge between main and renderer)
 const { contextBridge, ipcRenderer } = require('electron');
 
 contextBridge.exposeInMainWorld('api', {
   readFile: (path) => ipcRenderer.invoke('read-file', path)
 });
 
-// renderer.js
+// renderer.js (in HTML)
 const content = await window.api.readFile('/path/to/file');
 ```
 
-### Context isolation (secure approach)
+### Concept 3: Context Isolation
+
+Security best practice - isolate renderer from Node.js:
 
 ```javascript
-// main.js
 const win = new BrowserWindow({
   webPreferences: {
-    nodeIntegration: false,
-    contextIsolation: true,
+    nodeIntegration: false,      // Don't expose Node to renderer
+    contextIsolation: true,      // Isolate preload from renderer
     preload: path.join(__dirname, 'preload.js')
   }
 });
 ```
 
-### Application menu
+## Quick Start
+
+### Create Project
+
+```bash
+mkdir my-app && cd my-app
+npm init -y
+npm install electron --save-dev
+```
+
+### Create main.js
+
+```javascript
+const { app, BrowserWindow } = require('electron');
+
+function createWindow() {
+  const win = new BrowserWindow({
+    width: 800,
+    height: 600
+  });
+  win.loadFile('index.html');
+}
+
+app.whenReady().then(createWindow);
+
+app.on('window-all-closed', () => {
+  if (process.platform !== 'darwin') app.quit();
+});
+```
+
+### Create index.html
+
+```html
+<!DOCTYPE html>
+<html>
+<head><title>My Electron App</title></head>
+<body><h1>Hello Electron!</h1></body>
+</html>
+```
+
+### Run
+
+```bash
+npx electron .
+```
+
+## Gotchas
+
+### Application menus
 
 ```javascript
 const { Menu } = require('electron');
@@ -109,7 +131,7 @@ const template = [
   {
     label: 'File',
     submenu: [
-      { label: 'Open', accelerator: 'CmdOrCtrl+O', click: () => {} },
+      { label: 'Open', accelerator: 'CmdOrCtrl+O', click: () => { /* ... */ } },
       { type: 'separator' },
       { role: 'quit' }
     ]
@@ -119,7 +141,6 @@ const template = [
     submenu: [
       { role: 'undo' },
       { role: 'redo' },
-      { type: 'separator' },
       { role: 'cut' },
       { role: 'copy' },
       { role: 'paste' }
@@ -135,25 +156,21 @@ Menu.setApplicationMenu(Menu.buildFromTemplate(template));
 ```javascript
 const { dialog } = require('electron');
 
-// Open file dialog
-const result = await dialog.showOpenDialog({
-  properties: ['openFile', 'multiSelections'],
-  filters: [
-    { name: 'Images', extensions: ['jpg', 'png', 'gif'] },
-    { name: 'All Files', extensions: ['*'] }
-  ]
+// Open file
+const { filePaths } = await dialog.showOpenDialog({
+  properties: ['openFile'],
+  filters: [{ name: 'Text', extensions: ['txt'] }]
 });
 
-// Save dialog
-const savePath = await dialog.showSaveDialog({
+// Save file
+const { filePath } = await dialog.showSaveDialog({
   defaultPath: 'untitled.txt'
 });
 
 // Message box
 await dialog.showMessageBox({
   type: 'info',
-  title: 'Info',
-  message: 'Operation completed!'
+  message: 'Done!'
 });
 ```
 
@@ -164,19 +181,12 @@ npm install electron-builder --save-dev
 ```
 
 ```json
-// package.json
 {
   "build": {
     "appId": "com.example.myapp",
-    "mac": {
-      "target": "dmg"
-    },
-    "win": {
-      "target": "nsis"
-    },
-    "linux": {
-      "target": "AppImage"
-    }
+    "mac": { "target": "dmg" },
+    "win": { "target": "nsis" },
+    "linux": { "target": "AppImage" }
   },
   "scripts": {
     "build": "electron-builder"
@@ -184,25 +194,43 @@ npm install electron-builder --save-dev
 }
 ```
 
-### Auto-updater
+## When to Use
 
-```javascript
-const { autoUpdater } = require('electron-updater');
+**Best for**:
+- Desktop apps needing web tech stack
+- Cross-platform applications
+- Apps needing native file/system access
+- Internal tools and utilities
 
-autoUpdater.checkForUpdatesAndNotify();
+**Not ideal for**:
+- Performance-critical apps (use native or Tauri)
+- Small utilities (large bundle size)
+- Mobile apps
 
-autoUpdater.on('update-available', () => {
-  console.log('Update available');
-});
-
-autoUpdater.on('update-downloaded', () => {
-  autoUpdater.quitAndInstall();
-});
-```
+**Comparison**:
+| Feature | Electron | Tauri | NW.js |
+|---------|----------|-------|-------|
+| Size | ~150MB | ~10MB | ~100MB |
+| Performance | Good | Better | Good |
+| Language | JS | Rust + JS | JS |
+| Maturity | High | Medium | High |
 
 ## Next Steps
 
-- [Electron Documentation](https://www.electronjs.org/docs) - Official docs
-- [Electron Fiddle](https://www.electronjs.org/fiddle) - Experiment quickly
-- [Electron Forge](https://www.electronforge.io/) - Complete toolchain
-- [Electron Builder](https://www.electron.build/) - Packaging & distribution
+- [Electron Documentation](https://www.electronjs.org/docs)
+- [Electron Fiddle](https://www.electronjs.org/fiddle)
+- [Electron Forge](https://www.electronforge.io/)
+- [Electron Builder](https://www.electron.build/)
+
+## Cheatsheet
+
+| Pattern | Code |
+|---------|------|
+| Create window | `new BrowserWindow({ width, height })` |
+| Load file | `win.loadFile('index.html')` |
+| Load URL | `win.loadURL('https://...')` |
+| IPC handle | `ipcMain.handle('channel', handler)` |
+| IPC invoke | `ipcRenderer.invoke('channel', data)` |
+| Context bridge | `contextBridge.exposeInMainWorld()` |
+| Quit app | `app.quit()` |
+| Open DevTools | `win.webContents.openDevTools()` |

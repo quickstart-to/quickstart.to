@@ -1,6 +1,7 @@
 ---
 title: "GraphQL"
 description: "Get started with GraphQL API development in 5 minutes"
+template: "tool"
 tags: ["api", "query-language", "facebook"]
 ---
 

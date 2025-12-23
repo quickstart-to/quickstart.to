@@ -1,6 +1,7 @@
 ---
 title: "Drizzle ORM"
 description: "Get started with Drizzle ORM in 5 minutes"
+template: "tool"
 tags: ["orm", "database", "typescript"]
 ---
 

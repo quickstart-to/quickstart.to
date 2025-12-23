@@ -1,6 +1,7 @@
 ---
 title: "Nginx"
 description: "快速入门 Nginx Web 服务器和反向代理"
+template: "tool"
 tags: ["web-server", "reverse-proxy", "devops"]
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: "Apache Cassandra"
 description: "Get started with Apache Cassandra in 5 minutes"
+template: "tool"
 tags: ["database", "nosql", "distributed"]
 ---
 

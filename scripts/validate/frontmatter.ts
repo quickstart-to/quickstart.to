@@ -1,6 +1,7 @@
-import { readdirSync, readFileSync, statSync } from 'fs';
+import { readdirSync, readFileSync, statSync, existsSync } from 'fs';
 import { join } from 'path';
 import type { ValidationError } from './types.js';
+import { VALID_TEMPLATES } from './types.js';
 
 const VALID_LANGS = ['en', 'zh', 'de', 'fr', 'es'];
 const MIN_DESCRIPTION_LENGTH = 10;
@@ -101,6 +102,34 @@ export function validateFrontmatter(contentDir: string): ValidationError[] {
                 rule: 'frontmatter',
                 message: `Description too long (${descLength} chars, max ${MAX_DESCRIPTION_LENGTH})`,
                 suggestion: 'Shorten the description',
+              });
+            }
+          }
+
+          // Check template field (required)
+          if (!frontmatter.template) {
+            errors.push({
+              file: filePath,
+              rule: 'frontmatter',
+              message: 'Missing required field: template',
+              suggestion: `Add a template field. Valid values: ${VALID_TEMPLATES.join(', ')}`,
+            });
+          } else if (!VALID_TEMPLATES.includes(frontmatter.template)) {
+            errors.push({
+              file: filePath,
+              rule: 'frontmatter',
+              message: `Invalid template type: ${frontmatter.template}`,
+              suggestion: `Use one of: ${VALID_TEMPLATES.join(', ')}`,
+            });
+          } else {
+            // Check if template file exists
+            const templatePath = join(process.cwd(), 'src', 'templates', `${frontmatter.template}.md`);
+            if (!existsSync(templatePath)) {
+              errors.push({
+                file: filePath,
+                rule: 'frontmatter',
+                message: `Template file not found: ${frontmatter.template}.md`,
+                suggestion: `Create the template file at src/templates/${frontmatter.template}.md`,
               });
             }
           }

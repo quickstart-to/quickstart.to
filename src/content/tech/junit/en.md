@@ -1,6 +1,7 @@
 ---
 title: "JUnit"
 description: "Get started with JUnit testing in 5 minutes"
+template: "tool"
 tags: ["java", "testing", "automation"]
 ---
 

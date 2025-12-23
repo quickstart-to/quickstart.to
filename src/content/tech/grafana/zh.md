@@ -1,6 +1,7 @@
 ---
 title: "Grafana"
 description: "5 分钟快速入门 Grafana 仪表板"
+template: "tool"
 tags: ["devops", "monitoring", "visualization"]
 ---
 

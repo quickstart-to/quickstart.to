@@ -1,6 +1,7 @@
 ---
 title: "tmux"
 description: "5 分钟快速入门 tmux 终端复用器"
+template: "tool"
 tags: ["cli", "terminal", "productivity"]
 ---
 

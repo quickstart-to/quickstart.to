@@ -1,6 +1,7 @@
 ---
 title: "Jenkins"
 description: "5 分钟快速入门 Jenkins CI/CD"
+template: "tool"
 tags: ["ci-cd", "devops", "automation"]
 ---
 

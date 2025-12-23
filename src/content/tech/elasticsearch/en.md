@@ -1,6 +1,7 @@
 ---
 title: "Elasticsearch"
 description: "Get started with Elasticsearch in 5 minutes"
+template: "tool"
 tags: ["database", "search", "analytics"]
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: "Postman"
 description: "5 分钟快速入门 Postman API 测试"
+template: "tool"
 tags: ["api", "testing", "development"]
 ---
 

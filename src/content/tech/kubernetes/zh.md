@@ -1,6 +1,7 @@
 ---
 title: "Kubernetes"
 description: "快速入门 Kubernetes 容器编排"
+template: "tool"
 tags: ["containers", "devops", "cloud-native"]
 ---
 

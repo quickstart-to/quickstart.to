@@ -1,6 +1,7 @@
 ---
 title: ".NET"
 description: "5 分钟快速入门 .NET 平台"
+template: "tool"
 tags: ["backend", "csharp", "framework"]
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: "GitHub Actions"
 description: "5 分钟快速入门 GitHub Actions CI/CD"
+template: "tool"
 tags: ["devops", "ci-cd", "automation"]
 ---
 

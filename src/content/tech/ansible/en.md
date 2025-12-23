@@ -1,6 +1,7 @@
 ---
 title: "Ansible"
 description: "Get started with Ansible automation in 5 minutes"
+template: "tool"
 tags: ["devops", "automation", "configuration"]
 ---
 

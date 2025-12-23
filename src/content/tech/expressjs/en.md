@@ -1,31 +1,81 @@
 ---
 title: "Express.js"
 description: "Get started with Express.js web framework in 5 minutes"
+template: "framework"
 tags: ["backend", "nodejs", "framework"]
 ---
 
 ## TL;DR
 
-**What**: A minimal and flexible Node.js web application framework.
+**One-liner**: Express is Node.js's minimal web framework - build servers with just the pieces you need.
 
-**Why**: Simple, unopinionated, huge ecosystem, middleware architecture, industry standard.
+**Core Strengths**:
+- Minimal and unopinionated - you decide the architecture
+- Middleware ecosystem - thousands of plugins
+- Industry standard - most popular Node.js framework
+- Express 5 - native promise support, better security
+
+## Core Concepts
+
+### Concept 1: Middleware
+
+Everything in Express is middleware - functions that have access to request, response, and next.
+
+```javascript
+// Middleware runs in order
+app.use(express.json());      // 1. Parse JSON
+app.use(logRequest);          // 2. Log
+app.get('/api', handler);     // 3. Route handler
+
+function logRequest(req, res, next) {
+  console.log(`${req.method} ${req.path}`);
+  next();  // Pass to next middleware
+}
+```
+
+### Concept 2: Routing
+
+Define endpoints with HTTP methods:
+
+```javascript
+app.get('/users', getUsers);      // GET /users
+app.post('/users', createUser);   // POST /users
+app.put('/users/:id', updateUser); // PUT /users/123
+app.delete('/users/:id', deleteUser);
+```
+
+### Concept 3: Request & Response
+
+```javascript
+app.get('/users/:id', (req, res) => {
+  const id = req.params.id;       // URL params
+  const sort = req.query.sort;    // Query string ?sort=name
+  const token = req.headers.authorization;
+
+  res.status(200).json({ id, sort });
+});
+```
 
 ## Quick Start
 
-**Create project**:
+### Create Project
+
 ```bash
 mkdir my-app && cd my-app
 npm init -y
 npm install express
 ```
 
-**Create server** (`index.js`):
+### Create index.js
+
 ```javascript
-const express = require('express');
+import express from 'express';
 const app = express();
 
+app.use(express.json());
+
 app.get('/', (req, res) => {
-  res.send('Hello World!');
+  res.json({ message: 'Hello Express!' });
 });
 
 app.listen(3000, () => {
@@ -33,81 +83,117 @@ app.listen(3000, () => {
 });
 ```
 
-**Run**:
+### Run
+
 ```bash
 node index.js
+# Open http://localhost:3000
 ```
-
-## Cheatsheet
-
-| Method | Description |
-|--------|-------------|
-| `app.get(path, handler)` | Handle GET requests |
-| `app.post(path, handler)` | Handle POST requests |
-| `app.put(path, handler)` | Handle PUT requests |
-| `app.delete(path, handler)` | Handle DELETE requests |
-| `app.use(middleware)` | Use middleware |
-| `app.listen(port)` | Start server |
-| `res.send(data)` | Send response |
-| `res.json(obj)` | Send JSON response |
 
 ## Gotchas
 
-### Middleware
+### Don't forget next() in middleware
 
 ```javascript
-// Built-in middleware
-app.use(express.json());        // Parse JSON bodies
-app.use(express.static('public')); // Serve static files
-
-// Custom middleware
+// ❌ Request hangs forever
 app.use((req, res, next) => {
-  console.log(`${req.method} ${req.url}`);
-  next();  // Don't forget next()!
+  console.log('Logging...');
+  // Missing next()!
+});
+
+// ✅ Correct
+app.use((req, res, next) => {
+  console.log('Logging...');
+  next();
 });
 ```
 
-### Route parameters
+### Error handling needs 4 parameters
 
 ```javascript
-app.get('/users/:id', (req, res) => {
-  const userId = req.params.id;
-  res.json({ id: userId });
-});
-
-// Query strings: /search?q=term
-app.get('/search', (req, res) => {
-  const query = req.query.q;
-  res.json({ query });
-});
-```
-
-### Error handling
-
-```javascript
-// Error handler must have 4 parameters
+// Must have all 4 params for Express to recognize it
 app.use((err, req, res, next) => {
   console.error(err.stack);
-  res.status(500).send('Something broke!');
+  res.status(500).json({ error: 'Something broke!' });
+});
+
+// Trigger errors with next(err)
+app.get('/fail', (req, res, next) => {
+  next(new Error('Oops!'));
 });
 ```
 
-### Router for modular routes
+### Route order matters
 
 ```javascript
-// routes/users.js
-const router = express.Router();
-router.get('/', (req, res) => res.json([]));
-router.get('/:id', (req, res) => res.json({}));
-module.exports = router;
+// ❌ Wrong - /users/me never matches
+app.get('/users/:id', (req, res) => ...);
+app.get('/users/me', (req, res) => ...);  // Never reached!
 
-// index.js
-app.use('/users', require('./routes/users'));
+// ✅ Correct - specific routes first
+app.get('/users/me', (req, res) => ...);
+app.get('/users/:id', (req, res) => ...);
 ```
+
+### Async errors in Express 5+
+
+```javascript
+// Express 5: async errors are caught automatically
+app.get('/data', async (req, res) => {
+  const data = await fetchData();  // Errors caught!
+  res.json(data);
+});
+
+// Express 4: need try-catch or wrapper
+app.get('/data', async (req, res, next) => {
+  try {
+    const data = await fetchData();
+    res.json(data);
+  } catch (err) {
+    next(err);
+  }
+});
+```
+
+## When to Use
+
+**Best for**:
+- REST APIs
+- Lightweight servers
+- Teams wanting full control
+- Projects with specific architecture needs
+
+**Not ideal for**:
+- Large apps needing structure (use NestJS)
+- Real-time apps (use Fastify or Hono)
+- TypeScript-first projects (use NestJS)
+
+**Comparison**:
+| Feature | Express | Fastify | NestJS |
+|---------|---------|---------|--------|
+| Speed | Moderate | Fast | Moderate |
+| Opinionated | No | No | Yes |
+| TypeScript | Add-on | Built-in | Built-in |
+| Learning curve | Easy | Easy | Medium |
 
 ## Next Steps
 
-- [Express Documentation](https://expressjs.com/) - Official docs
-- [Express Generator](https://expressjs.com/en/starter/generator.html) - App generator
-- [Express Middleware](https://expressjs.com/en/resources/middleware.html) - Middleware list
-- [Best Practices](https://expressjs.com/en/advanced/best-practice-security.html) - Security
+- [Express Documentation](https://expressjs.com/)
+- [Express Generator](https://expressjs.com/en/starter/generator.html)
+- [Express Middleware](https://expressjs.com/en/resources/middleware.html)
+- [Express 5 Migration](https://expressjs.com/en/guide/migrating-5.html)
+
+## Cheatsheet
+
+| Pattern | Code |
+|---------|------|
+| GET route | `app.get('/path', handler)` |
+| POST route | `app.post('/path', handler)` |
+| Middleware | `app.use(middleware)` |
+| URL param | `req.params.id` |
+| Query param | `req.query.name` |
+| Body | `req.body` (need express.json()) |
+| JSON response | `res.json({ data })` |
+| Status | `res.status(404).json({})` |
+| Router | `const router = express.Router()` |
+| Static files | `app.use(express.static('public'))` |

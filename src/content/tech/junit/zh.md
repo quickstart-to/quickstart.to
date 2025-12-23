@@ -1,6 +1,7 @@
 ---
 title: "JUnit"
 description: "5 分钟快速入门 JUnit 测试"
+template: "tool"
 tags: ["java", "testing", "automation"]
 ---
 

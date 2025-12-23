@@ -1,6 +1,7 @@
 ---
 title: "ArgoCD"
 description: "5 分钟快速入门 ArgoCD GitOps"
+template: "tool"
 tags: ["kubernetes", "gitops", "devops"]
 ---
 

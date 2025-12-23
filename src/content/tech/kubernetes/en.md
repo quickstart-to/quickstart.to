@@ -1,6 +1,7 @@
 ---
 title: "Kubernetes"
 description: "Get started with Kubernetes container orchestration"
+template: "tool"
 tags: ["containers", "devops", "cloud-native"]
 ---
 

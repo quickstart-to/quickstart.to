@@ -1,6 +1,7 @@
 ---
 title: "TensorFlow"
 description: "Get started with TensorFlow in 5 minutes"
+template: "tool"
 tags: ["ai", "machine-learning", "python"]
 ---
 

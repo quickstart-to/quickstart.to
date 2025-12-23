@@ -1,6 +1,7 @@
 ---
 title: "Markdown"
 description: "Get started with Markdown for documentation"
+template: "tool"
 tags: ["documentation", "writing", "formatting"]
 ---
 

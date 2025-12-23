@@ -1,6 +1,7 @@
 ---
 title: "PostgreSQL"
 description: "Get started with PostgreSQL relational database"
+template: "tool"
 tags: ["database", "sql", "backend"]
 ---
 

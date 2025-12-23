@@ -1,6 +1,7 @@
 ---
 title: "RabbitMQ"
 description: "5 分钟快速入门 RabbitMQ 消息队列"
+template: "tool"
 tags: ["messaging", "queue", "amqp"]
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: "Pandas"
 description: "5 分钟快速入门 Pandas 数据分析"
+template: "tool"
 tags: ["python", "data-science", "analysis"]
 ---
 

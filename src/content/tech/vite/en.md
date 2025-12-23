@@ -1,6 +1,7 @@
 ---
 title: "Vite"
 description: "Get started with Vite build tool in 5 minutes"
+template: "tool"
 tags: ["bundler", "frontend", "build-tool"]
 ---
 

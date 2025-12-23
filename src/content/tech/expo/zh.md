@@ -1,6 +1,7 @@
 ---
 title: "Expo"
 description: "5 分钟快速入门 Expo"
+template: "tool"
 tags: ["mobile", "react-native", "cross-platform"]
 ---
 

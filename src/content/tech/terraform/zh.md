@@ -1,6 +1,7 @@
 ---
 title: "Terraform"
 description: "5 分钟快速入门 Terraform 基础设施即代码"
+template: "tool"
 tags: ["devops", "infrastructure", "iac"]
 ---
 

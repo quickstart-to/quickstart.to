@@ -1,6 +1,7 @@
 ---
 title: "Vitest"
 description: "5 分钟快速入门 Vitest 测试"
+template: "tool"
 tags: ["testing", "vite", "javascript"]
 ---
 

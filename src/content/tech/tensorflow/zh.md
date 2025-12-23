@@ -1,6 +1,7 @@
 ---
 title: "TensorFlow"
 description: "5 分钟快速入门 TensorFlow"
+template: "tool"
 tags: ["ai", "machine-learning", "python"]
 ---
 
