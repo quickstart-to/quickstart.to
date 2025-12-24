@@ -117,13 +117,8 @@ export function validateStructure(contentDir: string): ValidationError[] {
           // Get template sections
           const templateSections = getTemplateSections(templateType);
 
+          // Skip structure validation for templates with no required sections (e.g., aha)
           if (templateSections.length === 0) {
-            errors.push({
-              file: filePath,
-              rule: 'structure',
-              message: `Could not load template sections for: ${templateType}`,
-              suggestion: `Check that src/templates/${templateType}.md exists and has valid sections`,
-            });
             continue;
           }
 

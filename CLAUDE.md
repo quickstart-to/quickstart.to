@@ -57,7 +57,7 @@ src/content/{category}/{id}/assets/   # Optional images
 ---
 title: "Docker"
 description: "Get started with Docker containers" # 10-200 chars
-template: "tool"                                  # Required: tool/language/framework/service/concept/life
+template: "tool"                                  # Required: tool/language/framework/service/concept/life/aha
 tags: ["containers", "devops"]                    # Optional
 ---
 ```
@@ -88,6 +88,7 @@ Templates are stored in `src/templates/` as Markdown files. Each content file mu
 | `service` | Cloud platforms (AWS, GCP, Vercel) | TL;DR, Architecture, Quick Start, Core Services, Gotchas, Next Steps |
 | `concept` | Protocols, specs (GraphQL, OAuth) | TL;DR, How It Works, Quick Start, Key Concepts, Gotchas, Next Steps |
 | `life` | Non-tech content (Cooking) | TL;DR, Fundamentals, Getting Started, Common Mistakes, Next Steps |
+| `aha` | Free-form content (humor, satire) | None (completely free) |
 
 ### Writing Guidelines
 
