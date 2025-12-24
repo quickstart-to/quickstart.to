@@ -10,9 +10,9 @@ export interface ValidationResult {
   errors: ValidationError[];
 }
 
-export type TemplateType = 'tool' | 'language' | 'framework' | 'service' | 'concept' | 'life';
+export type TemplateType = 'tool' | 'language' | 'framework' | 'service' | 'concept' | 'life' | 'aha';
 
-export const VALID_TEMPLATES: TemplateType[] = ['tool', 'language', 'framework', 'service', 'concept', 'life'];
+export const VALID_TEMPLATES: TemplateType[] = ['tool', 'language', 'framework', 'service', 'concept', 'life', 'aha'];
 
 export interface TemplateSection {
   name: string;
