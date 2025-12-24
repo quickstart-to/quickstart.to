@@ -33,6 +33,15 @@ Translate an existing quickstart to another language.
 
 Fix typos, improve clarity, or update outdated information.
 
+### 4. New Template
+
+Add a new content template type (maintainer-level contribution).
+
+**Steps:**
+1. Create template file: `src/templates/{name}.md`
+2. Update types: `scripts/validate/types.ts`
+3. Update docs: `CLAUDE.md`, `CONTRIBUTING.md`
+
 ## Getting Started
 
 ### 1. Fork and Clone

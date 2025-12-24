@@ -33,6 +33,15 @@
 
 修复错别字、提高清晰度或更新过时信息。
 
+### 4. 新模板
+
+添加新的内容模板类型（维护者级别贡献）。
+
+**步骤：**
+1. 创建模板文件：`src/templates/{name}.md`
+2. 更新类型定义：`scripts/validate/types.ts`
+3. 更新文档：`CLAUDE.md`、`CONTRIBUTING.md`
+
 ## 开始
 
 ### 1. Fork 并克隆
