@@ -57,7 +57,7 @@ src/content/{category}/{id}/assets/   # Optional images
 ---
 title: "Docker"
 description: "Get started with Docker containers" # 10-200 chars
-template: "tool"                                  # Required: tool/language/framework/service/concept/life/aha
+template: "tool"                                  # Required: tool/language/framework/service/concept/life/aha/collection
 tags: ["containers", "devops"]                    # Optional
 ---
 ```
@@ -89,6 +89,26 @@ Templates are stored in `src/templates/` as Markdown files. Each content file mu
 | `concept` | Protocols, specs (GraphQL, OAuth) | TL;DR, How It Works, Quick Start, Key Concepts, Gotchas, Next Steps |
 | `life` | Non-tech content (Cooking) | TL;DR, Fundamentals, Getting Started, Common Mistakes, Next Steps |
 | `aha` | Free-form content (humor, satire) | None (completely free) |
+| `collection` | Curated content indexes, topic hubs | None (completely free) |
+
+### Adding a New Template
+
+To add a new template type:
+
+1. **Create template file**: `src/templates/{template-name}.md`
+   - Must have frontmatter with `description` field
+   - Define required sections with `## Section Name`
+   - Mark optional sections with `## Section Name [optional]`
+   - No sections = free-form (like `aha`, `collection`)
+
+2. **Update type definitions**: `scripts/validate/types.ts`
+   - Add to `TemplateType` union type
+   - Add to `VALID_TEMPLATES` array
+
+3. **Update documentation**:
+   - `CLAUDE.md` - Add row to Available Templates table
+   - `CONTRIBUTING.md` - Add to Types of Contributions section
+   - `CONTRIBUTING.zh.md` - Add to 贡献类型 section
 
 ### Writing Guidelines
 

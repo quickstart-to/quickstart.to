@@ -1,0 +1,54 @@
+name: New Template Proposal
+description: Propose a new content template type
+title: "[Template] "
+labels: ["new-template"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for proposing a new template! Templates define the structure for quickstart guides.
+
+  - type: input
+    id: name
+    attributes:
+      label: Template Name
+      description: A short, lowercase name for the template (e.g., "tutorial", "cheatsheet")
+      placeholder: tutorial
+    validations:
+      required: true
+
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Use Case
+      description: What type of content will use this template? Give examples.
+      placeholder: |
+        This template is for step-by-step tutorials that guide users through building something.
+        Examples: "Build a REST API", "Create a CLI tool"
+    validations:
+      required: true
+
+  - type: textarea
+    id: sections
+    attributes:
+      label: Proposed Sections
+      description: List the sections this template should have (mark optional ones with [optional])
+      placeholder: |
+        ## TL;DR
+        ## Prerequisites
+        ## Steps
+        ## Troubleshooting [optional]
+        ## Next Steps
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: commitment
+    attributes:
+      label: Commitment
+      options:
+        - label: I have checked that existing templates don't fit this use case
+          required: true
+        - label: I have read the CONTRIBUTING guidelines
+          required: true
