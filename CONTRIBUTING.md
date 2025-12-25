@@ -18,6 +18,19 @@ Add a new guide for a technology or skill.
 - Content should be completable in 5 minutes or less
 - Include all essential steps, nothing more
 
+**Template types:**
+
+| Template | Use For | Example |
+|----------|---------|---------|
+| `tool` | CLI tools, utilities | Docker, Git, Vim |
+| `language` | Programming languages | Python, Go, Rust |
+| `framework` | Web frameworks, UI libs | React, Django |
+| `service` | Cloud platforms | AWS, GCP, Vercel |
+| `concept` | Protocols, specs | GraphQL, OAuth |
+| `life` | Non-tech content | Cooking, Fitness |
+| `aha` | Free-form content | Humor, satire |
+| `collection` | Curated content indexes | Topic hubs |
+
 ### 2. Translation
 
 Translate an existing quickstart to another language.
@@ -72,38 +85,35 @@ src/content/{category}/{id}/
 ---
 title: "Your Title"
 description: "A brief description (10-200 characters)"
+template: "tool"  # Required: tool/language/framework/service/concept/life/aha/collection
 tags: ["tag1", "tag2"]
 ---
 ```
 
 ### 4. Content Structure
 
-All quickstarts must follow this structure:
+Each template has different required sections. Run `pnpm new` to generate the correct structure, or check the template files in `src/templates/`.
+
+**Example (tool template):**
 
 ```markdown
 ## TL;DR
-
-**What**: One-line definition.
-
-**Why**: What problem it solves.
+One-line definition and why it matters.
 
 ## Quick Start
-
 Installation and first example.
 
 ## Cheatsheet
-
-Common commands or tips in a table/list format.
+Common commands or tips.
 
 ## Gotchas
-
-Common problems and how to fix them.
+Common problems and solutions.
 
 ## Next Steps
-
-- [Link to docs](url)
-- [Link to more resources](url)
+Links to resources.
 ```
+
+> Different templates have different required sections. The `aha` and `collection` templates are free-form with no required structure.
 
 ### 5. Validate Your Content
 
@@ -159,10 +169,10 @@ npm install package
 |------|-------------|
 | ID naming | No `_` `/` spaces `?#&=.` |
 | ID conflicts | Same ID can only exist in one category |
-| Frontmatter | title and description required |
+| Frontmatter | title, description, and template required |
 | Description | 10-200 characters |
 | Assets | Lowercase names with hyphens |
-| Structure | Must have: TL;DR, Quick Start, Cheatsheet, Gotchas, Next Steps |
+| Structure | Required sections vary by template type |
 
 ## Need Help?
 
