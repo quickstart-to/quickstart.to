@@ -18,6 +18,19 @@
 - 内容应该能在 5 分钟或更短时间内完成
 - 只包含必要步骤，不要多余内容
 
+**模板类型：**
+
+| 模板 | 适用场景 | 示例 |
+|------|----------|------|
+| `tool` | CLI 工具、实用程序 | Docker、Git、Vim |
+| `language` | 编程语言 | Python、Go、Rust |
+| `framework` | Web 框架、UI 库 | React、Django |
+| `service` | 云平台 | AWS、GCP、Vercel |
+| `concept` | 协议、规范 | GraphQL、OAuth |
+| `life` | 非技术内容 | 烹饪、健身 |
+| `aha` | 自由形式 | 幽默、讽刺 |
+| `collection` | 内容索引 | 主题中心 |
+
 ### 2. 翻译
 
 将现有的 quickstart 翻译成其他语言。
@@ -72,31 +85,35 @@ src/content/{category}/{id}/
 ---
 title: "你的标题"
 description: "简短描述（10-200 个字符）"
+template: "tool"  # 必需: tool/language/framework/service/concept/life/aha/collection
 tags: ["标签1", "标签2"]
 ---
 ```
 
 ### 4. 内容结构
 
+每种模板有不同的必需部分。运行 `pnpm new` 生成正确的结构，或查看 `src/templates/` 中的模板文件。
+
+**示例（tool 模板）：**
+
 ```markdown
-## 概述
-简短介绍。
+## TL;DR
+一句话定义和重要性说明。
 
-## 前提条件
-- 条目 1
-- 条目 2
+## Quick Start
+安装和第一个示例。
 
-## 步骤
+## Cheatsheet
+常用命令或技巧。
 
-### 第一步：开始
-在这里写说明。
+## Gotchas
+常见问题和解决方案。
 
-### 第二步：下一步
-更多说明。
-
-## 总结
-快速回顾。
+## Next Steps
+资源链接。
 ```
+
+> 不同模板有不同的必需部分。`aha` 和 `collection` 模板是自由形式，没有必需结构。
 
 ### 5. 验证内容
 
@@ -152,9 +169,10 @@ npm install package
 |------|------|
 | ID 命名 | 不允许 `_` `/` 空格 `?#&=.` |
 | ID 冲突 | 同一 ID 只能存在于一个分类中 |
-| Frontmatter | 必须有 title 和 description |
+| Frontmatter | 必须有 title、description 和 template |
 | 描述长度 | 10-200 个字符 |
 | 资源命名 | 小写字母和连字符 |
+| 结构 | 必需部分因模板类型而异 |
 
 ## 需要帮助？
 
