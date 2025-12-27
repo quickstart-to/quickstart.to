@@ -2,16 +2,22 @@
 import '@/styles/global.css';
 import Header from '@components/Header.astro';
 import Footer from '@components/Footer.astro';
-import { defaultLang, type Lang } from '@i18n/config';
+import JsonLd from '@components/JsonLd.astro';
+import { defaultLang, supportedLangs, type Lang } from '@i18n/config';
 import { t } from '@utils/language';
+import { getOgLocale, getDefaultOgImageUrl } from '@utils/seo';
 
 interface Props {
   title: string;
   description?: string;
   lang?: Lang;
   canonicalUrl?: string;
-  alternateUrls?: { lang: Lang; url: string }[];
+  alternateUrls?: { lang: Lang | 'x-default'; url: string }[];
   id?: string;
+  ogImage?: string;
+  ogType?: 'website' | 'article';
+  category?: string;
+  schemas?: object | object[];
 }
 
 const {
@@ -21,9 +27,15 @@ const {
   canonicalUrl,
   alternateUrls = [],
   id,
+  ogImage = getDefaultOgImageUrl(),
+  ogType = 'website',
+  category,
+  schemas,
 } = Astro.props;
 
 const fullTitle = title === 'quickstart.to' ? title : `${title} | quickstart.to`;
+const ogLocale = getOgLocale(lang);
+const alternateLocales = supportedLangs.filter((l) => l !== lang).map((l) => getOgLocale(l));
 ---
 
 <!doctype html>
@@ -61,15 +73,31 @@ const fullTitle = title === 'quickstart.to' ? title : `${title} | quickstart.to`
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
     <!-- Open Graph -->
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={ogType} />
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:site_name" content="quickstart.to" />
+    {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
+    <meta property="og:locale" content={ogLocale} />
+    {alternateLocales.map((locale) => (
+      <meta property="og:locale:alternate" content={locale} />
+    ))}
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={title} />
+    {ogType === 'article' && category && (
+      <meta property="article:section" content={category} />
+    )}
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={fullTitle} />
     <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <!-- JSON-LD Structured Data -->
+    {schemas && <JsonLd schemas={schemas} />}
   </head>
   <body>
     <Header lang={lang} id={id} />

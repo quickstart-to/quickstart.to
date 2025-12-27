@@ -4,10 +4,19 @@ import QuickstartCard from '@components/QuickstartCard.astro';
 import Search from '@components/Search.astro';
 import TopContributors from '@components/TopContributors.astro';
 import { getAllQuickstarts, getAvailableLanguages } from '@utils/content';
-import { defaultLang, type Lang } from '@i18n/config';
+import { defaultLang, type Lang, supportedLangs } from '@i18n/config';
 import { t } from '@utils/language';
+import { getHomeCanonicalUrl, getDefaultOgImageUrl } from '@utils/seo';
+import { generateWebSiteSchema } from '@utils/schema';
 
 const lang = defaultLang;
+const canonicalUrl = getHomeCanonicalUrl(lang);
+const alternateUrls = supportedLangs.map((l) => ({
+  lang: l as typeof l | 'x-default',
+  url: getHomeCanonicalUrl(l),
+}));
+alternateUrls.push({ lang: 'x-default', url: getHomeCanonicalUrl(defaultLang) });
+const websiteSchema = generateWebSiteSchema();
 const allQuickstarts = await getAllQuickstarts();
 
 // Get unique quickstarts for default language, or fallback
@@ -29,7 +38,13 @@ const quickstarts = await Promise.all(
 const validQuickstarts = quickstarts.filter(Boolean);
 ---
 
-<BaseLayout title="quickstart.to" lang={lang}>
+<BaseLayout
+  title="quickstart.to"
+  lang={lang}
+  canonicalUrl={canonicalUrl}
+  alternateUrls={alternateUrls}
+  schemas={websiteSchema}
+>
   <section class="hero container">
     <h1 class="hero-title">quickstart.to</h1>
     <p class="hero-subtitle">{t(lang, 'site.description')}</p>

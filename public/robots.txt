@@ -1,0 +1,11 @@
+# https://www.robotstxt.org/robotstxt.html
+
+User-agent: *
+Allow: /
+
+# Disallow duplicate English content with /en/ prefix
+# English content uses no prefix (e.g., /docker instead of /en/docker)
+Disallow: /en/
+
+# Sitemap location
+Sitemap: https://quickstart.to/sitemap-index.xml
