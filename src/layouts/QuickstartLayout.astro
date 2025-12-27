@@ -5,6 +5,8 @@ import ContributorList from '@components/ContributorList.astro';
 import LanguageSwitcher from '@components/LanguageSwitcher.astro';
 import { type Lang } from '@i18n/config';
 import { t } from '@utils/language';
+import { getCanonicalUrl, getAlternateUrls, getOgImageUrl } from '@utils/seo';
+import { generateQuickstartSchemas } from '@utils/schema';
 
 interface Props {
   title: string;
@@ -28,11 +30,17 @@ const {
   filePath,
 } = Astro.props;
 
-const canonicalUrl = `https://quickstart.to/${lang}/${id}`;
-const alternateUrls = availableLanguages.map((l) => ({
-  lang: l,
-  url: `https://quickstart.to/${l}/${id}`,
-}));
+const canonicalUrl = getCanonicalUrl(id, lang);
+const alternateUrls = getAlternateUrls(id, availableLanguages);
+const ogImageUrl = getOgImageUrl(id, lang);
+const schemas = generateQuickstartSchemas({
+  title,
+  description,
+  url: canonicalUrl,
+  lang,
+  category,
+  ogImage: ogImageUrl,
+});
 ---
 
 <BaseLayout
@@ -42,6 +50,10 @@ const alternateUrls = availableLanguages.map((l) => ({
   id={id}
   canonicalUrl={canonicalUrl}
   alternateUrls={alternateUrls}
+  ogImage={ogImageUrl}
+  ogType="article"
+  category={category}
+  schemas={schemas}
 >
   <article class="quickstart container">
     <header class="quickstart-header">
