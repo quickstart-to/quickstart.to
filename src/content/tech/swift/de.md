@@ -1,0 +1,298 @@
+---
+title: "Swift"
+description: "Starten Sie mit der Programmiersprache Swift in 5 Minuten"
+template: "language"
+tags: ["programming", "apple", "ios", "macos"]
+---
+
+## TL;DR
+
+**Kurzfassung**: Swift ist Apples moderne Sprache - sicher, schnell und die einzige Wahl für iOS/macOS.
+
+**Kernstärken**:
+- Speichersicherheit ohne Garbage Collection
+- Moderne Syntax mit Typinferenz
+- Schnell - oft schneller als C++
+- Offizielle Sprache für Apple-Plattformen
+
+## Philosophy
+
+Swift wurde gebaut, um Objective-C zu ersetzen:
+
+- **Sicherheit zuerst** - Optionals zwingen Sie, nil zu behandeln. Keine Abstürze durch Null-Pointer mehr.
+- **Schnell von Haus aus** - Value Types, Copy-on-Write, optimiert für Performance
+- **Moderne Syntax** - Sauber, ausdrucksstark, fühlt sich an wie eine Scripting-Sprache
+- **Protokoll-orientiert** - Komposition über Vererbung
+
+Swift 6 bringt strikte Concurrency-Prüfung standardmäßig und macht async Code sicherer.
+
+## Quick Start
+
+### Install
+
+```bash
+# macOS (with Xcode)
+xcode-select --install
+
+# Linux
+curl -sL https://swift.org/install.sh | bash
+
+# Or download from swift.org
+```
+
+### Verify (latest: 6.2)
+
+```bash
+swift --version  # Swift version 6.2
+```
+
+### First Program
+
+Erstellen Sie `hello.swift`:
+```swift
+print("Hello, World!")
+```
+
+```bash
+swift hello.swift
+```
+
+### Swift REPL
+
+```bash
+swift
+> print("Hello")
+Hello
+```
+
+## Language Essentials
+
+### Variables & Types
+
+```swift
+// Constants (preferred)
+let name = "Alice"    // Type inferred
+let age: Int = 25     // Explicit type
+
+// Variables
+var count = 0
+count += 1
+
+// Collections
+let array = [1, 2, 3]
+let dict = ["a": 1, "b": 2]
+let set: Set = [1, 2, 3]
+```
+
+### Optionals
+
+```swift
+// Optionals represent "might be nil"
+var name: String? = "Alice"
+var empty: String? = nil
+
+// Unwrapping
+if let name = name {
+    print(name)  // Safe
+}
+
+// Nil coalescing
+let displayName = name ?? "Guest"
+
+// Guard for early exit
+guard let name = name else { return }
+print(name)  // name is unwrapped here
+```
+
+### Control Flow
+
+```swift
+// if-else
+if age >= 18 {
+    print("Adult")
+} else {
+    print("Minor")
+}
+
+// switch (exhaustive)
+switch value {
+case 1:
+    print("one")
+case 2, 3:
+    print("two or three")
+case 4...10:
+    print("four to ten")
+default:
+    print("other")
+}
+
+// for-in
+for i in 1...5 {
+    print(i)
+}
+
+for item in array {
+    print(item)
+}
+```
+
+### Functions
+
+```swift
+// Basic function
+func greet(name: String) -> String {
+    return "Hello, \(name)!"
+}
+
+// External/internal parameter names
+func greet(person name: String) -> String {
+    return "Hello, \(name)!"
+}
+greet(person: "Alice")
+
+// Default parameters
+func greet(_ name: String, with greeting: String = "Hello") -> String {
+    "\(greeting), \(name)!"
+}
+
+// Closures
+let add = { (a: Int, b: Int) -> Int in
+    a + b
+}
+```
+
+### Structs & Classes
+
+```swift
+// Struct (value type, preferred)
+struct User {
+    let name: String
+    var age: Int
+
+    func greet() -> String {
+        "Hi, I'm \(name)"
+    }
+}
+
+var user = User(name: "Alice", age: 25)
+var copy = user  // Independent copy
+copy.age = 26    // user.age is still 25
+
+// Class (reference type)
+class Account {
+    var balance: Double
+
+    init(balance: Double) {
+        self.balance = balance
+    }
+}
+```
+
+### Async/Await
+
+```swift
+// Async function
+func fetchData() async throws -> Data {
+    let url = URL(string: "https://api.example.com")!
+    let (data, _) = try await URLSession.shared.data(from: url)
+    return data
+}
+
+// Calling async code
+Task {
+    do {
+        let data = try await fetchData()
+        print(data)
+    } catch {
+        print(error)
+    }
+}
+```
+
+## Gotchas
+
+### Structs vs Classes
+
+```swift
+// Structs are copied (value semantics)
+var a = Point(x: 0, y: 0)
+var b = a
+b.x = 10  // a.x is still 0
+
+// Classes are shared (reference semantics)
+var account1 = Account(balance: 100)
+var account2 = account1
+account2.balance = 50  // account1.balance is also 50!
+```
+
+### Force unwrap crashes
+
+```swift
+var name: String? = nil
+// name!  // CRASH! Fatal error
+
+// Always prefer safe unwrapping
+if let name = name {
+    print(name)
+}
+```
+
+### Mutating struct methods
+
+```swift
+struct Counter {
+    var count = 0
+
+    mutating func increment() {  // Must mark as mutating
+        count += 1
+    }
+}
+```
+
+## When to Choose
+
+**Ideal für**:
+- iOS/macOS/watchOS/tvOS Apps
+- Hochleistungsanwendungen
+- Server-side Swift (Vapor)
+- CLI-Tools auf macOS
+
+**Weniger geeignet für**:
+- Android-Entwicklung (nutzen Sie Kotlin)
+- Web-Frontend (nutzen Sie JavaScript)
+- Cross-Platform Mobile (nutzen Sie Flutter)
+
+**Vergleich**:
+| Aspekt | Swift | Kotlin | Rust |
+|--------|-------|--------|------|
+| Plattform | Apple | JVM/Android | Cross-Platform |
+| Speicher | ARC | GC | Manuell |
+| Lernen | Mittel | Einfach | Schwer |
+| Geschwindigkeit | Schnell | Schnell | Am schnellsten |
+
+## Next Steps
+
+- [Swift.org](https://swift.org/documentation/)
+- [The Swift Book](https://docs.swift.org/swift-book/)
+- [SwiftUI Tutorials](https://developer.apple.com/tutorials/swiftui)
+- [Swift Playgrounds](https://developer.apple.com/swift-playgrounds/)
+
+## Ecosystem
+
+### Package Management
+
+```bash
+# Swift Package Manager
+swift package init              # Create package
+swift build                     # Build
+swift run                       # Run
+swift test                      # Test
+swift package add <url>         # Add dependency
+```
+
+### Popular Frameworks
+
+- **UI**: SwiftUI, UIKit
+- **Server**: Vapor, Hummingbird
+- **Networking**: Alamofire, URLSession
+- **Testing**: XCTest, Quick/Nimble
