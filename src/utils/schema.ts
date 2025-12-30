@@ -91,7 +91,7 @@ export function generateBreadcrumbSchema(items: BreadcrumbItem[]) {
 export function generateQuickstartSchemas(data: ArticleData): object[] {
   const breadcrumbItems: BreadcrumbItem[] = [
     { name: 'Home', url: SITE_URL },
-    { name: data.category },
+    { name: data.category, url: `${SITE_URL}/#${data.category.toLowerCase()}` },
     { name: data.title },
   ];
 
