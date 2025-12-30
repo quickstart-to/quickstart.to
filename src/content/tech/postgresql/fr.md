@@ -1,6 +1,6 @@
 ---
 title: "PostgreSQL"
-description: "Démarrez avec la base de données relationnelle PostgreSQL"
+description: "Base de données relationnelle open-source puissante - fonctionnalités avancées, extensibilité et conformité SQL complète"
 template: "tool"
 tags: ["database", "sql", "backend"]
 ---

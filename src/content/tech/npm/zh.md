@@ -1,6 +1,6 @@
 ---
 title: "npm"
-description: "5 分钟快速入门 npm 包管理器"
+description: "Node.js 默认包管理器 - 发布、安装、管理 JavaScript 依赖，最大的包注册表"
 template: "tool"
 tags: ["nodejs", "package-manager", "javascript"]
 ---

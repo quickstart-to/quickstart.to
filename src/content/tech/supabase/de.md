@@ -1,6 +1,6 @@
 ---
 title: "Supabase"
-description: "Starten Sie mit Supabase in 5 Minuten"
+description: "Open-Source Firebase-Alternative - PostgreSQL, Echtzeit, Auth, Storage, Edge Functions"
 template: "tool"
 tags: ["database", "backend", "baas"]
 ---

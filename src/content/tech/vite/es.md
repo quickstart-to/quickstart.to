@@ -1,6 +1,6 @@
 ---
 title: "Vite"
-description: "Comienza con la herramienta de build Vite en 5 minutos"
+description: "Herramienta de build frontend ultrarapida - servidor dev instantaneo, builds optimizados con ESM nativo"
 template: "tool"
 tags: ["bundler", "frontend", "build-tool"]
 ---

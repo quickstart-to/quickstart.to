@@ -1,6 +1,6 @@
 ---
 title: "VS Code"
-description: "5 分钟快速入门 Visual Studio Code 编辑器"
+description: "免费可扩展代码编辑器 - 智能提示、调试、Git 集成、海量扩展市场"
 template: "tool"
 tags: ["editor", "ide", "development"]
 ---

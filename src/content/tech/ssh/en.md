@@ -1,6 +1,6 @@
 ---
 title: "SSH"
-description: "Get started with SSH for secure remote connections"
+description: "Secure remote server access - encrypted connections, key-based auth, tunneling for safe data transfer"
 template: "tool"
 tags: ["security", "remote", "networking"]
 ---

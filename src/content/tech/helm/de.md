@@ -1,6 +1,6 @@
 ---
 title: "Helm"
-description: "Starten Sie mit Helm Kubernetes-Paketmanager in 5 Minuten"
+description: "Kubernetes-Paketmanager - Apps mit wiederverwendbaren Charts und Templating definieren, installieren, aktualisieren"
 template: "tool"
 tags: ["kubernetes", "devops", "package-manager"]
 ---

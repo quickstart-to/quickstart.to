@@ -1,6 +1,6 @@
 ---
 title: "OpenAI API"
-description: "Get started with OpenAI API in 5 minutes"
+description: "Access GPT, DALL-E, Whisper models - function calling, embeddings, state-of-the-art AI"
 template: "tool"
 tags: ["ai", "api", "gpt"]
 ---

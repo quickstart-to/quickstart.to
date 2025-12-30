@@ -1,6 +1,6 @@
 ---
 title: "Python"
-description: "5 分钟快速入门 Python 编程"
+description: "语法优雅、生态丰富 - 从脚本到 AI，从 Web 到数据科学"
 template: "language"
 tags: ["programming", "scripting", "data-science"]
 ---

@@ -1,6 +1,6 @@
 ---
 title: "TensorFlow"
-description: "Get started with TensorFlow in 5 minutes"
+description: "Google ML framework - production-ready, TF Serving, mobile deployment, large ecosystem"
 template: "tool"
 tags: ["ai", "machine-learning", "python"]
 ---

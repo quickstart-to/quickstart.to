@@ -1,6 +1,6 @@
 ---
 title: "Pytest"
-description: "Comienza con Pytest en 5 minutos"
+description: "Testing Python simplificado - fixtures, parametrizacion, plugins e introspeccion detallada de assertions"
 template: "tool"
 tags: ["python", "testing", "automation"]
 ---

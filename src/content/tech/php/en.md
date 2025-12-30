@@ -1,6 +1,6 @@
 ---
 title: "PHP"
-description: "Get started with PHP programming language in 5 minutes"
+description: "Web's most deployed language - powers WordPress and Laravel with easy hosting and mature ecosystem"
 template: "language"
 tags: ["programming", "web", "backend"]
 ---

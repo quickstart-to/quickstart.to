@@ -1,6 +1,6 @@
 ---
 title: "MongoDB"
-description: "5 分钟快速入门 MongoDB 数据库"
+description: "灵活模式的文档数据库 - 存储 JSON 数据，水平扩展，轻松查询"
 template: "tool"
 tags: ["database", "nosql", "document"]
 ---

@@ -1,6 +1,6 @@
 ---
 title: "HTMX"
-description: "5 分钟快速入门 HTMX"
+description: "赋予 HTML 超能力 - 通过属性实现 AJAX、CSS 过渡、DOM 更新，无需编写 JavaScript"
 template: "framework"
 tags: ["frontend", "javascript", "hypermedia"]
 ---

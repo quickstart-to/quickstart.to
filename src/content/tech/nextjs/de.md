@@ -1,6 +1,6 @@
 ---
 title: "Next.js"
-description: "Starten Sie mit dem Next.js-Framework in 5 Minuten"
+description: "React Full-Stack-Framework fuer Produktion - Server Components, dateibasiertes Routing, standardmaessig schnell"
 template: "framework"
 tags: ["frontend", "react", "fullstack"]
 ---

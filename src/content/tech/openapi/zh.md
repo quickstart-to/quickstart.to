@@ -1,6 +1,6 @@
 ---
 title: "OpenAPI"
-description: "5 分钟快速入门 OpenAPI/Swagger"
+description: "REST API 规范标准 - 交互式文档、代码生成、API 测试"
 template: "tool"
 tags: ["api", "documentation", "specification"]
 ---

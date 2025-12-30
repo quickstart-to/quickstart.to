@@ -1,6 +1,6 @@
 ---
 title: "React"
-description: "Get started with React for building user interfaces in 5 minutes"
+description: "Build interactive UIs with components - declarative, efficient, and flexible JavaScript library for web interfaces"
 template: "framework"
 tags: ["frontend", "javascript", "ui"]
 ---

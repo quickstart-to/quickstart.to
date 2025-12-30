@@ -1,6 +1,6 @@
 ---
 title: "Java"
-description: "Starten Sie mit der Java-Programmiersprache in 5 Minuten"
+description: "Unternehmenstauglich, plattformunabhaengig - skalierbare Backend-Systeme und Android-Apps mit ausgereiften Tools"
 template: "language"
 tags: ["programming", "backend", "enterprise"]
 ---

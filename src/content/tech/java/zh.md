@@ -1,6 +1,6 @@
 ---
 title: "Java"
-description: "5 分钟快速入门 Java 编程语言"
+description: "企业级跨平台语言 - 构建可扩展的后端系统和 Android 应用，工具链成熟稳定"
 template: "language"
 tags: ["programming", "backend", "enterprise"]
 ---

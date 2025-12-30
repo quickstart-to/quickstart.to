@@ -1,6 +1,6 @@
 ---
 title: "Azure"
-description: "5 分钟快速入门 Microsoft Azure"
+description: "微软企业云 - 无缝集成 Office 365、Active Directory 和混合基础设施"
 template: "service"
 tags: ["cloud", "devops", "microsoft"]
 ---

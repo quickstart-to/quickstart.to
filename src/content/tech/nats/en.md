@@ -1,6 +1,6 @@
 ---
 title: "NATS"
-description: "Get started with NATS messaging in 5 minutes"
+description: "Cloud-native messaging system - simple, fast, lightweight, supports pub/sub and streaming"
 template: "tool"
 tags: ["messaging", "cloud-native", "microservices"]
 ---

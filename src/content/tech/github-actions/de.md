@@ -1,6 +1,6 @@
 ---
 title: "GitHub Actions"
-description: "Starten Sie mit GitHub Actions CI/CD in 5 Minuten"
+description: "Natives GitHub CI/CD - Workflows bei Push, PR, Zeitplan automatisieren, kostenlos fur offentliche Repos"
 template: "tool"
 tags: ["devops", "ci-cd", "automation"]
 ---

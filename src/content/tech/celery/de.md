@@ -1,6 +1,6 @@
 ---
 title: "Celery"
-description: "Starten Sie mit Celery Task Queue in 5 Minuten"
+description: "Python verteilte Task-Queue - async Ausfuhrung, Scheduling, Wiederholungen, Echtzeit-Verarbeitung"
 template: "tool"
 tags: ["python", "queue", "async"]
 ---

@@ -1,6 +1,6 @@
 ---
 title: "jq"
-description: "Démarrez avec le processeur JSON jq en 5 minutes"
+description: "Processeur JSON en ligne de commande - analyser, filtrer, transformer des donnees JSON dans les scripts"
 template: "tool"
 tags: ["cli", "json", "data-processing"]
 ---

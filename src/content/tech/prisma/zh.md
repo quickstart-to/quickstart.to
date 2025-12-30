@@ -1,6 +1,6 @@
 ---
 title: "Prisma"
-description: "5 分钟快速入门 Prisma ORM"
+description: "下一代 TypeScript ORM - 类型安全查询、自动生成客户端、可视化数据库浏览器"
 template: "tool"
 tags: ["orm", "database", "typescript"]
 ---

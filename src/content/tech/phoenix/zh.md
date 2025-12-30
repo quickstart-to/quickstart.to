@@ -1,6 +1,6 @@
 ---
 title: "Phoenix"
-description: "5 分钟快速入门 Phoenix 框架"
+description: "Elixir 实时 Web 框架 - LiveView 无需 JavaScript 即可构建交互式 UI，天生容错"
 template: "framework"
 tags: ["backend", "elixir", "framework"]
 ---

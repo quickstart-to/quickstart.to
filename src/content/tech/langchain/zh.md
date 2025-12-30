@@ -1,6 +1,6 @@
 ---
 title: "LangChain"
-description: "5 分钟快速入门 LangChain"
+description: "LLM 应用框架 - 链接调用、连接数据源、Agent、记忆管理"
 template: "tool"
 tags: ["ai", "llm", "python"]
 ---

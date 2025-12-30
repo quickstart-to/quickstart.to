@@ -1,6 +1,6 @@
 ---
 title: "cURL"
-description: "Get started with cURL in 5 minutes"
+description: "Transfer data from command line - test APIs, download files, and debug HTTP requests"
 template: "tool"
 tags: ["cli", "http", "networking"]
 ---

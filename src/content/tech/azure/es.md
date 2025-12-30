@@ -1,6 +1,6 @@
 ---
 title: "Azure"
-description: "Comienza con Microsoft Azure en 5 minutos"
+description: "Cloud empresarial de Microsoft - integración perfecta con Office 365, Active Directory e infraestructura híbrida"
 template: "service"
 tags: ["cloud", "devops", "microsoft"]
 ---

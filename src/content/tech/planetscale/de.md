@@ -1,6 +1,6 @@
 ---
 title: "PlanetScale"
-description: "Starten Sie mit PlanetScale in 5 Minuten"
+description: "Serverlose MySQL-Plattform - Git-Branching, Zero-Downtime-Migrationen, unbegrenzte Skalierung"
 template: "tool"
 tags: ["database", "mysql", "serverless"]
 ---

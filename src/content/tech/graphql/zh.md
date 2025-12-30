@@ -1,6 +1,6 @@
 ---
 title: "GraphQL"
-description: "5 分钟快速入门 GraphQL API 开发"
+description: "API 查询语言 - 精确请求所需数据，单一端点获取可预测的结果"
 template: "tool"
 tags: ["api", "query-language", "facebook"]
 ---

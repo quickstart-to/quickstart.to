@@ -1,6 +1,6 @@
 ---
 title: "Electron"
-description: "5 分钟快速入门 Electron"
+description: "用 Web 技术构建跨平台桌面应用 - 一套代码覆盖 Windows、macOS 和 Linux"
 template: "framework"
 tags: ["desktop", "javascript", "cross-platform"]
 ---

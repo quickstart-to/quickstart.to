@@ -1,6 +1,6 @@
 ---
 title: "LangChain"
-description: "Get started with LangChain in 5 minutes"
+description: "LLM application framework - chain calls, connect data sources, agents, memory management"
 template: "tool"
 tags: ["ai", "llm", "python"]
 ---

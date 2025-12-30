@@ -1,6 +1,6 @@
 ---
 title: "WebAssembly"
-description: "Get started with WebAssembly in 5 minutes"
+description: "Binary format for near-native performance in browsers - language agnostic (Rust/C/Go), secure sandbox"
 template: "tool"
 tags: ["wasm", "performance", "web"]
 ---

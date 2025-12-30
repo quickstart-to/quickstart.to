@@ -1,6 +1,6 @@
 ---
 title: "Python"
-description: "Starten Sie mit Python-Programmierung in 5 Minuten"
+description: "Lesbare Syntax, riesiges Ökosystem - von Scripting bis KI, von Web-Apps bis Data Science"
 template: "language"
 tags: ["programming", "scripting", "data-science"]
 ---

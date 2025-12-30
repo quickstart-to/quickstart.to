@@ -1,6 +1,6 @@
 ---
 title: "Java"
-description: "Démarrez avec le langage de programmation Java en 5 minutes"
+description: "Langage entreprise multiplateforme - systemes backend scalables et apps Android avec outillage mature"
 template: "language"
 tags: ["programming", "backend", "enterprise"]
 ---

@@ -1,6 +1,6 @@
 ---
 title: "RabbitMQ"
-description: "5 分钟快速入门 RabbitMQ 消息队列"
+description: "灵活路由的消息代理 - 队列、交换机、AMQP 协议实现可靠异步消息"
 template: "tool"
 tags: ["messaging", "queue", "amqp"]
 ---

@@ -84,7 +84,7 @@ src/content/{category}/{id}/
 ```yaml
 ---
 title: "你的标题"
-description: "简短描述（10-200 个字符）"
+description: "功能导向: [做什么] - [价值主张]"
 template: "tool"  # 必需: tool/language/framework/service/concept/life/aha/collection
 tags: ["标签1", "标签2"]
 ---
@@ -156,6 +156,13 @@ npm install package
 - 放在 quickstart 目录内的 `assets/` 文件夹中
 - 使用小写字母和连字符命名：`step-1-install.png`
 - 使用相对路径引用：`![截图](./assets/screenshot.png)`
+
+### Description 写作
+
+描述功能，而非"快速入门"：
+
+- **好**："在隔离容器中打包运行应用 - 从开发到生产环境始终一致"
+- **不好**："5 分钟快速入门 Docker"
 
 ## ID 命名规则
 

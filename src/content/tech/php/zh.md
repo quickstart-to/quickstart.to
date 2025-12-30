@@ -1,6 +1,6 @@
 ---
 title: "PHP"
-description: "5 分钟快速入门 PHP 编程语言"
+description: "Web 最广泛部署的语言 - 驱动 WordPress 和 Laravel，易于托管，生态成熟"
 template: "language"
 tags: ["programming", "web", "backend"]
 ---

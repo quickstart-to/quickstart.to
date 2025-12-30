@@ -1,6 +1,6 @@
 ---
 title: "Kubernetes"
-description: "快速入门 Kubernetes 容器编排"
+description: "大规模编排容器化应用 - 跨集群自动化部署、扩缩容和管理"
 template: "tool"
 tags: ["containers", "devops", "cloud-native"]
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Electron"
-description: "Get started with Electron in 5 minutes"
+description: "Cross-platform desktop apps with web tech - one codebase for Windows, macOS, and Linux using JS/HTML/CSS"
 template: "framework"
 tags: ["desktop", "javascript", "cross-platform"]
 ---

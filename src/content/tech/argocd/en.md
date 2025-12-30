@@ -1,6 +1,6 @@
 ---
 title: "ArgoCD"
-description: "Get started with ArgoCD GitOps in 5 minutes"
+description: "GitOps continuous delivery for Kubernetes - sync apps from Git, auto-heal, declarative deployments"
 template: "tool"
 tags: ["kubernetes", "gitops", "devops"]
 ---

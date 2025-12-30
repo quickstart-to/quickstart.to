@@ -1,6 +1,6 @@
 ---
 title: "Apache Cassandra"
-description: "5 分钟快速入门 Apache Cassandra"
+description: "分布式 NoSQL 数据库 - 线性扩展、无单点故障、处理海量数据"
 template: "tool"
 tags: ["database", "nosql", "distributed"]
 ---

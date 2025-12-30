@@ -1,6 +1,6 @@
 ---
 title: "SSH"
-description: "Démarrez avec SSH pour des connexions distantes sécurisées"
+description: "Acces securise aux serveurs distants - connexions chiffrees, authentification par cle, tunneling"
 template: "tool"
 tags: ["security", "remote", "networking"]
 ---

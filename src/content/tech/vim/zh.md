@@ -1,6 +1,6 @@
 ---
 title: "Vim"
-description: "快速入门 Vim 文本编辑器"
+description: "模式化文本编辑器 - 纯键盘操作、极速编辑，每台服务器都有"
 template: "tool"
 tags: ["editor", "terminal", "productivity"]
 ---

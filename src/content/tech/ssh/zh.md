@@ -1,6 +1,6 @@
 ---
 title: "SSH"
-description: "快速入门 SSH 安全远程连接"
+description: "安全远程服务器访问 - 加密连接、密钥认证、隧道转发"
 template: "tool"
 tags: ["security", "remote", "networking"]
 ---

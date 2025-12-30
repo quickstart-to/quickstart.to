@@ -1,6 +1,6 @@
 ---
 title: "React"
-description: "Démarrez avec React pour créer des interfaces utilisateur en 5 minutes"
+description: "Créez des UIs interactives avec des composants - bibliothèque JavaScript déclarative, efficace et flexible"
 template: "framework"
 tags: ["frontend", "javascript", "ui"]
 ---

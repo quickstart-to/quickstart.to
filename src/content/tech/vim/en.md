@@ -1,6 +1,6 @@
 ---
 title: "Vim"
-description: "Get started with Vim text editor essentials"
+description: "Modal text editor for lightning-fast editing - keyboard-only workflow available on every server"
 template: "tool"
 tags: ["editor", "terminal", "productivity"]
 ---

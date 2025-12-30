@@ -1,6 +1,6 @@
 ---
 title: "Elasticsearch"
-description: "5 分钟快速入门 Elasticsearch"
+description: "分布式搜索与分析引擎 - 全文检索、日志分析、实时数据探索"
 template: "tool"
 tags: ["database", "search", "analytics"]
 ---

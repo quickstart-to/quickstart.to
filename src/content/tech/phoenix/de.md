@@ -1,6 +1,6 @@
 ---
 title: "Phoenix"
-description: "Starten Sie mit dem Phoenix-Framework in 5 Minuten"
+description: "Elixir Web-Framework fuer Echtzeit-Apps - LiveView liefert interaktive UIs ohne JavaScript, fehlertolerant by design"
 template: "framework"
 tags: ["backend", "elixir", "framework"]
 ---

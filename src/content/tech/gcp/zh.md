@@ -1,6 +1,6 @@
 ---
 title: "Google Cloud"
-description: "5 分钟快速入门 Google Cloud Platform"
+description: "Google 云基础设施 - Kubernetes 和 BigQuery 的诞生地，前沿 AI/ML，全球网络"
 template: "service"
 tags: ["cloud", "devops", "google"]
 ---

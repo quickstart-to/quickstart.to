@@ -1,6 +1,6 @@
 ---
 title: "PHP"
-description: "Comienza con el lenguaje de programación PHP en 5 minutos"
+description: "Lenguaje web mas desplegado - impulsa WordPress y Laravel con hosting facil y ecosistema maduro"
 template: "language"
 tags: ["programming", "web", "backend"]
 ---

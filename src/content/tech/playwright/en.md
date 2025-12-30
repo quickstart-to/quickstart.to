@@ -1,6 +1,6 @@
 ---
 title: "Playwright"
-description: "Get started with Playwright testing in 5 minutes"
+description: "Cross-browser E2E testing - auto-wait, trace viewer, test across Chromium, Firefox, and WebKit"
 template: "tool"
 tags: ["testing", "e2e", "automation"]
 ---

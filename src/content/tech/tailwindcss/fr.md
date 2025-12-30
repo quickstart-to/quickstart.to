@@ -1,6 +1,6 @@
 ---
 title: "Tailwind CSS"
-description: "Démarrez avec Tailwind CSS en 5 minutes"
+description: "Framework CSS utility-first - design direct dans le HTML avec classes atomiques, zero changement de contexte"
 template: "framework"
 tags: ["css", "frontend", "styling"]
 ---

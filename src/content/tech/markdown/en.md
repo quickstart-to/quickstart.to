@@ -1,6 +1,6 @@
 ---
 title: "Markdown"
-description: "Get started with Markdown for documentation"
+description: "Lightweight markup language - simple syntax for docs, READMEs, notes that converts to HTML"
 template: "tool"
 tags: ["documentation", "writing", "formatting"]
 ---

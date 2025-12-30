@@ -1,6 +1,6 @@
 ---
 title: "Java"
-description: "Get started with Java programming language in 5 minutes"
+description: "Enterprise-grade, platform-independent - build scalable backend systems and Android apps with mature tooling"
 template: "language"
 tags: ["programming", "backend", "enterprise"]
 ---

@@ -1,6 +1,6 @@
 ---
 title: "LangChain"
-description: "Comienza con LangChain en 5 minutos"
+description: "Framework de aplicaciones LLM - encadenar llamadas, RAG, agentes, gestion de memoria"
 template: "tool"
 tags: ["ai", "llm", "python"]
 ---

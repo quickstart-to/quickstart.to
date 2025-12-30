@@ -84,7 +84,7 @@ src/content/{category}/{id}/
 ```yaml
 ---
 title: "Your Title"
-description: "A brief description (10-200 characters)"
+description: "Feature-oriented: [what it does] - [value proposition]"
 template: "tool"  # Required: tool/language/framework/service/concept/life/aha/collection
 tags: ["tag1", "tag2"]
 ---
@@ -156,6 +156,13 @@ npm install package
 - Place in `assets/` folder within the quickstart directory
 - Use lowercase names with hyphens: `step-1-install.png`
 - Reference with relative paths: `![Screenshot](./assets/screenshot.png)`
+
+### Description Writing
+
+Write what it does, not "get started":
+
+- **Good**: "Package and run apps in isolated containers - consistent environments"
+- **Bad**: "Get started with Docker in 5 minutes"
 
 ## ID Naming Rules
 

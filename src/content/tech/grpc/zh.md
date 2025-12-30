@@ -1,6 +1,6 @@
 ---
 title: "gRPC"
-description: "5 分钟快速入门 gRPC"
+description: "高性能 RPC 框架 - Protocol Buffers、HTTP/2、流式传输、多语言支持"
 template: "tool"
 tags: ["api", "rpc", "protobuf"]
 ---

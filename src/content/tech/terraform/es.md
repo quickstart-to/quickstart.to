@@ -1,6 +1,6 @@
 ---
 title: "Terraform"
-description: "Comienza con Terraform infrastructure as code en 5 minutos"
+description: "Infraestructura como Codigo - aprovisionar recursos cloud en AWS, Azure, GCP con gestion de estado"
 template: "tool"
 tags: ["devops", "infrastructure", "iac"]
 ---

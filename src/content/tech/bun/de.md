@@ -1,6 +1,6 @@
 ---
 title: "Bun"
-description: "Starten Sie mit Bun JavaScript-Runtime in 5 Minuten"
+description: "All-in-One JavaScript-Toolkit - ultraschnelle Runtime, Bundler, Testrunner und Paketmanager in einem"
 template: "tool"
 tags: ["javascript", "runtime", "typescript"]
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Neo4j"
-description: "Get started with Neo4j graph database in 5 minutes"
+description: "Native graph database - relationship-first modeling, powerful traversals, Cypher query language"
 template: "tool"
 tags: ["database", "graph", "nosql"]
 ---

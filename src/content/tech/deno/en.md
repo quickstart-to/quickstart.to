@@ -1,6 +1,6 @@
 ---
 title: "Deno"
-description: "Get started with Deno in 5 minutes"
+description: "Secure JavaScript/TypeScript runtime - built-in TypeScript, secure by default, modern standard library"
 template: "tool"
 tags: ["javascript", "typescript", "runtime"]
 ---

@@ -1,6 +1,6 @@
 ---
 title: "C#"
-description: "Comienza con el lenguaje de programación C# en 5 minutos"
+description: "Lenguaje .NET versatil - web, desktop, juegos Unity y apps cloud con async/await y LINQ"
 template: "language"
 tags: ["programming", "dotnet", "microsoft"]
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Homebrew"
-description: "快速入门 macOS 包管理器 Homebrew"
+description: "macOS 包管理器 - 一行命令安装软件，自动管理依赖"
 template: "tool"
 tags: ["macos", "package-manager", "tools"]
 ---

@@ -1,6 +1,6 @@
 ---
 title: "React Native"
-description: "Starten Sie mit React Native in 5 Minuten"
+description: "Native Mobile-Apps mit React - Code-Sharing mit Web, Hot Reload, native Performance"
 template: "tool"
 tags: ["mobile", "react", "cross-platform"]
 ---

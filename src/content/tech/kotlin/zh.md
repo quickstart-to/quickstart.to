@@ -1,6 +1,6 @@
 ---
 title: "Kotlin"
-description: "5 分钟快速入门 Kotlin 编程语言"
+description: "现代空安全 JVM 语言 - Android 官方开发语言，简洁语法，完全兼容 Java"
 template: "language"
 tags: ["programming", "android", "jvm"]
 ---

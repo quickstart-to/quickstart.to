@@ -1,6 +1,6 @@
 ---
 title: "Django"
-description: "Démarrez avec le framework web Django en 5 minutes"
+description: "Framework web Python batteries incluses - ORM, panneau admin, auth et securite integres des le premier jour"
 template: "framework"
 tags: ["backend", "python", "framework"]
 ---

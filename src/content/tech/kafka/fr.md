@@ -1,6 +1,6 @@
 ---
 title: "Apache Kafka"
-description: "Démarrez avec la messagerie Apache Kafka en 5 minutes"
+description: "Plateforme de streaming d'evenements distribuee - pub/sub haut debit, logs durables, pipelines temps reel"
 template: "tool"
 tags: ["messaging", "streaming", "distributed"]
 ---

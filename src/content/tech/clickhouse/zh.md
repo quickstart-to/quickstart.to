@@ -1,6 +1,6 @@
 ---
 title: "ClickHouse"
-description: "5 分钟快速入门 ClickHouse"
+description: "列式 OLAP 数据库 - 数十亿行数据的极速分析、实时聚合查询"
 template: "tool"
 tags: ["database", "analytics", "olap"]
 ---

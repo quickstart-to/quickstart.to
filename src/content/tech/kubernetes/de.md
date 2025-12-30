@@ -1,6 +1,6 @@
 ---
 title: "Kubernetes"
-description: "Starten Sie mit Kubernetes Container-Orchestrierung"
+description: "Containerisierte Anwendungen im großen Maßstab orchestrieren - automatisiertes Deployment, Skalierung und Verwaltung über Cluster"
 template: "tool"
 tags: ["containers", "devops", "cloud-native"]
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Kotlin"
-description: "Get started with Kotlin programming language in 5 minutes"
+description: "Modern, null-safe JVM language - official Android development with concise syntax and full Java interop"
 template: "language"
 tags: ["programming", "android", "jvm"]
 ---

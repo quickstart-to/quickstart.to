@@ -1,6 +1,6 @@
 ---
 title: "Bootstrap"
-description: "5 分钟快速入门 Bootstrap CSS 框架"
+description: "全球最流行的 CSS 框架 - 响应式网格、预置组件和 JS 插件开箱即用"
 template: "framework"
 tags: ["css", "frontend", "framework"]
 ---

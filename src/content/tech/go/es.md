@@ -1,6 +1,6 @@
 ---
 title: "Go"
-description: "Comienza con el lenguaje de programación Go en 5 minutos"
+description: "Simple, rápido, concurrente - construye servicios cloud confiables y herramientas CLI con Go"
 template: "language"
 tags: ["programming", "backend", "systems"]
 ---

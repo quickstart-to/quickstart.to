@@ -1,6 +1,6 @@
 ---
 title: "Redis"
-description: "Get started with Redis in-memory data store"
+description: "In-memory data store for caching, sessions, and real-time analytics - blazing fast key-value operations"
 template: "tool"
 tags: ["database", "cache", "backend"]
 ---

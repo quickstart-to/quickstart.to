@@ -1,6 +1,6 @@
 ---
 title: "Node.js"
-description: "5 分钟快速入门 Node.js 运行时"
+description: "服务端 JavaScript 运行时 - 用非阻塞 I/O 构建可扩展的网络应用"
 template: "tool"
 tags: ["javascript", "runtime", "backend"]
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Homebrew"
-description: "Starten Sie mit dem Homebrew-Paketmanager für macOS"
+description: "macOS Paketmanager - CLI-Tools und Apps mit einem Befehl installieren, Abhangigkeiten automatisch verwalten"
 template: "tool"
 tags: ["macos", "package-manager", "tools"]
 ---

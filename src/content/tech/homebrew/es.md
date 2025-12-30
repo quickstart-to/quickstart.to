@@ -1,6 +1,6 @@
 ---
 title: "Homebrew"
-description: "Comienza con el gestor de paquetes Homebrew para macOS"
+description: "Gestor de paquetes macOS - instalar herramientas CLI y apps con un comando, gestionar dependencias automaticamente"
 template: "tool"
 tags: ["macos", "package-manager", "tools"]
 ---

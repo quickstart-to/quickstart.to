@@ -1,6 +1,6 @@
 ---
 title: "Homebrew"
-description: "Get started with Homebrew package manager for macOS"
+description: "macOS package manager - install CLI tools and apps with one command, manage dependencies automatically"
 template: "tool"
 tags: ["macos", "package-manager", "tools"]
 ---

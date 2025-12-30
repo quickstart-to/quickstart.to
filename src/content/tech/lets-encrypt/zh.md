@@ -1,6 +1,6 @@
 ---
 title: "Let's Encrypt"
-description: "5 分钟快速入门 Let's Encrypt"
+description: "免费 SSL/TLS 证书颁发机构 - 自动续期、广泛信任、易于设置"
 template: "tool"
 tags: ["security", "ssl", "certificates"]
 ---

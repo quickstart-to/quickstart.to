@@ -1,6 +1,6 @@
 ---
 title: "Kotlin"
-description: "Starten Sie mit der Kotlin-Programmiersprache in 5 Minuten"
+description: "Moderne, null-sichere JVM-Sprache - offizielle Android-Entwicklung mit pragnanter Syntax und Java-Kompatibilitat"
 template: "language"
 tags: ["programming", "android", "jvm"]
 ---

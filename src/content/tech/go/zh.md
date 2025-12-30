@@ -1,6 +1,6 @@
 ---
 title: "Go"
-description: "5 分钟快速入门 Go 编程语言"
+description: "简洁、高效、并发 - 用 Go 构建可靠的云服务和命令行工具"
 template: "language"
 tags: ["programming", "backend", "systems"]
 ---

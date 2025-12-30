@@ -1,6 +1,6 @@
 ---
 title: "PlanetScale"
-description: "5 分钟快速入门 PlanetScale"
+description: "支持分支的无服务器 MySQL - Git 式工作流、零停机迁移、无限扩展"
 template: "tool"
 tags: ["database", "mysql", "serverless"]
 ---

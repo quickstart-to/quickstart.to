@@ -1,6 +1,6 @@
 ---
 title: "PyTorch"
-description: "Get started with PyTorch deep learning in 5 minutes"
+description: "Python deep learning framework - dynamic graphs, Pythonic API, strong research community"
 template: "tool"
 tags: ["ai", "machine-learning", "python"]
 ---

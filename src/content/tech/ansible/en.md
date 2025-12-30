@@ -1,6 +1,6 @@
 ---
 title: "Ansible"
-description: "Get started with Ansible automation in 5 minutes"
+description: "Agentless IT automation - configure servers, deploy apps, orchestrate workflows with YAML playbooks"
 template: "tool"
 tags: ["devops", "automation", "configuration"]
 ---

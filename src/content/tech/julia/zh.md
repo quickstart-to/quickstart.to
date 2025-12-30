@@ -1,6 +1,6 @@
 ---
 title: "Julia"
-description: "5 分钟快速入门 Julia 编程语言"
+description: "高性能科学计算语言 - Python 的易用性加 C 的速度，专为数值分析和 AI 设计"
 template: "language"
 tags: ["programming", "scientific", "high-performance"]
 ---

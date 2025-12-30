@@ -1,6 +1,6 @@
 ---
 title: "Kubernetes"
-description: "Get started with Kubernetes container orchestration"
+description: "Orchestrate containerized applications at scale - automate deployment, scaling, and management across clusters"
 template: "tool"
 tags: ["containers", "devops", "cloud-native"]
 ---

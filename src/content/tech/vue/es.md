@@ -1,6 +1,6 @@
 ---
 title: "Vue.js"
-description: "Comienza con el framework Vue.js en 5 minutos"
+description: "Framework JavaScript progresivo - reactivo por defecto, escala de widgets simples a SPAs complejas"
 template: "framework"
 tags: ["frontend", "javascript", "framework"]
 ---

@@ -1,6 +1,6 @@
 ---
 title: "OpenAI API"
-description: "Starten Sie mit der OpenAI API in 5 Minuten"
+description: "OpenAI GPT-Modelle API - Chat Completions, Function Calling, Embeddings, Vision, DALL-E"
 template: "tool"
 tags: ["ai", "api", "gpt"]
 ---

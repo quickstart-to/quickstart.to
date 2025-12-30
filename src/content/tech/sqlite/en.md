@@ -1,6 +1,6 @@
 ---
 title: "SQLite"
-description: "Get started with SQLite database in 5 minutes"
+description: "Serverless embedded SQL database - zero config, single file, perfect for mobile apps and prototypes"
 template: "tool"
 tags: ["database", "sql", "embedded"]
 ---

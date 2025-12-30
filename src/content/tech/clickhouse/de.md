@@ -1,6 +1,6 @@
 ---
 title: "ClickHouse"
-description: "Starten Sie mit ClickHouse in 5 Minuten"
+description: "Spaltenorientierte OLAP-Datenbank - blitzschnelle Analysen auf Milliarden Zeilen, Echtzeit-Aggregationen"
 template: "tool"
 tags: ["database", "analytics", "olap"]
 ---

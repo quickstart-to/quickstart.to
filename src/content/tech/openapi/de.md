@@ -1,6 +1,6 @@
 ---
 title: "OpenAPI"
-description: "Starten Sie mit OpenAPI/Swagger in 5 Minuten"
+description: "REST API Spezifikation - interaktive Docs, Code-Generierung, sprachunabhaengiger Vertrag"
 template: "tool"
 tags: ["api", "documentation", "specification"]
 ---

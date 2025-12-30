@@ -1,6 +1,6 @@
 ---
 title: "cURL"
-description: "Démarrez avec cURL en 5 minutes"
+description: "Transfert de donnees en ligne de commande - tester les APIs, telecharger des fichiers, deboguer HTTP"
 template: "tool"
 tags: ["cli", "http", "networking"]
 ---

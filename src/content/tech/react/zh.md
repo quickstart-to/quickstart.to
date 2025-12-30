@@ -1,6 +1,6 @@
 ---
 title: "React"
-description: "5 分钟快速入门 React 构建用户界面"
+description: "用组件构建交互式 UI - 声明式、高效、灵活的 JavaScript 前端库"
 template: "framework"
 tags: ["frontend", "javascript", "ui"]
 ---

@@ -1,6 +1,6 @@
 ---
 title: "R"
-description: "5 分钟快速入门 R 编程语言"
+description: "统计计算专家 - 数据分析和可视化，ggplot2 和 Tidyverse 生态系统"
 template: "language"
 tags: ["programming", "data-science", "statistics"]
 ---

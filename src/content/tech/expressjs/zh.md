@@ -1,6 +1,6 @@
 ---
 title: "Express.js"
-description: "5 分钟快速入门 Express.js Web 框架"
+description: "Node.js 极简 Web 框架 - 无主见设计，中间件驱动，Node 后端的行业标准"
 template: "framework"
 tags: ["backend", "nodejs", "framework"]
 ---

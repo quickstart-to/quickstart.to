@@ -1,6 +1,6 @@
 ---
 title: "Django"
-description: "5 分钟快速入门 Django Web 框架"
+description: "Python 全能 Web 框架 - ORM、管理后台、认证和安全机制一应俱全，开箱即用"
 template: "framework"
 tags: ["backend", "python", "framework"]
 ---

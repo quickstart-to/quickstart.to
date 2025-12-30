@@ -1,6 +1,6 @@
 ---
 title: "Helm"
-description: "5 分钟快速入门 Helm Kubernetes 包管理器"
+description: "Kubernetes 包管理器 - 用可复用 Charts 和模板定义、安装、升级应用"
 template: "tool"
 tags: ["kubernetes", "devops", "package-manager"]
 ---

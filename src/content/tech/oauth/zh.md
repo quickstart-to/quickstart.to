@@ -1,6 +1,6 @@
 ---
 title: "OAuth 2.0"
-description: "5 分钟快速入门 OAuth 2.0"
+description: "委托授权框架 - 无需共享密码的安全第三方认证"
 template: "tool"
 tags: ["security", "authentication", "authorization"]
 ---

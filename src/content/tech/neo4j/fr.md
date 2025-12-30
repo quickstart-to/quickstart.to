@@ -1,6 +1,6 @@
 ---
 title: "Neo4j"
-description: "Démarrez avec la base de données graphe Neo4j en 5 minutes"
+description: "Base de donnees graphe native - langage Cypher, modelisation relationnelle, traversees rapides"
 template: "tool"
 tags: ["database", "graph", "nosql"]
 ---

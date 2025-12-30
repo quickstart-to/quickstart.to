@@ -1,6 +1,6 @@
 ---
 title: "Deno"
-description: "5 分钟快速入门 Deno"
+description: "安全的 JavaScript/TypeScript 运行时 - 内置 TypeScript、默认安全、现代标准库"
 template: "tool"
 tags: ["javascript", "typescript", "runtime"]
 ---

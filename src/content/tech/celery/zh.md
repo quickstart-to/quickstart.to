@@ -1,6 +1,6 @@
 ---
 title: "Celery"
-description: "5 分钟快速入门 Celery 任务队列"
+description: "Python 分布式任务队列 - 异步执行、定时调度、重试机制、实时处理"
 template: "tool"
 tags: ["python", "queue", "async"]
 ---

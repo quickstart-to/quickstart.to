@@ -1,6 +1,6 @@
 ---
 title: "Nginx"
-description: "Comienza con el servidor web Nginx y reverse proxy"
+description: "Servidor web de alto rendimiento y reverse proxy - balanceo de carga, terminación SSL y servicio de archivos estáticos"
 template: "tool"
 tags: ["web-server", "reverse-proxy", "devops"]
 ---

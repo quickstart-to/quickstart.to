@@ -1,6 +1,6 @@
 ---
 title: "Prometheus"
-description: "5 分钟快速入门 Prometheus 监控"
+description: "基于指标的监控系统 - 拉取模型、PromQL 查询、告警，云原生和 Kubernetes 首选"
 template: "tool"
 tags: ["devops", "monitoring", "observability"]
 ---

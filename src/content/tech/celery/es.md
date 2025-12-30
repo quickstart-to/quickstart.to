@@ -1,6 +1,6 @@
 ---
 title: "Celery"
-description: "Comienza con la cola de tareas Celery en 5 minutos"
+description: "Cola de tareas distribuida Python - ejecucion async, programacion, reintentos, procesamiento en tiempo real"
 template: "tool"
 tags: ["python", "queue", "async"]
 ---

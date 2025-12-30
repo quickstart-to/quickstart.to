@@ -1,6 +1,6 @@
 ---
 title: "JWT"
-description: "5 分钟快速入门 JWT"
+description: "JSON Web Token 无状态认证 - 紧凑、自包含、跨域工作"
 template: "tool"
 tags: ["security", "authentication", "tokens"]
 ---

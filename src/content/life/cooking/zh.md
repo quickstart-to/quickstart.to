@@ -1,6 +1,6 @@
 ---
 title: "基础烹饪"
-description: "5 分钟学会基本烹饪技巧"
+description: "掌握基础烹饪技巧 - 省钱、健康、惊艳餐桌上的每个人"
 template: "life"
 tags: ["cooking", "food"]
 ---

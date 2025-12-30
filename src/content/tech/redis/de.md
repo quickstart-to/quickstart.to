@@ -1,6 +1,6 @@
 ---
 title: "Redis"
-description: "Starten Sie mit Redis In-Memory-Datenspeicher"
+description: "In-Memory-Datenspeicher für Caching, Sessions und Echtzeit-Analytik - blitzschnelle Key-Value-Operationen"
 template: "tool"
 tags: ["database", "cache", "backend"]
 ---

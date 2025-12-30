@@ -1,6 +1,6 @@
 ---
 title: "npm"
-description: "Starten Sie mit dem npm-Paketmanager in 5 Minuten"
+description: "Node.js Standard-Paketmanager - JavaScript-Abhangigkeiten veroffentlichen, installieren und verwalten"
 template: "tool"
 tags: ["nodejs", "package-manager", "javascript"]
 ---

@@ -1,6 +1,6 @@
 ---
 title: "OpenAPI"
-description: "Démarrez avec OpenAPI/Swagger en 5 minutes"
+description: "Specification API REST - docs interactives, generation de code, contrat independant du langage"
 template: "tool"
 tags: ["api", "documentation", "specification"]
 ---

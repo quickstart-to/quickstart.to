@@ -1,6 +1,6 @@
 ---
 title: "TypeORM"
-description: "5 分钟快速入门 TypeORM"
+description: "TypeScript/JavaScript ORM - 装饰器实体、迁移、Active Record 和 Data Mapper"
 template: "tool"
 tags: ["orm", "database", "typescript"]
 ---

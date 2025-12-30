@@ -1,6 +1,6 @@
 ---
 title: "PostgreSQL"
-description: "快速入门 PostgreSQL 关系型数据库"
+description: "强大的开源关系型数据库 - 高级特性、可扩展、完全 SQL 兼容"
 template: "tool"
 tags: ["database", "sql", "backend"]
 ---

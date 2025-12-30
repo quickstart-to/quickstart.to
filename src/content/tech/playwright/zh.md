@@ -1,6 +1,6 @@
 ---
 title: "Playwright"
-description: "5 分钟快速入门 Playwright 测试"
+description: "跨浏览器 E2E 测试 - 自动等待、Trace 查看器，支持 Chromium、Firefox、WebKit"
 template: "tool"
 tags: ["testing", "e2e", "automation"]
 ---

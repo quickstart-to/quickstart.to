@@ -1,6 +1,6 @@
 ---
 title: "Nginx"
-description: "快速入门 Nginx Web 服务器和反向代理"
+description: "高性能 Web 服务器和反向代理 - 负载均衡、SSL 终结和静态文件服务"
 template: "tool"
 tags: ["web-server", "reverse-proxy", "devops"]
 ---

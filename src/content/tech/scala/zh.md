@@ -1,6 +1,6 @@
 ---
 title: "Scala"
-description: "5 分钟快速入门 Scala 编程语言"
+description: "JVM 上的函数式编程 - 驱动 Apache Spark 大数据处理，强类型，兼容 Java"
 template: "language"
 tags: ["programming", "jvm", "functional"]
 ---

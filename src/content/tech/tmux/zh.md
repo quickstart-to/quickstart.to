@@ -1,6 +1,6 @@
 ---
 title: "tmux"
-description: "5 分钟快速入门 tmux 终端复用器"
+description: "终端复用器 - 持久会话、分割窗格、断开重连，远程工作必备"
 template: "tool"
 tags: ["cli", "terminal", "productivity"]
 ---

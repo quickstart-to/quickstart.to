@@ -1,6 +1,6 @@
 ---
 title: "Let's Encrypt"
-description: "Démarrez avec Let's Encrypt en 5 minutes"
+description: "Autorite de certification SSL/TLS gratuite - renouvellement auto, Certbot, HTTPS pour tous"
 template: "tool"
 tags: ["security", "ssl", "certificates"]
 ---

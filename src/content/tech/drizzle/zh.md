@@ -1,6 +1,6 @@
 ---
 title: "Drizzle ORM"
-description: "5 分钟快速入门 Drizzle ORM"
+description: "类 SQL 语法的 TypeScript ORM - 类型安全、零依赖、serverless 就绪"
 template: "tool"
 tags: ["orm", "database", "typescript"]
 ---

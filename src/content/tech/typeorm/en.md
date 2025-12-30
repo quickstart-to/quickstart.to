@@ -1,6 +1,6 @@
 ---
 title: "TypeORM"
-description: "Get started with TypeORM in 5 minutes"
+description: "TypeScript/JavaScript ORM - decorator-based entities, migrations, Active Record and Data Mapper"
 template: "tool"
 tags: ["orm", "database", "typescript"]
 ---

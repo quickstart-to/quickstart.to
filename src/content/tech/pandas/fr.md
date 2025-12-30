@@ -1,6 +1,6 @@
 ---
 title: "Pandas"
-description: "Démarrez avec l'analyse de données Pandas en 5 minutes"
+description: "Bibliotheque Python d'analyse de donnees - DataFrames, nettoyage, agregation, I/O CSV/Excel"
 template: "tool"
 tags: ["python", "data-science", "analysis"]
 ---

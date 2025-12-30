@@ -1,6 +1,6 @@
 ---
 title: "DynamoDB"
-description: "5 分钟快速入门 Amazon DynamoDB"
+description: "AWS 托管 NoSQL 键值数据库 - 无服务器、毫秒延迟、自动扩展"
 template: "tool"
 tags: ["database", "nosql", "aws", "serverless"]
 ---

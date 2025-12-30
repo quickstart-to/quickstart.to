@@ -1,6 +1,6 @@
 ---
 title: "NestJS"
-description: "Get started with NestJS framework in 5 minutes"
+description: "Node.js backend framework with TypeScript - Angular-style architecture, dependency injection, enterprise-ready patterns"
 template: "framework"
 tags: ["backend", "nodejs", "typescript", "framework"]
 ---

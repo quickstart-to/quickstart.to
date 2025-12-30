@@ -1,6 +1,6 @@
 ---
 title: "Jenkins"
-description: "Get started with Jenkins CI/CD in 5 minutes"
+description: "Open-source automation server - build pipelines, extensible plugins, self-hosted CI/CD for any project"
 template: "tool"
 tags: ["ci-cd", "devops", "automation"]
 ---

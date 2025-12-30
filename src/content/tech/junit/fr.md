@@ -1,6 +1,6 @@
 ---
 title: "JUnit"
-description: "Démarrez avec les tests JUnit en 5 minutes"
+description: "Framework de tests unitaires Java - annotations, assertions, gestion du cycle de vie des tests"
 template: "tool"
 tags: ["java", "testing", "automation"]
 ---

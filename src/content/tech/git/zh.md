@@ -1,6 +1,6 @@
 ---
 title: "Git"
-description: "5 分钟学会 Git 版本控制基础"
+description: "追踪代码变更、团队协作、维护项目历史的分布式版本控制系统"
 template: "tool"
 tags: ["version-control", "devops"]
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Redis"
-description: "Démarrez avec le stockage de données en mémoire Redis"
+description: "Stockage de données en mémoire pour cache, sessions et analytics temps réel - opérations clé-valeur ultra-rapides"
 template: "tool"
 tags: ["database", "cache", "backend"]
 ---

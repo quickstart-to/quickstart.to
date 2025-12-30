@@ -1,6 +1,6 @@
 ---
 title: "Docker"
-description: "Get started with Docker containers in 5 minutes"
+description: "Package and run applications in isolated containers - consistent environments from dev to production"
 template: "tool"
 tags: ["containers", "devops"]
 ---

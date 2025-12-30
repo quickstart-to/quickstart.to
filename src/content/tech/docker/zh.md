@@ -1,6 +1,6 @@
 ---
 title: "Docker"
-description: "5 分钟快速入门 Docker 容器"
+description: "在隔离容器中打包运行应用 - 从开发到生产环境始终一致"
 template: "tool"
 tags: ["containers", "devops"]
 ---

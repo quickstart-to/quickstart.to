@@ -1,6 +1,6 @@
 ---
 title: "Rust"
-description: "Get started with Rust programming language in 5 minutes"
+description: "Memory-safe systems programming - zero-cost abstractions with compile-time guarantees, no garbage collector"
 template: "language"
 tags: ["programming", "systems", "performance"]
 ---

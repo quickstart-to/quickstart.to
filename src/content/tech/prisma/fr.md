@@ -1,6 +1,6 @@
 ---
 title: "Prisma"
-description: "Démarrez avec Prisma ORM en 5 minutes"
+description: "ORM TypeScript nouvelle generation - requetes type-safe, migrations, Prisma Studio"
 template: "tool"
 tags: ["orm", "database", "typescript"]
 ---

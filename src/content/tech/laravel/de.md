@@ -1,6 +1,6 @@
 ---
 title: "Laravel"
-description: "Starten Sie mit dem Laravel PHP-Framework in 5 Minuten"
+description: "PHP elegantes Full-Stack-Framework - Eloquent ORM, Blade-Templates, Artisan CLI, alles inklusive fuer Web-Handwerker"
 template: "framework"
 tags: ["backend", "php", "framework"]
 ---

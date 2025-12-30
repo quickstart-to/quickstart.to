@@ -1,6 +1,6 @@
 ---
 title: "PHP"
-description: "Starten Sie mit der PHP-Programmiersprache in 5 Minuten"
+description: "Meistverbreitete Web-Sprache - betreibt WordPress und Laravel mit einfachem Hosting und reifem Okosystem"
 template: "language"
 tags: ["programming", "web", "backend"]
 ---

@@ -1,6 +1,6 @@
 ---
 title: "FastAPI"
-description: "Comienza con el framework FastAPI en 5 minutos"
+description: "Framework API Python moderno - type hints se convierten en docs y validacion, async-nativo, tan rapido como Node/Go"
 template: "framework"
 tags: ["backend", "python", "api", "framework"]
 ---

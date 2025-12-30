@@ -1,6 +1,6 @@
 ---
 title: "jq"
-description: "Comienza con el procesador JSON jq en 5 minutos"
+description: "Procesador JSON de linea de comandos - analizar, filtrar, transformar datos JSON en scripts y pipelines"
 template: "tool"
 tags: ["cli", "json", "data-processing"]
 ---

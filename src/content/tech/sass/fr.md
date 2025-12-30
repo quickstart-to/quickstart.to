@@ -1,6 +1,6 @@
 ---
 title: "Sass"
-description: "Démarrez avec le préprocesseur CSS Sass en 5 minutes"
+description: "Preprocesseur CSS avec super-pouvoirs - variables, imbrication, mixins et fonctions pour des feuilles de style maintenables"
 template: "framework"
 tags: ["css", "frontend", "preprocessor"]
 ---

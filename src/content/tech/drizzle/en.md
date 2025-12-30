@@ -1,6 +1,6 @@
 ---
 title: "Drizzle ORM"
-description: "Get started with Drizzle ORM in 5 minutes"
+description: "TypeScript ORM with SQL-like syntax - type-safe, zero dependencies, serverless ready"
 template: "tool"
 tags: ["orm", "database", "typescript"]
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Hugging Face"
-description: "Get started with Hugging Face Transformers in 5 minutes"
+description: "AI/ML model platform - 100k+ pretrained models, easy fine-tuning, pipeline API"
 template: "tool"
 tags: ["ai", "nlp", "transformers"]
 ---

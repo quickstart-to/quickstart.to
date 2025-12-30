@@ -1,6 +1,6 @@
 ---
 title: "OAuth 2.0"
-description: "Starten Sie mit OAuth 2.0 in 5 Minuten"
+description: "Autorisierungs-Framework fuer delegierten Zugriff - Authorization Code, PKCE, Client Credentials"
 template: "tool"
 tags: ["security", "authentication", "authorization"]
 ---

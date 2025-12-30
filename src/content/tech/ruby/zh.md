@@ -1,6 +1,6 @@
 ---
 title: "Ruby"
-description: "5 分钟快速入门 Ruby 编程语言"
+description: "以开发者幸福感为核心 - Rails 快速 Web 开发，优雅可读的语法"
 template: "language"
 tags: ["programming", "web", "scripting"]
 ---

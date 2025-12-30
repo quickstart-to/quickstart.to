@@ -1,6 +1,6 @@
 ---
 title: "NATS"
-description: "5 分钟快速入门 NATS 消息系统"
+description: "云原生消息系统 - 简单、快速、轻量，支持发布/订阅和流处理"
 template: "tool"
 tags: ["messaging", "cloud-native", "microservices"]
 ---

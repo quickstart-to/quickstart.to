@@ -1,6 +1,6 @@
 ---
 title: "pnpm"
-description: "Starten Sie mit dem pnpm Paketmanager in 5 Minuten"
+description: "Festplatten-effizienter Paketmanager - Hardlinks sparen Platz, strikte Abhangigkeiten, schnelle Monorepo-Unterstutzung"
 template: "tool"
 tags: ["nodejs", "package-manager", "javascript"]
 ---

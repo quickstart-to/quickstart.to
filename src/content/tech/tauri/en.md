@@ -1,6 +1,6 @@
 ---
 title: "Tauri"
-description: "Get started with Tauri in 5 minutes"
+description: "Lightweight desktop apps with web frontend and Rust - smaller than Electron, native performance"
 template: "tool"
 tags: ["desktop", "rust", "cross-platform"]
 ---

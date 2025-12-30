@@ -1,6 +1,6 @@
 ---
 title: "pnpm"
-description: "5 分钟快速入门 pnpm 包管理器"
+description: "节省磁盘空间的包管理器 - 硬链接、严格依赖、快速 monorepo 支持"
 template: "tool"
 tags: ["nodejs", "package-manager", "javascript"]
 ---

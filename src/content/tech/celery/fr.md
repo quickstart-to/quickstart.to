@@ -1,6 +1,6 @@
 ---
 title: "Celery"
-description: "Démarrez avec la file de tâches Celery en 5 minutes"
+description: "File de taches distribuee Python - execution async, planification, reessais, traitement temps reel"
 template: "tool"
 tags: ["python", "queue", "async"]
 ---

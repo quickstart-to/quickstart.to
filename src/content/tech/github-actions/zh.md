@@ -1,6 +1,6 @@
 ---
 title: "GitHub Actions"
-description: "5 分钟快速入门 GitHub Actions CI/CD"
+description: "GitHub 原生 CI/CD - 在 push、PR、定时触发时自动化工作流，公开仓库免费"
 template: "tool"
 tags: ["devops", "ci-cd", "automation"]
 ---

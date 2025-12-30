@@ -1,6 +1,6 @@
 ---
 title: "cURL"
-description: "Starten Sie mit cURL in 5 Minuten"
+description: "Datenubertragung per Kommandozeile - APIs testen, Dateien herunterladen, HTTP-Anfragen debuggen"
 template: "tool"
 tags: ["cli", "http", "networking"]
 ---

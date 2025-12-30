@@ -1,6 +1,6 @@
 ---
 title: "DynamoDB"
-description: "Get started with Amazon DynamoDB in 5 minutes"
+description: "AWS managed NoSQL key-value database - serverless, millisecond latency, auto-scaling"
 template: "tool"
 tags: ["database", "nosql", "aws", "serverless"]
 ---

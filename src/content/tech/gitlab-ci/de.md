@@ -1,6 +1,6 @@
 ---
 title: "GitLab CI"
-description: "Starten Sie mit GitLab CI/CD in 5 Minuten"
+description: "Integriertes GitLab CI/CD - Pipelines, Runner, Auto DevOps, in GitLab-Plattform eingebaut"
 template: "tool"
 tags: ["ci-cd", "devops", "gitlab"]
 ---

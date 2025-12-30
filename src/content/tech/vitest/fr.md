@@ -1,6 +1,6 @@
 ---
 title: "Vitest"
-description: "Démarrez avec les tests Vitest en 5 minutes"
+description: "Tests unitaires ultra-rapides avec Vite - ESM natif, support TypeScript, API compatible Jest"
 template: "tool"
 tags: ["testing", "vite", "javascript"]
 ---

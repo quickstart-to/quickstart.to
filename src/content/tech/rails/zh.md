@@ -1,6 +1,6 @@
 ---
 title: "Ruby on Rails"
-description: "5 分钟快速入门 Ruby on Rails 框架"
+description: "Ruby 全栈框架，约定优于配置 - 秒级脚手架生成，功能一应俱全"
 template: "framework"
 tags: ["backend", "ruby", "framework"]
 ---

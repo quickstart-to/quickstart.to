@@ -1,6 +1,6 @@
 ---
 title: "Scala"
-description: "Comienza con el lenguaje de programación Scala en 5 minutos"
+description: "Programacion funcional en JVM - impulsa Apache Spark para big data con tipado fuerte e interop Java"
 template: "language"
 tags: ["programming", "jvm", "functional"]
 ---

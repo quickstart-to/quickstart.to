@@ -1,6 +1,6 @@
 ---
 title: "NumPy"
-description: "Démarrez avec NumPy en 5 minutes"
+description: "Bibliotheque Python pour calcul scientifique - tableaux rapides, broadcasting, algebre lineaire"
 template: "tool"
 tags: ["python", "scientific-computing", "arrays"]
 ---

@@ -1,6 +1,6 @@
 ---
 title: "PyTorch"
-description: "5 分钟快速入门 PyTorch 深度学习"
+description: "Python 深度学习框架 - 动态计算图、Pythonic API、强大研究社区"
 template: "tool"
 tags: ["ai", "machine-learning", "python"]
 ---

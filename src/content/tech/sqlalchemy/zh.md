@@ -1,6 +1,6 @@
 ---
 title: "SQLAlchemy"
-description: "5 分钟快速入门 SQLAlchemy"
+description: "Python SQL 工具包和 ORM - 灵活、强大、支持原生 SQL 和 ORM"
 template: "tool"
 tags: ["python", "orm", "database"]
 ---

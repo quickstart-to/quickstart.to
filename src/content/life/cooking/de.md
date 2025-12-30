@@ -1,6 +1,6 @@
 ---
 title: "Basic Cooking"
-description: "Lernen Sie grundlegende Kochtechniken in 5 Minuten"
+description: "Wesentliche Kochtechniken beherrschen - Geld sparen, gesünder essen und alle am Esstisch beeindrucken"
 template: "life"
 tags: ["cooking", "food"]
 ---

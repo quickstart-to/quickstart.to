@@ -1,6 +1,6 @@
 ---
 title: "SSH"
-description: "Starten Sie mit SSH für sichere Remote-Verbindungen"
+description: "Sicherer Remote-Server-Zugriff - verschlusselte Verbindungen, schlusselbasierte Authentifizierung, Tunneling"
 template: "tool"
 tags: ["security", "remote", "networking"]
 ---

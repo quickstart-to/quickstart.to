@@ -1,6 +1,6 @@
 ---
 title: "OpenAI API"
-description: "5 分钟快速入门 OpenAI API"
+description: "访问 GPT、DALL-E、Whisper 模型 - 函数调用、嵌入向量、最先进 AI"
 template: "tool"
 tags: ["ai", "api", "gpt"]
 ---

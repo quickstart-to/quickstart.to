@@ -1,6 +1,6 @@
 ---
 title: "Yarn"
-description: "5 分钟快速入门 Yarn 包管理器"
+description: "快速 JavaScript 包管理器 - 工作区、缓存、Plug'n'Play 高效依赖管理"
 template: "tool"
 tags: ["nodejs", "package-manager", "javascript"]
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Flask"
-description: "Démarrez avec le micro framework Flask en 5 minutes"
+description: "Micro framework Python - noyau minimal, architecture flexible, ajoutez seulement ce dont vous avez besoin"
 template: "framework"
 tags: ["backend", "python", "framework"]
 ---

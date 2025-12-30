@@ -1,6 +1,6 @@
 ---
 title: "Vim"
-description: "Démarrez avec les essentiels de l'éditeur de texte Vim"
+description: "Editeur de texte modal pour edition ultra-rapide - workflow clavier uniquement, disponible partout"
 template: "tool"
 tags: ["editor", "terminal", "productivity"]
 ---
