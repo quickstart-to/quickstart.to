@@ -56,7 +56,7 @@ src/content/{category}/{id}/assets/   # Optional images
 ```yaml
 ---
 title: "Docker"
-description: "Get started with Docker containers" # 10-200 chars
+description: "Package and run apps in isolated containers - consistent environments from dev to production" # 10-200 chars
 template: "tool"                                  # Required: tool/language/framework/service/concept/life/aha/collection
 tags: ["containers", "devops"]                    # Optional
 ---
@@ -115,6 +115,21 @@ To add a new template type:
 1. **Plain language** - Clear, concise, and easy to understand; avoid jargon
 2. **Accuracy** - Verify versions, APIs, and commands from official sources
 3. **Value-first** - Focus on core concepts, practical skills, and decision-making
+
+### Description Guidelines
+
+Write feature-oriented descriptions highlighting core capability and value:
+
+**Formula**: `[Core capability] - [Use case/value]`
+
+| Template | Focus | Example |
+|----------|-------|---------|
+| `tool` | What it does | "Package and run apps in isolated containers - consistent environments" |
+| `language` | Core strengths | "Simple, fast, concurrent - build reliable cloud services" |
+| `framework` | Problem solved | "Build interactive UIs with components - declarative, efficient" |
+| `service` | Scope & scale | "Cloud platform - compute, storage, databases, 200+ services" |
+
+**Avoid**: "Get started with X in 5 minutes" (too generic, poor SEO)
 
 ### ⚠️ MANDATORY: Technical Content Accuracy
 
