@@ -1,6 +1,6 @@
 ---
 title: "gRPC"
-description: "Démarrez avec gRPC en 5 minutes"
+description: "Framework RPC haute performance - Protocol Buffers, HTTP/2, streaming, polyglotte"
 template: "tool"
 tags: ["api", "rpc", "protobuf"]
 ---

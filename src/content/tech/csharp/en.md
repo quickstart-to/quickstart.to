@@ -1,6 +1,6 @@
 ---
 title: "C#"
-description: "Get started with C# programming language in 5 minutes"
+description: "Versatile .NET language - web, desktop, games with Unity, and cloud apps with async/await and LINQ"
 template: "language"
 tags: ["programming", "dotnet", "microsoft"]
 ---

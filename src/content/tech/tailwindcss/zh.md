@@ -1,6 +1,6 @@
 ---
 title: "Tailwind CSS"
-description: "5 分钟快速入门 Tailwind CSS"
+description: "原子化 CSS 框架 - 直接在 HTML 中设计，告别样式文件切换"
 template: "framework"
 tags: ["css", "frontend", "styling"]
 ---

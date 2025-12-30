@@ -1,6 +1,6 @@
 ---
 title: "AWS"
-description: "Démarrez avec Amazon Web Services en 5 minutes"
+description: "Plus grande plateforme cloud mondiale - compute, stockage, bases de données, AI/ML et 200+ services derrière Netflix et Airbnb"
 template: "service"
 tags: ["cloud", "devops", "infrastructure"]
 ---

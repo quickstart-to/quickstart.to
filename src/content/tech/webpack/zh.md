@@ -1,6 +1,6 @@
 ---
 title: "Webpack"
-description: "5 分钟快速入门 Webpack 打包工具"
+description: "JavaScript 模块打包器 - 代码分割、加载器、插件构建复杂流水线"
 template: "tool"
 tags: ["bundler", "frontend", "build-tool"]
 ---

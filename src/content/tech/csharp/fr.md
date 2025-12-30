@@ -1,6 +1,6 @@
 ---
 title: "C#"
-description: "Démarrez avec le langage de programmation C# en 5 minutes"
+description: "Langage .NET polyvalent - web, desktop, jeux Unity et apps cloud avec async/await et LINQ"
 template: "language"
 tags: ["programming", "dotnet", "microsoft"]
 ---

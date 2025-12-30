@@ -1,6 +1,6 @@
 ---
 title: "HTMX"
-description: "Démarrez avec HTMX en 5 minutes"
+description: "HTML avec super-pouvoirs - AJAX, transitions CSS, mises a jour DOM via attributs, zero JavaScript requis"
 template: "framework"
 tags: ["frontend", "javascript", "hypermedia"]
 ---

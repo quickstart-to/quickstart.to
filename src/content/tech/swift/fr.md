@@ -1,6 +1,6 @@
 ---
 title: "Swift"
-description: "Démarrez avec le langage de programmation Swift en 5 minutes"
+description: "Langage rapide et sur d'Apple - apps iOS, macOS et serveur avec syntaxe moderne et securite memoire"
 template: "language"
 tags: ["programming", "apple", "ios", "macos"]
 ---

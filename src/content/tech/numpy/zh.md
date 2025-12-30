@@ -1,6 +1,6 @@
 ---
 title: "NumPy"
-description: "5 分钟快速入门 NumPy"
+description: "Python 科学计算基础 - 快速数组、广播、线性代数、数据科学根基"
 template: "tool"
 tags: ["python", "scientific-computing", "arrays"]
 ---

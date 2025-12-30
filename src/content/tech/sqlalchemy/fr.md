@@ -1,6 +1,6 @@
 ---
 title: "SQLAlchemy"
-description: "Démarrez avec SQLAlchemy en 5 minutes"
+description: "Toolkit SQL Python et ORM - requetes flexibles, relations, support async, multi-BDD"
 template: "tool"
 tags: ["python", "orm", "database"]
 ---

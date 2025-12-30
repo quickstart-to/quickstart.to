@@ -1,6 +1,6 @@
 ---
 title: "Rust"
-description: "5 分钟快速入门 Rust 编程语言"
+description: "内存安全的系统编程 - 零成本抽象，编译时保证，无垃圾回收"
 template: "language"
 tags: ["programming", "systems", "performance"]
 ---

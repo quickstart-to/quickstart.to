@@ -1,6 +1,6 @@
 ---
 title: "Hono"
-description: "Démarrez avec le framework web Hono en 5 minutes"
+description: "Framework web ultrarapide sur Web Standards - fonctionne sur Cloudflare Workers, Deno, Bun, Node.js et AWS Lambda"
 template: "framework"
 tags: ["backend", "javascript", "framework", "edge"]
 ---

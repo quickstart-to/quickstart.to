@@ -1,6 +1,6 @@
 ---
 title: "Expo"
-description: "Démarrez avec Expo en 5 minutes"
+description: "Plateforme d'apps React Native - pas de config native, mises a jour OTA, SDK riche"
 template: "tool"
 tags: ["mobile", "react-native", "cross-platform"]
 ---

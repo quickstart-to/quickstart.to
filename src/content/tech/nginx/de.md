@@ -1,6 +1,6 @@
 ---
 title: "Nginx"
-description: "Starten Sie mit dem Nginx-Webserver und Reverse-Proxy"
+description: "Hochleistungs-Webserver und Reverse-Proxy - Load Balancing, SSL-Terminierung und statische Dateibereitstellung"
 template: "tool"
 tags: ["web-server", "reverse-proxy", "devops"]
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Pandas"
-description: "Get started with Pandas data analysis in 5 minutes"
+description: "Python data manipulation library - DataFrames, I/O, cleaning, aggregation, time series"
 template: "tool"
 tags: ["python", "data-science", "analysis"]
 ---

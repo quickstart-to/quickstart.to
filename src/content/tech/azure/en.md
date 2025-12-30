@@ -1,6 +1,6 @@
 ---
 title: "Azure"
-description: "Get started with Microsoft Azure in 5 minutes"
+description: "Microsoft's enterprise cloud - seamless integration with Office 365, Active Directory, and hybrid infrastructure"
 template: "service"
 tags: ["cloud", "devops", "microsoft"]
 ---

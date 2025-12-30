@@ -1,6 +1,6 @@
 ---
 title: "Scikit-learn"
-description: "Démarrez avec Scikit-learn en 5 minutes"
+description: "Bibliotheque ML Python - classification, regression, clustering, preprocessing, pipelines"
 template: "tool"
 tags: ["python", "machine-learning", "data-science"]
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Yarn"
-description: "Comienza con el gestor de paquetes Yarn en 5 minutos"
+description: "Gestor de paquetes JavaScript rapido - workspaces, cache y Plug'n'Play para gestion eficiente de dependencias"
 template: "tool"
 tags: ["nodejs", "package-manager", "javascript"]
 ---

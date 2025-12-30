@@ -1,6 +1,6 @@
 ---
 title: "Zsh"
-description: "Get started with Zsh shell in 5 minutes"
+description: "Extended Bash shell with autocompletion, plugins, and themes - boost your terminal productivity"
 template: "tool"
 tags: ["cli", "shell", "productivity"]
 ---

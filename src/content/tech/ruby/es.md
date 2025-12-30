@@ -1,6 +1,6 @@
 ---
 title: "Ruby"
-description: "Comienza con el lenguaje de programación Ruby en 5 minutos"
+description: "Lenguaje enfocado en la felicidad del desarrollador - desarrollo web rapido con Rails y sintaxis elegante"
 template: "language"
 tags: ["programming", "web", "scripting"]
 ---

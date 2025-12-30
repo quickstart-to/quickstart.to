@@ -1,6 +1,6 @@
 ---
 title: "TensorFlow"
-description: "5 分钟快速入门 TensorFlow"
+description: "谷歌机器学习框架 - 生产就绪、TF Serving、移动部署、大型生态"
 template: "tool"
 tags: ["ai", "machine-learning", "python"]
 ---

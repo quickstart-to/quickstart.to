@@ -1,6 +1,6 @@
 ---
 title: "Svelte"
-description: "5 分钟快速入门 Svelte 框架"
+description: "编译时 UI 框架 - 无虚拟 DOM，精准更新，打包体积最小"
 template: "framework"
 tags: ["frontend", "javascript", "framework"]
 ---

@@ -1,6 +1,6 @@
 ---
 title: "C#"
-description: "5 分钟快速入门 C# 编程语言"
+description: "多功能 .NET 语言 - Web、桌面、Unity 游戏和云应用，async/await 和 LINQ 加持"
 template: "language"
 tags: ["programming", "dotnet", "microsoft"]
 ---

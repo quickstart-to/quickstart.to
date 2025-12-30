@@ -1,6 +1,6 @@
 ---
 title: "VS Code"
-description: "Get started with Visual Studio Code editor in 5 minutes"
+description: "Free extensible code editor - IntelliSense, debugging, Git integration, vast extension marketplace"
 template: "tool"
 tags: ["editor", "ide", "development"]
 ---

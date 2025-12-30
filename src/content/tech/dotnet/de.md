@@ -1,6 +1,6 @@
 ---
 title: ".NET"
-description: "Starten Sie mit der .NET-Plattform in 5 Minuten"
+description: "Plattformubergreifende Entwicklungsplattform - modernes C#, hohe Leistung, Enterprise-ready"
 template: "tool"
 tags: ["backend", "csharp", "framework"]
 ---

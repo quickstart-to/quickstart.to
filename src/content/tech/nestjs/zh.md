@@ -1,6 +1,6 @@
 ---
 title: "NestJS"
-description: "5 分钟快速入门 NestJS 框架"
+description: "Node.js TypeScript 后端框架 - Angular 风格架构，依赖注入，企业级模式开箱即用"
 template: "framework"
 tags: ["backend", "nodejs", "typescript", "framework"]
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Pandas"
-description: "5 分钟快速入门 Pandas 数据分析"
+description: "Python 数据操作库 - DataFrame、I/O、数据清洗、聚合、时间序列"
 template: "tool"
 tags: ["python", "data-science", "analysis"]
 ---

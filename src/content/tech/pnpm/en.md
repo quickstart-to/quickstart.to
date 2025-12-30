@@ -1,6 +1,6 @@
 ---
 title: "pnpm"
-description: "Get started with pnpm package manager in 5 minutes"
+description: "Disk-efficient package manager - hard links save space, strict dependencies, fast monorepo support"
 template: "tool"
 tags: ["nodejs", "package-manager", "javascript"]
 ---

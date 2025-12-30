@@ -1,6 +1,6 @@
 ---
 title: "Docker"
-description: "Démarrez avec les conteneurs Docker en 5 minutes"
+description: "Empaquetez et exécutez des applications dans des conteneurs isolés - environnements cohérents du développement à la production"
 template: "tool"
 tags: ["containers", "devops"]
 ---

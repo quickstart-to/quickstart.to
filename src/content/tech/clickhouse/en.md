@@ -1,6 +1,6 @@
 ---
 title: "ClickHouse"
-description: "Get started with ClickHouse in 5 minutes"
+description: "Column-oriented OLAP database - blazing fast analytics on billions of rows, real-time aggregations"
 template: "tool"
 tags: ["database", "analytics", "olap"]
 ---

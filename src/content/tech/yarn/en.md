@@ -1,6 +1,6 @@
 ---
 title: "Yarn"
-description: "Get started with Yarn package manager in 5 minutes"
+description: "Fast JavaScript package manager - workspaces, caching, and Plug'n'Play for efficient dependency management"
 template: "tool"
 tags: ["nodejs", "package-manager", "javascript"]
 ---

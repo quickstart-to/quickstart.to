@@ -1,6 +1,6 @@
 ---
 title: "npm"
-description: "Get started with npm package manager in 5 minutes"
+description: "Node.js default package manager - publish, install, and manage JavaScript dependencies with largest registry"
 template: "tool"
 tags: ["nodejs", "package-manager", "javascript"]
 ---

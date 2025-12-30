@@ -1,6 +1,6 @@
 ---
 title: "Nuxt"
-description: "5 分钟快速入门 Nuxt 框架"
+description: "Vue 全栈框架，自动导入 - 基于文件的路由，通用渲染，200+ 模块开箱即用"
 template: "framework"
 tags: ["frontend", "vue", "fullstack"]
 ---

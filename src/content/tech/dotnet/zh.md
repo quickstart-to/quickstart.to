@@ -1,6 +1,6 @@
 ---
 title: ".NET"
-description: "5 分钟快速入门 .NET 平台"
+description: "跨平台开发平台 - 现代 C#、高性能、企业级开发框架"
 template: "tool"
 tags: ["backend", "csharp", "framework"]
 ---

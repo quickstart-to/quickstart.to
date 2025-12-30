@@ -1,6 +1,6 @@
 ---
 title: "GraphQL"
-description: "Get started with GraphQL API development in 5 minutes"
+description: "Query language for APIs - request exactly what you need, get predictable results from a single endpoint"
 template: "tool"
 tags: ["api", "query-language", "facebook"]
 ---

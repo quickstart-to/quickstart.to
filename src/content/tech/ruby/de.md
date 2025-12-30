@@ -1,6 +1,6 @@
 ---
 title: "Ruby"
-description: "Starten Sie mit der Programmiersprache Ruby in 5 Minuten"
+description: "Auf Entwicklerzufriedenheit fokussiert - schnelle Webentwicklung mit Rails und elegante, lesbare Syntax"
 template: "language"
 tags: ["programming", "web", "scripting"]
 ---

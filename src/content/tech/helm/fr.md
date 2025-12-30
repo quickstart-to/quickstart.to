@@ -1,6 +1,6 @@
 ---
 title: "Helm"
-description: "Démarrez avec le gestionnaire de paquets Helm pour Kubernetes en 5 minutes"
+description: "Gestionnaire de paquets Kubernetes - definir, installer, mettre a jour des apps avec Charts reutilisables"
 template: "tool"
 tags: ["kubernetes", "devops", "package-manager"]
 ---

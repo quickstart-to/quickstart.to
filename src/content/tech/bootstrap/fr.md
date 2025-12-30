@@ -1,6 +1,6 @@
 ---
 title: "Bootstrap"
-description: "Démarrez avec le framework CSS Bootstrap en 5 minutes"
+description: "Framework CSS le plus populaire au monde - grille responsive, composants pre-construits et plugins JS prets a l'emploi"
 template: "framework"
 tags: ["css", "frontend", "framework"]
 ---

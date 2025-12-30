@@ -1,6 +1,6 @@
 ---
 title: "Vite"
-description: "5 分钟快速入门 Vite 构建工具"
+description: "闪电般快速的前端构建工具 - 即时开发服务器、原生 ESM、优化的生产构建"
 template: "tool"
 tags: ["bundler", "frontend", "build-tool"]
 ---

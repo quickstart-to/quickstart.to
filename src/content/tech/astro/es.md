@@ -1,6 +1,6 @@
 ---
 title: "Astro"
-description: "Comienza con el framework web Astro en 5 minutos"
+description: "Framework web enfocado en contenido - cero JS por defecto, arquitectura de islas, React/Vue/Svelte juntos"
 template: "framework"
 tags: ["frontend", "static-site", "framework"]
 ---

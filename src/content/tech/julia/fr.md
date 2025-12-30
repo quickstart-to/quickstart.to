@@ -1,6 +1,6 @@
 ---
 title: "Julia"
-description: "Démarrez avec le langage de programmation Julia en 5 minutes"
+description: "Calcul scientifique haute performance - facilite de Python avec vitesse de C pour analyse numerique et IA"
 template: "language"
 tags: ["programming", "scientific", "high-performance"]
 ---

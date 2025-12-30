@@ -1,6 +1,6 @@
 ---
 title: "JWT"
-description: "Starten Sie mit JWT in 5 Minuten"
+description: "JSON Web Token fuer Authentifizierung - kompakt, zustandslos, selbstenthaltend, domainuebergreifend"
 template: "tool"
 tags: ["security", "authentication", "tokens"]
 ---

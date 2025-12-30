@@ -1,6 +1,6 @@
 ---
 title: "Prisma"
-description: "Get started with Prisma ORM in 5 minutes"
+description: "Next-gen TypeScript ORM - type-safe queries, auto-generated client, visual DB browser, migrations"
 template: "tool"
 tags: ["orm", "database", "typescript"]
 ---

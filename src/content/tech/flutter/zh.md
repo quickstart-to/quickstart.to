@@ -1,6 +1,6 @@
 ---
 title: "Flutter"
-description: "5 分钟快速入门 Flutter 移动开发"
+description: "Google 跨平台 UI 工具包 - 单一代码库、热重载、原生性能"
 template: "tool"
 tags: ["mobile", "dart", "cross-platform"]
 ---

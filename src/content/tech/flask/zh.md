@@ -1,6 +1,6 @@
 ---
 title: "Flask"
-description: "5 分钟快速入门 Flask 微框架"
+description: "Python 微框架 - 核心极简，架构灵活，按需添加功能"
 template: "framework"
 tags: ["backend", "python", "framework"]
 ---

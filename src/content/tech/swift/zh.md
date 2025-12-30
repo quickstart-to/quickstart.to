@@ -1,6 +1,6 @@
 ---
 title: "Swift"
-description: "5 分钟快速入门 Swift 编程语言"
+description: "Apple 快速安全的语言 - 构建 iOS、macOS 和服务端应用，现代语法，内存安全"
 template: "language"
 tags: ["programming", "apple", "ios", "macos"]
 ---

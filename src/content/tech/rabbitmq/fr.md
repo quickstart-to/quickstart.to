@@ -1,6 +1,6 @@
 ---
 title: "RabbitMQ"
-description: "Démarrez avec la messagerie RabbitMQ en 5 minutes"
+description: "Message broker avec routage flexible - queues, exchanges, protocole AMQP pour messagerie async fiable"
 template: "tool"
 tags: ["messaging", "queue", "amqp"]
 ---

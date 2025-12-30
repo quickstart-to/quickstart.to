@@ -1,6 +1,6 @@
 ---
 title: "JUnit"
-description: "5 分钟快速入门 JUnit 测试"
+description: "Java 单元测试框架 - 注解、断言、测试生命周期管理，企业级应用必备"
 template: "tool"
 tags: ["java", "testing", "automation"]
 ---

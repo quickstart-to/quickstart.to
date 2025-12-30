@@ -1,6 +1,6 @@
 ---
 title: "SQLite"
-description: "Starten Sie mit der SQLite-Datenbank in 5 Minuten"
+description: "Serverlose eingebettete SQL-Datenbank - Zero-Config, einzelne Datei, ideal fur Mobile Apps und Prototypen"
 template: "tool"
 tags: ["database", "sql", "embedded"]
 ---

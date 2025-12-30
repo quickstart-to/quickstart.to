@@ -1,6 +1,6 @@
 ---
 title: "npm"
-description: "Comienza con el gestor de paquetes npm en 5 minutos"
+description: "Gestor de paquetes predeterminado de Node.js - publicar, instalar y gestionar dependencias JavaScript"
 template: "tool"
 tags: ["nodejs", "package-manager", "javascript"]
 ---

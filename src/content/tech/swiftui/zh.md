@@ -1,6 +1,6 @@
 ---
 title: "SwiftUI"
-description: "5 分钟快速入门 SwiftUI"
+description: "Apple 声明式 UI 框架 - 跨平台（iOS/macOS/watchOS/tvOS）、实时预览"
 template: "tool"
 tags: ["ios", "macos", "apple"]
 ---

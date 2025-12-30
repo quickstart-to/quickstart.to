@@ -1,6 +1,6 @@
 ---
 title: "R"
-description: "Get started with R programming language in 5 minutes"
+description: "Statistical computing specialist - data analysis and visualization with ggplot2 and Tidyverse ecosystem"
 template: "language"
 tags: ["programming", "data-science", "statistics"]
 ---

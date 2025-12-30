@@ -1,6 +1,6 @@
 ---
 title: "Astro"
-description: "Get started with Astro web framework in 5 minutes"
+description: "Content-focused web framework - zero JS by default, islands architecture, use React/Vue/Svelte together"
 template: "framework"
 tags: ["frontend", "static-site", "framework"]
 ---

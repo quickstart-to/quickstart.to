@@ -1,6 +1,6 @@
 ---
 title: "Vue.js"
-description: "5 分钟快速入门 Vue.js 框架"
+description: "渐进式 JavaScript 框架 - 响应式数据驱动，从简单组件到复杂单页应用自如扩展"
 template: "framework"
 tags: ["frontend", "javascript", "framework"]
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Nginx"
-description: "Get started with Nginx web server and reverse proxy"
+description: "High-performance web server and reverse proxy - load balancing, SSL termination, and static file serving"
 template: "tool"
 tags: ["web-server", "reverse-proxy", "devops"]
 ---

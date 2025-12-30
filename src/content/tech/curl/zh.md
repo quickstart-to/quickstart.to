@@ -1,6 +1,6 @@
 ---
 title: "cURL"
-description: "5 分钟快速入门 cURL"
+description: "命令行数据传输工具 - 测试 API、下载文件、调试 HTTP 请求"
 template: "tool"
 tags: ["cli", "http", "networking"]
 ---

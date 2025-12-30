@@ -1,6 +1,6 @@
 ---
 title: "TypeScript"
-description: "Get started with TypeScript in 5 minutes"
+description: "JavaScript with types - catch errors at compile time, better tooling and IDE support"
 template: "language"
 tags: ["javascript", "types", "programming"]
 ---

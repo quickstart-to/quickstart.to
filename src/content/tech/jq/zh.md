@@ -1,6 +1,6 @@
 ---
 title: "jq"
-description: "5 分钟快速入门 jq JSON 处理器"
+description: "命令行 JSON 处理器 - 在脚本和管道中解析、过滤、转换 JSON 数据"
 template: "tool"
 tags: ["cli", "json", "data-processing"]
 ---

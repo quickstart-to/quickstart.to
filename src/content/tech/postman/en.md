@@ -1,6 +1,6 @@
 ---
 title: "Postman"
-description: "Get started with Postman API testing in 5 minutes"
+description: "API development platform - visual testing, collections, environments, automated testing"
 template: "tool"
 tags: ["api", "testing", "development"]
 ---

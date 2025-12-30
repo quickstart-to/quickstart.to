@@ -1,6 +1,6 @@
 ---
 title: "Laravel"
-description: "5 分钟快速入门 Laravel PHP 框架"
+description: "PHP 优雅全栈框架 - Eloquent ORM、Blade 模板、Artisan CLI，为 Web 工匠准备的全套工具"
 template: "framework"
 tags: ["backend", "php", "framework"]
 ---

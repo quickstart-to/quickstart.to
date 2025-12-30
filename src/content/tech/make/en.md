@@ -1,6 +1,6 @@
 ---
 title: "Make"
-description: "Get started with Make build tool in 5 minutes"
+description: "Build automation with Makefiles - define tasks, track dependencies, run parallel builds"
 template: "tool"
 tags: ["build", "automation", "cli"]
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Gin"
-description: "5 分钟快速入门 Gin Web 框架"
+description: "Go 最快的 Web 框架 - 基于 httprouter，近零内存分配，完美适合高吞吐 API"
 template: "framework"
 tags: ["backend", "go", "framework"]
 ---

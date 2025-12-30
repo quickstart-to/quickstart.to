@@ -1,6 +1,6 @@
 ---
 title: "tmux"
-description: "Get started with tmux terminal multiplexer in 5 minutes"
+description: "Terminal multiplexer for persistent sessions - split panes, detach/attach, essential for remote work"
 template: "tool"
 tags: ["cli", "terminal", "productivity"]
 ---

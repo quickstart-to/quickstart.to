@@ -1,6 +1,6 @@
 ---
 title: "GraphQL"
-description: "Démarrez avec le développement d'API GraphQL en 5 minutes"
+description: "Langage de requête pour APIs - demandez exactement ce dont vous avez besoin, résultats prévisibles depuis un seul endpoint"
 template: "tool"
 tags: ["api", "query-language", "facebook"]
 ---

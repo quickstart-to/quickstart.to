@@ -1,6 +1,6 @@
 ---
 title: "Node.js"
-description: "Get started with Node.js runtime in 5 minutes"
+description: "JavaScript runtime for server-side development - build scalable network applications with non-blocking I/O"
 template: "tool"
 tags: ["javascript", "runtime", "backend"]
 ---

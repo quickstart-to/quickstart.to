@@ -1,6 +1,6 @@
 ---
 title: "Express.js"
-description: "Starten Sie mit dem Express.js Web-Framework in 5 Minuten"
+description: "Node.js minimales Web-Framework - unopinioniert, middleware-basiert, der Industriestandard fuer Node-Backends"
 template: "framework"
 tags: ["backend", "nodejs", "framework"]
 ---

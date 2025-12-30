@@ -1,6 +1,6 @@
 ---
 title: "Swift"
-description: "Comienza con el lenguaje de programación Swift en 5 minutos"
+description: "Lenguaje rapido y seguro de Apple - apps iOS, macOS y servidor con sintaxis moderna y seguridad de memoria"
 template: "language"
 tags: ["programming", "apple", "ios", "macos"]
 ---

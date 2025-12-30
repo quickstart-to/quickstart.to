@@ -1,6 +1,6 @@
 ---
 title: "SwiftUI"
-description: "Get started with SwiftUI in 5 minutes"
+description: "Apple declarative UI framework - cross-platform (iOS/macOS/watchOS/tvOS), live previews"
 template: "tool"
 tags: ["ios", "macos", "apple"]
 ---

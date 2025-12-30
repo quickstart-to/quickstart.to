@@ -1,6 +1,6 @@
 ---
 title: "Jest"
-description: "Get started with Jest testing framework in 5 minutes"
+description: "JavaScript testing framework - zero config, snapshots, mocking, and code coverage out of the box"
 template: "tool"
 tags: ["testing", "javascript", "frontend"]
 ---

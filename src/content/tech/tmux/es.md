@@ -1,6 +1,6 @@
 ---
 title: "tmux"
-description: "Comienza con el multiplexor de terminal tmux en 5 minutos"
+description: "Multiplexor de terminal para sesiones persistentes - dividir paneles, desconectar/reconectar, esencial para trabajo remoto"
 template: "tool"
 tags: ["cli", "terminal", "productivity"]
 ---

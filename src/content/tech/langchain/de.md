@@ -1,6 +1,6 @@
 ---
 title: "LangChain"
-description: "Starten Sie mit LangChain in 5 Minuten"
+description: "LLM-Anwendungs-Framework - Chains verketten, RAG, Agenten, Speicherverwaltung"
 template: "tool"
 tags: ["ai", "llm", "python"]
 ---

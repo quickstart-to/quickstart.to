@@ -1,6 +1,6 @@
 ---
 title: "R"
-description: "Démarrez avec le langage de programmation R en 5 minutes"
+description: "Specialiste du calcul statistique - analyse de donnees et visualisation avec ggplot2 et ecosysteme Tidyverse"
 template: "language"
 tags: ["programming", "data-science", "statistics"]
 ---

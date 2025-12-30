@@ -1,6 +1,6 @@
 ---
 title: "Postman"
-description: "5 分钟快速入门 Postman API 测试"
+description: "API 开发平台 - 可视化测试、集合管理、环境变量、自动化测试"
 template: "tool"
 tags: ["api", "testing", "development"]
 ---

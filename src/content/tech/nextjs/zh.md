@@ -1,6 +1,6 @@
 ---
 title: "Next.js"
-description: "5 分钟快速入门 Next.js 框架"
+description: "React 生产级全栈框架 - Server Components，基于文件的路由，默认高性能"
 template: "framework"
 tags: ["frontend", "react", "fullstack"]
 ---

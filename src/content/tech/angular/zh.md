@@ -1,6 +1,6 @@
 ---
 title: "Angular"
-description: "5 分钟快速入门 Angular 框架"
+description: "Google 企业级 TypeScript 框架 - 路由、表单、HTTP、测试全内置，观点明确"
 template: "framework"
 tags: ["frontend", "typescript", "framework"]
 ---

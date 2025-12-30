@@ -1,6 +1,6 @@
 ---
 title: "Terraform"
-description: "5 分钟快速入门 Terraform 基础设施即代码"
+description: "基础设施即代码 - 声明式配置 AWS、Azure、GCP 云资源，带状态管理"
 template: "tool"
 tags: ["devops", "infrastructure", "iac"]
 ---

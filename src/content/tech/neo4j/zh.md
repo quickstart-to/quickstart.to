@@ -1,6 +1,6 @@
 ---
 title: "Neo4j"
-description: "5 分钟快速入门 Neo4j 图数据库"
+description: "原生图数据库 - 关系优先建模、强大遍历能力、Cypher 查询语言"
 template: "tool"
 tags: ["database", "graph", "nosql"]
 ---

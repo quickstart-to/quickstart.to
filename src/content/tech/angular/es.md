@@ -1,6 +1,6 @@
 ---
 title: "Angular"
-description: "Comienza con el framework Angular en 5 minutos"
+description: "Framework TypeScript empresarial de Google - routing, formularios, HTTP, testing integrados, opiniones fuertes incluidas"
 template: "framework"
 tags: ["frontend", "typescript", "framework"]
 ---

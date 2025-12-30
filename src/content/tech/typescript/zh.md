@@ -1,6 +1,6 @@
 ---
 title: "TypeScript"
-description: "5 分钟快速入门 TypeScript"
+description: "带类型的 JavaScript - 编译时捕获错误，更好的工具链和 IDE 支持"
 template: "language"
 tags: ["javascript", "types", "programming"]
 ---

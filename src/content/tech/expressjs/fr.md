@@ -1,6 +1,6 @@
 ---
 title: "Express.js"
-description: "Démarrez avec le framework web Express.js en 5 minutes"
+description: "Framework web Node.js minimal - sans opinion, base sur middleware, le standard de l'industrie pour backends Node"
 template: "framework"
 tags: ["backend", "nodejs", "framework"]
 ---

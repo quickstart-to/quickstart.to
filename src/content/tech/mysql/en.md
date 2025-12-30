@@ -1,6 +1,6 @@
 ---
 title: "MySQL"
-description: "Get started with MySQL database in 5 minutes"
+description: "Popular open-source relational database - ACID transactions, replication, widely supported"
 template: "tool"
 tags: ["database", "sql", "relational"]
 ---

@@ -1,6 +1,6 @@
 ---
 title: "jq"
-description: "Get started with jq JSON processor in 5 minutes"
+description: "Command-line JSON processor - parse, filter, transform JSON data in shell scripts and pipelines"
 template: "tool"
 tags: ["cli", "json", "data-processing"]
 ---

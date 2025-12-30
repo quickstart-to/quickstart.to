@@ -1,6 +1,6 @@
 ---
 title: "Tauri"
-description: "5 分钟快速入门 Tauri"
+description: "用 Web 前端和 Rust 构建轻量桌面应用 - 比 Electron 更小、原生性能"
 template: "tool"
 tags: ["desktop", "rust", "cross-platform"]
 ---

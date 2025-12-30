@@ -1,6 +1,6 @@
 ---
 title: "Spring Boot"
-description: "Comienza con el framework Spring Boot en 5 minutos"
+description: "Framework Java empresarial con auto-configuracion - servidores embebidos, cero XML, listo para produccion desde el dia uno"
 template: "framework"
 tags: ["backend", "java", "framework"]
 ---

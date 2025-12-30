@@ -1,6 +1,6 @@
 ---
 title: "Sass"
-description: "Get started with Sass CSS preprocessor in 5 minutes"
+description: "CSS preprocessor with superpowers - variables, nesting, mixins, and functions for maintainable stylesheets"
 template: "framework"
 tags: ["css", "frontend", "preprocessor"]
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Flutter"
-description: "Get started with Flutter mobile development in 5 minutes"
+description: "Google UI toolkit for cross-platform apps - single codebase, hot reload, native performance"
 template: "tool"
 tags: ["mobile", "dart", "cross-platform"]
 ---

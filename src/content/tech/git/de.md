@@ -1,6 +1,6 @@
 ---
 title: "Git"
-description: "Lernen Sie die Grundlagen der Git-Versionskontrolle in 5 Minuten"
+description: "Codeänderungen verfolgen, mit Teams zusammenarbeiten und Projekthistorie mit verteilter Versionskontrolle pflegen"
 template: "tool"
 tags: ["version-control", "devops"]
 ---

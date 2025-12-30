@@ -1,6 +1,6 @@
 ---
 title: "PyTorch"
-description: "Démarrez avec le deep learning PyTorch en 5 minutes"
+description: "Framework de deep learning - graphes dynamiques, acceleration GPU, torchvision, pret pour production"
 template: "tool"
 tags: ["ai", "machine-learning", "python"]
 ---

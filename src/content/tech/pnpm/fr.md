@@ -1,6 +1,6 @@
 ---
 title: "pnpm"
-description: "Démarrez avec le gestionnaire de paquets pnpm en 5 minutes"
+description: "Gestionnaire de paquets economique en espace disque - liens durs, dependances strictes, support monorepo rapide"
 template: "tool"
 tags: ["nodejs", "package-manager", "javascript"]
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Webpack"
-description: "Démarrez avec le bundler Webpack en 5 minutes"
+description: "Bundler de modules JavaScript - code splitting, loaders, plugins pour pipelines de build complexes"
 template: "tool"
 tags: ["bundler", "frontend", "build-tool"]
 ---

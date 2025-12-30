@@ -1,6 +1,6 @@
 ---
 title: "Zsh"
-description: "5 分钟快速入门 Zsh shell"
+description: "增强版 Bash shell - 自动补全、插件、主题，提升终端效率"
 template: "tool"
 tags: ["cli", "shell", "productivity"]
 ---

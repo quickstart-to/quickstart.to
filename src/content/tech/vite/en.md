@@ -1,6 +1,6 @@
 ---
 title: "Vite"
-description: "Get started with Vite build tool in 5 minutes"
+description: "Lightning-fast frontend build tool - instant dev server, optimized production builds with native ESM"
 template: "tool"
 tags: ["bundler", "frontend", "build-tool"]
 ---

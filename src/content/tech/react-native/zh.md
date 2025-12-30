@@ -1,6 +1,6 @@
 ---
 title: "React Native"
-description: "5 分钟快速入门 React Native"
+description: "用 React 构建原生移动应用 - 代码共享、热重载、原生性能"
 template: "tool"
 tags: ["mobile", "react", "cross-platform"]
 ---

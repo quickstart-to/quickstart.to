@@ -1,6 +1,6 @@
 ---
 title: "NATS"
-description: "Comienza con mensajería NATS en 5 minutos"
+description: "Sistema de mensajeria cloud-native - pub/sub, request/reply, persistencia JetStream, ligero"
 template: "tool"
 tags: ["messaging", "cloud-native", "microservices"]
 ---

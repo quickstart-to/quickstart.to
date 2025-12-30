@@ -1,6 +1,6 @@
 ---
 title: "Apache Cassandra"
-description: "Comienza con Apache Cassandra en 5 minutos"
+description: "Base de datos NoSQL distribuida - escalabilidad lineal, sin punto unico de fallo, volumenes masivos de datos"
 template: "tool"
 tags: ["database", "nosql", "distributed"]
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Let's Encrypt"
-description: "Get started with Let's Encrypt in 5 minutes"
+description: "Free SSL/TLS certificate authority - automated renewal, widely trusted, easy setup"
 template: "tool"
 tags: ["security", "ssl", "certificates"]
 ---

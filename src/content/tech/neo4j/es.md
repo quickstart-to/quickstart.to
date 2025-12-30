@@ -1,6 +1,6 @@
 ---
 title: "Neo4j"
-description: "Comienza con la base de datos de grafos Neo4j en 5 minutos"
+description: "Base de datos de grafos nativa - lenguaje Cypher, modelado relacional, recorridos rapidos"
 template: "tool"
 tags: ["database", "graph", "nosql"]
 ---

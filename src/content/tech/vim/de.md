@@ -1,6 +1,6 @@
 ---
 title: "Vim"
-description: "Starten Sie mit dem Vim-Texteditor Grundlagen"
+description: "Modaler Texteditor fur blitzschnelles Bearbeiten - reiner Tastatur-Workflow auf jedem Server"
 template: "tool"
 tags: ["editor", "terminal", "productivity"]
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Git"
-description: "Aprende los fundamentos de control de versiones Git en 5 minutos"
+description: "Rastrea cambios en el código, colabora en equipo y mantén el historial del proyecto con control de versiones distribuido"
 template: "tool"
 tags: ["version-control", "devops"]
 ---

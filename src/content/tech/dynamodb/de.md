@@ -1,6 +1,6 @@
 ---
 title: "DynamoDB"
-description: "Starten Sie mit Amazon DynamoDB in 5 Minuten"
+description: "AWS verwaltete NoSQL Key-Value-Datenbank - serverless, Millisekunden-Latenz, Auto-Scaling"
 template: "tool"
 tags: ["database", "nosql", "aws", "serverless"]
 ---

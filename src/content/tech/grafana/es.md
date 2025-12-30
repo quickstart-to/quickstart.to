@@ -1,6 +1,6 @@
 ---
 title: "Grafana"
-description: "Comienza con dashboards de Grafana en 5 minutos"
+description: "Dashboards de observabilidad - visualizar metricas de Prometheus, Loki y 50+ fuentes con alertas"
 template: "tool"
 tags: ["devops", "monitoring", "visualization"]
 ---

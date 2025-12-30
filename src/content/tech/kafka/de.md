@@ -1,6 +1,6 @@
 ---
 title: "Apache Kafka"
-description: "Starten Sie mit Apache Kafka Messaging in 5 Minuten"
+description: "Verteilte Event-Streaming-Plattform - High-Throughput Pub/Sub, dauerhafte Logs, Echtzeit-Datenpipelines"
 template: "tool"
 tags: ["messaging", "streaming", "distributed"]
 ---

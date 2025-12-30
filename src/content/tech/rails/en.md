@@ -1,6 +1,6 @@
 ---
 title: "Ruby on Rails"
-description: "Get started with Ruby on Rails framework in 5 minutes"
+description: "Ruby full-stack framework with convention over configuration - scaffold features in seconds, batteries included"
 template: "framework"
 tags: ["backend", "ruby", "framework"]
 ---

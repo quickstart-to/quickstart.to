@@ -1,6 +1,6 @@
 ---
 title: "Gin"
-description: "Get started with Gin web framework in 5 minutes"
+description: "Go's fastest web framework - httprouter-based, near-zero allocation, perfect for high-throughput APIs"
 template: "framework"
 tags: ["backend", "go", "framework"]
 ---

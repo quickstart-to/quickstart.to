@@ -1,6 +1,6 @@
 ---
 title: ".NET"
-description: "Démarrez avec la plateforme .NET en 5 minutes"
+description: "Plateforme de developpement multiplateforme - C# moderne, haute performance, pret pour l'entreprise"
 template: "tool"
 tags: ["backend", "csharp", "framework"]
 ---

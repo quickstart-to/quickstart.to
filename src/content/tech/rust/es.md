@@ -1,6 +1,6 @@
 ---
 title: "Rust"
-description: "Comienza con el lenguaje de programación Rust en 5 minutos"
+description: "Programación de sistemas memory-safe - abstracciones de costo cero con garantías en compilación, sin garbage collector"
 template: "language"
 tags: ["programming", "systems", "performance"]
 ---

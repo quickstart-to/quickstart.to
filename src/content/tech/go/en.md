@@ -1,6 +1,6 @@
 ---
 title: "Go"
-description: "Get started with Go programming language in 5 minutes"
+description: "Simple, fast, concurrent - build reliable cloud services and CLI tools with Go"
 template: "language"
 tags: ["programming", "backend", "systems"]
 ---

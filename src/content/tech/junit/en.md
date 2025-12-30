@@ -1,6 +1,6 @@
 ---
 title: "JUnit"
-description: "Get started with JUnit testing in 5 minutes"
+description: "Java unit testing framework - annotations, assertions, test lifecycle management for enterprise apps"
 template: "tool"
 tags: ["java", "testing", "automation"]
 ---

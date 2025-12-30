@@ -1,6 +1,6 @@
 ---
 title: "Make"
-description: "5 分钟快速入门 Make 构建工具"
+description: "Makefile 构建自动化 - 定义任务、追踪依赖、并行执行"
 template: "tool"
 tags: ["build", "automation", "cli"]
 ---

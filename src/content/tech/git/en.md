@@ -1,6 +1,6 @@
 ---
 title: "Git"
-description: "Learn Git version control basics in 5 minutes"
+description: "Track code changes, collaborate with teams, and maintain project history with distributed version control"
 template: "tool"
 tags: ["version-control", "devops"]
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Ruby"
-description: "Get started with Ruby programming language in 5 minutes"
+description: "Developer happiness-focused language - rapid web development with Rails and elegant, readable syntax"
 template: "language"
 tags: ["programming", "web", "scripting"]
 ---

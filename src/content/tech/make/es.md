@@ -1,6 +1,6 @@
 ---
 title: "Make"
-description: "Comienza con la herramienta de construcción Make en 5 minutos"
+description: "Automatizacion de construccion con Makefiles - definir tareas, rastrear dependencias, builds paralelos"
 template: "tool"
 tags: ["build", "automation", "cli"]
 ---

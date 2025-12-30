@@ -1,6 +1,6 @@
 ---
 title: "ArgoCD"
-description: "5 分钟快速入门 ArgoCD GitOps"
+description: "Kubernetes GitOps 持续交付 - 从 Git 同步应用、自动恢复、声明式部署"
 template: "tool"
 tags: ["kubernetes", "gitops", "devops"]
 ---

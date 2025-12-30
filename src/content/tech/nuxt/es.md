@@ -1,6 +1,6 @@
 ---
 title: "Nuxt"
-description: "Comienza con el framework Nuxt en 5 minutos"
+description: "Framework Vue full-stack con auto-imports - enrutamiento basado en archivos, renderizado universal, 200+ modulos listos para usar"
 template: "framework"
 tags: ["frontend", "vue", "fullstack"]
 ---

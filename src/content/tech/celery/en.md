@@ -1,6 +1,6 @@
 ---
 title: "Celery"
-description: "Get started with Celery task queue in 5 minutes"
+description: "Python distributed task queue - async execution, scheduling, retries, real-time processing"
 template: "tool"
 tags: ["python", "queue", "async"]
 ---

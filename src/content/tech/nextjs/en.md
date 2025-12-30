@@ -1,6 +1,6 @@
 ---
 title: "Next.js"
-description: "Get started with Next.js framework in 5 minutes"
+description: "React full-stack framework for production - Server Components, file-based routing, fast by default"
 template: "framework"
 tags: ["frontend", "react", "fullstack"]
 ---

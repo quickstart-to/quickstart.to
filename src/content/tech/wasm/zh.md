@@ -1,6 +1,6 @@
 ---
 title: "WebAssembly"
-description: "5 分钟快速入门 WebAssembly"
+description: "浏览器中接近原生性能的二进制格式 - 语言无关（Rust/C/Go）、安全沙箱"
 template: "tool"
 tags: ["wasm", "performance", "web"]
 ---

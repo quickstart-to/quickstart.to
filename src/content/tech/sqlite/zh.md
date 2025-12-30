@@ -1,6 +1,6 @@
 ---
 title: "SQLite"
-description: "5 分钟快速入门 SQLite 数据库"
+description: "无服务器嵌入式 SQL 数据库 - 零配置、单文件、适合移动应用和原型开发"
 template: "tool"
 tags: ["database", "sql", "embedded"]
 ---

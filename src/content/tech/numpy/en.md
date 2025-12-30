@@ -1,6 +1,6 @@
 ---
 title: "NumPy"
-description: "Get started with NumPy in 5 minutes"
+description: "Python scientific computing foundation - fast arrays, broadcasting, linear algebra, data science basis"
 template: "tool"
 tags: ["python", "scientific-computing", "arrays"]
 ---

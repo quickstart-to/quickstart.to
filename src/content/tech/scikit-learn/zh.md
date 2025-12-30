@@ -1,6 +1,6 @@
 ---
 title: "Scikit-learn"
-description: "5 分钟快速入门 Scikit-learn"
+description: "Python 经典机器学习库 - 简单 API、全面算法、预处理、Pipeline"
 template: "tool"
 tags: ["python", "machine-learning", "data-science"]
 ---

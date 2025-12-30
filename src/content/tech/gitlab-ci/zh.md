@@ -1,6 +1,6 @@
 ---
 title: "GitLab CI"
-description: "5 分钟快速入门 GitLab CI/CD"
+description: "GitLab 集成 CI/CD - 流水线、Runner、自动 DevOps，内置于 GitLab 平台"
 template: "tool"
 tags: ["ci-cd", "devops", "gitlab"]
 ---

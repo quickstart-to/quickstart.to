@@ -1,6 +1,6 @@
 ---
 title: "Grafana"
-description: "5 分钟快速入门 Grafana 仪表板"
+description: "可观测性仪表板 - 可视化 Prometheus、Loki 等 50+ 数据源指标，支持告警"
 template: "tool"
 tags: ["devops", "monitoring", "visualization"]
 ---

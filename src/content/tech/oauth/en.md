@@ -1,6 +1,6 @@
 ---
 title: "OAuth 2.0"
-description: "Get started with OAuth 2.0 in 5 minutes"
+description: "Authorization framework for delegated access - secure third-party auth without sharing passwords"
 template: "tool"
 tags: ["security", "authentication", "authorization"]
 ---

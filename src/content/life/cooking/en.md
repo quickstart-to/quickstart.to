@@ -1,6 +1,6 @@
 ---
 title: "Basic Cooking"
-description: "Learn fundamental cooking techniques in 5 minutes"
+description: "Master essential cooking techniques - save money, eat healthier, and impress everyone at the dinner table"
 template: "life"
 tags: ["cooking", "food"]
 ---

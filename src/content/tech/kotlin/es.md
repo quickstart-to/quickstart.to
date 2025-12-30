@@ -1,6 +1,6 @@
 ---
 title: "Kotlin"
-description: "Comienza con el lenguaje de programación Kotlin en 5 minutos"
+description: "Lenguaje JVM moderno y null-safe - desarrollo Android oficial con sintaxis concisa e interop Java completa"
 template: "language"
 tags: ["programming", "android", "jvm"]
 ---

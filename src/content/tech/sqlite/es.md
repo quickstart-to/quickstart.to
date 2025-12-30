@@ -1,6 +1,6 @@
 ---
 title: "SQLite"
-description: "Comienza con la base de datos SQLite en 5 minutos"
+description: "Base de datos SQL embebida sin servidor - cero config, archivo unico, ideal para apps moviles y prototipos"
 template: "tool"
 tags: ["database", "sql", "embedded"]
 ---

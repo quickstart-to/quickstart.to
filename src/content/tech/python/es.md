@@ -1,6 +1,6 @@
 ---
 title: "Python"
-description: "Comienza con la programación en Python en 5 minutos"
+description: "Sintaxis legible, ecosistema extenso - desde scripts hasta IA, apps web y ciencia de datos"
 template: "language"
 tags: ["programming", "scripting", "data-science"]
 ---

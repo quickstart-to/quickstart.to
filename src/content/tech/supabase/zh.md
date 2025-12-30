@@ -1,6 +1,6 @@
 ---
 title: "Supabase"
-description: "5 分钟快速入门 Supabase"
+description: "开源 Firebase 替代品 - 即时 API、实时订阅、认证、存储，基于 PostgreSQL"
 template: "tool"
 tags: ["database", "backend", "baas"]
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Prometheus"
-description: "Starten Sie mit Prometheus-Monitoring in 5 Minuten"
+description: "Metrik-basiertes Monitoring - Pull-Modell, PromQL-Abfragen, Alerting, ideal fur Cloud-Native und Kubernetes"
 template: "tool"
 tags: ["devops", "monitoring", "observability"]
 ---

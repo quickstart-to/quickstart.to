@@ -1,6 +1,6 @@
 ---
 title: "Expo"
-description: "5 分钟快速入门 Expo"
+description: "React Native 应用平台 - 无需原生配置、OTA 更新、丰富 SDK、轻松部署"
 template: "tool"
 tags: ["mobile", "react-native", "cross-platform"]
 ---

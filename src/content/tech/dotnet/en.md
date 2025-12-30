@@ -1,6 +1,6 @@
 ---
 title: ".NET"
-description: "Get started with .NET platform in 5 minutes"
+description: "Cross-platform development platform - modern C#, high performance, enterprise-ready with excellent tooling"
 template: "tool"
 tags: ["backend", "csharp", "framework"]
 ---

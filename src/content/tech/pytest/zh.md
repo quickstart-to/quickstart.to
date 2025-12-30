@@ -1,6 +1,6 @@
 ---
 title: "Pytest"
-description: "5 分钟快速入门 Pytest"
+description: "简洁的 Python 测试 - fixtures、参数化、插件、详细断言内省"
 template: "tool"
 tags: ["python", "testing", "automation"]
 ---

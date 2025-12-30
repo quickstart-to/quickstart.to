@@ -1,6 +1,6 @@
 ---
 title: "SQLite"
-description: "Démarrez avec la base de données SQLite en 5 minutes"
+description: "Base de donnees SQL embarquee sans serveur - zero config, fichier unique, parfait pour apps mobiles et prototypes"
 template: "tool"
 tags: ["database", "sql", "embedded"]
 ---

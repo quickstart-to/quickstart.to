@@ -1,6 +1,6 @@
 ---
 title: "Svelte"
-description: "Comienza con el framework Svelte en 5 minutos"
+description: "Framework UI compile-time - sin Virtual DOM, actualizaciones quirurgicas, bundles mas pequenos"
 template: "framework"
 tags: ["frontend", "javascript", "framework"]
 ---

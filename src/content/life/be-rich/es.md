@@ -1,6 +1,6 @@
 ---
 title: "Be Rich"
-description: "Domina el secreto de la libertad financiera en 1 minuto"
+description: "El atajo definitivo hacia la libertad financiera - un truco simple que realmente funciona"
 template: "aha"
 ---
 

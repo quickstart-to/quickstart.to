@@ -1,6 +1,6 @@
 ---
 title: "SSH"
-description: "Comienza con SSH para conexiones remotas seguras"
+description: "Acceso seguro a servidores remotos - conexiones cifradas, autenticacion por clave, tuneles"
 template: "tool"
 tags: ["security", "remote", "networking"]
 ---

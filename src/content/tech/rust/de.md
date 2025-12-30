@@ -1,6 +1,6 @@
 ---
 title: "Rust"
-description: "Starten Sie mit der Programmiersprache Rust in 5 Minuten"
+description: "Speichersichere Systemprogrammierung - Zero-Cost-Abstraktionen mit Compile-Zeit-Garantien, kein Garbage Collector"
 template: "language"
 tags: ["programming", "systems", "performance"]
 ---

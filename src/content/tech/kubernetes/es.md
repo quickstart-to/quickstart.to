@@ -1,6 +1,6 @@
 ---
 title: "Kubernetes"
-description: "Comienza con la orquestación de contenedores Kubernetes"
+description: "Orquesta aplicaciones en contenedores a escala - automatiza despliegue, escalado y gestión en clusters"
 template: "tool"
 tags: ["containers", "devops", "cloud-native"]
 ---

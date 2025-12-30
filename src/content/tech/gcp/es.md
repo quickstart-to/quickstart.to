@@ -1,6 +1,6 @@
 ---
 title: "Google Cloud"
-description: "Comienza con Google Cloud Platform en 5 minutos"
+description: "Infraestructura cloud de Google - cuna de Kubernetes, BigQuery y AI/ML de vanguardia con red global"
 template: "service"
 tags: ["cloud", "devops", "google"]
 ---

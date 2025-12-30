@@ -1,6 +1,6 @@
 ---
 title: "JWT"
-description: "Get started with JWT in 5 minutes"
+description: "JSON Web Token for stateless auth - compact, self-contained, works across domains"
 template: "tool"
 tags: ["security", "authentication", "tokens"]
 ---

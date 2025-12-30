@@ -1,6 +1,6 @@
 ---
 title: "AWS"
-description: "5 分钟快速入门 Amazon Web Services"
+description: "全球最大云平台 - 计算、存储、数据库、AI/ML 等 200+ 服务，驱动 Netflix 和 Airbnb"
 template: "service"
 tags: ["cloud", "devops", "infrastructure"]
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Redis"
-description: "快速入门 Redis 内存数据存储"
+description: "内存数据存储 - 缓存、会话管理和实时分析，极速键值操作"
 template: "tool"
 tags: ["database", "cache", "backend"]
 ---

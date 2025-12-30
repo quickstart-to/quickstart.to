@@ -1,6 +1,6 @@
 ---
 title: "Redis"
-description: "Comienza con el almacén de datos en memoria Redis"
+description: "Almacén de datos en memoria para caché, sesiones y analíticas en tiempo real - operaciones clave-valor ultrarrápidas"
 template: "tool"
 tags: ["database", "cache", "backend"]
 ---

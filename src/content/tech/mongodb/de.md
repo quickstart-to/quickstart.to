@@ -1,6 +1,6 @@
 ---
 title: "MongoDB"
-description: "Starten Sie mit der MongoDB-Datenbank in 5 Minuten"
+description: "Dokumentendatenbank mit flexiblen Schemas - JSON-ähnliche Daten speichern, horizontal skalieren, einfach abfragen"
 template: "tool"
 tags: ["database", "nosql", "document"]
 ---

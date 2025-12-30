@@ -1,6 +1,6 @@
 ---
 title: "Hono"
-description: "5 分钟快速入门 Hono Web 框架"
+description: "基于 Web 标准的超快框架 - 运行于 Cloudflare Workers、Deno、Bun、Node.js 和 AWS Lambda"
 template: "framework"
 tags: ["backend", "javascript", "framework", "edge"]
 ---

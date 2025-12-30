@@ -1,6 +1,6 @@
 ---
 title: "Helm"
-description: "Get started with Helm Kubernetes package manager in 5 minutes"
+description: "Kubernetes package manager - define, install, upgrade apps with reusable Charts and templating"
 template: "tool"
 tags: ["kubernetes", "devops", "package-manager"]
 ---

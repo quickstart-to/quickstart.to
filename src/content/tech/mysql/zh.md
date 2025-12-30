@@ -1,6 +1,6 @@
 ---
 title: "MySQL"
-description: "5 分钟快速入门 MySQL 数据库"
+description: "流行的开源关系型数据库 - ACID 事务、主从复制、广泛支持"
 template: "tool"
 tags: ["database", "sql", "relational"]
 ---

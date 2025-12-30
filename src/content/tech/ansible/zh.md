@@ -1,6 +1,6 @@
 ---
 title: "Ansible"
-description: "5 分钟快速入门 Ansible 自动化"
+description: "无代理 IT 自动化 - YAML 剧本配置服务器、部署应用、编排工作流"
 template: "tool"
 tags: ["devops", "automation", "configuration"]
 ---

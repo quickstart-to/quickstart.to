@@ -1,6 +1,6 @@
 ---
 title: "Jest"
-description: "5 分钟快速入门 Jest 测试框架"
+description: "JavaScript 测试框架 - 零配置、快照、Mock、开箱即用的代码覆盖率"
 template: "tool"
 tags: ["testing", "javascript", "frontend"]
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Neo4j"
-description: "Starten Sie mit der Neo4j-Graphdatenbank in 5 Minuten"
+description: "Native Graphdatenbank - Cypher-Abfragesprache, Beziehungsmodellierung, schnelle Traversierung"
 template: "tool"
 tags: ["database", "graph", "nosql"]
 ---

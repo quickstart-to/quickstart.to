@@ -1,6 +1,6 @@
 ---
 title: "Hugging Face"
-description: "5 分钟快速入门 Hugging Face Transformers"
+description: "AI/ML 模型平台 - 10万+ 预训练模型、易于微调、pipeline API"
 template: "tool"
 tags: ["ai", "nlp", "transformers"]
 ---

@@ -1,6 +1,6 @@
 ---
 title: "SQLAlchemy"
-description: "Get started with SQLAlchemy in 5 minutes"
+description: "Python SQL toolkit and ORM - flexible, powerful, raw SQL and ORM, database agnostic"
 template: "tool"
 tags: ["python", "orm", "database"]
 ---

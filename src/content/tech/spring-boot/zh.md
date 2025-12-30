@@ -1,6 +1,6 @@
 ---
 title: "Spring Boot"
-description: "5 分钟快速入门 Spring Boot 框架"
+description: "Java 企业级框架，自动配置 - 内嵌服务器，零 XML，开箱即生产就绪"
 template: "framework"
 tags: ["backend", "java", "framework"]
 ---

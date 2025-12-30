@@ -1,6 +1,6 @@
 ---
 title: "Sass"
-description: "5 分钟快速入门 Sass CSS 预处理器"
+description: "CSS 预处理器 - 变量、嵌套、混入和函数，让样式表更易维护"
 template: "framework"
 tags: ["css", "frontend", "preprocessor"]
 ---

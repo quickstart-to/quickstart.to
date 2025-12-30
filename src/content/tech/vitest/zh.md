@@ -1,6 +1,6 @@
 ---
 title: "Vitest"
-description: "5 分钟快速入门 Vitest 测试"
+description: "Vite 驱动的极速单元测试 - 原生 ESM、TypeScript 支持、Jest 兼容 API"
 template: "tool"
 tags: ["testing", "vite", "javascript"]
 ---

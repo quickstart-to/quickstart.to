@@ -1,6 +1,6 @@
 ---
 title: "Jest"
-description: "Démarrez avec le framework de test Jest en 5 minutes"
+description: "Framework de test JavaScript - zero config, snapshots, mocking et couverture de code integres"
 template: "tool"
 tags: ["testing", "javascript", "frontend"]
 ---

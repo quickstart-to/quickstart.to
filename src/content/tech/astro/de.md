@@ -1,6 +1,6 @@
 ---
 title: "Astro"
-description: "Starten Sie mit dem Astro Web-Framework in 5 Minuten"
+description: "Content-fokussiertes Web-Framework - null JS standardmaessig, Islands-Architektur, React/Vue/Svelte gemeinsam nutzen"
 template: "framework"
 tags: ["frontend", "static-site", "framework"]
 ---

@@ -1,6 +1,6 @@
 ---
 title: "FastAPI"
-description: "5 分钟快速入门 FastAPI 框架"
+description: "Python 现代 API 框架 - 类型提示自动生成文档和验证，原生异步，媲美 Node/Go 的速度"
 template: "framework"
 tags: ["backend", "python", "api", "framework"]
 ---

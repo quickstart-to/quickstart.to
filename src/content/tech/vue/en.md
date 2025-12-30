@@ -1,6 +1,6 @@
 ---
 title: "Vue.js"
-description: "Get started with Vue.js framework in 5 minutes"
+description: "Progressive JavaScript framework - reactive by default, scales from simple widgets to complex SPAs"
 template: "framework"
 tags: ["frontend", "javascript", "framework"]
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Cypress"
-description: "Starten Sie mit Cypress E2E-Tests in 5 Minuten"
+description: "E2E-Tests mit Time-Travel-Debugging - Echtzeit-Reloads, automatisches Warten, visueller Testrunner"
 template: "tool"
 tags: ["testing", "e2e", "javascript"]
 ---

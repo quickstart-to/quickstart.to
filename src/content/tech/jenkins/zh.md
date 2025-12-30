@@ -1,6 +1,6 @@
 ---
 title: "Jenkins"
-description: "5 分钟快速入门 Jenkins CI/CD"
+description: "开源自动化服务器 - 构建流水线、可扩展插件、自托管 CI/CD"
 template: "tool"
 tags: ["ci-cd", "devops", "automation"]
 ---

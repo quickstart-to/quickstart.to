@@ -1,6 +1,6 @@
 ---
 title: "Django"
-description: "Get started with Django web framework in 5 minutes"
+description: "Python batteries-included web framework - ORM, admin panel, auth, and security built-in from day one"
 template: "framework"
 tags: ["backend", "python", "framework"]
 ---

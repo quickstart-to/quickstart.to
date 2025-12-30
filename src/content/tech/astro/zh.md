@@ -1,6 +1,6 @@
 ---
 title: "Astro"
-description: "5 分钟快速入门 Astro Web 框架"
+description: "内容优先的 Web 框架 - 默认零 JS，岛屿架构，React/Vue/Svelte 可混用"
 template: "framework"
 tags: ["frontend", "static-site", "framework"]
 ---

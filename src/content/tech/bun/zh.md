@@ -1,6 +1,6 @@
 ---
 title: "Bun"
-description: "5 分钟快速入门 Bun JavaScript 运行时"
+description: "一体化 JavaScript 工具包 - 超快运行时、打包器、测试器、包管理器合一"
 template: "tool"
 tags: ["javascript", "runtime", "typescript"]
 ---

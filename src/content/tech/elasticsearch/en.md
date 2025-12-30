@@ -1,6 +1,6 @@
 ---
 title: "Elasticsearch"
-description: "Get started with Elasticsearch in 5 minutes"
+description: "Distributed search and analytics engine - full-text search, log analysis, real-time data exploration"
 template: "tool"
 tags: ["database", "search", "analytics"]
 ---

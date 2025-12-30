@@ -1,6 +1,6 @@
 ---
 title: "tmux"
-description: "Starten Sie mit dem tmux Terminal-Multiplexer in 5 Minuten"
+description: "Terminal-Multiplexer fur persistente Sitzungen - Fenster teilen, trennen/verbinden, unverzichtbar fur Remote-Arbeit"
 template: "tool"
 tags: ["cli", "terminal", "productivity"]
 ---
