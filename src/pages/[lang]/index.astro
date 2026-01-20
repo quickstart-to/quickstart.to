@@ -55,7 +55,7 @@ const validQuickstarts = quickstarts.filter(Boolean);
 >
   <section class="hero container">
     <h1 class="hero-title">
-      <span class="hero-title-gradient">quickstart.to/<span class="typewriter" id="typewriter">everything</span></span>
+      <span class="hero-title-gradient">quickstart.to/<span class="typewriter" id="typewriter"></span></span>
     </h1>
     <p class="hero-subtitle">{t(lang, 'site.description')}</p>
     <Search lang={lang} />
@@ -85,17 +85,15 @@ const validQuickstarts = quickstarts.filter(Boolean);
 </BaseLayout>
 
 <script>
-  const words = ['everything', 'Docker', 'React', 'Python', 'Cooking', 'AI', 'Rust', 'everything'];
+  const words = ['Docker', 'React', 'Python', 'Cooking', 'AI', 'Rust', 'everything'];
 
   function initTypewriter() {
     const el = document.getElementById('typewriter');
     if (!el) return;
 
     let wordIdx = 0;
-    let charIdx = words[0].length;
+    let charIdx = 0;
     let deleting = false;
-
-    el.textContent = words[0];
 
     function tick() {
       const word = words[wordIdx];
@@ -131,10 +129,7 @@ const validQuickstarts = quickstarts.filter(Boolean);
       }
     }
 
-    setTimeout(() => {
-      deleting = true;
-      tick();
-    }, 2000);
+    setTimeout(tick, 1000);
   }
 
   initTypewriter();
