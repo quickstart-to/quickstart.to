@@ -54,10 +54,7 @@ const validQuickstarts = quickstarts.filter(Boolean);
         <span class="badge-text">Open Source • Community Driven</span>
       </div>
       <h1 class="hero-title">
-        The fastest way to learn
-        <span class="hero-title-highlight">
-          quickstart.to/<span class="typewriter" id="typewriter"></span>
-        </span>
+        <span class="hero-title-main">quickstart.to/<span class="typewriter" id="typewriter"></span></span>
       </h1>
       <p class="hero-subtitle">{t(lang, 'site.description')}</p>
       
@@ -70,12 +67,10 @@ const validQuickstarts = quickstarts.filter(Boolean);
           <span class="stat-value">{validQuickstarts.length}</span>
           <span class="stat-label">Guides</span>
         </div>
-        <div class="stat-separator"></div>
         <div class="stat-item">
           <span class="stat-value">{supportedLangs.length}</span>
           <span class="stat-label">Languages</span>
         </div>
-        <div class="stat-separator"></div>
         <div class="stat-item">
           <span class="stat-value">Free</span>
           <span class="stat-label">Forever</span>
@@ -219,9 +214,8 @@ const validQuickstarts = quickstarts.filter(Boolean);
     color: var(--color-text);
   }
 
-  .hero-title-highlight {
-    display: block;
-    margin-top: 0.5rem;
+  .hero-title-main {
+    display: inline-block;
     background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -257,7 +251,7 @@ const validQuickstarts = quickstarts.filter(Boolean);
   .hero-stats {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 3rem;
     color: var(--color-text-secondary);
   }
 
@@ -276,12 +270,6 @@ const validQuickstarts = quickstarts.filter(Boolean);
   .stat-label {
     font-size: 0.875rem;
     font-weight: 500;
-  }
-
-  .stat-separator {
-    width: 1px;
-    height: 24px;
-    background-color: var(--color-border);
   }
 
   .quickstarts {
