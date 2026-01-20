@@ -15,7 +15,7 @@ const { id, title, description, category, lang, availableLanguages } = Astro.pro
 const href = lang === 'en' ? `/${id}` : `/${lang}/${id}`;
 ---
 
-<a href={href} class="card">
+<a href={href} class="card quickstart-card" data-category={category}>
   <div class="card-header">
     <span class="card-category">{category}</span>
     <div class="card-langs">

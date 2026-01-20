@@ -10,7 +10,15 @@ import { t } from '@utils/language';
 import { getHomeCanonicalUrl, getDefaultOgImageUrl } from '@utils/seo';
 import { generateWebSiteSchema } from '@utils/schema';
 
-const lang = defaultLang;
+export function getStaticPaths() {
+  return supportedLangs
+    .filter((l) => l !== defaultLang)
+    .map((lang) => ({
+      params: { lang },
+    }));
+}
+
+const { lang } = Astro.params as { lang: Lang };
 const canonicalUrl = getHomeCanonicalUrl(lang);
 const alternateUrls = supportedLangs.map((l) => ({
   lang: l as typeof l | 'x-default',
@@ -20,7 +28,6 @@ alternateUrls.push({ lang: 'x-default', url: getHomeCanonicalUrl(defaultLang) })
 const websiteSchema = generateWebSiteSchema();
 const allQuickstarts = await getAllQuickstarts();
 
-// Get unique quickstarts for default language, or fallback
 const uniqueIds = [...new Set(allQuickstarts.map((q) => q.id))];
 const quickstarts = await Promise.all(
   uniqueIds.map(async (id) => {
@@ -93,7 +100,6 @@ const validQuickstarts = quickstarts.filter(Boolean);
     function tick() {
       const word = words[wordIdx];
 
-      // Finished on last word - keep cursor blinking
       if (wordIdx === words.length - 1 && charIdx === word.length) {
         return;
       }
