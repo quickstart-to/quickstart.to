@@ -1,13 +1,15 @@
 import type { APIRoute, GetStaticPaths } from 'astro';
 import { getAllQuickstarts } from '@utils/content';
+import { getAllPeople } from '@utils/people';
 import { generateOgImagePng, generateDefaultOgImage } from '@utils/og-image';
 import { DEFAULT_VARIANT } from '@utils/variant';
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const allQuickstarts = await getAllQuickstarts();
+  const allPeople = await getAllPeople();
   const paths: { params: { slug: string }; props: { title: string; category: string } }[] = [];
 
-  // Generate OG image path for each content
+  // Generate OG image path for each quickstart
   for (const quickstart of allQuickstarts) {
     const { id, variant, category, entry } = quickstart;
 
@@ -27,6 +29,32 @@ export const getStaticPaths: GetStaticPaths = async () => {
         props: {
           title: entry.data.title,
           category,
+        },
+      });
+    }
+  }
+
+  // Generate OG image path for each people profile
+  for (const person of allPeople) {
+    const { username, variant, entry } = person;
+    const usernameWithoutAt = username.replace(/^@/, '');
+
+    if (variant === DEFAULT_VARIANT) {
+      // Default variant: /og/people/{username}.png
+      paths.push({
+        params: { slug: `people/${usernameWithoutAt}` },
+        props: {
+          title: entry.data.display_name,
+          category: 'people',
+        },
+      });
+    } else {
+      // Other variants: /og/people/{username}/{variant}.png
+      paths.push({
+        params: { slug: `people/${usernameWithoutAt}/${variant}` },
+        props: {
+          title: entry.data.display_name,
+          category: 'people',
         },
       });
     }

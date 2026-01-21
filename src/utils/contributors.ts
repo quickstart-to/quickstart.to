@@ -46,11 +46,27 @@ export function getContributorQuickstartCount(contributor: Contributor): number 
 
   for (const file of contributor.files) {
     // path: src/content/tech/docker/default.md -> docker
-    const match = file.path.match(/src\/content\/\w+\/([^/]+)\//);
+    // path: src/content/people/@octocat/default.md -> @octocat
+    const match = file.path.match(/src\/content\/(?:tech|life)\/([^/]+)\//);
     if (match) {
       quickstartIds.add(match[1]);
     }
   }
 
   return quickstartIds.size;
+}
+
+export function getContributorPeopleCount(contributor: Contributor): number {
+  // Count unique people profile IDs
+  const peopleIds = new Set<string>();
+
+  for (const file of contributor.files) {
+    // path: src/content/people/@octocat/default.md -> @octocat
+    const match = file.path.match(/src\/content\/people\/(@[^/]+)\//);
+    if (match) {
+      peopleIds.add(match[1]);
+    }
+  }
+
+  return peopleIds.size;
 }

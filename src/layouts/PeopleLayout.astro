@@ -1,0 +1,136 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import TableOfContents from '@components/TableOfContents.astro';
+import ContributorList from '@components/ContributorList.astro';
+import VariantSwitcher from '@components/VariantSwitcher.astro';
+import PeopleHeader from '@components/PeopleHeader.astro';
+import { getPeopleCanonicalUrl, getPeopleOgImageUrl } from '@utils/seo';
+import { generatePeopleSchemas } from '@utils/schema';
+
+interface Props {
+  username: string;
+  displayName: string;
+  tagline?: string;
+  variant: string;
+  availableVariants: string[];
+  headings: { depth: number; slug: string; text: string }[];
+  filePath: string;
+}
+
+const {
+  username,
+  displayName,
+  tagline,
+  variant,
+  availableVariants,
+  headings,
+  filePath,
+} = Astro.props;
+
+const title = displayName;
+const description = tagline || `${displayName}'s personal guide on quickstart.to`;
+const canonicalUrl = getPeopleCanonicalUrl(username, variant);
+const ogImageUrl = getPeopleOgImageUrl(username, variant);
+const schemas = generatePeopleSchemas({
+  displayName,
+  tagline,
+  url: canonicalUrl,
+  ogImage: ogImageUrl,
+});
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  id={username}
+  canonicalUrl={canonicalUrl}
+  ogImage={ogImageUrl}
+  ogType="article"
+  schemas={schemas}
+>
+  <article class="people container">
+    <div class="people-top-meta">
+      <VariantSwitcher
+        currentVariant={variant}
+        availableVariants={availableVariants}
+        currentId={username}
+      />
+    </div>
+
+    <PeopleHeader
+      username={username}
+      displayName={displayName}
+      tagline={tagline}
+    />
+
+    <div class="people-content-wrapper">
+      <aside class="people-sidebar">
+        <TableOfContents headings={headings} />
+      </aside>
+
+      <div class="people-content content">
+        <slot />
+
+        <footer class="people-footer">
+          <ContributorList filePath={filePath} />
+        </footer>
+      </div>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .people {
+    padding: 2rem 1rem;
+  }
+
+  .people-top-meta {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+  }
+
+  .people-content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  @media (min-width: 1024px) {
+    .people-content-wrapper {
+      grid-template-columns: 1fr 16rem;
+    }
+
+    .people-sidebar {
+      order: 1;
+      position: sticky;
+      top: 2rem;
+      align-self: start;
+    }
+
+    .people-content {
+      order: 0;
+    }
+  }
+
+  .people-footer {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--color-border);
+  }
+
+  @media (max-width: 640px) {
+    .people {
+      padding: 1.5rem 0.75rem;
+    }
+
+    .people-content-wrapper {
+      gap: 1.5rem;
+    }
+
+    .people-footer {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+    }
+  }
+</style>

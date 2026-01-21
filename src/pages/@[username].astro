@@ -1,0 +1,63 @@
+---
+import PeopleLayout from '@layouts/PeopleLayout.astro';
+import {
+  getAllPeople,
+  getPersonByUsername,
+  getAvailableVariantsForPerson,
+} from '@utils/people';
+import { DEFAULT_VARIANT } from '@utils/variant';
+
+export async function getStaticPaths() {
+  const people = await getAllPeople();
+  const paths: { params: { username: string }; props: { username: string } }[] = [];
+
+  // Collect all unique usernames that have default variant
+  const usernameSet = new Set<string>();
+  for (const p of people) {
+    if (p.variant === DEFAULT_VARIANT) {
+      usernameSet.add(p.username);
+    }
+  }
+
+  for (const username of usernameSet) {
+    // Remove @ prefix for the route param
+    const usernameWithoutAt = username.replace(/^@/, '');
+    paths.push({
+      params: { username: usernameWithoutAt },
+      props: { username },
+    });
+  }
+
+  return paths;
+}
+
+interface Props {
+  username: string;
+}
+
+const { username } = Astro.props;
+
+const person = await getPersonByUsername(username, DEFAULT_VARIANT);
+
+if (!person) {
+  return Astro.redirect('/404');
+}
+
+const availableVariants = await getAvailableVariantsForPerson(username);
+const { Content, headings } = await person.entry.render();
+
+// Construct file path for contributors
+const filePath = `src/content/people/${username}/${DEFAULT_VARIANT}.md`;
+---
+
+<PeopleLayout
+  username={username}
+  displayName={person.entry.data.display_name}
+  tagline={person.entry.data.tagline}
+  variant={DEFAULT_VARIANT}
+  availableVariants={availableVariants}
+  headings={headings}
+  filePath={filePath}
+>
+  <Content />
+</PeopleLayout>

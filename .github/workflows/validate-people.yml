@@ -1,0 +1,336 @@
+name: Validate People Profiles
+
+on:
+  pull_request:
+    paths:
+      - 'src/content/people/**'
+
+jobs:
+  validate-ownership:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      contents: read
+
+    steps:
+      - name: Checkout PR
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Checkout base branch
+        run: git fetch origin ${{ github.base_ref }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Validate People Profile Ownership
+        uses: actions/github-script@v7
+        env:
+          ALIAS_VERIFICATION_SECRET: ${{ secrets.ALIAS_VERIFICATION_SECRET }}
+        with:
+          script: |
+            const fs = require('fs');
+            const path = require('path');
+            const crypto = require('crypto');
+
+            const actorId = context.actor_id || context.payload.sender?.id;
+            const actorName = context.actor;
+            const prNumber = context.payload.pull_request.number;
+            const secret = process.env.ALIAS_VERIFICATION_SECRET || 'default-secret';
+
+            console.log(`PR Author: ${actorName} (ID: ${actorId})`);
+
+            // Get changed files
+            const { data: files } = await github.rest.pulls.listFiles({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: prNumber,
+            });
+
+            // Filter people profile files
+            const peopleFiles = files.filter(f =>
+              f.filename.startsWith('src/content/people/') &&
+              f.filename.endsWith('.md')
+            );
+
+            if (peopleFiles.length === 0) {
+              console.log('No people profile files changed');
+              return;
+            }
+
+            // Parse frontmatter from file content
+            function parseFrontmatter(content) {
+              const match = content.match(/^---\n([\s\S]*?)\n---/);
+              if (!match) return null;
+
+              const frontmatter = {};
+              const lines = match[1].split('\n');
+
+              for (const line of lines) {
+                const colonIndex = line.indexOf(':');
+                if (colonIndex === -1) continue;
+
+                const key = line.slice(0, colonIndex).trim();
+                let value = line.slice(colonIndex + 1).trim();
+
+                if ((value.startsWith('"') && value.endsWith('"')) ||
+                    (value.startsWith("'") && value.endsWith("'"))) {
+                  value = value.slice(1, -1);
+                }
+
+                if (/^\d+$/.test(value)) {
+                  frontmatter[key] = parseInt(value, 10);
+                } else {
+                  frontmatter[key] = value;
+                }
+              }
+
+              return frontmatter;
+            }
+
+            // Get all existing owner_ids (anti-hoarding check)
+            const existingOwnerIds = new Map();
+            const peopleDir = 'src/content/people';
+
+            if (fs.existsSync(peopleDir)) {
+              const dirs = fs.readdirSync(peopleDir);
+              for (const dir of dirs) {
+                if (!dir.startsWith('@')) continue;
+                const defaultPath = path.join(peopleDir, dir, 'default.md');
+                if (fs.existsSync(defaultPath)) {
+                  const content = fs.readFileSync(defaultPath, 'utf-8');
+                  const fm = parseFrontmatter(content);
+                  if (fm && fm.owner_id) {
+                    existingOwnerIds.set(fm.owner_id, dir);
+                  }
+                }
+              }
+            }
+
+            const errors = [];
+            const warnings = [];
+
+            for (const file of peopleFiles) {
+              const filename = file.filename;
+              const status = file.status;
+
+              // Extract username from path
+              const match = filename.match(/src\/content\/people\/(@[^/]+)\//);
+              if (!match) continue;
+
+              const username = match[1];
+              const isDefault = filename.endsWith('default.md');
+              const isVariant = !isDefault;
+
+              console.log(`Checking ${filename} (status: ${status}, username: ${username})`);
+
+              // Get current file content
+              let content = '';
+              try {
+                if (status !== 'removed') {
+                  content = fs.readFileSync(filename, 'utf-8');
+                }
+              } catch (e) {
+                console.log(`Could not read file: ${filename}`);
+                continue;
+              }
+
+              const frontmatter = parseFrontmatter(content);
+
+              if (status === 'added' || status === 'renamed') {
+                // New file
+                if (isDefault) {
+                  // Check for owner_id
+                  if (!frontmatter || frontmatter.owner_id === undefined) {
+                    errors.push({
+                      file: filename,
+                      message: `Missing owner_id in ${filename}. Please add your GitHub User ID.`,
+                      suggestion: `Add \`owner_id: ${actorId}\` to the frontmatter.`,
+                    });
+                    continue;
+                  }
+
+                  // Anti-hoarding: check if actor already has a profile
+                  const existingDir = existingOwnerIds.get(actorId);
+                  if (existingDir && existingDir !== username) {
+                    errors.push({
+                      file: filename,
+                      message: `You already have a profile at ${existingDir}. Each user can only have one profile.`,
+                      suggestion: `Please modify your existing profile instead of creating a new one.`,
+                    });
+                    continue;
+                  }
+
+                  // Username validation (same name vs alias)
+                  const usernameWithoutAt = username.slice(1);
+                  if (usernameWithoutAt.toLowerCase() !== actorName.toLowerCase()) {
+                    // Alias case - need verification
+                    const hmac = crypto.createHmac('sha256', secret)
+                      .update(`${actorId}:${prNumber}:${usernameWithoutAt}`)
+                      .digest('hex')
+                      .slice(0, 8);
+
+                    const verificationChallenge = `I am ${usernameWithoutAt} on quickstart.to #${hmac}`;
+
+                    // Check if PR has verified-alias label
+                    const { data: pr } = await github.rest.pulls.get({
+                      owner: context.repo.owner,
+                      repo: context.repo.repo,
+                      pull_number: prNumber,
+                    });
+
+                    const hasVerifiedLabel = pr.labels.some(l => l.name === 'verified-alias');
+
+                    if (!hasVerifiedLabel) {
+                      warnings.push({
+                        file: filename,
+                        message: `Username mismatch: PR author is "${actorName}" but profile is for "${usernameWithoutAt}".`,
+                        suggestion: `To verify ownership, add this text to your social bio (Twitter/GitHub/etc) and request a maintainer to add the "verified-alias" label:\n\n\`${verificationChallenge}\``,
+                      });
+                    }
+                  }
+                } else {
+                  // Variant file - must NOT have owner_id
+                  if (frontmatter && frontmatter.owner_id !== undefined) {
+                    errors.push({
+                      file: filename,
+                      message: `Variant files must not contain owner_id.`,
+                      suggestion: `Remove owner_id from ${filename}. It should only be in default.md.`,
+                    });
+                  }
+
+                  // Check ownership via default.md
+                  const defaultPath = filename.replace(/[^/]+\.md$/, 'default.md');
+                  let defaultContent = '';
+                  try {
+                    defaultContent = fs.readFileSync(defaultPath, 'utf-8');
+                  } catch (e) {
+                    // default.md doesn't exist - this will be caught by other validation
+                  }
+
+                  if (defaultContent) {
+                    const defaultFm = parseFrontmatter(defaultContent);
+                    if (defaultFm && defaultFm.owner_id !== actorId) {
+                      errors.push({
+                        file: filename,
+                        message: `You cannot add a variant to someone else's profile. Owner ID: ${defaultFm.owner_id}, Your ID: ${actorId}.`,
+                        suggestion: `Only the profile owner can add variant files.`,
+                      });
+                    }
+                  }
+                }
+              } else if (status === 'modified') {
+                // Modified file - check ownership
+                if (isDefault) {
+                  // Get base version
+                  let baseContent = '';
+                  try {
+                    const { execSync } = require('child_process');
+                    baseContent = execSync(
+                      `git show origin/${context.payload.pull_request.base.ref}:${filename}`,
+                      { encoding: 'utf-8' }
+                    );
+                  } catch (e) {
+                    // File is new in this PR
+                    continue;
+                  }
+
+                  const baseFrontmatter = parseFrontmatter(baseContent);
+
+                  // Check if owner_id was tampered
+                  if (baseFrontmatter && frontmatter) {
+                    if (baseFrontmatter.owner_id !== frontmatter.owner_id) {
+                      errors.push({
+                        file: filename,
+                        message: `owner_id cannot be changed (was ${baseFrontmatter.owner_id}, now ${frontmatter.owner_id}).`,
+                        suggestion: `Revert the owner_id change.`,
+                      });
+                      continue;
+                    }
+
+                    // Check if actor is the owner
+                    if (baseFrontmatter.owner_id !== actorId) {
+                      errors.push({
+                        file: filename,
+                        message: `You cannot modify someone else's profile. Owner ID: ${baseFrontmatter.owner_id}, Your ID: ${actorId}.`,
+                        suggestion: `Only the profile owner can modify this file.`,
+                      });
+                    }
+                  }
+                } else {
+                  // Variant file modification - check ownership via default.md
+                  const defaultPath = filename.replace(/[^/]+\.md$/, 'default.md');
+                  let defaultContent = '';
+                  try {
+                    defaultContent = fs.readFileSync(defaultPath, 'utf-8');
+                  } catch (e) {
+                    // default.md doesn't exist yet
+                    continue;
+                  }
+
+                  const defaultFm = parseFrontmatter(defaultContent);
+                  if (defaultFm && defaultFm.owner_id !== actorId) {
+                    errors.push({
+                      file: filename,
+                      message: `You cannot modify someone else's profile variant. Owner ID: ${defaultFm.owner_id}, Your ID: ${actorId}.`,
+                      suggestion: `Only the profile owner can modify this file.`,
+                    });
+                  }
+
+                  // Variant file must NOT have owner_id
+                  if (frontmatter && frontmatter.owner_id !== undefined) {
+                    errors.push({
+                      file: filename,
+                      message: `Variant files must not contain owner_id.`,
+                      suggestion: `Remove owner_id from ${filename}. It should only be in default.md.`,
+                    });
+                  }
+                }
+              }
+            }
+
+            // Report results
+            if (errors.length > 0 || warnings.length > 0) {
+              let body = '## People Profile Validation\n\n';
+
+              if (errors.length > 0) {
+                body += '### ❌ Errors\n\n';
+                for (const err of errors) {
+                  body += `**${err.file}**\n`;
+                  body += `- ${err.message}\n`;
+                  if (err.suggestion) {
+                    body += `- 💡 ${err.suggestion}\n`;
+                  }
+                  body += '\n';
+                }
+              }
+
+              if (warnings.length > 0) {
+                body += '### ⚠️ Warnings\n\n';
+                for (const warn of warnings) {
+                  body += `**${warn.file}**\n`;
+                  body += `- ${warn.message}\n`;
+                  if (warn.suggestion) {
+                    body += `- 💡 ${warn.suggestion}\n`;
+                  }
+                  body += '\n';
+                }
+              }
+
+              // Post comment
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: prNumber,
+                body: body,
+              });
+
+              if (errors.length > 0) {
+                core.setFailed(`Found ${errors.length} validation error(s)`);
+              }
+            } else {
+              console.log('✅ All people profile validations passed!');
+            }

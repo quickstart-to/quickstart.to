@@ -40,4 +40,28 @@ export function getDefaultOgImageUrl(): string {
   return `${SITE_URL}/og/default.png`;
 }
 
+/**
+ * Generate canonical URL for people profile
+ * Default variant: /@username
+ * Other variants: /@username/zh
+ * Note: Reuses getCanonicalUrl since username already contains @ prefix
+ */
+export function getPeopleCanonicalUrl(username: string, variant: string): string {
+  return getCanonicalUrl(username, variant);
+}
+
+/**
+ * Generate OG image URL for people profile
+ * Default variant: /og/people/{username}.png
+ * Other variants: /og/people/{username}/{variant}.png
+ */
+export function getPeopleOgImageUrl(username: string, variant: string): string {
+  // Remove @ prefix for the file path
+  const usernameWithoutAt = username.replace(/^@/, '');
+  if (variant === DEFAULT_VARIANT) {
+    return `${SITE_URL}/og/people/${usernameWithoutAt}.png`;
+  }
+  return `${SITE_URL}/og/people/${usernameWithoutAt}/${variant}.png`;
+}
+
 export { SITE_URL };
