@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-quickstart.to is a community-driven knowledge base providing no-fluff quickstart guides. Built with Astro (static site generator), TypeScript, and supports 5 languages (en, zh, de, fr, es).
+quickstart.to is a community-driven knowledge base providing no-fluff quickstart guides. Built with Astro (static site generator) and TypeScript.
 
 ## Commands
 
@@ -22,23 +22,22 @@ pnpm contributors:full # Force full re-fetch of contributors
 
 ### Content Structure
 ```
-src/content/{category}/{id}/{lang}.md
+src/content/{category}/{id}/{variant}.md
 src/content/{category}/{id}/assets/   # Optional images
 ```
 - Categories: `tech`, `life`
-- Languages: `en.md`, `zh.md`, `de.md`, `fr.md`, `es.md`
+- Variants: `default.md` (required), plus optional variants like `zh.md`, `advanced.md`, etc.
 
 ### Routing
-- `/docker` → English (default, no prefix)
-- `/zh/docker` → Chinese (with prefix)
+- `/docker` → default.md (default variant)
+- `/docker/zh` → zh.md (variant as path suffix)
 - `/contributors` → Contributors page
 
 ### Key Directories
 - `src/content/` - Markdown content with frontmatter
 - `src/components/` - Astro components
 - `src/layouts/` - Page layouts (BaseLayout, QuickstartLayout)
-- `src/i18n/` - Language config and UI translations
-- `src/utils/` - Content queries, language utils, contributor utils
+- `src/utils/` - Content queries, variant utils, contributor utils
 - `scripts/` - CLI tools and validation scripts
 
 ### Path Aliases
@@ -47,7 +46,6 @@ src/content/{category}/{id}/assets/   # Optional images
 @components/* → src/components/*
 @layouts/* → src/layouts/*
 @utils/* → src/utils/*
-@i18n/* → src/i18n/*
 ```
 
 ## Content Requirements

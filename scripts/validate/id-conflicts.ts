@@ -36,24 +36,24 @@ export function validateIdConflicts(contentDir: string): ValidationError[] {
           idToCategory.set(id, { category, path: entryPath });
         }
 
-        // Check for duplicate lang files within the same ID
-        const langFiles = readdirSync(entryPath).filter(
+        // Check for duplicate variant files within the same ID
+        const variantFiles = readdirSync(entryPath).filter(
           (f) => f.endsWith('.md') && !f.startsWith('_')
         );
 
-        const langCounts = new Map<string, number>();
-        for (const file of langFiles) {
-          const lang = file.replace('.md', '');
-          langCounts.set(lang, (langCounts.get(lang) || 0) + 1);
+        const variantCounts = new Map<string, number>();
+        for (const file of variantFiles) {
+          const variant = file.replace('.md', '');
+          variantCounts.set(variant, (variantCounts.get(variant) || 0) + 1);
         }
 
-        for (const [lang, count] of langCounts) {
+        for (const [variant, count] of variantCounts) {
           if (count > 1) {
             errors.push({
-              file: join(entryPath, `${lang}.md`),
+              file: join(entryPath, `${variant}.md`),
               rule: 'id-conflicts',
-              message: `Duplicate language file "${lang}.md" found`,
-              suggestion: 'Each language can only have one file per ID',
+              message: `Duplicate variant file "${variant}.md" found`,
+              suggestion: 'Each variant can only have one file per ID',
             });
           }
         }

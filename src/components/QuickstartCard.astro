@@ -1,18 +1,15 @@
 ---
-import { type Lang } from '@i18n/config';
-
 interface Props {
   id: string;
   title: string;
   description: string;
   category: string;
-  lang: Lang;
-  availableLanguages: Lang[];
+  availableVariants: string[];
 }
 
-const { id, title, description, category, lang, availableLanguages } = Astro.props;
+const { id, title, description, category, availableVariants } = Astro.props;
 
-const href = lang === 'en' ? `/${id}` : `/${lang}/${id}`;
+const href = `/${id}`;
 ---
 
 <a href={href} class="card quickstart-card" data-category={category}>
@@ -20,9 +17,9 @@ const href = lang === 'en' ? `/${id}` : `/${lang}/${id}`;
     <div class="card-header">
       <div class="card-badges">
         <span class={`card-category category-${category}`}>{category}</span>
-        {availableLanguages.length > 0 && (
-          <span class="card-lang-count" title={availableLanguages.join(', ')}>
-            {availableLanguages.length} {availableLanguages.length === 1 ? 'lang' : 'langs'}
+        {availableVariants.length > 1 && (
+          <span class="card-variant-count" title={availableVariants.join(', ')}>
+            {availableVariants.length} variants
           </span>
         )}
       </div>
@@ -95,7 +92,7 @@ const href = lang === 'en' ? `/${id}` : `/${lang}/${id}`;
     color: #059669;
   }
 
-  .card-lang-count {
+  .card-variant-count {
     font-size: 0.75rem;
     color: var(--color-text-secondary);
     background-color: var(--color-bg-secondary);

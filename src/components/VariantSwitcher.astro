@@ -1,0 +1,69 @@
+---
+import { DEFAULT_VARIANT, getVariantUrl } from '@utils/variant';
+
+interface Props {
+  currentVariant: string;
+  availableVariants: string[];
+  currentId: string;
+}
+
+const { currentVariant, availableVariants, currentId } = Astro.props;
+
+function getVariantDisplayName(variant: string): string {
+  return variant === DEFAULT_VARIANT ? 'Default' : variant;
+}
+
+// 排序变体：default 排第一，其他按字母顺序
+const sortedVariants = [...availableVariants].sort((a, b) => {
+  if (a === DEFAULT_VARIANT) return -1;
+  if (b === DEFAULT_VARIANT) return 1;
+  return a.localeCompare(b);
+});
+---
+
+{sortedVariants.length > 1 && (
+  <div class="variant-switcher">
+    {
+      sortedVariants.map((variant) => (
+        <a
+          href={getVariantUrl(currentId, variant)}
+          class:list={['variant-link', { active: variant === currentVariant }]}
+          aria-current={variant === currentVariant ? 'page' : undefined}
+        >
+          {getVariantDisplayName(variant)}
+        </a>
+      ))
+    }
+  </div>
+)}
+
+<style>
+  .variant-switcher {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .variant-link {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+    color: var(--color-text-secondary);
+    border-radius: 0.25rem;
+    transition: all 0.2s;
+  }
+
+  .variant-link:hover {
+    background-color: var(--color-bg-secondary);
+    color: var(--color-text);
+    text-decoration: none;
+  }
+
+  .variant-link.active {
+    background-color: var(--color-primary);
+    color: white;
+  }
+
+  .variant-link.active:hover {
+    background-color: var(--color-primary-hover);
+  }
+</style>

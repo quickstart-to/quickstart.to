@@ -5,7 +5,6 @@ import { createInterface } from 'readline';
 const CONTENT_DIR = join(process.cwd(), 'src', 'content');
 const TEMPLATES_DIR = join(process.cwd(), 'src', 'templates');
 const CATEGORIES = ['tech', 'life'];
-const LANGUAGES = ['en', 'zh', 'de', 'fr', 'es'];
 
 // Get available templates from src/templates/
 function getAvailableTemplates(): string[] {
@@ -77,35 +76,35 @@ tags: [${tags.map(t => `"${t}"`).join(', ')}]
 
 ## TL;DR
 
-**一句话**：${title} 是...
+**One liner**: ${title} is...
 
-**核心价值**：
-- 价值1
-- 价值2
+**Core value**:
+- Value 1
+- Value 2
 
 ## Quick Start
 
-### 安装
+### Installation
 
 \`\`\`bash
-# 安装命令
+# Install command
 \`\`\`
 
-### 第一个示例
+### First example
 
 \`\`\`
-# 示例代码
+# Example code
 \`\`\`
 
 ## Gotchas
 
-### 常见问题
+### Common issues
 
-解决方案...
+Solutions...
 
 ## Next Steps
 
-- [官方文档](https://...)
+- [Official docs](https://...)
 `;
 }
 
@@ -138,7 +137,7 @@ async function main() {
   let id = '';
   let idError: string | null = 'empty';
   while (idError) {
-    id = await prompt('ID (e.g., docker, git, 如何做饭): ');
+    id = await prompt('ID (e.g., docker, git): ');
     idError = validateId(id);
     if (idError) {
       console.log(`Invalid ID: ${idError}`);
@@ -149,63 +148,91 @@ async function main() {
   const idPath = join(CONTENT_DIR, category, id);
   if (existsSync(idPath)) {
     console.log(`\n⚠️  ID "${id}" already exists in category "${category}"`);
-    const proceed = await prompt('Add a new language version? (y/n): ');
+    const proceed = await prompt('Add a new variant? (y/n): ');
     if (proceed.toLowerCase() !== 'y') {
       console.log('Cancelled.');
       rl.close();
       return;
     }
+
+    // Get variant name
+    let variant = '';
+    while (!variant) {
+      variant = await prompt('Variant name (e.g., zh, advanced): ');
+      if (!variant) {
+        console.log('Variant name cannot be empty');
+      }
+    }
+
+    // Check if variant file already exists
+    const variantFile = join(idPath, `${variant}.md`);
+    if (existsSync(variantFile)) {
+      console.log(`\n❌ File already exists: ${variantFile}`);
+      rl.close();
+      return;
+    }
+
+    // Get title
+    const title = await prompt('Title: ');
+    if (!title) {
+      console.log('Title is required.');
+      rl.close();
+      return;
+    }
+
+    // Get description
+    const description = await prompt('Description (10-200 chars): ');
+    if (description.length < 10 || description.length > 200) {
+      console.log('Description must be 10-200 characters.');
+      rl.close();
+      return;
+    }
+
+    // Get tags
+    const tagsInput = await prompt('Tags (comma-separated, optional): ');
+    const tags = tagsInput
+      ? tagsInput.split(',').map((t) => t.trim()).filter(Boolean)
+      : [];
+
+    // Generate content from template
+    const content = getTemplateContent(template, title, description, tags);
+
+    writeFileSync(variantFile, content);
+    console.log(`\n✅ Created: ${variantFile}\n`);
   } else {
     mkdirSync(idPath, { recursive: true });
     mkdirSync(join(idPath, 'assets'), { recursive: true });
     console.log(`Created directory: ${idPath}`);
-  }
 
-  // Get language
-  console.log('\nLanguages:', LANGUAGES.join(', '));
-  let lang = '';
-  while (!LANGUAGES.includes(lang)) {
-    lang = await prompt('Language: ');
-    if (!LANGUAGES.includes(lang)) {
-      console.log(`Invalid language. Choose from: ${LANGUAGES.join(', ')}`);
+    // Get title
+    const title = await prompt('Title: ');
+    if (!title) {
+      console.log('Title is required.');
+      rl.close();
+      return;
     }
+
+    // Get description
+    const description = await prompt('Description (10-200 chars): ');
+    if (description.length < 10 || description.length > 200) {
+      console.log('Description must be 10-200 characters.');
+      rl.close();
+      return;
+    }
+
+    // Get tags
+    const tagsInput = await prompt('Tags (comma-separated, optional): ');
+    const tags = tagsInput
+      ? tagsInput.split(',').map((t) => t.trim()).filter(Boolean)
+      : [];
+
+    // Generate content from template - always create default.md
+    const content = getTemplateContent(template, title, description, tags);
+    const defaultFile = join(idPath, 'default.md');
+
+    writeFileSync(defaultFile, content);
+    console.log(`\n✅ Created: ${defaultFile}\n`);
   }
-
-  // Check if language file already exists
-  const langFile = join(idPath, `${lang}.md`);
-  if (existsSync(langFile)) {
-    console.log(`\n❌ File already exists: ${langFile}`);
-    rl.close();
-    return;
-  }
-
-  // Get title
-  const title = await prompt('Title: ');
-  if (!title) {
-    console.log('Title is required.');
-    rl.close();
-    return;
-  }
-
-  // Get description
-  const description = await prompt('Description (10-200 chars): ');
-  if (description.length < 10 || description.length > 200) {
-    console.log('Description must be 10-200 characters.');
-    rl.close();
-    return;
-  }
-
-  // Get tags
-  const tagsInput = await prompt('Tags (comma-separated, optional): ');
-  const tags = tagsInput
-    ? tagsInput.split(',').map((t) => t.trim()).filter(Boolean)
-    : [];
-
-  // Generate content from template
-  const content = getTemplateContent(template, title, description, tags);
-
-  writeFileSync(langFile, content);
-  console.log(`\n✅ Created: ${langFile}\n`);
 
   rl.close();
 }

@@ -1,8 +1,7 @@
-import { type Lang } from '@i18n/config';
 import { SITE_URL } from './seo';
 
 /**
- * 生成 WebSite 结构化数据 (用于首页)
+ * Generate WebSite structured data (for home page)
  */
 export function generateWebSiteSchema() {
   return {
@@ -11,7 +10,7 @@ export function generateWebSiteSchema() {
     name: 'quickstart.to',
     description: 'The TL;DR of everything',
     url: SITE_URL,
-    inLanguage: ['en', 'zh', 'de', 'fr', 'es'],
+    inLanguage: 'en',
     publisher: {
       '@type': 'Organization',
       name: 'quickstart.to',
@@ -27,13 +26,12 @@ interface ArticleData {
   title: string;
   description: string;
   url: string;
-  lang: Lang;
   category: string;
   ogImage: string;
 }
 
 /**
- * 生成 TechArticle 结构化数据 (用于内容页)
+ * Generate TechArticle structured data (for content pages)
  */
 export function generateArticleSchema(data: ArticleData) {
   return {
@@ -42,7 +40,7 @@ export function generateArticleSchema(data: ArticleData) {
     headline: data.title,
     description: data.description,
     url: data.url,
-    inLanguage: data.lang,
+    inLanguage: 'en',
     image: data.ogImage,
     author: {
       '@type': 'Organization',
@@ -70,7 +68,7 @@ interface BreadcrumbItem {
 }
 
 /**
- * 生成 BreadcrumbList 结构化数据
+ * Generate BreadcrumbList structured data
  */
 export function generateBreadcrumbSchema(items: BreadcrumbItem[]) {
   return {
@@ -86,7 +84,7 @@ export function generateBreadcrumbSchema(items: BreadcrumbItem[]) {
 }
 
 /**
- * 为内容页生成完整的结构化数据数组
+ * Generate complete structured data array for content pages
  */
 export function generateQuickstartSchemas(data: ArticleData): object[] {
   const breadcrumbItems: BreadcrumbItem[] = [

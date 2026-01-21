@@ -31,16 +31,15 @@ Add a new guide for a technology or skill.
 | `aha` | Free-form content | Humor, satire |
 | `collection` | Curated content indexes | Topic hubs |
 
-### 2. Translation
+### 2. Variants
 
-Translate an existing quickstart to another language.
+Add a variant of an existing quickstart (e.g., Chinese translation, advanced version).
 
-**Supported languages:**
-- English (en)
-- Chinese (zh)
-- German (de)
-- French (fr)
-- Spanish (es)
+**How variants work:**
+- `default.md` - Required default version
+- `zh.md` - Chinese variant
+- `advanced.md` - Advanced variant
+- Any other `{name}.md` files
 
 ### 3. Improvements
 
@@ -75,7 +74,9 @@ Or manually create:
 
 ```
 src/content/{category}/{id}/
-├── {lang}.md       # Any language (en.md, zh.md, de.md, etc.)
+├── default.md      # Required default version
+├── zh.md           # Optional Chinese variant
+├── advanced.md     # Optional advanced variant
 └── assets/         # Optional images
 ```
 

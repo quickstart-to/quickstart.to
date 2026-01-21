@@ -95,6 +95,17 @@ export function validateStructure(contentDir: string): ValidationError[] {
 
         if (!stat.isDirectory()) continue;
 
+        // Check if default.md exists
+        const defaultPath = join(entryPath, 'default.md');
+        if (!existsSync(defaultPath)) {
+          errors.push({
+            file: entryPath,
+            rule: 'structure',
+            message: 'Missing required default.md file',
+            suggestion: 'Create a default.md file as the default variant',
+          });
+        }
+
         const files = readdirSync(entryPath).filter(
           (f) => f.endsWith('.md') && !f.startsWith('_')
         );

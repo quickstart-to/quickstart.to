@@ -1,0 +1,56 @@
+name: Variant Request
+description: Request or offer to create a variant of an existing quickstart
+title: "[Variant] "
+labels: ["variant"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping with variants! Please fill out the details below.
+
+  - type: input
+    id: quickstart
+    attributes:
+      label: Quickstart
+      description: Which quickstart do you want to create a variant for?
+      placeholder: docker
+    validations:
+      required: true
+
+  - type: input
+    id: variant-name
+    attributes:
+      label: Variant Name
+      description: The variant filename (without .md extension)
+      placeholder: "e.g., zh, advanced, beginner"
+    validations:
+      required: true
+
+  - type: textarea
+    id: variant-description
+    attributes:
+      label: Variant Description
+      description: Describe what this variant will contain
+      placeholder: "e.g., Chinese translation, Advanced usage guide, Beginner-friendly version"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type
+      description: Are you requesting a variant or offering to create it?
+      options:
+        - I will create this variant
+        - Requesting someone to create
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: guidelines
+    attributes:
+      label: Guidelines
+      options:
+        - label: I have read the CONTRIBUTING guidelines
+          required: true

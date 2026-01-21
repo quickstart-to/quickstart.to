@@ -4,34 +4,28 @@ import QuickstartCard from '@components/QuickstartCard.astro';
 import CategoryFilter from '@components/CategoryFilter.astro';
 import Search from '@components/Search.astro';
 import TopContributors from '@components/TopContributors.astro';
-import { getAllQuickstarts, getAvailableLanguages } from '@utils/content';
-import { defaultLang, type Lang, supportedLangs } from '@i18n/config';
-import { t } from '@utils/language';
+import { getAllQuickstarts, getAvailableVariants } from '@utils/content';
+import { DEFAULT_VARIANT } from '@utils/variant';
 import { getHomeCanonicalUrl, getDefaultOgImageUrl } from '@utils/seo';
 import { generateWebSiteSchema } from '@utils/schema';
 
-const lang = defaultLang;
-const canonicalUrl = getHomeCanonicalUrl(lang);
-const alternateUrls = supportedLangs.map((l) => ({
-  lang: l as typeof l | 'x-default',
-  url: getHomeCanonicalUrl(l),
-}));
-alternateUrls.push({ lang: 'x-default', url: getHomeCanonicalUrl(defaultLang) });
+const canonicalUrl = getHomeCanonicalUrl();
 const websiteSchema = generateWebSiteSchema();
 const allQuickstarts = await getAllQuickstarts();
 
-// Get unique quickstarts for default language, or fallback
+// Get unique quickstarts for default variant only
 const uniqueIds = [...new Set(allQuickstarts.map((q) => q.id))];
 const quickstarts = await Promise.all(
   uniqueIds.map(async (id) => {
-    const entry = allQuickstarts.find((q) => q.id === id && q.lang === lang) ??
+    // Prefer default variant
+    const entry = allQuickstarts.find((q) => q.id === id && q.variant === DEFAULT_VARIANT) ??
       allQuickstarts.find((q) => q.id === id);
     if (!entry) return null;
 
-    const availableLanguages = await getAvailableLanguages(id);
+    const availableVariants = await getAvailableVariants(id);
     return {
       ...entry,
-      availableLanguages,
+      availableVariants,
     };
   })
 );
@@ -41,13 +35,11 @@ const validQuickstarts = quickstarts.filter(Boolean);
 
 <BaseLayout
   title="quickstart.to"
-  lang={lang}
   canonicalUrl={canonicalUrl}
-  alternateUrls={alternateUrls}
   schemas={websiteSchema}
 >
   <div class="page-background"></div>
-  
+
   <section class="hero">
     <div class="hero-content container">
       <div class="hero-badge">
@@ -56,20 +48,16 @@ const validQuickstarts = quickstarts.filter(Boolean);
       <h1 class="hero-title">
         <span class="hero-title-main">quickstart.to/<span class="typewriter" id="typewriter"></span></span>
       </h1>
-      <p class="hero-subtitle">{t(lang, 'site.description')}</p>
-      
+      <p class="hero-subtitle">The TL;DR of everything</p>
+
       <div class="hero-search">
-        <Search lang={lang} variant="hero" />
+        <Search variant="hero" />
       </div>
 
       <div class="hero-stats">
         <div class="stat-item">
           <span class="stat-value">{validQuickstarts.length}</span>
           <span class="stat-label">Guides</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-value">{supportedLangs.length}</span>
-          <span class="stat-label">Languages</span>
         </div>
         <div class="stat-item">
           <span class="stat-value">Free</span>
@@ -82,9 +70,9 @@ const validQuickstarts = quickstarts.filter(Boolean);
   <section class="quickstarts container">
     <div class="section-header">
       <h2 class="section-title">Explore Guides</h2>
-      <CategoryFilter lang={lang} />
+      <CategoryFilter />
     </div>
-    
+
     <div class="quickstart-grid">
       {
         validQuickstarts.map((q) => (
@@ -93,8 +81,7 @@ const validQuickstarts = quickstarts.filter(Boolean);
             title={q!.entry.data.title}
             description={q!.entry.data.description}
             category={q!.category}
-            lang={q!.lang}
-            availableLanguages={q!.availableLanguages}
+            availableVariants={q!.availableVariants}
           />
         ))
       }
@@ -106,7 +93,7 @@ const validQuickstarts = quickstarts.filter(Boolean);
       <h2 class="section-title">Top Contributors</h2>
       <p class="section-desc">Thanks to everyone who helps maintain these guides.</p>
     </div>
-    <TopContributors lang={lang} />
+    <TopContributors />
   </section>
 </BaseLayout>
 
@@ -287,7 +274,7 @@ const validQuickstarts = quickstarts.filter(Boolean);
     margin-bottom: 1.5rem;
     color: var(--color-text);
   }
-  
+
   .section-desc {
     color: var(--color-text-secondary);
     max-width: 30rem;
@@ -299,12 +286,12 @@ const validQuickstarts = quickstarts.filter(Boolean);
     grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
     gap: 2rem;
   }
-  
+
   .contributors {
     padding-bottom: 6rem;
     text-align: center;
   }
-  
+
   .contributors-header {
     margin-bottom: 3rem;
   }
@@ -326,11 +313,11 @@ const validQuickstarts = quickstarts.filter(Boolean);
       font-size: 1.125rem;
       margin-bottom: 2rem;
     }
-    
+
     .hero-stats {
       gap: 1rem;
     }
-    
+
     .stat-value {
       font-size: 1.25rem;
     }

@@ -1,13 +1,9 @@
 ---
-import { type Lang } from '@i18n/config';
-import { t } from '@utils/language';
-
 interface Props {
   headings: { depth: number; slug: string; text: string }[];
-  lang: Lang;
 }
 
-const { headings, lang } = Astro.props;
+const { headings } = Astro.props;
 
 // Only show h2 and h3
 const filteredHeadings = headings.filter((h) => h.depth >= 2 && h.depth <= 3);
@@ -15,8 +11,8 @@ const filteredHeadings = headings.filter((h) => h.depth >= 2 && h.depth <= 3);
 
 {
   filteredHeadings.length > 0 && (
-    <nav class="toc" aria-label={t(lang, 'content.toc')}>
-      <h2 class="toc-title">{t(lang, 'content.toc')}</h2>
+    <nav class="toc" aria-label="Table of Contents">
+      <h2 class="toc-title">On this page</h2>
       <ul class="toc-list">
         {filteredHeadings.map((heading) => (
           <li class={`toc-item depth-${heading.depth}`}>

@@ -1,13 +1,9 @@
 ---
-import { type Lang } from '@i18n/config';
-import { t } from '@utils/language';
-
 interface Props {
-  lang: Lang;
   variant?: 'default' | 'hero';
 }
 
-const { lang, variant = 'default' } = Astro.props;
+const { variant = 'default' } = Astro.props;
 ---
 
 <div class:list={['search', `search-${variant}`]}>
@@ -19,7 +15,7 @@ const { lang, variant = 'default' } = Astro.props;
     <input
       type="search"
       id="search-input"
-      placeholder={t(lang, 'search.placeholder')}
+      placeholder="Search guides..."
       class="search-input"
       autocomplete="off"
     />

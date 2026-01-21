@@ -2,19 +2,17 @@
 import BaseLayout from './BaseLayout.astro';
 import TableOfContents from '@components/TableOfContents.astro';
 import ContributorList from '@components/ContributorList.astro';
-import LanguageSwitcher from '@components/LanguageSwitcher.astro';
-import { type Lang } from '@i18n/config';
-import { t } from '@utils/language';
-import { getCanonicalUrl, getAlternateUrls, getOgImageUrl } from '@utils/seo';
+import VariantSwitcher from '@components/VariantSwitcher.astro';
+import { getCanonicalUrl, getOgImageUrl } from '@utils/seo';
 import { generateQuickstartSchemas } from '@utils/schema';
 
 interface Props {
   title: string;
   description: string;
-  lang: Lang;
+  variant: string;
   category: string;
   id: string;
-  availableLanguages: Lang[];
+  availableVariants: string[];
   headings: { depth: number; slug: string; text: string }[];
   filePath: string;
 }
@@ -22,22 +20,20 @@ interface Props {
 const {
   title,
   description,
-  lang,
+  variant,
   category,
   id,
-  availableLanguages,
+  availableVariants,
   headings,
   filePath,
 } = Astro.props;
 
-const canonicalUrl = getCanonicalUrl(id, lang);
-const alternateUrls = getAlternateUrls(id, availableLanguages);
-const ogImageUrl = getOgImageUrl(id, lang);
+const canonicalUrl = getCanonicalUrl(id, variant);
+const ogImageUrl = getOgImageUrl(id, variant);
 const schemas = generateQuickstartSchemas({
   title,
   description,
   url: canonicalUrl,
-  lang,
   category,
   ogImage: ogImageUrl,
 });
@@ -46,10 +42,8 @@ const schemas = generateQuickstartSchemas({
 <BaseLayout
   title={title}
   description={description}
-  lang={lang}
   id={id}
   canonicalUrl={canonicalUrl}
-  alternateUrls={alternateUrls}
   ogImage={ogImageUrl}
   ogType="article"
   category={category}
@@ -59,10 +53,10 @@ const schemas = generateQuickstartSchemas({
     <header class="quickstart-header">
       <div class="quickstart-meta">
         <span class="tag">{category}</span>
-        <LanguageSwitcher
-          currentLang={lang}
-          availableLanguages={availableLanguages}
-          currentPath={`/${id}`}
+        <VariantSwitcher
+          currentVariant={variant}
+          availableVariants={availableVariants}
+          currentId={id}
         />
       </div>
       <h1>{title}</h1>
@@ -71,14 +65,14 @@ const schemas = generateQuickstartSchemas({
 
     <div class="quickstart-content-wrapper">
       <aside class="quickstart-sidebar">
-        <TableOfContents headings={headings} lang={lang} />
+        <TableOfContents headings={headings} />
       </aside>
 
       <div class="quickstart-content content">
         <slot />
 
         <footer class="quickstart-footer">
-          <ContributorList filePath={filePath} lang={lang} />
+          <ContributorList filePath={filePath} />
         </footer>
       </div>
     </div>

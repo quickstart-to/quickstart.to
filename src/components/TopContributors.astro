@@ -1,15 +1,12 @@
 ---
 import ContributorAvatar from './ContributorAvatar.astro';
 import { getTopContributors } from '@utils/contributors';
-import { type Lang } from '@i18n/config';
-import { t } from '@utils/language';
 
 interface Props {
-  lang: Lang;
   limit?: number;
 }
 
-const { lang, limit = 10 } = Astro.props;
+const { limit = 10 } = Astro.props;
 
 const contributors = await getTopContributors(limit);
 ---
@@ -17,8 +14,8 @@ const contributors = await getTopContributors(limit);
 {
   contributors.length > 0 && (
     <section class="top-contributors">
-      <h2 class="section-title">{t(lang, 'contributors.title')}</h2>
-      <p class="section-description">{t(lang, 'contributors.description')}</p>
+      <h2 class="section-title">Top Contributors</h2>
+      <p class="section-description">Thanks to everyone who helps maintain these guides.</p>
       <div class="contributor-wall">
         {contributors.map((c) => (
           <ContributorAvatar

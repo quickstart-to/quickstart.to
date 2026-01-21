@@ -12,7 +12,7 @@ quickstart.to is a collection of concise, actionable quickstart guides. Each gui
 
 - **No-fluff**: Just the essentials, no lengthy explanations
 - **Community-driven**: Anyone can contribute
-- **Multilingual**: Available in multiple languages
+- **Variant support**: Multiple versions per topic (translations, advanced versions, etc.)
 - **Open-source**: MIT licensed
 
 ## Quick Start
@@ -61,14 +61,14 @@ src/
 ├── content/
 │   ├── tech/           # Technology guides
 │   │   └── {id}/
-│   │       ├── en.md   # English version
-│   │       ├── zh.md   # Chinese version
-│   │       └── assets/ # Images and assets
+│   │       ├── default.md  # Default version (required)
+│   │       ├── zh.md       # Chinese variant (optional)
+│   │       └── assets/     # Images and assets
 │   └── life/           # Life skill guides
 ├── components/         # Astro components
 ├── layouts/            # Page layouts
 ├── pages/              # Route pages
-└── i18n/               # Internationalization
+└── utils/              # Utilities
 ```
 
 ## Contributing
@@ -78,7 +78,7 @@ We welcome contributions! See [CONTRIBUTING.md](./CONTRIBUTING.md) for guideline
 ### Types of Contributions
 
 - **New quickstarts**: Add a new guide
-- **Translations**: Translate existing guides
+- **Variants**: Add translations or alternative versions
 - **Improvements**: Fix typos, improve clarity
 
 ## Tech Stack

@@ -31,16 +31,15 @@
 | `aha` | 自由形式 | 幽默、讽刺 |
 | `collection` | 内容索引 | 主题中心 |
 
-### 2. 翻译
+### 2. 变体
 
-将现有的 quickstart 翻译成其他语言。
+为现有的 quickstart 添加变体（例如：中文翻译、高级版本）。
 
-**支持的语言：**
-- 英语 (en)
-- 中文 (zh)
-- 德语 (de)
-- 法语 (fr)
-- 西班牙语 (es)
+**变体工作方式：**
+- `default.md` - 必需的默认版本
+- `zh.md` - 中文变体
+- `advanced.md` - 高级变体
+- 其他 `{name}.md` 文件
 
 ### 3. 改进
 
@@ -75,7 +74,9 @@ pnpm new
 
 ```
 src/content/{category}/{id}/
-├── {lang}.md       # 任意语言 (en.md, zh.md, de.md 等)
+├── default.md      # 必需的默认版本
+├── zh.md           # 可选的中文变体
+├── advanced.md     # 可选的高级变体
 └── assets/         # 可选的图片
 ```
 

@@ -1,14 +1,6 @@
 ---
 import ContributorAvatar from './ContributorAvatar.astro';
 import { getAllContributors, getContributorQuickstartCount } from '@utils/contributors';
-import { type Lang } from '@i18n/config';
-import { t } from '@utils/language';
-
-interface Props {
-  lang: Lang;
-}
-
-const { lang } = Astro.props;
 
 const contributors = await getAllContributors();
 ---
@@ -37,11 +29,11 @@ const contributors = await getAllContributors();
             </h3>
             <div class="ranking-stats">
               <span>
-                {getContributorQuickstartCount(contributor)} {t(lang, 'contributors.quickstarts')}
+                {getContributorQuickstartCount(contributor)} guides
               </span>
               <span class="stat-separator">·</span>
               <span>
-                {contributor.totalCommits} {t(lang, 'contributors.commits')}
+                {contributor.totalCommits} commits
               </span>
             </div>
           </div>

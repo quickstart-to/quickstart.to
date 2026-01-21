@@ -1,16 +1,12 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
-import { defaultLang } from '@i18n/config';
-import { t } from '@utils/language';
-
-const lang = defaultLang;
 ---
 
-<BaseLayout title="404 - Page Not Found" lang={lang}>
+<BaseLayout title="404 - Page Not Found">
   <section class="not-found container">
     <h1 class="error-code">404</h1>
-    <p class="error-message">{t(lang, 'error.notFound')}</p>
-    <a href="/" class="btn">{t(lang, 'error.backHome')}</a>
+    <p class="error-message">Page not found</p>
+    <a href="/" class="btn">Back to Home</a>
   </section>
 </BaseLayout>
 

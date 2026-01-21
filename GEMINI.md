@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-`quickstart.to` is an open-source, community-driven knowledge base providing concise, "no-fluff" quickstart guides for various technologies and life skills. It is built using the **Astro** static site generator and allows for multilingual content.
+`quickstart.to` is an open-source, community-driven knowledge base providing concise, "no-fluff" quickstart guides for various technologies and life skills. It is built using the **Astro** static site generator with support for content variants.
 
 ## Building and Running
 
@@ -40,11 +40,11 @@ The project uses **pnpm** for package management.
 ## Project Structure
 
 -   **`src/content/`**: Contains the actual quickstart guides, categorized into `tech/` and `life/`.
-    -   Each guide is a directory (e.g., `src/content/tech/docker/`) containing Markdown files for different languages (e.g., `en.md`, `zh.md`) and an `assets/` subdirectory.
+    -   Each guide is a directory (e.g., `src/content/tech/docker/`) containing Markdown files for different variants (e.g., `default.md`, `zh.md`, `advanced.md`) and an `assets/` subdirectory.
 -   **`src/templates/`**: Markdown templates (`tool.md`, `language.md`, etc.) used when creating new guides.
 -   **`src/components/`**: Astro UI components.
 -   **`scripts/`**: TypeScript scripts for the CLI (`new-quickstart.ts`) and validation logic.
--   **`astro.config.mjs`**: Astro configuration, including i18n and sitemap settings.
+-   **`astro.config.mjs`**: Astro configuration and sitemap settings.
 
 ## Development Conventions
 
@@ -77,8 +77,8 @@ The project uses **pnpm** for package management.
 
 Always run `pnpm validate` before submitting changes to ensure content adheres to the structure and naming conventions.
 
-### Internationalization (i18n)
+### Variants
 
--   Supported locales: `en`, `zh`, `de`, `fr`, `es`.
--   Files are named with the locale code (e.g., `zh.md` for Chinese).
--   `en` is the default locale.
+-   `default.md` is the required default variant
+-   Additional variants can be any name (e.g., `zh.md`, `advanced.md`, `beginner.md`)
+-   Variants are accessed via URL path suffix (e.g., `/docker/zh`, `/docker/advanced`)

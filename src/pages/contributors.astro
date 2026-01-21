@@ -1,24 +1,19 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
 import ContributorRanking from '@components/ContributorRanking.astro';
-import { defaultLang } from '@i18n/config';
-import { t } from '@utils/language';
-
-const lang = defaultLang;
 ---
 
 <BaseLayout
-  title={t(lang, 'contributors.title')}
-  description={t(lang, 'contributors.description')}
-  lang={lang}
+  title="Contributors"
+  description="Thanks to everyone who helps maintain these guides."
 >
   <section class="contributors-page container">
     <header class="page-header">
-      <h1>{t(lang, 'contributors.title')}</h1>
-      <p>{t(lang, 'contributors.description')}</p>
+      <h1>Contributors</h1>
+      <p>Thanks to everyone who helps maintain these guides.</p>
     </header>
 
-    <ContributorRanking lang={lang} />
+    <ContributorRanking />
   </section>
 </BaseLayout>
 

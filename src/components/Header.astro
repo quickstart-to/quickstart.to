@@ -1,14 +1,11 @@
 ---
-import { type Lang, languages } from '@i18n/config';
-import { t } from '@utils/language';
 import ThemeToggle from './ThemeToggle.astro';
 
 interface Props {
-  lang: Lang;
   id?: string;
 }
 
-const { lang, id } = Astro.props;
+const { id } = Astro.props;
 ---
 
 <header class="header">
@@ -20,8 +17,8 @@ const { lang, id } = Astro.props;
     </a>
 
     <nav class="nav nav-desktop">
-      <a href="/" class="nav-link">{t(lang, 'nav.home')}</a>
-      <a href="/contributors" class="nav-link">{t(lang, 'nav.contributors')}</a>
+      <a href="/" class="nav-link">Home</a>
+      <a href="/contributors" class="nav-link">Contributors</a>
     </nav>
 
     <div class="header-actions">
@@ -61,8 +58,8 @@ const { lang, id } = Astro.props;
   </div>
 
   <nav class="nav-mobile">
-    <a href="/" class="nav-link">{t(lang, 'nav.home')}</a>
-    <a href="/contributors" class="nav-link">{t(lang, 'nav.contributors')}</a>
+    <a href="/" class="nav-link">Home</a>
+    <a href="/contributors" class="nav-link">Contributors</a>
   </nav>
 </header>
 

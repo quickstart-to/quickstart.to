@@ -41,11 +41,11 @@ export async function getTopContributors(limit: number = 10): Promise<Contributo
 }
 
 export function getContributorQuickstartCount(contributor: Contributor): number {
-  // Count unique quickstart IDs (ignoring language suffix)
+  // Count unique quickstart IDs (ignoring variant suffix)
   const quickstartIds = new Set<string>();
 
   for (const file of contributor.files) {
-    // path: src/content/tech/docker/en.md -> docker
+    // path: src/content/tech/docker/default.md -> docker
     const match = file.path.match(/src\/content\/\w+\/([^/]+)\//);
     if (match) {
       quickstartIds.add(match[1]);

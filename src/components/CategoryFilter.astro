@@ -1,17 +1,8 @@
 ---
-import { type Lang } from '@i18n/config';
-import { t } from '@utils/language';
-
-interface Props {
-  lang: Lang;
-}
-
-const { lang } = Astro.props;
-
 const categories = [
-  { key: 'all', label: t(lang, 'category.all') },
-  { key: 'tech', label: t(lang, 'category.tech') },
-  { key: 'life', label: t(lang, 'category.life') },
+  { key: 'all', label: 'All' },
+  { key: 'tech', label: 'Tech' },
+  { key: 'life', label: 'Life' },
 ];
 ---
 
@@ -134,7 +125,7 @@ const categories = [
       justify-content: flex-start;
       border-radius: var(--radius);
     }
-    
+
     .filter-btn {
       flex: 1;
       white-space: nowrap;

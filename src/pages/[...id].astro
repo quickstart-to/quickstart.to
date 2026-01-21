@@ -2,47 +2,71 @@
 import QuickstartLayout from '@layouts/QuickstartLayout.astro';
 import {
   getAllQuickstarts,
-  getQuickstartByIdWithFallback,
-  getAvailableLanguages,
+  getQuickstartById,
+  getAvailableVariants,
 } from '@utils/content';
-import { defaultLang } from '@i18n/config';
+import { DEFAULT_VARIANT } from '@utils/variant';
 
 export async function getStaticPaths() {
   const quickstarts = await getAllQuickstarts();
-  const uniqueIds = [...new Set(quickstarts.map((q) => q.id))];
+  const paths: { params: { id: string }; props: { contentId: string; variant: string } }[] = [];
 
-  return uniqueIds.map((id) => ({
-    params: { id },
-  }));
+  // Collect all unique IDs and their variants
+  const idMap = new Map<string, string[]>();
+  for (const q of quickstarts) {
+    if (!idMap.has(q.id)) idMap.set(q.id, []);
+    idMap.get(q.id)!.push(q.variant);
+  }
+
+  for (const [contentId, variants] of idMap) {
+    // Default variant: /docker
+    if (variants.includes(DEFAULT_VARIANT)) {
+      paths.push({
+        params: { id: contentId },
+        props: { contentId, variant: DEFAULT_VARIANT },
+      });
+    }
+    // Other variants: /docker/zh
+    for (const variant of variants) {
+      if (variant !== DEFAULT_VARIANT) {
+        paths.push({
+          params: { id: `${contentId}/${variant}` },
+          props: { contentId, variant },
+        });
+      }
+    }
+  }
+
+  return paths;
 }
 
-const { id } = Astro.params;
-
-if (!id) {
-  return Astro.redirect('/404');
+interface Props {
+  contentId: string;
+  variant: string;
 }
 
-const lang = defaultLang;
-const quickstart = await getQuickstartByIdWithFallback(id, lang);
+const { contentId, variant } = Astro.props;
+
+const quickstart = await getQuickstartById(contentId, variant);
 
 if (!quickstart) {
   return Astro.redirect('/404');
 }
 
-const availableLanguages = await getAvailableLanguages(id);
+const availableVariants = await getAvailableVariants(contentId);
 const { Content, headings } = await quickstart.entry.render();
 
 // Construct file path for contributors
-const filePath = `src/content/${quickstart.category}/${id}/${quickstart.lang}.md`;
+const filePath = `src/content/${quickstart.category}/${contentId}/${variant}.md`;
 ---
 
 <QuickstartLayout
   title={quickstart.entry.data.title}
   description={quickstart.entry.data.description}
-  lang={quickstart.lang}
+  variant={variant}
   category={quickstart.category}
-  id={id}
-  availableLanguages={availableLanguages}
+  id={contentId}
+  availableVariants={availableVariants}
   headings={headings}
   filePath={filePath}
 >

@@ -3,7 +3,6 @@ import { join } from 'path';
 import type { ValidationError } from './types.js';
 import { VALID_TEMPLATES } from './types.js';
 
-const VALID_LANGS = ['en', 'zh', 'de', 'fr', 'es'];
 const MIN_DESCRIPTION_LENGTH = 10;
 const MAX_DESCRIPTION_LENGTH = 200;
 
@@ -54,6 +53,16 @@ export function validateFrontmatter(contentDir: string): ValidationError[] {
         const files = readdirSync(entryPath).filter(
           (f) => f.endsWith('.md') && !f.startsWith('_')
         );
+
+        // Check if default.md exists
+        if (!files.includes('default.md')) {
+          errors.push({
+            file: entryPath,
+            rule: 'frontmatter',
+            message: 'Missing required default.md file',
+            suggestion: 'Every quickstart must have a default.md file as the default variant',
+          });
+        }
 
         for (const file of files) {
           const filePath = join(entryPath, file);
@@ -132,17 +141,6 @@ export function validateFrontmatter(contentDir: string): ValidationError[] {
                 suggestion: `Create the template file at src/templates/${frontmatter.template}.md`,
               });
             }
-          }
-
-          // Check language file name
-          const lang = file.replace('.md', '');
-          if (!VALID_LANGS.includes(lang)) {
-            errors.push({
-              file: filePath,
-              rule: 'frontmatter',
-              message: `Invalid language code: ${lang}`,
-              suggestion: `Use one of: ${VALID_LANGS.join(', ')}`,
-            });
           }
         }
       }

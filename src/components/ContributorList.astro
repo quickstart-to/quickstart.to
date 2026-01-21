@@ -1,15 +1,12 @@
 ---
 import ContributorAvatar from './ContributorAvatar.astro';
 import { getContributorsForFile } from '@utils/contributors';
-import { type Lang } from '@i18n/config';
-import { t } from '@utils/language';
 
 interface Props {
   filePath: string;
-  lang: Lang;
 }
 
-const { filePath, lang } = Astro.props;
+const { filePath } = Astro.props;
 
 const contributors = await getContributorsForFile(filePath);
 ---
@@ -17,7 +14,7 @@ const contributors = await getContributorsForFile(filePath);
 {
   contributors.length > 0 && (
     <section class="contributor-list">
-      <h3 class="contributor-title">{t(lang, 'content.contributors')}</h3>
+      <h3 class="contributor-title">Contributors</h3>
       <div class="contributor-avatars">
         {contributors.map((c) => (
           <ContributorAvatar

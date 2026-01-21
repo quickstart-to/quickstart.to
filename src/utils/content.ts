@@ -1,11 +1,11 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
-import { defaultLang, type Lang } from '@i18n/config';
+import { DEFAULT_VARIANT } from './variant';
 
 export type Category = 'tech' | 'life';
 
 export interface QuickstartEntry {
   id: string;
-  lang: Lang;
+  variant: string;
   category: Category;
   entry: CollectionEntry<'tech'> | CollectionEntry<'life'>;
 }
@@ -15,15 +15,15 @@ export async function getAllQuickstarts(): Promise<QuickstartEntry[]> {
   const lifeEntries = await getCollection('life');
 
   const parseEntry = (entry: CollectionEntry<'tech'> | CollectionEntry<'life'>, category: Category): QuickstartEntry | null => {
-    // entry.id is like "docker/en" or "docker/zh"
+    // entry.id is like "docker/default" or "docker/zh"
     const parts = entry.id.split('/');
     if (parts.length < 2) return null;
 
     const id = parts.slice(0, -1).join('/');
-    const langFile = parts[parts.length - 1];
-    const lang = langFile.replace(/\.md$/, '') as Lang;
+    const variantFile = parts[parts.length - 1];
+    const variant = variantFile.replace(/\.md$/, '');
 
-    return { id, lang, category, entry };
+    return { id, variant, category, entry };
   };
 
   const techQuickstarts = techEntries.map((e) => parseEntry(e, 'tech')).filter(Boolean) as QuickstartEntry[];
@@ -32,25 +32,25 @@ export async function getAllQuickstarts(): Promise<QuickstartEntry[]> {
   return [...techQuickstarts, ...lifeQuickstarts];
 }
 
-export async function getQuickstartById(id: string, lang: Lang): Promise<QuickstartEntry | undefined> {
+export async function getQuickstartById(id: string, variant: string): Promise<QuickstartEntry | undefined> {
   const all = await getAllQuickstarts();
-  return all.find((q) => q.id === id && q.lang === lang);
+  return all.find((q) => q.id === id && q.variant === variant);
 }
 
-export async function getQuickstartByIdWithFallback(id: string, lang: Lang): Promise<QuickstartEntry | undefined> {
+export async function getQuickstartByIdWithFallback(id: string, variant: string): Promise<QuickstartEntry | undefined> {
   const all = await getAllQuickstarts();
 
   // Try exact match first
-  const exact = all.find((q) => q.id === id && q.lang === lang);
+  const exact = all.find((q) => q.id === id && q.variant === variant);
   if (exact) return exact;
 
-  // Fallback to default language
-  return all.find((q) => q.id === id && q.lang === defaultLang);
+  // Fallback to default variant
+  return all.find((q) => q.id === id && q.variant === DEFAULT_VARIANT);
 }
 
-export async function getAvailableLanguages(id: string): Promise<Lang[]> {
+export async function getAvailableVariants(id: string): Promise<string[]> {
   const all = await getAllQuickstarts();
-  return all.filter((q) => q.id === id).map((q) => q.lang);
+  return all.filter((q) => q.id === id).map((q) => q.variant);
 }
 
 export async function getUniqueQuickstartIds(): Promise<string[]> {
@@ -58,7 +58,7 @@ export async function getUniqueQuickstartIds(): Promise<string[]> {
   return [...new Set(all.map((q) => q.id))];
 }
 
-export async function getQuickstartsByCategory(category: Category, lang?: Lang): Promise<QuickstartEntry[]> {
+export async function getQuickstartsByCategory(category: Category, variant?: string): Promise<QuickstartEntry[]> {
   const all = await getAllQuickstarts();
-  return all.filter((q) => q.category === category && (!lang || q.lang === lang));
+  return all.filter((q) => q.category === category && (!variant || q.variant === variant));
 }
