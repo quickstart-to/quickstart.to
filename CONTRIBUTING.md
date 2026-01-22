@@ -56,6 +56,15 @@ tagline: "Short bio"       # 10-160 chars (optional)
 - Only you can modify your profile
 - Variants (like `zh.md`) inherit ownership from `default.md`
 
+**Username Verification:**
+- **Same name**: If your profile username matches your GitHub username, it passes automatically
+- **Different name (alias)**: If you want to use a different username (e.g., GitHub is `john-doe` but profile is `@johnny`):
+  1. Submit your PR normally
+  2. The CI will generate a verification challenge code
+  3. Add the challenge code to your social bio (Twitter/GitHub/etc)
+  4. Request a maintainer to verify and add the `verified-alias` label
+  5. Once labeled, your PR can be merged
+
 ### 3. Variants
 
 Add a variant of an existing quickstart (e.g., Chinese translation, advanced version).

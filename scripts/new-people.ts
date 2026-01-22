@@ -6,6 +6,11 @@ const CONTENT_DIR = join(process.cwd(), 'src', 'content');
 const TEMPLATES_DIR = join(process.cwd(), 'src', 'templates');
 const PEOPLE_DIR = join(CONTENT_DIR, 'people');
 
+// Username validation constants
+const USERNAME_MIN_LENGTH = 1;
+const USERNAME_MAX_LENGTH = 39;
+const USERNAME_PATTERN = /^[a-zA-Z0-9_-]+$/;
+
 // Reserved usernames that cannot be used
 const RESERVED_USERNAMES = [
   'admin',
@@ -49,16 +54,16 @@ function validateUsername(username: string): string | null {
 
   const name = username.slice(1);
 
-  // Check length (1-39 characters without @)
-  if (name.length < 1) {
+  // Check length
+  if (name.length < USERNAME_MIN_LENGTH) {
     return 'Username cannot be empty';
   }
-  if (name.length > 39) {
-    return 'Username too long (max 39 characters)';
+  if (name.length > USERNAME_MAX_LENGTH) {
+    return `Username too long (max ${USERNAME_MAX_LENGTH} characters)`;
   }
 
   // Only allow letters, numbers, hyphens, underscores
-  if (!/^[a-zA-Z0-9_-]+$/.test(name)) {
+  if (!USERNAME_PATTERN.test(name)) {
     return 'Username can only contain letters, numbers, hyphens, and underscores';
   }
 
@@ -110,7 +115,7 @@ async function main() {
     username = await prompt('Username (e.g., @octocat): ');
     usernameError = validateUsername(username);
     if (usernameError) {
-      console.log(`Invalid username: ${usernameError}`);
+      console.error(`❌ Error: ${usernameError}`);
     }
   }
 
@@ -130,9 +135,9 @@ async function main() {
     while (!variant) {
       variant = await prompt('Variant name (e.g., zh): ');
       if (!variant) {
-        console.log('Variant name cannot be empty');
+        console.error('❌ Error: Variant name cannot be empty');
       } else if (variant === 'default') {
-        console.log('Cannot use "default" as variant name');
+        console.error('❌ Error: Cannot use "default" as variant name');
         variant = '';
       }
     }
@@ -148,7 +153,7 @@ async function main() {
     // Get display name
     const displayName = await prompt('Display name: ');
     if (!displayName) {
-      console.log('Display name is required.');
+      console.error('❌ Error: Display name is required');
       rl.close();
       return;
     }
@@ -156,7 +161,7 @@ async function main() {
     // Get tagline (optional)
     const tagline = await prompt('Tagline (10-160 chars, optional): ');
     if (tagline && (tagline.length < 10 || tagline.length > 160)) {
-      console.log('Tagline must be 10-160 characters.');
+      console.error('❌ Error: Tagline must be 10-160 characters');
       rl.close();
       return;
     }
@@ -184,7 +189,7 @@ display_name: "${displayName}"`;
     while (!ownerId) {
       ownerId = await prompt('GitHub User ID (owner_id): ');
       if (!ownerId || !/^\d+$/.test(ownerId)) {
-        console.log('Please enter a valid numeric GitHub User ID');
+        console.error('❌ Error: Please enter a valid numeric GitHub User ID');
         ownerId = '';
       }
     }
@@ -192,7 +197,7 @@ display_name: "${displayName}"`;
     // Get display name
     const displayName = await prompt('Display name: ');
     if (!displayName) {
-      console.log('Display name is required.');
+      console.error('❌ Error: Display name is required');
       rl.close();
       return;
     }
@@ -200,7 +205,7 @@ display_name: "${displayName}"`;
     // Get tagline (optional)
     const tagline = await prompt('Tagline (10-160 chars, optional): ');
     if (tagline && (tagline.length < 10 || tagline.length > 160)) {
-      console.log('Tagline must be 10-160 characters.');
+      console.error('❌ Error: Tagline must be 10-160 characters');
       rl.close();
       return;
     }

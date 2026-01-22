@@ -13,6 +13,11 @@ export async function getStaticPaths() {
 
   // Collect all non-default variants
   for (const p of people) {
+    // Validate username format
+    if (!p.username.startsWith('@')) {
+      console.warn(`[people] Invalid username format (missing @): ${p.username}`);
+      continue;
+    }
     if (p.variant !== DEFAULT_VARIANT) {
       // Remove @ prefix for the route param
       const usernameWithoutAt = p.username.replace(/^@/, '');

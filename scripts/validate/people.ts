@@ -2,8 +2,14 @@ import { readdirSync, readFileSync, statSync } from 'fs';
 import { join, basename } from 'path';
 import type { ValidationError } from './types.js';
 
+// Tagline length constraints
 const MIN_TAGLINE_LENGTH = 10;
 const MAX_TAGLINE_LENGTH = 160;
+
+// Username validation constants
+const USERNAME_MIN_LENGTH = 1;
+const USERNAME_MAX_LENGTH = 39;
+const USERNAME_PATTERN = /^[a-zA-Z0-9_-]+$/;
 
 // Reserved usernames that cannot be used
 const RESERVED_USERNAMES = [
@@ -68,16 +74,16 @@ function validateUsername(username: string): string | null {
 
   const name = username.slice(1);
 
-  // Check length (1-39 characters without @)
-  if (name.length < 1) {
+  // Check length
+  if (name.length < USERNAME_MIN_LENGTH) {
     return 'Username cannot be empty';
   }
-  if (name.length > 39) {
-    return 'Username too long (max 39 characters)';
+  if (name.length > USERNAME_MAX_LENGTH) {
+    return `Username too long (max ${USERNAME_MAX_LENGTH} characters)`;
   }
 
   // Only allow letters, numbers, hyphens, underscores
-  if (!/^[a-zA-Z0-9_-]+$/.test(name)) {
+  if (!USERNAME_PATTERN.test(name)) {
     return 'Username can only contain letters, numbers, hyphens, and underscores';
   }
 

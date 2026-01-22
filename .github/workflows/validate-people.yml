@@ -110,6 +110,17 @@ jobs:
               }
             }
 
+            // Helper function to escape user input for safe markdown rendering
+            function escapeMarkdown(text) {
+              if (typeof text !== 'string') return String(text);
+              return text.replace(/[<>&`]/g, c => ({
+                '<': '&lt;',
+                '>': '&gt;',
+                '&': '&amp;',
+                '`': '\\`'
+              }[c]));
+            }
+
             const errors = [];
             const warnings = [];
 
@@ -299,10 +310,10 @@ jobs:
               if (errors.length > 0) {
                 body += '### ❌ Errors\n\n';
                 for (const err of errors) {
-                  body += `**${err.file}**\n`;
-                  body += `- ${err.message}\n`;
+                  body += `**${escapeMarkdown(err.file)}**\n`;
+                  body += `- ${escapeMarkdown(err.message)}\n`;
                   if (err.suggestion) {
-                    body += `- 💡 ${err.suggestion}\n`;
+                    body += `- 💡 ${escapeMarkdown(err.suggestion)}\n`;
                   }
                   body += '\n';
                 }
@@ -311,10 +322,10 @@ jobs:
               if (warnings.length > 0) {
                 body += '### ⚠️ Warnings\n\n';
                 for (const warn of warnings) {
-                  body += `**${warn.file}**\n`;
-                  body += `- ${warn.message}\n`;
+                  body += `**${escapeMarkdown(warn.file)}**\n`;
+                  body += `- ${escapeMarkdown(warn.message)}\n`;
                   if (warn.suggestion) {
-                    body += `- 💡 ${warn.suggestion}\n`;
+                    body += `- 💡 ${escapeMarkdown(warn.suggestion)}\n`;
                   }
                   body += '\n';
                 }
