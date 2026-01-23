@@ -95,3 +95,37 @@ export function generateQuickstartSchemas(data: ArticleData): object[] {
 
   return [generateArticleSchema(data), generateBreadcrumbSchema(breadcrumbItems)];
 }
+
+interface PeopleData {
+  displayName: string;
+  tagline?: string;
+  url: string;
+  ogImage: string;
+}
+
+/**
+ * Generate Person structured data for people profiles
+ */
+export function generatePersonSchema(data: PeopleData) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: data.displayName,
+    description: data.tagline || `${data.displayName}'s personal guide`,
+    url: data.url,
+    image: data.ogImage,
+  };
+}
+
+/**
+ * Generate complete structured data array for people profile pages
+ */
+export function generatePeopleSchemas(data: PeopleData): object[] {
+  const breadcrumbItems: BreadcrumbItem[] = [
+    { name: 'Home', url: SITE_URL },
+    { name: 'People' },
+    { name: data.displayName },
+  ];
+
+  return [generatePersonSchema(data), generateBreadcrumbSchema(breadcrumbItems)];
+}

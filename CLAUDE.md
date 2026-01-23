@@ -13,6 +13,7 @@ pnpm dev              # Start development server
 pnpm build            # Build for production (runs prebuild automatically)
 pnpm preview          # Preview production build
 pnpm new              # Interactive CLI to create new quickstart guide
+pnpm new:people       # Interactive CLI to create new people profile
 pnpm validate         # Validate all content (ID naming, frontmatter, assets)
 pnpm contributors     # Fetch contributor data from GitHub API
 pnpm contributors:full # Force full re-fetch of contributors
@@ -24,13 +25,16 @@ pnpm contributors:full # Force full re-fetch of contributors
 ```
 src/content/{category}/{id}/{variant}.md
 src/content/{category}/{id}/assets/   # Optional images
+src/content/people/@{username}/{variant}.md   # People profiles
 ```
-- Categories: `tech`, `life`
+- Categories: `tech`, `life`, `people`
 - Variants: `default.md` (required), plus optional variants like `zh.md`, `advanced.md`, etc.
 
 ### Routing
 - `/docker` → default.md (default variant)
 - `/docker/zh` → zh.md (variant as path suffix)
+- `/@username` → people profile default.md
+- `/@username/zh` → people profile variant
 - `/contributors` → Contributors page
 
 ### Key Directories
@@ -88,6 +92,7 @@ Templates are stored in `src/templates/` as Markdown files. Each content file mu
 | `life` | Non-tech content (Cooking) | TL;DR, Fundamentals, Getting Started, Common Mistakes, Next Steps |
 | `aha` | Free-form content (humor, satire) | None (completely free) |
 | `collection` | Curated content indexes, topic hubs | None (completely free) |
+| `people` | Personal profiles, collaboration guides | None (all sections optional) |
 
 ### Adding a New Template
 
@@ -152,6 +157,32 @@ Source priority:
 - ❌ Using unverified third-party tutorial content
 - ❌ Skipping online verification before generating content
 
+## People Profiles
+
+People profiles are personal "instruction manuals" for collaboration. They use a different frontmatter schema.
+
+### People Frontmatter
+```yaml
+---
+owner_id: 583231                                  # GitHub User ID (required in default.md only)
+display_name: "The Octocat"                       # Display name (required)
+tagline: "GitHub's official mascot"              # 10-160 chars (optional)
+---
+```
+
+### People Profile Rules
+- Directory must start with `@` (e.g., `@octocat`)
+- `owner_id` is required in `default.md` only
+- Variant files (e.g., `zh.md`) must NOT contain `owner_id`
+- One GitHub User ID can only have one profile (anti-hoarding)
+- Only the profile owner can modify their profile
+
+### People Username Rules
+- Must start with `@`
+- Only: letters, numbers, hyphens, underscores
+- Length: 1-39 characters (excluding `@`)
+- Reserved: `admin`, `api`, `help`, `support`, `settings`, etc.
+
 ## Validation
 
 The `pnpm validate` command checks:
@@ -160,6 +191,9 @@ The `pnpm validate` command checks:
 3. **frontmatter** - Required fields (title, description, template), description length
 4. **assets** - File naming conventions
 5. **structure** - Required sections based on template type
+6. **people-naming** - People profile username format
+7. **people-frontmatter** - owner_id, display_name requirements
+8. **people-uniqueness** - One profile per GitHub User ID
 
 ## GitHub API Integration
 

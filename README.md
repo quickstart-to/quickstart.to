@@ -15,6 +15,39 @@ quickstart.to is a collection of concise, actionable quickstart guides. Each gui
 - **Variant support**: Multiple versions per topic (translations, advanced versions, etc.)
 - **Open-source**: MIT licensed
 
+## People Profiles
+
+Create your personal "instruction manual" at `quickstart.to/@username`.
+
+**Philosophy:**
+
+A People Profile is not a resume or portfolio—it's a **collaboration guide**. We encourage profiles that:
+
+- **Help others work with you** - What's the best way to reach you? What topics can you help with?
+- **Stay actionable** - Skip the life story, focus on what matters for collaboration
+- **Keep it fresh** - Update what you're working on, not a static bio
+- **Be authentic** - Your working style, preferences, and quirks are valuable info
+
+Think of it as the README for *you*.
+
+**Features:**
+- **Your own page**: `quickstart.to/@yourusername`
+- **Ownership verified**: Linked to your GitHub account
+- **Multi-language**: Support for variants (e.g., `/@username/zh`)
+
+**Quick start:**
+```bash
+pnpm new:people
+```
+
+**Suggested sections:**
+- Who am I? *(Brief intro, current focus)*
+- What can I help with? *(Your expertise)*
+- What am I working on? *(Current projects)*
+- How to reach me? *(Contact preferences)*
+
+See [CONTRIBUTING.md](./CONTRIBUTING.md#2-people-profile) for details.
+
 ## Quick Start
 
 ### Prerequisites
@@ -64,7 +97,11 @@ src/
 │   │       ├── default.md  # Default version (required)
 │   │       ├── zh.md       # Chinese variant (optional)
 │   │       └── assets/     # Images and assets
-│   └── life/           # Life skill guides
+│   ├── life/           # Life skill guides
+│   └── people/         # People profiles
+│       └── @{username}/
+│           ├── default.md
+│           └── zh.md
 ├── components/         # Astro components
 ├── layouts/            # Page layouts
 ├── pages/              # Route pages
@@ -78,6 +115,7 @@ We welcome contributions! See [CONTRIBUTING.md](./CONTRIBUTING.md) for guideline
 ### Types of Contributions
 
 - **New quickstarts**: Add a new guide
+- **People profiles**: Create your personal page at `/@username`
 - **Variants**: Add translations or alternative versions
 - **Improvements**: Fix typos, improve clarity
 

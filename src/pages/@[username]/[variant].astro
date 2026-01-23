@@ -1,0 +1,64 @@
+---
+import PeopleLayout from '@layouts/PeopleLayout.astro';
+import {
+  getAllPeople,
+  getPersonByUsername,
+  getAvailableVariantsForPerson,
+} from '@utils/people';
+import { DEFAULT_VARIANT } from '@utils/variant';
+
+export async function getStaticPaths() {
+  const people = await getAllPeople();
+  const paths: { params: { username: string; variant: string }; props: { username: string; variant: string } }[] = [];
+
+  // Collect all non-default variants
+  for (const p of people) {
+    // Validate username format
+    if (!p.username.startsWith('@')) {
+      console.warn(`[people] Invalid username format (missing @): ${p.username}`);
+      continue;
+    }
+    if (p.variant !== DEFAULT_VARIANT) {
+      // Remove @ prefix for the route param
+      const usernameWithoutAt = p.username.replace(/^@/, '');
+      paths.push({
+        params: { username: usernameWithoutAt, variant: p.variant },
+        props: { username: p.username, variant: p.variant },
+      });
+    }
+  }
+
+  return paths;
+}
+
+interface Props {
+  username: string;
+  variant: string;
+}
+
+const { username, variant } = Astro.props;
+
+const person = await getPersonByUsername(username, variant);
+
+if (!person) {
+  return Astro.redirect('/404');
+}
+
+const availableVariants = await getAvailableVariantsForPerson(username);
+const { Content, headings } = await person.entry.render();
+
+// Construct file path for contributors
+const filePath = `src/content/people/${username}/${variant}.md`;
+---
+
+<PeopleLayout
+  username={username}
+  displayName={person.entry.data.display_name}
+  tagline={person.entry.data.tagline}
+  variant={variant}
+  availableVariants={availableVariants}
+  headings={headings}
+  filePath={filePath}
+>
+  <Content />
+</PeopleLayout>

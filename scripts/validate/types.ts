@@ -10,9 +10,15 @@ export interface ValidationResult {
   errors: ValidationError[];
 }
 
-export type TemplateType = 'tool' | 'language' | 'framework' | 'service' | 'concept' | 'life' | 'aha' | 'collection';
+export type TemplateType = 'tool' | 'language' | 'framework' | 'service' | 'concept' | 'life' | 'aha' | 'collection' | 'people';
 
-export const VALID_TEMPLATES: TemplateType[] = ['tool', 'language', 'framework', 'service', 'concept', 'life', 'aha', 'collection'];
+export const VALID_TEMPLATES: TemplateType[] = ['tool', 'language', 'framework', 'service', 'concept', 'life', 'aha', 'collection', 'people'];
+
+export interface PeopleFrontmatter {
+  owner_id?: number;
+  display_name: string;
+  tagline?: string;
+}
 
 export interface TemplateSection {
   name: string;

@@ -6,6 +6,12 @@ const quickstartSchema = z.object({
   tags: z.array(z.string()).optional().default([]),
 });
 
+const peopleSchema = z.object({
+  owner_id: z.number().optional(),
+  display_name: z.string(),
+  tagline: z.string().min(10).max(160).optional(),
+});
+
 const tech = defineCollection({
   type: 'content',
   schema: quickstartSchema,
@@ -16,4 +22,9 @@ const life = defineCollection({
   schema: quickstartSchema,
 });
 
-export const collections = { tech, life };
+const people = defineCollection({
+  type: 'content',
+  schema: peopleSchema,
+});
+
+export const collections = { tech, life, people };

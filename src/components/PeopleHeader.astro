@@ -1,0 +1,60 @@
+---
+interface Props {
+  username: string;
+  displayName: string;
+  tagline?: string;
+}
+
+const { username, displayName, tagline } = Astro.props;
+---
+
+<header class="people-header">
+  <div class="people-meta">
+    <span class="username">{username}</span>
+  </div>
+  <h1>{displayName}</h1>
+  {tagline && <p class="tagline">{tagline}</p>}
+</header>
+
+<style>
+  .people-header {
+    margin-bottom: 2rem;
+  }
+
+  .people-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .username {
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    line-height: 1.2;
+  }
+
+  .tagline {
+    color: var(--color-text-secondary);
+    font-size: 1.125rem;
+    margin: 0;
+    max-width: 600px;
+  }
+
+  @media (max-width: 640px) {
+    h1 {
+      font-size: 1.75rem;
+    }
+
+    .tagline {
+      font-size: 1rem;
+    }
+  }
+</style>
