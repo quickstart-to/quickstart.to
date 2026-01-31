@@ -92,7 +92,7 @@ Templates are stored in `src/templates/` as Markdown files. Each content file mu
 | `life` | Non-tech content (Cooking) | TL;DR, Fundamentals, Getting Started, Common Mistakes, Next Steps |
 | `aha` | Free-form content (humor, satire) | None (completely free) |
 | `collection` | Curated content indexes, topic hubs | None (completely free) |
-| `people` | Personal profiles, collaboration guides | None (all sections optional) |
+| `people` | Personal collaboration guides | None (10 optional sections: identity, skills, collaboration, projects, learning, portfolio, writing, work style, help needed, contact) |
 
 ### Adding a New Template
 
