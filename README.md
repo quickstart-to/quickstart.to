@@ -42,9 +42,11 @@ pnpm new:people
 
 **Suggested sections:**
 - Who am I? *(Brief intro, current focus)*
-- What can I help with? *(Your expertise)*
-- What am I working on? *(Current projects)*
-- How to reach me? *(Contact preferences)*
+- What I'm good at *(Core skills and expertise)*
+- What I can help with *(Open to collaboration on)*
+- What I'm working on *(Current projects)*
+- How I work *(Working style and preferences)*
+- How to reach me *(Contact preferences)*
 
 See [CONTRIBUTING.md](./CONTRIBUTING.md#2-people-profile) for details.
 
