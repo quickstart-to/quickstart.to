@@ -89,19 +89,27 @@ function getTemplateContent(): string {
   return `
 ## Who am I?
 
-<!-- Brief intro: who you are, what you do, current status -->
+<!-- Brief intro: who you are, what you do, what you're focusing on right now -->
 
-## What can I help with?
+## What I'm good at
 
-<!-- Your skills, expertise, what help you can offer -->
+<!-- Your core skills, technologies, domains of expertise -->
 
-## What am I working on?
+## What I can help with
 
-<!-- Current projects, what you're building -->
+<!-- Topics you're happy to answer questions about, types of collaboration you're open to -->
 
-## How to reach me?
+## What I'm working on
 
-<!-- Contact info: email, social media, messaging -->
+<!-- Current projects, experiments, what you're building right now -->
+
+## How I work
+
+<!-- Your working style, timezone, preferred tools, collaboration preferences -->
+
+## How to reach me
+
+<!-- Contact methods ranked by preference -->
 `;
 }
 
