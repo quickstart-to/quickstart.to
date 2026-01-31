@@ -155,16 +155,8 @@ export function validatePeople(contentDir: string): ValidationError[] {
         continue;
       }
 
-      // Rule: people-frontmatter - default.md must have owner_id
-      if (typeof defaultFrontmatter.owner_id !== 'number') {
-        errors.push({
-          file: defaultPath,
-          rule: 'people-frontmatter',
-          message: 'Missing required field: owner_id (GitHub User ID)',
-          suggestion: 'Add owner_id field with your GitHub User ID',
-        });
-      } else {
-        // Rule: people-uniqueness - owner_id must be globally unique
+      // Rule: people-uniqueness - owner_id must be globally unique (if present)
+      if (typeof defaultFrontmatter.owner_id === 'number') {
         const existingPath = ownerIdMap.get(defaultFrontmatter.owner_id);
         if (existingPath) {
           errors.push({

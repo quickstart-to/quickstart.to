@@ -154,12 +154,51 @@ jobs:
               if (status === 'added' || status === 'renamed') {
                 // New file
                 if (isDefault) {
-                  // Check for owner_id
+                  // Check for owner_id - suggest via PR review if missing
                   if (!frontmatter || frontmatter.owner_id === undefined) {
+                    // Find the frontmatter opening line position in the diff
+                    const diffFile = file;
+                    const patch = diffFile.patch || '';
+
+                    // Find the line number of the opening `---` in the new file
+                    // We need the position relative to the diff hunk
+                    const fileContent = content;
+                    const lines = fileContent.split('\n');
+
+                    // Find the first `---` line (frontmatter open)
+                    let frontmatterOpenLine = -1;
+                    for (let i = 0; i < lines.length; i++) {
+                      if (lines[i].trim() === '---') {
+                        frontmatterOpenLine = i + 1; // 1-indexed
+                        break;
+                      }
+                    }
+
+                    if (frontmatterOpenLine > 0) {
+                      // Build the suggestion: replace `---` with `---\nowner_id: {actorId}`
+                      try {
+                        await github.rest.pulls.createReview({
+                          owner: context.repo.owner,
+                          repo: context.repo.repo,
+                          pull_number: prNumber,
+                          event: 'REQUEST_CHANGES',
+                          body: `Please add your \`owner_id\` to claim ownership of this profile. You can accept the suggestion below with one click.`,
+                          comments: [{
+                            path: filename,
+                            line: frontmatterOpenLine,
+                            body: `Please add your \`owner_id\` to the frontmatter:\n\n\`\`\`suggestion\n---\nowner_id: ${actorId}\n\`\`\``,
+                          }],
+                        });
+                        console.log(`Posted owner_id suggestion for ${filename}`);
+                      } catch (e) {
+                        console.log(`Could not post review suggestion: ${e.message}`);
+                      }
+                    }
+
                     errors.push({
                       file: filename,
-                      message: `Missing owner_id in ${filename}. Please add your GitHub User ID.`,
-                      suggestion: `Add \`owner_id: ${actorId}\` to the frontmatter.`,
+                      message: `Missing owner_id in ${filename}. A suggestion has been posted on this PR.`,
+                      suggestion: `Accept the suggestion comment to add \`owner_id: ${actorId}\` to the frontmatter.`,
                     });
                     continue;
                   }

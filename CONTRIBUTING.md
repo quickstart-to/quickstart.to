@@ -44,11 +44,12 @@ pnpm new:people
 **Frontmatter:**
 ```yaml
 ---
-owner_id: 583231           # Your GitHub User ID (required)
 display_name: "Your Name"  # Display name (required)
 tagline: "Short bio"       # 10-160 chars (optional)
 ---
 ```
+
+> **Note:** `owner_id` is automatically suggested by our CI bot when you submit a PR. Just accept the suggestion — no need to look up your GitHub User ID manually.
 
 **Rules:**
 - Directory must start with `@` (e.g., `@octocat`)

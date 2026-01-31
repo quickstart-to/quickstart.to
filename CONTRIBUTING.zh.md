@@ -44,11 +44,12 @@ pnpm new:people
 **Frontmatter:**
 ```yaml
 ---
-owner_id: 583231           # 你的 GitHub User ID（必需）
 display_name: "你的名字"    # 显示名称（必需）
 tagline: "一句话介绍"       # 10-160 字符（可选）
 ---
 ```
+
+> **注意：** `owner_id` 会在你提交 PR 时由 CI 机器人自动建议添加。你只需点击接受建议即可，无需手动查找 GitHub User ID。
 
 **规则:**
 - 目录必须以 `@` 开头（如 `@octocat`）

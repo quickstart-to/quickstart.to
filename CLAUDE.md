@@ -164,7 +164,7 @@ People profiles are personal "instruction manuals" for collaboration. They use a
 ### People Frontmatter
 ```yaml
 ---
-owner_id: 583231                                  # GitHub User ID (required in default.md only)
+owner_id: 583231                                  # GitHub User ID (auto-suggested by CI bot)
 display_name: "The Octocat"                       # Display name (required)
 tagline: "GitHub's official mascot"              # 10-160 chars (optional)
 ---
@@ -172,7 +172,7 @@ tagline: "GitHub's official mascot"              # 10-160 chars (optional)
 
 ### People Profile Rules
 - Directory must start with `@` (e.g., `@octocat`)
-- `owner_id` is required in `default.md` only
+- `owner_id` is auto-suggested by CI bot when you submit a PR (do not add manually)
 - Variant files (e.g., `zh.md`) must NOT contain `owner_id`
 - One GitHub User ID can only have one profile (anti-hoarding)
 - Only the profile owner can modify their profile
@@ -192,7 +192,7 @@ The `pnpm validate` command checks:
 4. **assets** - File naming conventions
 5. **structure** - Required sections based on template type
 6. **people-naming** - People profile username format
-7. **people-frontmatter** - owner_id, display_name requirements
+7. **people-frontmatter** - display_name required, owner_id optional (auto-suggested by CI bot)
 8. **people-uniqueness** - One profile per GitHub User ID
 
 ## GitHub API Integration

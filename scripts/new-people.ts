@@ -184,16 +184,6 @@ display_name: "${displayName}"`;
     mkdirSync(join(profilePath, 'assets'), { recursive: true });
     console.log(`Created directory: ${profilePath}`);
 
-    // Get owner_id (GitHub User ID)
-    let ownerId = '';
-    while (!ownerId) {
-      ownerId = await prompt('GitHub User ID (owner_id): ');
-      if (!ownerId || !/^\d+$/.test(ownerId)) {
-        console.error('❌ Error: Please enter a valid numeric GitHub User ID');
-        ownerId = '';
-      }
-    }
-
     // Get display name
     const displayName = await prompt('Display name: ');
     if (!displayName) {
@@ -213,7 +203,6 @@ display_name: "${displayName}"`;
     // Generate content
     const templateContent = getTemplateContent();
     let frontmatter = `---
-owner_id: ${ownerId}
 display_name: "${displayName}"`;
     if (tagline) {
       frontmatter += `\ntagline: "${tagline}"`;
@@ -225,7 +214,8 @@ display_name: "${displayName}"`;
 
     writeFileSync(defaultFile, content);
     console.log(`\n✅ Created: ${defaultFile}`);
-    console.log(`\nYour profile URL will be: https://quickstart.to/${username}\n`);
+    console.log(`\nYour profile URL will be: https://quickstart.to/${username}`);
+    console.log(`\n💡 Note: owner_id will be automatically suggested when you submit a PR.\n`);
   }
 
   rl.close();
