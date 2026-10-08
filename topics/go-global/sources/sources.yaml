@@ -1,11 +1,165 @@
-# Sources cited by this topic. Every [^id] in quickstart.md / chapters/*.md must resolve here.
-# Fields:
-#   id:        kebab-case, prefixed with src-
-#   url:       primary source URL
-#   title:     page title as published
-#   publisher: organisation that owns the source
-#   accessed:  YYYY-MM-DD, the date the agent last verified the claim against this URL
-#   claim:     the specific fact this source supports (one line)
-#   excerpt:   optional path under sources/excerpts/ with the relevant quoted passage
-#   archive:   optional web.archive.org snapshot URL
-[]
+# Citation targets for go-global. Schema: docs/content-guide.md §6
+- id: src-paddle-countries
+  url: https://www.paddle.com/help/start/intro-to-paddle/which-countries-are-supported-by-paddle
+  title: Which countries are supported by Paddle?
+  publisher: Paddle
+  accessed: '2026-10-08'
+  claim: Paddle 支持除列明的受制裁/不支持国家外的全球卖家；列表中无中国
+  excerpt: excerpts/paddle-countries.md
+  archive: https://web.archive.org/web/20261008083819/https://www.paddle.com/help/start/intro-to-paddle/which-countries-are-supported-by-paddle
+- id: src-paddle-business-verification
+  url: https://www.paddle.com/help/start/account-verification/what-is-business-verification
+  title: Business Identification
+  publisher: Paddle
+  accessed: '2026-10-08'
+  claim: 业务主体认证步骤不适用于个人或个体经营者；人工审核约 2–4 个工作日
+  excerpt: excerpts/paddle-business-verification.md
+- id: src-paddle-domain-review
+  url: https://www.paddle.com/help/start/account-verification/what-is-domain-verification
+  title: Domain Review
+  publisher: Paddle
+  accessed: '2026-10-08'
+  claim: 所有卖家需通过域名审核，人工审核约 5–7 个工作日，只能在获批域名上发起结账
+  excerpt: excerpts/paddle-domain-review.md
+- id: src-paddle-pricing
+  url: https://www.paddle.com/pricing
+  title: Pricing
+  publisher: Paddle
+  accessed: '2026-10-08'
+  claim: 标准费率 5% + 50¢ 每笔结账交易
+  excerpt: excerpts/paddle-pricing.md
+  archive: https://web.archive.org/web/20261008083841/https://www.paddle.com/pricing
+- id: src-paddle-payout-schedule
+  url: https://www.paddle.com/help/manage/get-paid/when-and-how-do-i-get-paid
+  title: When and how do I get paid?
+  publisher: Paddle
+  accessed: '2026-10-08'
+  claim: 每月出款，门槛最低 $100，15 日前发出；方式为电汇或 Payoneer
+  excerpt: excerpts/paddle-payout-schedule.md
+- id: src-paddle-payout-fees
+  url: https://www.paddle.com/help/manage/get-paid/is-there-a-fee-taken-for-payouts
+  title: Is there a fee taken for payouts?
+  publisher: Paddle
+  accessed: '2026-10-08'
+  claim: 币种与收款银行所在国不一致时走 SWIFT，收 $/€/£15 电汇费
+  excerpt: excerpts/paddle-payout-fees.md
+- id: src-paddle-payout-currency
+  url: https://www.paddle.com/help/manage/get-paid/can-i-be-paid-in-my-local-currency
+  title: Can I be paid in my local currency?
+  publisher: Paddle
+  accessed: '2026-10-08'
+  claim: 出款币种包括人民币（CNY）；换成非余额币种最多收 1.5% 汇兑差
+  excerpt: excerpts/paddle-payout-currency.md
+- id: src-ls-countries
+  url: https://docs.lemonsqueezy.com/help/getting-started/supported-countries
+  title: Supported Countries
+  publisher: Lemon Squeezy
+  accessed: '2026-10-08'
+  claim: 需能在支持国家收银行或 PayPal 出款；PayPal 出款覆盖 200+ 国家地区；银行出款列表无中国
+  excerpt: excerpts/ls-countries.md
+  archive: https://web.archive.org/web/20261008083903/https://docs.lemonsqueezy.com/help/getting-started/supported-countries
+- id: src-ls-fees
+  url: https://docs.lemonsqueezy.com/help/getting-started/fees
+  title: Fees
+  publisher: Lemon Squeezy
+  accessed: '2026-10-08'
+  claim: 平台费 5% + $0.50，国际/PayPal 各 +1.5%，订阅 +0.5%；美国以外 PayPal 出款 3% 封顶 $30
+  excerpt: excerpts/ls-fees.md
+  archive: https://web.archive.org/web/20261008083927/https://docs.lemonsqueezy.com/help/getting-started/fees
+- id: src-ls-getting-paid
+  url: https://docs.lemonsqueezy.com/help/getting-started/getting-paid
+  title: Getting Paid
+  publisher: Lemon Squeezy
+  accessed: '2026-10-08'
+  claim: 每月 1 日、15 日出款；PayPal 出款为美元；最低门槛 $50
+  excerpt: excerpts/ls-getting-paid.md
+- id: src-polar-countries
+  url: https://polar.sh/docs/merchant-of-record/supported-countries
+  title: Supported countries
+  publisher: Polar
+  accessed: '2026-10-08'
+  claim: 出款依赖 Stripe Connect Express，支持国家列表含香港、不含中国大陆
+  excerpt: excerpts/polar-countries.md
+  archive: https://web.archive.org/web/20261008083958/https://polar.sh/docs/merchant-of-record/supported-countries
+- id: src-creem-pricing
+  url: https://www.creem.io/pricing
+  title: Pricing
+  publisher: Creem
+  accessed: '2026-10-08'
+  claim: 3.9% + 40¢ 每笔；每月 1 日、15 日出款
+  excerpt: excerpts/creem-pricing.md
+  archive: https://web.archive.org/web/20261008084208/https://www.creem.io/pricing
+- id: src-creem-countries
+  url: https://docs.creem.io/merchant-of-record/supported-countries
+  title: Supported Countries
+  publisher: Creem
+  accessed: '2026-10-08'
+  claim: 支持 87 个商户国家，含 China（*：有出款限额）；出款费 7 EUR/USD 或 1% 取高
+  excerpt: excerpts/creem-countries.md
+- id: src-creem-payouts
+  url: https://docs.creem.io/merchant-of-record/finance/payouts
+  title: Payouts
+  publisher: Creem
+  accessed: '2026-10-08'
+  claim: 中国：个人收款走支付宝，单笔上限 5 万元、每年 30–60 万元；企业走本地银行；账户名须与 KYC 身份一致
+  excerpt: excerpts/creem-payouts.md
+  archive: https://web.archive.org/web/20261008084141/https://docs.creem.io/merchant-of-record/finance/payouts
+- id: src-dodo-merchant-countries
+  url: https://docs.dodopayments.com/miscellaneous/accepted-countries-and-territories
+  title: Countries Eligible for Merchant Acceptance
+  publisher: Dodo Payments
+  accessed: '2026-10-08'
+  claim: 商户准入国家含 China；个人账户以本人证件签发国判定
+  excerpt: excerpts/dodo-merchant-countries.md
+  archive: https://web.archive.org/web/20261008084231/https://docs.dodopayments.com/miscellaneous/accepted-countries-and-territories
+- id: src-dodo-pricing
+  url: https://dodopayments.com/pricing
+  title: Pricing
+  publisher: Dodo Payments
+  accessed: '2026-10-08'
+  claim: 4% + 40¢；美国以外 +1.5%；订阅 +0.5%；出款 <$1000 收 $5；非美国商户 USD SWIFT 出款 $25
+  excerpt: excerpts/dodo-pricing.md
+  archive: https://web.archive.org/web/20261008084254/https://dodopayments.com/pricing
+- id: src-dodo-payouts
+  url: https://docs.dodopayments.com/features/payouts/payout-structure
+  title: Payouts Process
+  publisher: Dodo Payments
+  accessed: '2026-10-08'
+  claim: 默认出款门槛 $100，可设最低 $50
+  excerpt: excerpts/dodo-payouts.md
+- id: src-gumroad-getting-paid
+  url: https://gumroad.com/help/article/13-getting-paid
+  title: Getting paid by Gumroad
+  publisher: Gumroad
+  accessed: '2026-10-08'
+  claim: 无银行出款的国家只能用 PayPal；PayPal 出款为美元，收 2%；银行出款国家表无中国
+  excerpt: excerpts/gumroad-getting-paid.md
+- id: src-stripe-mp-eligibility
+  url: https://docs.stripe.com/payments/managed-payments/eligibility
+  title: Managed Payments eligibility
+  publisher: Stripe
+  accessed: '2026-10-08'
+  claim: 业务须位于支持地区；亚太仅澳大利亚、香港、日本、新加坡
+  excerpt: excerpts/stripe-mp-eligibility.md
+- id: src-paypal-c2-consumer-fees
+  url: https://www.paypal.com/c2/digital-wallet/paypal-consumer-fees
+  title: PayPal消费者费用
+  publisher: PayPal
+  accessed: '2026-10-08'
+  claim: 中国大陆个人账户电汇提现到中国大陆银行每笔 35.00 美元
+  excerpt: excerpts/paypal-c2-consumer-fees.md
+  archive: https://web.archive.org/web/20261008084437/https://www.paypal.com/c2/digital-wallet/paypal-consumer-fees
+- id: src-safe-individual-fx-rules
+  url: https://www.safe.gov.cn/tianjin/2024/0430/2464.html
+  title: 国家外汇管理局关于印发《个人外汇管理办法实施细则》的通知（已修改）
+  publisher: 国家外汇管理局天津市分局
+  accessed: '2026-10-08'
+  claim: 个人结汇/购汇年度总额每人每年等值 5 万美元；经常项目分经营性与非经营性
+  excerpt: excerpts/safe-individual-fx-rules.md
+- id: src-tax-foreign-income-2020-3
+  url: https://guangdong.chinatax.gov.cn/gdsw/zssw_grsdsggpxxxzl_zcwj/2020-02/24/content_142e4afa49fe4315b636a35fb51513e2.shtml
+  title: 财政部 税务总局关于境外所得有关个人所得税政策的公告（2020年第3号）
+  publisher: 国家税务总局广东省税务局（转载）
+  accessed: '2026-10-08'
+  claim: 居民个人境外所得应在次年 3 月 1 日至 6 月 30 日申报
+  excerpt: excerpts/tax-foreign-income-2020-3.md
