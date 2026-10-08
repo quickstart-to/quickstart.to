@@ -19,7 +19,7 @@
   title: Domain Review
   publisher: Paddle
   accessed: '2026-10-08'
-  claim: 所有卖家需通过域名审核，人工审核约 5–7 个工作日，只能在获批域名上发起结账
+  claim: 真实结账需域名审核；网站需产品/价格/条款/退款/隐私信息及HTTPS；人工审核预计5–7工作日，sandbox免域名审核
   excerpt: excerpts/paddle-domain-review.md
 - id: src-paddle-pricing
   url: https://www.paddle.com/pricing
@@ -101,7 +101,7 @@
   title: Payouts
   publisher: Creem
   accessed: '2026-10-08'
-  claim: 中国：个人收款走支付宝，单笔上限 5 万元、每年 30–60 万元；企业走本地银行；账户名须与 KYC 身份一致
+  claim: 中国个人走同名支付宝，单笔5万元、每年30–60万元；最低余额50 USD/EUR，手动申请后排入1日/15日出款，款项可能等待7–12日才可用
   excerpt: excerpts/creem-payouts.md
   archive: https://web.archive.org/web/20261008084141/https://docs.creem.io/merchant-of-record/finance/payouts
 - id: src-dodo-merchant-countries
@@ -125,7 +125,7 @@
   title: Payouts Process
   publisher: Dodo Payments
   accessed: '2026-10-08'
-  claim: 默认出款门槛 $100，可设最低 $50
+  claim: 默认门槛100美元、可设最低50；默认半月周期18日/次月4日发起，节假日顺延；须通过验证与Monitoring Review，Success不等于银行已入账
   excerpt: excerpts/dodo-payouts.md
 - id: src-gumroad-getting-paid
   url: https://gumroad.com/help/article/13-getting-paid
@@ -192,3 +192,76 @@
   claim: 第3条按劳务提供地、特许权使用地等认定境内所得，不以支付地点为唯一依据；第6条定义劳务报酬、特许权使用费和经营所得
   excerpt: excerpts/tax-iit-implementation.md
   archive: https://web.archive.org/web/20261008092708/https://fgk.chinatax.gov.cn/zcfgk/c100010/c5194444/content.html
+- id: src-paddle-identity-verification
+  url: https://www.paddle.com/help/start/account-verification/what-is-identity-verification
+  title: "Identity Verification"
+  publisher: Paddle
+  accessed: '2026-10-08'
+  claim: 个人仍须身份验证；可能要求政府证件、地址证明和活体检查；人工审核预计1–3个工作日
+  excerpt: excerpts/paddle-identity-verification.md
+  archive: https://web.archive.org/web/20261008095536/https://www.paddle.com/help/start/account-verification/what-is-identity-verification
+- id: src-paddle-aup
+  url: https://www.paddle.com/help/start/intro-to-paddle/what-am-i-not-allowed-to-sell-on-paddle
+  title: "Understanding Paddle’s Acceptable Use Policy (AUP): What Am I Not Allowed To Sell?"
+  publisher: Paddle
+  accessed: '2026-10-08'
+  claim: 以软件为主；纯人工服务、实物、侵权产品等不支持；部分AI人像、VPN等属于受限类别而非一般放行
+  excerpt: excerpts/paddle-aup.md
+  archive: https://web.archive.org/web/20261008095829/https://www.paddle.com/help/start/intro-to-paddle/what-am-i-not-allowed-to-sell-on-paddle
+- id: src-creem-account-reviews
+  url: https://docs.creem.io/merchant-of-record/account-reviews/account-reviews
+  title: "Account Reviews"
+  publisher: Creem
+  accessed: '2026-10-08'
+  claim: 真实收款前须账户审核；产品已上线、价格/条款/隐私/支持邮箱可见；通常1–2工作日，高峰可至3日；生成式AI等受限产品需额外审核
+  excerpt: excerpts/creem-account-reviews.md
+- id: src-creem-payout-accounts
+  url: https://docs.creem.io/merchant-of-record/finance/payout-accounts
+  title: "Payout Accounts"
+  publisher: Creem
+  accessed: '2026-10-08'
+  claim: 开户流程包括业务信息、KYC/KYB、出款账户和团队审核；每家店独立配置，出款发送至默认账户
+  excerpt: excerpts/creem-payout-accounts.md
+- id: src-dodo-verification
+  url: https://docs.dodopayments.com/miscellaneous/verification-process
+  title: "Account Verification"
+  publisher: Dodo Payments
+  accessed: '2026-10-08'
+  claim: 个人按产品信息→政府证件及自拍KYC→银行验证申请；账户同名；通常1–3工作日；真实收款与出款另有不同条件
+  excerpt: excerpts/dodo-verification.md
+- id: src-dodo-merchant-acceptance
+  url: https://docs.dodopayments.com/miscellaneous/merchant-acceptance
+  title: "Merchant Acceptance Policy"
+  publisher: Dodo Payments
+  accessed: '2026-10-08'
+  claim: 支持软件和数字产品但排除主要价值来自人工劳动的服务、实物、游戏及多种高风险类别；生成式AI等需额外审核
+  excerpt: excerpts/dodo-merchant-acceptance.md
+  archive: https://web.archive.org/web/20261008095728/https://docs.dodopayments.com/miscellaneous/merchant-acceptance
+- id: src-dodo-test-live
+  url: https://docs.dodopayments.com/miscellaneous/test-mode-vs-live-mode
+  title: "Test Mode vs Live Mode"
+  publisher: Dodo Payments
+  accessed: '2026-10-08'
+  claim: 测试不产生真实资金；产品/API密钥/webhook分环境，身份与银行资料跨环境共享；测试仍会发送真实邮件
+  excerpt: excerpts/dodo-test-live.md
+- id: src-creem-test-mode
+  url: https://docs.creem.io/getting-started/test-mode
+  title: "Test Mode"
+  publisher: Creem
+  accessed: '2026-10-08'
+  claim: 测试与生产分别配置密钥、API地址、产品和webhook；官方提供成功、拒绝等测试卡，不产生真实付款
+  excerpt: excerpts/creem-test-mode.md
+- id: src-creem-quickstart
+  url: https://docs.creem.io/getting-started/quickstart
+  title: "Quickstart"
+  publisher: Creem
+  accessed: '2026-10-08'
+  claim: 支持创建产品及分享支付链接；生产应用应使用webhook在服务端可靠接收付款事件
+  excerpt: excerpts/creem-quickstart.md
+- id: src-creem-webhooks
+  url: https://docs.creem.io/code/webhooks
+  title: "Webhooks"
+  publisher: Creem
+  accessed: '2026-10-08'
+  claim: 接收事件前验证签名；重复投递需幂等；订阅按已付款事件开通，期末取消在当前周期结束前仍有效
+  excerpt: excerpts/creem-webhooks.md

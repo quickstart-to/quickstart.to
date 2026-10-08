@@ -1,24 +1,24 @@
 # 大纲：中国开发者出海（草案）
 
-> 状态：草案。主线已有首轮调研；第二轮外汇 / 税务证据见 `research/2026-10-08-fx-tax.md`。平台审核、具体所得适用及真实出款路径仍有待办。
+> 状态：草案。主线已有三轮公开文档调研；外汇 / 税务见 `research/2026-10-08-fx-tax.md`，平台审核与出款见 `research/2026-10-08-platform-onboarding.md`。已具备正文写作证据，实际开户、收款账户适用性及具体所得分类保留为个案确认点。
 
 ## 读者
 
 中国大陆个人开发者：一个人、没有海外公司、会写代码，想把软件卖给海外用户。
 
-## 快速入门主线（首轮调研后修订）
+## 快速入门主线（公开文档调研后修订）
 
-个人身份 + 支持中国大陆个人出款的 MoR 平台 + Web 产品（SaaS / 工具 / 数字商品）→ 出款到国内银行账户或支付宝 → 收到第一笔钱。
+中国大陆个人申请 MoR + 符合平台产品政策的 Web 软件 → 确认本人收款账户可用 → 通过审核并测试交付 → 真实首单 → 本人账户实际到账。公开文档只验证候选路径，不保证个案通过或到账。
 
-首轮调研结论（详见 `research/dossier.md`，来源已入 `sources/sources.yaml`）：
+调研结论（详见 `research/dossier.md` 及两份补充记录，来源已入 `sources/sources.yaml`）：
 
-1. **MoR 准入**：截至 2026-10-08，Paddle、Creem、Dodo Payments 的官方文档显示接受中国大陆个人；Lemon Squeezy、Gumroad 对中国大陆只能 PayPal 出款；Polar、Stripe Managed Payments 不支持中国大陆。
-2. **出款路径**：Paddle 电汇（可选 CNY）/ Payoneer；Creem 个人走支付宝（有单笔和年度上限）；Dodo 银行出款；PayPal 中转到国内银行每笔另收 35 美元。
+1. **MoR 准入**：截至2026-10-08，Paddle、Creem、Dodo的国家/个人申请文档支持把它们列为候选，但身份、产品和出款仍需审批。不要写成无条件可用。其他平台的分支路线另见调研档案。[^src-paddle-countries][^src-paddle-business-verification][^src-paddle-identity-verification][^src-creem-countries][^src-creem-payout-accounts][^src-dodo-merchant-countries][^src-dodo-verification]
+2. **出款路径**：Paddle列电汇/Payoneer及CNY币种；Creem中国个人明确走同名支付宝；Dodo列本人银行账户，但具体国家通道与币种须确认。不能仅凭国家准入或支持币种断言某家大陆银行一定可收。[^src-paddle-payout-schedule][^src-paddle-payout-currency][^src-creem-payouts][^src-dodo-payouts]
 3. **外汇**：个人结汇年度总额每人每年等值5万美元，不能改写成境外收款上限；本轮未找到针对个人 MoR 软件销售收入的经营性/非经营性分类答复，正文给出向开户行确认的路径。[^src-safe-individual-fx-rules]
 4. **个税**：先依据合同和实际业务确认所得类别及来源，不因境外付款就认定为境外所得；只有适用境外所得规定时，才引用次年3月1日至6月30日申报期间。具体 MoR 软件销售场景本轮未找到统一官方答复，需向主管税务机关确认。[^src-tax-iit-implementation][^src-tax-foreign-income-2020-3]
-5. **耗时 / 成本**：无月费，按笔收费；Paddle 审核约数个工作日，按月出款。其他平台的审核时长待补。
+5. **耗时 / 成本**：分列交易费、出款费、换汇/银行费；审核时间只写官方估计。达到可用余额门槛、出款已启用及出款日到达是不同条件，Creem还需手动申请。不得承诺一笔小额销售即可提现。[^src-paddle-payout-schedule][^src-creem-payouts][^src-dodo-verification][^src-dodo-payouts]
 
-写作约束：快速入门不绑定单一平台，用“截至某日期”的对比表。第二轮已补足外汇规则版本和银行申报的一般要求，具体所得分类保留未确认边界；写作前补查平台 KYC / AUP、出款材料，并重查2026年申报细则是否发布最终文件。
+写作约束：快速入门不绑定单一平台，用“截至某日期”的简短对比表，选定一家后沿共同流程推进。平台KYC/AUP、出款材料及测试/生产区别已完成公开文档补查；2026年申报细则本轮仍检索到征求意见通知。后续日期发布需再核对规则；具体银行/税务适用以读者个案材料确认。
 
 快速入门的验收点分别记录：
 
