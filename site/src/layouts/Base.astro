@@ -92,8 +92,9 @@ const REPO = 'https://github.com/quickstart-to/quickstart.to';
           const sel = document.getElementById('ui-lang');
           if (sel) sel.value = lang;
         };
-        const initial = preferred();
-        if (initial !== root.dataset.uiLang) apply(initial);
+        // Generated content (for example source labels) can have fallback strings
+        // even when the preferred language matches the page's default UI language.
+        apply(preferred());
         document.getElementById('ui-lang')?.addEventListener('change', (e) => {
           const lang = e.target.value;
           try { localStorage.setItem(KEY, lang); } catch {}
