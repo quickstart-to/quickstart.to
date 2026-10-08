@@ -150,16 +150,45 @@
   excerpt: excerpts/paypal-c2-consumer-fees.md
   archive: https://web.archive.org/web/20261008084437/https://www.paypal.com/c2/digital-wallet/paypal-consumer-fees
 - id: src-safe-individual-fx-rules
-  url: https://www.safe.gov.cn/tianjin/2024/0430/2464.html
-  title: 国家外汇管理局关于印发《个人外汇管理办法实施细则》的通知（已修改）
-  publisher: 国家外汇管理局天津市分局
+  url: https://www.safe.gov.cn/safe/2007/0105/5320.html
+  title: （已修改）国家外汇管理局关于印发《个人外汇管理办法实施细则》的通知
+  publisher: 国家外汇管理局
   accessed: '2026-10-08'
-  claim: 个人结汇/购汇年度总额每人每年等值 5 万美元；经常项目分经营性与非经营性
+  claim: 个人结汇/购汇年度总额及经营性/非经营性分类；原文末尾注明2016年修改及2023年删除第三十九条
   excerpt: excerpts/safe-individual-fx-rules.md
 - id: src-tax-foreign-income-2020-3
   url: https://guangdong.chinatax.gov.cn/gdsw/zssw_grsdsggpxxxzl_zcwj/2020-02/24/content_142e4afa49fe4315b636a35fb51513e2.shtml
   title: 财政部 税务总局关于境外所得有关个人所得税政策的公告（2020年第3号）
   publisher: 国家税务总局广东省税务局（转载）
   accessed: '2026-10-08'
-  claim: 居民个人境外所得应在次年 3 月 1 日至 6 月 30 日申报
+  claim: 境外所得按劳务提供地、特许权使用地等规则认定；居民个人确属境外所得的适用次年3月1日至6月30日申报规定
   excerpt: excerpts/tax-foreign-income-2020-3.md
+- id: src-safe-effective-rules-2026
+  url: https://www.safe.gov.cn/safe/2026/0805/27766.html
+  title: 现行有效外汇管理主要法规目录（截至2026年6月30日）
+  publisher: 国家外汇管理局
+  accessed: '2026-10-08'
+  claim: 目录第1页列个人外汇实施细则及修改脚注；第14页列汇发〔2022〕22号申报细则
+  excerpt: excerpts/safe-effective-rules-2026.md
+- id: src-safe-bop-rules-2022
+  url: https://www.safe.gov.cn/safe/2022/0804/21280.html
+  title: 国家外汇管理局关于印发《通过银行进行国际收支统计申报业务实施细则》的通知
+  publisher: 国家外汇管理局
+  accessed: '2026-10-08'
+  claim: 附件第8条：居民个人单笔等值1万美元以下（含）免填申报信息；第12条：需申报的涉外收入在解付或结汇日后五个工作日内申报
+  excerpt: excerpts/safe-bop-rules-2022.md
+- id: src-safe-bop-consultation-2026
+  url: https://www.safe.gov.cn/safe/2026/0929/27953.html
+  title: 国家外汇管理局关于《通过银行进行国际收支统计申报业务实施细则（征求意见稿）》公开征求意见的通知
+  publisher: 国家外汇管理局
+  accessed: '2026-10-08'
+  claim: 2026年9月30日发布修订征求意见通知，反馈截止2026年10月30日；本页不是新细则施行通知
+  excerpt: excerpts/safe-bop-consultation-2026.md
+- id: src-tax-iit-implementation
+  url: https://fgk.chinatax.gov.cn/zcfgk/c100010/c5194444/content.html
+  title: 中华人民共和国个人所得税法实施条例
+  publisher: 国家税务总局政策法规库
+  accessed: '2026-10-08'
+  claim: 第3条按劳务提供地、特许权使用地等认定境内所得，不以支付地点为唯一依据；第6条定义劳务报酬、特许权使用费和经营所得
+  excerpt: excerpts/tax-iit-implementation.md
+  archive: https://web.archive.org/web/20261008092708/https://fgk.chinatax.gov.cn/zcfgk/c100010/c5194444/content.html
