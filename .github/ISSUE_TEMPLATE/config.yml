@@ -1,5 +1,5 @@
 blank_issues_enabled: false
 contact_links:
-  - name: 内容反馈：请在网站上划线评论 / Content feedback: highlight it on the site
-    url: https://quickstart.to
-    about: 内容过期、有误、补充资料，都请在对应页面划线评论，Agent 会核验并更新。/ Outdated, wrong or missing content? Highlight the passage on the page.
+  - name: 内容反馈尚未开放 / Content feedback is not open yet
+    url: https://github.com/quickstart-to/quickstart.to/blob/main/CONTRIBUTING.md
+    about: 站内划线评论将在 P2 上线；查看当前贡献方式。/ On-page feedback is planned for P2; see the current contribution options.

@@ -7,9 +7,9 @@
     "node": ">=22"
   },
   "scripts": {
-    "dev": "pnpm gen && astro dev --root site",
+    "dev": "pnpm gen && cd site && astro dev",
     "build": "pnpm validate && pnpm gen && astro build --root site",
-    "preview": "astro preview --root site",
+    "preview": "cd site && astro preview",
     "validate": "node scripts/validate-topics.mjs",
     "gen": "node scripts/gen-redirects.mjs",
     "deploy": "pnpm build && wrangler deploy --config site/wrangler.jsonc",

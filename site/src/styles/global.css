@@ -110,8 +110,18 @@ a:hover { text-decoration-thickness: 2px; }
 
 /* ---------- sidebar ---------- */
 .sidebar { font-size: 0.9375rem; line-height: 1.5; }
+.topic-navigation > summary {
+  padding: 0.65rem 0.8rem;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: 600;
+}
+.topic-navigation[open] > summary { margin-block-end: 1rem; }
 @media (min-width: 60rem) {
-  .sidebar nav { position: sticky; inset-block-start: 1.5rem; max-block-size: calc(100dvb - 3rem); overflow-y: auto; }
+  .topic-navigation > summary { display: none; }
+  .topic-navigation { position: sticky; inset-block-start: 1.5rem; max-block-size: calc(100dvb - 3rem); overflow-y: auto; }
 }
 .sidebar-topic { margin: 0 0 0.5rem; font-weight: 650; }
 .sidebar-topic a { color: var(--fg); text-decoration: none; }

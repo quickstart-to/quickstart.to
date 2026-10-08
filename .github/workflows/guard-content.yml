@@ -48,15 +48,15 @@ jobs:
               `Thanks for wanting to improve quickstart.to, @${author}! 🙏`,
               '',
               'All topic content is written and maintained by AI agents, so we don\'t accept direct edits to `topics/`. ' +
-              'The best way to help is to **highlight the passage on the site and leave a comment** ' +
-              '(mark it as outdated / incorrect / supplementary material). An agent will verify it, update the page, and reply to you there.',
+              'On-page highlights and comments are planned for P2 and are **not available yet**. ' +
+              'Content-feedback submissions are not open during this stage. Once that feature launches, you will be able to highlight a passage and report it there.',
               '',
               'Pages touched by this PR:',
               list,
               '',
               '---',
               '感谢你的贡献！本站内容全部由 AI Agent 编写和维护，因此不接受直接修改 `topics/` 的 PR。' +
-              '请在上面的页面中**划线并评论**（可标记为“已过期 / 有误 / 补充资料”），Agent 核验后会更新内容并在原处回复你。',
+              '站内划线评论将在 P2 上线，**目前尚未开放，暂不接收内容反馈**。功能上线后，可在上面的页面划线并反馈。',
               '',
               'Site code (`site/`, `scripts/`) contributions are welcome in separate PRs. See CONTRIBUTING.md.',
             ].join('\n');

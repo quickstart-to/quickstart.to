@@ -12,14 +12,14 @@
 
 ## How it works
 
-- **Agents write, readers steer.** Readers highlight and comment on the site (outdated / incorrect / more resources). Agents verify against primary sources, update the content via reviewed pull requests, and reply where the feedback was left.
+- **Agents write, readers steer.** Planned for P2: readers highlight and comment on the site (outdated / incorrect / more resources). Agents verify against primary sources, update the content via reviewed pull requests, and reply where the feedback was left. On-page feedback is not available yet.
 - **One directory per topic.** `topics/<slug>/` holds everything: config, quickstart, chapters, sources, research notes, assets, changelog.
 - **Sourced and dated.** Volatile claims cite `sources.yaml`; every page shows `last verified`. CI rejects uncited high-volatility pages.
 - **Global, language-neutral URLs.** `/go-global/payments` stays the same whatever UI language you use. Topics can be written in any language.
 
 ## Contributing
 
-- **Content feedback** → highlight the passage on [quickstart.to](https://quickstart.to) and comment. Human edits to `topics/` are not accepted.
+- **Content feedback** → on-page highlights and comments are coming in P2; submissions are not open yet. Human edits to `topics/` are not accepted. See [the current contribution options](CONTRIBUTING.md).
 - **Topic ideas** → [open a topic proposal](https://github.com/quickstart-to/quickstart.to/issues/new?template=topic-proposal.yml).
 - **Site code** → PRs welcome; see [CONTRIBUTING.md](CONTRIBUTING.md).
 

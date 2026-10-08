@@ -20,39 +20,43 @@ interface Props {
 const { topic, chapters, current, title, description, path, lastVerified, volatility, isContent = true } = Astro.props;
 const { slug, lang, status, disclaimer } = topic.data;
 const ui = uiLangFor(lang);
+const authorshipNotice = lastVerified ? 'notice.aiVerified' : 'notice.aiUnverified';
 const pageTitle = current === 'quickstart' ? `${topic.data.title} · quickstart.to` : `${title} · ${topic.data.title}`;
 ---
 
 <Base title={pageTitle} description={description ?? topic.data.summary} contentLang={lang} path={path}>
   <aside class="sidebar" slot="sidebar">
-    <nav aria-label={topic.data.title}>
-      <p class="sidebar-topic">
-        <a href={`/${slug}`}>{topic.data.title}</a>
-      </p>
-      <p data-ui lang={ui}>
-        <span class={`badge badge-${status}`} data-i18n={`status.${status}`}>{t(ui, `status.${status}`)}</span>
-      </p>
-      <ol class="toc">
-        <li>
-          <a href={`/${slug}`} aria-current={current === 'quickstart' ? 'page' : undefined} data-ui lang={ui} data-i18n="topic.quickstart">
-            {t(ui, 'topic.quickstart')}
-          </a>
-        </li>
-        {chapters.map((c) => (
+    <details class="topic-navigation" open>
+      <summary data-ui lang={ui} data-i18n="topic.contents">{t(ui, 'topic.contents')}</summary>
+      <nav aria-label={topic.data.title}>
+        <p class="sidebar-topic">
+          <a href={`/${slug}`}>{topic.data.title}</a>
+        </p>
+        <p data-ui lang={ui}>
+          <span class={`badge badge-${status}`} data-i18n={`status.${status}`}>{t(ui, `status.${status}`)}</span>
+        </p>
+        <ol class="toc">
           <li>
-            <a href={`/${slug}/${c.slug}`} aria-current={current === c.slug ? 'page' : undefined}>{c.entry.data.title}</a>
+            <a href={`/${slug}`} aria-current={current === 'quickstart' ? 'page' : undefined} data-ui lang={ui} data-i18n="topic.quickstart">
+              {t(ui, 'topic.quickstart')}
+            </a>
           </li>
-        ))}
-      </ol>
-      {chapters.length === 0 && (
-        <p class="muted" data-ui lang={ui} data-i18n="topic.noChapters">{t(ui, 'topic.noChapters')}</p>
-      )}
-      <p class="toc-secondary" data-ui lang={ui}>
-        <a href={`/${slug}/changelog`} aria-current={current === 'changelog' ? 'page' : undefined} data-i18n="topic.changelog">
-          {t(ui, 'topic.changelog')}
-        </a>
-      </p>
-    </nav>
+          {chapters.map((c) => (
+            <li>
+              <a href={`/${slug}/${c.slug}`} aria-current={current === c.slug ? 'page' : undefined}>{c.entry.data.title}</a>
+            </li>
+          ))}
+        </ol>
+        {chapters.length === 0 && (
+          <p class="muted" data-ui lang={ui} data-i18n="topic.noChapters">{t(ui, 'topic.noChapters')}</p>
+        )}
+        <p class="toc-secondary" data-ui lang={ui}>
+          <a href={`/${slug}/changelog`} aria-current={current === 'changelog' ? 'page' : undefined} data-i18n="topic.changelog">
+            {t(ui, 'topic.changelog')}
+          </a>
+        </p>
+      </nav>
+    </details>
   </aside>
 
   <article class="prose">
@@ -80,9 +84,18 @@ const pageTitle = current === 'quickstart' ? `${topic.data.title} · quickstart.
 
     {isContent && (
       <footer class="article-footer">
-        <p class="notice" data-ui lang={ui} data-i18n="notice.ai">{t(ui, 'notice.ai')}</p>
+        <p class="notice" data-ui lang={ui} data-i18n={authorshipNotice}>{t(ui, authorshipNotice)}</p>
         {disclaimer && <p class="notice notice-warn">{disclaimer}</p>}
       </footer>
     )}
   </article>
 </Base>
+
+<script>
+  // Keep the full navigation usable without JS; collapse it on smaller screens when JS is available.
+  const navigation = document.querySelector<HTMLDetailsElement>('.topic-navigation');
+  const desktop = window.matchMedia('(min-width: 60rem)');
+  const syncNavigation = () => { if (navigation) navigation.open = desktop.matches; };
+  syncNavigation();
+  desktop.addEventListener('change', syncNavigation);
+</script>
