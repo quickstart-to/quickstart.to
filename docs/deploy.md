@@ -18,7 +18,7 @@ GitHub Actions `CI` runs the same validate + build on every PR so problems show 
 | Production branch | `main` |
 | Build command | `pnpm build` |
 | Deploy command | `pnpm wrangler deploy --config site/wrangler.jsonc` |
-| Non-production branch deploy command | `pnpm wrangler versions upload --config site/wrangler.jsonc` |
+| Preview command (branches / PRs) | `pnpm wrangler preview --config site/wrangler.jsonc` (needs the `previews` block in wrangler.jsonc) |
 | Root directory | `/` |
 | Node version | from `.node-version` (22) |
 
