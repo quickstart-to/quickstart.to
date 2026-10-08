@@ -1,0 +1,29 @@
+---
+import { render } from 'astro:content';
+import TopicLayout from '../../layouts/Topic.astro';
+import { getTopics, getQuickstart, getChapters } from '../../lib/topics';
+
+export async function getStaticPaths() {
+  const topics = await getTopics();
+  return topics.map((topic) => ({ params: { topic: topic.id }, props: { topic } }));
+}
+
+const { topic } = Astro.props;
+const quickstart = await getQuickstart(topic.id);
+if (!quickstart) throw new Error(`topics/${topic.id}/quickstart.md is missing`);
+const chapters = await getChapters(topic.id);
+const { Content } = await render(quickstart);
+---
+
+<TopicLayout
+  topic={topic}
+  chapters={chapters}
+  current="quickstart"
+  title={quickstart.data.title}
+  description={quickstart.data.description}
+  path={`/${topic.id}`}
+  lastVerified={quickstart.data.last_verified}
+  volatility={quickstart.data.volatility}
+>
+  <Content />
+</TopicLayout>

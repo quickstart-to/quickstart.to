@@ -1,0 +1,52 @@
+name: 建议新主题 / Propose a topic
+description: 建议一个值得做成体系化手册的主题 / Suggest a topic deep enough for a full field guide
+title: "[topic] "
+labels: ["topic:proposal"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        quickstart.to 的主题少而精：每个主题都要有一篇快速入门 + 8 章以上的系统内容，值得收藏。
+        Topics are few and deep: each needs a quickstart plus 8+ substantial chapters, worth bookmarking.
+
+        **反馈已有内容？** 请直接在网站页面上划线评论，不要在这里提交。
+        **Feedback on existing content?** Highlight the passage on the site instead.
+  - type: input
+    id: title
+    attributes:
+      label: 主题 / Topic
+      placeholder: 例如：个人开发者的海外 SaaS 出海 / e.g. Learning English as an adult developer
+    validations:
+      required: true
+  - type: textarea
+    id: audience
+    attributes:
+      label: 读者是谁？/ Who is it for?
+      description: 越具体越好 / Be specific
+    validations:
+      required: true
+  - type: textarea
+    id: milestone
+    attributes:
+      label: 快速入门的里程碑 / Quickstart milestone
+      description: 读完快速入门，读者应该达成什么具体结果？/ What concrete result should a reader reach after the quickstart?
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: 为什么一次 AI 对话解决不了？/ Why isn't one AI chat enough?
+      description: 这个主题需要的结构、持续更新或核验是什么？/ What structure, freshness or verification does it need?
+    validations:
+      required: true
+  - type: dropdown
+    id: lang
+    attributes:
+      label: 内容语言 / Content language
+      options: [中文 (zh-CN), English, 其他 / Other]
+    validations:
+      required: true
+  - type: textarea
+    id: resources
+    attributes:
+      label: 参考资料（可选）/ Useful resources (optional)

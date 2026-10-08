@@ -1,0 +1,11 @@
+# Sources cited by this topic. Every [^id] in quickstart.md / chapters/*.md must resolve here.
+# Fields:
+#   id:        kebab-case, prefixed with src-
+#   url:       primary source URL
+#   title:     page title as published
+#   publisher: organisation that owns the source
+#   accessed:  YYYY-MM-DD, the date the agent last verified the claim against this URL
+#   claim:     the specific fact this source supports (one line)
+#   excerpt:   optional path under sources/excerpts/ with the relevant quoted passage
+#   archive:   optional web.archive.org snapshot URL
+[]

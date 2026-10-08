@@ -1,0 +1,88 @@
+---
+import Base from './Base.astro';
+import { uiLangFor, t } from '../i18n';
+import type { Topic, Chapter } from '../lib/topics';
+
+interface Props {
+  topic: Topic;
+  chapters: Chapter[];
+  /** "quickstart" | chapter slug | "changelog" */
+  current: string;
+  title: string;
+  description?: string;
+  path: string;
+  lastVerified?: string;
+  volatility?: 'high' | 'medium' | 'low';
+  /** Show the AI-authorship notice and disclaimer (false for the changelog). */
+  isContent?: boolean;
+}
+
+const { topic, chapters, current, title, description, path, lastVerified, volatility, isContent = true } = Astro.props;
+const { slug, lang, status, disclaimer } = topic.data;
+const ui = uiLangFor(lang);
+const pageTitle = current === 'quickstart' ? `${topic.data.title} · quickstart.to` : `${title} · ${topic.data.title}`;
+---
+
+<Base title={pageTitle} description={description ?? topic.data.summary} contentLang={lang} path={path}>
+  <aside class="sidebar" slot="sidebar">
+    <nav aria-label={topic.data.title}>
+      <p class="sidebar-topic">
+        <a href={`/${slug}`}>{topic.data.title}</a>
+      </p>
+      <p data-ui lang={ui}>
+        <span class={`badge badge-${status}`} data-i18n={`status.${status}`}>{t(ui, `status.${status}`)}</span>
+      </p>
+      <ol class="toc">
+        <li>
+          <a href={`/${slug}`} aria-current={current === 'quickstart' ? 'page' : undefined} data-ui lang={ui} data-i18n="topic.quickstart">
+            {t(ui, 'topic.quickstart')}
+          </a>
+        </li>
+        {chapters.map((c) => (
+          <li>
+            <a href={`/${slug}/${c.slug}`} aria-current={current === c.slug ? 'page' : undefined}>{c.entry.data.title}</a>
+          </li>
+        ))}
+      </ol>
+      {chapters.length === 0 && (
+        <p class="muted" data-ui lang={ui} data-i18n="topic.noChapters">{t(ui, 'topic.noChapters')}</p>
+      )}
+      <p class="toc-secondary" data-ui lang={ui}>
+        <a href={`/${slug}/changelog`} aria-current={current === 'changelog' ? 'page' : undefined} data-i18n="topic.changelog">
+          {t(ui, 'topic.changelog')}
+        </a>
+      </p>
+    </nav>
+  </aside>
+
+  <article class="prose">
+    <header class="article-header">
+      <h1>{title}</h1>
+      {(lastVerified || volatility) && (
+        <dl class="article-meta" data-ui lang={ui}>
+          {lastVerified && (
+            <div>
+              <dt data-i18n="meta.lastVerified">{t(ui, 'meta.lastVerified')}</dt>
+              <dd><time datetime={lastVerified}>{lastVerified}</time></dd>
+            </div>
+          )}
+          {volatility && (
+            <div>
+              <dt data-i18n="meta.volatility">{t(ui, 'meta.volatility')}</dt>
+              <dd data-i18n={`volatility.${volatility}`}>{t(ui, `volatility.${volatility}`)}</dd>
+            </div>
+          )}
+        </dl>
+      )}
+    </header>
+
+    <slot />
+
+    {isContent && (
+      <footer class="article-footer">
+        <p class="notice" data-ui lang={ui} data-i18n="notice.ai">{t(ui, 'notice.ai')}</p>
+        {disclaimer && <p class="notice notice-warn">{disclaimer}</p>}
+      </footer>
+    )}
+  </article>
+</Base>

@@ -1,0 +1,105 @@
+---
+import '../styles/global.css';
+import { UI_LANGS, UI_LANG_LABELS, uiLangFor, t, type UiLang } from '../i18n';
+
+interface Props {
+  title: string;
+  description?: string;
+  /** BCP 47 language of the page's main content. Drives <html lang> and the default UI language. */
+  contentLang: string;
+  /** Canonical path without trailing slash, e.g. "/go-global/payments". */
+  path: string;
+}
+
+const { title, description, contentLang, path } = Astro.props;
+const uiLang: UiLang = uiLangFor(contentLang);
+const canonical = new URL(path, Astro.site).href;
+const REPO = 'https://github.com/quickstart-to/quickstart.to';
+---
+
+<!doctype html>
+<html lang={contentLang} data-ui-lang={uiLang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>{title}</title>
+    {description && <meta name="description" content={description} />}
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta property="og:title" content={title} />
+    {description && <meta property="og:description" content={description} />}
+    <meta property="og:url" content={canonical} />
+    <meta property="og:type" content="article" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-ui lang={uiLang}>Skip to content</a>
+    <header class="site-header" data-ui lang={uiLang}>
+      <a class="brand" href="/">quickstart<span>.to</span></a>
+      <nav class="site-nav" aria-label="Site">
+        <a href="/" data-i18n="nav.topics">{t(uiLang, 'nav.topics')}</a>
+        <a href={REPO} rel="noopener" data-i18n="nav.github">{t(uiLang, 'nav.github')}</a>
+        <label class="lang-picker">
+          <span class="visually-hidden" data-i18n="ui.language">{t(uiLang, 'ui.language')}</span>
+          <select id="ui-lang" autocomplete="off">
+            {Object.entries(UI_LANG_LABELS).map(([code, label]) => (
+              <option value={code} lang={code} selected={code === uiLang}>{label}</option>
+            ))}
+          </select>
+        </label>
+      </nav>
+    </header>
+
+    <div class="page">
+      <slot name="sidebar" />
+      <main id="main" class="main">
+        <slot />
+      </main>
+    </div>
+
+    <footer class="site-footer" data-ui lang={uiLang}>
+      <p data-i18n="footer.feedback">{t(uiLang, 'footer.feedback')}</p>
+      <p data-i18n="footer.license">{t(uiLang, 'footer.license')}</p>
+    </footer>
+
+    <script is:inline type="application/json" id="ui-strings" set:html={JSON.stringify(UI_LANGS)} />
+    <script is:inline>
+      // Swap UI-chrome strings to the reader's preferred language. URL and content never change.
+      (() => {
+        const KEY = 'qs:ui-lang';
+        const dicts = JSON.parse(document.getElementById('ui-strings').textContent);
+        const root = document.documentElement;
+        const match = (tag) => {
+          if (!tag) return null;
+          const l = tag.toLowerCase();
+          return l.startsWith('zh') ? 'zh-CN' : l.startsWith('en') ? 'en' : null;
+        };
+        const preferred = () => {
+          try { const s = localStorage.getItem(KEY); if (dicts[s]) return s; } catch {}
+          for (const l of navigator.languages || [navigator.language]) { const m = match(l); if (m) return m; }
+          return root.dataset.uiLang;
+        };
+        const apply = (lang) => {
+          const d = dicts[lang];
+          if (!d) return;
+          root.dataset.uiLang = lang;
+          document.querySelectorAll('[data-i18n]').forEach((el) => {
+            const v = d[el.dataset.i18n];
+            if (v) el.textContent = v;
+          });
+          // Chrome regions declare their own language; <html lang> stays the content language.
+          document.querySelectorAll('[data-ui]').forEach((el) => el.setAttribute('lang', lang));
+          const sel = document.getElementById('ui-lang');
+          if (sel) sel.value = lang;
+        };
+        const initial = preferred();
+        if (initial !== root.dataset.uiLang) apply(initial);
+        document.getElementById('ui-lang')?.addEventListener('change', (e) => {
+          const lang = e.target.value;
+          try { localStorage.setItem(KEY, lang); } catch {}
+          apply(lang);
+        });
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+# Content under topics/ is written only by AI agents. PRs from anyone else that touch topics/
+# are closed with a friendly pointer to the on-site highlight/comment feature for each page.
+#
+# Configure the allowlist as a repository variable:
+#   Settings → Secrets and variables → Actions → Variables → AGENT_ACTORS = "qs-agent[bot],qs-agent"
+#
+# Uses pull_request_target so it can comment on fork PRs. It never checks out or runs PR code.
+name: Guard content
+
+on:
+  pull_request_target:
+    types: [opened, reopened, synchronize]
+    paths: ['topics/**']
+
+permissions:
+  pull-requests: write
+
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v7
+        env:
+          AGENT_ACTORS: ${{ vars.AGENT_ACTORS }}
+        with:
+          script: |
+            const allow = (process.env.AGENT_ACTORS || '').split(',').map((s) => s.trim()).filter(Boolean);
+            const pr = context.payload.pull_request;
+            const author = pr.user.login;
+            if (allow.includes(author)) {
+              core.info(`${author} is an allowed agent actor`);
+              return;
+            }
+
+            const files = await github.paginate(github.rest.pulls.listFiles, {
+              owner: context.repo.owner, repo: context.repo.repo, pull_number: pr.number, per_page: 100,
+            });
+            const links = new Set();
+            for (const { filename } of files) {
+              const m = filename.match(/^topics\/([a-z0-9-]+)\/(?:(quickstart)\.md|chapters\/(?:\d+-)?([a-z0-9-]+)\.md)?/);
+              if (!m) continue;
+              const [, slug, qs, chapter] = m;
+              links.add(chapter ? `https://quickstart.to/${slug}/${chapter}` : `https://quickstart.to/${slug}`);
+            }
+            const list = [...links].map((l) => `- ${l}`).join('\n') || '- https://quickstart.to';
+
+            const body = [
+              `Thanks for wanting to improve quickstart.to, @${author}! 🙏`,
+              '',
+              'All topic content is written and maintained by AI agents, so we don\'t accept direct edits to `topics/`. ' +
+              'The best way to help is to **highlight the passage on the site and leave a comment** ' +
+              '(mark it as outdated / incorrect / supplementary material). An agent will verify it, update the page, and reply to you there.',
+              '',
+              'Pages touched by this PR:',
+              list,
+              '',
+              '---',
+              '感谢你的贡献！本站内容全部由 AI Agent 编写和维护，因此不接受直接修改 `topics/` 的 PR。' +
+              '请在上面的页面中**划线并评论**（可标记为“已过期 / 有误 / 补充资料”），Agent 核验后会更新内容并在原处回复你。',
+              '',
+              'Site code (`site/`, `scripts/`) contributions are welcome in separate PRs. See CONTRIBUTING.md.',
+            ].join('\n');
+
+            await github.rest.issues.createComment({ owner: context.repo.owner, repo: context.repo.repo, issue_number: pr.number, body });
+            await github.rest.pulls.update({ owner: context.repo.owner, repo: context.repo.repo, pull_number: pr.number, state: 'closed' });

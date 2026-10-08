@@ -1,0 +1,48 @@
+---
+import Base from '../layouts/Base.astro';
+import { getTopics } from '../lib/topics';
+import { t } from '../i18n';
+
+const topics = await getTopics();
+const ui = 'en';
+const langName = (tag: string) => {
+  try {
+    return new Intl.DisplayNames([tag], { type: 'language' }).of(tag) ?? tag;
+  } catch {
+    return tag;
+  }
+};
+---
+
+<Base title="quickstart.to" description={t(ui, 'site.tagline')} contentLang="en" path="/">
+  <div class="home">
+    <header class="home-hero">
+      <h1 data-i18n="home.title">{t(ui, 'home.title')}</h1>
+      <p class="lead" data-i18n="home.intro">{t(ui, 'home.intro')}</p>
+    </header>
+
+    <ul class="topic-grid" role="list">
+      {topics.map((topic) => (
+        <li class="topic-card">
+          <a href={`/${topic.id}`}>
+            <h2 lang={topic.data.lang}>{topic.data.title}</h2>
+            {topic.data.title_en && !topic.data.lang.startsWith('en') && <p class="muted">{topic.data.title_en}</p>}
+            {topic.data.summary && <p lang={topic.data.lang}>{topic.data.summary}</p>}
+            <p class="topic-card-meta">
+              <span class={`badge badge-${topic.data.status}`} data-i18n={`status.${topic.data.status}`}>
+                {t(ui, `status.${topic.data.status}`)}
+              </span>
+              <span class="badge" lang={topic.data.lang}>{langName(topic.data.lang)}</span>
+            </p>
+          </a>
+        </li>
+      ))}
+    </ul>
+
+    <p>
+      <a href="https://github.com/quickstart-to/quickstart.to/issues/new?template=topic-proposal.yml" rel="noopener" data-i18n="home.suggest">
+        {t(ui, 'home.suggest')}
+      </a>
+    </p>
+  </div>
+</Base>

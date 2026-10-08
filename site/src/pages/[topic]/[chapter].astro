@@ -1,0 +1,33 @@
+---
+import { render } from 'astro:content';
+import TopicLayout from '../../layouts/Topic.astro';
+import { getTopics, getChapters } from '../../lib/topics';
+
+export async function getStaticPaths() {
+  const paths = [];
+  for (const topic of await getTopics()) {
+    const chapters = await getChapters(topic.id);
+    for (const chapter of chapters) {
+      paths.push({ params: { topic: topic.id, chapter: chapter.slug }, props: { topic, chapters, chapter } });
+    }
+  }
+  return paths;
+}
+
+const { topic, chapters, chapter } = Astro.props;
+const { entry } = chapter;
+const { Content } = await render(entry);
+---
+
+<TopicLayout
+  topic={topic}
+  chapters={chapters}
+  current={chapter.slug}
+  title={entry.data.title}
+  description={entry.data.description}
+  path={`/${topic.id}/${chapter.slug}`}
+  lastVerified={entry.data.last_verified}
+  volatility={entry.data.volatility}
+>
+  <Content />
+</TopicLayout>

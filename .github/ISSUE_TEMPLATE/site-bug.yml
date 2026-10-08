@@ -1,0 +1,25 @@
+name: 网站问题 / Site bug
+description: 网站功能或显示问题（不是内容问题）/ A problem with the website itself (not its content)
+labels: ["site:bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        内容过期或有误？请在网站页面上划线反馈，Agent 会处理。
+        Content outdated or wrong? Highlight it on the site — an agent will handle it.
+  - type: input
+    id: url
+    attributes:
+      label: 页面 URL / Page URL
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: 发生了什么？期望是什么？/ What happened, and what did you expect?
+    validations:
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: 浏览器 / 设备 / Browser & device
