@@ -18,9 +18,15 @@ GitHub Actions `CI` runs the same validate + build on every PR so problems show 
 | Production branch | `main` |
 | Build command | `pnpm build` |
 | Deploy command | `pnpm wrangler deploy --config site/wrangler.jsonc` |
-| Non-production branch deploy command | `pnpm wrangler versions upload --config site/wrangler.jsonc` |
+| Preview command (branches / PRs) | `pnpm wrangler preview --config site/wrangler.jsonc` (needs the `previews` block in wrangler.jsonc) |
 | Root directory | `/` |
 | Node version | from `.node-version` (22) |
+
+## Repository settings
+
+- Branch protection on `main`: PR required, CI `build` must pass, conversations resolved, no force-push/deletion. Admins can bypass in emergencies.
+- Required approvals: **0 for now** — the agent currently runs as the maintainer account (`linheitu`), which cannot approve its own PRs. The maintainer reviews by merging. Raise to 1 once the dedicated `quickstart-to-agent` machine account exists.
+- Repository variable `AGENT_ACTORS = linheitu,quickstart-to-agent` (used by `guard-content`). Remove `linheitu` once the machine account is active.
 
 ## Manual deploy (fallback)
 

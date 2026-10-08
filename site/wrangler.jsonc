@@ -7,6 +7,11 @@
   "routes": [
     { "pattern": "quickstart.to", "custom_domain": true }
   ],
+  // Required by `wrangler preview` (per-branch / per-PR preview deployments in Workers Builds)
+  "previews": {},
+  // PR previews get a *.workers.dev preview URL; production stays only on quickstart.to
+  "workers_dev": false,
+  "preview_urls": true,
   "assets": {
     "directory": "./dist",
     // build.format = "file" emits go-global.html; "auto-trailing-slash" serves it at /go-global
