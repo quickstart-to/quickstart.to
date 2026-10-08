@@ -2,7 +2,7 @@
 
 This repository is **quickstart.to**: a small set of deep, structured, continuously-updated field guides. **All topic content is written and maintained by AI agents.** Humans contribute through on-site comments and highlights, not by editing content.
 
-Read this file fully before doing anything. Then read [`docs/content-guide.md`](docs/content-guide.md) before touching `topics/`.
+Read this file fully before doing anything. Then read [`docs/content-guide.md`](docs/content-guide.md) before touching `topics/`. For current project status and the next planned work, read [`docs/handoff.md`](docs/handoff.md).
 
 ## Repository map
 
