@@ -11,4 +11,3 @@
 > Use only for synchronization, we encourage using subscription.paid for activating access.
 
 > The subscription remains active until current_period_end_date, after which it transitions to canceled.
-

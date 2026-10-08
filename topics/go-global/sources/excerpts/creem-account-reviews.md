@@ -11,4 +11,3 @@
 > AI image/video generation products must integrate the CREEM Moderation API.
 
 > All restricted products require additional verification, including previous payment processor details, chargeback/refund rate, and reason for moving to Creem. An established and proven track record is required for consideration.
-

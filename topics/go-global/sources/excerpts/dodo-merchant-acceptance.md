@@ -9,4 +9,3 @@
 > Gaming and virtual-goods environments – This includes games of skill, online games, video games, in-game currencies, digital item sales, game boosters, or private servers - whether official or unofficial.
 
 > AI Content Generation tools (text, image, video, voice) – No impersonation, scraping, or deepfakes
-

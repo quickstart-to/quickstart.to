@@ -9,4 +9,3 @@
 > Human services that are not related to a software offering (e.g., pure consulting or advisory services, including but not limited to legal advice, coaching, IT services, and access to a community of experts)
 
 > Due to the increased risk on certain offerings, Paddle must do enhanced due diligence on certain product offerings.
-

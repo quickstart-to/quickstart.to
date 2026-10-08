@@ -11,4 +11,3 @@
 > Register your production webhook URL in the live dashboard
 
 > Switch to production mode in the dashboard and create your live products
-

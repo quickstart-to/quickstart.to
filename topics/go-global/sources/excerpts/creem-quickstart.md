@@ -9,4 +9,3 @@
 > Click the Share button on your product to get your payment link.
 
 > For production apps, use Webhooks to reliably receive payment events on your server.
-

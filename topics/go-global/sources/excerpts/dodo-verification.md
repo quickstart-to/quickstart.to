@@ -15,4 +15,3 @@
 > Payouts require:
 > Every required form approved, including Bank Verification
 > Monitoring Review completed
-
