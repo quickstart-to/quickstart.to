@@ -265,3 +265,35 @@
   accessed: '2026-10-08'
   claim: 接收事件前验证签名；重复投递需幂等；订阅按已付款事件开通，期末取消在当前周期结束前仍有效
   excerpt: excerpts/creem-webhooks.md
+- id: src-stripe-global
+  url: https://stripe.com/global
+  title: Stripe global availability
+  publisher: Stripe
+  accessed: '2026-10-08'
+  claim: 支付服务开通地区正文列表包含香港、未列中国大陆；网站语言地区选择器不是支付准入列表
+  excerpt: excerpts/stripe-global.md
+  archive: https://web.archive.org/web/20261008112923/https://stripe.com/global
+- id: src-stripe-tax-how
+  url: https://docs.stripe.com/tax/how-tax-works
+  title: How Stripe Tax works
+  publisher: Stripe
+  accessed: '2026-10-08'
+  claim: 税务合规需识别义务、注册、计算收取以及申报缴纳；Stripe及合作方提供自动化工具，不能把接入税额计算等同于已完成所有步骤
+  excerpt: excerpts/stripe-tax-how.md
+  archive: https://web.archive.org/web/20261008113229/https://docs.stripe.com/tax/how-tax-works
+- id: src-apple-payment-guidelines
+  url: https://developer.apple.com/app-store/review/guidelines/
+  title: App Review Guidelines — 3.1 Payments
+  publisher: Apple
+  accessed: '2026-10-08'
+  claim: 3.1.1规定应用内数字功能使用IAP；3.1.1(a)与3.1.3另列美国店面、特定地区授权及应用类别等例外条件
+  excerpt: excerpts/apple-payment-guidelines.md
+  archive: https://web.archive.org/web/20261008113029/https://developer.apple.com/app-store/review/guidelines/
+- id: src-google-play-payments
+  url: https://support.google.com/googleplay/android-developer/answer/9858738?hl=en
+  title: Payments — Play Console Help
+  publisher: Google
+  accessed: '2026-10-08'
+  claim: Play分发应用的数字功能交易原则上须用Play结算，第3、8、9节列例外；符合地区条件的替代结算或外链须按适用计划要求办理
+  excerpt: excerpts/google-play-payments.md
+  archive: https://web.archive.org/web/20261008112943/https://support.google.com/googleplay/android-developer/answer/9858738?hl=en
