@@ -22,6 +22,14 @@ GitHub Actions `CI` runs the same validate + build on every PR so problems show 
 | Root directory | `/` |
 | Node version | from `.node-version` (22) |
 
+## Domains
+
+| Host | Behavior |
+|---|---|
+| `quickstart.to` | Worker custom domain (production). |
+| `www.quickstart.to` | Proxied placeholder A record `192.0.2.1` + Redirect Rule "www → quickstart.to (301)": `*://www.quickstart.to/*` → `https://quickstart.to/${2}`, query string preserved. |
+| `*.workers.dev` | Production `workers_dev` is off. Branch/PR previews are on (`preview_urls: true`): `<branch>-quickstart-to.rewriteso.workers.dev` and `<deployment-id>-quickstart-to.rewriteso.workers.dev`. The setting is applied by the production `wrangler deploy`, not by preview builds. |
+
 ## Repository settings
 
 - Branch protection on `main`: PR required, CI `build` must pass, conversations resolved, no force-push/deletion. Admins can bypass in emergencies.
