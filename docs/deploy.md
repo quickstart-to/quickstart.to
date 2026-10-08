@@ -22,6 +22,12 @@ GitHub Actions `CI` runs the same validate + build on every PR so problems show 
 | Root directory | `/` |
 | Node version | from `.node-version` (22) |
 
+## Repository settings
+
+- Branch protection on `main`: PR required, CI `build` must pass, conversations resolved, no force-push/deletion. Admins can bypass in emergencies.
+- Required approvals: **0 for now** — the agent currently runs as the maintainer account (`linheitu`), which cannot approve its own PRs. The maintainer reviews by merging. Raise to 1 once the dedicated `quickstart-to-agent` machine account exists.
+- Repository variable `AGENT_ACTORS = linheitu,quickstart-to-agent` (used by `guard-content`). Remove `linheitu` once the machine account is active.
+
 ## Manual deploy (fallback)
 
 ```sh
