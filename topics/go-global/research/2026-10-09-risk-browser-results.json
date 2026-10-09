@@ -1,0 +1,657 @@
+{
+  "checkedAt": "2026-10-09T14:23:40.258Z",
+  "states": [
+    {
+      "mask": 0,
+      "actions": [
+        {
+          "name": "deleted",
+          "checked": false
+        },
+        {
+          "name": "revoked",
+          "checked": false
+        },
+        {
+          "name": "web",
+          "checked": false
+        },
+        {
+          "name": "job",
+          "checked": false
+        }
+      ],
+      "old": "200 · 仍可访问",
+      "web": "200 · 使用旧密钥",
+      "job": "200 · 使用旧密钥",
+      "explanation": "网站和任务可用，但旧密钥仍被接受；尚未收回旧访问。",
+      "file": "文件副本仍在。清理副本可以减少继续暴露，却不能使别人已复制的密钥失效。",
+      "overflow": false
+    },
+    {
+      "mask": 1,
+      "actions": [
+        {
+          "name": "deleted",
+          "checked": true
+        },
+        {
+          "name": "revoked",
+          "checked": false
+        },
+        {
+          "name": "web",
+          "checked": false
+        },
+        {
+          "name": "job",
+          "checked": false
+        }
+      ],
+      "old": "200 · 仍可访问",
+      "web": "200 · 使用旧密钥",
+      "job": "200 · 使用旧密钥",
+      "explanation": "网站和任务可用，但旧密钥仍被接受；尚未收回旧访问。",
+      "file": "文件副本已删除。这一步没有改变签发方接受哪把密钥。",
+      "overflow": false
+    },
+    {
+      "mask": 3,
+      "actions": [
+        {
+          "name": "deleted",
+          "checked": true
+        },
+        {
+          "name": "revoked",
+          "checked": true
+        },
+        {
+          "name": "web",
+          "checked": false
+        },
+        {
+          "name": "job",
+          "checked": false
+        }
+      ],
+      "old": "401 · 旧访问被拒绝",
+      "web": "401 · 仍使用已撤销的旧密钥",
+      "job": "401 · 仍使用已撤销的旧密钥",
+      "explanation": "旧访问已被拒绝；网站和后台任务都仍使用已撤销的旧密钥，尚未恢复。",
+      "file": "文件副本已删除。这一步没有改变签发方接受哪把密钥。",
+      "overflow": false
+    },
+    {
+      "mask": 2,
+      "actions": [
+        {
+          "name": "deleted",
+          "checked": false
+        },
+        {
+          "name": "revoked",
+          "checked": true
+        },
+        {
+          "name": "web",
+          "checked": false
+        },
+        {
+          "name": "job",
+          "checked": false
+        }
+      ],
+      "old": "401 · 旧访问被拒绝",
+      "web": "401 · 仍使用已撤销的旧密钥",
+      "job": "401 · 仍使用已撤销的旧密钥",
+      "explanation": "旧访问已被拒绝；网站和后台任务都仍使用已撤销的旧密钥，尚未恢复。",
+      "file": "文件副本仍在。清理副本可以减少继续暴露，却不能使别人已复制的密钥失效。",
+      "overflow": false
+    },
+    {
+      "mask": 6,
+      "actions": [
+        {
+          "name": "deleted",
+          "checked": false
+        },
+        {
+          "name": "revoked",
+          "checked": true
+        },
+        {
+          "name": "web",
+          "checked": true
+        },
+        {
+          "name": "job",
+          "checked": false
+        }
+      ],
+      "old": "401 · 旧访问被拒绝",
+      "web": "200 · 使用新密钥",
+      "job": "401 · 仍使用已撤销的旧密钥",
+      "explanation": "旧访问已被拒绝；后台任务仍使用已撤销的旧密钥，尚未恢复。",
+      "file": "文件副本仍在。清理副本可以减少继续暴露，却不能使别人已复制的密钥失效。",
+      "overflow": false
+    },
+    {
+      "mask": 7,
+      "actions": [
+        {
+          "name": "deleted",
+          "checked": true
+        },
+        {
+          "name": "revoked",
+          "checked": true
+        },
+        {
+          "name": "web",
+          "checked": true
+        },
+        {
+          "name": "job",
+          "checked": false
+        }
+      ],
+      "old": "401 · 旧访问被拒绝",
+      "web": "200 · 使用新密钥",
+      "job": "401 · 仍使用已撤销的旧密钥",
+      "explanation": "旧访问已被拒绝；后台任务仍使用已撤销的旧密钥，尚未恢复。",
+      "file": "文件副本已删除。这一步没有改变签发方接受哪把密钥。",
+      "overflow": false
+    },
+    {
+      "mask": 5,
+      "actions": [
+        {
+          "name": "deleted",
+          "checked": true
+        },
+        {
+          "name": "revoked",
+          "checked": false
+        },
+        {
+          "name": "web",
+          "checked": true
+        },
+        {
+          "name": "job",
+          "checked": false
+        }
+      ],
+      "old": "200 · 仍可访问",
+      "web": "200 · 使用新密钥",
+      "job": "200 · 使用旧密钥",
+      "explanation": "网站和任务可用，但旧密钥仍被接受；尚未收回旧访问。",
+      "file": "文件副本已删除。这一步没有改变签发方接受哪把密钥。",
+      "overflow": false
+    },
+    {
+      "mask": 4,
+      "actions": [
+        {
+          "name": "deleted",
+          "checked": false
+        },
+        {
+          "name": "revoked",
+          "checked": false
+        },
+        {
+          "name": "web",
+          "checked": true
+        },
+        {
+          "name": "job",
+          "checked": false
+        }
+      ],
+      "old": "200 · 仍可访问",
+      "web": "200 · 使用新密钥",
+      "job": "200 · 使用旧密钥",
+      "explanation": "网站和任务可用，但旧密钥仍被接受；尚未收回旧访问。",
+      "file": "文件副本仍在。清理副本可以减少继续暴露，却不能使别人已复制的密钥失效。",
+      "overflow": false
+    },
+    {
+      "mask": 12,
+      "actions": [
+        {
+          "name": "deleted",
+          "checked": false
+        },
+        {
+          "name": "revoked",
+          "checked": false
+        },
+        {
+          "name": "web",
+          "checked": true
+        },
+        {
+          "name": "job",
+          "checked": true
+        }
+      ],
+      "old": "200 · 仍可访问",
+      "web": "200 · 使用新密钥",
+      "job": "200 · 使用新密钥",
+      "explanation": "两个使用位置都换好了，但旧密钥仍被接受；换好配置没有收回旧访问。",
+      "file": "文件副本仍在。清理副本可以减少继续暴露，却不能使别人已复制的密钥失效。",
+      "overflow": false
+    },
+    {
+      "mask": 13,
+      "actions": [
+        {
+          "name": "deleted",
+          "checked": true
+        },
+        {
+          "name": "revoked",
+          "checked": false
+        },
+        {
+          "name": "web",
+          "checked": true
+        },
+        {
+          "name": "job",
+          "checked": true
+        }
+      ],
+      "old": "200 · 仍可访问",
+      "web": "200 · 使用新密钥",
+      "job": "200 · 使用新密钥",
+      "explanation": "两个使用位置都换好了，但旧密钥仍被接受；换好配置没有收回旧访问。",
+      "file": "文件副本已删除。这一步没有改变签发方接受哪把密钥。",
+      "overflow": false
+    },
+    {
+      "mask": 15,
+      "actions": [
+        {
+          "name": "deleted",
+          "checked": true
+        },
+        {
+          "name": "revoked",
+          "checked": true
+        },
+        {
+          "name": "web",
+          "checked": true
+        },
+        {
+          "name": "job",
+          "checked": true
+        }
+      ],
+      "old": "401 · 旧访问被拒绝",
+      "web": "200 · 使用新密钥",
+      "job": "200 · 使用新密钥",
+      "explanation": "本例两条验证都通过：旧访问被拒绝，网站与后台任务都使用新密钥成功请求。这不证明真实事件中没有其他异常权限。",
+      "file": "文件副本已删除。这一步没有改变签发方接受哪把密钥。",
+      "overflow": false
+    },
+    {
+      "mask": 14,
+      "actions": [
+        {
+          "name": "deleted",
+          "checked": false
+        },
+        {
+          "name": "revoked",
+          "checked": true
+        },
+        {
+          "name": "web",
+          "checked": true
+        },
+        {
+          "name": "job",
+          "checked": true
+        }
+      ],
+      "old": "401 · 旧访问被拒绝",
+      "web": "200 · 使用新密钥",
+      "job": "200 · 使用新密钥",
+      "explanation": "本例两条验证都通过：旧访问被拒绝，网站与后台任务都使用新密钥成功请求。这不证明真实事件中没有其他异常权限。",
+      "file": "文件副本仍在。清理副本可以减少继续暴露，却不能使别人已复制的密钥失效。",
+      "overflow": false
+    },
+    {
+      "mask": 10,
+      "actions": [
+        {
+          "name": "deleted",
+          "checked": false
+        },
+        {
+          "name": "revoked",
+          "checked": true
+        },
+        {
+          "name": "web",
+          "checked": false
+        },
+        {
+          "name": "job",
+          "checked": true
+        }
+      ],
+      "old": "401 · 旧访问被拒绝",
+      "web": "401 · 仍使用已撤销的旧密钥",
+      "job": "200 · 使用新密钥",
+      "explanation": "旧访问已被拒绝；网站仍使用已撤销的旧密钥，尚未恢复。",
+      "file": "文件副本仍在。清理副本可以减少继续暴露，却不能使别人已复制的密钥失效。",
+      "overflow": false
+    },
+    {
+      "mask": 11,
+      "actions": [
+        {
+          "name": "deleted",
+          "checked": true
+        },
+        {
+          "name": "revoked",
+          "checked": true
+        },
+        {
+          "name": "web",
+          "checked": false
+        },
+        {
+          "name": "job",
+          "checked": true
+        }
+      ],
+      "old": "401 · 旧访问被拒绝",
+      "web": "401 · 仍使用已撤销的旧密钥",
+      "job": "200 · 使用新密钥",
+      "explanation": "旧访问已被拒绝；网站仍使用已撤销的旧密钥，尚未恢复。",
+      "file": "文件副本已删除。这一步没有改变签发方接受哪把密钥。",
+      "overflow": false
+    },
+    {
+      "mask": 9,
+      "actions": [
+        {
+          "name": "deleted",
+          "checked": true
+        },
+        {
+          "name": "revoked",
+          "checked": false
+        },
+        {
+          "name": "web",
+          "checked": false
+        },
+        {
+          "name": "job",
+          "checked": true
+        }
+      ],
+      "old": "200 · 仍可访问",
+      "web": "200 · 使用旧密钥",
+      "job": "200 · 使用新密钥",
+      "explanation": "网站和任务可用，但旧密钥仍被接受；尚未收回旧访问。",
+      "file": "文件副本已删除。这一步没有改变签发方接受哪把密钥。",
+      "overflow": false
+    },
+    {
+      "mask": 8,
+      "actions": [
+        {
+          "name": "deleted",
+          "checked": false
+        },
+        {
+          "name": "revoked",
+          "checked": false
+        },
+        {
+          "name": "web",
+          "checked": false
+        },
+        {
+          "name": "job",
+          "checked": true
+        }
+      ],
+      "old": "200 · 仍可访问",
+      "web": "200 · 使用旧密钥",
+      "job": "200 · 使用新密钥",
+      "explanation": "网站和任务可用，但旧密钥仍被接受；尚未收回旧访问。",
+      "file": "文件副本仍在。清理副本可以减少继续暴露，却不能使别人已复制的密钥失效。",
+      "overflow": false
+    }
+  ],
+  "keyboard": {
+    "active": "revoked",
+    "focus": true,
+    "checked": [
+      true,
+      true,
+      false,
+      false
+    ],
+    "old": "401 · 旧访问被拒绝",
+    "web": "401 · 仍使用已撤销的旧密钥"
+  },
+  "reset": {
+    "actions": [
+      {
+        "name": "deleted",
+        "checked": false
+      },
+      {
+        "name": "revoked",
+        "checked": false
+      },
+      {
+        "name": "web",
+        "checked": false
+      },
+      {
+        "name": "job",
+        "checked": false
+      }
+    ],
+    "old": "200 · 仍可访问",
+    "web": "200 · 使用旧密钥",
+    "job": "200 · 使用旧密钥",
+    "explanation": "网站和任务可用，但旧密钥仍被接受；尚未收回旧访问。",
+    "file": "文件副本仍在。清理副本可以减少继续暴露，却不能使别人已复制的密钥失效。",
+    "overflow": false
+  },
+  "download": {
+    "filename": "credential-rotation-drill.mjs",
+    "identical": true,
+    "bytes": 4069
+  },
+  "scope": "Browser-local synthetic control states; no production keys or accounts",
+  "light": {
+    "width": 390,
+    "overflow": false,
+    "dark": false,
+    "reduced": true,
+    "tableDisplays": [
+      "block",
+      "block",
+      "block",
+      "block",
+      "block",
+      "block",
+      "block",
+      "block",
+      "block",
+      "block",
+      "block",
+      "block",
+      "block",
+      "block",
+      "block",
+      "block",
+      "block",
+      "block",
+      "block",
+      "block",
+      "block",
+      "block",
+      "block",
+      "block"
+    ],
+    "rawMarkdown": false,
+    "fallbackVisible": false
+  },
+  "dark": {
+    "width": 390,
+    "overflow": false,
+    "dark": true,
+    "reduced": true,
+    "tableDisplays": [
+      "block",
+      "block",
+      "block",
+      "block",
+      "block",
+      "block",
+      "block",
+      "block",
+      "block",
+      "block",
+      "block",
+      "block",
+      "block",
+      "block",
+      "block",
+      "block",
+      "block",
+      "block",
+      "block",
+      "block",
+      "block",
+      "block",
+      "block",
+      "block"
+    ],
+    "rawMarkdown": false,
+    "fallbackVisible": false
+  },
+  "noScript": {
+    "ready": "complete",
+    "controls": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "resetHidden": true,
+    "fallback": "当前未启用脚本。下方实测表保留完整过程：删文件后旧访问仍成功；撤销后漏更新的任务失败；补齐任务配置后才同时通过两条验证。",
+    "visible": true,
+    "old": "200 · 仍可访问",
+    "tableRows": 5,
+    "overflow": false
+  },
+  "restored": {
+    "ready": true,
+    "fallback": false
+  },
+  "downloadedExecution": {
+    "executedAt": "2026-10-09T14:24:07.591Z",
+    "node": "v22.19.0",
+    "platform": "darwin",
+    "scope": "Loopback HTTP, synthetic credentials and disposable local files only; no provider API or real account was accessed.",
+    "checks": [
+      {
+        "step": "baseline",
+        "client": "web",
+        "status": 200,
+        "expectedStatus": 200,
+        "code": "DEMO_ACCESS_ACCEPTED",
+        "passed": true
+      },
+      {
+        "step": "baseline",
+        "client": "background_job",
+        "status": 200,
+        "expectedStatus": 200,
+        "code": "DEMO_ACCESS_ACCEPTED",
+        "passed": true
+      },
+      {
+        "step": "delete_exposed_copy_only",
+        "client": "copied_old_credential",
+        "status": 200,
+        "expectedStatus": 200,
+        "code": "DEMO_ACCESS_ACCEPTED",
+        "passed": true
+      },
+      {
+        "step": "new_web_key_without_revocation",
+        "client": "web",
+        "status": 200,
+        "expectedStatus": 200,
+        "code": "DEMO_ACCESS_ACCEPTED",
+        "passed": true
+      },
+      {
+        "step": "new_web_key_without_revocation",
+        "client": "copied_old_credential",
+        "status": 200,
+        "expectedStatus": 200,
+        "code": "DEMO_ACCESS_ACCEPTED",
+        "passed": true
+      },
+      {
+        "step": "revoke_old_credential",
+        "client": "copied_old_credential",
+        "status": 401,
+        "expectedStatus": 401,
+        "code": "DEMO_ACCESS_REJECTED",
+        "passed": true
+      },
+      {
+        "step": "revoke_old_credential",
+        "client": "web",
+        "status": 200,
+        "expectedStatus": 200,
+        "code": "DEMO_ACCESS_ACCEPTED",
+        "passed": true
+      },
+      {
+        "step": "revoke_old_credential",
+        "client": "background_job",
+        "status": 401,
+        "expectedStatus": 401,
+        "code": "DEMO_ACCESS_REJECTED",
+        "passed": true
+      },
+      {
+        "step": "repair_background_job",
+        "client": "background_job",
+        "status": 200,
+        "expectedStatus": 200,
+        "code": "DEMO_ACCESS_ACCEPTED",
+        "passed": true
+      },
+      {
+        "step": "final_revocation_check",
+        "client": "copied_old_credential",
+        "status": 401,
+        "expectedStatus": 401,
+        "code": "DEMO_ACCESS_REJECTED",
+        "passed": true
+      }
+    ],
+    "conclusion": "Old access is rejected and both known clients work. This does not prove that a real attacker has no other credentials or sessions."
+  }
+}

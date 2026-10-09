@@ -1125,3 +1125,51 @@
   accessed: 2026-10-09
   claim: 个人开发者名称可与法定姓名不同，但 Google Play 公开法定姓名、国家和开发者邮箱；变现时公开完整地址，特定地区可能还需额外公开信息
   excerpt: excerpts/google-play-account-information.md
+
+- id: src-allen-aws-incident
+  url: https://www.cnblogs.com/AllenMaster/p/15095254.html
+  title: "AWS 安全信息泄露-----21天烧了27万"
+  publisher: "Grant_Allen · 博客园"
+  accessed: "2026-10-09"
+  claim: "作者 2021-08-03 报告遗留 IAM 账号被利用，删除资源后再次出现新资源，后来移除权限；日志判断修正最初 access key 泄露猜测；不采用未发表的费用处理结果"
+  excerpt: excerpts/allen-aws-incident.md
+
+- id: src-cloudflare-2023-incident
+  url: https://blog.cloudflare.com/thanksgiving-2023-security-incident/
+  title: "Thanksgiving 2023 security incident"
+  publisher: "Matthew Prince、John Graham-Cumming、Grant Bourzikas · Cloudflare"
+  accessed: "2026-10-09"
+  claim: "2024-02-01 官方复盘称，2023 年 11 月事件涉及之前失窃且误认为未使用、未轮换的一个访问令牌及三个服务账号凭据；采用事故自述及凭据清点教训，不作独立调查结论"
+  excerpt: excerpts/cloudflare-2023-incident.md
+
+- id: src-github-2fa-recovery
+  url: https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/recovering-your-account-if-you-lose-your-2fa-credentials
+  title: "Recovering your account if you lose your 2FA credentials"
+  publisher: "GitHub Docs"
+  accessed: "2026-10-09"
+  claim: "可用恢复码、预先配置的其他认证或符合条件的恢复因素恢复；没有可用恢复方法时将永久失去访问，支持不能仅凭请求恢复；不承诺个案恢复时间"
+  excerpt: excerpts/github-2fa-recovery.md
+
+- id: src-github-secret-removal
+  url: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository
+  title: "Removing sensitive data from a repository"
+  publisher: "GitHub Docs"
+  accessed: "2026-10-09"
+  claim: "敏感凭据泄露应先撤销或轮换；重写仓库历史不能自行清除其他克隆、分叉及缓存；不提供或执行本仓库历史改写"
+  excerpt: excerpts/github-secret-removal.md
+
+- id: src-cn-cyber-incident-report
+  url: https://www.cac.gov.cn/2025-09/15/c_1759583017717009.htm
+  title: "国家网络安全事件报告管理办法"
+  publisher: "国家互联网信息办公室"
+  accessed: "2026-10-09"
+  claim: "2025-11-01 起施行；第二/四条限定境内网络运营者及较大以上事件的分类报告路径和时限，第七条允许先报已知基础情况后补报，第八条处理结束后 30 日内总结；附件分级不能仅以个人信息数量判断"
+  excerpt: excerpts/cn-cyber-incident-report.md
+
+- id: src-eurlex-gdpr-breach
+  url: https://eur-lex.europa.eu/legal-content/EN/AUTO/?uri=CELEX:02016R0679-20160504
+  title: "Regulation (EU) 2016/679 — consolidated text, Articles 3, 33 and 34"
+  publisher: "EUR-Lex · European Union"
+  accessed: "2026-10-09"
+  claim: "第三条适用范围；第三十三条控制者知悉个人数据泄露后无不当延迟且可行时 72 小时内通知监管机关（不太可能构成权利自由风险例外），处理者及时告知控制者、控制者记录事件；第三十四条高风险个人告知及其例外"
+  excerpt: excerpts/eurlex-gdpr-breach.md

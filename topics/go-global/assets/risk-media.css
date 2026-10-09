@@ -1,0 +1,46 @@
+.risk-media { margin: 2rem 0; padding: 1.15rem; border: 1px solid var(--border); border-radius: .6rem; background: var(--bg-soft); font-size: .94rem; line-height: 1.75; container-type: inline-size; }
+.risk-media h3 { margin: 0 0 1rem; font-size: 1.15rem; line-height: 1.5; }
+.risk-media p { margin: .8rem 0; }
+.risk-media figcaption, .risk-kicker { color: var(--fg-muted); font-size: .82rem; }
+.risk-media [hidden] { display: none !important; }
+.risk-node, .risk-exit { padding: .9rem; border: 1px solid var(--border); border-radius: .4rem; background: var(--bg); }
+.risk-node strong, .risk-node span { display: block; }
+.risk-node strong, .risk-exit > strong { color: var(--accent); }
+.risk-node span { margin-top: .4rem; }
+.risk-node small { display: block; border-top: 1px dashed var(--border); padding-top: .55rem; color: var(--fg-muted); }
+.risk-arrow { text-align: center; color: var(--accent); }
+.risk-exit { margin: 1rem 0; border-left: 3px solid var(--accent); }
+.risk-flow { list-style: none; padding: 0; margin: 1rem 0; }
+.risk-flow li { position: relative; padding: .8rem; margin: 0 0 1.7rem; border: 1px solid var(--border); border-radius: .4rem; background: var(--bg); }
+.risk-flow li:not(:last-child)::after { content: '↓'; position: absolute; left: 50%; top: 100%; height: 1.7rem; color: var(--accent); }
+.risk-flow li:last-child { margin-bottom: .8rem; }
+.risk-flow strong, .risk-flow span { display: block; }
+.risk-flow span { margin-top: .4rem; }
+.risk-fork { display: grid; gap: .8rem; }
+.risk-controls { margin: 1rem 0; padding: .75rem; border: 1px solid var(--border); border-radius: .4rem; }
+.risk-controls legend { font-weight: 650; padding: 0 .35rem; }
+.risk-controls label { display: flex; gap: .65rem; align-items: flex-start; min-height: 44px; padding: .55rem .2rem; cursor: pointer; }
+.risk-controls input { flex: 0 0 auto; width: 1.1rem; height: 1.1rem; margin-top: .25rem; accent-color: var(--accent); }
+.risk-controls input:disabled { cursor: default; }
+.risk-controls input:focus-visible, .risk-reset:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.risk-result { padding: .9rem; border-left: 3px solid var(--accent); background: var(--bg); font-variant-numeric: tabular-nums; }
+.risk-result dl { margin: 0; }
+.risk-result dl > div { padding: .55rem 0; border-bottom: 1px solid var(--border); }
+.risk-result dt { font-size: .84rem; color: var(--fg-muted); }
+.risk-result dd { margin: .25rem 0 0; font-weight: 650; }
+.risk-reset { font: inherit; padding: .6rem .85rem; min-height: 44px; margin-top: 1rem; color: var(--fg); background: var(--bg); border: 1px solid var(--border); border-radius: .35rem; cursor: pointer; }
+.risk-case { padding: .5rem 1.1rem; margin: 1.7rem 0; border-left: 3px solid var(--accent); background: var(--bg-soft); }
+.risk-table { container-type: inline-size; }
+@container (min-width: 500px) { .risk-fork { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+@container (max-width: 500px) {
+  .risk-table table, .risk-table tbody, .risk-table tr, .risk-table td { display: block; }
+  .risk-table thead { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); }
+  .risk-table tr { margin-bottom: 1rem; border: 1px solid var(--border); border-radius: .4rem; overflow: hidden; }
+  .risk-table td { border: 0; padding: .75rem; }
+  .risk-table td:first-child { background: var(--bg-soft); font-weight: 650; }
+  .risk-table td:nth-child(n+2)::before { display: block; color: var(--fg-muted); margin-bottom: .3rem; font-weight: 650; }
+  .risk-drill-table td:nth-child(2)::before { content: '已复制的旧密钥'; }
+  .risk-drill-table td:nth-child(3)::before { content: '已知业务请求'; }
+  .risk-law-table td:nth-child(2)::before { content: '当前规则的关键差别'; }
+  .risk-law-table td:nth-child(3)::before { content: '这时应准备什么'; }
+}
