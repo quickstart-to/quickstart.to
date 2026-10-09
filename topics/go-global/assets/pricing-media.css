@@ -1,0 +1,60 @@
+.pr-media { container-type: inline-size; margin: 2rem 0; color: var(--fg); font-size: .94rem; line-height: 1.7; }
+.pr-media h3 { margin: 0 0 1rem; font-size: 1.15rem; line-height: 1.5; }
+.pr-media p { margin: .8rem 0; }
+.pr-media .pr-kicker { font-size: .78rem; color: var(--fg-muted); margin: 0 0 .5rem; }
+.pr-media figcaption, .pr-media .pr-caption { font-size: .84rem; color: var(--fg-muted); margin: 1rem 0 0; }
+.pr-media small { font-size: .8rem; line-height: 1.6; color: var(--fg-muted); }
+.pr-media [hidden] { display: none !important; }
+.pr-choice ol { display: grid; gap: .8rem; list-style: none; padding: 0; margin: 0; }
+.pr-choice li { margin: 0; padding: 1rem; border: 1px solid var(--border); border-radius: .4rem; }
+.pr-choice li span { display: block; margin-top: .3rem; color: var(--fg-muted); }
+.pr-choice li p { margin: .6rem 0 0; }
+.pr-choice .pr-chosen { border-left: 4px solid var(--accent); background: var(--bg-soft); }
+.pr-offer { padding: 1.4rem; border: 1px solid var(--border); border-top: 4px solid var(--accent); border-radius: .4rem; }
+.pr-offer .pr-price { font-size: 2rem; font-weight: 650; margin: 1rem 0 .5rem; line-height: 1.4; }
+.pr-price span { display: block; font-size: 1rem; font-weight: 400; color: var(--fg-muted); }
+.pr-offer dl { margin: 1.2rem 0 0; }
+.pr-offer dt { font-weight: 650; padding-top: .9rem; border-top: 1px solid var(--border); }
+.pr-offer dd { margin: .3rem 0 .9rem; }
+.pr-calculator { padding: 1.2rem; border: 1px solid var(--border); border-radius: .6rem; background: var(--bg-soft); }
+.pr-inputs { display: grid; gap: 1rem; margin: 1.2rem 0; }
+.pr-inputs label { display: block; font-size: .86rem; }
+.pr-inputs input { display: block; width: 100%; margin-top: .4rem; padding: .6rem; min-height: 44px; border: 1px solid var(--border); border-radius: .4rem; color: var(--fg); background: var(--bg); font: inherit; }
+.pr-media :is(input, button):focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.pr-media input[aria-invalid=true] { border-color: var(--accent); }
+.pr-media [data-pricing-error] { border-left: 3px solid var(--accent); padding: .7rem; }
+.pr-waterfall { display: grid; gap: 1.6rem; margin: 1.5rem 0; }
+.pr-waterfall > div { position: relative; border: 1px solid var(--border); border-radius: .4rem; background: var(--bg); padding: .7rem; }
+.pr-waterfall > div + div::before { content: '↓'; position: absolute; top: -1.7rem; left: 50%; color: var(--accent); }
+.pr-waterfall > div > span { display: block; font-size: .82rem; color: var(--fg-muted); }
+.pr-waterfall strong { font-size: 1.1rem; font-variant-numeric: tabular-nums; }
+.pr-waterfall .pr-result { border-bottom: 3px solid var(--accent); }
+.pr-totals { display: grid; gap: .8rem; }
+.pr-totals p { margin: 0; padding: 1rem; background: var(--bg); border: 1px solid var(--border); border-radius: .4rem; }
+.pr-totals strong { display: block; font-size: 1.45rem; font-variant-numeric: tabular-nums; margin: .4rem 0; }
+.pr-totals small { display: block; }
+.pr-reading { border-left: 3px solid var(--accent); padding: .8rem 1rem; background: var(--bg); }
+.pr-media button { font: inherit; color: var(--fg); padding: .6rem .8rem; min-height: 44px; background: var(--bg); border: 1px solid var(--border); border-radius: .4rem; cursor: pointer; margin-top: 1rem; }
+.pr-media button:hover { border-color: var(--accent); }
+.pr-timeline ol { display: grid; list-style: none; padding: 0; margin: 0; gap: 1.8rem; }
+.pr-timeline li { position: relative; margin: 0; padding: 1rem; border-left: 3px solid var(--accent); background: var(--bg-soft); }
+.pr-timeline li span { display: block; margin-top: .5rem; }
+.pr-timeline li + li::before { content: '↓'; position: absolute; left: 50%; top: -1.8rem; color: var(--accent); }
+.pr-timeline aside { border: 1px dashed var(--border); padding: 1rem; margin-top: 1.2rem; border-radius: .4rem; }
+.pr-timeline aside p { margin-bottom: 0; }
+@container (min-width: 300px) {
+  .pr-inputs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pr-inputs label { display: grid; align-content: end; }
+}
+@container (max-width: 499px) {
+  .pr-waterfall > div { display: flex; align-items: center; justify-content: space-between; gap: .7rem; }
+  .pr-waterfall strong { flex-shrink: 0; }
+  .pr-waterfall > div > span { max-width: 9em; }
+}
+@container (min-width: 500px) {
+  .pr-inputs, .pr-totals { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pr-waterfall { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.2rem; }
+  .pr-waterfall > div + div::before { content: '→'; top: 35%; left: -1.15rem; }
+  .pr-waterfall strong { font-size: 1rem; }
+  .pr-price span { display: inline; margin-left: .5rem; }
+}

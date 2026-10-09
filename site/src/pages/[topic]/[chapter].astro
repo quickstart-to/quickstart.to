@@ -5,6 +5,7 @@ import { getTopics, getChapters } from '../../lib/topics';
 import ValidationMedia from '../../../../topics/go-global/assets/ValidationMedia.astro';
 import LaunchMedia from '../../../../topics/go-global/assets/LaunchMedia.astro';
 import InfrastructureMedia from '../../../../topics/go-global/assets/InfrastructureMedia.astro';
+import PricingMedia from '../../../../topics/go-global/assets/PricingMedia.astro';
 
 export async function getStaticPaths() {
   const paths = [];
@@ -37,4 +38,5 @@ const { Content } = await render(entry);
   {topic.id === 'go-global' && chapter.slug === 'validate-idea' && <ValidationMedia />}
   {topic.id === 'go-global' && chapter.slug === 'launch' && <LaunchMedia />}
   {topic.id === 'go-global' && chapter.slug === 'infrastructure' && <InfrastructureMedia />}
+  {topic.id === 'go-global' && chapter.slug === 'pricing' && <PricingMedia />}
 </TopicLayout>

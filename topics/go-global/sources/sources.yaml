@@ -408,6 +408,20 @@
   excerpt: excerpts/tax-calendar-2026.md
   archive: https://web.archive.org/web/20261008124632/https://fgk.chinatax.gov.cn/zcfgk/c102424/c5245729/content.html
 
+- id: src-flomo-pricing-learning
+  url: https://shaonan.blog/posts/20250413-flomo/
+  title: flomo：一条长坡薄雪的道路
+  publisher: 少楠 · flomo 联合创始人
+  accessed: 2026-10-09
+  claim: 作者回顾初期表单收费及近一半纯支持付款，并报告第二年发现会员功能未被充分体验后转向引导、介绍与续费提醒；为归属明确的经历，不是独立验证的效果或海外需求
+  excerpt: excerpts/flomo-pricing-learning.md
+- id: src-pinboard-pricing-change
+  url: https://blog.pinboard.in/2014/12/new_pricing_policy/
+  title: New Pricing Policy
+  publisher: Maciej Cegłowski · Pinboard
+  accessed: 2026-10-09
+  claim: 2014 年原始公告将 2015 年新账户基础收费改为年费，主要解释为降低旧方案的沟通混淆，并保留既有账户安排；不代表现行报价
+  excerpt: excerpts/pinboard-pricing-change.md
 - id: src-creem-subscriptions
   url: https://docs.creem.io/features/subscriptions/introduction
   title: Subscriptions
@@ -463,7 +477,7 @@
   title: Trials
   publisher: Creem
   accessed: 2026-10-09
-  claim: 免费试用会验证并保存卡且期满自动按常规价扣款；付费试用取消不自动退试用费；修改试用仅作用于之后新建订阅
+  claim: 免费试用验证并保存卡，期满收常规价；付费试用先收试用费且取消不自动退费，免费/付费均处于 trialing，第一次常规付款后变为 active；改试用设置只影响之后新建订阅
   excerpt: excerpts/creem-trials.md
 - id: src-gmail-senders
   url: https://support.google.com/mail/answer/81126?hl=en
