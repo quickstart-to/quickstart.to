@@ -1,0 +1,70 @@
+.lc-media { container-type: inline-size; margin: 2rem 0; font-size: .94rem; line-height: 1.7; color: var(--fg); }
+.lc-media h3 { margin: 0 0 1rem; font-size: 1.15rem; line-height: 1.5; }
+.lc-media h4 { margin: 0 0 .65rem; font-size: 1rem; line-height: 1.5; }
+.lc-media p { margin: .6rem 0; }
+.lc-media .lc-eyebrow { color: var(--fg-muted); font-size: .78rem; margin: 0 0 .4rem; }
+.lc-media .lc-caption, .lc-media figcaption { font-size: .84rem; color: var(--fg-muted); margin: 1rem 0 0; }
+.lc-media button, .lc-media select { color: inherit; font: inherit; padding: .6rem .8rem; border: 1px solid var(--border); border-radius: .4rem; background: var(--bg); }
+.lc-media button { cursor: pointer; min-height: 44px; }
+.lc-media button:hover { border-color: var(--accent); }
+.lc-media :is(button, select, input, summary):focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.lc-media [hidden] { display: none !important; }
+.lc-media summary { cursor: pointer; padding: .65rem 0; font-weight: 600; min-height: 44px; }
+.lc-media summary::marker { color: var(--accent); }
+.lc-sequence ol { display: grid; gap: 2rem; list-style: none; padding: 0; margin: 0; }
+.lc-sequence li { position: relative; margin: 0; padding: 1rem; background: var(--bg-soft); border: 1px solid var(--border); border-radius: .5rem; }
+.lc-sequence li + li::before { content: '↓'; color: var(--accent); position: absolute; left: 50%; top: -1.9rem; font-size: 1.25rem; }
+.lc-step { display: block; color: var(--accent); font-size: .8rem; font-variant-numeric: tabular-nums; margin-bottom: .3rem; }
+.lc-sequence p { color: var(--fg-muted); font-size: .87rem; }
+.lc-options { border-top: 1px solid var(--border); }
+.lc-options > div { padding: 1rem 0; border-bottom: 1px solid var(--border); }
+.lc-options p { margin: 0; }
+.lc-letter { padding: 1.4rem; border: 1px solid var(--border); border-top: 3px solid var(--accent); border-radius: .5rem; background: var(--bg-soft); }
+.lc-letter p { margin: .85rem 0; }
+.lc-letter p:last-child { margin-bottom: 0; }
+.lc-sample-path { display: grid; gap: 1.9rem; }
+.lc-sample-path > section { position: relative; padding: 1rem; border: 1px solid var(--border); border-radius: .5rem; background: var(--bg-soft); min-width: 0; }
+.lc-sample-path > section + section::before { content: '↓'; position: absolute; left: 50%; top: -1.85rem; color: var(--accent); font-size: 1.25rem; }
+.lc-sample-path table { display: table; width: 100%; margin: .5rem 0; font-size: .85rem; }
+.lc-sample-path th, .lc-sample-path td { padding: .35rem; }
+.lc-sample-path small { display: block; color: var(--fg-muted); font-size: .8rem; line-height: 1.6; }
+.lc-rules { padding: .6rem 1.2rem; border: 1px solid var(--border); border-radius: .5rem; }
+.lc-video { padding: 1.2rem; border: 1px solid var(--border); border-radius: .6rem; background: var(--bg-soft); }
+.lc-video-stage { margin-top: 1rem; aspect-ratio: 16 / 9; border: 1px solid var(--border); border-radius: .4rem; overflow: hidden; background: var(--bg); }
+.lc-video-prompt { display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; min-height: 100%; padding: 1rem; }
+.lc-video-prompt > span { font-size: 1.8rem; color: var(--accent); }
+.lc-video-prompt p { font-size: .86rem; max-width: 27rem; margin: .5rem 0 1rem; }
+.lc-video-stage iframe { display: block; width: 100%; height: 100%; border: 0; }
+.lc-video details { margin-top: .6rem; }
+.lc-review { padding: 1.2rem; background: var(--bg-soft); border: 1px solid var(--border); border-radius: .6rem; }
+.lc-review-controls { display: grid; gap: .9rem; margin: 1rem 0 1.4rem; }
+.lc-review-controls label { display: block; font-size: .9rem; }
+.lc-review-controls select { display: block; width: 100%; max-width: 100%; margin-top: .4rem; }
+.lc-review-controls .lc-check { display: flex; gap: .65rem; align-items: center; min-height: 44px; cursor: pointer; }
+.lc-check input { width: 1.1rem; height: 1.1rem; flex-shrink: 0; }
+.lc-rounds { display: grid; gap: 1rem; }
+.lc-rounds article { min-width: 0; background: var(--bg); border: 1px solid var(--border); border-radius: .5rem; padding: 1rem; }
+.lc-rounds dl { margin: .5rem 0; font-size: .82rem; }
+.lc-rounds dl > div { margin-bottom: .75rem; }
+.lc-rounds dt { color: var(--fg-muted); }
+.lc-rounds dd { margin: .15rem 0 0; font-variant-numeric: tabular-nums; }
+.lc-rounds .lc-result-count { font-size: 1.6rem; font-weight: 700; line-height: 1.3; margin: 1rem 0 .5rem; }
+.lc-meter { height: .65rem; background: var(--bg-soft); border-radius: .2rem; overflow: hidden; }
+.lc-meter > span { display: block; height: 100%; background: var(--accent); }
+.lc-rounds [data-launch-effort] { font-size: .87rem; font-variant-numeric: tabular-nums; }
+.lc-review-reading { padding: .8rem 1rem; border-left: 3px solid var(--accent); background: var(--bg); margin-top: 1rem; }
+.lc-review-reading p { margin: 0; }
+.lc-review > button { margin-top: 1rem; }
+.lc-decision { border-left: 3px solid var(--accent); padding: 1.2rem; background: var(--bg-soft); border-radius: 0 .5rem .5rem 0; }
+.lc-decision p + p { margin-top: 1rem; }
+@container (min-width: 560px) {
+  .lc-sequence ol { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1.6rem; }
+  .lc-sequence li { padding: .8rem; }
+  .lc-sequence li + li::before { content: '→'; top: 45%; left: -1.45rem; }
+  .lc-rounds { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .lc-options > div { display: grid; grid-template-columns: 11rem minmax(0,1fr); gap: 1.2rem; }
+}
+@container (max-width: 400px) {
+  .lc-video-stage { aspect-ratio: auto; min-height: 12rem; }
+  .lc-video-stage:has(iframe) { aspect-ratio: 16 / 9; min-height: 0; }
+}

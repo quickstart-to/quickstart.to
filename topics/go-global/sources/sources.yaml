@@ -429,6 +429,7 @@
   accessed: 2026-10-09
   claim: 鼓励作者自行发布，不要求第三方hunter；不能直接要求投票；发布入口为Submit/New Product
   excerpt: excerpts/ph-launch.md
+  archive: https://web.archive.org/web/20261009063530/https://www.producthunt.com/launch
 - id: src-creem-refunds-cancellations
   url: https://docs.creem.io/features/subscriptions/refunds-and-cancellations
   title: Refunds and Cancellations
@@ -775,3 +776,52 @@
   accessed: '2026-10-09'
   claim: 官方文档说明选择项目状态、填写摘要和下一步、加入里程碑等项目记录并发布或打印状态更新；仅支持现有工作路径，不代表已登录实测、特定套餐承诺或工作室实际采用情况
   excerpt: excerpts/asana-status-updates.md
+
+
+- id: src-posthog-first-users
+  url: https://posthog.com/founders/first-1000-users
+  title: How we got our first 1,000 users
+  publisher: James Hawkins · PostHog
+  accessed: '2026-10-09'
+  claim: 联合创始人2024年回顾从熟人手工帮助、简化部署、陌生人自助使用到Hacker News发布的历史过程；融资、免费和高强度支持是背景条件，不推导通用人数阈值或收入结果
+  excerpt: excerpts/posthog-first-users.md
+
+- id: src-webdesignerforum-boards
+  url: https://www.webdesignerforum.co.uk/
+  title: Forums - Web Designer Forum
+  publisher: Web Designer Forum
+  accessed: '2026-10-09'
+  claim: 公开首页分别设置Freelancing, Business and Legal Discussion及Website Reviews and Feedback版面；仅支持研究入口与版面目的，不代表成员需求、准许推广或已实际参与
+  excerpt: excerpts/webdesignerforum-boards.md
+
+- id: src-webdesignerforum-review-rules
+  url: https://www.webdesignerforum.co.uk/topic/1997-website-review-rules/
+  title: Website Review Rules
+  publisher: Jo 90 · Web Designer Forum
+  accessed: '2026-10-09'
+  claim: 网站评审版仍置顶的2007年规则要求纯广告或获取链接帖子使用分类广告区，并列出至少5条帖子的参与门槛；仅核对公开规则，未登录测试当前发帖权限
+  excerpt: excerpts/webdesignerforum-review-rules.md
+
+- id: src-v2ex-report-friction
+  url: https://www.v2ex.com/t/1108613
+  title: 从 0 到 2000 元，我花了 10 个月
+  publisher: loneranger1024 · V2EX
+  accessed: '2026-10-09'
+  claim: 作者2025-02-02复盘聊天记录可视化工具，从小红书发现线索并持续推广，认为导出记录门槛和上传隐私顾虑影响使用；仅为国内消费工具的作者自述，不证明海外需求或推广因果
+  excerpt: excerpts/v2ex-report-friction.md
+
+- id: src-yc-first-customers
+  url: https://www.ycombinator.com/library/Ip-how-to-get-your-first-customers
+  title: How to get your first customers
+  publisher: Gustaf Alströmer · Y Combinator
+  accessed: '2026-10-09'
+  claim: YC配套文字与章节表区分找人、回应、演示、购买和开始使用；8分45秒为The sales funnel章节，仅借鉴过程记录，不沿用触达规模、样例转化率或所有企业均不应试用的建议
+  excerpt: excerpts/yc-first-customers.md
+
+- id: src-yc-first-customers-video
+  url: https://www.youtube.com/watch?v=hyYCn_kAngI
+  title: How to Get Your First Customers | Startup School
+  publisher: Y Combinator · YouTube
+  accessed: '2026-10-09'
+  claim: 原站核对发布者、标题、2022-12-29发布日期及22分53秒时长；讲授内容以YC配套文字核对，未声称完整观看或保证各地可播放
+  excerpt: excerpts/yc-first-customers-video.md
