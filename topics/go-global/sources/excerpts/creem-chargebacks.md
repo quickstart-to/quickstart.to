@@ -7,3 +7,5 @@
 - 置信度：confirmed（官方公开文档；不是个案审核或实测）
 
 > The refunded amount will be deducted from your upcoming payout.
+
+2026-10-09 本轮复核定位：Refunds 段注明原处理费不退；Chargebacks 段列每笔 25 USD/EUR，并说明退款及拒付损失从余额/出款承担、风险过高可暂停账户。平台处理流程不能支持“商家不承担费用”的推断。

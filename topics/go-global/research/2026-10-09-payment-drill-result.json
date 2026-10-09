@@ -1,0 +1,176 @@
+{
+  "executedAt": "2026-10-09T09:47:26.232Z",
+  "runtime": "v22.19.0",
+  "scope": "Local HMAC verification and a synthetic, sequential delivery model; not a provider integration, database concurrency or real payment test.",
+  "passed": true,
+  "observations": [
+    {
+      "step": "success-page-only",
+      "result": "no-server-event",
+      "order": "demo-001",
+      "checkedAt": "2026-10-25T00:00:00.000Z",
+      "grants": 0,
+      "refundedCents": 0,
+      "activeA": [],
+      "activeB": 0,
+      "expiresAt": null
+    },
+    {
+      "step": "raw-body-changed",
+      "result": "invalid-signature",
+      "order": "demo-001",
+      "checkedAt": "2026-10-25T00:00:00.000Z",
+      "grants": 0,
+      "refundedCents": 0,
+      "activeA": [],
+      "activeB": 0,
+      "expiresAt": null
+    },
+    {
+      "step": "wrong-binding-rejected",
+      "result": "rejected",
+      "order": "demo-001",
+      "checkedAt": "2026-10-25T00:00:00.000Z",
+      "grants": 0,
+      "refundedCents": 0,
+      "activeA": [],
+      "activeB": 0,
+      "expiresAt": null
+    },
+    {
+      "step": "verified-payment",
+      "result": "granted-to-bound-user-A",
+      "order": "demo-001",
+      "checkedAt": "2026-10-25T00:00:00.000Z",
+      "grants": 1,
+      "refundedCents": 0,
+      "activeA": [
+        "demo-001"
+      ],
+      "activeB": 0,
+      "expiresAt": "2026-11-08T00:00:00.000Z"
+    },
+    {
+      "step": "duplicate-event-and-order",
+      "result": "no-extension",
+      "order": "demo-001",
+      "checkedAt": "2026-10-25T00:00:00.000Z",
+      "grants": 1,
+      "refundedCents": 0,
+      "activeA": [
+        "demo-001"
+      ],
+      "activeB": 0,
+      "expiresAt": "2026-11-08T00:00:00.000Z"
+    },
+    {
+      "step": "reload-saved-state",
+      "result": "still-deduplicated",
+      "order": "demo-001",
+      "checkedAt": "2026-10-25T00:00:00.000Z",
+      "grants": 1,
+      "refundedCents": 0,
+      "activeA": [
+        "demo-001"
+      ],
+      "activeB": 0,
+      "expiresAt": "2026-11-08T00:00:00.000Z"
+    },
+    {
+      "step": "partial-refund-and-redelivery",
+      "result": "access-retained-by-example-policy",
+      "order": "demo-001",
+      "checkedAt": "2026-10-25T00:00:00.000Z",
+      "grants": 1,
+      "refundedCents": 500,
+      "activeA": [
+        "demo-001"
+      ],
+      "activeB": 0,
+      "expiresAt": "2026-11-08T00:00:00.000Z"
+    },
+    {
+      "step": "conflicting-or-excess-refund",
+      "result": "rejected-with-state-preserved",
+      "order": "demo-001",
+      "checkedAt": "2026-10-25T00:00:00.000Z",
+      "grants": 1,
+      "refundedCents": 500,
+      "activeA": [
+        "demo-001"
+      ],
+      "activeB": 0,
+      "expiresAt": "2026-11-08T00:00:00.000Z"
+    },
+    {
+      "step": "full-refund-then-old-payment",
+      "result": "no-restored-access",
+      "order": "demo-001",
+      "checkedAt": "2026-10-25T00:00:00.000Z",
+      "grants": 1,
+      "refundedCents": 2000,
+      "activeA": [],
+      "activeB": 0,
+      "expiresAt": "2026-11-08T00:00:00.000Z"
+    },
+    {
+      "step": "old-order-refund-with-another-valid-pass",
+      "result": "other-pass-unaffected",
+      "order": "demo-001",
+      "checkedAt": "2026-10-25T00:00:00.000Z",
+      "grants": 1,
+      "refundedCents": 2000,
+      "activeA": [
+        "demo-002"
+      ],
+      "activeB": 0,
+      "expiresAt": "2026-11-08T00:00:00.000Z"
+    },
+    {
+      "step": "exact-expiry-boundary",
+      "result": "no-access-at-expiry",
+      "order": "demo-002",
+      "checkedAt": "2026-11-11T00:00:00.000Z",
+      "grants": 1,
+      "refundedCents": 0,
+      "activeA": [],
+      "activeB": 0,
+      "expiresAt": "2026-11-11T00:00:00.000Z"
+    },
+    {
+      "step": "refund-delivered-before-payment",
+      "result": "no-transient-access",
+      "order": "demo-001",
+      "checkedAt": "2026-10-25T00:00:00.000Z",
+      "grants": 0,
+      "refundedCents": 2000,
+      "activeA": [],
+      "activeB": 0,
+      "expiresAt": "2026-11-08T00:00:00.000Z"
+    },
+    {
+      "step": "server-approved-zero-total",
+      "result": "review-access-with-zero-receipt",
+      "receiptCents": 0,
+      "reviewerActive": 1,
+      "order": "demo-review",
+      "checkedAt": "2026-10-25T00:00:00.000Z",
+      "grants": 1,
+      "refundedCents": 0,
+      "activeA": [],
+      "activeB": 0,
+      "expiresAt": "2026-11-08T00:00:00.000Z"
+    },
+    {
+      "step": "payment-delivered-after-expiry",
+      "result": "historical-payment-without-new-access",
+      "order": "demo-001",
+      "checkedAt": "2026-10-25T00:00:00.000Z",
+      "grants": 0,
+      "refundedCents": 0,
+      "activeA": [],
+      "activeB": 0,
+      "expiresAt": "2026-10-01T00:00:00.000Z"
+    }
+  ]
+}
