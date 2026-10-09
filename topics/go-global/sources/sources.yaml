@@ -350,15 +350,15 @@
   url: https://corp.delaware.gov/howtoform/
   title: "How to Form a New Business Entity"
   publisher: Delaware Division of Corporations
-  accessed: '2026-10-08'
-  claim: 设立需选择主体、维持州内实体地址的registered agent并提交formation文件；LLC无年度报告但每年须缴300美元州税，截止6月1日
+  accessed: "2026-10-09"
+  claim: "主体选择、州内实体地址的注册代理、名称预留非必需及设立文件；页面旧年度税数字已与现行法冲突，费用不再据此引用"
   excerpt: excerpts/delaware-formation.md
   archive: https://web.archive.org/web/20261008123715/https://corp.delaware.gov/howtoform/
 - id: src-irs-llc
   url: https://www.irs.gov/businesses/small-businesses-self-employed/limited-liability-company-llc
   title: "Limited liability company (LLC)"
   publisher: Internal Revenue Service
-  accessed: '2026-10-08'
+  accessed: "2026-10-09"
   claim: LLC依州法设立；联邦税务分类依成员人数与选择而定，单成员通常为disregarded entity，两名以上通常为partnership，另有选择与例外
   excerpt: excerpts/irs-llc.md
   archive: https://web.archive.org/web/20261008123811/https://www.irs.gov/businesses/small-businesses-self-employed/limited-liability-company-llc
@@ -366,7 +366,7 @@
   url: https://www.irs.gov/businesses/employer-identification-number
   title: "Employer identification number"
   publisher: Internal Revenue Service
-  accessed: '2026-10-08'
+  accessed: "2026-10-09"
   claim: 直接向IRS申请EIN免费；先完成州设立；主要经营地在美国境外的国际申请人可电话或提交SS-4传真、邮寄申请
   excerpt: excerpts/irs-ein.md
   archive: https://web.archive.org/web/20261002101401/https://www.irs.gov/businesses/employer-identification-number
@@ -374,14 +374,14 @@
   url: https://www.irs.gov/instructions/i5472
   title: "Instructions for Form 5472 (12/2024)"
   publisher: Internal Revenue Service
-  accessed: '2026-10-08'
+  accessed: "2026-10-09"
   claim: foreign-owned U.S. disregarded entity有须报告关联交易时需5472附pro forma 1120；出资与分配可能属于须报告交易；违规未报有25000美元罚款
   excerpt: excerpts/irs-5472.md
 - id: src-fincen-boi-2026
   url: https://www.fincen.gov/boi
   title: "Beneficial Ownership Information Reporting"
   publisher: Financial Crimes Enforcement Network
-  accessed: '2026-10-08'
+  accessed: "2026-10-09"
   claim: 2026年8月11日更新说明终局规则下美国公司免报BOI，外国报告实体另有要求；不能沿用旧的美国公司一律申报说法
   excerpt: excerpts/fincen-boi-2026.md
   archive: https://web.archive.org/web/20261008123938/https://www.fincen.gov/boi
@@ -389,7 +389,7 @@
   url: https://www.cr.gov.hk/en/services/register-company.htm
   title: "How to register a new company?"
   publisher: 香港公司注册处
-  accessed: '2026-10-08'
+  accessed: "2026-10-09"
   claim: 香港本地股份有限公司按类型/名称核对，提交NNC1、章程及IRBR1和费用；获批后取得公司注册及商业登记证明，另核业务许可
   excerpt: excerpts/hk-cr-incorporation.md
   archive: https://web.archive.org/web/20261008123943/https://www.cr.gov.hk/en/services/register-company.htm
@@ -397,14 +397,14 @@
   url: https://www.cr.gov.hk/en/faq/local-company/incorporation.htm
   title: "Local Limited Companies — Incorporation FAQ"
   publisher: 香港公司注册处
-  accessed: '2026-10-08'
+  accessed: "2026-10-09"
   claim: 非香港居民可设本地有限公司；注册地址须在香港；私人公司须公司秘书及至少一名自然人董事，唯一董事不能兼任秘书
   excerpt: excerpts/hk-cr-incorporation-faq.md
 - id: src-hk-cr-annual-return
   url: https://www.cr.gov.hk/en/compliance/annual-return/private-company.htm
   title: "Annual Return — Local Private Company"
   publisher: 香港公司注册处
-  accessed: '2026-10-08'
+  accessed: "2026-10-09"
   claim: 一般本地私人公司须在成立周年后42日内交NAR1；按期交付的年度登记费105港元，不是公司全年总维护费
   excerpt: excerpts/hk-cr-annual-return.md
   archive: https://web.archive.org/web/20261008123926/https://www.cr.gov.hk/en/compliance/annual-return/private-company.htm
@@ -412,7 +412,7 @@
   url: https://www.ird.gov.hk/eng/tax/bir51e_notes.htm
   title: "Notes and Instructions — Form BIR51"
   publisher: 香港税务局
-  accessed: '2026-10-08'
+  accessed: "2026-10-09"
   claim: 离岸利润不课税主张须提供理由并能用证据支持；业务账簿记录有保存义务；报税资料与平台结算不是同一事项
   excerpt: excerpts/hk-ird-bir51.md
   archive: https://web.archive.org/web/20261008124306/https://www.ird.gov.hk/eng/tax/bir51e_notes.htm
@@ -420,7 +420,7 @@
   url: https://www.ird.gov.hk/eng/tax/bus_cpt.htm
   title: "Completion of Profits Tax Returns and Supplementary Forms"
   publisher: 香港税务局
-  accessed: '2026-10-08'
+  accessed: "2026-10-09"
   claim: 公司利得税申报支持文件一般含经审计财务报表，原文列不活动公司等例外；委托服务商不解除纳税人申报义务
   excerpt: excerpts/hk-ird-profits-returns.md
   archive: https://web.archive.org/web/20261008124344/https://www.ird.gov.hk/eng/tax/bus_cpt.htm
@@ -428,7 +428,7 @@
   url: https://www.mee.gov.cn/zcwj/gwywj/202108/t20210824_860263.shtml
   title: "中华人民共和国市场主体登记管理条例（国务院令第746号）"
   publisher: 国务院（生态环境部转载中国政府网）
-  accessed: '2026-10-08'
+  accessed: "2026-10-09"
   claim: 第三条规定市场主体登记原则及法律行政法规例外，第十六条列申请材料；平台个人账户准入不能代替经营登记适用判断
   excerpt: excerpts/cn-market-registration.md
   archive: https://web.archive.org/web/20260518110200/https://www.mee.gov.cn/zcwj/gwywj/202108/t20210824_860263.shtml
@@ -436,7 +436,7 @@
   url: https://fgk.chinatax.gov.cn/zcfgk/c100009/c5193028/content.html
   title: "中华人民共和国个人所得税法"
   publisher: 国家税务总局政策法规库
-  accessed: '2026-10-08'
+  accessed: "2026-10-09"
   claim: 规定居民个人与境内外所得、所得类别和计税口径，以及综合所得、经营所得、无扣缴义务人和境外所得的不同申报期间
   excerpt: excerpts/tax-iit-law.md
   archive: https://web.archive.org/web/20261005064423/https://fgk.chinatax.gov.cn/zcfgk/c100009/c5193028/content.html
@@ -959,3 +959,52 @@
   accessed: "2026-10-09"
   claim: "作者 2026-02-03 报告首次支付宝直达因材料审核失败，后改用中转；仅作归属明确的个人经历，含推荐利益，不支持账户资格、用途填写建议或成功保证"
   excerpt: excerpts/yeekal-payout-retrospective.md
+
+- id: src-delaware-llc-tax-current
+  url: https://corp.delaware.gov/alt-entitytaxinstructions/
+  title: "LLC/LP/GP Franchise Tax Instructions"
+  publisher: "Delaware Division of Corporations"
+  accessed: "2026-10-09"
+  claim: "LLC 年度税现为 400 美元，无年度报告；前一日历年度税于次年 6 月 1 日前缴纳，年内曾在记录中有效即按全年计，不按月份分摊"
+  excerpt: excerpts/delaware-llc-tax-current.md
+  archive: https://web.archive.org/web/20261009122656/https://corp.delaware.gov/alt-entitytaxinstructions/
+
+- id: src-delaware-llc-tax-law
+  url: https://delcode.delaware.gov/title6/c018/sc11/index.html
+  title: "Delaware Code Title 6 §18-1107 — Taxation of limited liability companies and registered series"
+  publisher: "Delaware General Assembly"
+  accessed: "2026-10-09"
+  claim: "§18-1107(b) 年度税 400 美元；(c) 一般次年 6 月 1 日到期，终止存在的相关证书提交前须缴当年全额税款"
+  excerpt: excerpts/delaware-llc-tax-law.md
+
+- id: src-delaware-hb400-2026
+  url: https://legis.delaware.gov/BillDetail/143069
+  title: "House Bill 400 — 153rd General Assembly, 85 Del. Laws c. 273"
+  publisher: "Delaware General Assembly"
+  accessed: "2026-10-09"
+  claim: "2026-05-21 签署；已读 Session Law 第 23 节将 LLC 年税由 300 改 400，第 45 节规定该节自 2026-01-01 生效"
+  excerpt: excerpts/delaware-hb400-2026.md
+
+- id: src-hk-cr-deregistration
+  url: https://www.cr.gov.hk/tc/faq/local-company/dereg-striking-off-winding-up.htm
+  title: "本地有限公司 — 撤銷註冊、剔除註冊及清盤"
+  publisher: "香港公司注册处"
+  accessed: "2026-10-09"
+  claim: "问题 1–3：撤销注册适用于符合条件的不营运但有偿债能力公司，须核对全体成员同意、停业期间、债务/诉讼/资产及税务局不反对通知；解散前仍履行周年申报等责任"
+  excerpt: excerpts/hk-cr-deregistration.md
+
+- id: src-hayden-atlas-experience
+  url: https://haydenbi.com/posts/stripe-atlas-to-register-us-company-in-2026
+  title: "2026 Stripe Atlas 注册美国公司实操指南"
+  publisher: "Hayden Bi"
+  accessed: "2026-10-09"
+  claim: "作者 2026-03-07 报告选择 Atlas LLC、填写本人国内地址、注册付款受阻后联系支持解决；是本人经历，不采用普遍更稳妥、保证开户、优惠和处理时长等主张"
+  excerpt: excerpts/hayden-atlas-experience.md
+
+- id: src-teera-snapfile-closure
+  url: https://www.teeraprice.com/blog/closing-snapfile-dissolving-two-llcs
+  title: "Closing SnapFile: How I Dissolved Two LLCs and What It Cost"
+  publisher: "Teera Price"
+  accessed: "2026-10-09"
+  claim: "2025-09-02 作者报告关闭 Delaware、Nevada 两家 LLC，其中 Delaware 从未实际使用；处理多州登记、代理、账户及资料归档；仅采用维护与退出经历，不采用文中混淆的年报和现行费用"
+  excerpt: excerpts/teera-snapfile-closure.md
