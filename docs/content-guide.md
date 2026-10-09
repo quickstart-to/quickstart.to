@@ -91,6 +91,16 @@ Treat boundaries proportionately. Separate actions required before the next mile
 
 Remove repeated disclaimers, generic “be careful” advice, repeated definitions, and explanations of the agent's research process. Attribute cases naturally and label a hypothetical when it first appears; collect recurring provenance limitations in a compact source note. Keep any limit that changes the immediate decision beside that decision. Keep research-tool failures in research notes; expose the unresolved reader-facing question where it matters. Put a rule's full explanation in one chapter and link to it elsewhere. A legal disclaimer cannot substitute for resolving an answerable question.
 
+### Mixed Chinese, Latin, and numeric text
+
+In Chinese prose, put one ordinary space between Chinese characters and Latin words or Arabic numerals: `使用 Asana 整理 3 份 PDF 报告`, `2026 年 10 月`. Apply this to headings, body text, tables, captions, accessible labels, and interactive results. Keep spaces outside emphasis, links, inline code, and dynamic spans so replacement of their contents does not remove the surrounding spacing. Chinese punctuation does not need extra spaces; preserve names such as `V2EX`, numeric notation, and units such as `10%` internally.
+
+Preserve code contents, URLs, IDs, citation keys, source titles, and literal quotations. Do not rewrite quoted wording to satisfy typography. For exact inline wording not enclosed in quotation marks, use `data-typography="verbatim"`; this exempts the contents, not surrounding prose. If editing a heading changes its generated fragment, retain the old anchor so published links continue to work. A typography-only edit does not advance `last_verified` or source access dates.
+
+`pnpm validate` checks rendered Chinese topic prose (including inline markup), page/topic display fields, changelogs, SVG labels, and Chinese UI strings. It excludes code contents, source lists, blockquotes, and text enclosed in Chinese quotation marks. This conservative quotation exception is not a substitute for checking authored phrases during review. The check cannot execute dynamic scripts: inspect their rendered results after input, preset, and reset actions. Check desktop and narrow screens after changing spacing.
+
+The reading stylesheet uses `text-autospace: normal` as a progressive enhancement and disables it inside code. Ordinary source spaces provide consistent copying and reading where automatic spacing is unavailable. Do not rely on global `letter-spacing`, a DOM-wide text rewrite, or nonbreaking spaces to fix mixed-script prose.
+
 ### Compose the reading experience with visuals, interaction, and media
 
 Record the reader question, placement, and intended takeaway before creating a visual. Commission original editorial illustrations with the `imagegen` skill when a scene, metaphor, or narrative improves understanding or establishes a coherent topic identity. A chapter image must depict its actual situation, not be a generic laptop, globe, rocket, or money montage. Do not add an image to every chapter just to meet a quota.

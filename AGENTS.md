@@ -45,6 +45,7 @@ Use the **ego-browser** skill (ego lite) for all web research, data collection, 
 
 - Canonical URLs are ASCII and language-free: `/go-global`, `/go-global/payments`. Never add `/zh/` or `/en/` prefixes.
 - A topic is written in one original language (`topic.yaml` → `lang`). UI language is a reader preference handled client-side and never affects URLs.
+- Chinese prose uses ordinary spaces around Latin words and Arabic numerals under `docs/content-guide.md` §5; preserve literal material and published anchors, and check dynamic copy as well as static text.
 - Chapter slugs: filename minus the `NN-` prefix, or explicit `slug:` in frontmatter. Changing a published slug breaks links — don't, unless you also add a redirect.
 - Marketing aliases (any language, e.g. `出海`) go in `topic.yaml` → `aliases`; they 301 to the canonical slug.
 

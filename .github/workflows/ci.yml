@@ -19,6 +19,8 @@ jobs:
           node-version: 22
           cache: pnpm
       - run: pnpm install --frozen-lockfile
+      - name: Test typography checks
+        run: pnpm test:typography
       - name: Validate topics
         run: pnpm validate
       - name: Build site

@@ -24,20 +24,20 @@ if (demo) {
     demo.querySelectorAll<HTMLElement>('.vd-bar-row:first-child .vd-bar-track i').forEach((el, i) => {
       el.style.width = `${oldParts[i] / axis * 100}%`;
     });
-    demo.querySelector('[data-cost-chart]')!.setAttribute('aria-label', `每次旧流程30分钟（准备5、整理12、核对8、发送5）；新流程${each}分钟（准备${prepare}、生成2、核对${check}、发送5）；首次设置另计${setup}分钟。`);
-    const comparison = extra > 0 ? `多花${format(extra)}分钟` : extra < 0 ? `少花${format(-extra)}分钟` : '总耗时相同';
-    demo.querySelector('[data-cost-total]')!.textContent = `做${repeat}次：旧办法${format(oldTotal)}分钟，新工具${format(total)}分钟，${comparison}。`;
+    demo.querySelector('[data-cost-chart]')!.setAttribute('aria-label', `每次旧流程 30 分钟（准备 5、整理 12、核对 8、发送 5）；新流程 ${each} 分钟（准备 ${prepare}、生成 2、核对 ${check}、发送 5）；首次设置另计 ${setup} 分钟。`);
+    const comparison = extra > 0 ? `多花 ${format(extra)} 分钟` : extra < 0 ? `少花 ${format(-extra)} 分钟` : '总耗时相同';
+    demo.querySelector('[data-cost-total]')!.textContent = `做 ${repeat} 次：旧办法 ${format(oldTotal)} 分钟，新工具 ${format(total)} 分钟，${comparison}。`;
     let reason: string;
     if (each > 30) {
-      reason = `日常每次已经多花${each - 30}分钟，增加使用次数也无法收回设置成本。下一轮先检查导入准备和核对工作。`;
+      reason = `日常每次已经多花 ${each - 30} 分钟，增加使用次数也无法收回设置成本。下一轮先检查导入准备和核对工作。`;
     } else if (each === 30) {
-      reason = setup === 0 ? '两种流程的时间成本相同。需要另外比较输出质量、出错风险和支持负担。' : `日常每次耗时相同，初次设置的${setup}分钟无法靠重复使用收回。`;
+      reason = setup === 0 ? '两种流程的时间成本相同。需要另外比较输出质量、出错风险和支持负担。' : `日常每次耗时相同，初次设置的 ${setup} 分钟无法靠重复使用收回。`;
     } else {
       const saving = 30 - each;
       const breakEven = Math.max(1, Math.ceil(setup / saving));
       reason = setup === 0
-        ? `没有初次设置成本，每次可少花${saving}分钟。这仍不代表愿意购买；还要核对输出质量与支持负担。`
-        : `每次可少花${saving}分钟，累计到第${breakEven}次可收回初次设置成本。还要确认任务是否会重复，以及节省是否值得学习和购买。`;
+        ? `没有初次设置成本，每次可少花 ${saving} 分钟。这仍不代表愿意购买；还要核对输出质量与支持负担。`
+        : `每次可少花 ${saving} 分钟，累计到第 ${breakEven} 次可收回初次设置成本。还要确认任务是否会重复，以及节省是否值得学习和购买。`;
     }
     demo.querySelector('[data-cost-reason]')!.textContent = reason;
   };

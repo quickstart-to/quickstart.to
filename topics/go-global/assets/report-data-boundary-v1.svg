@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="640" height="600" viewBox="0 0 640 600" role="img" aria-labelledby="title desc">
   <title id="title">周报工具的示例数据边界</title>
-  <desc id="desc">CSV与报告在浏览器内处理和导出，不上传。邮箱进入账号服务，购买信息进入Creem，付款事件回传账号服务以开通权益。主机与邮件等实际供应商需另列。</desc>
+  <desc id="desc">CSV 与报告在浏览器内处理和导出，不上传。邮箱进入账号服务，购买信息进入 Creem，付款事件回传账号服务以开通权益。主机与邮件等实际供应商需另列。</desc>
   <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#b5410c"/></marker></defs>
   <rect width="640" height="600" rx="20" fill="#faf6ee"/>
   <g font-family="system-ui, -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif" fill="#292722">

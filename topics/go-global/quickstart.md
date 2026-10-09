@@ -25,12 +25,12 @@ last_verified: 2026-10-09
 <nav class="gg-journey-map" aria-label="第一轮用户验证流程，点击节点阅读对应段落">
 <span class="gg-return-line" aria-hidden="true"></span>
 <ol>
-<li><a href="#从你能理解也能接触的人开始"><span class="gg-node-top"><span class="gg-step">01</span><svg class="gg-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7" r="3"/><path d="M5 21v-3a7 7 0 0 1 14 0v3"/></svg></span><strong>找到人群</strong><span class="gg-node-note">能理解，也能接触</span></a></li>
-<li><a href="#先看旧办法为什么还能用"><span class="gg-node-top"><span class="gg-step">02</span><svg class="gg-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></span><strong>理解旧办法</strong><span class="gg-node-note">找值得改变的一步</span></a></li>
-<li><a href="#让一个小结果进入真实工作"><span class="gg-node-top"><span class="gg-step">03</span><svg class="gg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v12H4zM8 20h8M12 16v4M8 9l2 2 5-5"/></svg></span><strong>交付小结果</strong><span class="gg-node-note">让人用上完整样例</span></a></li>
-<li><a href="#沿着产品的使用方式去找用户"><span class="gg-node-top"><span class="gg-step">04</span><svg class="gg-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="2"/><circle cx="18" cy="5" r="2"/><circle cx="18" cy="19" r="2"/><path d="m7 11 9-5M7 13l9 5"/></svg></span><strong>选择触达入口</strong><span class="gg-node-note">接触更多相似的人</span></a></li>
-<li><a href="#试用之后再看它留下了什么"><span class="gg-node-top"><span class="gg-step">05</span><svg class="gg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 8a8 8 0 1 0 0 8M20 3v5h-5M8 12l3 3 5-6"/></svg></span><strong>回到真实任务</strong><span class="gg-node-note">看结果有没有用上</span></a></li>
-<li><a href="#给下一轮投入一个具体理由"><span class="gg-node-top"><span class="gg-step">06</span><svg class="gg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 21V4M5 4h14l-3 4 3 4H5"/></svg></span><strong>决定下一轮</strong><span class="gg-node-note">改进、缩小，或停下</span></a></li>
+<li><a href="#从你能理解也能接触的人开始"><span class="gg-node-top"><span class="gg-step">01</span><svg class="gg-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7" r="3"/><path d="M5 21v-3a7 7 0 0 1 14 0v3"/></svg></span> <strong>找到人群</strong><span class="gg-node-note">能理解，也能接触</span></a></li>
+<li><a href="#先看旧办法为什么还能用"><span class="gg-node-top"><span class="gg-step">02</span><svg class="gg-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></span> <strong>理解旧办法</strong><span class="gg-node-note">找值得改变的一步</span></a></li>
+<li><a href="#让一个小结果进入真实工作"><span class="gg-node-top"><span class="gg-step">03</span><svg class="gg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v12H4zM8 20h8M12 16v4M8 9l2 2 5-5"/></svg></span> <strong>交付小结果</strong><span class="gg-node-note">让人用上完整样例</span></a></li>
+<li><a href="#沿着产品的使用方式去找用户"><span class="gg-node-top"><span class="gg-step">04</span><svg class="gg-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="2"/><circle cx="18" cy="5" r="2"/><circle cx="18" cy="19" r="2"/><path d="m7 11 9-5M7 13l9 5"/></svg></span> <strong>选择触达入口</strong><span class="gg-node-note">接触更多相似的人</span></a></li>
+<li><a href="#试用之后再看它留下了什么"><span class="gg-node-top"><span class="gg-step">05</span><svg class="gg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 8a8 8 0 1 0 0 8M20 3v5h-5M8 12l3 3 5-6"/></svg></span> <strong>回到真实任务</strong><span class="gg-node-note">看结果有没有用上</span></a></li>
+<li><a href="#给下一轮投入一个具体理由"><span class="gg-node-top"><span class="gg-step">06</span><svg class="gg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 21V4M5 4h14l-3 4 3 4H5"/></svg></span> <strong>决定下一轮</strong><span class="gg-node-note">改进、缩小，或停下</span></a></li>
 </ol>
 </nav>
 <figcaption id="journey-caption" class="gg-caption"><span class="gg-line-key" aria-hidden="true"></span>实线是本篇的推进顺序。<span class="gg-line-key gg-line-key-return" aria-hidden="true"></span>虚线表示：人群或问题的假设不成立时，回到起点重选。节点可点击跳转。</figcaption>
@@ -235,19 +235,19 @@ Plausible 的例子中，相关文章帮助读者认识产品的差异。Tally �
 <h3 id="decision-title">这次试用，下一步先查哪里？</h3>
 <ol class="gg-decision-tree">
 <li>
-<div class="gg-question"><span class="gg-step">01</span><strong>开始处理自己的任务了吗？</strong></div>
+<div class="gg-question"><span class="gg-step">01</span> <strong>开始处理自己的任务了吗？</strong></div>
 <span class="gg-branch-no"><span>否</span></span>
 <div class="gg-action"><strong>先看人群与入口</strong><span>邀请有没有理由？样例能看懂吗？准备材料是否太难？</span></div>
 <span class="gg-branch-yes"><span>是</span></span>
 </li>
 <li>
-<div class="gg-question"><span class="gg-step">02</span><strong>完成了输入到输出的过程吗？</strong></div>
+<div class="gg-question"><span class="gg-step">02</span> <strong>完成了输入到输出的过程吗？</strong></div>
 <span class="gg-branch-no"><span>否</span></span>
 <div class="gg-action"><strong>找卡住的那一步</strong><span>是列名、格式、报错，还是不知道下一步怎么做？</span></div>
 <span class="gg-branch-yes"><span>是</span></span>
 </li>
 <li>
-<div class="gg-question"><span class="gg-step">03</span><strong>结果用进实际工作了吗？</strong></div>
+<div class="gg-question"><span class="gg-step">03</span> <strong>结果用进实际工作了吗？</strong></div>
 <span class="gg-branch-no"><span>否</span></span>
 <div class="gg-action"><strong>比较输出与旧办法</strong><span>还要补什么、重写多少？必要时缩小或放弃当前方案。</span></div>
 <span class="gg-branch-yes"><span>是</span></span>
