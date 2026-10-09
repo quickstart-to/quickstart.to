@@ -1,14 +1,14 @@
 ---
 title: 收款方案全景
 description: 区分MoR、Stripe直连与应用商店，按主体、产品、回款和总成本选择第一条收款路线。
-order: 2
+order: 5
 volatility: high
 last_verified: 2026-10-08
 ---
 
 如果你在中国大陆、尚无海外公司，准备出售 Web 软件，先筛选能接受真实身份、产品和本人收款账户的代收款平台（Merchant of Record，MoR）。Paddle、Creem、Dodo 的公开文档提供了进入申请核对的依据，但不保证个案审核或到账。[^src-paddle-countries][^src-paddle-business-verification][^src-creem-countries][^src-creem-payouts][^src-dodo-merchant-countries][^src-dodo-verification]
 
-选择顺序是：**销售场景 → 主体与产品准入 → 本人回款路径 → 总成本 → 接入方式。** 完成一次选择后，按[快速入门](/go-global)推进；到账条件和对账方法见[提现与结汇](/go-global/payouts)。
+选择顺序是：**销售场景 → 主体与产品准入 → 本人回款路径 → 总成本 → 接入方式。** 市场与用户验证见[快速入门](/go-global)；本章负责收款准备，到账条件和对账方法见[提现与结汇](/go-global/payouts)。
 
 > 本章依据截至 **2026-10-08** 核验的官方公开文档，未进行真实开户、收费或到账测试。以下比较用于决定先核对哪条路线；应用商店开户、各地税务和具体账户资格仍需按你的情况确认。
 
@@ -122,6 +122,50 @@ Google Play 的支付政策同样要求，Play分发应用的相关应用内数�
 
 测试与真实交易也要分开。Creem 的测试和生产密钥、产品及webhook需分别配置；Dodo 的测试不转移真实资金，但测试邮件仍会真实发送。使用自己控制的测试邮箱，不把测试订单写成收入。[^src-creem-test-mode][^src-dodo-test-live]
 
-完成选择后应有四份结果：**所选路线、准入与收款答复、典型订单成本表、支付到交付的测试记录。** 然后按[快速入门](/go-global)完成真实首单，并用[提现与结汇](/go-global/payouts)核对实际到账。
+完成选择后应有四份结果：**所选路线、准入与收款答复、典型订单成本表、支付到交付的测试记录。** 在经营与交付准备完成后再进行真实销售，并用[提现与结汇](/go-global/payouts)核对实际到账。回到[快速入门](/go-global)时，继续检查用户是否完成任务和再次使用。
 
 平台规则的后续变动会记入[专题变更记录](/go-global/changelog)；本页末尾列出本次比较使用的官方来源。
+
+## 示例：为周报工具准备收款
+
+以下承接快速入门的教学产品：CSV在浏览器生成报告，20美元购买30天使用权、不自动续费。案例中的市场需求和报价仍待验证；本节平台资料于2026-10-09重新核对，不代表本章所有平台已再次核验，也没有实际开户或交易。
+
+![开发工具、把报告交付给客户、核对收款与账本的三个连续工作场景。](../assets/build-deliver-reconcile-v1.png)
+
+*交付、客户付款和本人到账分别核对。这是AI场景插画，不是交易凭证。*
+
+### 先确认拟定收款路线
+
+赫兹（droidHZ）在 2025 年的中文复盘中解释，他没有海外公司和海外银行卡，因此选择了支持支付宝的 Creem，并报告了网站订阅收入。这是一个处境接近本书读者的案例；文章没有完整展示从订单到本人到账的对账证据，所以不能据此宣称这条路线已经由本书实测。文章中的其他平台准入概括，也不直接沿用。[^src-hertz-first-dollar]
+
+截至2026-10-09，Creem 的官方出款说明列出“中国个人 → 支付宝”，要求收款身份与 KYC 一致；开户流程包含业务信息、身份验证、收款账户设置与团队审核。这个组合足以支持“优先核对这条路线”，还不足以支持“每个大陆个人都能通过”。[^src-creem-payouts][^src-creem-payout-accounts]
+
+先准备一封具体的询问信。以下内容沿用示例产品；提交前将描述改成你的真实情况：
+
+> I am an individual based in mainland China. I plan to sell 30-day access to a browser-based CSV reporting tool, with no automatic renewal. The product generates reports automatically; I do not provide custom consulting or AI-generated content. I intend to receive payouts into an Alipay account in my own legal name. Could you confirm whether this product and recipient setup are supported, which documents are required, and the payout fees, currency conversion and limits that would apply to this account?
+
+你要拿到的结果，是**产品类别可以申请、本人账户可用、所需资料和费用口径明确**。如果平台要求补充经营身份、产品材料或账户资料，先按真实情况补齐；若明确不接受，回到本章的候选比较，选择另一条匹配路线。不要先接完三套系统，也不要借身份完成申请。
+
+同时，把产品说明、平台协议、拟定出款方式整理成一页，核对你的经营登记与收入申报安排。向主管机构说明“卖的是自动化软件的限期使用权、通过哪个合同主体结算”，比只问“收到美元要不要交税”更有用。可直接沿[身份与主体](/go-global/entity)及[税务](/go-global/tax)准备材料；支付平台的审核答复不能代替这些判断。
+
+
+### 将付款接到真实交付
+
+先在 Creem 测试模式创建对应产品，使用测试密钥和测试回调。测试与生产的产品、密钥、API 地址及 webhook 分开配置；上线前需要在生产环境重新核对这些内容。[^src-creem-test-mode]
+
+接入方法从[官方快速开始](https://docs.creem.io/getting-started/quickstart)进入即可。真正需要你补上的，是“哪笔订单为哪个用户开通了什么”。官方示例提供接入起点，并不会替你的产品定义完整的交付和幂等逻辑。生产交付应依赖服务端验证过的付款事件，不能凭成功页 URL 发放权益。[^src-creem-quickstart][^src-creem-webhooks]
+
+本例把一次性交付写成一条明确规则：服务端确认对应订单付款后，为绑定用户开通一次 30 天通行证；重复收到同一订单的事件，不再延长 30 天。订单与用户的绑定应由服务端建立，并检查环境、商品和订单状态。原始请求体验签、事件去重和业务状态更新都通过后，才确认处理完成。Creem 文档明确提醒事件会重投，并提供签名校验方式。[^src-creem-webhooks]
+
+下面是一份**待执行的验收规格**，不是本书已经跑过的支付记录：
+
+| 输入 | 应得到的业务结果 |
+|---|---|
+| 有效测试付款，订单 `demo-001` 属于用户 A | A 获得一次 30 天使用权；B 没有变化 |
+| 再次收到 `demo-001` 的成功事件 | 不重复计收入、不再次延长使用权 |
+| 只打开成功页，没有服务端付款确认 | 显示确认中，不发放权益 |
+| 请求签名错误，或商品不匹配 | 不改变订单和权益，留下不含密钥的排查记录 |
+| 测试卡付款失败 | 不开通权益，保留重新付款入口 |
+| 退款完成 | 订单、退款金额和按公示规则处理的权益状态能够对应 |
+
+如果客户付了钱却用不了，先查平台付款状态，再查 webhook 投递状态及本地订单处理结果。Creem 文档特别说明，机器人防护或 WAF 可能拦截服务端回调；排查时针对回调路径调整配置并继续验证签名，修复后可以从平台重发事件。不要用“看到客户截图就手工改成永久会员”掩盖丢失的订单处理。[^src-creem-webhooks]

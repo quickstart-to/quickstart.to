@@ -663,3 +663,35 @@
   claim: 法国官方2026-10-02更新指南说明自6月19日起适用的在线撤回功能：可见入口、法定期间可用、合同识别与确认、持久载体回执；仅作为法国实施示例，不泛化到全部国家或所有合同
   excerpt: excerpts/fr-online-withdrawal.md
   archive: https://web.archive.org/web/20260921102337/https://www.francenum.gouv.fr/guides-et-conseils/developpement-commercial/gestion-de-la-relation-client/la-retractation-en-1-clic
+
+- id: src-latiao-overseas-lessons
+  url: "https://dev-life.online/blog/yusubuda"
+  title: "独立开发出海三个月，我犯了这些错"
+  publisher: "辣条加辣 · 辣条的博客"
+  accessed: "2026-10-09"
+  claim: "作者2025-04-25复盘先开发后考虑目标用户与触达的失败，并以AI头像网站为例；仅采用其自述行动和反思，不采纳平台最佳发布时间、hunter必要性或收入保证"
+  excerpt: "excerpts/latiao-overseas-lessons.md"
+
+- id: src-plausible-growth-story
+  url: "https://plausible.io/blog/open-source-saas"
+  title: "How we built a $1M ARR open source SaaS"
+  publisher: "Marko Saric · Plausible Analytics"
+  accessed: "2026-10-09"
+  claim: "联合创始人回顾早期定位、统一表达、与产品相关的内容及用户支持；早期无关主题流量高峰直接收益不明显，后续相关内容带来作者报告的增长；不作为可复制流量或收入承诺"
+  excerpt: "excerpts/plausible-growth-story.md"
+
+- id: src-pg-manual-recruiting
+  url: "https://paulgraham.com/ds.html"
+  title: "Do Things that Don't Scale"
+  publisher: "Paul Graham"
+  accessed: "2026-10-09"
+  claim: "2013年文章结合作者接触的创业团队讨论早期逐个招募用户、帮助完成使用和关注初期体验；属于特定创业环境下的经验分析，不证明普遍成功率或适用于任何地区的触达许可"
+  excerpt: "excerpts/pg-manual-recruiting.md"
+
+- id: src-superhuman-pmf
+  url: "https://review.firstround.com/how-superhuman-built-an-engine-to-find-product-market-fit/"
+  title: "How Superhuman Built an Engine to Find Product Market Fit"
+  publisher: "Rahul Vohra · First Round Review"
+  accessed: "2026-10-09"
+  claim: "Superhuman创始人说明按已有核心使用经历、用户得到的价值与阻碍分组反馈并调整路线图；本书不把其百分比阈值或样本规模当成小产品通用验收标准"
+  excerpt: "excerpts/superhuman-pmf.md"

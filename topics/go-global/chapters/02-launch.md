@@ -1,7 +1,7 @@
 ---
 title: 冷启动获客
 description: 按客户场景选择第一个渠道，遵守社区发布规则，用完成任务和真实购买验证获客效果。
-order: 8
+order: 2
 volatility: high
 last_verified: 2026-10-09
 ---

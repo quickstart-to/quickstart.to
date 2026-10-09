@@ -8,7 +8,7 @@
 
 | Topic | Language | Status |
 |---|---|---|
-| [中国开发者出海：从 0 到收到第一笔美元](https://quickstart.to/go-global) | 中文 | draft |
+| [中国开发者出海：找到海外用户，做出有持续价值的产品](https://quickstart.to/go-global) | 中文 | draft |
 
 ## How it works
 

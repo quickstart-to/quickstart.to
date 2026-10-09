@@ -1,7 +1,7 @@
 ---
 title: 基础设施
 description: 用域名、托管、数据、邮件和支付组成可恢复的最小系统，并核对备案与数据流向。
-order: 7
+order: 3
 volatility: high
 last_verified: 2026-10-09
 ---
