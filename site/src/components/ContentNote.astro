@@ -1,0 +1,45 @@
+---
+import { t, type UiLang } from '../i18n';
+
+interface Props {
+  ui: UiLang;
+  sourcesHref?: string;
+  changelogHref?: string;
+}
+
+const { ui, sourcesHref, changelogHref } = Astro.props;
+---
+
+<section class="content-note" aria-labelledby="content-note-title" data-ui lang={ui}>
+  <h2 id="content-note-title" data-i18n="contentNote.title">{t(ui, 'contentNote.title')}</h2>
+  <p data-i18n="contentNote.purpose">{t(ui, 'contentNote.purpose')}</p>
+  {(sourcesHref || changelogHref) && (
+    <p class="content-note-links">
+      {sourcesHref && <a href={sourcesHref} data-i18n="contentNote.sourcesLink">{t(ui, 'contentNote.sourcesLink')}</a>}
+      {changelogHref && <a href={changelogHref} data-i18n="contentNote.changelogLink">{t(ui, 'contentNote.changelogLink')}</a>}
+    </p>
+  )}
+  <details>
+    <summary data-i18n="contentNote.details">{t(ui, 'contentNote.details')}</summary>
+    <dl>
+      <dt data-i18n="contentNote.sourcesTitle">{t(ui, 'contentNote.sourcesTitle')}</dt>
+      <dd data-i18n="contentNote.sources">{t(ui, 'contentNote.sources')}</dd>
+      <dt data-i18n="contentNote.verificationTitle">{t(ui, 'contentNote.verificationTitle')}</dt>
+      <dd data-i18n="contentNote.verification">{t(ui, 'contentNote.verification')}</dd>
+      <dt data-i18n="contentNote.visualsTitle">{t(ui, 'contentNote.visualsTitle')}</dt>
+      <dd data-i18n="contentNote.visuals">{t(ui, 'contentNote.visuals')}</dd>
+    </dl>
+  </details>
+</section>
+
+<style>
+  .content-note { border-block-start: 1px solid var(--border); padding-block-start: 1.25rem; font-size: .9rem; line-height: 1.75; color: var(--fg-muted); }
+  .content-note h2 { margin: 0 0 .65rem; font-size: 1rem; line-height: 1.5; color: var(--fg); }
+  .content-note p { margin: 0 0 .7rem; }
+  .content-note .content-note-links { display: flex; flex-wrap: wrap; column-gap: 1.25rem; row-gap: .25rem; }
+  .content-note summary { cursor: pointer; padding-block: .6rem; min-block-size: 44px; color: var(--fg); }
+  .content-note dl { margin: .4rem 0 0; padding: 1rem; background: var(--bg-soft); border-radius: var(--radius); }
+  .content-note dt { font-weight: 600; color: var(--fg); }
+  .content-note dd { margin: .2rem 0 1rem; }
+  .content-note dd:last-child { margin-bottom: 0; }
+</style>

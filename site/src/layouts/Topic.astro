@@ -1,5 +1,6 @@
 ---
 import Base from './Base.astro';
+import ContentNote from '../components/ContentNote.astro';
 import { uiLangFor, t } from '../i18n';
 import type { Topic, Chapter } from '../lib/topics';
 
@@ -13,11 +14,12 @@ interface Props {
   path: string;
   lastVerified?: string;
   volatility?: 'high' | 'medium' | 'low';
-  /** Show the AI-authorship notice and disclaimer (false for the changelog). */
+  sourcesHref?: string;
+  /** Show the content-and-updates note and disclaimer (false for the changelog). */
   isContent?: boolean;
 }
 
-const { topic, chapters, current, title, description, path, lastVerified, volatility, isContent = true } = Astro.props;
+const { topic, chapters, current, title, description, path, lastVerified, volatility, sourcesHref, isContent = true } = Astro.props;
 const { slug, lang, status, disclaimer } = topic.data;
 const ui = uiLangFor(lang);
 const pageTitle = current === 'quickstart' ? `${topic.data.title} · quickstart.to` : `${title} · ${topic.data.title}`;
@@ -80,7 +82,7 @@ const pageTitle = current === 'quickstart' ? `${topic.data.title} · quickstart.
 
     {isContent && (
       <footer class="article-footer">
-        <p class="notice" data-ui lang={ui} data-i18n="notice.ai">{t(ui, 'notice.ai')}</p>
+        <ContentNote ui={ui} sourcesHref={sourcesHref} changelogHref={`/${slug}/changelog`} />
         {disclaimer && <p class="notice notice-warn">{disclaimer}</p>}
       </footer>
     )}

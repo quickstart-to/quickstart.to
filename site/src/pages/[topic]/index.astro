@@ -25,6 +25,7 @@ const { Content } = await render(quickstart);
   path={`/${topic.id}`}
   lastVerified={quickstart.data.last_verified}
   volatility={quickstart.data.volatility}
+  sourcesHref={quickstart.rendered?.html.includes('id="sources-heading"') ? '#sources-heading' : undefined}
 >
   <Content />
   {topic.id === 'go-global' && <GoGlobalMedia />}

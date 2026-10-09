@@ -129,6 +129,8 @@ Write `[^src-id]` right after the claim. The id must exist in `sources/sources.y
 
 The site renders numbered superscripts and a "Sources" list automatically. Do not write Markdown footnote definitions for sources.
 
+Explain the publication's use of AI in a concise, clearly discoverable content-and-updates note: AI performs research, writing, source comparison, and revision so the guides can be maintained as the subject changes. Ground reader trust in traceable evidence, the scope and date of completed verification, and a public change history. AI authorship is not evidence for a claim or a guarantee of accuracy or real-time freshness. Distinguish intended review intervals from completed checks; do not claim continuous monitoring, automatic updates, or human review unless those processes actually operate. Consolidate ordinary AI illustration credits and production details in this note so captions can explain the images. Keep consequential provenance labels near the material they qualify, including hypothetical cases at first use and generated images that could otherwise be mistaken for observed evidence; avoid repeating the same disclosure throughout the article.
+
 ### Match the source to the claim
 
 Research broadly; official documentation alone is insufficient for a practical guide. Source quality depends on what is being claimed, not simply whether a publisher is official.

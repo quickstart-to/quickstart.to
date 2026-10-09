@@ -17,7 +17,7 @@ last_verified: 2026-10-09
 
 ![开发者在远程交流中观察用户的工作表，桌上放着报告样例和根据反馈修改的草图。](./assets/listen-build-learn-v1.png)
 
-*先看见用户怎样工作，再决定产品怎样改变。AI 场景插画。*
+*先看见用户怎样工作，再决定产品怎样改变。*
 
 <figure class="gg-media gg-journey" aria-labelledby="journey-title" aria-describedby="journey-caption">
 <p class="gg-kicker">先看全程</p>
@@ -60,7 +60,7 @@ last_verified: 2026-10-09
 
 ![一双手把熟悉工作本里的批注和资料搬到新的报告界面，途中还要比对和检查。](./assets/switching-workflow-v1.png)
 
-*换掉一个工具，也要迁移它周围的习惯、资料和检查工作。AI 场景插画。*
+*换掉一个工具，也要迁移它周围的习惯、资料和检查工作。*
 
 Plausible 的经历能把这个问题讲得更具体。联合创始人 Marko Saric 在 2022 年的复盘中写到，产品早期已经在服务用户，但增长一度停滞。2019 年，一篇讨论单页应用的文章上了 Hacker News，带来一波访问；文章与产品关系不紧，团队当时看不出明显的直接收益。[^src-plausible-growth-story]
 
@@ -114,7 +114,7 @@ Plausible 的经历能把这个问题讲得更具体。联合创始人 Marko Sar
 <section class="gg-media" data-report-demo aria-labelledby="report-demo-title">
 <p class="gg-kicker">动手试一试 · 合成数据</p>
 <h3 id="report-demo-title">算对工时，离一份周报还有多远？</h3>
-<p class="gg-intro">这是一份虚构的 Project North 记录。只调整示例，不需要上传文件。</p>
+<p class="gg-intro">试着调整 Project North 的示例记录，无需上传文件。</p>
 <figure class="gg-report-flow" aria-labelledby="report-flow-caption">
 <div class="gg-flow-lanes">
 <div class="gg-flow-lane">
@@ -263,4 +263,4 @@ Plausible 的例子中，相关文章帮助读者认识产品的差异。Tally �
 
 这一轮结束时，留下一份简短记录：实际看到了什么，因此准备改什么，下一次怎样知道改动有没有帮助。例如，若问题出在导入，就记下哪种格式卡住了使用者，并在改动后观察他能否独立完成。仍不清楚的部分继续保留为问题。下一轮投入多少时间、先改哪一处，就有了可以回头核对的理由。
 
-*文中创业经历来自作者公开复盘，描述的是当时的选择与结果；Plausible、Tally 和辣条加辣都与文中产品有利益关系。这里采用可追溯的过程，不据此推算成功率或收入。周报工具的输入、输出和后续分支均为教学推演。*
+*Plausible、Tally 和辣条加辣的复盘都涉及作者自己的产品。文中采用其公开报告的过程与取舍，不能据此推算其他产品的成功率或收入。*

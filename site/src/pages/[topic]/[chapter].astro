@@ -28,6 +28,7 @@ const { Content } = await render(entry);
   path={`/${topic.id}/${chapter.slug}`}
   lastVerified={entry.data.last_verified}
   volatility={entry.data.volatility}
+  sourcesHref={entry.rendered?.html.includes('id="sources-heading"') ? '#sources-heading' : undefined}
 >
   <Content />
 </TopicLayout>
