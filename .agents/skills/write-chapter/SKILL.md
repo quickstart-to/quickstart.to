@@ -19,13 +19,13 @@ description: Write or substantially revise a quickstart.to quickstart or chapter
    - chapter → `topics/<slug>/chapters/NN-<slug>.md` (NN = two-digit order; the slug must match the outline and never change once published).
 3. Frontmatter: `title`, `description`, `order` (chapters), `volatility`, `last_verified` (today, only because you just verified via research).
 4. Structure:
-   - **Quickstart**: one path, numbered steps, ends at the milestone. ~30 minutes of reading. Link to chapters for alternatives instead of branching.
+   - **Quickstart**: one bounded starting situation and a coherent path to the promised milestone, about 30 minutes of reading. Number procedural steps when useful; do not force an essay into repeated worksheets. Briefly explain when the path does not fit, linking to chapters for detailed alternatives.
    - **Chapter**: develop a concrete situation into a reasoned choice, worked result, and relevant recovery path. Use the editorial functions in `docs/content-guide.md` §5 without forcing identical headings.
 5. Cite with `[^src-id]` immediately after each volatile claim. Do not write footnote definitions.
 6. Write in the topic's language (`topic.yaml` → `lang`) and voice. Synthesize cases into explained trade-offs; attribute experience and analysis where used, keeping their context and limits. Use connected prose for reasoning, tables for comparisons, and numbered lists for procedures. Never invent first-person practice.
 7. Plan purposeful illustrations with imagegen and exact diagrams as appropriate under the content guide. Images/attachments go in `topics/<slug>/assets/` and are referenced relatively; record provenance and inspect mobile rendering.
 8. Add a `CHANGELOG.md` entry.
-9. `pnpm validate && pnpm build`, then preview with `pnpm dev` and read the page once in the browser end-to-end.
+9. `pnpm validate && pnpm build`, then preview with `pnpm dev` and read the page in the browser end-to-end, including mobile inspection. Check whether the reasoning flows without repeated warnings, mechanical section summaries, or dense tables carrying what prose should explain; revise before treating the sample as ready for review.
 10. Review against `docs/content-guide.md` §8 and update the existing active topic PR, or open one if none exists, with the definition-of-done checklist from AGENTS.md. State unmet editorial requirements for partial drafts.
 
 ## Quality bar (self-review before PR)

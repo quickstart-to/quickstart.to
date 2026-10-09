@@ -677,7 +677,7 @@
   title: "How we built a $1M ARR open source SaaS"
   publisher: "Marko Saric · Plausible Analytics"
   accessed: "2026-10-09"
-  claim: "联合创始人回顾早期定位、统一表达、与产品相关的内容及用户支持；早期无关主题流量高峰直接收益不明显，后续相关内容带来作者报告的增长；不作为可复制流量或收入承诺"
+  claim: "联合创始人2022年复盘2019年无关主题流量、2020年营销合伙人加入后的定位与内容调整，以及后续产品性能和支持投入；采用其报告的行动与结果，不推导单一增长原因或收入承诺"
   excerpt: "excerpts/plausible-growth-story.md"
 
 - id: src-pg-manual-recruiting
@@ -695,3 +695,11 @@
   accessed: "2026-10-09"
   claim: "Superhuman创始人说明按已有核心使用经历、用户得到的价值与阻碍分组反馈并调整路线图；本书不把其百分比阈值或样本规模当成小产品通用验收标准"
   excerpt: "excerpts/superhuman-pmf.md"
+
+- id: src-tally-early-growth
+  url: "https://blog.tally.so/how-we-bootstrapped-tally-to-10k-mrr/"
+  title: "How we bootstrapped Tally to $10k MRR"
+  publisher: "Marie Martens · Tally"
+  accessed: "2026-10-09"
+  claim: "联合创始人2022-02-11回顾免费表单降低尝试门槛、表单上的品牌标记带来用户，以及小团队通过限制复杂度和改善文档降低支持负担；属于历史自述，不代表当前套餐或免费策略的普遍效果"
+  excerpt: "excerpts/tally-early-growth.md"
