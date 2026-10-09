@@ -743,3 +743,27 @@
   accessed: "2026-10-09"
   claim: "账号softlight于2023-10-09复盘页面搭建器：把公司内部类似技术的价值外推到市场，投入可扩展架构后发现与目标用户需求错位；第77条回复明确原公司没有使用该产品。仅为作者自述，不证明市场规模或商业结果"
   excerpt: "excerpts/v2ex-builder-retrospective.md"
+
+- id: src-bannerbear-pivot
+  url: https://www.bannerbear.com/blog/the-pivot/
+  title: The Pivot
+  publisher: Jon Yongfook · Bannerbear
+  accessed: '2026-10-09'
+  claim: 作者2020年1月宣布从Previewmojo的Open Graph图片生成转向更多尺寸和用途，描述低任务频率、用户认知、反复出现的其他尺寸请求，以及收拢多产品投入；是当时的转向判断，不证明后续增长或普遍机会
+  excerpt: excerpts/bannerbear-pivot.md
+
+- id: src-toggl-client-report
+  url: https://support.toggl.com/en-us/article/how-to-generate-a-report-for-a-client-1vbg4xh/
+  title: How to generate a report for a client?
+  publisher: Toggl Knowledge Base
+  accessed: '2026-10-09'
+  claim: 官方操作文档说明在Detailed report按Client或Project及日期筛选，下载PDF交给客户，需要概览时使用Summary report；仅核对文档所述能力，未执行账户操作或比较套餐
+  excerpt: excerpts/toggl-client-report.md
+
+- id: src-agencyanalytics-reporting
+  url: https://agencyanalytics.com/features/automated-marketing-reports
+  title: Automated Marketing Reports That Impress Clients, Fast!
+  publisher: AgencyAnalytics
+  accessed: '2026-10-09'
+  claim: 产品页面描述接入营销平台数据、模板、定时交付及添加专业评论，部分套餐提供发送前审核；用于了解该类产品覆盖的工作，不采用节省时间、客户数量或收入等宣传数字，也不声称实测
+  excerpt: excerpts/agencyanalytics-reporting.md

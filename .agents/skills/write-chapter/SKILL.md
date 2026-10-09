@@ -7,30 +7,22 @@ description: Write or substantially revise a quickstart.to quickstart or chapter
 
 ## Preconditions
 
-- `topics/<slug>/outline.md` lists this section and has been agreed (merged).
-- Research exists in `topics/<slug>/research/` covering every volatile claim you will make, with sources already in `sources/sources.yaml`. If not, run the **research** skill first.
-- For substantive practical writing, research also covers relevant practitioner accounts, independent analysis, and counterexamples under `docs/content-guide.md` §6. Official-document coverage alone is insufficient; record and scope genuine evidence gaps.
+- The section belongs to the agreed topic outline or is directly authorized by the maintainer. Preserve published slugs.
+- Read `docs/content-guide.md`, `docs/editorial-workflow.md`, the topic's `agent.md`, and relevant research. Follow the topic's reference-article notes when provided.
+- Research covers the chapter's decisive questions, including practitioner experience, alternatives and counterexamples where relevant. Every volatile claim has suitable evidence already registered in `sources/sources.yaml`. Use **research** to close gaps before making the affected recommendation.
 
-## Procedure
+## Writing
 
-1. Read `docs/content-guide.md`, `topics/<slug>/agent.md`, the outline, and the relevant research notes.
-2. Create/edit the file:
-   - quickstart → `topics/<slug>/quickstart.md`
-   - chapter → `topics/<slug>/chapters/NN-<slug>.md` (NN = two-digit order; the slug must match the outline and never change once published).
-3. Frontmatter: `title`, `description`, `order` (chapters), `volatility`, `last_verified` (today, only because you just verified via research).
-4. Structure:
-   - **Quickstart**: one bounded starting situation and a coherent path to the promised milestone, about 30 minutes of reading. Number procedural steps when useful; do not force an essay into repeated worksheets. Briefly explain when the path does not fit, linking to chapters for detailed alternatives.
-   - **Chapter**: develop a concrete situation into a reasoned choice, worked result, and relevant recovery path. Use the editorial functions in `docs/content-guide.md` §5 without forcing identical headings.
-5. Cite with `[^src-id]` immediately after each volatile claim. Do not write footnote definitions.
-6. Write in the topic's language (`topic.yaml` → `lang`) and voice. Synthesize cases into explained trade-offs; attribute experience and analysis where used, keeping their context and limits. Use connected prose for reasoning, tables for comparisons, and numbered lists for procedures. Never invent first-person practice.
-7. Compose purposeful illustrations with imagegen, exact diagrams, interactive examples, and verified original media as appropriate under the content guide. Images/attachments go in `topics/<slug>/assets/` and are referenced relatively; record provenance, inspect mobile rendering, and check keyboard operation, static fallbacks, and click-to-load external media.
-8. Add a `CHANGELOG.md` entry.
-9. `pnpm validate && pnpm build`, then preview with `pnpm dev` and read the page in the browser end-to-end, including mobile inspection. Check whether the reasoning flows without repeated warnings, mechanical section summaries, or dense tables carrying what prose should explain; revise before treating the sample as ready for review.
-10. Review against `docs/content-guide.md` §8 and update the existing active topic PR, or open one if none exists, with the definition-of-done checklist from AGENTS.md. State unmet editorial requirements for partial drafts.
+1. Record the reader's starting situation, decision, usable output, and what this chapter adds beyond the quickstart. Identify the reference article/revision and qualities to preserve; do not assume it is fully approved. This brief belongs in the research record, not the published prose.
+2. Check the research against that promise. A missing central premise cannot be moved into “later work” merely to finish the chapter. A clearly labeled hypothetical can demonstrate a decision method, but must show its inputs, alternatives and consequences rather than give an unexplained answer.
+3. Write `quickstart.md` or `chapters/NN-<slug>.md` in the topic's language. Set title, description, chapter order and truthful volatility; update `last_verified` only for facts actually rechecked. Cite with `[^src-id]`, without footnote definitions.
+4. Develop the reasoning in connected prose. A quickstart provides a bounded route; a chapter deepens its own class of decisions with a completed worked result and relevant recovery path. Use actual attributed experience and stated assumptions; never invent firsthand work. Do not force every section into the same headings, caveats or worksheets.
+5. Compose visuals and media around reader questions under the content guide: imagegen for useful original scenes, editable diagrams for exact relationships, working examples for observable consequences, and verified original media where it adds value. A disclosure is a reading control, not evidence that an interactive demonstration exists. Keep provenance in the research record, assets in the topic, and essential explanations readable without scripts or video.
 
-## Quality bar (self-review before PR)
+## Rejection pass and delivery
 
-- Would a reader bookmark this? Is there anything here a generic AI chat answer would not give (specific steps, real pitfalls, sourced numbers, dates)?
-- Every number, fee, limit, policy and eligibility statement has a citation.
-- No hedging filler, no generic advice lists, no marketing tone.
-- Nothing recommends bypassing KYC, tax or platform rules.
+Make a separate end-to-end reading pass following `docs/editorial-workflow.md`. Compare the promised contribution and the reference article. Record concrete shortcomings, their reader impact, and repairs; then re-read the affected passages in context. Do not substitute a list of additions or successful UI tests for editorial evidence. If a material gap remains central to the promise, keep revising or clearly deliver it as unfinished; do not call it a completed refinement.
+
+Add a dated `CHANGELOG.md` entry. Run `pnpm validate` and `pnpm build`, preview with `pnpm dev`, and inspect desktop and narrow-screen reading. Check relevant controls, keyboard operation, boundary/reset states, source links, asset delivery and static fallbacks. Run build and Astro diagnostics serially because they share generated caches.
+
+Update the existing active topic PR under AGENTS.md. Report evidence, editorial and technical results separately, with sources, feedback IDs and genuine limitations. The actual revision is also a behavioral check of this workflow: its record should show a new reader capability and repaired rejection findings, not merely the presence of a review document. Self-review does not establish reader acceptance or authorize promotion to beta/stable.

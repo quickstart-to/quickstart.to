@@ -155,7 +155,7 @@ Every content PR adds a dated entry to `CHANGELOG.md` in the topic's language: w
 
 ## 8. Editorial acceptance
 
-For a new guide or substantial rewrite, review these dimensions with concrete evidence in the PR or research note. Small corrections only need checks relevant to the change. This is an editorial review, not a word-count or image-count target.
+For a new guide or substantial rewrite, follow [the editorial workflow](editorial-workflow.md): establish the contribution and evidence coverage before drafting, then make a separate rejection pass against a reference article where available. Review these dimensions with concrete evidence in the PR or research note. Small corrections only need checks relevant to the change. This is an editorial review, not a word-count or image-count target.
 
 | Dimension | Required evidence | Return for revision when |
 |---|---|---|
