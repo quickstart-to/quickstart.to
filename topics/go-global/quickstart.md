@@ -19,17 +19,22 @@ last_verified: 2026-10-09
 
 *先看见用户怎样工作，再决定产品怎样改变。AI 场景插画。*
 
-<nav class="gg-route" aria-label="本篇阅读路线">
-<p>边读边探索</p>
-<ul>
-<li><a href="#从你能理解也能接触的人开始"><svg class="gg-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7" r="3"/><path d="M5 21v-3a7 7 0 0 1 14 0v3"/></svg><span>找到人群</span></a></li>
-<li><a href="#先看旧办法为什么还能用"><svg class="gg-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg><span>理解旧办法</span></a></li>
-<li><a href="#让一个小结果进入真实工作"><svg class="gg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v12H4zM8 20h8M12 16v4M8 9l2 2 5-5"/></svg><span>动手试一试</span></a></li>
-<li><a href="#沿着产品的使用方式去找用户"><svg class="gg-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="2"/><circle cx="18" cy="5" r="2"/><circle cx="18" cy="19" r="2"/><path d="m7 11 9-5M7 13l9 5"/></svg><span>选择入口</span></a></li>
-<li><a href="#试用之后再看它留下了什么"><svg class="gg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 8a8 8 0 1 0 0 8M20 3v5h-5M8 12l3 3 5-6"/></svg><span>观察复用</span></a></li>
-<li><a href="#给下一轮投入一个具体理由"><svg class="gg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 21V4M5 4h14l-3 4 3 4H5"/></svg><span>决定下一步</span></a></li>
-</ul>
+<figure class="gg-media gg-journey" aria-labelledby="journey-title" aria-describedby="journey-caption">
+<p class="gg-kicker">先看全程</p>
+<h3 id="journey-title">从找到人，到决定下一轮</h3>
+<nav class="gg-journey-map" aria-label="第一轮用户验证流程，点击节点阅读对应段落">
+<span class="gg-return-line" aria-hidden="true"></span>
+<ol>
+<li><a href="#从你能理解也能接触的人开始"><span class="gg-node-top"><span class="gg-step">01</span><svg class="gg-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7" r="3"/><path d="M5 21v-3a7 7 0 0 1 14 0v3"/></svg></span><strong>找到人群</strong><span class="gg-node-note">能理解，也能接触</span></a></li>
+<li><a href="#先看旧办法为什么还能用"><span class="gg-node-top"><span class="gg-step">02</span><svg class="gg-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></span><strong>理解旧办法</strong><span class="gg-node-note">找值得改变的一步</span></a></li>
+<li><a href="#让一个小结果进入真实工作"><span class="gg-node-top"><span class="gg-step">03</span><svg class="gg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v12H4zM8 20h8M12 16v4M8 9l2 2 5-5"/></svg></span><strong>交付小结果</strong><span class="gg-node-note">让人用上完整样例</span></a></li>
+<li><a href="#沿着产品的使用方式去找用户"><span class="gg-node-top"><span class="gg-step">04</span><svg class="gg-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="2"/><circle cx="18" cy="5" r="2"/><circle cx="18" cy="19" r="2"/><path d="m7 11 9-5M7 13l9 5"/></svg></span><strong>选择触达入口</strong><span class="gg-node-note">接触更多相似的人</span></a></li>
+<li><a href="#试用之后再看它留下了什么"><span class="gg-node-top"><span class="gg-step">05</span><svg class="gg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 8a8 8 0 1 0 0 8M20 3v5h-5M8 12l3 3 5-6"/></svg></span><strong>回到真实任务</strong><span class="gg-node-note">看结果有没有用上</span></a></li>
+<li><a href="#给下一轮投入一个具体理由"><span class="gg-node-top"><span class="gg-step">06</span><svg class="gg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 21V4M5 4h14l-3 4 3 4H5"/></svg></span><strong>决定下一轮</strong><span class="gg-node-note">改进、缩小，或停下</span></a></li>
+</ol>
 </nav>
+<figcaption id="journey-caption" class="gg-caption"><span class="gg-line-key" aria-hidden="true"></span>实线是本篇的推进顺序。<span class="gg-line-key gg-line-key-return" aria-hidden="true"></span>虚线表示：人群或问题的假设不成立时，回到起点重选。节点可点击跳转。</figcaption>
+</figure>
 
 ## 从你能理解、也能接触的人开始
 
@@ -100,16 +105,30 @@ Plausible 的经历能把这个问题讲得更具体。联合创始人 Marko Sar
 
 交流时，先放下演示。顺着对方的过程看完，你可能会发现原先定义的产品太大，也可能发现它太小。只有在知道哪一步值得帮助以后，演示才有一个可检验的目的。
 
-以周报例子来说，设想输入里只有项目、任务和工时。程序可以算出某项目本周做了研究和草稿，共花了五小时。这是一个正确的计算结果，却还不是完整的客户更新：是否按期完成、下一步是什么、需要客户决定什么，输入里都没有。
+以周报例子来说，设想输入里只有项目、任务和工时。程序能算出花了多少时间，却不能据此说明项目是否按期、下一步需要客户决定什么。一份客户更新，需要把这两路信息汇到一起。
 
 这里有两种不同的产品承诺。你可以只做可靠的整理，明确把判断留给使用者；也可以尝试做更完整的项目汇报工具，但那就需要新的输入、更深的工作理解，甚至与现有系统集成。先把后一种承诺写到首页，再期待算法补齐缺失的事实，会把产品推向一个尚未理解的问题。
 
-在这个例子里，首版先选可靠整理。拖动下面的工时，看看哪些内容会跟着变化；再加入一段使用者的判断，比较两份结果。
+在这个例子里，首版先选可靠整理。沿着图中的两路输入往下看，再拖动工时、加入使用者的判断，比较输出怎样变化。
 
 <section class="gg-media" data-report-demo aria-labelledby="report-demo-title">
 <p class="gg-kicker">动手试一试 · 合成数据</p>
 <h3 id="report-demo-title">算对工时，离一份周报还有多远？</h3>
 <p class="gg-intro">这是一份虚构的 Project North 记录。只调整示例，不需要上传文件。</p>
+<figure class="gg-report-flow" aria-labelledby="report-flow-caption">
+<div class="gg-flow-lanes">
+<div class="gg-flow-lane">
+<p class="gg-lane-title"><svg class="gg-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M9 4v16M3 14h18"/></svg>已有记录</p>
+<ol><li><strong>表格里的事实</strong><span>项目、任务、工时</span></li><li><strong>程序整理</strong><span>分组、求和、排版</span></li></ol>
+</div>
+<div class="gg-flow-lane gg-flow-human">
+<p class="gg-lane-title"><svg class="gg-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7" r="3"/><path d="M5 21v-3a7 7 0 0 1 14 0v3"/></svg>补充判断</p>
+<ol><li><strong>工作中的上下文</strong><span>进展、承诺、待办</span></li><li><strong>使用者确认</strong><span>项目状态、下一步</span></li></ol>
+</div>
+</div>
+<div class="gg-flow-result"><svg class="gg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h10l4 4v14H5zM14 3v5h5M9 12h6M9 16h6"/></svg><div><strong>可编辑的客户更新</strong><span>核对内容后，再交给客户</span></div></div>
+<figcaption id="report-flow-caption" class="gg-caption">两路信息在输出里汇合。左侧能自动整理，右侧仍由人补充；合计工时不能替代项目判断。</figcaption>
+</figure>
 <div class="gg-demo-grid">
 <fieldset class="gg-inputs">
 <legend>输入：这周记录的工作</legend>
@@ -137,7 +156,7 @@ Plausible 的经历能把这个问题讲得更具体。联合创始人 Marko Sar
 <noscript><p class="gg-caption">当前显示静态示例；启用 JavaScript 后可以调整工时和判断。</p></noscript>
 </section>
 
-工时表没有说明项目是否按期完成，也没有下一步安排。演示里新增的句子来自人的补充，不能由那五个小时自动推出来。如果使用者还要把自动整理的部分全部重写，或者原本就有同样好用的模板，这个版本并没有提供足够的改变。
+如果使用者还要把自动整理的部分全部重写，或者原本就有同样好用的模板，这个版本并没有提供足够的改变。
 
 接下来再把演示做成陌生人能独立尝试的页面：先展示完整样例，再让人决定是否导入自己的文件；说明工时用什么格式，遇到无法识别的值时指出具体行；让输出可编辑、可复制，而不是锁在一张漂亮截图里。首版可以在浏览器内处理文件，减少传输原始资料的需要；相应地，用户要自行保存结果，也没有云端历史。这是本例的范围选择，数据处理准备见[合规底线](/go-global/compliance)。
 
@@ -176,7 +195,7 @@ Plausible 的例子中，相关文章帮助读者认识产品的差异。Tally �
 
 这也是选择内容题目的尺度。一个问题即使能带来很多阅读，如果解答完以后，读者仍没有使用产品的理由，它对这一轮验证的帮助就有限。反过来，一个范围很小的问题，若恰好发生在目标用户准备做这件事的时候，可能更值得认真回答。具体渠道的参与方式与发布材料，放在[冷启动获客](/go-global/launch)。
 
-先选一个有根据的入口，是为了让结果容易解释。来了人但没人开始，回头看人群和表达；开始后都停在导入，先检查输入门槛；顺利导出却用不上，继续看输出。不要一次换掉页面、渠道和产品，再用总访问量判断哪一步有效。
+先选一个有根据的入口，是为了让结果容易解释。后面的判断图会沿着试用过程定位该检查的地方；不要一次换掉页面、渠道和产品，再用总访问量判断哪一步有效。
 
 ## 试用之后，再看它留下了什么
 
@@ -210,6 +229,33 @@ Plausible 的例子中，相关文章帮助读者认识产品的差异。Tally �
 走过这轮以后，继续做下去的理由应当比“有人说不错”更清楚。
 
 仍以周报工具为例：假如参与者独立生成了结果，也用进了客户邮件，却每次都花时间改列名，那么下一轮优先解决输入适配，比增加一个新图表更有根据。如果结果始终没有进入实际交付，先弄清缺失的是项目判断、协作还是其他能力。若补上这些已经远超你的能力和投入范围，缩小范围或停止当前方案也合理。
+
+<figure class="gg-media gg-decision" aria-labelledby="decision-title" aria-describedby="decision-caption">
+<p class="gg-kicker">从实际观察到的地方往下走</p>
+<h3 id="decision-title">这次试用，下一步先查哪里？</h3>
+<ol class="gg-decision-tree">
+<li>
+<div class="gg-question"><span class="gg-step">01</span><strong>开始处理自己的任务了吗？</strong></div>
+<span class="gg-branch-no"><span>否</span></span>
+<div class="gg-action"><strong>先看人群与入口</strong><span>邀请有没有理由？样例能看懂吗？准备材料是否太难？</span></div>
+<span class="gg-branch-yes"><span>是</span></span>
+</li>
+<li>
+<div class="gg-question"><span class="gg-step">02</span><strong>完成了输入到输出的过程吗？</strong></div>
+<span class="gg-branch-no"><span>否</span></span>
+<div class="gg-action"><strong>找卡住的那一步</strong><span>是列名、格式、报错，还是不知道下一步怎么做？</span></div>
+<span class="gg-branch-yes"><span>是</span></span>
+</li>
+<li>
+<div class="gg-question"><span class="gg-step">03</span><strong>结果用进实际工作了吗？</strong></div>
+<span class="gg-branch-no"><span>否</span></span>
+<div class="gg-action"><strong>比较输出与旧办法</strong><span>还要补什么、重写多少？必要时缩小或放弃当前方案。</span></div>
+<span class="gg-branch-yes"><span>是</span></span>
+</li>
+</ol>
+<div class="gg-decision-next"><svg class="gg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 8a8 8 0 1 0 0 8M20 3v5h-5M8 12l3 3 5-6"/></svg><div><strong>再看下一次任务，以及你付出的服务成本</strong><span>记录是否需要陪同、修改和支持。重复任务按周期回访；一次性任务先确认事情做完。</span></div></div>
+<figcaption id="decision-caption" class="gg-caption">这是周报示例的排查顺序，不是自动诊断。尚未观察到的步骤先保留为问题，不能直接记作“否”；结果用上了，也还需要了解购买意愿。</figcaption>
+</figure>
 
 愿意使用和愿意购买还要分别了解。当交付范围已经说得清楚，就可以拿具体报价去讨论：谁会买、为哪部分价值买、按次还是按期，以及需要什么支持。不要为了暂时回避收费，让免费试用无限延长；也不要让一个随口的“价格可以”代替真实购买。定价取舍和报价内容见[定价与订阅](/go-global/pricing)。
 
