@@ -2,6 +2,7 @@
 import { render } from 'astro:content';
 import TopicLayout from '../../layouts/Topic.astro';
 import { getTopics, getQuickstart, getChapters } from '../../lib/topics';
+import GoGlobalMedia from '../../../../topics/go-global/assets/QuickstartMedia.astro';
 
 export async function getStaticPaths() {
   const topics = await getTopics();
@@ -26,4 +27,5 @@ const { Content } = await render(quickstart);
   volatility={quickstart.data.volatility}
 >
   <Content />
+  {topic.id === 'go-global' && <GoGlobalMedia />}
 </TopicLayout>

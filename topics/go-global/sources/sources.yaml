@@ -703,3 +703,27 @@
   accessed: "2026-10-09"
   claim: "联合创始人2022-02-11回顾免费表单降低尝试门槛、表单上的品牌标记带来用户，以及小团队通过限制复杂度和改善文档降低支持负担；属于历史自述，不代表当前套餐或免费策略的普遍效果"
   excerpt: "excerpts/tally-early-growth.md"
+
+- id: src-yc-talk-users-video
+  url: "https://www.youtube.com/watch?v=MT4Ig2uqjTc"
+  title: "Eric Migicovsky - How to Talk to Users"
+  publisher: "Y Combinator · YouTube"
+  accessed: "2026-10-09"
+  claim: "YC于2019-07-25发布Eric Migicovsky的用户访谈讲座；播放器元数据为31分37秒、英文自动字幕并允许嵌入，具体提问内容另以YC配套转录核对"
+  excerpt: "excerpts/yc-talk-users-video.md"
+
+- id: src-yc-user-interview-notes
+  url: "https://www.ycombinator.com/blog/startup-school-week-1-recap-kevin-hale-and-eric-migicovsky/"
+  title: "Startup School Week 1 Recap: Kevin Hale and Eric Migicovsky"
+  publisher: "Y Combinator"
+  accessed: "2026-10-09"
+  claim: "2019-09-04官方配套转录的Eric段落讨论先了解用户过去实际遇到的问题、已尝试的办法及不足，避免在研究访谈中推销或只问假设性意愿；不将VC增长标准泛化给所有个人产品"
+  excerpt: "excerpts/yc-user-interview-notes.md"
+
+- id: src-eric-interview-update
+  url: "https://ericmigi.com/blog/startup-school-how-to-talk-to-users"
+  title: "Startup School - How to talk to users"
+  publisher: "Eric Migicovsky"
+  accessed: "2026-10-09"
+  claim: "作者在讲座链接页的2025年补充中说明框架基于The Mom Test，自己做Pebble和Beeper时很少实际采用，常从自己想要的产品出发；仅为其个人方法自述"
+  excerpt: "excerpts/eric-interview-update.md"
