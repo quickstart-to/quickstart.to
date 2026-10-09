@@ -22,7 +22,6 @@
 .vd-pivot-flow p { font-size: .85rem; color: var(--fg-muted); }
 .vd-lanes { display: grid; gap: 1rem; }
 .vd-lanes > div { padding: 1rem; border-left: 2px solid var(--border); background: var(--bg-soft); }
-.vd-lanes > .vd-hypothesis { border-left-color: var(--accent); }
 .vd-media .vd-lanes h4 { margin: 0 0 .8rem; font-size: 1rem; }
 .vd-lanes h4 span { display: block; font-size: .78rem; font-weight: normal; color: var(--fg-muted); }
 .vd-media .vd-lanes ol { list-style: none; padding: 0; margin: 0; }

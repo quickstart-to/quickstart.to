@@ -84,3 +84,38 @@
 ```text
 Use case: illustration-story. Asset type: original editorial illustration for a Chinese field guide about choosing a software opportunity for overseas users. Primary request: show the quiet, concrete work of comparing candidate jobs before building a product. A continuous wide tabletop scene: a developer's hands arrange three distinct paper work samples from left to right — a small time ledger, a client project update with notes and a paperclip, and a dense multi-channel marketing chart sheet. One hand uses a graphite pencil to examine the middle project-update sheet beside an older marked-up template; the other two remain on the desk, suggesting alternatives weighed, not a guaranteed winner. A modest laptop sits partly out of frame, secondary to the papers; an eraser and closed notebook convey practical work. Style: sophisticated hand-drawn editorial print illustration, crisp expressive ink contours, gentle gouache texture, warm ivory paper, charcoal, muted gray-green and restrained terracotta-orange accents. Composition: landscape roughly 16:9, generous breathing room, clear simple silhouettes that remain legible at mobile width; no panels or infographic boxes. Show work materials and trade-offs, not a celebratory startup or a money scene. No legible text, letters, numbers, logos, flags, maps, currency, rocket, globe, trophy, or fake interface screenshot. This is a scene illustration; exact evidence and decisions appear separately as live page text.
 ```
+
+## 维护者要求的再次复审（3321d2c）
+
+日期：2026-10-09；范围为第二篇和research/write-chapter的实际约束，参照第一篇及写作基线。先通读当前正文、第一篇与共用规则，再定向补查，而非从上次“已完成”的记录推断质量。本轮继续使用ego，TaskSpace 53；未使用独立评审者。
+
+### 发现、影响与修复
+
+| 优先级 | 3321d2c中的位置与问题 | 对读者的影响 | 本次处理 |
+|---|---|---|---|
+| 先修推导 | “先走一遍现有办法”及三候选：A/C列真实原生路径，B仅列自己的教学路径 | 推荐项因研究不足而显得更有空间，容易把贯穿案例当成预设结论；此前确实只推荐调查，未声称已验证，因此不是虚构用户事实 | 补读Asana状态更新；三路均比较已有办法，B同时对照邮件/文档模板。把调查起点改为“为什么旧输出还需返工”，保留没有缺口就结束 |
+| 补齐情境 | “三个候选”后主要提醒英语人群不是一个市场，却未让它改变实例的对象与成本 | 海外只成背景，读者还要自行补出谁可参与、自己能否服务 | 将对象写成负责网站交付、亲自准备英文客户更新、能尝试辅助工具的人；实际地区、接收方式、审阅者要了解，异步支持与即时陪同的冲突会改变下一步。未假定已找到这些人 |
+| 精简阅读 | 候选对照、B之后的解释、末尾总结和决定记录重复同一取舍；“批准进一步了解”是内部评审语言 | 越读越像验收表，末尾没有增加足够的新动作 | 删除末尾A/B/C复述；结尾记录转成找谁、看什么、确认何种返工后做样稿；压缩旁白与重复限制，重要假设仍就近说明 |
+| 修复流程 | write-chapter描述只覆盖写作，反证规则强调失败案例，却未检查推荐项与其他项是否同等受审查 | 有来源、有反例、有审查记录，仍可能放过不对称推导 | 加入现有文章review入口，共用流程补比较对称性、情境对决定的作用及跨图文重复检查。优先级按影响区分，不把审美偏好说成事实错误；不增数量配额，不为review默认整章重写 |
+
+### 补查问题与来源
+
+问题：B的“客户更新”是否也有需要正面比较的现有路径？检索`site:asana.com resources project status report template client`，由结果进入Asana原始帮助文档。搜索摘要只用于发现。沿用上一轮已核验的中文失败、Bannerbear、Buffer、Level实践材料，未因这一处产品能力缺口重做全章调研。
+
+`src-asana-status-updates`：读取How to create a status update、Adding highlights、Print or delete a status update等段落。文档说明状态、摘要、下一步、项目记录、发布与打印，已发布结构可供后续更新复用。仅确认公开功能描述，未登录、未播放视频；套餐、提醒频率、权限规则和营销效果不进入本章。最初提取main只读到导航，改按页面实际正文读取后才登记证据。页面未见可确认的原始发布日期，accessed为本轮实际读取日期。
+
+新的证据不会自动否定B：它否定的是“不必调查原生方案”的比较方式。同样，现有Asana能力不能证明工作室都采用它；邮件模板是需要向参与者核对的另一种替代，不是声称已观察到的客户行为。表格只决定有限调查先后，仍不能推出市场规模或付费需求。
+
+### 对skill修改的行为检查与剩余问题
+
+将新检查反用到3321d2c：原生工具对照必须包括B；只加Asana脚注而不改第三条路径、候选理由与最终调查问题，仍无法修复推导。本轮四处共同修改，故修复的是决定过程，不只是来源计数。对“熟悉工作”的解释保留：它能支持优先了解，不能支持认定产品更优。将海外对象具体化后，若需要即时陪同，六小时异步方案须先重新估算，不能继续原样套用。
+
+这属于同一任务中的回看与修订，不是盲测或独立读者验证。新规则不能保证消除自审偏差。文章仍以小型B2B工作为主，不能据此评估消费产品、国家市场优劣或长周期企业采购；相关范围没有扩张为本章的新承诺。真实人群验证仍缺失，保持draft，不用增加更多装饰图片或成功案例掩盖它。
+
+技术结果：
+
+- 两个skill通过quick_validate，引用的共用流程和基线可读；未新增通用AGENTS规则或改变其他skill。
+- `pnpm build`通过（15页、0错误、8条既有未引用来源提醒），`pnpm check`为0错误/警告/提示；最终标题措辞调整后再次构建通过。静态检查291个站内页面链接、310个片段链接、41个ARIA引用全部有效，无重复ID。
+- ego查看1280px与390px的三路原生流程图、候选对照、最终行动记录截图，无横向溢出。通读后又修正末尾图题：既然下一步是先看旧输出，就不继续写成“先验证输入能否直接进入交付”。
+- 手机键盘打开修订后的第一条反馈；成本演算预设仍为96/120分钟，重置为152/120，未修改其计算代码。新增Asana来源链接正确，集中内容说明仍为1份。本轮未重复之前已完成的全边界/无脚本测试。
+- 当前提交的CI与远程预览结果记录在同一专题PR。
