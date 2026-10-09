@@ -1,0 +1,87 @@
+{
+  "executedAt": "2026-10-09T07:13:00.467Z",
+  "node": "v22.19.0",
+  "platform": "darwin",
+  "scope": "loopback HTTP and synthetic JSON fixtures only",
+  "checks": [
+    {
+      "step": "baseline",
+      "httpStatus": 200,
+      "release": "v1",
+      "report": "North",
+      "hours": 5,
+      "rowIds": [
+        "r1",
+        "r2"
+      ],
+      "expectedHours": 5,
+      "businessCheck": true
+    },
+    {
+      "step": "faulty_release",
+      "httpStatus": 200,
+      "release": "v2",
+      "report": "North",
+      "hours": 3,
+      "rowIds": [
+        "r1",
+        "r2"
+      ],
+      "expectedHours": 5,
+      "businessCheck": false,
+      "health": "up"
+    },
+    {
+      "step": "code_rollback",
+      "httpStatus": 200,
+      "release": "v1",
+      "report": "North",
+      "hours": 5,
+      "rowIds": [
+        "r1",
+        "r2"
+      ],
+      "expectedHours": 5,
+      "businessCheck": true
+    },
+    {
+      "step": "new_record_after_backup",
+      "httpStatus": 200,
+      "release": "v1",
+      "report": "North",
+      "hours": 6,
+      "rowIds": [
+        "r1",
+        "r2",
+        "r3"
+      ],
+      "expectedHours": 6,
+      "businessCheck": true
+    },
+    {
+      "step": "damaged_data_same_code",
+      "httpStatus": 500,
+      "release": "v1",
+      "error": "DEMO_STORE_UNREADABLE",
+      "businessCheck": false
+    },
+    {
+      "step": "restore_old_backup_in_isolation",
+      "httpStatus": 200,
+      "release": "v1",
+      "report": "North",
+      "hours": 5,
+      "rowIds": [
+        "r1",
+        "r2"
+      ],
+      "expectedLatestHours": 6,
+      "missingIds": [
+        "r3"
+      ],
+      "backupReadable": true,
+      "businessCheck": false
+    }
+  ],
+  "conclusion": "Code rollback repairs the release defect. The old backup is readable but lacks r3; latest work is not recovered."
+}

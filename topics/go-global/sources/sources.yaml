@@ -825,3 +825,44 @@
   accessed: '2026-10-09'
   claim: 原站核对发布者、标题、2022-12-29发布日期及22分53秒时长；讲授内容以YC配套文字核对，未声称完整观看或保证各地可播放
   excerpt: excerpts/yc-first-customers-video.md
+
+- id: src-cheng-infrastructure-migration
+  url: https://www.chengxiaobai.com/trouble-maker/migrate-to-cloudflare.html
+  title: 开发者的窘境
+  publisher: 程小白
+  accessed: '2026-10-09'
+  claim: 作者2022-08-21复盘静态博客收拢至GitHub与Cloudflare Pages，移除收益不明的分流和图床副本、将少量图片随代码管理；采用其维护取舍，不沿用历史服务限制或地域性能结论
+  excerpt: excerpts/cheng-infrastructure-migration.md
+
+- id: src-gitlab-database-postmortem
+  url: https://about.gitlab.com/blog/postmortem-of-database-outage-of-january-31/
+  title: Postmortem of database outage of January 31
+  publisher: GitLab
+  accessed: '2026-10-09'
+  claim: 2017-02-10原始复盘说明主库误删、备份工具版本不匹配、告警邮件被拒收，最终依靠约6小时前的快照恢复且有数据缺口；历史事故不代表当前GitLab服务或小产品的普遍故障概率
+  excerpt: excerpts/gitlab-database-postmortem.md
+
+- id: src-cloudflare-placement
+  url: https://developers.cloudflare.com/workers/configuration/placement/
+  title: Placement
+  publisher: Cloudflare Workers Docs
+  accessed: '2026-10-09'
+  claim: 官方文档解释默认靠近请求入口运行与靠近后端运行的取舍，多次数据库往返会累积延迟；只支持位置与请求路径关系，不承诺具体地域性能或推荐某付费计划
+  excerpt: excerpts/cloudflare-placement.md
+  archive: https://web.archive.org/web/20261009071543/https://developers.cloudflare.com/workers/configuration/placement/
+
+- id: src-resend-email-events
+  url: https://resend.com/docs/webhooks/event-types
+  title: Event Types
+  publisher: Resend
+  accessed: '2026-10-09'
+  claim: 官方将email.sent定义为API请求成功后尝试投递，将email.delivered定义为成功送达收件方邮件服务器，并区分临时延迟和永久退信；不代表已进主收件箱或完成登录
+  excerpt: excerpts/resend-email-events.md
+
+- id: src-supabase-backup-scope
+  url: https://supabase.com/docs/guides/platform/backups
+  title: Database Backups
+  publisher: Supabase Docs
+  accessed: '2026-10-09'
+  claim: 官方说明数据库备份包含Storage对象元数据而非对象文件，恢复旧数据库备份不会找回后来删除的对象；仅用于核对备份范围，不采用套餐、价格或无损恢复承诺
+  excerpt: excerpts/supabase-backup-scope.md
