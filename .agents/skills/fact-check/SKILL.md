@@ -11,9 +11,9 @@ Goal: for each claim, decide **still true / changed / can't verify**, and leave 
 
 1. Collect the claims to check: the passage (quote it exactly), its page, and the `[^src-id]` it cites.
 2. For each claim, open the cited URL in ego lite (see ego-browser skill).
-   - Source still says the same → **still true**. Update that source's `accessed` date.
+   - Source still supports the same scoped claim → **still true**. Update that source's `accessed` date. For attributed experience, check the original report, context, and corrections; an unchanged historical account does not confirm the same result today. Recheck current policy premises separately under `docs/content-guide.md` §6.
    - Source changed → **changed**. Capture the new wording as an excerpt, update the claim in content, update `sources.yaml` (`accessed`, `claim`, excerpt).
-   - Source gone / moved → search the publisher's site for the replacement; if found, update `url`. If not, look for another primary source. If none, mark the claim as unverifiable.
+   - Source gone / moved → search the publisher's site for the replacement; if found, update `url`. If not, seek evidence suitable for that exact claim under the content guide. Another person's anecdote cannot verify the missing author's experience. If no support remains, mark the claim as unverifiable.
    - Claim has no citation but is volatile → treat as unverified; find a source or rewrite/remove the claim.
 3. **Can't verify** → don't guess. Either soften the wording to what can be supported ("截至 YYYY-MM-DD 官方文档未提及……"), or remove the claim, and note it in the PR body.
 4. After all claims on a page are checked, set the page's `last_verified` to today. Only do this if you checked **every** volatile claim on that page; otherwise leave the date alone.

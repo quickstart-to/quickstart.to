@@ -9,6 +9,7 @@ description: Write or substantially revise a quickstart.to quickstart or chapter
 
 - `topics/<slug>/outline.md` lists this section and has been agreed (merged).
 - Research exists in `topics/<slug>/research/` covering every volatile claim you will make, with sources already in `sources/sources.yaml`. If not, run the **research** skill first.
+- For substantive practical writing, research also covers relevant practitioner accounts, independent analysis, and counterexamples under `docs/content-guide.md` §6. Official-document coverage alone is insufficient; record and scope genuine evidence gaps.
 
 ## Procedure
 
@@ -19,13 +20,13 @@ description: Write or substantially revise a quickstart.to quickstart or chapter
 3. Frontmatter: `title`, `description`, `order` (chapters), `volatility`, `last_verified` (today, only because you just verified via research).
 4. Structure:
    - **Quickstart**: one path, numbered steps, ends at the milestone. ~30 minutes of reading. Link to chapters for alternatives instead of branching.
-   - **Chapter**: conclusion first → why → how → pitfalls → further reading.
+   - **Chapter**: develop a concrete situation into a reasoned choice, worked result, and relevant recovery path. Use the editorial functions in `docs/content-guide.md` §5 without forcing identical headings.
 5. Cite with `[^src-id]` immediately after each volatile claim. Do not write footnote definitions.
-6. Write in the topic's language (`topic.yaml` → `lang`) and voice. Prefer tables for comparisons, numbered lists for procedures. Short paragraphs.
-7. Images/attachments go in `topics/<slug>/assets/` and are referenced relatively.
+6. Write in the topic's language (`topic.yaml` → `lang`) and voice. Synthesize cases into explained trade-offs; attribute experience and analysis where used, keeping their context and limits. Use connected prose for reasoning, tables for comparisons, and numbered lists for procedures. Never invent first-person practice.
+7. Plan purposeful illustrations with imagegen and exact diagrams as appropriate under the content guide. Images/attachments go in `topics/<slug>/assets/` and are referenced relatively; record provenance and inspect mobile rendering.
 8. Add a `CHANGELOG.md` entry.
 9. `pnpm validate && pnpm build`, then preview with `pnpm dev` and read the page once in the browser end-to-end.
-10. Open a PR with the definition-of-done checklist from AGENTS.md.
+10. Review against `docs/content-guide.md` §8 and update the existing active topic PR, or open one if none exists, with the definition-of-done checklist from AGENTS.md. State unmet editorial requirements for partial drafts.
 
 ## Quality bar (self-review before PR)
 
