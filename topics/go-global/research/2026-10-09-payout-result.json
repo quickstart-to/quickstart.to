@@ -1,0 +1,103 @@
+{
+  "executedAt": "2026-10-09T11:52:02.062Z",
+  "runtime": "v22.19.0",
+  "teachingOnly": true,
+  "scenarios": 6,
+  "invalidRejections": 4,
+  "checks": [
+    "cash conservation including held funds",
+    "same result from before-fee and sent documents",
+    "unknown exchange rate remains null, never zero",
+    "known FX without local charge leaves 15 CNY unexplained",
+    "confirmed local charge reconciles to 2361 CNY"
+  ],
+  "results": [
+    {
+      "evidence": "unknown",
+      "before": {
+        "available": 34000,
+        "sent": 33300,
+        "startAmount": 34000,
+        "remainingPlatformFee": 700,
+        "exchangeAmount": 33000,
+        "converted": null,
+        "confirmedLocalFee": null,
+        "explainedCredit": null,
+        "difference": null,
+        "credited": 236100,
+        "complete": false
+      },
+      "sent": {
+        "available": 34000,
+        "sent": 33300,
+        "startAmount": 33300,
+        "remainingPlatformFee": 0,
+        "exchangeAmount": 33000,
+        "converted": null,
+        "confirmedLocalFee": null,
+        "explainedCredit": null,
+        "difference": null,
+        "credited": 236100,
+        "complete": false
+      }
+    },
+    {
+      "evidence": "rate",
+      "before": {
+        "available": 34000,
+        "sent": 33300,
+        "startAmount": 34000,
+        "remainingPlatformFee": 700,
+        "exchangeAmount": 33000,
+        "converted": 237600,
+        "confirmedLocalFee": null,
+        "explainedCredit": 237600,
+        "difference": 1500,
+        "credited": 236100,
+        "complete": false
+      },
+      "sent": {
+        "available": 34000,
+        "sent": 33300,
+        "startAmount": 33300,
+        "remainingPlatformFee": 0,
+        "exchangeAmount": 33000,
+        "converted": 237600,
+        "confirmedLocalFee": null,
+        "explainedCredit": 237600,
+        "difference": 1500,
+        "credited": 236100,
+        "complete": false
+      }
+    },
+    {
+      "evidence": "complete",
+      "before": {
+        "available": 34000,
+        "sent": 33300,
+        "startAmount": 34000,
+        "remainingPlatformFee": 700,
+        "exchangeAmount": 33000,
+        "converted": 237600,
+        "confirmedLocalFee": 1500,
+        "explainedCredit": 236100,
+        "difference": 0,
+        "credited": 236100,
+        "complete": true
+      },
+      "sent": {
+        "available": 34000,
+        "sent": 33300,
+        "startAmount": 33300,
+        "remainingPlatformFee": 0,
+        "exchangeAmount": 33000,
+        "converted": 237600,
+        "confirmedLocalFee": 1500,
+        "explainedCredit": 236100,
+        "difference": 0,
+        "credited": 236100,
+        "complete": true
+      }
+    }
+  ]
+}

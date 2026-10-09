@@ -89,8 +89,8 @@
   url: https://www.paddle.com/help/manage/get-paid/is-there-a-fee-taken-for-payouts
   title: Is there a fee taken for payouts?
   publisher: Paddle
-  accessed: '2026-10-09'
-  claim: 币种与收款银行所在国不一致时走 SWIFT，收 $/€/£15 电汇费
+  accessed: "2026-10-09"
+  claim: "电汇费适用币种与路径条件；费用在出款发票前扣除，发票金额为发送金额；非余额币种汇兑差最多 1.5%，接收机构可能另收费"
   excerpt: excerpts/paddle-payout-fees.md
 - id: src-paddle-payout-currency
   url: https://www.paddle.com/help/manage/get-paid/can-i-be-paid-in-my-local-currency
@@ -149,8 +149,8 @@
   url: https://docs.creem.io/merchant-of-record/finance/payouts
   title: Payouts
   publisher: Creem
-  accessed: '2026-10-09'
-  claim: 中国个人走同名支付宝，单笔5万元、每年30–60万元；最低余额50 USD/EUR，手动申请后排入1日/15日出款，款项可能等待7–12日才可用
+  accessed: "2026-10-09"
+  claim: "中国个人同名支付宝及通道限额；可用余额 50 USD/EUR、手动申请与每月 1/15 日窗口；银行转账 7 USD/EUR 与 1% 取高；取消会跳过本期且不能同周期重提"
   excerpt: excerpts/creem-payouts.md
   archive: https://web.archive.org/web/20261008084141/https://docs.creem.io/merchant-of-record/finance/payouts
 - id: src-dodo-merchant-countries
@@ -173,8 +173,8 @@
   url: https://docs.dodopayments.com/features/payouts/payout-structure
   title: Payouts Process
   publisher: Dodo Payments
-  accessed: '2026-10-09'
-  claim: 默认门槛100美元、可设最低50；默认半月周期18日/次月4日发起，节假日顺延；须通过验证与Monitoring Review，Success不等于银行已入账
+  accessed: "2026-10-09"
+  claim: "验证、合并余额门槛与出款周期；Success 表示发往银行；保留款已排除在可用余额外，失败冲回金额及费用；解释跨期余额、接收费、账户更改与追踪步骤"
   excerpt: excerpts/dodo-payouts.md
 - id: src-gumroad-getting-paid
   url: https://gumroad.com/help/article/13-getting-paid
@@ -202,7 +202,7 @@
   url: https://www.safe.gov.cn/safe/2007/0105/5320.html
   title: （已修改）国家外汇管理局关于印发《个人外汇管理办法实施细则》的通知
   publisher: 国家外汇管理局
-  accessed: '2026-10-08'
+  accessed: "2026-10-09"
   claim: 个人结汇/购汇年度总额及经营性/非经营性分类；原文末尾注明2016年修改及2023年删除第三十九条
   excerpt: excerpts/safe-individual-fx-rules.md
 - id: src-tax-foreign-income-2020-3
@@ -216,21 +216,21 @@
   url: https://www.safe.gov.cn/safe/2026/0805/27766.html
   title: 现行有效外汇管理主要法规目录（截至2026年6月30日）
   publisher: 国家外汇管理局
-  accessed: '2026-10-08'
+  accessed: "2026-10-09"
   claim: 目录第1页列个人外汇实施细则及修改脚注；第14页列汇发〔2022〕22号申报细则
   excerpt: excerpts/safe-effective-rules-2026.md
 - id: src-safe-bop-rules-2022
   url: https://www.safe.gov.cn/safe/2022/0804/21280.html
   title: 国家外汇管理局关于印发《通过银行进行国际收支统计申报业务实施细则》的通知
   publisher: 国家外汇管理局
-  accessed: '2026-10-08'
+  accessed: "2026-10-09"
   claim: 附件第8条：居民个人单笔等值1万美元以下（含）免填申报信息；第12条：需申报的涉外收入在解付或结汇日后五个工作日内申报
   excerpt: excerpts/safe-bop-rules-2022.md
 - id: src-safe-bop-consultation-2026
   url: https://www.safe.gov.cn/safe/2026/0929/27953.html
   title: 国家外汇管理局关于《通过银行进行国际收支统计申报业务实施细则（征求意见稿）》公开征求意见的通知
   publisher: 国家外汇管理局
-  accessed: '2026-10-08'
+  accessed: "2026-10-09"
   claim: 2026年9月30日发布修订征求意见通知，反馈截止2026年10月30日；本页不是新细则施行通知
   excerpt: excerpts/safe-bop-consultation-2026.md
 - id: src-tax-iit-implementation
@@ -268,8 +268,8 @@
   url: https://docs.creem.io/merchant-of-record/finance/payout-accounts
   title: "Payout Accounts"
   publisher: Creem
-  accessed: '2026-10-09'
-  claim: 开户流程包括业务信息、KYC/KYB、出款账户和团队审核；每家店独立配置，出款发送至默认账户
+  accessed: "2026-10-09"
+  claim: "业务/KYC/KYB/出款账户及团队审核分步；每店独立默认账户；费表将 7 美元或 1% 列于 Bank Transfer，不是支付宝完整报价"
   excerpt: excerpts/creem-payout-accounts.md
 - id: src-dodo-verification
   url: https://docs.dodopayments.com/miscellaneous/verification-process
@@ -951,3 +951,11 @@
   accessed: '2026-10-09'
   claim: 官方说明数据库备份包含Storage对象元数据而非对象文件，恢复旧数据库备份不会找回后来删除的对象；仅用于核对备份范围，不采用套餐、价格或无损恢复承诺
   excerpt: excerpts/supabase-backup-scope.md
+
+- id: src-yeekal-payout-retrospective
+  url: https://yeekal.com/indie-dev/creem-payout-to-alipay/
+  title: "通过wise中转，creem海外收款方案终于闭环了"
+  publisher: Yeekal
+  accessed: "2026-10-09"
+  claim: "作者 2026-02-03 报告首次支付宝直达因材料审核失败，后改用中转；仅作归属明确的个人经历，含推荐利益，不支持账户资格、用途填写建议或成功保证"
+  excerpt: excerpts/yeekal-payout-retrospective.md
