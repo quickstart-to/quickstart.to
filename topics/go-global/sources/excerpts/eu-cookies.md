@@ -7,3 +7,7 @@
 - 置信度：confirmed（官方公开文档；不是个案审核或实测）
 
 > This means cookies cannot be set when the webpage is first opened.
+
+## 2026-10-09 样章复核定位
+
+定位：Cookies that do not require consent（严格必要与通信用途）；Cookies that require consent（需先同意）；Intended purpose（按用途选择）；Withdrawal of consent（撤回同样方便）。本书未把任何厂商“无Cookie”宣传推导为整站免义务。

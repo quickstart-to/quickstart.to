@@ -85,7 +85,7 @@
   url: https://www.creem.io/pricing
   title: Pricing
   publisher: Creem
-  accessed: '2026-10-08'
+  accessed: '2026-10-09'
   claim: 3.9% + 40¢ 每笔；每月 1 日、15 日出款
   excerpt: excerpts/creem-pricing.md
   archive: https://web.archive.org/web/20261008084208/https://www.creem.io/pricing
@@ -93,14 +93,14 @@
   url: https://docs.creem.io/merchant-of-record/supported-countries
   title: Supported Countries
   publisher: Creem
-  accessed: '2026-10-08'
+  accessed: '2026-10-09'
   claim: 支持 87 个商户国家，含 China（*：有出款限额）；出款费 7 EUR/USD 或 1% 取高
   excerpt: excerpts/creem-countries.md
 - id: src-creem-payouts
   url: https://docs.creem.io/merchant-of-record/finance/payouts
   title: Payouts
   publisher: Creem
-  accessed: '2026-10-08'
+  accessed: '2026-10-09'
   claim: 中国个人走同名支付宝，单笔5万元、每年30–60万元；最低余额50 USD/EUR，手动申请后排入1日/15日出款，款项可能等待7–12日才可用
   excerpt: excerpts/creem-payouts.md
   archive: https://web.archive.org/web/20261008084141/https://docs.creem.io/merchant-of-record/finance/payouts
@@ -212,14 +212,14 @@
   url: https://docs.creem.io/merchant-of-record/account-reviews/account-reviews
   title: "Account Reviews"
   publisher: Creem
-  accessed: '2026-10-08'
+  accessed: '2026-10-09'
   claim: 真实收款前须账户审核；产品已上线、价格/条款/隐私/支持邮箱可见；通常1–2工作日，高峰可至3日；生成式AI等受限产品需额外审核
   excerpt: excerpts/creem-account-reviews.md
 - id: src-creem-payout-accounts
   url: https://docs.creem.io/merchant-of-record/finance/payout-accounts
   title: "Payout Accounts"
   publisher: Creem
-  accessed: '2026-10-08'
+  accessed: '2026-10-09'
   claim: 开户流程包括业务信息、KYC/KYB、出款账户和团队审核；每家店独立配置，出款发送至默认账户
   excerpt: excerpts/creem-payout-accounts.md
 - id: src-dodo-verification
@@ -248,21 +248,21 @@
   url: https://docs.creem.io/getting-started/test-mode
   title: "Test Mode"
   publisher: Creem
-  accessed: '2026-10-08'
+  accessed: '2026-10-09'
   claim: 测试与生产分别配置密钥、API地址、产品和webhook；官方提供成功、拒绝等测试卡，不产生真实付款
   excerpt: excerpts/creem-test-mode.md
 - id: src-creem-quickstart
   url: https://docs.creem.io/getting-started/quickstart
   title: "Quickstart"
   publisher: Creem
-  accessed: '2026-10-08'
+  accessed: '2026-10-09'
   claim: 支持创建产品及分享支付链接；生产应用应使用webhook在服务端可靠接收付款事件
   excerpt: excerpts/creem-quickstart.md
 - id: src-creem-webhooks
   url: https://docs.creem.io/code/webhooks
   title: "Webhooks"
   publisher: Creem
-  accessed: '2026-10-08'
+  accessed: '2026-10-09'
   claim: 接收事件前验证签名；重复投递需幂等；订阅按已付款事件开通，期末取消在当前周期结束前仍有效
   excerpt: excerpts/creem-webhooks.md
 - id: src-stripe-global
@@ -618,3 +618,48 @@
   accessed: 2026-10-09
   claim: 欧盟消费者权利指令涵盖售前信息与远程合同撤回；2023/2673修订自2026年6月19日起适用，具体实施需核对成员国
   excerpt: excerpts/eu-consumer-rights-directive.md
+
+- id: "src-buffer-early-validation"
+  url: "https://buffer.com/resources/idea-to-paying-customers-in-7-weeks-how-we-did-it/"
+  title: "Idea to Paying Customers in 7 Weeks: How We Did It"
+  publisher: "Joel Gascoigne · Buffer"
+  accessed: "2026-10-09"
+  claim: "作者回顾Buffer早期先验证兴趣、再加入价格页观察付费档选择，随后开发产品；首单后转向营销和客户理解，属于历史亲历报告而非可复制收益保证"
+  excerpt: "excerpts/buffer-early-validation.md"
+- id: "src-hertz-first-dollar"
+  url: "https://juejin.cn/post/7524658995723943987"
+  title: "第一次赚美元！纯新手深度复盘网站出海，一文掌握全流程"
+  publisher: "赫兹（droidHZ）· 稀土掘金"
+  accessed: "2026-10-09"
+  claim: "作者于2025-07-08自述因无海外公司和海外银行卡选择Creem与支付宝，并报告网站订阅收入；未据此核实本人账户到账或其他平台现行准入"
+  excerpt: "excerpts/hertz-first-dollar.md"
+- id: "src-v2ex-traffic-lessons"
+  url: "https://www.v2ex.com/t/1160804"
+  title: "想全职独立开发/合伙创业? 这里有些我的感想"
+  publisher: "bbbblue · V2EX"
+  accessed: "2026-10-09"
+  claim: "2025-09-21作者在第12条回复自述内容带来搜索流量却未帮助产品；仅为具名账号的个案报告，不证明收入、普遍失败率或内容营销因果"
+  excerpt: "excerpts/v2ex-traffic-lessons.md"
+- id: "src-ink-local-first"
+  url: "https://www.inkandswitch.com/local-first/"
+  title: "Local-first software: You own your data, in spite of the cloud"
+  publisher: "Martin Kleppmann、Adam Wiggins、Peter van Hardenberg、Mark McGranaghan · Ink & Switch"
+  accessed: "2026-10-09"
+  claim: "2019年研究基于原型讨论本地数据控制、隐私、备份与多人协作的取舍；本地处理可减少集中持有数据，但不自动完成法律合规"
+  excerpt: "excerpts/ink-local-first.md"
+- id: "src-plausible-boundaries"
+  url: "https://plausible.io/when-not-to-use-plausible"
+  title: "When Plausible is not the right fit"
+  publisher: "Plausible Analytics"
+  accessed: "2026-10-09"
+  claim: "厂商说明不提供会话回放、个人跨会话历史等能力，并要求避免在URL和自定义事件中发送个人资料；只支持其设计取舍，不采纳其概括性合规承诺"
+  excerpt: "excerpts/plausible-boundaries.md"
+  archive: https://web.archive.org/web/20261009015521/https://plausible.io/when-not-to-use-plausible
+- id: src-fr-online-withdrawal
+  url: https://www.francenum.gouv.fr/guides-et-conseils/developpement-commercial/gestion-de-la-relation-client/la-retractation-en-1-clic
+  title: La rétractation en 1 clic, une nouvelle obligation pour les e-commerçants
+  publisher: France Num
+  accessed: '2026-10-09'
+  claim: 法国官方2026-10-02更新指南说明自6月19日起适用的在线撤回功能：可见入口、法定期间可用、合同识别与确认、持久载体回执；仅作为法国实施示例，不泛化到全部国家或所有合同
+  excerpt: excerpts/fr-online-withdrawal.md
+  archive: https://web.archive.org/web/20260921102337/https://www.francenum.gouv.fr/guides-et-conseils/developpement-commercial/gestion-de-la-relation-client/la-retractation-en-1-clic

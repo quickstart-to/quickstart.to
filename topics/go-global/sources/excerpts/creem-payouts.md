@@ -16,3 +16,9 @@
 > Payments may be held for 7-12 days for risk assessment before they become available for payout.
 
 本轮补核：需点击 withdraw 才加入下一可用窗口（每月1日或15日）；节假日可能顺延。通用出款费为7 USD/EUR与金额的1%取高；支付宝具体费用及年度限额档位需向平台确认。
+
+## 2026-10-09 样章复核定位
+
+定位：Platform Fee按订单总额计算；Payout Fees列7 USD/EUR与1%取高及换汇费用；Payout Schedule列50 USD/EUR门槛、withdraw排队与每月1/15日窗口；Important Note列7–12日资金可用等待；China与Identity mismatch列个人支付宝及KYC同名要求。
+
+本页没有单独清楚列出中国个人支付宝最终收费档位，因此正文要求绑定前确认，不将通用银行收费当成支付宝实际报价。官方含税示例的舍入结果不作为本书算术依据；本书使用无交易税的明确假设演算，真实账单以平台为准。

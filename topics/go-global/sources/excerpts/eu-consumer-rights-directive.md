@@ -7,3 +7,7 @@
 - 置信度：confirmed（官方公开文档；不是个案审核或实测）
 
 > The Directive entered into application on 19 June 2026.
+
+## 2026-10-09 样章复核定位
+
+定位：About the directive列消费者与经营者合同范围，2023/2673自2026-06-19适用。EUR-Lex全文再次跳转维护页；本轮通过法国官方指南补足一个国家的在线撤回实施示例，仍未核实全部成员国规则。
