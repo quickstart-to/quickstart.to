@@ -1,7 +1,7 @@
 ---
 title: 定价与订阅：写一份自己能兑现的报价
 description: 从购买者和收费单位出发，完成一份英语报价；把支持时间算进成本，再理清试用、续费、退款和权益的关系。
-order: 4
+order: 5
 volatility: high
 last_verified: 2026-10-09
 ---

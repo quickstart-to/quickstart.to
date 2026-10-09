@@ -1,7 +1,7 @@
 ---
 title: 应用商店路线
 description: 核对 App Store 与 Google Play 的个人账号、测试、支付和出款条件，分别验收上架与到账。
-order: 10
+order: 11
 volatility: high
 last_verified: 2026-10-09
 ---

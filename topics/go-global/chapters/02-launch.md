@@ -1,7 +1,7 @@
 ---
 title: 冷启动获客：让第一次接触走向真实使用
 description: 从目标用户的工作找到接触入口，写出具体的英文邀请与演示材料，再用实际人数、独立使用和支持时间复盘一次获客尝试。
-order: 2
+order: 3
 volatility: high
 last_verified: 2026-10-09
 ---

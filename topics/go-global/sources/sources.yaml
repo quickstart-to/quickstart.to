@@ -1,4 +1,46 @@
 # Citation targets for go-global. Schema: docs/content-guide.md §6
+- id: src-notion-korean-launch
+  url: https://www.notion.com/releases/2020-08-10
+  title: "Notion in Korean 🇰🇷 🎊"
+  publisher: Notion
+  accessed: 2026-10-09
+  claim: 2020 年韩语发布以已有韩国用户社区为选择依据，同时翻译应用、常用模板和帮助中心；属于团队历史叙述，不证明地区普适性或增长归因
+  excerpt: excerpts/notion-korean-launch.md
+- id: src-yang-localization-retrospective
+  url: https://www.163.com/dy/article/J7G55TGH05566TJ2.html
+  title: "创业者复盘：出海“本地化”过程中，我犯了哪些错？"
+  publisher: 杨杰 · FounderPark 授权转载
+  accessed: 2026-10-09
+  claim: 作者在 2024 年复盘中报告分区定价及增加语言未取得期望改善，并归因于支付路径、缺上下文翻译和术语校验等缺口；没有独立因果验证
+  excerpt: excerpts/yang-localization-retrospective.md
+- id: src-tally-form-languages
+  url: https://tally.so/help/supported-languages
+  title: "Supported languages"
+  publisher: Tally
+  accessed: 2026-10-09
+  claim: 语言设置翻译系统默认文字；作者可编辑的问题标题等内容需要作者自行使用目标语言，不因语言设置自动翻译
+  excerpt: excerpts/tally-form-languages.md
+- id: src-w3c-date-formats
+  url: https://www.w3.org/International/questions/qa-date-format
+  title: "Date formats"
+  publisher: W3C Internationalization
+  accessed: 2026-10-09
+  claim: 纯数字日期存在歧义；可用明确月份及四位年份或说明格式，浏览器语言偏好不能直接代替文档上下文
+  excerpt: excerpts/w3c-date-formats.md
+- id: src-mdn-datetime-constructor
+  url: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat
+  title: "Intl.DateTimeFormat() constructor"
+  publisher: MDN Web Docs
+  accessed: 2026-10-09
+  claim: locale、calendar、numberingSystem 与 timeZone 分别控制日期时间显示，未指定时区使用运行时默认；本例显式设置公历及命名时区
+  excerpt: excerpts/mdn-datetime-constructor.md
+- id: src-mdn-numberformat-constructor
+  url: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat
+  title: "Intl.NumberFormat() constructor"
+  publisher: MDN Web Docs
+  accessed: 2026-10-09
+  claim: currency 模式需独立指定币种，currencyDisplay 可采用 ISO 币种代码；格式化不执行货币换算
+  excerpt: excerpts/mdn-numberformat-constructor.md
 - id: src-postnitro-payment-migration
   url: https://www.indiehackers.com/post/200-paying-customers-and-endless-headaches-with-lemon-squeezy-later-we-switched-to-paddle-not-all-that-glitters-is-gold-c352234aa6
   title: "200+ paying customers and endless headaches with Lemon Squeezy later, we switched to Paddle: Not all that glitters is gold! 💔"

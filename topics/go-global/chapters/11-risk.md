@@ -1,7 +1,7 @@
 ---
 title: 风控与账户安全
 description: 保护关键账号与交易记录，区分退款、拒付和资金限制，并建立可执行的异常处理路径。
-order: 11
+order: 12
 volatility: high
 last_verified: 2026-10-09
 ---

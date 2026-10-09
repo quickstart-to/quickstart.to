@@ -1,0 +1,213 @@
+{
+  "executedAt": "2026-10-09T10:21:44.103Z",
+  "runtime": "v22.19.0",
+  "scope": "Synthetic date interpretation and locale/time-zone formatting only; no real client or CSV import test.",
+  "passed": true,
+  "observations": [
+    {
+      "input": "11/10/2026",
+      "order": "",
+      "result": {
+        "ok": false,
+        "reason": "choose-format"
+      }
+    },
+    {
+      "input": "11/10/2026",
+      "order": "mdy",
+      "result": {
+        "ok": true,
+        "iso": "2026-11-10"
+      }
+    },
+    {
+      "input": "11/10/2026",
+      "order": "dmy",
+      "result": {
+        "ok": true,
+        "iso": "2026-10-11"
+      }
+    },
+    {
+      "input": "2026-11-10",
+      "order": "iso",
+      "result": {
+        "ok": true,
+        "iso": "2026-11-10"
+      }
+    },
+    {
+      "input": "31/02/2026",
+      "order": "dmy",
+      "result": {
+        "ok": false,
+        "reason": "invalid-date"
+      }
+    },
+    {
+      "input": "29/02/2024",
+      "order": "dmy",
+      "result": {
+        "ok": true,
+        "iso": "2024-02-29"
+      }
+    },
+    {
+      "input": "29/02/2026",
+      "order": "dmy",
+      "result": {
+        "ok": false,
+        "reason": "invalid-date"
+      }
+    },
+    {
+      "input": "11/10/2026",
+      "order": "iso",
+      "result": {
+        "ok": false,
+        "reason": "wrong-shape"
+      }
+    },
+    {
+      "input": "2026-00-10",
+      "order": "iso",
+      "result": {
+        "ok": false,
+        "reason": "invalid-date"
+      }
+    },
+    {
+      "input": "2026-11-00",
+      "order": "iso",
+      "result": {
+        "ok": false,
+        "reason": "invalid-date"
+      }
+    },
+    {
+      "input": "11/10/26",
+      "order": "mdy",
+      "result": {
+        "ok": false,
+        "reason": "wrong-shape"
+      }
+    },
+    {
+      "input": "1899-11-10",
+      "order": "iso",
+      "result": {
+        "ok": false,
+        "reason": "year-outside-example"
+      }
+    },
+    {
+      "input": "2101-11-10",
+      "order": "iso",
+      "result": {
+        "ok": false,
+        "reason": "year-outside-example"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "locale": "en-GB",
+      "zone": "Europe/London",
+      "parsed": {
+        "ok": true,
+        "iso": "2026-11-10"
+      },
+      "deadline": "10 November 2026",
+      "budget": "USD 1,234.50",
+      "updated": "9 Oct 2026, 01:30 GMT+1"
+    },
+    {
+      "locale": "en-GB",
+      "zone": "America/Los_Angeles",
+      "parsed": {
+        "ok": true,
+        "iso": "2026-11-10"
+      },
+      "deadline": "10 November 2026",
+      "budget": "USD 1,234.50",
+      "updated": "8 Oct 2026, 17:30 GMT-7"
+    },
+    {
+      "locale": "en-GB",
+      "zone": "Asia/Tokyo",
+      "parsed": {
+        "ok": true,
+        "iso": "2026-11-10"
+      },
+      "deadline": "10 November 2026",
+      "budget": "USD 1,234.50",
+      "updated": "9 Oct 2026, 09:30 GMT+9"
+    },
+    {
+      "locale": "en-US",
+      "zone": "Europe/London",
+      "parsed": {
+        "ok": true,
+        "iso": "2026-11-10"
+      },
+      "deadline": "November 10, 2026",
+      "budget": "USD 1,234.50",
+      "updated": "Oct 9, 2026, 01:30 GMT+1"
+    },
+    {
+      "locale": "en-US",
+      "zone": "America/Los_Angeles",
+      "parsed": {
+        "ok": true,
+        "iso": "2026-11-10"
+      },
+      "deadline": "November 10, 2026",
+      "budget": "USD 1,234.50",
+      "updated": "Oct 8, 2026, 17:30 GMT-7"
+    },
+    {
+      "locale": "en-US",
+      "zone": "Asia/Tokyo",
+      "parsed": {
+        "ok": true,
+        "iso": "2026-11-10"
+      },
+      "deadline": "November 10, 2026",
+      "budget": "USD 1,234.50",
+      "updated": "Oct 9, 2026, 09:30 GMT+9"
+    },
+    {
+      "locale": "de-DE",
+      "zone": "Europe/London",
+      "parsed": {
+        "ok": true,
+        "iso": "2026-11-10"
+      },
+      "deadline": "10. November 2026",
+      "budget": "1.234,50 USD",
+      "updated": "9. Okt. 2026, 01:30 GMT+1"
+    },
+    {
+      "locale": "de-DE",
+      "zone": "America/Los_Angeles",
+      "parsed": {
+        "ok": true,
+        "iso": "2026-11-10"
+      },
+      "deadline": "10. November 2026",
+      "budget": "1.234,50 USD",
+      "updated": "8. Okt. 2026, 17:30 GMT-7"
+    },
+    {
+      "locale": "de-DE",
+      "zone": "Asia/Tokyo",
+      "parsed": {
+        "ok": true,
+        "iso": "2026-11-10"
+      },
+      "deadline": "10. November 2026",
+      "budget": "1.234,50 USD",
+      "updated": "9. Okt. 2026, 09:30 GMT+9"
+    }
+  ]
+}

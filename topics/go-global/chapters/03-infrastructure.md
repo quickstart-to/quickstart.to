@@ -1,7 +1,7 @@
 ---
 title: 基础设施：让用户用得上，出问题能恢复
 description: 从浏览器试用到有状态服务，解释请求位置、邮件状态与恢复边界，并提供可复现的本地发布、回退和备份演练。
-order: 3
+order: 4
 volatility: high
 last_verified: 2026-10-09
 ---
