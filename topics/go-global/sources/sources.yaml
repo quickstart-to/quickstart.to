@@ -1032,3 +1032,96 @@
   accessed: "2026-10-09"
   claim: "作者 2023-12-07 在美国独立开发/咨询语境中报告每周五整理账务、附收据及首年漏记支出的经历；只采用及时留证的方法，不外推美国扣除项目、开户或软件现行可用性"
   excerpt: excerpts/jesse-bookkeeping-experience.md
+
+- id: src-shudao-sticki-porting
+  url: https://shudao.wang/blog/weekly/weekly-173
+  title: 独立开发周记 173：安卓鸿蒙双开，踩坑永无止境
+  publisher: WANG Shudao
+  accessed: 2026-10-09
+  claim: 作者 2026-06-07 报告 Sticki Android
+    迁移中的抠图引擎取舍、设备组件差异和配置遗漏；采用历史经历，不据此判断当前库兼容性或审批周期
+  excerpt: excerpts/shudao-sticki-porting.md
+
+- id: src-shudao-sticki-launch
+  url: https://www.shudao.wang/blog/weekly/weekly-174
+  title: 独立开发周记 174：应用上架但零下载
+  publisher: WANG Shudao
+  accessed: 2026-10-09
+  claim: 作者 2026-06-14 报告 Sticki Android 在等待审核、提交工单后获准上架，发文时尚无下载；不推断工单导致获批或商店普遍无流量
+  excerpt: excerpts/shudao-sticki-launch.md
+
+- id: src-panic-transmit-ios-retirement
+  url: https://blog.panic.com/the-future-of-transmit-ios/
+  title: The Future of Transmit iOS
+  publisher: Cabel · Panic
+  accessed: 2026-10-09
+  claim: 2018-01-05 原文解释因收入不足覆盖持续开发而停售 Transmit
+    iOS，并安排最后更新、保持同步及近期购买者支持；只采用当时决策，不外推现行下载/退款规则
+  excerpt: excerpts/panic-transmit-ios-retirement.md
+
+- id: src-apple-app-review
+  url: https://developer.apple.com/app-store/review/guidelines/
+  title: App Review Guidelines — completeness, minimum functionality and privacy
+  publisher: Apple
+  accessed: 2026-10-09
+  claim: 2.1、2.2、2.3 要求可运行版本、真实元数据、可访问审核路径并将测试放在 TestFlight；4.2 超出重包网页的价值；5.1.1
+    隐私、数据最少化、无必要账号不强制登录及创建账号须可删除
+  excerpt: excerpts/apple-app-review.md
+
+- id: src-apple-testflight
+  url: https://developer.apple.com/testflight/
+  title: TestFlight — Beta testing made simple
+  publisher: Apple
+  accessed: 2026-10-09
+  claim: 外部测试首个构建须通过 TestFlight 审核；测试信息、反馈入口和外测材料，以及测试结束后另选版本送正式审核
+  excerpt: excerpts/apple-testflight.md
+
+- id: src-apple-phased-release
+  url: https://developer.apple.com/help/app-store-connect/update-your-app/release-a-version-update-in-phases/
+  title: Release a version update in phases
+  publisher: Apple
+  accessed: 2026-10-09
+  claim: 更新可按七天 1/2/5/10/20/50/100% 面向符合条件的自动更新用户分阶段；任何人仍可手动下载；暂停累计最多30天，非首次上架功能
+  excerpt: excerpts/apple-phased-release.md
+
+- id: src-google-play-staged-rollout
+  url: https://support.google.com/googleplay/android-developer/answer/6346149?hl=en
+  title: Release app updates with staged rollouts
+  publisher: Google Play Console Help
+  accessed: 2026-10-09
+  claim: 分阶段发布限版本更新，非首次发布；暂停后不再把该阶段版本给更多用户，已有该版本的用户仍保留；恢复及比例需要操作
+  excerpt: excerpts/google-play-staged-rollout.md
+  archive: https://web.archive.org/web/20260925062337/https://support.google.com/googleplay/android-developer/answer/6346149?hl=en
+
+- id: src-apple-review-replies
+  url: https://developer.apple.com/help/app-store-connect/manage-submissions-to-app-review/reply-to-app-review-messages/
+  title: Reply to App Review messages
+  publisher: Apple
+  accessed: 2026-10-09
+  claim: 可在 App Review 回复拒审原因并附截图/材料；若仅元数据问题，修正后可重送同一构建
+  excerpt: excerpts/apple-review-replies.md
+
+- id: src-google-play-review-preparation
+  url: https://support.google.com/googleplay/android-developer/answer/9859455?hl=en
+  title: Prepare your app for review
+  publisher: Google Play Console Help
+  accessed: 2026-10-09
+  claim: App content 涵盖隐私、广告、目标年龄/评级、敏感权限与访问说明，受限应用需提供全部可访问信息并维护声明
+  excerpt: excerpts/google-play-review-preparation.md
+
+- id: src-apple-app-privacy-details
+  url: https://developer.apple.com/app-store/app-privacy-details/
+  title: App privacy details on the App Store
+  publisher: Apple
+  accessed: 2026-10-09
+  claim: 上架/更新需提供应用与第三方集成的数据实践；声明按实际收集核对并保持更新，不只看自己写的代码
+  excerpt: excerpts/apple-app-privacy-details.md
+
+
+- id: src-google-play-account-information
+  url: https://support.google.com/googleplay/android-developer/answer/13628312?hl=en
+  title: Required information to create a Play Console developer account
+  publisher: Google Play Console Help
+  accessed: 2026-10-09
+  claim: 个人开发者名称可与法定姓名不同，但 Google Play 公开法定姓名、国家和开发者邮箱；变现时公开完整地址，特定地区可能还需额外公开信息
+  excerpt: excerpts/google-play-account-information.md

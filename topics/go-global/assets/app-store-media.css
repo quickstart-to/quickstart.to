@@ -1,0 +1,49 @@
+.as-media { margin: 2rem 0; padding: 1.15rem; border: 1px solid var(--border); border-radius: .6rem; background: var(--bg-soft); font-size: .94rem; line-height: 1.75; container-type: inline-size; }
+.as-media h3 { margin: 0 0 1rem; font-size: 1.13rem; line-height: 1.55; }
+.as-media p { margin: .8rem 0; }
+.as-media figcaption, .as-kicker { color: var(--fg-muted); font-size: .82rem; }
+.as-media [hidden] { display: none !important; }
+.as-route { list-style: none; padding: 0; margin: 1rem 0; }
+.as-route li { position: relative; padding: .8rem; margin: 0 0 1.9rem; border: 1px solid var(--border); border-radius: .4rem; background: var(--bg); }
+.as-route li:not(:last-child)::after { content: '↓'; position: absolute; left: 50%; top: 100%; height: 1.9rem; color: var(--accent); }
+.as-route li:last-child { margin-bottom: 0; }
+.as-route strong, .as-route span { display: block; }
+.as-route strong { color: var(--accent); }
+.as-route span { margin-top: .35rem; }
+.as-devices { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: .45rem; list-style: none; padding: 0; font-size: .85rem; font-variant-numeric: tabular-nums; }
+.as-devices li { margin: 0; padding: .45rem; border: 1px solid var(--border); border-radius: .25rem; text-align: center; background: var(--bg); }
+.as-devices [data-version="bad"] { border: 2px dashed var(--accent); font-weight: 700; }
+.as-devices [data-version="fixed"] { border: 2px solid var(--accent); font-weight: 700; }
+.as-actions { display: flex; flex-wrap: wrap; gap: .6rem; }
+.as-actions button { font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--border); border-radius: .35rem; min-height: 44px; max-width: 100%; padding: .6rem .75rem; cursor: pointer; text-align: left; }
+.as-actions button:disabled { opacity: .55; cursor: default; }
+.as-actions button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.as-result { padding: .8rem; border-left: 3px solid var(--accent); background: var(--bg); font-variant-numeric: tabular-nums; }
+@container (min-width: 450px) { .as-devices { grid-template-columns: repeat(4,minmax(0,1fr)); } }
+
+.as-entry { padding: .8rem; background: var(--bg); border: 1px solid var(--border); border-radius: .4rem; text-align: center; font-weight: 650; }
+.as-branches { display: grid; gap: 1rem; }
+.as-branch-label { text-align: center; color: var(--accent); font-weight: 650; }
+.as-stop-node { padding: .8rem; border: 1px dashed var(--border); border-radius: .4rem; background: var(--bg); }
+.as-stop-node strong, .as-stop-node span { display: block; }
+.as-stop-node span { margin-top: .4rem; }
+.as-route .as-return { font-size: .83rem; border-top: 1px dashed var(--border); margin-top: .7rem; padding-top: .55rem; color: var(--fg-muted); }
+@container (min-width: 550px) { .as-branches { grid-template-columns: 1fr 1.6fr; } }
+
+.as-table { container-type: inline-size; }
+@container (max-width: 500px) {
+  .as-table table, .as-table tbody, .as-table tr, .as-table td { display: block; }
+  .as-table thead { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); }
+  .as-table tr { margin-bottom: 1rem; border: 1px solid var(--border); border-radius: .4rem; overflow: hidden; }
+  .as-table td { border: 0; padding: .75rem; }
+  .as-table td:first-child { background: var(--bg-soft); font-weight: 650; }
+  .as-table td:nth-child(n+2)::before { display: block; margin-bottom: .3rem; color: var(--fg-muted); font-weight: 650; }
+  .as-choice-table td:nth-child(2)::before { content: '先观察什么'; }
+  .as-choice-table td:nth-child(3)::before { content: '本例的投入决定'; }
+  .as-account-table td:nth-child(2)::before { content: 'Apple Developer Program'; }
+  .as-account-table td:nth-child(3)::before { content: 'Google Play Console'; }
+  .as-test-table td:nth-child(2)::before { content: '假设构建 12 的结果'; }
+  .as-test-table td:nth-child(3)::before { content: '构建 13 的处理与复测'; }
+  .as-milestone-table td:nth-child(2)::before { content: '本例留下的决定'; }
+  .as-milestone-table td:nth-child(3)::before { content: '继续推进前需要的结果'; }
+}
