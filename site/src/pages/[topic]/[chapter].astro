@@ -2,6 +2,7 @@
 import { render } from 'astro:content';
 import TopicLayout from '../../layouts/Topic.astro';
 import { getTopics, getChapters } from '../../lib/topics';
+import ValidationMedia from '../../../../topics/go-global/assets/ValidationMedia.astro';
 
 export async function getStaticPaths() {
   const paths = [];
@@ -31,4 +32,5 @@ const { Content } = await render(entry);
   sourcesHref={entry.rendered?.html.includes('id="sources-heading"') ? '#sources-heading' : undefined}
 >
   <Content />
+  {topic.id === 'go-global' && chapter.slug === 'validate-idea' && <ValidationMedia />}
 </TopicLayout>

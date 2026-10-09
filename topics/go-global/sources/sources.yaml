@@ -727,3 +727,19 @@
   accessed: "2026-10-09"
   claim: "作者在讲座链接页的2025年补充中说明框架基于The Mom Test，自己做Pebble和Beeper时很少实际采用，常从自己想要的产品出发；仅为其个人方法自述"
   excerpt: "excerpts/eric-interview-update.md"
+
+- id: src-level-validation-retrospective
+  url: "https://www.derrickreimer.com/walking-away"
+  title: "I’m Walking Away From the Product I Spent a Year Building"
+  publisher: "Derrick Reimer"
+  accessed: "2026-10-09"
+  claim: "作者2019-05-17复盘Level：访谈、候补名单和付费预订未充分转化为团队试用；部分客户满意，但小团队切换动力弱，大团队要求更高的成熟度。支持其自述过程与反思，不推导普遍失败率或当前Slack用户需求"
+  excerpt: "excerpts/level-validation-retrospective.md"
+
+- id: src-v2ex-builder-retrospective
+  url: "https://v2ex.com/t/980242"
+  title: "复盘一个独立开发2年的项目"
+  publisher: "softlight · V2EX"
+  accessed: "2026-10-09"
+  claim: "账号softlight于2023-10-09复盘页面搭建器：把公司内部类似技术的价值外推到市场，投入可扩展架构后发现与目标用户需求错位；第77条回复明确原公司没有使用该产品。仅为作者自述，不证明市场规模或商业结果"
+  excerpt: "excerpts/v2ex-builder-retrospective.md"
