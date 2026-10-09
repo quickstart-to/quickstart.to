@@ -1,7 +1,7 @@
 ---
 title: 提现与结汇
 description: 看懂平台余额、出款门槛与到账差异，准备交易证明，分清收汇、结汇和申报。
-order: 7
+order: 8
 volatility: high
 last_verified: 2026-10-08
 ---

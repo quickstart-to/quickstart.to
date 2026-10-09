@@ -1,0 +1,44 @@
+.retention-media { margin: 2rem 0; font-size: .94rem; line-height: 1.75; container-type: inline-size; }
+.retention-media h3 { font-size: 1.15rem; line-height: 1.5; margin: 0 0 .85rem; }
+.retention-media p { margin: .75rem 0; }
+.retention-media [hidden] { display: none !important; }
+.retention-kicker, .retention-media figcaption { color: var(--fg-muted); font-size: .84rem; }
+.retention-records { list-style: none; padding: 0; margin: 0; }
+.retention-records li { display: grid; grid-template-columns: 2rem 1fr; gap: .7rem; border-top: 1px solid var(--border); padding: .8rem 0; margin: 0; }
+.retention-records b { color: var(--accent); }
+.retention-records strong, .retention-records span { display: block; }
+.retention-records span { color: var(--fg-muted); font-size: .87rem; margin-top: .2rem; }
+.retention-demo { background: var(--bg-soft); padding: 1rem; border: 1px solid var(--border); border-radius: .6rem; }
+.retention-demo fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
+.retention-demo legend { font-weight: 650; margin-bottom: .5rem; }
+.retention-controls { display: grid; gap: .85rem; }
+.retention-controls label { display: flex; flex-direction: column; gap: .35rem; }
+.retention-demo :is(select, button) { font: inherit; font-size: .9rem; min-height: 44px; min-width: 0; max-width: 100%; color: var(--fg); background: var(--bg); border: 1px solid var(--border); border-radius: .3rem; padding: .6rem; }
+.retention-demo :is(select, button):focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.retention-demo button { cursor: pointer; margin-top: .7rem; }
+.retention-metrics { display: grid; gap: .8rem; margin-top: 1rem; }
+.retention-metrics > div { border: 1px solid var(--border); border-radius: .4rem; padding: .8rem; background: var(--bg); }
+.retention-metrics h4 { margin: 0; font-size: .9rem; }
+.retention-metrics strong { display: block; color: var(--accent); font-size: 1.35rem; font-variant-numeric: tabular-nums; margin-top: .3rem; }
+.retention-metrics p { font-size: .8rem; color: var(--fg-muted); margin-bottom: 0; }
+.retention-people { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .5rem; list-style: none; padding: 0; margin: 1rem 0; }
+.retention-people li { border: 1px solid var(--border); border-left: 3px solid var(--border); padding: .6rem; background: var(--bg); margin: 0; border-radius: .3rem; }
+.retention-people li[data-qualified="true"] { border-left-color: var(--accent); }
+.retention-people span, .retention-people em { display: block; font-size: .78rem; line-height: 1.5; margin-top: .25rem; }
+.retention-people em { color: var(--fg-muted); font-style: normal; }
+.retention-status { border-left: 3px solid var(--accent); padding: .5rem .75rem; background: var(--bg); font-size: .87rem; }
+.retention-static summary { cursor: pointer; font-weight: 600; }
+.retention-tree { list-style: none; margin: 0; padding: 0; }
+.retention-tree > li { margin: 0; }
+.retention-question { border: 1px solid var(--border); border-radius: .35rem; padding: .8rem; font-weight: 650; background: var(--bg-soft); }
+.retention-offshoot { margin: .5rem 0 .5rem 1rem; border-left: 2px dashed var(--border); padding: .3rem .8rem; color: var(--fg-muted); }
+.retention-continue { display: block; padding: .3rem .8rem .6rem; color: var(--accent); font-weight: 650; }
+.retention-destination { padding: .8rem; border: 1px solid var(--accent); border-radius: .35rem; }
+.retention-decision { border: 1px solid var(--border); border-radius: .5rem; padding: 1rem; }
+.retention-decision dt { font-weight: 650; color: var(--accent); margin-top: 1rem; }
+.retention-decision dd { margin: .3rem 0; }
+@container (min-width: 530px) {
+  .retention-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .retention-people { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .retention-controls { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}

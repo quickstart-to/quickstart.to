@@ -1,7 +1,7 @@
 ---
 title: 身份与主体
 description: 先判断为什么需要公司，再核对 Delaware LLC、香港有限公司的设立步骤、账户准入和持续维护义务。
-order: 9
+order: 10
 volatility: high
 last_verified: 2026-10-08
 ---

@@ -1,0 +1,234 @@
+{
+  "executedAt": "2026-10-09T10:52:41.590Z",
+  "runtime": "v22.19.0",
+  "passed": true,
+  "scope": "Synthetic next-task records only. No customer observation, standard platform retention curve, or causal test.",
+  "observations": [
+    {
+      "evidence": "unknown",
+      "criterion": "used",
+      "total": 8,
+      "eligible": 5,
+      "qualified": 3,
+      "unknown": 1,
+      "noTask": 2,
+      "fixedRate": 0.375,
+      "conditionalRate": 0.6,
+      "qualifyingIds": [
+        "A",
+        "B",
+        "C"
+      ],
+      "fixedDisplay": "37.5%",
+      "conditionalDisplay": "60%"
+    },
+    {
+      "evidence": "unknown",
+      "criterion": "independent",
+      "total": 8,
+      "eligible": 5,
+      "qualified": 2,
+      "unknown": 1,
+      "noTask": 2,
+      "fixedRate": 0.25,
+      "conditionalRate": 0.4,
+      "qualifyingIds": [
+        "A",
+        "B"
+      ],
+      "fixedDisplay": "25%",
+      "conditionalDisplay": "40%"
+    },
+    {
+      "evidence": "no-task",
+      "criterion": "used",
+      "total": 8,
+      "eligible": 5,
+      "qualified": 3,
+      "unknown": 0,
+      "noTask": 3,
+      "fixedRate": 0.375,
+      "conditionalRate": 0.6,
+      "qualifyingIds": [
+        "A",
+        "B",
+        "C"
+      ],
+      "fixedDisplay": "37.5%",
+      "conditionalDisplay": "60%"
+    },
+    {
+      "evidence": "no-task",
+      "criterion": "independent",
+      "total": 8,
+      "eligible": 5,
+      "qualified": 2,
+      "unknown": 0,
+      "noTask": 3,
+      "fixedRate": 0.25,
+      "conditionalRate": 0.4,
+      "qualifyingIds": [
+        "A",
+        "B"
+      ],
+      "fixedDisplay": "25%",
+      "conditionalDisplay": "40%"
+    },
+    {
+      "evidence": "alternative",
+      "criterion": "used",
+      "total": 8,
+      "eligible": 6,
+      "qualified": 3,
+      "unknown": 0,
+      "noTask": 2,
+      "fixedRate": 0.375,
+      "conditionalRate": 0.5,
+      "qualifyingIds": [
+        "A",
+        "B",
+        "C"
+      ],
+      "fixedDisplay": "37.5%",
+      "conditionalDisplay": "50%"
+    },
+    {
+      "evidence": "alternative",
+      "criterion": "independent",
+      "total": 8,
+      "eligible": 6,
+      "qualified": 2,
+      "unknown": 0,
+      "noTask": 2,
+      "fixedRate": 0.25,
+      "conditionalRate": 0.3333333333333333,
+      "qualifyingIds": [
+        "A",
+        "B"
+      ],
+      "fixedDisplay": "25%",
+      "conditionalDisplay": "33.3%"
+    },
+    {
+      "evidence": "assisted",
+      "criterion": "used",
+      "total": 8,
+      "eligible": 6,
+      "qualified": 4,
+      "unknown": 0,
+      "noTask": 2,
+      "fixedRate": 0.5,
+      "conditionalRate": 0.6666666666666666,
+      "qualifyingIds": [
+        "A",
+        "B",
+        "C",
+        "H"
+      ],
+      "fixedDisplay": "50%",
+      "conditionalDisplay": "66.7%"
+    },
+    {
+      "evidence": "assisted",
+      "criterion": "independent",
+      "total": 8,
+      "eligible": 6,
+      "qualified": 2,
+      "unknown": 0,
+      "noTask": 2,
+      "fixedRate": 0.25,
+      "conditionalRate": 0.3333333333333333,
+      "qualifyingIds": [
+        "A",
+        "B"
+      ],
+      "fixedDisplay": "25%",
+      "conditionalDisplay": "33.3%"
+    },
+    {
+      "evidence": "independent",
+      "criterion": "used",
+      "total": 8,
+      "eligible": 6,
+      "qualified": 4,
+      "unknown": 0,
+      "noTask": 2,
+      "fixedRate": 0.5,
+      "conditionalRate": 0.6666666666666666,
+      "qualifyingIds": [
+        "A",
+        "B",
+        "C",
+        "H"
+      ],
+      "fixedDisplay": "50%",
+      "conditionalDisplay": "66.7%"
+    },
+    {
+      "evidence": "independent",
+      "criterion": "independent",
+      "total": 8,
+      "eligible": 6,
+      "qualified": 3,
+      "unknown": 0,
+      "noTask": 2,
+      "fixedRate": 0.375,
+      "conditionalRate": 0.5,
+      "qualifyingIds": [
+        "A",
+        "B",
+        "H"
+      ],
+      "fixedDisplay": "37.5%",
+      "conditionalDisplay": "50%"
+    }
+  ],
+  "boundaryResults": [
+    {
+      "label": "empty cohort",
+      "total": 0,
+      "eligible": 0,
+      "qualified": 0,
+      "unknown": 0,
+      "noTask": 0,
+      "fixedRate": null,
+      "conditionalRate": null,
+      "qualifyingIds": []
+    },
+    {
+      "label": "all unknown",
+      "total": 1,
+      "eligible": 0,
+      "qualified": 0,
+      "unknown": 1,
+      "noTask": 0,
+      "fixedRate": 0,
+      "conditionalRate": null,
+      "qualifyingIds": []
+    },
+    {
+      "label": "no opportunity yet",
+      "total": 1,
+      "eligible": 0,
+      "qualified": 0,
+      "unknown": 0,
+      "noTask": 1,
+      "fixedRate": 0,
+      "conditionalRate": null,
+      "qualifyingIds": []
+    },
+    {
+      "label": "opportunity but no qualifying result",
+      "total": 1,
+      "eligible": 1,
+      "qualified": 0,
+      "unknown": 0,
+      "noTask": 0,
+      "fixedRate": 0,
+      "conditionalRate": 0,
+      "qualifyingIds": []
+    }
+  ],
+  "rejectedInvalidInputs": 4,
+  "resetAndOriginalPreservation": true
+}

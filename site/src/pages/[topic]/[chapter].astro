@@ -8,6 +8,7 @@ import InfrastructureMedia from '../../../../topics/go-global/assets/Infrastruct
 import PricingMedia from '../../../../topics/go-global/assets/PricingMedia.astro';
 import PaymentMedia from '../../../../topics/go-global/assets/PaymentMedia.astro';
 import MarketMedia from '../../../../topics/go-global/assets/MarketMedia.astro';
+import RetentionMedia from '../../../../topics/go-global/assets/RetentionMedia.astro';
 
 export async function getStaticPaths() {
   const paths = [];
@@ -43,4 +44,5 @@ const { Content } = await render(entry);
   {topic.id === 'go-global' && chapter.slug === 'pricing' && <PricingMedia />}
   {topic.id === 'go-global' && chapter.slug === 'payments' && <PaymentMedia />}
   {topic.id === 'go-global' && chapter.slug === 'market-fit' && <MarketMedia />}
+  {topic.id === 'go-global' && chapter.slug === 'retention' && <RetentionMedia />}
 </TopicLayout>

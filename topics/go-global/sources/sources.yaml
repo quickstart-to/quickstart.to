@@ -757,8 +757,30 @@
   title: "How Superhuman Built an Engine to Find Product Market Fit"
   publisher: "Rahul Vohra · First Round Review"
   accessed: "2026-10-09"
-  claim: "Superhuman创始人说明按已有核心使用经历、用户得到的价值与阻碍分组反馈并调整路线图；本书不把其百分比阈值或样本规模当成小产品通用验收标准"
+  claim: "Superhuman 创始人回顾按核心使用经历、实际价值和阻碍分组反馈，提升移动端及日历优先级，再比较投入与影响；本书不采用其 PMF 百分比、样本阈值或忽略所有不满意者的建议"
   excerpt: "excerpts/superhuman-pmf.md"
+
+- id: src-amplitude-usage-interval
+  url: https://amplitude.com/books/mastering-retention/your-critical-event-and-product-usage-interval
+  title: Your critical event and product usage interval
+  publisher: Amplitude
+  accessed: 2026-10-09
+  claim: 留存分析方法强调先定义与核心价值相符的事件及自然使用周期，再解读回访；本书不采用其固定观察天数或百分位建议，也不声称演示等同平台默认留存算法
+  excerpt: excerpts/amplitude-usage-interval.md
+- id: src-intercom-feedback-mistakes
+  url: https://www.intercom.com/blog/5-mistakes-we-all-make-with-product-feedback/
+  title: 5 product feedback mistakes we all make
+  publisher: Des Traynor · Intercom
+  accessed: 2026-10-09
+  claim: 2014 年方法文章按使用阶段与待回答的问题选择反馈对象，将重复反馈视为待验证的假设，并追问请求背后的任务；不采用排除所有免费用户或仅凭直觉跳过验证的泛化建议
+  excerpt: excerpts/intercom-feedback-mistakes.md
+- id: src-intercom-feature-support
+  url: https://www.intercom.com/blog/rarely-say-yes-to-feature-requests/
+  title: Rarely say yes to feature requests
+  publisher: Des Traynor · Intercom
+  accessed: 2026-10-09
+  claim: 2014 年文章第 7 节讨论只估上线开发成本会漏掉维护与支持，第 6 节提醒局部点击增加不等于整体价值；不采用其全部筛选标准为通用规则
+  excerpt: excerpts/intercom-feature-support.md
 
 - id: src-tally-early-growth
   url: "https://blog.tally.so/how-we-bootstrapped-tally-to-10k-mrr/"
