@@ -1,0 +1,314 @@
+{
+  "checkedAt": "2026-10-09T14:42:35.177Z",
+  "states": [
+    {
+      "step": "initial",
+      "account": "demo@example.invalid",
+      "session": "1 个合成会话",
+      "attachment": "synthetic.csv",
+      "record": "尚未记录",
+      "result": "尚未删除。当前三类合成记录都有一份副本，旧备份也保留了这组记录。",
+      "buttons": [
+        {
+          "text": "模拟删除当前资料",
+          "disabled": false
+        },
+        {
+          "text": "模拟遗漏删除记录的恢复",
+          "disabled": true
+        },
+        {
+          "text": "重新应用删除记录",
+          "disabled": true
+        },
+        {
+          "text": "重置示例",
+          "disabled": false
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "step": "delete",
+      "account": "已移除",
+      "session": "0 个",
+      "attachment": "已移除",
+      "record": "已记录 DEMO-DELETE-001",
+      "result": "当前三类记录已移除，删除请求已记录；旧备份仍含原数据。试一次遗漏删除记录的恢复，看看会发生什么。",
+      "buttons": [
+        {
+          "text": "模拟删除当前资料",
+          "disabled": true
+        },
+        {
+          "text": "模拟遗漏删除记录的恢复",
+          "disabled": false
+        },
+        {
+          "text": "重新应用删除记录",
+          "disabled": true
+        },
+        {
+          "text": "重置示例",
+          "disabled": false
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "step": "restore_without_deletion",
+      "account": "demo@example.invalid",
+      "session": "1 个合成会话",
+      "attachment": "synthetic.csv",
+      "record": "已记录 DEMO-DELETE-001",
+      "result": "遗漏了删除记录：旧备份把账号、会话和附件带回来了。此时不能把恢复后的系统开放给用户。",
+      "buttons": [
+        {
+          "text": "模拟删除当前资料",
+          "disabled": true
+        },
+        {
+          "text": "模拟遗漏删除记录的恢复",
+          "disabled": true
+        },
+        {
+          "text": "重新应用删除记录",
+          "disabled": false
+        },
+        {
+          "text": "重置示例",
+          "disabled": false
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "step": "reapply",
+      "account": "已移除",
+      "session": "0 个",
+      "attachment": "已移除",
+      "record": "已记录 DEMO-DELETE-001",
+      "result": "恢复后重新应用删除记录，三类数据均已移除。对外恢复前，还应核对其他接收方和实际备份清理结果。",
+      "buttons": [
+        {
+          "text": "模拟删除当前资料",
+          "disabled": true
+        },
+        {
+          "text": "模拟遗漏删除记录的恢复",
+          "disabled": false
+        },
+        {
+          "text": "重新应用删除记录",
+          "disabled": true
+        },
+        {
+          "text": "重置示例",
+          "disabled": false
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "step": "repeat_restore",
+      "account": "demo@example.invalid",
+      "session": "1 个合成会话",
+      "attachment": "synthetic.csv",
+      "record": "已记录 DEMO-DELETE-001",
+      "result": "遗漏了删除记录：旧备份把账号、会话和附件带回来了。此时不能把恢复后的系统开放给用户。",
+      "buttons": [
+        {
+          "text": "模拟删除当前资料",
+          "disabled": true
+        },
+        {
+          "text": "模拟遗漏删除记录的恢复",
+          "disabled": true
+        },
+        {
+          "text": "重新应用删除记录",
+          "disabled": false
+        },
+        {
+          "text": "重置示例",
+          "disabled": false
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "step": "repeat_reapply",
+      "account": "已移除",
+      "session": "0 个",
+      "attachment": "已移除",
+      "record": "已记录 DEMO-DELETE-001",
+      "result": "恢复后重新应用删除记录，三类数据均已移除。对外恢复前，还应核对其他接收方和实际备份清理结果。",
+      "buttons": [
+        {
+          "text": "模拟删除当前资料",
+          "disabled": true
+        },
+        {
+          "text": "模拟遗漏删除记录的恢复",
+          "disabled": false
+        },
+        {
+          "text": "重新应用删除记录",
+          "disabled": true
+        },
+        {
+          "text": "重置示例",
+          "disabled": false
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "step": "reset",
+      "account": "demo@example.invalid",
+      "session": "1 个合成会话",
+      "attachment": "synthetic.csv",
+      "record": "尚未记录",
+      "result": "尚未删除。当前三类合成记录都有一份副本，旧备份也保留了这组记录。",
+      "buttons": [
+        {
+          "text": "模拟删除当前资料",
+          "disabled": false
+        },
+        {
+          "text": "模拟遗漏删除记录的恢复",
+          "disabled": true
+        },
+        {
+          "text": "重新应用删除记录",
+          "disabled": true
+        },
+        {
+          "text": "重置示例",
+          "disabled": false
+        }
+      ],
+      "overflow": false
+    }
+  ],
+  "keyboard": {
+    "account": "已移除",
+    "session": "0 个",
+    "attachment": "已移除",
+    "record": "已记录 DEMO-DELETE-001",
+    "result": "恢复后重新应用删除记录，三类数据均已移除。对外恢复前，还应核对其他接收方和实际备份清理结果。",
+    "buttons": [
+      {
+        "text": "模拟删除当前资料",
+        "disabled": true
+      },
+      {
+        "text": "模拟遗漏删除记录的恢复",
+        "disabled": false
+      },
+      {
+        "text": "重新应用删除记录",
+        "disabled": true
+      },
+      {
+        "text": "重置示例",
+        "disabled": false
+      }
+    ],
+    "overflow": false
+  },
+  "focus": {
+    "restore": true,
+    "visible": true
+  },
+  "reset": {
+    "account": "demo@example.invalid",
+    "session": "1 个合成会话",
+    "attachment": "synthetic.csv",
+    "record": "尚未记录",
+    "result": "尚未删除。当前三类合成记录都有一份副本，旧备份也保留了这组记录。",
+    "buttons": [
+      {
+        "text": "模拟删除当前资料",
+        "disabled": false
+      },
+      {
+        "text": "模拟遗漏删除记录的恢复",
+        "disabled": true
+      },
+      {
+        "text": "重新应用删除记录",
+        "disabled": true
+      },
+      {
+        "text": "重置示例",
+        "disabled": false
+      }
+    ],
+    "overflow": false
+  },
+  "scope": "Fixed synthetic records in page memory; no real account, storage or supplier operation",
+  "light": {
+    "overflow": false,
+    "reduced": true,
+    "dark": false,
+    "tableDisplays": [
+      "block",
+      "block",
+      "block",
+      "block",
+      "block",
+      "block",
+      "block",
+      "block",
+      "block",
+      "block",
+      "block",
+      "block",
+      "block",
+      "block",
+      "block"
+    ],
+    "rawMarkdown": false,
+    "fallback": false
+  },
+  "dark": {
+    "overflow": false,
+    "reduced": true,
+    "dark": true,
+    "tableDisplays": [
+      "block",
+      "block",
+      "block",
+      "block",
+      "block",
+      "block",
+      "block",
+      "block",
+      "block",
+      "block",
+      "block",
+      "block",
+      "block",
+      "block",
+      "block"
+    ],
+    "rawMarkdown": false,
+    "fallback": false
+  },
+  "noScript": {
+    "actionsHidden": true,
+    "alternative": "未启用脚本：首次删除后，账号、会话与附件都移除；直接恢复旧备份会把三者带回；重新应用删除记录后，三者再次移除。旧备份本身仍需按实际策略清理。",
+    "visible": true,
+    "overflow": false,
+    "table": 5
+  },
+  "restored": {
+    "ready": true,
+    "fallback": false
+  },
+  "hero": {
+    "src": "/_image?href=%2F%40fs%2FUsers%2Flinshuaibin%2Fday0to%2Fquickstart.to%2Ftopics%2Fgo-global%2Fassets%2Fchoose-less-data-v4.png%3ForigWidth%3D1672%26origHeight%3D941%26origFormat%3Dpng&w=1672&h=941&f=webp",
+    "naturalWidth": 1672
+  }
+}
