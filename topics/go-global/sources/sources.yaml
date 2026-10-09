@@ -209,7 +209,7 @@
   url: https://guangdong.chinatax.gov.cn/gdsw/zssw_grsdsggpxxxzl_zcwj/2020-02/24/content_142e4afa49fe4315b636a35fb51513e2.shtml
   title: 财政部 税务总局关于境外所得有关个人所得税政策的公告（2020年第3号）
   publisher: 国家税务总局广东省税务局（转载）
-  accessed: '2026-10-08'
+  accessed: '2026-10-09'
   claim: 境外所得按劳务提供地、权利使用地等认定；规定居民个人境外所得申报期间、地点、所得税限额抵免及凭证要求
   excerpt: excerpts/tax-foreign-income-2020-3.md
 - id: src-safe-effective-rules-2026
@@ -444,7 +444,7 @@
   url: https://fgk.chinatax.gov.cn/zcfgk/c100010/c5246349/content.html
   title: "中华人民共和国增值税法实施条例"
   publisher: 国家税务总局政策法规库
-  accessed: '2026-10-08'
+  accessed: '2026-10-09'
   claim: 自2026年1月1日施行；自然人属于小规模纳税人；第九条跨境软件服务零税率有境外单位及完全境外消费等条件，第四十八条另规定申报要求
   excerpt: excerpts/tax-vat-implementation-2026.md
   archive: https://web.archive.org/web/20261008124706/https://fgk.chinatax.gov.cn/zcfgk/c100010/c5246349/content.html
@@ -452,7 +452,7 @@
   url: https://fgk.chinatax.gov.cn/zcfgk/c102424/c5245729/content.html
   title: "国家税务总局办公厅关于明确2026年度申报纳税期限的通知"
   publisher: 国家税务总局办公厅
-  accessed: '2026-10-08'
+  accessed: '2026-10-09'
   claim: 对每月或每季度期满后15日内申报的税种，2026年各月有节假日顺延；具体申报日不能只按法条15日机械推算
   excerpt: excerpts/tax-calendar-2026.md
   archive: https://web.archive.org/web/20261008124632/https://fgk.chinatax.gov.cn/zcfgk/c102424/c5245729/content.html
@@ -1008,3 +1008,27 @@
   accessed: "2026-10-09"
   claim: "2025-09-02 作者报告关闭 Delaware、Nevada 两家 LLC，其中 Delaware 从未实际使用；处理多州登记、代理、账户及资料归档；仅采用维护与退出经历，不采用文中混淆的年报和现行费用"
   excerpt: excerpts/teera-snapfile-closure.md
+
+- id: src-tax-vat-export-2026-11
+  url: http://heilongjiang.chinatax.gov.cn/art/2026/2/9/art_16401_578530.html
+  title: "财政部 税务总局关于出口业务增值税和消费税政策的公告（2026年第11号）"
+  publisher: "财政部、税务总局（黑龙江省税务局转载）"
+  accessed: "2026-10-09"
+  claim: "第一条（二）解释完全境外消费；第六条规定相关跨境服务实行简易计税的免税范围及进项不得抵扣退税；第七条有合同、收入等排除情形，第九条规定备案申报；自2026-01-01施行"
+  excerpt: excerpts/tax-vat-export-2026-11.md
+
+- id: src-v2ex-indie-tax-questions
+  url: https://cn.v2ex.com/t/948520
+  title: "独立开发者如何报税"
+  publisher: "john990 · V2EX"
+  accessed: "2026-10-09"
+  claim: "2023-06-14 原发帖人将美元收入、换汇额度、申报和维护支出混在同一问题；仅作归属明确的困惑，不采用评论中的税务结论或规避建议，无完整申报结果"
+  excerpt: excerpts/v2ex-indie-tax-questions.md
+
+- id: src-jesse-bookkeeping-experience
+  url: https://www.jessesquires.com/blog/2023/12/07/going-indie-4/
+  title: "Going Indie: bookkeeping and invoicing"
+  publisher: "Jesse Squires"
+  accessed: "2026-10-09"
+  claim: "作者 2023-12-07 在美国独立开发/咨询语境中报告每周五整理账务、附收据及首年漏记支出的经历；只采用及时留证的方法，不外推美国扣除项目、开户或软件现行可用性"
+  excerpt: excerpts/jesse-bookkeeping-experience.md
