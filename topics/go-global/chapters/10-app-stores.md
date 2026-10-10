@@ -1,7 +1,7 @@
 ---
 title: 应用商店：从手机任务到持续发布
 description: 判断何时值得做 App，把测试、审核、购买恢复和版本维护连成一条可执行的发布路径。
-order: 16
+order: 17
 volatility: high
 last_verified: 2026-10-09
 ---

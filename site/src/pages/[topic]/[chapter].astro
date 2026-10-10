@@ -21,6 +21,7 @@ import FirstUseMedia from '../../../../topics/go-global/assets/FirstUseMedia.ast
 import BusinessReviewMedia from '../../../../topics/go-global/assets/BusinessReviewMedia.astro';
 import TeamProcurementMedia from '../../../../topics/go-global/assets/TeamProcurementMedia.astro';
 import AiApiMedia from '../../../../topics/go-global/assets/AiApiMedia.astro';
+import AdsMedia from '../../../../topics/go-global/assets/AdsMedia.astro';
 import RightsMedia from '../../../../topics/go-global/assets/RightsMedia.astro';
 import RevenueMedia from '../../../../topics/go-global/assets/RevenueMedia.astro';
 
@@ -73,4 +74,5 @@ const { Content } = await render(entry);
   {topic.id === 'go-global' && chapter.slug === 'team-procurement' && <TeamProcurementMedia />}
   {topic.id === 'go-global' && chapter.slug === 'ai-api-extensions' && <AiApiMedia />}
   {topic.id === 'go-global' && chapter.slug === 'rights-clearance' && <RightsMedia />}
+  {topic.id === 'go-global' && chapter.slug === 'platform-ads' && <AdsMedia />}
 </TopicLayout>

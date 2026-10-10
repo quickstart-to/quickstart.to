@@ -12,8 +12,8 @@ last_verified: 2026-10-09
 <h2 id="go-global-map-title">先看全景，再选你要走的一枝</h2>
 <p class="map-intro">从找到需求到长期经营，下面六组问题连接本书的各个章节。展开分支看具体内容，点击章节即可进入。</p>
 <div class="map-tools" data-map-tools hidden>
-<button type="button" data-map-expand aria-controls="map-market map-acquisition map-product map-revenue map-safety map-operation map-pending">展开全部</button>
-<button type="button" data-map-collapse aria-controls="map-market map-acquisition map-product map-revenue map-safety map-operation map-pending">收起全部</button>
+<button type="button" data-map-expand aria-controls="map-market map-acquisition map-product map-revenue map-safety map-operation">展开全部</button>
+<button type="button" data-map-collapse aria-controls="map-market map-acquisition map-product map-revenue map-safety map-operation">收起全部</button>
 <a href="#journey-title">从第一轮实践开始 ↓</a>
 </div>
 <figure aria-describedby="map-caption">
@@ -35,6 +35,7 @@ last_verified: 2026-10-09
 <ul class="map-leaves">
 <li><a href="/go-global/launch"><strong>冷启动获客</strong><span>寻找同类任务、邀请与首次反馈</span></a></li>
 <li><a href="/go-global/growth"><strong>持续获客</strong><span>八类渠道比较、分发与投入复盘</span></a></li>
+<li><a href="/go-global/platform-ads"><strong>分平台投放操作</strong><span>五平台设置、素材与搜索词复盘</span></a></li>
 </ul>
 </details>
 </li>
@@ -87,12 +88,7 @@ last_verified: 2026-10-09
 </nav>
 <figcaption id="map-caption">连线表示主题归属，可以按当前问题跳读。数据、支付和主体等准备，应在相应业务发生前处理。</figcaption>
 </figure>
-<details class="map-pending" id="map-pending">
-<summary><strong>继续拓展的分支</strong><span>已有部分讨论，尚未完整展开</span></summary>
-<ul>
-<li><strong>分平台投放操作</strong><span>现有渠道比较与算账，仍需具体平台执行流程</span></li>
-</ul>
-</details>
+<p class="map-scope" id="map-pending">当前脑图列出的分支已有章节入口；具体产品、地区与平台仍有各自适用条件，章节覆盖不代表实际业务已验证。</p>
 <p class="map-scope">本书聚焦软件与数字产品。跨境实物电商、物流和融资不在当前范围内。</p>
 </section>
 

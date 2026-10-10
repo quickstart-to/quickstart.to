@@ -1,7 +1,7 @@
 ---
 title: 经营复盘与退出：决定下个月还做不做
 description: 用一份完整月度记录分清订单余量、可用现金和时间，比较继续、缩小与停止；再把停服通知、退款、数据和账户依赖安排到一条能收尾的时间线上。
-order: 20
+order: 21
 volatility: high
 last_verified: 2026-10-10
 slug: business-review

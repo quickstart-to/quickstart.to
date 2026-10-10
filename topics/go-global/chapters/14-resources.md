@@ -1,7 +1,7 @@
 ---
 title: 资源导航：带着一个问题，找到下一步材料
 description: 按找用户、发布、产品适配、反馈经营、交付恢复和名称许可整理资源，集中索引本书的样稿、演练与查询入口。
-order: 21
+order: 22
 volatility: high
 last_verified: 2026-10-10
 ---
@@ -32,6 +32,7 @@ last_verified: 2026-10-10
 | 找到了入口，但不知道怎样开口 | [冷启动获客](/go-global/launch#先找到工作发生的地方) | [英文邀请](/go-global/launch#lc-invite-title)、[演示材料](/go-global/launch#lc-sample-title) |
 | 有人试过，却不知道该改什么 | [持续使用与迭代](/go-global/retention) | [逐人记录](/go-global/retention#retention-records-title)、[一轮有限投入决定](/go-global/retention#retention-decision-title) |
 | 获客方式怎么选，投入是否值得 | [持续获客](/go-global/growth) | [渠道路线图](/go-global/growth#growth-loop-title)、[完整任务页](/go-global/growth#growth-page-title)、[付费获客账](/go-global/growth#growth-cost-title)与[触点归因演示](/go-global/growth#growth-demo-title) |
+| 准备试投广告，不知道怎样设置与复盘 | [分平台投放操作](/go-global/platform-ads) | [素材分镜](/go-global/platform-ads#ads-story-title)、[搜索词互动](/go-global/platform-ads#ads-demo-title)与[完整 AD-01 试验单](/go-global/platform-ads#ads-record-title) |
 | 用户不直接购买，还能怎样经营 | [收入模式](/go-global/revenue-models) | [付款关系图](/go-global/revenue-models#revenue-map-title)、[广告收益演算](/go-global/revenue-models#revenue-demo-title)、[英语赞助范围](/go-global/revenue-models#revenue-sponsor-title)与联盟佣金记录 |
 | 想开始收费，但承诺说不清 | [定价与订阅](/go-global/pricing) | [完整英语报价](/go-global/pricing#pr-offer-title)、支持成本与权益时间线 |
 | 团队想用，采购和交付却谈不清 | [团队采购与合同交付](/go-global/team-procurement) | [试点范围](/go-global/team-procurement#team-brief-title)、[验收台](/go-global/team-procurement#team-demo-title)与[交接样稿](/go-global/team-procurement#team-handover-title) |
