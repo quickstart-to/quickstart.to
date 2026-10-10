@@ -42,6 +42,30 @@ GitHub Actions `CI` runs the same validate + build on every PR so problems show 
 pnpm deploy   # requires `wrangler login` on the maintainer machine
 ```
 
-## P2 additions
+## Feedback environments
 
-D1 database, Turnstile keys, OAuth secrets and email credentials are added as Worker bindings/secrets in `site/wrangler.jsonc` and via `wrangler secret put` — never committed.
+`site/wrangler.jsonc` declares two independent D1 bindings. Database IDs and OAuth client IDs are public configuration; credentials are Worker secrets and never committed.
+
+| Deployment | Database | OAuth callback | Availability |
+|---|---|---|---|
+| Production (`--env ''`) | `quickstart-feedback` | `https://quickstart.to/api/auth/callback` | Controlled by the top-level `FEEDBACK_ENABLED` |
+| Staging (`--env staging`) | `quickstart-feedback-staging` | `https://quickstart-to-feedback-staging.rewriteso.workers.dev/api/auth/callback` | Real-provider acceptance; synthetic reports only |
+| Branch/PR preview | None | None | Always disabled in `previews.vars` |
+
+Production and staging have separate GitHub OAuth apps, hostname-bound managed Turnstile widgets, admin tokens and rate-limit salts. Neither has email sending configured. Preview bindings come from the `previews` block, not the production bindings; do not add production credentials through the dashboard's preview base configuration or `wrangler preview secret`.
+
+On a machine with multiple Cloudflare accounts, set `CLOUDFLARE_ACCOUNT_ID` to the account owning this project's Worker before running Wrangler. Keep that operator setting outside the repository.
+
+```sh
+# Build once before deploying the separate staging Worker.
+pnpm build
+pnpm exec wrangler d1 migrations apply quickstart-feedback-staging --remote --env staging --config site/wrangler.jsonc
+pnpm exec wrangler deploy --env staging --config site/wrangler.jsonc
+
+# Production schema migrations are explicit; Workers Builds does not run them.
+pnpm exec wrangler d1 migrations apply quickstart-feedback --remote --env '' --config site/wrangler.jsonc
+```
+
+Both databases received `0001_feedback.sql` on 2026-10-11. Later migrations require an export and a deployment plan. Both environments declare hourly cleanup; acceptance of actual scheduled execution is recorded separately in [feedback QA](feedback-qa.md).
+
+Workers observability and Logpush are explicitly disabled in the deployment configuration. Temporary operator tails can still contain request metadata and must remain private. D1 Time Travel is available; do not promise immediate erasure of backup copies or a retention duration that has not been checked for the account's plan.

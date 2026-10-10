@@ -8,16 +8,48 @@
   "routes": [
     { "pattern": "quickstart.to", "custom_domain": true }
   ],
-  // Required by `wrangler preview` (per-branch / per-PR preview deployments in Workers Builds)
-  "previews": {},
+  // PR previews have no reader database or credentials. Provider QA uses staging below.
+  "previews": {
+    "vars": { "FEEDBACK_ENABLED": "false" },
+    "d1_databases": []
+  },
   // PR previews get a *.workers.dev preview URL; production stays only on quickstart.to
   "workers_dev": false,
   "preview_urls": true,
+  "observability": { "enabled": false },
+  "logpush": false,
   "vars": {
     "FEEDBACK_ENABLED": "false",
-    "SITE_ORIGIN": "https://quickstart.to"
+    "SITE_ORIGIN": "https://quickstart.to",
+    "GITHUB_CLIENT_ID": "Ov23ctbRim2E89PPLXes"
   },
-  // Add a real DB binding only after provisioning; see docs/feedback.md.
+  "triggers": { "crons": ["0 * * * *"] },
+  "d1_databases": [{
+    "binding": "DB",
+    "database_name": "quickstart-feedback",
+    "database_id": "fd1c4ad8-5a29-4765-9f4e-ba4b94dfa749",
+    "migrations_dir": "migrations"
+  }],
+  "env": {
+    "staging": {
+      "name": "quickstart-to-feedback-staging",
+      "routes": [],
+      "workers_dev": true,
+      "preview_urls": false,
+      "vars": {
+        "FEEDBACK_ENABLED": "true",
+        "SITE_ORIGIN": "https://quickstart-to-feedback-staging.rewriteso.workers.dev",
+        "GITHUB_CLIENT_ID": "Ov23lijeGltyVSi0tAeO"
+      },
+      "triggers": { "crons": ["0 * * * *"] },
+      "d1_databases": [{
+        "binding": "DB",
+        "database_name": "quickstart-feedback-staging",
+        "database_id": "b2c528b0-59e3-47df-8d5a-f02a24c46703",
+        "migrations_dir": "migrations"
+      }]
+    }
+  },
   "assets": {
     "binding": "ASSETS",
     "run_worker_first": ["/api/*"],
