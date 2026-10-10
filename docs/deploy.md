@@ -22,6 +22,14 @@ GitHub Actions `CI` runs the same validate + build on every PR so problems show 
 | Root directory | `/` |
 | Node version | from `.node-version` (22) |
 
+## Confirm the live release before the next merge
+
+A successful build check is not the final production state. After each main-branch merge, wait for its Workers Build to finish, then read `https://quickstart.to/api/feedback/config` and require `revision` to equal the merged commit. Also inspect a distinctive changed page. The config endpoint exposes the revision even while feedback is disabled. Do not merge the next release until this check passes.
+
+On 2026-10-11, the newer `a280f27` build completed before the older `70c4410` build, and a subsequent live check returned the older revision with its older pricing page. This establishes an out-of-order release outcome; the build checks alone did not reveal it. If it recurs, inspect active build/deployment history, rebuild and deploy the current merged main commit from a clean checkout, then verify the live revision again. Do not deploy an unmerged feature branch as the repair.
+
+Serial merges with an exact live-revision check are the current operational safeguard, not a guarantee that the provider prevents stale deployments. Before allowing concurrent releases, add and verify deployment ordering or stale-build protection in the hosting pipeline; a pre-deploy revision check alone can still race with another deployment.
+
 ## Domains
 
 | Host | Behavior |

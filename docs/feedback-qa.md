@@ -16,6 +16,14 @@ The synthetic resolution explicitly says PR #10 predates the test report. This v
 
 `pnpm build`, `pnpm check`, all five Worker/D1 lifecycle tests and all six published drills passed. Production and staging dry-runs resolved to different D1 bindings. The actual PR preview deployment for `b698b3f` exposed only `ASSETS` and `FEEDBACK_ENABLED=false` in Cloudflare's deployment binding list; its config endpoint returned disabled and `/api/me` returned 503. Actual scheduled cleanup and production smoke checks remain pending in this record.
 
+## Production reading release — 2026-10-11
+
+A final live check found `revision=70c4410` and no S-02 example, even though the main-branch `a280f27` build had passed. GitHub's Cloudflare checks completed at 16:37:14 UTC for `a280f27` and 16:37:56 for the older `70c4410`; the deployed version at 16:45:42 was a subsequent secret-triggered version of that older release. The observed outcome was an older release replacing the current main build.
+
+Built the exact merged main commit `a280f27834d517aba0d4de5251f8593afb9668e6` in a clean, temporary worktree and deployed it with feedback disabled. Validation/build passed with the same four existing warnings. Production version `10d48815-76c3-434e-8486-32a6b87ce20c` then returned that exact revision, `enabled=false`, a null site key and email disabled; the pricing page contained S-02 and its subscription-recovery drill returned HTTP 200. No unmerged provider configuration or content fact-check branch was deployed.
+
+This verifies the reading release and disabled feedback state, not production login/submission. See [deployment ordering safeguards](deploy.md#confirm-the-live-release-before-the-next-merge) for the current serial-merge procedure and remaining pipeline limitation.
+
 ## Scheduled-cleanup investigation — 2026-10-11
 
 Production feedback remains disabled in both the live deployment and this PR configuration. Successful HTTP/provider tests do not satisfy the cleanup gate.
