@@ -98,8 +98,8 @@ topics/go-global/
 ```yaml
 slug: go-global          # 始终是 ASCII 英文，与内容语言无关
 lang: zh-CN               # 内容语言（BCP 47），决定 <html lang> 和默认 UI 语言
-title: 中国开发者出海：找到海外用户，做出有持续价值的产品
-title_en: "Going Global for Chinese Developers: Find Users and Build Lasting Value"  # 用于全站索引和分享卡片
+title: 中国开发者出海淘金的方方面面：从 0 到月入 1 万美元
+title_en: "The Complete Guide to Going Global for Chinese Developers: From Zero to $10,000 a Month"  # 用于全站索引和分享卡片
 audience: 中国大陆个人开发者（无海外公司主体起步），软件 / 数字产品
 status: beta              # draft | beta | stable
 aliases: [出海]           # 任意语言的营销短链，301 跳转，不作为 canonical
