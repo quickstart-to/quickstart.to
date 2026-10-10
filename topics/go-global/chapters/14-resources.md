@@ -1,7 +1,7 @@
 ---
 title: 资源导航：带着一个问题，找到下一步材料
 description: 按找用户、发布、产品适配、反馈经营、交付恢复和名称许可整理资源，集中索引本书的样稿、演练与查询入口。
-order: 20
+order: 21
 volatility: high
 last_verified: 2026-10-10
 ---
@@ -42,6 +42,7 @@ last_verified: 2026-10-10
 | 用户用不上，或发生故障 | [基础设施](/go-global/infrastructure)、[风控与账户安全](/go-global/risk) | 发布/恢复记录、账号依赖图和客服处理样例 |
 | 不知道下个月是否继续，或怎样停止服务 | [经营复盘与退出](/go-global/business-review) | [现金与时间演示](/go-global/business-review#review-demo-title)、[停服通知](/go-global/business-review#review-notice-title)和[收尾记录](/go-global/business-review#review-close-title) |
 | 想加 AI、开放接口或做插件 | [AI、API 与插件专项](/go-global/ai-api-extensions) | [输入与草稿](/go-global/ai-api-extensions#aap-sample-title)、[双向成本账](/go-global/ai-api-extensions#aap-cost-title)、[接入约定](/go-global/ai-api-extensions#aap-contract)与本地任务恢复 |
+| 准备命名、选素材或交付代码 | [名称、素材与代码权利](/go-global/rights-clearance) | [字体交付示例](/go-global/rights-clearance#rights-demo-title)、[已填台账](/go-global/rights-clearance#rights-ledger)与[授权询问](/go-global/rights-clearance#rights-request-title) |
 | 产品确实需要手机原生能力 | [应用商店](/go-global/app-stores) | [测试记录与审核说明](/go-global/app-stores#把测试记录变成审核材料)、版本暂停演示 |
 
 </div>
@@ -60,6 +61,8 @@ last_verified: 2026-10-10
 </div>
 
 这些脚本在本书中实际运行过，结果和限制保留在相应章节。它们没有连接真实支付平台，也不证明你的生产数据库、账号或灾备已经通过验收。
+
+另有一份可直接阅读的 [R-01 权利台账](/go-global/rights-clearance#rights-ledger)，并可<a href="/go-global/rights-ledger.json" download="rights-ledger-r01.json">下载已填的 JSON</a>。它记录名称、图片、字体、代码和外包材料的取舍及待取得证据，是教学记录，不是实际授权文件。
 
 ## 按当前任务挑一份外部材料
 
@@ -174,7 +177,7 @@ last_verified: 2026-10-10
 
 *英文 · GitHub 维护的许可入门资料*
 
-[打开许可选择入口](https://choosealicense.com/)。用它认识候选许可，再列出项目依赖各自的许可与原文。给自己的代码选许可，与核查第三方代码、字体、图片的使用条件，是不同工作；这个入口不能替你完成整个产品的权利核对。[^src-choose-a-license]
+[打开许可选择入口](https://choosealicense.com/)。用它认识候选许可，再列出项目依赖各自的许可与原文。给自己的代码选许可，与核查第三方代码、字体、图片的使用条件，是不同工作；这个入口不能替你完成整个产品的权利核对。[^src-choose-a-license] 具体怎样把许可、用途与发布文件对上，见[权利台账章](/go-global/rights-clearance)。
 
 </div>
 </div>

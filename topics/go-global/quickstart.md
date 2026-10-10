@@ -64,11 +64,12 @@ last_verified: 2026-10-09
 </li>
 <li>
 <details id="map-safety" data-map-branch>
-<summary><strong>经营边界与安全</strong><span>数据、身份、税务与账户</span></summary>
+<summary><strong>经营边界与安全</strong><span>数据、身份、税务、权利与账户</span></summary>
 <ul class="map-leaves">
 <li><a href="/go-global/compliance"><strong>合规底线</strong><span>少收数据、隐私说明与删除</span></a></li>
 <li><a href="/go-global/entity"><strong>身份与主体</strong><span>触发条件、设立、维护与退出</span></a></li>
 <li><a href="/go-global/tax"><strong>税务</strong><span>身份、所得、底稿与申报准备</span></a></li>
+<li><a href="/go-global/rights-clearance"><strong>名称、素材与代码权利</strong><span>命名、许可、发布台账与争议处理</span></a></li>
 <li><a href="/go-global/risk"><strong>风控与账户安全</strong><span>访问恢复、凭据、争议与事件</span></a></li>
 </ul>
 </details>
@@ -89,7 +90,6 @@ last_verified: 2026-10-09
 <details class="map-pending" id="map-pending">
 <summary><strong>继续拓展的分支</strong><span>已有部分讨论，尚未完整展开</span></summary>
 <ul>
-<li><strong>名称、素材与代码权利</strong><span>从查询入口走到完整权利台账</span></li>
 <li><strong>分平台投放操作</strong><span>现有渠道比较与算账，仍需具体平台执行流程</span></li>
 </ul>
 </details>
