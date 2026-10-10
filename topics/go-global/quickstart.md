@@ -7,6 +7,95 @@ last_verified: 2026-10-09
 
 把网站翻成英文、部署到海外，再接上支付，就算开始出海了吗？这些工作做完，产品确实有了服务海外用户的可能。但打开网站的人为什么需要它，又为什么愿意把自己的事情交给你，仍然需要另找答案。
 
+<section class="topic-map" data-topic-map aria-labelledby="go-global-map-title">
+<p class="map-eyebrow">全书脑图</p>
+<h2 id="go-global-map-title">先看全景，再选你要走的一枝</h2>
+<p class="map-intro">从找到需求到长期经营，下面六组问题连接本书的各个章节。展开分支看具体内容，点击章节即可进入。</p>
+<div class="map-tools" data-map-tools hidden>
+<button type="button" data-map-expand aria-controls="map-market map-acquisition map-product map-revenue map-safety map-operation map-pending">展开全部</button>
+<button type="button" data-map-collapse aria-controls="map-market map-acquisition map-product map-revenue map-safety map-operation map-pending">收起全部</button>
+<a href="#journey-title">从第一轮实践开始 ↓</a>
+</div>
+<figure aria-describedby="map-caption">
+<p class="map-root"><strong>中国开发者出海</strong><span>理解用户 · 交付价值 · 持续经营</span></p>
+<nav aria-label="出海知识脑图，按六类问题查阅章节">
+<ul class="map-branches">
+<li>
+<details id="map-market" data-map-branch>
+<summary><strong>市场与需求</strong><span>先服务谁，为什么值得做</span></summary>
+<ul class="map-leaves">
+<li><a href="/go-global/validate-idea"><strong>选品与验证</strong><span>现有办法、候选取舍与试验</span></a></li>
+<li><a href="/go-global/market-fit"><strong>市场与适配</strong><span>地区、语言、格式与服务能力</span></a></li>
+</ul>
+</details>
+</li>
+<li>
+<details id="map-acquisition" data-map-branch>
+<summary><strong>获取用户</strong><span>第一次接触，到持续发现你</span></summary>
+<ul class="map-leaves">
+<li><a href="/go-global/launch"><strong>冷启动获客</strong><span>寻找同类任务、邀请与首次反馈</span></a></li>
+<li><a href="/go-global/growth"><strong>持续获客</strong><span>八类渠道比较、分发与投入复盘</span></a></li>
+</ul>
+</details>
+</li>
+<li>
+<details id="map-product" data-map-branch>
+<summary><strong>产品与交付</strong><span>用得上、做得成、愿意再回来</span></summary>
+<ul class="map-leaves">
+<li><a href="/go-global/infrastructure"><strong>基础设施</strong><span>访问、邮件、发布与恢复</span></a></li>
+<li><a href="/go-global/first-use"><strong>首次使用体验</strong><span>输入、空态、报错与完整输出</span></a></li>
+<li><a href="/go-global/retention"><strong>持续使用与迭代</strong><span>回访、任务机会与改进取舍</span></a></li>
+<li><a href="/go-global/app-stores"><strong>应用商店路线</strong><span>手机应用的测试、审核与更新</span></a></li>
+</ul>
+</details>
+</li>
+<li>
+<details id="map-revenue" data-map-branch>
+<summary><strong>收入与回款</strong><span>由谁付钱，怎样支持交付</span></summary>
+<ul class="map-leaves">
+<li><a href="/go-global/revenue-models"><strong>收入模式</strong><span>售卖、广告、赞助等模式的取舍</span></a></li>
+<li><a href="/go-global/pricing"><strong>定价与订阅</strong><span>完整报价、支持成本与使用权益</span></a></li>
+<li><a href="/go-global/payments"><strong>收款与交付</strong><span>平台条件、付款确认与服务开通</span></a></li>
+<li><a href="/go-global/payouts"><strong>提现与结汇</strong><span>出款、兑换、到账与差额核对</span></a></li>
+</ul>
+</details>
+</li>
+<li>
+<details id="map-safety" data-map-branch>
+<summary><strong>经营边界与安全</strong><span>数据、身份、税务与账户</span></summary>
+<ul class="map-leaves">
+<li><a href="/go-global/compliance"><strong>合规底线</strong><span>少收数据、隐私说明与删除</span></a></li>
+<li><a href="/go-global/entity"><strong>身份与主体</strong><span>触发条件、设立、维护与退出</span></a></li>
+<li><a href="/go-global/tax"><strong>税务</strong><span>身份、所得、底稿与申报准备</span></a></li>
+<li><a href="/go-global/risk"><strong>风控与账户安全</strong><span>访问恢复、凭据、争议与事件</span></a></li>
+</ul>
+</details>
+</li>
+<li>
+<details id="map-operation" data-map-branch>
+<summary><strong>复盘、退出与查证</strong><span>继续、收缩或停止，找到依据</span></summary>
+<ul class="map-leaves">
+<li><a href="/go-global/business-review"><strong>经营复盘与退出</strong><span>订单、现金、时间与停服收尾</span></a></li>
+<li><a href="/go-global/resources"><strong>资源导航</strong><span>按任务查样稿、演练与原始资料</span></a></li>
+</ul>
+</details>
+</li>
+</ul>
+</nav>
+<figcaption id="map-caption">连线表示主题归属，可以按当前问题跳读。数据、支付和主体等准备，应在相应业务发生前处理。</figcaption>
+</figure>
+<details class="map-pending" id="map-pending">
+<summary><strong>继续拓展的分支</strong><span>已有部分讨论，尚未完整展开</span></summary>
+<ul>
+<li><strong>团队采购与合同交付</strong><span>从试点、验收到采购和服务责任</span></li>
+<li><strong>AI、API 与插件专项</strong><span>按产品补成本、权限、评估与宿主规则</span></li>
+<li><strong>名称、素材与代码权利</strong><span>从查询入口走到完整权利台账</span></li>
+<li><strong>分平台投放操作</strong><span>现有渠道比较与算账，仍需具体平台执行流程</span></li>
+</ul>
+</details>
+<p class="map-scope">本书聚焦软件与数字产品。跨境实物电商、物流和融资不在当前范围内。</p>
+</section>
+
 中文开发者辣条加辣在 2025 年的一篇复盘里，写到自己做 AI 头像网站的经历：实现并不难，上线后却没有想清楚谁会来、从哪里来，以及面对已有产品，别人为什么要选自己的。他也知道应该验证需求，只是一直把写代码当成正事，把找用户留给上线以后。[^src-latiao-overseas-lessons]
 
 这个经历值得借鉴的地方，是它指出了一个很具体的空缺：开发计划里有功能，有上线日期，却没有通向用户的路。下面我们就从这里开始。
