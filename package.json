@@ -16,7 +16,7 @@
     "deploy": "pnpm build && wrangler deploy --config site/wrangler.jsonc",
     "check": "astro check --root site && tsc -p site/worker/tsconfig.json",
     "test:feedback": "node --test scripts/feedback.test.mjs",
-    "test:drills": "node topics/go-global/assets/payment-delivery-drill.mjs && node topics/go-global/assets/measurement-drill.mjs && node topics/go-global/assets/api-job-drill.mjs && node topics/go-global/assets/credential-rotation-drill.mjs && node topics/go-global/assets/infrastructure-drill.mjs",
+    "test:drills": "node scripts/run-drills.mjs",
     "qs": "node agent/cli/qs.mjs",
     "review:due": "node scripts/review-due.mjs"
   },
