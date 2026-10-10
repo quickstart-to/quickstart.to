@@ -11,6 +11,8 @@ interface Props {
   /** "quickstart" | chapter slug | "changelog" */
   current: string;
   title: string;
+  /** The rendered body already supplies the page's main heading. */
+  titleInContent?: boolean;
   description?: string;
   path: string;
   lastVerified?: string;
@@ -20,7 +22,7 @@ interface Props {
   isContent?: boolean;
 }
 
-const { topic, chapters, current, title, description, path, lastVerified, volatility, sourcesHref, isContent = true } = Astro.props;
+const { topic, chapters, current, title, titleInContent = false, description, path, lastVerified, volatility, sourcesHref, isContent = true } = Astro.props;
 const { slug, lang, status, disclaimer } = topic.data;
 const ui = uiLangFor(lang);
 const pageTitle = current === 'quickstart' ? `${topic.data.title} · quickstart.to` : `${title} · ${topic.data.title}`;
@@ -85,7 +87,7 @@ const next = currentIndex >= 0 ? readingOrder[currentIndex + 1] : undefined;
   </aside>
 
   <article class="prose">
-    <header class="article-header">
+    {!titleInContent && <header class="article-header">
       <h1>{title}</h1>
       {(lastVerified || volatility) && (
         <dl class="article-meta" data-ui lang={ui}>
@@ -103,7 +105,7 @@ const next = currentIndex >= 0 ? readingOrder[currentIndex + 1] : undefined;
           )}
         </dl>
       )}
-    </header>
+    </header>}
 
     {isContent && current !== 'quickstart' && sections.length > 1 && (
       <details class="article-outline">

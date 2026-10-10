@@ -21,6 +21,7 @@ const title = t(uiLangFor(topic.data.lang), 'topic.changelog');
   chapters={chapters}
   current="changelog"
   title={title}
+  titleInContent={rendered?.headings[0]?.depth === 1}
   path={`/${topic.id}/changelog`}
   isContent={false}
 >
