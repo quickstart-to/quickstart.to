@@ -68,4 +68,4 @@ pnpm exec wrangler d1 migrations apply quickstart-feedback --remote --env '' --c
 
 Both databases received `0001_feedback.sql` on 2026-10-11. Later migrations require an export and a deployment plan. Both environments declare hourly cleanup; acceptance of actual scheduled execution is recorded separately in [feedback QA](feedback-qa.md).
 
-Workers observability and Logpush are explicitly disabled in the deployment configuration. Temporary operator tails can still contain request metadata and must remain private. D1 Time Travel is available; do not promise immediate erasure of backup copies or a retention duration that has not been checked for the account's plan.
+Workers observability and Logpush are explicitly disabled in the deployment configuration. Temporary operator tails can still contain request metadata and must remain private. The production D1 dashboard showed a 30-day Time Travel window on 2026-10-11; the privacy page states that dated configuration and does not promise immediate erasure of historical copies. Re-check the published statement when changing the hosting plan or backup settings.
