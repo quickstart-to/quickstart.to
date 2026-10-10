@@ -311,8 +311,8 @@
   url: https://docs.creem.io/code/webhooks
   title: "Webhooks"
   publisher: Creem
-  accessed: '2026-10-09'
-  claim: 接收事件前验证签名；重复投递需幂等；订阅按已付款事件开通，期末取消在当前周期结束前仍有效
+  accessed: '2026-10-10'
+  claim: 接收事件前验证签名并幂等处理；subscription.paid 确认周期付款，past_due 与 expired 不等于自愿取消；期末取消保留本期；投递重试日程不等于卡扣款重试
   excerpt: excerpts/creem-webhooks.md
 - id: src-stripe-global
   url: https://stripe.com/global
@@ -475,7 +475,7 @@
   url: https://docs.creem.io/features/subscriptions/introduction
   title: Subscriptions
   publisher: Creem
-  accessed: 2026-10-09
+  accessed: 2026-10-10
   claim: 订阅按周期扣款；试用、未付款、有效和期末取消为不同状态；生产应使用webhook同步权益
   excerpt: excerpts/creem-subscriptions.md
 - id: src-hn-show
@@ -2099,3 +2099,11 @@
   claim: Konbini 买家地点日本、展示币种 JPY，Business locations 页签列日本 Stripe 账户；取得付款码后需线下支付，退款需买家收款账户信息且另有入驻审核，不能推断大陆个人可用
   excerpt: excerpts/stripe-konbini-market.md
   archive: https://web.archive.org/web/20261010094812/https://docs.stripe.com/payments/konbini
+
+- id: src-patrick-dunning-practice
+  url: https://training.kalzumeus.com/newsletters/archive/rainy_day_ideas
+  title: Small Development Projects Worth Meaningful Business Results In A Few Hours Of Work
+  publisher: Patrick McKenzie · Kalzumeus
+  accessed: 2026-10-10
+  claim: 作者在 Microconf 2013 背景的原始 newsletter 中描述 Appointment Reminder 的被动使用场景、扣款失败沟通、三天宽限及人工复查反思；为历史归属经历，不支持现行平台规则或恢复率
+  excerpt: excerpts/patrick-dunning-practice.md

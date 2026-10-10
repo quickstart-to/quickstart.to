@@ -56,3 +56,18 @@ for (const card of document.querySelectorAll<HTMLElement>('[data-video-card]')) 
     iframe.focus();
   }, { once: true });
 }
+
+// A fragment should reveal the optional roadmap before scrolling into its body.
+const roadmap = document.querySelector<HTMLDetailsElement>('#business-roadmap');
+if (roadmap) {
+  const revealRoadmap = () => {
+    if (window.location.hash !== '#business-milestones') return;
+    roadmap.open = true;
+    requestAnimationFrame(() => roadmap.scrollIntoView({ block: 'start' }));
+  };
+  revealRoadmap();
+  window.addEventListener('hashchange', revealRoadmap);
+  document.querySelector<HTMLAnchorElement>('a[href="#business-milestones"]')?.addEventListener('click', () => {
+    roadmap.open = true;
+  });
+}
