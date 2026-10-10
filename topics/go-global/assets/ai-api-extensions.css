@@ -1,0 +1,53 @@
+.aap-media { margin: 2rem 0; font-size: .94rem; line-height: 1.8; container-type: inline-size; }
+.aap-media h3 { margin: 0 0 1.1rem; font-size: 1.16rem; line-height: 1.5; }
+.aap-media p { margin: .85rem 0; }
+.aap-caption, .aap-media figcaption { color: var(--fg-muted); font-size: .85rem; }
+.aap-media figcaption { margin-top: 1rem; }
+.aap-stack ol, .aap-data ol { list-style: none; padding: 0; margin: 0; }
+.aap-stack li, .aap-data li { position: relative; margin: 0; padding: 1rem 1.1rem; border: 1px solid var(--border); border-radius: .35rem; background: var(--bg-soft); }
+.aap-stack li + li, .aap-data li + li { margin-top: 1.5rem; }
+.aap-stack li + li::before, .aap-data li + li::before { content: '↓'; position: absolute; top: -1.6rem; left: calc(50% - .45rem); color: var(--accent); }
+.aap-stack li > *, .aap-data li > *, .aap-boundary > * { display: block; }
+.aap-stack .aap-kicker { color: var(--accent); font-size: .8rem; letter-spacing: .08em; }
+.aap-stack li > span:last-child, .aap-data li span { color: var(--fg-muted); margin-top: .25rem; }
+.aap-boundary { border-left: 3px solid var(--accent); padding: .7rem 1rem; margin-top: 1rem; }
+.aap-sample, .aap-cost { border: 1px solid var(--border); border-radius: .5rem; padding: 1.2rem; background: var(--bg-soft); }
+.aap-draft { border-left: 3px solid var(--accent); background: var(--bg); padding: .25rem 1rem; margin: 1rem 0; }
+.aap-cost fieldset { border: 0; padding: 0; margin: 1rem 0; min-width: 0; }
+.aap-cost legend { font-weight: 650; }
+.aap-cost label { display: block; margin-top: 1rem; }
+.aap-cost input { display: block; width: 100%; margin: 0 0 .3rem; min-height: 44px; accent-color: var(--accent); }
+.aap-cost button { min-height: 44px; padding: .6rem .8rem; border: 1px solid var(--border); border-radius: .3rem; background: var(--bg); color: var(--fg); font: inherit; cursor: pointer; }
+.aap-cost-results { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; font-variant-numeric: tabular-nums; }
+.aap-cost-results > div { padding: .8rem 1rem; border-top: 2px solid var(--accent); background: var(--bg); }
+.aap-recovery-main { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: .5rem; align-items: center; }
+.aap-recovery-main > span:not([aria-hidden]) { padding: .8rem .5rem; background: var(--bg-soft); border: 1px solid var(--border); text-align: center; border-radius: .3rem; }
+.aap-recovery-main > span[aria-hidden] { color: var(--accent); }
+.aap-recovery-return { margin: 1.2rem 0; padding: .75rem 1rem; border-left: 3px solid var(--accent); }
+.aap-recovery-return > *, .aap-recovery-forks strong, .aap-recovery-forks span { display: block; }
+.aap-recovery-forks { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; border-top: 1px solid var(--border); padding-top: 1rem; }
+.aap-recovery-forks span { color: var(--fg-muted); }
+.aap-contract { padding: .8rem 0; border-block: 1px solid var(--border); }
+.aap-contract summary { font-weight: 650; min-height: 44px; cursor: pointer; padding: .3rem 0; }
+.aap-media :is(input, button, summary):focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.aap-table { margin: 1.5rem 0; container-type: inline-size; }
+.aap-table table { width: 100%; table-layout: fixed; }
+.aap-table :is(th, td) { overflow-wrap: anywhere; }
+.aap-table th:first-child { width: 24%; }
+@container (max-width: 540px) {
+  .aap-cost-results, .aap-recovery-forks { grid-template-columns: 1fr; }
+  .aap-recovery-main { grid-template-columns: 1fr; gap: .25rem; }
+  .aap-recovery-main > span[aria-hidden] { text-align: center; font-size: 0; }
+  .aap-recovery-main > span[aria-hidden]::after { content: '↓'; font-size: 1rem; }
+  .aap-table table, .aap-table tbody, .aap-table tr, .aap-table td { display: block; }
+  .aap-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .aap-table tr { padding: .8rem; border: 1px solid var(--border); border-radius: .35rem; margin-bottom: .8rem; }
+  .aap-table td { padding: .3rem 0; border: 0; }
+  .aap-table td:first-child { font-weight: 650; }
+  .aap-options td:nth-child(2)::before { content: '得到什么：'; font-weight: 650; }
+  .aap-options td:nth-child(3)::before { content: '取舍：'; font-weight: 650; }
+  .aap-evals td:nth-child(2)::before { content: '应有行为：'; font-weight: 650; }
+  .aap-evals td:nth-child(3)::before { content: '失败输出：'; font-weight: 650; }
+  .aap-permissions td:nth-child(2)::before { content: '权限范围：'; font-weight: 650; }
+  .aap-permissions td:nth-child(3)::before { content: '恢复办法：'; font-weight: 650; }
+}

@@ -45,6 +45,7 @@ last_verified: 2026-10-09
 <li><a href="/go-global/infrastructure"><strong>基础设施</strong><span>访问、邮件、发布与恢复</span></a></li>
 <li><a href="/go-global/first-use"><strong>首次使用体验</strong><span>输入、空态、报错与完整输出</span></a></li>
 <li><a href="/go-global/retention"><strong>持续使用与迭代</strong><span>回访、任务机会与改进取舍</span></a></li>
+<li><a href="/go-global/ai-api-extensions"><strong>AI、API 与插件专项</strong><span>结果评估、成本、任务恢复与宿主权限</span></a></li>
 <li><a href="/go-global/app-stores"><strong>应用商店路线</strong><span>手机应用的测试、审核与更新</span></a></li>
 </ul>
 </details>
@@ -88,7 +89,6 @@ last_verified: 2026-10-09
 <details class="map-pending" id="map-pending">
 <summary><strong>继续拓展的分支</strong><span>已有部分讨论，尚未完整展开</span></summary>
 <ul>
-<li><strong>AI、API 与插件专项</strong><span>按产品补成本、权限、评估与宿主规则</span></li>
 <li><strong>名称、素材与代码权利</strong><span>从查询入口走到完整权利台账</span></li>
 <li><strong>分平台投放操作</strong><span>现有渠道比较与算账，仍需具体平台执行流程</span></li>
 </ul>

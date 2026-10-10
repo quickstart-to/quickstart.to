@@ -837,7 +837,7 @@
   url: https://www.bannerbear.com/blog/the-pivot/
   title: The Pivot
   publisher: Jon Yongfook · Bannerbear
-  accessed: '2026-10-09'
+  accessed: '2026-10-10'
   claim: 作者2020年1月宣布从Previewmojo的Open Graph图片生成转向更多尺寸和用途，描述低任务频率、用户认知、反复出现的其他尺寸请求，以及收拢多产品投入；是当时的转向判断，不证明后续增长或普遍机会
   excerpt: excerpts/bannerbear-pivot.md
 
@@ -1469,3 +1469,91 @@
   accessed: 2026-10-10
   claim: "在 GDPR 适用且代表控制者处理的条件下，第 28 条规定处理合同、指令、保密、安全、再委托、协助及结束后的返还/删除等；第三国传输另适用第五章，不能仅靠 DPA 判断跨境安排完成"
   excerpt: excerpts/eurlex-gdpr-processing.md
+
+- id: src-hamel-product-evals
+  url: "https://hamel.dev/blog/posts/evals/"
+  title: "Your AI Product Needs Evals"
+  publisher: "Hamel Husain"
+  accessed: 2026-10-10
+  claim: "2024-03-29 对参与 Rechat Lucy 助手的实践复盘：提示词迭代遇到回归和可见性问题，采用按任务的确定性检查、人工/模型评价及实际使用比较；不是统一上线阈值或成功率证明。"
+  excerpt: excerpts/hamel-product-evals.md
+
+- id: src-simon-building-llms
+  url: "https://simonwillison.net/2025/May/15/building-on-llms/"
+  title: "Building software on top of Large Language Models"
+  publisher: "Simon Willison"
+  accessed: 2026-10-10
+  claim: "2025-05-15 PyCon 工作坊讲义以外部邮件和工具调用解释提示注入及应用侧权限问题，并讨论任务评价；未采用旧模型排行、价格或其安全方案作为保证。"
+  excerpt: excerpts/simon-building-llms.md
+
+- id: src-anthropic-supported-regions
+  url: "https://www.anthropic.com/supported-countries"
+  title: "Supported Regions Policy"
+  publisher: "Anthropic"
+  accessed: 2026-10-10
+  claim: "截至 2026-10-10，政策适用应用、API 及云平台/授权转售模型；未列地区不支持，明确限制实际所在地、注册/总部及多数持有/控制；支持列表不含中国大陆。未判断其他供应商或个案准入。"
+  excerpt: excerpts/anthropic-supported-regions.md
+
+- id: src-anthropic-commercial-retention
+  url: "https://privacy.claude.com/en/articles/7996866-how-long-do-you-store-my-organization-s-data"
+  title: "How long do you store my organization’s data?"
+  publisher: "Anthropic Privacy Center"
+  accessed: 2026-10-10
+  claim: "商业产品 API 常规保留说明单列 Files API、另行约定、使用政策及法律等例外，并另述其他商业产品、Covered Models 与反馈；不引用为所有产品无条件删除保证。"
+  excerpt: excerpts/anthropic-commercial-retention.md
+
+- id: src-bannerbear-api-jobs
+  url: "https://developers.bannerbear.com/v5/"
+  title: "Bannerbear API Reference — Async / Sync"
+  publisher: "Bannerbear"
+  accessed: 2026-10-10
+  claim: "主要异步模式提交后返回 202，可轮询或 webhook 取结果；另有同步模式。仅作为真实产品接口取舍，不声称教学 D1 与其全部语义一致。"
+  excerpt: excerpts/bannerbear-api-jobs.md
+
+- id: src-stripe-api-idempotency
+  url: "https://docs.stripe.com/api/idempotent_requests"
+  title: "Idempotent requests — Stripe API Reference"
+  publisher: "Stripe"
+  accessed: 2026-10-10
+  claim: "相同幂等标识用于恢复重复请求；文档区分 API v1/v2 失败语义，v1 参数比较与保留窗口。仅借鉴契约明确，不将其期限或计费规则移植到教学 API。"
+  excerpt: excerpts/stripe-api-idempotency.md
+
+- id: src-chrome-active-tab
+  url: "https://developer.chrome.com/docs/extensions/develop/concepts/activeTab"
+  title: "The activeTab permission"
+  publisher: "Google Chrome for Developers"
+  accessed: 2026-10-10
+  claim: "用户明确调用后临时获取当前标签主框架来源的访问，跨来源导航或关闭撤销；受限页面不可访问，脚本注入另需 scripting。不是持续全部站点访问。"
+  excerpt: excerpts/chrome-active-tab.md
+
+- id: src-chrome-worker-lifecycle
+  url: "https://developer.chrome.com/docs/extensions/develop/concepts/service-workers/lifecycle"
+  title: "The extension service worker lifecycle"
+  publisher: "Google Chrome for Developers"
+  accessed: 2026-10-10
+  claim: "Chrome 扩展 Service Worker 应能承受意外终止；关闭后全局变量丢失，应持久化需恢复状态。未将后台常驻或固定存活期限作为承诺。"
+  excerpt: excerpts/chrome-worker-lifecycle.md
+
+- id: src-chrome-extension-data
+  url: "https://developer.chrome.com/docs/webstore/program-policies/user-data-faq?hl=en"
+  title: "Updated Privacy Policy & Secure Handling Requirements"
+  publisher: "Google Chrome Web Store"
+  accessed: 2026-10-10
+  claim: "用户数据包括网页内容与个人通信，本地处理仍须披露；处理用户数据的产品至少需隐私政策与安全处理，显著说明和同意须按适用要求在产品内完成。"
+  excerpt: excerpts/chrome-extension-data.md
+
+- id: src-owen-extension-trust
+  url: "https://www.owenyoung.com/blog/fake-open-source"
+  title: "对“假开源”事件的反省"
+  publisher: "Owen Young"
+  accessed: 2026-10-10
+  claim: "作者于 2023-08-06 自述重写后闭源产品与旧开源项目、公开文档仓库的混淆，报告调整目录、README 和官网入口措辞。只作沟通与产品承诺案例，不裁定争议或采用文末许可法律概括。"
+  excerpt: excerpts/owen-extension-trust.md
+
+- id: src-chrome-remote-code
+  url: "https://developer.chrome.com/docs/extensions/develop/migrate/remote-hosted-code?hl=en"
+  title: "Deal with remote hosted code violations"
+  publisher: "Google Chrome for Developers"
+  accessed: 2026-10-10
+  claim: "Manifest V3 的远程托管代码规则涉及浏览器执行的外部 JavaScript/WASM及依赖；数据与代码有别，存在用途受限的特殊 API 情形，不以远端执行代码作为常规更新办法。"
+  excerpt: excerpts/chrome-remote-code.md

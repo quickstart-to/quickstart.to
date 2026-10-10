@@ -1,7 +1,7 @@
 ---
 title: 资源导航：带着一个问题，找到下一步材料
 description: 按找用户、发布、产品适配、反馈经营、交付恢复和名称许可整理资源，集中索引本书的样稿、演练与查询入口。
-order: 19
+order: 20
 volatility: high
 last_verified: 2026-10-10
 ---
@@ -41,17 +41,19 @@ last_verified: 2026-10-10
 | 想注册公司或询问税务 | [身份与主体](/go-global/entity)、[税务](/go-global/tax) | [一页主体方案](/go-global/entity#提交申请前写好一页主体方案)、[完整业务询问](/go-global/tax#带着一份完整问题去确认) |
 | 用户用不上，或发生故障 | [基础设施](/go-global/infrastructure)、[风控与账户安全](/go-global/risk) | 发布/恢复记录、账号依赖图和客服处理样例 |
 | 不知道下个月是否继续，或怎样停止服务 | [经营复盘与退出](/go-global/business-review) | [现金与时间演示](/go-global/business-review#review-demo-title)、[停服通知](/go-global/business-review#review-notice-title)和[收尾记录](/go-global/business-review#review-close-title) |
+| 想加 AI、开放接口或做插件 | [AI、API 与插件专项](/go-global/ai-api-extensions) | [输入与草稿](/go-global/ai-api-extensions#aap-sample-title)、[双向成本账](/go-global/ai-api-extensions#aap-cost-title)、[接入约定](/go-global/ai-api-extensions#aap-contract)与本地任务恢复 |
 | 产品确实需要手机原生能力 | [应用商店](/go-global/app-stores) | [测试记录与审核说明](/go-global/app-stores#把测试记录变成审核材料)、版本暂停演示 |
 
 </div>
 
 支付、主体和税务的最新条款不要从本页另抄一份。沿对应章的来源找到责任方原文，带着自己的产品、身份、地区和协议核对，能减少同一份资料在几处逐渐写成不同版本的问题。
 
-## 三份可以在本机跑的演练
+## 四份可以在本机跑的演练
 
 它们使用 Node.js 和合成数据，帮助观察一种容易被“运行成功”掩盖的失败。先读各章的执行说明与脚本，再在本机运行；都不需要填写平台密钥或真实客户资料。
 
 <div class="resource-drills">
+<div><h3>API 响应丢失与重复提交</h3><p>服务端可能已经开始处理，客户端却只看见断线。先读 <a href="/go-global/ai-api-extensions#aap-contract">D1 接入说明</a>，再<a href="/go-global/api-job-drill.mjs">下载演练</a>，观察原任务恢复、账号隔离和额度预留；使用固定模拟输出，不调用真实模型，内存记录随进程退出消失。</p></div>
 <div><h3>代码回退与数据恢复</h3><p>旧版本能重新打开，仍可能缺少备份之后的工作。先读<a href="/go-global/infrastructure#一次实际执行的隔离演练">六步演练</a>。</p><a href="/go-global/infrastructure-drill.mjs" download="infrastructure-drill.mjs">下载恢复脚本</a></div>
 <div><h3>付款、重投与退款</h3><p>改变事件顺序，检查绑定、重复与过期怎样影响权益。先读<a href="/go-global/payments#自己换一下事件顺序">交付模型</a>。</p><a href="/go-global/payment-delivery-drill.mjs" download="payment-delivery-drill.mjs">下载交付脚本</a></div>
 <div><h3>旧凭据撤销与服务恢复</h3><p>删掉文件不等于撤销旧访问；换了网页配置，也可能漏掉后台任务。先读<a href="/go-global/risk#动手看一次删文件为什么不够">凭据演练</a>。</p><a href="/go-global/credential-rotation-drill.mjs" download="credential-rotation-drill.mjs">下载凭据脚本</a></div>
@@ -205,9 +207,9 @@ last_verified: 2026-10-10
 
 本书的贯穿样例是浏览器工具。若你的产品不同，先检查发生变化的那部分：
 
-- **AI 产品：** 模型/地区可用性、输入数据安排、错误结果怎么处理、调用成本与滥用上限。现有合规和定价章提供部分判断方法，本书尚未给出完整的 AI 产品上线样例。
+- **AI 产品：** 模型/地区可用性、输入数据安排、错误结果怎么处理、调用成本与滥用上限。[AI、API 与插件专项](/go-global/ai-api-extensions)已用独立客服草稿展开模板比较、结果评估、数据边界与成本；未选定真实上游，也不把教学输出当模型测试成绩。
 - **团队或企业采购：** [团队采购与合同交付](/go-global/team-procurement)已展开操作者与批准人、试点范围、采购条件、合同责任和验收交接。它沿用本地处理的有限试点，真正的共享权限、系统接入或代运营仍需另定产品与服务范围。
-- **插件、扩展或 API：** 宿主政策、权限、版本兼容、限流和开发者接入会改变交付。本书的应用商店章聚焦手机应用，不能直接套用到所有分发平台。
+- **插件、扩展或 API：** 宿主政策、权限、版本兼容、限流和开发者接入会改变交付。[专项章](/go-global/ai-api-extensions)已交付任务 API 的接入约定、本地恢复演练和 Chrome 最小权限发布方案；其他宿主仍须按自身规则研究，不能套用手机应用或 Chrome 的条件。
 - **持续经营：** [持续获客](/go-global/growth)已比较搜索、社交视频、社区、合作、产品传播、应用市场、直接销售与投放，展开内容分发复盘和独立付费获客账；[经营复盘与退出](/go-global/business-review)把月度订单、现金与时间放在同一份记录中，再展开收尾。它们分开观察渠道效果与整体经营，不互相替代。
 
 如果新资料要求你先付费、安装工具或注册主体，先回到最初那个问题：它将帮你取得哪一项当前缺少的事实，或完成哪一件已经需要交付的工作？没有清楚答案时，保留链接就够了。
