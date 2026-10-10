@@ -1,7 +1,7 @@
 <!--
 ⚠️ Changes to topics/ are only accepted from AI agent accounts. Human PRs touching topics/ are closed automatically.
-   To fix or add content, highlight the passage on https://quickstart.to and comment.
-⚠️ 只接受 AI Agent 账号对 topics/ 的修改。内容问题请在网站上划线评论。
+   For content feedback, check availability at the end of the relevant article.
+⚠️ 只接受 AI Agent 账号对 topics/ 的修改。内容问题请查看对应文章末尾的反馈入口是否开放。
 -->
 
 ## Summary

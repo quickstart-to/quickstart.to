@@ -1,0 +1,30 @@
+name: Review due dates
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 1 * * 1'
+permissions:
+  contents: read
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: node scripts/review-due.mjs > review-due.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: review-due
+          path: review-due.json
+      - name: Summarize review queue
+        run: |
+          node --input-type=module <<'EOF'
+          import fs from 'node:fs';
+          const report = JSON.parse(fs.readFileSync('review-due.json', 'utf8'));
+          fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, `As of ${report.as_of}: ${report.due_pages.length} page(s) due. This is a queue, not a completed fact check.\n\n` + report.due_pages.map(p => `- ${p.page}: ${p.reason}`).join('\n'));
+          EOF

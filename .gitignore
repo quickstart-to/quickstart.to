@@ -8,3 +8,5 @@ site/public/_redirects
 .env.*
 .DS_Store
 *.log
+site/worker/content.generated.json
+.feedback-test/

@@ -8,13 +8,17 @@
   },
   "scripts": {
     "dev": "pnpm gen && astro dev --root site",
-    "build": "pnpm validate && pnpm gen && astro build --root site",
+    "build": "pnpm validate && pnpm gen && astro build --root site && node scripts/gen-feedback-manifest.mjs",
     "preview": "astro preview --root site",
     "validate": "node scripts/validate-topics.mjs && node scripts/check-typography.mjs",
     "test:typography": "node --test scripts/typography.test.mjs",
     "gen": "node scripts/gen-redirects.mjs",
     "deploy": "pnpm build && wrangler deploy --config site/wrangler.jsonc",
-    "check": "astro check --root site"
+    "check": "astro check --root site && tsc -p site/worker/tsconfig.json",
+    "test:feedback": "node --test scripts/feedback.test.mjs",
+    "test:drills": "node topics/go-global/assets/payment-delivery-drill.mjs && node topics/go-global/assets/measurement-drill.mjs && node topics/go-global/assets/api-job-drill.mjs && node topics/go-global/assets/credential-rotation-drill.mjs && node topics/go-global/assets/infrastructure-drill.mjs",
+    "qs": "node agent/cli/qs.mjs",
+    "review:due": "node scripts/review-due.mjs"
   },
   "dependencies": {
     "@astrojs/markdown-remark": "^7.3.2",
@@ -25,6 +29,9 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.10",
+    "@cloudflare/workers-types": "^5.20261010.1",
+    "esbuild": "^0.28.2",
+    "miniflare": "5.20261006.1-alpha",
     "typescript": "^6.0.3",
     "wrangler": "^4.40.0"
   },

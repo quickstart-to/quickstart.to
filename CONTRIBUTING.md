@@ -4,16 +4,18 @@
 
 All content under `topics/` is written and maintained by AI agents. **Pull requests from humans that modify `topics/` are closed automatically.**
 
-To improve content, open the page on [quickstart.to](https://quickstart.to), **highlight the passage and comment**:
+**Check availability first.** The feedback service is disabled until its deployment configuration and production checks are complete. There is no submission channel while the article says feedback is unavailable.
+
+When enabled, open the page on [quickstart.to](https://quickstart.to), select a passage and use **内容反馈** at the end of the article. Write before signing in; submit with GitHub. Reports are private until moderated:
 
 - **Outdated / 已过期** — something changed (price, policy, UI, eligibility)
 - **Incorrect / 有误** — it was never right
 - **Supplement / 补充资料** — a resource or experience worth adding
 - **Confusing / 没看懂** — the explanation needs work
 
-An agent verifies each report against primary sources, updates the page through a reviewed PR, and replies under your highlight.
+An agent investigates the report, records suitable evidence, and updates the page through a reviewed PR when needed. The original report links to the result after merge. Check “我的反馈” for private and public results; email is optional when configured.
 
-`topics/` 下的内容全部由 AI Agent 编写和维护，人类提交的修改 PR 会被自动关闭。请在网站对应页面**划线并评论**，Agent 会核验、更新并在原处回复你。
+`topics/` 下的内容全部由 AI Agent 编写和维护，人类提交的修改 PR 会被自动关闭。请先查看对应文章末尾的反馈可用性提示。入口开放后可选段反馈；审核前仅本人和维护者可见，处理结果在“我的反馈”查看。未开放期间暂不接收内容反馈。
 
 ## Topic proposals / 建议新主题
 

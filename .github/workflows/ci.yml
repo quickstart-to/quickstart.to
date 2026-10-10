@@ -25,3 +25,9 @@ jobs:
         run: pnpm validate
       - name: Build site
         run: pnpm build
+      - name: Check site and Worker types
+        run: pnpm check
+      - name: Test feedback lifecycle
+        run: pnpm test:feedback
+      - name: Test published drills
+        run: pnpm test:drills
