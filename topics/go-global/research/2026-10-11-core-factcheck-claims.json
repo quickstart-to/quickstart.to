@@ -384,5 +384,149 @@
     "result": "still true",
     "checked_on": "2026-10-11",
     "scope": "原作者经历按历史归属核对，产品路径只确认公开文档；没有登录实测、套餐比较或结果保证。"
+  },
+  {
+    "id": "02-launch-1",
+    "page": "chapters/02-launch.md",
+    "passage": "PostHog 联合创始人 James Hawkins 在 2024 年回顾早期获客时，写到一个容易被发布成绩遮住的过程。他们先从认识的人里寻找使用者，手工创建账号，帮助部署；发现真实使用里的问题后，才改成更容易自助部署的版本。随后通过群组、介绍等方式接触更多人，观察不认识他们的人会不会使用、会不会回来。[^src-posthog-first-users]",
+    "sources": [
+      "src-posthog-first-users"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "发布规则对照平台原文，经历按作者及历史背景核对；视频核对页面元信息、播放器时长及 YC 章节表/转录，未声称完整观看。"
+  },
+  {
+    "id": "02-launch-2",
+    "page": "chapters/02-launch.md",
+    "passage": "等到陌生人能够不靠创始人帮助用起来，团队才去 Hacker News 发布。这里有几个条件恰好连在一起：产品面向开发者，强调开源和自托管，也把部署门槛降了下来。公开发布把这个已经能运转的入口带给了更多相近的人。[^src-posthog-first-users]",
+    "sources": [
+      "src-posthog-first-users"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "发布规则对照平台原文，经历按作者及历史背景核对；视频核对页面元信息、播放器时长及 YC 章节表/转录，未声称完整观看。"
+  },
+  {
+    "id": "02-launch-3",
+    "page": "chapters/02-launch.md",
+    "passage": "也要看到他们有本例没有的条件。PostHog 接受融资，初期选择不收费，创始人投入强度很高；作者自己也说明，自筹资金时应更早考虑收费。一个每周只有两个晚上、准备异步支持的个人开发者，不能据此承诺随时在线，或把免费服务无限延长。[^src-posthog-first-users]",
+    "sources": [
+      "src-posthog-first-users"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "发布规则对照平台原文，经历按作者及历史背景核对；视频核对页面元信息、播放器时长及 YC 章节表/转录，未声称完整观看。"
+  },
+  {
+    "id": "02-launch-4",
+    "page": "chapters/02-launch.md",
+    "passage": "本轮读到的 Web Designer Forum 就提供了一个可以实际辨认的入口：它把自由职业与业务讨论、网站评审分成不同版面。前者适合观察设计师怎样经营和交付，后者的公开说明是请成员评审网站。两者能帮助回答的问题不同，不能看到“设计师社区”就把每个版面都当作产品招募区。[^src-webdesignerforum-boards]",
+    "sources": [
+      "src-webdesignerforum-boards"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "发布规则对照平台原文，经历按作者及历史背景核对；视频核对页面元信息、播放器时长及 YC 章节表/转录，未声称完整观看。"
+  },
+  {
+    "id": "02-launch-5",
+    "page": "chapters/02-launch.md",
+    "passage": "网站评审版的置顶规则说得更具体：只为宣传或获取链接的帖子，应放到分类广告区；它还列出至少 5 条帖子的参与门槛。这个页面最初发布于 2007 年，截至本次核验仍被置顶，但没有实际登录测试发帖权限。因此，这一晚能完成的是阅读和核对入口，不能把评审区当成注册后立即发布广告的地方，也不应为凑门槛灌水。[^src-webdesignerforum-review-rules]",
+    "sources": [
+      "src-webdesignerforum-review-rules"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "发布规则对照平台原文，经历按作者及历史背景核对；视频核对页面元信息、播放器时长及 YC 章节表/转录，未声称完整观看。"
+  },
+  {
+    "id": "02-launch-6",
+    "page": "chapters/02-launch.md",
+    "passage": "准备输入本身可能就是一道大门槛。V2EX 作者 loneranger1024 在 2025 年的聊天记录可视化复盘中，报告自己从小红书发现需求，也持续在那里推广；但复盘产品表现时，他把导出聊天记录的难度和上传私密资料的顾虑列为阻碍。这个国内消费工具不能证明海外工作室的需求，却具体展示了“感兴趣”之后还有哪些工作会让人停下来。[^src-v2ex-report-friction]",
+    "sources": [
+      "src-v2ex-report-friction"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "发布规则对照平台原文，经历按作者及历史背景核对；视频核对页面元信息、播放器时长及 YC 章节表/转录，未声称完整观看。"
+  },
+  {
+    "id": "02-launch-7",
+    "page": "chapters/02-launch.md",
+    "passage": "<strong>Show HN：</strong>作品需本人参与、能供人尝试；纯注册页或落地页不适合。准备直接演示，并留时间讨论；不要请朋友投票或评论。[^src-hn-show]",
+    "sources": [
+      "src-hn-show"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "发布规则对照平台原文，经历按作者及历史背景核对；视频核对页面元信息、播放器时长及 YC 章节表/转录，未声称完整观看。"
+  },
+  {
+    "id": "02-launch-8",
+    "page": "chapters/02-launch.md",
+    "passage": "<strong>Product Hunt：</strong>作者可以自行发布，无需另找 hunter。官方允许邀请访问和评论，但不能直接要求投票；这一做法不能原样搬到 Show HN。[^src-ph-launch]",
+    "sources": [
+      "src-ph-launch"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "发布规则对照平台原文，经历按作者及历史背景核对；视频核对页面元信息、播放器时长及 YC 章节表/转录，未声称完整观看。"
+  },
+  {
+    "id": "02-launch-9",
+    "page": "chapters/02-launch.md",
+    "passage": "<strong>Reddit：</strong>官方禁止重复或未经请求的大量互动，版主还会按本社区规则判断。先确认内容和位置，不把“推广低于某个比例”当成通行证，也不批量私信讨论参与者。[^src-reddit-spam]",
+    "sources": [
+      "src-reddit-spam"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "发布规则对照平台原文，经历按作者及历史背景核对；视频核对页面元信息、播放器时长及 YC 章节表/转录，未声称完整观看。"
+  },
+  {
+    "id": "02-launch-10",
+    "page": "chapters/02-launch.md",
+    "passage": "<strong>X：</strong>禁止批量、重复或无关的垃圾互动，以及操纵互动数据。围绕当前讨论作具体回应，不复制同一条推广回复去铺满帖子。[^src-x-authenticity]",
+    "sources": [
+      "src-x-authenticity"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "发布规则对照平台原文，经历按作者及历史背景核对；视频核对页面元信息、播放器时长及 YC 章节表/转录，未声称完整观看。"
+  },
+  {
+    "id": "02-launch-11",
+    "page": "chapters/02-launch.md",
+    "passage": "YC 的 Gustaf Alströmer 在下面这节课中，把找人、获得回应、演示、购买和开始使用分开讲。尤其是 8:45 开始的流程拆解，可以帮助读者把含糊的“推广没效果”拆成不同问题。这里采用的是步骤记录方法；片中的触达规模、创业公司关系网和销售假设，需要按自己的条件另行判断。[^src-yc-first-customers][^src-yc-first-customers-video]",
+    "sources": [
+      "src-yc-first-customers",
+      "src-yc-first-customers-video"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "发布规则对照平台原文，经历按作者及历史背景核对；视频核对页面元信息、播放器时长及 YC 章节表/转录，未声称完整观看。"
+  },
+  {
+    "id": "02-launch-12",
+    "page": "chapters/02-launch.md",
+    "passage": "V2EX 作者 bbbblue 在 2025 年的一条回复里报告，他们曾大量生成博客，搜索流量上升，却没给产品带来帮助；他自己怀疑内容与产品关系不够紧。这不是内容营销无效的证明，而是提醒我们：读完文章以后，读者是否还有使用产品的理由，需要单独检查。[^src-v2ex-traffic-lessons]",
+    "sources": [
+      "src-v2ex-traffic-lessons"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "发布规则对照平台原文，经历按作者及历史背景核对；视频核对页面元信息、播放器时长及 YC 章节表/转录，未声称完整观看。"
+  },
+  {
+    "id": "02-launch-13",
+    "page": "chapters/02-launch.md",
+    "passage": "Google 的入门指南也把有用、独有、易读的内容和清楚的标题、链接列为重点，并明确不保证收录或排名。先检查页面能否被发现和访问，再检查搜索表达与内容是否匹配；有人到了页面以后，仍然要回到前面的使用过程。站点地图不能代替这些工作。[^src-google-seo-starter]",
+    "sources": [
+      "src-google-seo-starter"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "发布规则对照平台原文，经历按作者及历史背景核对；视频核对页面元信息、播放器时长及 YC 章节表/转录，未声称完整观看。"
   }
 ]

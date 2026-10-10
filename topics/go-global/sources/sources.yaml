@@ -482,14 +482,14 @@
   url: https://news.ycombinator.com/showhn.html
   title: Show HN Guidelines
   publisher: Hacker News
-  accessed: 2026-10-10
+  accessed: 2026-10-11
   claim: Show HN须为本人参与且可供尝试的作品；不接收纯落地页；不要请朋友投票或评论
   excerpt: excerpts/hn-show.md
 - id: src-ph-launch
   url: https://www.producthunt.com/launch
   title: Product Hunt Launch Guide
   publisher: Product Hunt
-  accessed: 2026-10-09
+  accessed: 2026-10-11
   claim: 鼓励作者自行发布，不要求第三方hunter；不能直接要求投票；发布入口为Submit/New Product
   excerpt: excerpts/ph-launch.md
   archive: https://web.archive.org/web/20261009063530/https://www.producthunt.com/launch
@@ -504,21 +504,21 @@
   url: https://support.reddithelp.com/hc/en-us/articles/360043504051-Spam
   title: Spam
   publisher: Reddit Help
-  accessed: 2026-10-09
+  accessed: 2026-10-11
   claim: 禁止重复或未经请求的大量互动；社区另有规则且由版主判定，不存在本文可据以宣传的统一推广比例
   excerpt: excerpts/reddit-spam.md
 - id: src-x-authenticity
   url: https://help.x.com/en/rules-and-policies/authenticity
   title: Authenticity
   publisher: X Help Center
-  accessed: 2026-10-09
+  accessed: 2026-10-11
   claim: 禁止批量未经请求的回复/私信、重复内容及互刷互动；不得通过新账号绕过封禁
   excerpt: excerpts/x-authenticity.md
 - id: src-google-seo-starter
   url: https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=zh-cn
   title: 搜索引擎优化（SEO）入门指南
   publisher: Google Search Central
-  accessed: 2026-10-10
+  accessed: 2026-10-11
   claim: 不保证收录或排名；提供独有实用内容、描述性标题/链接、检查抓取与规范网址；站点地图不是排名保证；更改影响可能数小时至数月，通常需数周评估，且并非所有更改都有明显效果
   excerpt: excerpts/google-seo-starter.md
   archive: https://web.archive.org/web/20261010022314/https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=zh-cn
@@ -870,7 +870,7 @@
   url: https://posthog.com/founders/first-1000-users
   title: How we got our first 1,000 users
   publisher: James Hawkins · PostHog
-  accessed: 2026-10-10
+  accessed: 2026-10-11
   claim: 联合创始人2024年回顾从熟人手工帮助、简化部署、陌生人自助使用到Hacker News发布的历史过程；融资、免费和高强度支持是背景条件，不推导通用人数阈值或收入结果
   excerpt: excerpts/posthog-first-users.md
 
@@ -878,7 +878,7 @@
   url: https://www.webdesignerforum.co.uk/
   title: Forums - Web Designer Forum
   publisher: Web Designer Forum
-  accessed: '2026-10-09'
+  accessed: 2026-10-11
   claim: 公开首页分别设置Freelancing, Business and Legal Discussion及Website Reviews and Feedback版面；仅支持研究入口与版面目的，不代表成员需求、准许推广或已实际参与
   excerpt: excerpts/webdesignerforum-boards.md
 
@@ -886,7 +886,7 @@
   url: https://www.webdesignerforum.co.uk/topic/1997-website-review-rules/
   title: Website Review Rules
   publisher: Jo 90 · Web Designer Forum
-  accessed: 2026-10-10
+  accessed: 2026-10-11
   claim: 网站评审版仍置顶的2007年规则要求纯广告或获取链接帖子使用分类广告区，并列出至少5条帖子的参与门槛；仅核对公开规则，未登录测试当前发帖权限
   excerpt: excerpts/webdesignerforum-review-rules.md
 
@@ -894,7 +894,7 @@
   url: https://www.v2ex.com/t/1108613
   title: 从 0 到 2000 元，我花了 10 个月
   publisher: loneranger1024 · V2EX
-  accessed: '2026-10-09'
+  accessed: 2026-10-11
   claim: 作者2025-02-02复盘聊天记录可视化工具，从小红书发现线索并持续推广，认为导出记录门槛和上传隐私顾虑影响使用；仅为国内消费工具的作者自述，不证明海外需求或推广因果
   excerpt: excerpts/v2ex-report-friction.md
 
@@ -902,7 +902,7 @@
   url: https://www.ycombinator.com/library/Ip-how-to-get-your-first-customers
   title: How to get your first customers
   publisher: Gustaf Alströmer · Y Combinator
-  accessed: '2026-10-09'
+  accessed: 2026-10-11
   claim: YC配套文字与章节表区分找人、回应、演示、购买和开始使用；8分45秒为The sales funnel章节，仅借鉴过程记录，不沿用触达规模、样例转化率或所有企业均不应试用的建议
   excerpt: excerpts/yc-first-customers.md
 
@@ -910,7 +910,7 @@
   url: https://www.youtube.com/watch?v=hyYCn_kAngI
   title: How to Get Your First Customers | Startup School
   publisher: Y Combinator · YouTube
-  accessed: '2026-10-09'
+  accessed: 2026-10-11
   claim: 原站核对发布者、标题、2022-12-29发布日期及22分53秒时长；讲授内容以YC配套文字核对，未声称完整观看或保证各地可播放
   excerpt: excerpts/yc-first-customers-video.md
 
