@@ -15,6 +15,7 @@ import TaxMedia from '../../../../topics/go-global/assets/TaxMedia.astro';
 import AppStoreMedia from '../../../../topics/go-global/assets/AppStoreMedia.astro';
 import RiskMedia from '../../../../topics/go-global/assets/RiskMedia.astro';
 import PrivacyMedia from '../../../../topics/go-global/assets/PrivacyMedia.astro';
+import ResourceMedia from '../../../../topics/go-global/assets/ResourceMedia.astro';
 
 export async function getStaticPaths() {
   const paths = [];
@@ -57,4 +58,5 @@ const { Content } = await render(entry);
   {topic.id === 'go-global' && chapter.slug === 'app-stores' && <AppStoreMedia />}
   {topic.id === 'go-global' && chapter.slug === 'risk' && <RiskMedia />}
   {topic.id === 'go-global' && chapter.slug === 'compliance' && <PrivacyMedia />}
+  {topic.id === 'go-global' && chapter.slug === 'resources' && <ResourceMedia />}
 </TopicLayout>

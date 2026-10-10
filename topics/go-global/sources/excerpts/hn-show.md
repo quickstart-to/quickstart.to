@@ -7,3 +7,7 @@
 - 置信度：confirmed（官方公开文档；不是个案审核或实测）
 
 > Please don't ask friends to upvote or comment. That's not ok on HN.
+
+## 2026-10-10 资源导航核对
+
+重读完整规则，核对可实际尝试、自身参与、不要注册页/落地页、不要请朋友助推等；不保证受众适配或曝光。 原章节的 `last_verified` 不随本次入口核对更新。

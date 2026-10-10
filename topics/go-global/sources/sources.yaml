@@ -24,7 +24,7 @@
   url: https://www.w3.org/International/questions/qa-date-format
   title: "Date formats"
   publisher: W3C Internationalization
-  accessed: 2026-10-09
+  accessed: 2026-10-10
   claim: 纯数字日期存在歧义；可用明确月份及四位年份或说明格式，浏览器语言偏好不能直接代替文档上下文
   excerpt: excerpts/w3c-date-formats.md
 - id: src-mdn-datetime-constructor
@@ -461,7 +461,7 @@
   url: https://shaonan.blog/posts/20250413-flomo/
   title: flomo：一条长坡薄雪的道路
   publisher: 少楠 · flomo 联合创始人
-  accessed: 2026-10-09
+  accessed: 2026-10-10
   claim: 作者回顾初期表单收费及近一半纯支持付款，并报告第二年发现会员功能未被充分体验后转向引导、介绍与续费提醒；为归属明确的经历，不是独立验证的效果或海外需求
   excerpt: excerpts/flomo-pricing-learning.md
 - id: src-pinboard-pricing-change
@@ -482,7 +482,7 @@
   url: https://news.ycombinator.com/showhn.html
   title: Show HN Guidelines
   publisher: Hacker News
-  accessed: 2026-10-09
+  accessed: 2026-10-10
   claim: Show HN须为本人参与且可供尝试的作品；不接收纯落地页；不要请朋友投票或评论
   excerpt: excerpts/hn-show.md
 - id: src-ph-launch
@@ -518,7 +518,7 @@
   url: https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=zh-cn
   title: 搜索引擎优化（SEO）入门指南
   publisher: Google Search Central
-  accessed: 2026-10-09
+  accessed: 2026-10-10
   claim: 不保证收录或排名；提供独有实用内容、描述性标题/链接、检查抓取与规范网址；站点地图不是排名保证
   excerpt: excerpts/google-seo-starter.md
 - id: src-creem-trials
@@ -771,7 +771,7 @@
   url: https://www.intercom.com/blog/5-mistakes-we-all-make-with-product-feedback/
   title: 5 product feedback mistakes we all make
   publisher: Des Traynor · Intercom
-  accessed: 2026-10-09
+  accessed: 2026-10-10
   claim: 2014 年方法文章按使用阶段与待回答的问题选择反馈对象，将重复反馈视为待验证的假设，并追问请求背后的任务；不采用排除所有免费用户或仅凭直觉跳过验证的泛化建议
   excerpt: excerpts/intercom-feedback-mistakes.md
 - id: src-intercom-feature-support
@@ -867,7 +867,7 @@
   url: https://posthog.com/founders/first-1000-users
   title: How we got our first 1,000 users
   publisher: James Hawkins · PostHog
-  accessed: '2026-10-09'
+  accessed: 2026-10-10
   claim: 联合创始人2024年回顾从熟人手工帮助、简化部署、陌生人自助使用到Hacker News发布的历史过程；融资、免费和高强度支持是背景条件，不推导通用人数阈值或收入结果
   excerpt: excerpts/posthog-first-users.md
 
@@ -883,7 +883,7 @@
   url: https://www.webdesignerforum.co.uk/topic/1997-website-review-rules/
   title: Website Review Rules
   publisher: Jo 90 · Web Designer Forum
-  accessed: '2026-10-09'
+  accessed: 2026-10-10
   claim: 网站评审版仍置顶的2007年规则要求纯广告或获取链接帖子使用分类广告区，并列出至少5条帖子的参与门槛；仅核对公开规则，未登录测试当前发帖权限
   excerpt: excerpts/webdesignerforum-review-rules.md
 
@@ -1146,7 +1146,7 @@
   url: https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/recovering-your-account-if-you-lose-your-2fa-credentials
   title: "Recovering your account if you lose your 2FA credentials"
   publisher: "GitHub Docs"
-  accessed: "2026-10-09"
+  accessed: 2026-10-10
   claim: "可用恢复码、预先配置的其他认证或符合条件的恢复因素恢复；没有可用恢复方法时将永久失去访问，支持不能仅凭请求恢复；不承诺个案恢复时间"
   excerpt: excerpts/github-2fa-recovery.md
 
@@ -1173,3 +1173,25 @@
   accessed: "2026-10-09"
   claim: "第三条适用范围；第三十三条控制者知悉个人数据泄露后无不当延迟且可行时 72 小时内通知监管机关（不太可能构成权利自由风险例外），处理者及时告知控制者、控制者记录事件；第三十四条高风险个人告知及其例外"
   excerpt: excerpts/eurlex-gdpr-breach.md
+
+- id: src-w3c-easy-checks
+  url: https://www.w3.org/WAI/test-evaluate/easy-checks/
+  title: "Easy Checks – A First Review of Web Accessibility"
+  publisher: W3C Web Accessibility Initiative
+  accessed: 2026-10-10
+  claim: 入门检查入口覆盖图像替代文字、键盘焦点、缩放、页面语言、表单标签等，明确只覆盖部分问题，不能代替全面无障碍评估；旧 preliminary 页面把此入口称为新版草稿
+  excerpt: excerpts/w3c-easy-checks.md
+- id: src-wipo-brand-database
+  url: https://www.wipo.int/en/web/global-brand-database
+  title: "Global Brand Database"
+  publisher: WIPO
+  accessed: 2026-10-10
+  claim: 数据库说明列出参与的国家/地区等商标集合，可按关键词、名称、商品服务及图像等检索，同时提醒考虑国家或地区知识产权注册簿；这里只核对入口和覆盖说明，不判断任何名称可注册或可使用
+  excerpt: excerpts/wipo-brand-database.md
+- id: src-choose-a-license
+  url: https://choosealicense.com/
+  title: "Choose an open source license"
+  publisher: GitHub · Choose a License contributors
+  accessed: 2026-10-10
+  claim: 许可入门网站按社区、宽松许可或共享改进等需要引导至候选许可，并提醒核对依赖的许可；资源章仅介绍用途，不替具体产品选择许可或认定第三方素材可使用
+  excerpt: excerpts/choose-a-license.md
