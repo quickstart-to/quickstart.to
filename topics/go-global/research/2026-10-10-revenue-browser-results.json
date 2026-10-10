@@ -1,0 +1,147 @@
+{
+  "date": "2026-10-10",
+  "surface": "Local Ego TaskSpace 82",
+  "results": [
+    {
+      "views": 100000,
+      "rpm": 3,
+      "estimate": "300.00 美元",
+      "margin": "120.00 美元",
+      "time": "−24.00 美元",
+      "explanation": "100,000 ÷ 1000 × 3.00 = 300.00 美元。减去 180 美元费用和 144 美元时间估值，仍差 24.00 美元。这是基于预估收益的比较，不能当作银行余额；新增流量若增加费用，还要重新计算。",
+      "pass": true
+    },
+    {
+      "views": 200000,
+      "rpm": 3,
+      "estimate": "600.00 美元",
+      "margin": "420.00 美元",
+      "time": "276.00 美元",
+      "explanation": "200,000 ÷ 1000 × 3.00 = 600.00 美元。减去 180 美元费用和 144 美元时间估值，剩余 276.00 美元。这是基于预估收益的比较，不能当作银行余额；新增流量若增加费用，还要重新计算。",
+      "pass": true
+    },
+    {
+      "views": 100000,
+      "rpm": 1.5,
+      "estimate": "150.00 美元",
+      "margin": "−30.00 美元",
+      "time": "−174.00 美元",
+      "explanation": "100,000 ÷ 1000 × 1.50 = 150.00 美元。减去 180 美元费用和 144 美元时间估值，仍差 174.00 美元。这是基于预估收益的比较，不能当作银行余额；新增流量若增加费用，还要重新计算。",
+      "pass": true
+    },
+    {
+      "views": 0,
+      "rpm": 10,
+      "estimate": "0.00 美元",
+      "margin": "−180.00 美元",
+      "time": "−324.00 美元",
+      "explanation": "0 ÷ 1000 × 10.00 = 0.00 美元。减去 180 美元费用和 144 美元时间估值，仍差 324.00 美元。这是基于预估收益的比较，不能当作银行余额；新增流量若增加费用，还要重新计算。",
+      "pass": true
+    },
+    {
+      "views": 200000,
+      "rpm": 0,
+      "estimate": "0.00 美元",
+      "margin": "−180.00 美元",
+      "time": "−324.00 美元",
+      "explanation": "200,000 ÷ 1000 × 0.00 = 0.00 美元。减去 180 美元费用和 144 美元时间估值，仍差 324.00 美元。页面 RPM 为 0 时，单靠增加浏览量无法覆盖这些成本。这是基于预估收益的比较，不能当作银行余额；新增流量若增加费用，还要重新计算。",
+      "pass": true
+    },
+    {
+      "views": 200000,
+      "rpm": 10,
+      "estimate": "2000.00 美元",
+      "margin": "1820.00 美元",
+      "time": "1676.00 美元",
+      "explanation": "200,000 ÷ 1000 × 10.00 = 2000.00 美元。减去 180 美元费用和 144 美元时间估值，剩余 1676.00 美元。这是基于预估收益的比较，不能当作银行余额；新增流量若增加费用，还要重新计算。",
+      "pass": true
+    }
+  ],
+  "keyboard": {
+    "arrowViews": "100000 → 110000; 330.00 美元",
+    "tab": "revenue-rpm",
+    "arrowRpm": "3 → 2.5; −49.00 美元",
+    "tabEnterReset": "100000 / 3 / −24.00 美元, focus revenue-views",
+    "pass": true
+  },
+  "layout": {
+    "width": 390,
+    "scrollWidth": 375,
+    "tableRows": 7,
+    "tableCellDisplay": "block",
+    "branchColumns": "318px",
+    "controls": [
+      {
+        "id": "revenue-views",
+        "height": 44
+      },
+      {
+        "id": "revenue-rpm",
+        "height": 44
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "source-src-photopea-revenue-mix",
+      "href": "https://news.ycombinator.com/item?id=26769141"
+    },
+    {
+      "id": "source-src-axiaoxin-adsense-milestone",
+      "href": "https://blog.axiaoxin.com/post/new-adsense-1uaday/"
+    },
+    {
+      "id": "source-src-adsense-eligibility",
+      "href": "https://support.google.com/adsense/answer/9724?hl=en"
+    },
+    {
+      "id": "source-src-adsense-availability",
+      "href": "https://support.google.com/adsense/answer/13402307?hl=en"
+    },
+    {
+      "id": "source-src-adsense-program-policy",
+      "href": "https://support.google.com/adsense/answer/48182?hl=en"
+    },
+    {
+      "id": "source-src-adsense-rpm",
+      "href": "https://support.google.com/adsense/answer/190515?hl=en"
+    },
+    {
+      "id": "source-src-adsense-page-view",
+      "href": "https://support.google.com/adsense/answer/191124?hl=en"
+    },
+    {
+      "id": "source-src-adsense-earnings",
+      "href": "https://support.google.com/adsense/answer/9745?hl=en"
+    },
+    {
+      "id": "source-src-css-tricks-2020-revenue",
+      "href": "https://css-tricks.com/thank-you-2020-edition/"
+    },
+    {
+      "id": "source-src-ftc-affiliate-disclosure",
+      "href": "https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking"
+    }
+  ],
+  "narrow": {
+    "width": 320,
+    "scrollWidth": 305,
+    "overflow": false
+  },
+  "media": {
+    "dark": true,
+    "reduced": true,
+    "animation": "none",
+    "connector": "24px"
+  },
+  "noScript": {
+    "disabled": true,
+    "resetHidden": true,
+    "ready": null,
+    "estimate": "300.00 美元",
+    "time": "−24.00 美元",
+    "sourceCount": 10,
+    "sponsor": "A four-week sponsorship of the image-format guide",
+    "detailsOpen": true
+  }
+}

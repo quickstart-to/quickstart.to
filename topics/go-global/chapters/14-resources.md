@@ -1,7 +1,7 @@
 ---
 title: 资源导航：带着一个问题，找到下一步材料
 description: 按找用户、发布、产品适配、反馈经营、交付恢复和名称许可整理资源，集中索引本书的样稿、演练与查询入口。
-order: 17
+order: 18
 volatility: high
 last_verified: 2026-10-10
 ---
@@ -30,6 +30,7 @@ last_verified: 2026-10-10
 | 找到了入口，但不知道怎样开口 | [冷启动获客](/go-global/launch#先找到工作发生的地方) | [英文邀请](/go-global/launch#lc-invite-title)、[演示材料](/go-global/launch#lc-sample-title) |
 | 有人试过，却不知道该改什么 | [持续使用与迭代](/go-global/retention) | [逐人记录](/go-global/retention#retention-records-title)、[一轮有限投入决定](/go-global/retention#retention-decision-title) |
 | 发布以后，还该把时间花在哪里 | [持续获客](/go-global/growth) | [完整任务页](/go-global/growth#growth-page-title)、[触点归因演示](/go-global/growth#growth-demo-title)与六周复盘 |
+| 用户不直接购买，还能怎样经营 | [收入模式](/go-global/revenue-models) | [付款关系图](/go-global/revenue-models#revenue-map-title)、[广告收益演算](/go-global/revenue-models#revenue-demo-title)、[英语赞助范围](/go-global/revenue-models#revenue-sponsor-title)与联盟佣金记录 |
 | 想开始收费，但承诺说不清 | [定价与订阅](/go-global/pricing) | [完整英语报价](/go-global/pricing#pr-offer-title)、支持成本与权益时间线 |
 | 平台能否接、付款后怎样交付 | [收款与交付](/go-global/payments) | 本人路径比较、业务询问信与事件顺序演练 |
 | 平台数字对不上银行入账 | [提现与结汇](/go-global/payouts#用一张表解释到账差额) | [双币种对账互动](/go-global/payouts#po-demo-title)、查款问题 |

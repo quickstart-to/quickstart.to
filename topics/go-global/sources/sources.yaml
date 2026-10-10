@@ -1302,3 +1302,88 @@
   accessed: 2026-10-10
   claim: "2026 年 1 月讨论中 guangfa 关心长期维护、迁移成本与通用导出格式；作者 margoxlive 回应本地存储和计划中的导入导出。采用有归属的用户担忧与作者答复，不认为计划已落地或本地应用永远可用"
   excerpt: excerpts/v2ex-exit-portability.md
+
+- id: src-photopea-revenue-mix
+  url: https://news.ycombinator.com/item?id=26769141
+  title: "Hi guys, I am Ivan, the creator of Photopea :)"
+  publisher: "Ivan Kutskir (IvanK_net) · Hacker News"
+  accessed: 2026-10-10
+  claim: "2021-04-11 作者自述过去 12 个月约九成收入来自广告，其余来自付费隐藏广告和自托管授权；仅为历史收入结构自述，未独立审计或外推当前规模"
+  excerpt: excerpts/photopea-revenue-mix.md
+
+- id: src-axiaoxin-adsense-milestone
+  url: https://blog.axiaoxin.com/post/new-adsense-1uaday/
+  title: "【一人公司里程碑】全新企业AdSense账号历经28天，单日收入终于达到了1美元——正式进入1美元俱乐部！"
+  publisher: "阿小信的博客"
+  accessed: 2026-10-10
+  claim: "2025-09-20 作者报告新建多语言工具/内容站、申请企业 AdSense、持续改善内容功能后某日达到 1 美元；当时中国为主要流量来源，经历不证明审核或稳定利润"
+  excerpt: excerpts/axiaoxin-adsense-milestone.md
+
+- id: src-adsense-eligibility
+  url: https://support.google.com/adsense/answer/9724?hl=en
+  title: "Eligibility requirements for AdSense"
+  publisher: "Google AdSense Help"
+  accessed: 2026-10-10
+  claim: "官方要求原创高质量内容、符合政策、能够访问提交站点 HTML，申请者需达到年龄条件；资格要求不等于个案通过承诺"
+  excerpt: excerpts/adsense-eligibility.md
+  archive: https://web.archive.org/web/20261010040408/https://support.google.com/adsense/answer/9724?hl=en
+
+- id: src-adsense-program-policy
+  url: https://support.google.com/adsense/answer/48182?hl=en
+  title: "AdSense Program policies"
+  publisher: "Google AdSense Help"
+  accessed: 2026-10-10
+  claim: "禁止自身点击、人工膨胀展示/点击、普通非激励广告鼓励点击，以及误导为菜单/导航/下载的展示；网页与应用内 WebView 集成要求有别"
+  excerpt: excerpts/adsense-program-policy.md
+  archive: https://web.archive.org/web/20261010041225/https://support.google.com/adsense/answer/48182?hl=en
+
+- id: src-adsense-rpm
+  url: https://support.google.com/adsense/answer/190515?hl=en
+  title: "Revenue per thousand impressions (RPM)"
+  publisher: "Google AdSense Help"
+  accessed: 2026-10-10
+  claim: "RPM 为估计收益除以对应页面浏览、广告展示或查询数再乘 1000；页面 RPM 与广告展示 RPM 分母不同，不是实际已到账收益"
+  excerpt: excerpts/adsense-rpm.md
+
+- id: src-adsense-page-view
+  url: https://support.google.com/adsense/answer/191124?hl=en
+  title: "Page view"
+  publisher: "Google AdSense Help"
+  accessed: 2026-10-10
+  claim: "AdSense 页面浏览量按访问展示 Google 广告的页面计算，同页广告位数量不改变一次页面浏览的计数"
+  excerpt: excerpts/adsense-page-view.md
+
+- id: src-adsense-earnings
+  url: https://support.google.com/adsense/answer/9745?hl=en
+  title: "What's the difference between earnings and payments?"
+  publisher: "Google AdSense Help"
+  accessed: 2026-10-10
+  claim: "区分当月估计收益、扣除无效活动后的最终收益和含借贷调整的余额；不提供所有账户统一付款时间或到账承诺"
+  excerpt: excerpts/adsense-earnings.md
+  archive: https://web.archive.org/web/20261010041448/https://support.google.com/adsense/answer/9745?hl=en
+
+- id: src-css-tricks-2020-revenue
+  url: https://css-tricks.com/thank-you-2020-edition/
+  title: "Thank You (2020 Edition)"
+  publisher: "Chris Coyier · CSS-Tricks"
+  accessed: 2026-10-10
+  claim: "2020-12-31 作者自述流量创新高但疫情期间赞助预算缩减或取消，尝试电商未完全补上损失；这是历史经营复盘而非当前产品或收益承诺"
+  excerpt: excerpts/css-tricks-2020-revenue.md
+
+- id: src-ftc-affiliate-disclosure
+  url: https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking
+  title: "FTC's Endorsement Guides: What People Are Asking"
+  publisher: "US Federal Trade Commission"
+  accessed: 2026-10-10
+  claim: "美国背书指引 FAQ 说明联盟佣金等重要商业关系应清楚披露，靠近推荐更易发现；单写 affiliate link 未必足够，不能歪曲使用经历"
+  excerpt: excerpts/ftc-affiliate-disclosure.md
+  archive: https://web.archive.org/web/20261010041633/https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking
+
+- id: src-adsense-availability
+  url: https://support.google.com/adsense/answer/13402307?hl=en
+  title: "AdSense availability"
+  publisher: "Google AdSense Help"
+  accessed: 2026-10-10
+  claim: "官方可注册国家/地区表的 Asia Pacific 栏列有 China；地区列入不代替具体申请者、站点与收款资料的审核"
+  excerpt: excerpts/adsense-availability.md
+  archive: https://web.archive.org/web/20261010041346/https://support.google.com/adsense/answer/13402307?hl=en
