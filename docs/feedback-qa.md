@@ -16,6 +16,28 @@ The synthetic resolution explicitly says PR #10 predates the test report. This v
 
 `pnpm build`, `pnpm check`, all five Worker/D1 lifecycle tests and all six published drills passed. Production and staging dry-runs resolved to different D1 bindings. The actual PR preview deployment for `b698b3f` exposed only `ASSETS` and `FEEDBACK_ENABLED=false` in Cloudflare's deployment binding list; its config endpoint returned disabled and `/api/me` returned 503. Actual scheduled cleanup and production smoke checks remain pending in this record.
 
+## Scheduled-cleanup investigation — 2026-10-11
+
+Production feedback remains disabled in both the live deployment and this PR configuration. Successful HTTP/provider tests do not satisfy the cleanup gate.
+
+All times below are UTC on 2026-10-10 (the local acceptance date is 2026-10-11):
+
+- Staging version `a8c98996-f13a-40ef-8443-3758878b5632` was deployed at 16:50:19. Cloudflare's version API lists both `fetch` and `scheduled`; the runtime has the staging D1 binding, complete feedback configuration and no email sender.
+- After the hourly schedule did not produce an observed invocation, changed staging only to `* * * * *`. The schedules API reports creation/modification at 17:04:53.818695. The dashboard also displays every minute.
+- Inserted uniquely named, synthetic expired OAuth and rate-limit rows plus an unexpired control. At 17:36:30, both expired rows and the control remained. A connected private live tail recorded 21 HTTP events and no scheduled events. The HTTP configuration endpoint remained ready. This is stronger evidence than an empty Cron history alone.
+- Created a temporary independent Worker, `quickstart-to-cron-check`, with no assets, HTTP handler, secrets or feedback code. Its sole `scheduled` handler increments one synthetic counter in staging D1. Version `36727de9-d75d-4253-8922-de5c882d3b85` exposes only `scheduled`; its DB binding was confirmed. Its every-minute schedule was saved at 17:24:20.294047.
+
+- At 17:40:25 (more than 35 minutes after the staging schedule change and 16 minutes after the probe schedule was saved), the expired/control counts were still `1 / 1 / 1`, the probe counter was absent, and neither private tail had a scheduled event. The result is **not passed**; neither successful automatic invocation nor automatic deletion was established.
+- Restored staging to `0 * * * *` at 17:40:39.196438 and confirmed it through the schedules API. Deleted only the temporary probe Worker, then manually removed the three synthetic fixture keys; staging users, sessions, reports and those fixture counts were zero. This manual test-data cleanup is not acceptance evidence. Stopped private tails and removed their files and temporary credential copies; durable operator configuration remains outside Git.
+
+Cloudflare's [Cron Triggers documentation](https://developers.cloudflare.com/workers/configuration/cron-triggers/) was read in ego-browser on 2026-10-11: schedule changes can take up to 15 minutes to propagate, and a newly created Worker's past-event display can take up to 30 minutes. The D1 fixtures and private tail are therefore checked independently of the dashboard history. No dispatch root cause has been established; do not label this a Cloudflare-wide outage or claim manual deletion as scheduled cleanup.
+
+### Next diagnostic step
+
+Ask Cloudflare support to inspect dispatch for the two saved schedules and versions above. The narrow question is why no `scheduled` invocation or D1 effect was observed beyond the documented propagation window, despite the deployed handlers and schedule records. Supply the minimal scheduled-only reproduction if requested; do not send credentials, account exports or raw HTTP tails. No support message has been sent.
+
+After dispatch is understood, repeat the expired/unexpired fixture test and require both a successful real scheduled invocation and the expected D1 difference. Only then enable production feedback, verify the independent production OAuth/Turnstile setup and run the synthetic account/report/export/delete smoke check. Production activation is still pending.
+
 ## Local validation — 2026-10-10
 
 ## What was exercised

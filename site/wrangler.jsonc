@@ -19,7 +19,8 @@
   "observability": { "enabled": false },
   "logpush": false,
   "vars": {
-    "FEEDBACK_ENABLED": "true",
+    // Enable only after the real scheduled-cleanup acceptance in docs/feedback-qa.md.
+    "FEEDBACK_ENABLED": "false",
     "SITE_ORIGIN": "https://quickstart.to",
     "GITHUB_CLIENT_ID": "Ov23ctbRim2E89PPLXes"
   },
