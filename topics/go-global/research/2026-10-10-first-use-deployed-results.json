@@ -1,0 +1,60 @@
+[
+  {
+    "test": "deployed error",
+    "state": "error",
+    "focus": "first-hours",
+    "note": "Review ready — keep this note.",
+    "overflow": false
+  },
+  {
+    "test": "deployed partial",
+    "state": "partial",
+    "disabled": true,
+    "report": "Client update — Project North\nPARTIAL PREVIEW — Draft report row excluded.\n\nRecorded work\nResearch: 3 h\nIncluded subtotal: 3 h\n\nProject status: Review ready — keep this note.\nNext step: Ask the client for feedback.\n\nDraft for review. Not sent to the client."
+  },
+  {
+    "test": "deployed repaired",
+    "state": "ready",
+    "report": "Client update — Project North\n\nRecorded work\nResearch: 3 h\nDraft report: 2 h\nTotal: 5 h\n\nProject status: Review ready — keep this note.\nNext step: Ask the client for feedback.\n\nDraft for review. Not sent to the client.",
+    "disabled": false
+  },
+  {
+    "test": "deployed reset",
+    "state": "empty",
+    "note": "Draft ready for review.",
+    "focus": "good"
+  },
+  {
+    "test": "deployed nojs details",
+    "open": true,
+    "text": "不操作也能看懂：错误、排除与修复的三种结果\n\n工时为 3 和 two：第 3 行无法解释，停止生成，保留负责人已写的说明。明确排除该行：只得到 Research 的 3 小时，标明缺一行的局部预览，不开放完整导出。将 two 改成 2，并取消排除：两行共 5 小时，状态和下一步不变，得到下方完整草稿。若工时确实为 0，可显式填 0；不能用它代替尚未知道的值。\n\n只有表头：显示没有任务记录，保留手写说明，可换样本继续。这里重现的是输入检查与恢复过程，不是通用 CSV 解析器；编码、分隔符、复杂引号、大文件和真实文件导入仍需在产品中单独验证。",
+    "disabled": true,
+    "resetHidden": true
+  },
+  {
+    "test": "deployed input link",
+    "hash": "#first-input-title",
+    "heading": "输入准备，是产品替用户承担了多少工作"
+  },
+  {
+    "test": "deployed resource links",
+    "links": [
+      {
+        "text": "首次使用体验",
+        "href": "/go-global/first-use"
+      },
+      {
+        "text": "错误恢复演示",
+        "href": "/go-global/first-use#first-demo-title"
+      },
+      {
+        "text": "完整草稿",
+        "href": "/go-global/first-use#first-output-title"
+      },
+      {
+        "text": "求助样稿",
+        "href": "/go-global/first-use#first-help-title"
+      }
+    ]
+  }
+]
