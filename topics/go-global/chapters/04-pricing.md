@@ -125,18 +125,40 @@ last_verified: 2026-10-09
 
 先区分当前方案：本例是一次付款，产品自己记录 30 天的到期时间；用户无须取消未来扣款，因为没有自动续费。不要为了实现“用 30 天”，先建一个月订阅再打算事后取消。
 
-如果以后另设订阅，就要同时维护付款和访问权。下面另用一个周期为第 0 至第 30 天的教学订阅说明区别，并不表示自然月恒等于 30 天。Creem 当前文档支持立即取消及期末取消，后者在本期结束前保留访问权；产品仍要同步自己的权益。[^src-creem-refunds-cancellations][^src-creem-subscriptions]
+另设订阅后，还要决定失败时怎样对待正在使用的人。Patrick McKenzie 在讲述 Appointment Reminder 时写道，客户往往预先录入预约，之后很少登录；扣款失败就关掉服务，可能先影响他们的客户，而付费者还没看到提醒。他采用过三天宽限，并反思节假日前应人工检查停用决定。这是他在 2013 年背景下的经营经历，值得借鉴的是按任务影响安排恢复机会，三天本身并不是所有产品的标准。[^src-patrick-dunning-practice]
+
+**S-02 是另设的月订阅教学分支：每自然月 20 美元，本期为 2026 年 10 月 1 日至 11 月 1 日，所有时刻按 UTC 00:00。** 它继续只生成本地报告，不新增云端历史；未实际销售，也没有把原通行证客户转成订阅。若 11 月续费失败，本例给予从 11 月 1 日起 72 小时的生成宽限。到 11 月 4 日仍未确认付款，就停止生成新报告，但保留登录、账单管理和求助入口；已导出的本地文件不受影响。
+
+选择有限宽限，是让正在准备汇报的人有机会处理付款，又不让未付款交付无限延长。与 Appointment Reminder 不同，本例不会自动替客户发送预约消息，停止的是新报告生成；它也不承诺保存用户尚未导出的浏览器草稿。若你的产品承担后台定时任务，先把停用会影响谁、未完成任务如何交接写清楚，不能原样搬走这段政策。
 
 <figure class="pr-media pr-timeline" aria-labelledby="pr-timeline-title" aria-describedby="pr-timeline-caption">
-  <h3 id="pr-timeline-title">第 20 天不想再续费，不等于本期已经结束</h3>
+  <h3 id="pr-timeline-title">扣款失败后，仍留一条回到正常使用的路</h3>
   <ol>
-    <li><strong>第 0 天 · 本期已付款</strong><span>记录这笔订单；访问权持续到本期到期时间。</span></li>
-    <li><strong>第 20 天 · 选择期末取消</strong><span>未来续费关闭；本期访问权继续。向客户确认具体结束时间。</span></li>
-    <li><strong>第 30 天 · 周期结束</strong><span>不收下一期费用；结束本期访问权。已导出的结果仍按原承诺保留。</span></li>
+    <li><strong>11 月 1 日 · 续费未成功</strong><span>进入 72 小时教学宽限；解释金额、截止时刻和付款管理入口。</span><span>宽限内确认付清 → 直接恢复本期使用，无须先等到限制状态。</span></li>
+    <li><strong>11 月 4 日 · 仍未确认付款</strong><span>限制生成；登录、求助和付款管理仍可用。</span></li>
+    <li><strong>客户更新付款方式</strong><span>→ 核实这期是否真正付清。只有返回页面或更新卡资料，仍保持待确认。</span></li>
+    <li><strong>11 月这期付款确认</strong><span>→ 恢复生成至 12 月 1 日。无论宽限期间还是限制后补付，都回到同一期结束时间。</span></li>
   </ol>
-  <aside><strong>另一路：申请退款 → 核对退款结果 → 单独核对续费与权益</strong><p>本例的全额退款政策会结束付费使用权；这需要自己的业务规则执行。不要从“退款请求已提交”直接推断钱已退回，或下一期不会扣款。</p></aside>
-  <figcaption id="pr-timeline-caption">期末取消保留本期访问，退款则需要另一组决定。付款、是否继续续费和当前能否使用，要各自有可核对的状态。</figcaption>
+  <aside><strong>另一条路：客户主动选择期末取消</strong><p>确认取消安排后，本期已付款的使用权保留到期，不再安排下一期续费。退款另外核对，不能由“取消”推断已退钱。</p></aside>
+  <figcaption id="pr-timeline-caption">S-02 的产品访问规则。72 小时是教学选择，平台是否重试扣款与产品是否继续提供服务需要分别确认。</figcaption>
 </figure>
+
+截至 2026-10-10，Creem 的退款/取消页描述失败付款后的宽限与重试，webhook 页则要求应用按自己的策略处理未付款访问；本轮没有核实适用于所有账户的固定宽限期限。文档明确区分立即取消与期末取消，后者保留本期访问。接入时先确认账户的实际扣款安排，再把自己的宽限规则写进报价与产品，不能把 webhook 的投递重试时间表写成客户银行卡的重试日程。[^src-creem-refunds-cancellations][^src-creem-webhooks]
+
+给使用英语的客户发消息时，金额、具体时区和产品影响应在一封信里说清楚。下面是本例可改写的草稿，付款管理链接由产品服务端生成；请客户到受控门户更新资料，不在邮件里索取卡号。
+
+<details class="pr-media">
+<summary>S-02：一封续费失败通知草稿</summary>
+<div lang="en">
+<p><strong>Subject: Please check your Client Update renewal</strong></p>
+<p>We could not confirm the US$20 renewal for 1 November–1 December 2026. This does not mean you chose to cancel.</p>
+<p>You can keep generating reports until 4 November 2026 at 00:00 UTC while this is being resolved. After that, new report generation pauses; you can still sign in, manage billing and contact us. Files you already exported stay on your device.</p>
+<p>Open Billing in your account to review the payment status and update your payment method if needed. Please do not email card details. Updating a card alone does not confirm payment; your account will show when this billing period is paid and access has resumed.</p>
+<p>If the charge appears on your statement but access has not resumed, reply with the invoice reference. Please do not pay again while we check it. We aim to reply within two working days, Monday–Friday, UTC+8.</p>
+</div>
+</details>
+
+宽限解决的是一次付款障碍。若用户选择不再购买，仍要回到前面的 flomo 案例：是这次没有任务，还是付费价值从未被体验？把自愿取消、失败扣款和仍待确认分别记录，才知道该改产品、报价还是支付恢复。具体账单与乱序事件的处理，接到[收款章的 S-02 演练](/go-global/payments#subscription-recovery)。
 
 试用也一样。这里的无卡样稿只是产品演示；截至 2026-10-09，Creem 免费试用会验证并保存卡，期满自动收常规价格，试用期取消则不收取之后的订阅费。付费试用会先收试用费，取消不会自动退还它。修改产品试用设置只影响之后创建的订阅。[^src-creem-trials]
 

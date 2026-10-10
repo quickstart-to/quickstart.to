@@ -1,0 +1,110 @@
+{
+  "example": "S-02 synthetic monthly subscription",
+  "passed": true,
+  "observations": [
+    {
+      "step": "October paid period",
+      "checkedAt": "2026-10-01T00:00:00.000Z",
+      "access": "paid",
+      "until": "2026-11-01T00:00:00.000Z",
+      "paidInvoices": [
+        "S02-OCT"
+      ],
+      "refundedInvoices": [],
+      "cancelAt": null
+    },
+    {
+      "step": "Renewal failed; 72-hour application grace",
+      "checkedAt": "2026-11-01T00:00:00.000Z",
+      "access": "grace",
+      "until": "2026-11-04T00:00:00.000Z",
+      "paidInvoices": [
+        "S02-OCT"
+      ],
+      "refundedInvoices": [],
+      "cancelAt": null
+    },
+    {
+      "step": "Grace ends exactly at boundary",
+      "checkedAt": "2026-11-04T00:00:00.000Z",
+      "access": "limited",
+      "until": null,
+      "paidInvoices": [
+        "S02-OCT"
+      ],
+      "refundedInvoices": [],
+      "cancelAt": null
+    },
+    {
+      "step": "Card updated; payment still unconfirmed",
+      "checkedAt": "2026-11-04T08:00:00.000Z",
+      "access": "limited",
+      "until": null,
+      "paidInvoices": [
+        "S02-OCT"
+      ],
+      "refundedInvoices": [],
+      "cancelAt": null
+    },
+    {
+      "step": "Payment confirmed for November, not a new 30 days",
+      "checkedAt": "2026-11-04T08:05:00.000Z",
+      "access": "paid",
+      "until": "2026-12-01T00:00:00.000Z",
+      "paidInvoices": [
+        "S02-OCT",
+        "S02-NOV"
+      ],
+      "refundedInvoices": [],
+      "cancelAt": null
+    },
+    {
+      "step": "Duplicates, stale failure/expiry and October refund",
+      "checkedAt": "2026-11-05T00:00:00.000Z",
+      "access": "paid",
+      "until": "2026-12-01T00:00:00.000Z",
+      "paidInvoices": [
+        "S02-OCT",
+        "S02-NOV"
+      ],
+      "refundedInvoices": [
+        "S02-OCT"
+      ],
+      "cancelAt": null
+    },
+    {
+      "step": "Period-end cancellation confirmed",
+      "checkedAt": "2026-11-20T00:00:00.000Z",
+      "access": "paid",
+      "until": "2026-12-01T00:00:00.000Z",
+      "paidInvoices": [
+        "S02-OCT",
+        "S02-NOV"
+      ],
+      "refundedInvoices": [
+        "S02-OCT"
+      ],
+      "cancelAt": "2026-12-01T00:00:00.000Z"
+    },
+    {
+      "step": "December: no paid period and cancellation reached",
+      "checkedAt": "2026-12-01T00:00:00.000Z",
+      "access": "limited",
+      "until": null,
+      "paidInvoices": [
+        "S02-OCT",
+        "S02-NOV"
+      ],
+      "refundedInvoices": [
+        "S02-OCT"
+      ],
+      "cancelAt": "2026-12-01T00:00:00.000Z"
+    }
+  ],
+  "branches": {
+    "currentFullRefund": "limited; old paid fact cannot reopen",
+    "refundBeforePayment": "limited",
+    "invalidBinding": "rejected without mutation"
+  },
+  "limits": "Local sequential ledger only; no provider calls, scheduler, production adapter, concurrent storage or real delivery."
+}

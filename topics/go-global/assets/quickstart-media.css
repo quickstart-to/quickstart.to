@@ -123,3 +123,14 @@
   .gg-video-mount { aspect-ratio: 16 / 9; }
   .gg-question, .gg-action { padding: .65rem; }
 }
+
+#business-roadmap > summary { cursor: pointer; font-weight: 600; }
+#business-roadmap[open] > summary { margin-bottom: 1rem; }
+@media (max-width: 600px) {
+  #business-roadmap table, #business-roadmap tbody, #business-roadmap tr, #business-roadmap td { display: block; }
+  #business-roadmap thead { display: none; }
+  #business-roadmap table { border: 0; }
+  #business-roadmap tr { border: 1px solid var(--border); margin: .8rem 0; }
+  #business-roadmap td { border: 0; padding: .5rem .7rem; }
+  #business-roadmap td:first-child { font-weight: 600; background: var(--bg-soft); }
+}

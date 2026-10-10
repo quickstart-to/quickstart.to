@@ -7,6 +7,8 @@ last_verified: 2026-10-09
 
 把网站翻成英文、部署到海外，再接上支付，就算开始出海了吗？这些工作做完，产品确实有了服务海外用户的可能。但打开网站的人为什么需要它，又为什么愿意把自己的事情交给你，仍然需要另找答案。
 
+书名里的“月入 1 万美元”是经营目标，不是完成教程后的收入承诺。下面按“验证需求 → 首次付费交付 → 持续使用与收入 → 经营余量”逐步展开；每一步都可能得出缩小或停止投入的决定。[查看阶段与数字口径](#business-milestones)。
+
 <section class="topic-map" data-topic-map aria-labelledby="go-global-map-title">
 <p class="map-eyebrow">全书脑图</p>
 <h2 id="go-global-map-title">先看全景，再选你要走的一枝</h2>
@@ -92,7 +94,7 @@ last_verified: 2026-10-09
 </nav>
 <figcaption id="map-caption">连线表示主题归属，可以按当前问题跳读。数据、支付和主体等准备，应在相应业务发生前处理。</figcaption>
 </figure>
-<p class="map-scope" id="map-pending">脑图连接的是已经写出的章节；订阅恢复、AI 结果实测与团队长期交付仍待深化。<a href="/go-global/resources#这些问题目前还没有完整操作篇">查看现有材料与待补部分</a>。</p>
+<p class="map-scope" id="map-pending">脑图连接的是已经写出的章节；Web 订阅已补本地恢复演练；真实支付联调、原生购买恢复、AI 结果实测与团队长期交付仍待深化。<a href="/go-global/resources#这些问题目前还没有完整操作篇">查看现有材料与待补部分</a>。</p>
 <p class="map-scope">本书聚焦软件与数字产品。跨境实物电商、物流和融资不在当前范围内。</p>
 </section>
 
@@ -105,6 +107,24 @@ last_verified: 2026-10-09
 正文阅读约 20–25 分钟，互动示例可随读随试，视频按需观看；招募、开发和等待真实任务发生，需要另留时间。
 
 已经带着具体问题来查资料，可以直接打开[资源导航](/go-global/resources)，按任务找样稿、演练和原始材料。
+
+<details class="gg-media" id="business-roadmap">
+<summary>从第一轮验证走向月度收入，分别要拿到什么结果</summary>
+
+<span id="business-milestones" aria-hidden="true"></span>
+
+| 你目前的阶段 | 下一项可核对结果 | 接着读 |
+|---|---|---|
+| 还不知道该做什么 | 看见原任务和替代办法，完成一次有限试用，形成继续、调整或停止的理由 | 本篇，以及[选品与验证](/go-global/validate-idea) |
+| 已有人使用，准备收费 | 明确谁为什么付款；完成报价、付款确认、实际交付、退款与本人回款的核对 | [收入模式](/go-global/revenue-models)、[定价](/go-global/pricing)、[收款](/go-global/payments)、[提现](/go-global/payouts) |
+| 已有付费，想持续经营 | 区分再次需要、独立完成、继续购买与支付失败；算清获取和服务一位客户的投入 | [持续使用](/go-global/retention)、[持续获客](/go-global/growth)、[客服](/go-global/customer-support) |
+| 想扩大到更高月度收入 | 同时核对订单、退款、到账、交付成本和时间，决定扩张、收缩或停止 | [经营复盘](/go-global/business-review) |
+
+这里用**当月销售额扣除退款、不含代收交易税**讨论 1 万美元的规模；它不是扣完费用和税负的利润，也不是银行到账或个人可支配收入。纯算术上，每笔 20 美元且没有退款，需要 500 笔才得到 1 万美元；这既没有证明能找到 500 位买家，也没有说明你承担得起服务。换成自动续费，还要区分本期应收与真正付清，不能把失败扣款记成已取得收入。各章用独立教学批次说明这些差别，不拼成一条虚构的赚钱记录。
+
+数据、主体和适用经营义务仍在相应行为发生前处理；阶段表不表示等赚到某个金额后才需要核对。
+
+</details>
 
 ![开发者在视频交流中停笔倾听，对方指出报告上的一处问题，笔记本中留下对应标记。](./assets/listen-build-learn-v4.png)
 
