@@ -1887,3 +1887,59 @@
   accessed: 2026-10-10
   claim: KCS v6 方法主张在文章复用时核查和改善内容并建立反馈纠正机制；未采用统计数字或承诺本例支持量下降
   excerpt: excerpts/kcs-reuse-review.md
+
+- id: src-segment-measurement-plan
+  url: "https://www.twilio.com/docs/segment/protocols/tracking-plan/best-practices"
+  title: "Data Collection Best Practices"
+  publisher: "Twilio · Segment"
+  accessed: "2026-10-10"
+  claim: "建议从业务目标定义少量核心事件，保持事件与属性命名稳定；也说明先多采集再分析有不同利弊"
+  excerpt: "excerpts/segment-measurement-plan.md"
+
+- id: src-posthog-autocapture-scope
+  url: "https://posthog.com/docs/product-analytics/autocapture"
+  title: "Autocapture"
+  publisher: "PostHog"
+  accessed: "2026-10-10"
+  claim: "交互自动采集可以配置 URL/元素/属性筛选；关闭交互自动采集不等于关闭导航采集，表单值并非全部自动采集"
+  excerpt: "excerpts/posthog-autocapture-scope.md"
+
+- id: src-stripe-measurement-webhooks
+  url: "https://docs.stripe.com/webhooks"
+  title: "Receive Stripe events in your webhook endpoint"
+  publisher: "Stripe"
+  accessed: "2026-10-10"
+  claim: "事件可能重复且不保证生成顺序；需验签、记录事件 ID 并按业务对象识别重复，本文不涉及准入推荐"
+  excerpt: "excerpts/stripe-measurement-webhooks.md"
+
+- id: src-ms-experiment-srm
+  url: "https://www.microsoft.com/en-us/research/articles/diagnosing-sample-ratio-mismatch-in-a-b-testing/"
+  title: "Diagnosing Sample Ratio Mismatch in A/B Testing"
+  publisher: "Microsoft Experimentation Platform"
+  accessed: "2026-10-10"
+  claim: "2020 年原团队描述 MSN 轮播试验中活跃用户被机器人过滤，结果在排查后翻转；SRM 是诊断信号，不是简单看两组比例是否相等"
+  excerpt: "excerpts/ms-experiment-srm.md"
+
+- id: src-meituan-experiment-unit
+  url: "https://tech.meituan.com/2023/08/24/AB-test-practice-in-meituan.html"
+  title: "如何提供一个可信的AB测试解决方案"
+  publisher: "王鹏、永斌、中锋 · 美团技术团队"
+  accessed: "2026-10-10"
+  claim: "2023 年履约实践说明区域间共享运力、样本单位和分析单位改变实验设计及方差估计；不能把重复行为当独立样本"
+  excerpt: "excerpts/meituan-experiment-unit.md"
+
+- id: src-miller-peeking
+  url: "https://www.evanmiller.org/how-not-to-run-an-ab-test.html"
+  title: "How Not To Run an A/B Test"
+  publisher: "Evan Miller"
+  accessed: "2026-10-10"
+  claim: "固定样本检验反复看显著性并见好就停会增加假阳性；提供每组样本量 n≈16p(1−p)/δ² 的粗略规划规则，不是通用试验计算器"
+  excerpt: "excerpts/miller-peeking.md"
+
+- id: src-miller-sample-planning
+  url: "https://www.evanmiller.org/ab-testing/sample-size.html#!20;80;5;5;0"
+  title: "Sample Size Calculator"
+  publisher: "Evan Miller"
+  accessed: "2026-10-10"
+  claim: "2026-10-10 在页面核对基线 20%、绝对 MDE 5 个百分点、功效 80%、显著性 5% 时显示每组 1030；本文粗估规则为 1024，不能误称与该计算器完全相同"
+  excerpt: "excerpts/miller-sample-planning.md"

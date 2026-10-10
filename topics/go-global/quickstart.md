@@ -46,6 +46,7 @@ last_verified: 2026-10-09
 <li><a href="/go-global/infrastructure"><strong>基础设施</strong><span>访问、邮件、发布与恢复</span></a></li>
 <li><a href="/go-global/first-use"><strong>首次使用体验</strong><span>输入、空态、报错与完整输出</span></a></li>
 <li><a href="/go-global/retention"><strong>持续使用与迭代</strong><span>回访、任务机会与改进取舍</span></a></li>
+<li><a href="/go-global/product-measurement"><strong>产品测量与试验</strong><span>事件、报表与改版判断</span></a></li>
 <li><a href="/go-global/customer-support"><strong>客服与服务运营</strong><span>求助、跟进、结案与支持容量</span></a></li>
 <li><a href="/go-global/ai-api-extensions"><strong>AI、API 与插件专项</strong><span>结果评估、成本、任务恢复与宿主权限</span></a></li>
 <li><a href="/go-global/app-stores"><strong>应用商店路线</strong><span>手机应用的测试、审核与更新</span></a></li>
@@ -89,7 +90,7 @@ last_verified: 2026-10-09
 </nav>
 <figcaption id="map-caption">连线表示主题归属，可以按当前问题跳读。数据、支付和主体等准备，应在相应业务发生前处理。</figcaption>
 </figure>
-<p class="map-scope" id="map-pending">脑图连接的是已经写出的章节。产品测量，以及搜索、邮件和非英语市场的具体运营，还没有完整操作篇；<a href="/go-global/resources#这些问题目前还没有完整操作篇">查看现有材料与待补部分</a>。</p>
+<p class="map-scope" id="map-pending">脑图连接的是已经写出的章节。搜索、邮件和非英语市场的具体运营，还没有完整操作篇；<a href="/go-global/resources#这些问题目前还没有完整操作篇">查看现有材料与待补部分</a>。</p>
 <p class="map-scope">本书聚焦软件与数字产品。跨境实物电商、物流和融资不在当前范围内。</p>
 </section>
 

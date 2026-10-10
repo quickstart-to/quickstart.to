@@ -1,7 +1,7 @@
 ---
 title: 名称、素材与代码权利：让发布包里的每一项都有来路
 description: 从一次发布前的清点出发，处理产品命名、图片字体、代码依赖、外包与 AI 内容，做出有证据、有取舍、能随版本更新的权利台账。
-order: 20
+order: 21
 volatility: high
 last_verified: 2026-10-10
 slug: rights-clearance

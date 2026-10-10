@@ -1,0 +1,256 @@
+{
+  "reportControls": [
+    {
+      "view": "raw",
+      "result": "粗报：7 条 export_ready ÷ 7 条 task_started = 100%。付款通知相加 60 USD；减退款 20 USD 后显示 40 USD。这里混入了重复、测试、旧语义和拒收记录，不能当完成率或收入。",
+      "late": "粗报未筛选"
+    },
+    {
+      "view": "revised",
+      "result": "迟到修订：13 条记录计入；6 次任务中，3 次已生成可导出文件（50.0%），1 次有阻塞且未见成功，2 次结果未知。付款 40 USD − 已确认退款 20 USD = 净收 20 USD，未扣费用，未核对到账。",
+      "late": "计入"
+    },
+    {
+      "view": "clean",
+      "result": "初报：12 条记录计入；6 次任务中，2 次已生成可导出文件（33.3%），1 次有阻塞且未见成功，3 次结果未知。付款 40 USD − 已确认退款 20 USD = 净收 20 USD，未扣费用，未核对到账。",
+      "late": "迟到"
+    },
+    {
+      "keyboardReset": true
+    },
+    {
+      "keyboardDisclosure": true
+    }
+  ],
+  "sampleControls": [
+    {
+      "delta": "0.02",
+      "traffic": "20",
+      "result": "基线 20% → 目标 22%，增加 2 个百分点。粗估每组约 6400 个独立单位，两组约 12800 个；每周 20 个合格新单位，约需 640.0 周入组，再等最后一批完成观察窗口。这是规模估计，不是试验胜率或建议运行时长。",
+      "bar": "4 周预计 80 个 / 粗估所需 12800 个"
+    },
+    {
+      "delta": "0.02",
+      "traffic": "100",
+      "result": "基线 20% → 目标 22%，增加 2 个百分点。粗估每组约 6400 个独立单位，两组约 12800 个；每周 100 个合格新单位，约需 128.0 周入组，再等最后一批完成观察窗口。这是规模估计，不是试验胜率或建议运行时长。",
+      "bar": "4 周预计 400 个 / 粗估所需 12800 个"
+    },
+    {
+      "delta": "0.02",
+      "traffic": "500",
+      "result": "基线 20% → 目标 22%，增加 2 个百分点。粗估每组约 6400 个独立单位，两组约 12800 个；每周 500 个合格新单位，约需 25.6 周入组，再等最后一批完成观察窗口。这是规模估计，不是试验胜率或建议运行时长。",
+      "bar": "4 周预计 2000 个 / 粗估所需 12800 个"
+    },
+    {
+      "delta": "0.05",
+      "traffic": "20",
+      "result": "基线 20% → 目标 25%，增加 5 个百分点。粗估每组约 1024 个独立单位，两组约 2048 个；每周 20 个合格新单位，约需 102.4 周入组，再等最后一批完成观察窗口。这是规模估计，不是试验胜率或建议运行时长。",
+      "bar": "4 周预计 80 个 / 粗估所需 2048 个"
+    },
+    {
+      "delta": "0.05",
+      "traffic": "100",
+      "result": "基线 20% → 目标 25%，增加 5 个百分点。粗估每组约 1024 个独立单位，两组约 2048 个；每周 100 个合格新单位，约需 20.5 周入组，再等最后一批完成观察窗口。这是规模估计，不是试验胜率或建议运行时长。",
+      "bar": "4 周预计 400 个 / 粗估所需 2048 个"
+    },
+    {
+      "delta": "0.05",
+      "traffic": "500",
+      "result": "基线 20% → 目标 25%，增加 5 个百分点。粗估每组约 1024 个独立单位，两组约 2048 个；每周 500 个合格新单位，约需 4.1 周入组，再等最后一批完成观察窗口。这是规模估计，不是试验胜率或建议运行时长。",
+      "bar": "4 周预计 2000 个 / 粗估所需 2048 个"
+    },
+    {
+      "delta": "0.1",
+      "traffic": "20",
+      "result": "基线 20% → 目标 30%，增加 10 个百分点。粗估每组约 256 个独立单位，两组约 512 个；每周 20 个合格新单位，约需 25.6 周入组，再等最后一批完成观察窗口。这是规模估计，不是试验胜率或建议运行时长。",
+      "bar": "4 周预计 80 个 / 粗估所需 512 个"
+    },
+    {
+      "delta": "0.1",
+      "traffic": "100",
+      "result": "基线 20% → 目标 30%，增加 10 个百分点。粗估每组约 256 个独立单位，两组约 512 个；每周 100 个合格新单位，约需 5.1 周入组，再等最后一批完成观察窗口。这是规模估计，不是试验胜率或建议运行时长。",
+      "bar": "4 周预计 400 个 / 粗估所需 512 个"
+    },
+    {
+      "delta": "0.1",
+      "traffic": "500",
+      "result": "基线 20% → 目标 30%，增加 10 个百分点。粗估每组约 256 个独立单位，两组约 512 个；每周 500 个合格新单位，约需 1.0 周入组，再等最后一批完成观察窗口。这是规模估计，不是试验胜率或建议运行时长。",
+      "bar": "4 周预计 2000 个 / 粗估所需 512 个"
+    },
+    {
+      "keyboardSelect": true
+    },
+    {
+      "taskC": "C\n文件已生成",
+      "width": {
+        "viewport": 390,
+        "scroll": 375
+      }
+    }
+  ],
+  "layoutAndNoJs": [
+    {
+      "width": 390,
+      "scroll": 375,
+      "overflow": []
+    },
+    {
+      "width": 320,
+      "scroll": 305,
+      "overflow": []
+    },
+    {
+      "width": 1440,
+      "scroll": 1425,
+      "overflow": []
+    },
+    {
+      "nojs": {
+        "forms": [
+          true,
+          true
+        ],
+        "logOpen": true,
+        "rows": 19,
+        "baseline": "初报：12 条记录计入；6 次任务中，2 次已生成可导出文件（33.3%），1 次有阻塞且未见成功，3 次结果未知。付款 40 USD − 已确认退款 20 USD = 净收 20 USD，未扣费用，未核对到账。",
+        "overflow": false
+      }
+    }
+  ],
+  "finalBrowser": {
+    "outline": [
+      {
+        "label": "先写下你准备根据数字改变什么",
+        "exists": true
+      },
+      {
+        "label": "事件名写的是事实，还是愿望？",
+        "exists": true
+      },
+      {
+        "label": "采集成功，要沿整条路核对",
+        "exists": true
+      },
+      {
+        "label": "同一批记录，为什么会有三种结果",
+        "exists": true
+      },
+      {
+        "label": "动手跑一次：让多余字段和重复请求真的被拦住",
+        "exists": true
+      },
+      {
+        "label": "数字可靠以后，也不能直接说改版有效",
+        "exists": true
+      },
+      {
+        "label": "只有几十个用户，先算这次比较等不等得起",
+        "exists": true
+      },
+      {
+        "label": "把这轮工作收在一份决定里",
+        "exists": true
+      }
+    ],
+    "raw": {
+      "result": "粗报：7 条 export_ready ÷ 7 条 task_started = 100%。付款通知相加 60 USD；减退款 20 USD 后显示 40 USD。这里混入了重复、测试、旧语义和拒收记录，不能当完成率或收入。",
+      "tasks": [
+        "未按任务核对",
+        "未按任务核对",
+        "未按任务核对",
+        "未按任务核对",
+        "未按任务核对",
+        "未按任务核对"
+      ]
+    },
+    "revised": {
+      "result": "迟到修订：13 条记录计入；6 次任务中，3 次已生成可导出文件（50.0%），1 次有阻塞且未见成功，2 次结果未知。付款 40 USD − 已确认退款 20 USD = 净收 20 USD，未扣费用，未核对到账。",
+      "C": "C\n文件已生成"
+    },
+    "map": {
+      "leaves": 24,
+      "measurement": "",
+      "pending": "脑图连接的是已经写出的章节。搜索、邮件和非英语市场的具体运营，还没有完整操作篇；查看现有材料与待补部分。"
+    },
+    "resources": {
+      "measurementLinks": 7,
+      "download": true,
+      "oldAnchor": true
+    }
+  },
+  "static": {
+    "pages": 28,
+    "chapterLinks": 24,
+    "chapterSources": 7,
+    "inlineScriptBytes": [
+      0,
+      4873,
+      1780,
+      245
+    ],
+    "errors": []
+  },
+  "drillChecks": [
+    {
+      "name": "raw_report_demonstrates_overcount",
+      "passed": true
+    },
+    {
+      "name": "sample_planning_presets",
+      "passed": true
+    },
+    {
+      "name": "19_requests_reconcile",
+      "passed": true
+    },
+    {
+      "name": "initial_report",
+      "passed": true
+    },
+    {
+      "name": "late_event_revision",
+      "passed": true
+    },
+    {
+      "name": "refund_before_payment",
+      "passed": true
+    },
+    {
+      "name": "conflicting_retry",
+      "passed": true
+    },
+    {
+      "name": "browser_cannot_confirm_payment",
+      "passed": true
+    },
+    {
+      "name": "unknown_schema_rejected",
+      "passed": true
+    },
+    {
+      "name": "untrusted_ledger_rejected",
+      "passed": true
+    },
+    {
+      "name": "no_file_field_persisted",
+      "passed": true
+    },
+    {
+      "name": "no_bad_record_in_store",
+      "passed": true
+    },
+    {
+      "name": "business_record_dedup",
+      "passed": true
+    },
+    {
+      "name": "unmatched_refund_pending",
+      "passed": true
+    },
+    {
+      "name": "oversized_body",
+      "passed": true
+    }
+  ],
+  "auditNote": "An initial browser outline probe omitted URL decoding for Chinese anchors; the corrected finalBrowser probe and actual outline navigation passed."
+}
