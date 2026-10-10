@@ -44,10 +44,10 @@ flowchart LR
   L -->|"调研/核验"| Web["公开网页"]
 ```
 
-- **站点**：Astro。内容页构建时预渲染成静态 HTML；API 用 `@astrojs/cloudflare` 跑在同一个 Worker 上。
+- **站点**：Astro。内容页构建时预渲染成静态 HTML；首版 API 使用独立 Worker 入口处理 `/api/*`，其余路径保留静态资产路由。无需为互动将正文改为服务端渲染。
 - **数据**：D1 存所有互动数据。内容本身只存在 Git 里。
 - **Agent**：在本地运行，通过 Admin API 读写反馈，通过 Git PR 修改内容，用 ego lite 做调研和核验。
-- **部署**：合并到 `main` 后，GitHub Actions 自动构建并部署到 Workers。
+- **部署**：GitHub Actions 做校验；合并到 `main` 后由 Cloudflare Workers Builds 构建并部署。反馈入口默认关闭，实际配置和验收见 [feedback.md](feedback.md)。
 
 ---
 

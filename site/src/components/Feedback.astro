@@ -1,0 +1,70 @@
+---
+interface Props { path: string }
+const { path } = Astro.props;
+---
+<section id="feedback" class="feedback" data-feedback data-path={path} lang="zh-CN" aria-labelledby="feedback-title">
+  <h2 id="feedback-title">内容反馈</h2>
+  <p data-feedback-availability>反馈入口尚未开放。开放后，你可以选中文章中的一段文字，说明有误、过期或没看懂的地方。</p>
+  <noscript><p>提交和查看反馈需要 JavaScript；正文和来源仍可直接阅读。</p></noscript>
+  <div data-feedback-enabled hidden>
+    <p>先写下问题，提交时再登录。反馈经审核后公开，处理结果保存在“我的反馈”。<a href="/privacy">隐私与反馈说明</a></p>
+    <button type="button" data-feedback-open>写反馈</button>
+    <button type="button" data-feedback-mine>我的反馈</button>
+    <p data-feedback-account></p>
+    <details data-feedback-settings hidden><summary>账号设置</summary>
+      <a href="/api/me/export">导出我的资料与反馈</a>
+      <button type="button" data-feedback-logout>退出登录</button>
+      <button type="button" data-feedback-delete>删除账号与我的反馈</button>
+    </details>
+    <div data-feedback-items aria-live="polite"></div>
+  </div>
+  <p data-feedback-status role="status"></p>
+  <button type="button" class="feedback-selection" data-feedback-selection hidden>反馈所选段落</button>
+  <dialog aria-labelledby="feedback-dialog-title" data-feedback-dialog>
+    <form data-feedback-form>
+      <h2 id="feedback-dialog-title">告诉我们哪里需要改进</h2>
+      <blockquote data-feedback-quote hidden></blockquote>
+      <p data-feedback-whole>这条反馈针对整篇文章。也可以先关闭窗口、选中正文，再打开反馈。</p>
+      <label for="feedback-kind">问题类型</label>
+      <select id="feedback-kind" name="kind"><option value="confused">没看懂</option><option value="incorrect">有误</option><option value="outdated">已过期</option><option value="supplement">补充资料</option></select>
+      <label for="feedback-body">问题说明</label>
+      <textarea id="feedback-body" name="body" rows="5" minlength="3" maxlength="3000" required placeholder="请描述卡住的位置或需要核对的事实；有原始资料时可以附上链接。不要填写账号、账单或其他私密信息。"></textarea>
+      <label class="feedback-check"><input name="consent" type="checkbox" required />我同意审核后公开这条反馈及 GitHub 用户名，文字按 CC BY-SA 4.0 授权。</label>
+      <label class="feedback-check" data-feedback-email hidden><input name="notify_email" type="checkbox" />处理后通过我的 GitHub 已验证主邮箱通知我。</label>
+      <p data-feedback-login-note>提交时使用 GitHub 登录；草稿仅保存在本浏览器，7 天后自动清理。</p>
+      <div data-feedback-challenge></div>
+      <p data-feedback-form-status role="status"></p>
+      <div class="feedback-actions"><button type="submit" data-feedback-submit>登录并继续</button><button type="button" data-feedback-close>关闭并保留草稿</button><button type="button" data-feedback-discard>丢弃草稿</button></div>
+    </form>
+  </dialog>
+  <dialog data-feedback-delete-dialog aria-labelledby="feedback-delete-title">
+    <h2 id="feedback-delete-title">删除账号与反馈</h2>
+    <p>将删除本站账号、所有会话、你的反馈及对应处理记录。公开内容也会移除；已发出的邮件和备份中的保留副本不能即时撤回。此操作不能在本站恢复。</p>
+    <div data-feedback-delete-challenge></div>
+    <p data-feedback-delete-status role="status"></p>
+    <button type="button" data-feedback-confirm-delete>确认删除</button><button type="button" data-feedback-cancel-delete>取消</button>
+  </dialog>
+</section>
+<script>
+  import '../scripts/feedback';
+</script>
+<style>
+  .feedback { margin-block: 2rem; padding-block-start: 1.5rem; border-block-start: 1px solid var(--border); }
+  .feedback h2 { font-size: 1.3rem; margin-block: 0 1rem; }
+  .feedback button, .feedback select, .feedback textarea { font: inherit; color: var(--fg); background: var(--bg-soft); border: 1px solid var(--border); border-radius: .4rem; padding: .55rem .75rem; min-height: 44px; }
+  .feedback button { cursor: pointer; margin-block: .3rem; }
+  .feedback button:disabled { cursor: wait; opacity: .6; }
+  .feedback .feedback-selection { position: fixed; inset-inline-end: 1rem; inset-block-end: 1rem; z-index: 20; border-color: var(--accent); box-shadow: 0 2px 12px #0003; }
+  .feedback label:not(.feedback-check) { display: block; margin-block: 1rem .3rem; }
+  .feedback textarea, .feedback select { width: 100%; }
+  .feedback-check { display: flex; align-items: baseline; gap: .5rem; margin-block: 1rem; font-size: .9rem; }
+  .feedback input { flex: 0 0 auto; }
+  .feedback dialog { width: min(38rem, calc(100% - 1rem)); max-height: 90dvh; overflow-y: auto; color: var(--fg); background: var(--bg); border: 1px solid var(--border); border-radius: .6rem; padding: 1.25rem; }
+  .feedback dialog::backdrop { background: #0009; }
+  .feedback blockquote { overflow-wrap: anywhere; max-height: 10rem; overflow: auto; margin-inline: 0; }
+  .feedback-actions { display: flex; flex-wrap: wrap; gap: .5rem; }
+  .feedback :global(.feedback-item) { margin-block: 1.5rem; padding: 1rem; background: var(--bg-soft); border-radius: .5rem; overflow-wrap: anywhere; }
+  .feedback :global(.feedback-item p) { white-space: pre-wrap; }
+  .feedback :global(.feedback-result) { border-inline-start: 3px solid var(--accent); padding-inline-start: 1rem; }
+  .feedback [hidden] { display: none !important; }
+</style>

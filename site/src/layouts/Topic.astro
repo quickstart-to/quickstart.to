@@ -1,6 +1,7 @@
 ---
 import Base from './Base.astro';
 import ContentNote from '../components/ContentNote.astro';
+import Feedback from '../components/Feedback.astro';
 import { uiLangFor, t } from '../i18n';
 import { getQuickstart, type Topic, type Chapter } from '../lib/topics';
 import { articleHeadings } from '../lib/article-headings';
@@ -116,7 +117,7 @@ const next = currentIndex >= 0 ? readingOrder[currentIndex + 1] : undefined;
       </details>
     )}
 
-    <slot />
+    <div data-article-body><slot /></div>
 
     {isContent && (previous || next) && (
       <nav class="chapter-pagination" aria-label={t(ui, 'topic.readingOrder')}>
@@ -131,6 +132,7 @@ const next = currentIndex >= 0 ? readingOrder[currentIndex + 1] : undefined;
         {disclaimer && <p class="notice notice-warn">{disclaimer}</p>}
       </footer>
     )}
+    {isContent && <Feedback path={path} />}
   </article>
 </Base>
 

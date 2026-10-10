@@ -1,8 +1,9 @@
 {
-  // P0: static assets only. P2 adds a Worker entry for /api/* (auth, annotations) plus D1 bindings.
+  // Static reading stays available while the feedback service is disabled.
   // Deployed automatically by Cloudflare Workers Builds on every push to main (see docs/deploy.md).
   "$schema": "../node_modules/wrangler/config-schema.json",
   "name": "quickstart-to",
+  "main": "./worker/index.ts",
   "compatibility_date": "2026-10-01",
   "routes": [
     { "pattern": "quickstart.to", "custom_domain": true }
@@ -12,7 +13,14 @@
   // PR previews get a *.workers.dev preview URL; production stays only on quickstart.to
   "workers_dev": false,
   "preview_urls": true,
+  "vars": {
+    "FEEDBACK_ENABLED": "false",
+    "SITE_ORIGIN": "https://quickstart.to"
+  },
+  // Add a real DB binding only after provisioning; see docs/feedback.md.
   "assets": {
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/*"],
     "directory": "./dist",
     // build.format = "file" emits go-global.html; "auto-trailing-slash" serves it at /go-global
     "html_handling": "auto-trailing-slash",

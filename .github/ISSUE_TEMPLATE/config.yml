@@ -1,5 +1,5 @@
 blank_issues_enabled: false
 contact_links:
-  - name: 内容反馈：请在网站上划线评论 / Content feedback: highlight it on the site
+  - name: 内容反馈：查看页面入口是否开放 / Content feedback: check availability
     url: https://quickstart.to
-    about: 内容过期、有误、补充资料，都请在对应页面划线评论，Agent 会核验并更新。/ Outdated, wrong or missing content? Highlight the passage on the page.
+    about: 请查看对应文章末尾的反馈提示；入口未开放时暂不接收提交。/ Check the article feedback section; submissions are unavailable until enabled.
