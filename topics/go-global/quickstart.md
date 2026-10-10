@@ -88,7 +88,7 @@ last_verified: 2026-10-09
 </nav>
 <figcaption id="map-caption">连线表示主题归属，可以按当前问题跳读。数据、支付和主体等准备，应在相应业务发生前处理。</figcaption>
 </figure>
-<p class="map-scope" id="map-pending">当前脑图列出的分支已有章节入口；具体产品、地区与平台仍有各自适用条件，章节覆盖不代表实际业务已验证。</p>
+<p class="map-scope" id="map-pending">脑图连接的是已经写出的章节。日常客服、产品测量，以及搜索、邮件和非英语市场的具体运营，还没有完整操作篇；<a href="/go-global/resources#这些问题目前还没有完整操作篇">查看现有材料与待补部分</a>。</p>
 <p class="map-scope">本书聚焦软件与数字产品。跨境实物电商、物流和融资不在当前范围内。</p>
 </section>
 

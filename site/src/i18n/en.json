@@ -33,5 +33,10 @@
   "contentNote.verificationTitle": "Verification and updates",
   "contentNote.verification": "Verification dates record completed source checks; the text and change history describe their scope. Rules may change afterward. Illustration and layout edits do not automatically refresh verification dates.",
   "contentNote.visualsTitle": "Visuals and examples",
-  "contentNote.visuals": "This site’s scene illustrations are created with AI to support the explanation. Teaching cases and demos use labeled example data. Actual procedures and results identify their sources and the scope of verification."
+  "contentNote.visuals": "This site’s scene illustrations are created with AI to support the explanation. Teaching cases and demos use labeled example data. Actual procedures and results identify their sources and the scope of verification.",
+  "topic.directory": "Book contents",
+  "topic.onThisPage": "On this page",
+  "topic.readingOrder": "Reading order",
+  "topic.previous": "Previous",
+  "topic.next": "Next"
 }

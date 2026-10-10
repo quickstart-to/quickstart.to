@@ -2,6 +2,7 @@
 import { render } from 'astro:content';
 import TopicLayout from '../../layouts/Topic.astro';
 import { getTopics, getChapters } from '../../lib/topics';
+import { articleHeadings } from '../../lib/article-headings';
 import ValidationMedia from '../../../../topics/go-global/assets/ValidationMedia.astro';
 import LaunchMedia from '../../../../topics/go-global/assets/LaunchMedia.astro';
 import InfrastructureMedia from '../../../../topics/go-global/assets/InfrastructureMedia.astro';
@@ -39,6 +40,7 @@ export async function getStaticPaths() {
 const { topic, chapters, chapter } = Astro.props;
 const { entry } = chapter;
 const { Content } = await render(entry);
+const headings = articleHeadings(entry.rendered?.html ?? '');
 ---
 
 <TopicLayout
@@ -50,6 +52,7 @@ const { Content } = await render(entry);
   path={`/${topic.id}/${chapter.slug}`}
   lastVerified={entry.data.last_verified}
   volatility={entry.data.volatility}
+  headings={headings}
   sourcesHref={entry.rendered?.html.includes('id="sources-heading"') ? '#sources-heading' : undefined}
 >
   <Content />

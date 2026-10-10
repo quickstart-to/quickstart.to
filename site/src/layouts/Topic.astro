@@ -17,44 +17,56 @@ interface Props {
   sourcesHref?: string;
   /** Show the content-and-updates note and disclaimer (false for the changelog). */
   isContent?: boolean;
+  headings?: { depth: number; slug: string; text: string }[];
 }
 
-const { topic, chapters, current, title, description, path, lastVerified, volatility, sourcesHref, isContent = true } = Astro.props;
+const { topic, chapters, current, title, description, path, lastVerified, volatility, sourcesHref, isContent = true, headings = [] } = Astro.props;
 const { slug, lang, status, disclaimer } = topic.data;
 const ui = uiLangFor(lang);
 const pageTitle = current === 'quickstart' ? `${topic.data.title} · quickstart.to` : `${title} · ${topic.data.title}`;
+const sections = headings.filter((heading) => heading.depth === 2 && heading.slug !== 'sources-heading');
+const readingOrder = [
+  { href: `/${slug}`, title: t(ui, 'topic.quickstart'), slug: 'quickstart' },
+  ...chapters.map((chapter) => ({ href: `/${slug}/${chapter.slug}`, title: chapter.entry.data.title, slug: chapter.slug })),
+];
+const currentIndex = readingOrder.findIndex((page) => page.slug === current);
+const previous = currentIndex > 0 ? readingOrder[currentIndex - 1] : undefined;
+const next = currentIndex >= 0 ? readingOrder[currentIndex + 1] : undefined;
 ---
 
 <Base title={pageTitle} description={description ?? topic.data.summary} contentLang={lang} path={path}>
   <aside class="sidebar" slot="sidebar">
-    <nav aria-label={topic.data.title}>
-      <p class="sidebar-topic">
-        <a href={`/${slug}`}>{topic.data.title}</a>
-      </p>
-      <p data-ui lang={ui}>
-        <span class={`badge badge-${status}`} data-i18n={`status.${status}`}>{t(ui, `status.${status}`)}</span>
-      </p>
-      <ol class="toc">
-        <li>
-          <a href={`/${slug}`} aria-current={current === 'quickstart' ? 'page' : undefined} data-ui lang={ui} data-i18n="topic.quickstart">
-            {t(ui, 'topic.quickstart')}
-          </a>
-        </li>
-        {chapters.map((c) => (
+    <details class="book-menu" data-book-menu>
+      <summary data-ui lang={ui}><span data-i18n="topic.directory">{t(ui, 'topic.directory')}</span><span class="book-menu-count" aria-hidden="true">{readingOrder.length}</span></summary>
+      <nav aria-label={topic.data.title}>
+        <p class="sidebar-topic">
+          <a href={`/${slug}`}>{topic.data.title}</a>
+        </p>
+        <p data-ui lang={ui}>
+          <span class={`badge badge-${status}`} data-i18n={`status.${status}`}>{t(ui, `status.${status}`)}</span>
+        </p>
+        <ol class="toc">
           <li>
-            <a href={`/${slug}/${c.slug}`} aria-current={current === c.slug ? 'page' : undefined}>{c.entry.data.title}</a>
+            <a href={`/${slug}`} aria-current={current === 'quickstart' ? 'page' : undefined} data-ui lang={ui} data-i18n="topic.quickstart">
+              {t(ui, 'topic.quickstart')}
+            </a>
           </li>
-        ))}
-      </ol>
-      {chapters.length === 0 && (
-        <p class="muted" data-ui lang={ui} data-i18n="topic.noChapters">{t(ui, 'topic.noChapters')}</p>
-      )}
-      <p class="toc-secondary" data-ui lang={ui}>
-        <a href={`/${slug}/changelog`} aria-current={current === 'changelog' ? 'page' : undefined} data-i18n="topic.changelog">
-          {t(ui, 'topic.changelog')}
-        </a>
-      </p>
-    </nav>
+          {chapters.map((c) => (
+            <li>
+              <a href={`/${slug}/${c.slug}`} aria-current={current === c.slug ? 'page' : undefined}>{c.entry.data.title}</a>
+            </li>
+          ))}
+        </ol>
+        {chapters.length === 0 && (
+          <p class="muted" data-ui lang={ui} data-i18n="topic.noChapters">{t(ui, 'topic.noChapters')}</p>
+        )}
+        <p class="toc-secondary" data-ui lang={ui}>
+          <a href={`/${slug}/changelog`} aria-current={current === 'changelog' ? 'page' : undefined} data-i18n="topic.changelog">
+            {t(ui, 'topic.changelog')}
+          </a>
+        </p>
+      </nav>
+    </details>
   </aside>
 
   <article class="prose">
@@ -78,7 +90,23 @@ const pageTitle = current === 'quickstart' ? `${topic.data.title} · quickstart.
       )}
     </header>
 
+    {isContent && current !== 'quickstart' && sections.length > 1 && (
+      <details class="article-outline">
+        <summary id="article-outline-title" data-ui lang={ui} data-i18n="topic.onThisPage">{t(ui, 'topic.onThisPage')}</summary>
+        <nav aria-labelledby="article-outline-title">
+          <ol>{sections.map((section) => <li><a href={`#${section.slug}`}>{section.text}</a></li>)}</ol>
+        </nav>
+      </details>
+    )}
+
     <slot />
+
+    {isContent && (previous || next) && (
+      <nav class="chapter-pagination" aria-label={t(ui, 'topic.readingOrder')}>
+        {previous && <a href={previous.href} rel="prev"><span data-ui lang={ui} data-i18n="topic.previous">{t(ui, 'topic.previous')}</span><strong>{previous.title}</strong></a>}
+        {next && <a href={next.href} rel="next"><span data-ui lang={ui} data-i18n="topic.next">{t(ui, 'topic.next')}</span><strong>{next.title}</strong></a>}
+      </nav>
+    )}
 
     {isContent && (
       <footer class="article-footer">
@@ -88,3 +116,17 @@ const pageTitle = current === 'quickstart' ? `${topic.data.title} · quickstart.
     )}
   </article>
 </Base>
+
+<script>
+  const menu = document.querySelector<HTMLDetailsElement>('[data-book-menu]');
+  if (menu) {
+    const desktop = window.matchMedia('(min-width: 60rem)');
+    const adaptMenu = () => {
+      // Keep keyboard focus visible when a resize closes the directory.
+      if (!desktop.matches && menu.contains(document.activeElement)) menu.querySelector('summary')?.focus();
+      menu.open = desktop.matches;
+    };
+    adaptMenu();
+    desktop.addEventListener('change', adaptMenu);
+  }
+</script>

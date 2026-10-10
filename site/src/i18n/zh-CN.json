@@ -33,5 +33,10 @@
   "contentNote.verificationTitle": "核验与更新",
   "contentNote.verification": "核验日期对应已完成的资料检查，具体范围见正文及修订记录。后续规则可能变化，图文和排版调整不会自动更新核验日期。",
   "contentNote.visualsTitle": "配图与示例",
-  "contentNote.visuals": "本站场景插画由 AI 创作，用于辅助解释。教学案例和演示使用明确标注的示例数据；涉及真实操作或结果时，另行说明来源与验证范围。"
+  "contentNote.visuals": "本站场景插画由 AI 创作，用于辅助解释。教学案例和演示使用明确标注的示例数据；涉及真实操作或结果时，另行说明来源与验证范围。",
+  "topic.directory": "本书目录",
+  "topic.onThisPage": "本篇内容",
+  "topic.readingOrder": "前后篇阅读",
+  "topic.previous": "上一篇",
+  "topic.next": "下一篇"
 }

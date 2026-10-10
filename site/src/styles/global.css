@@ -117,8 +117,11 @@ a:hover { text-decoration-thickness: 2px; }
 /* ---------- sidebar ---------- */
 .sidebar { font-size: 0.9375rem; line-height: 1.5; }
 @media (min-width: 60rem) {
-  .sidebar nav { position: sticky; inset-block-start: 1.5rem; max-block-size: calc(100dvb - 3rem); overflow-y: auto; }
+  .book-menu { position: sticky; inset-block-start: 1.5rem; max-block-size: calc(100dvb - 3rem); overflow-y: auto; }
 }
+.book-menu > summary { cursor: pointer; padding: 0.7rem 0.6rem; border-block-end: 1px solid var(--border); font-weight: 600; }
+.book-menu-count { margin-inline-start: 0.6rem; font-size: 0.8rem; color: var(--fg-muted); font-weight: 400; }
+.book-menu[open] > summary { margin-block-end: 1rem; }
 .sidebar-topic { margin: 0 0 0.5rem; font-weight: 650; }
 .sidebar-topic a { color: var(--fg); text-decoration: none; }
 .toc { list-style: none; margin: 1rem 0; padding: 0; display: grid; gap: 0.125rem; }
@@ -164,6 +167,16 @@ a:hover { text-decoration-thickness: 2px; }
 .prose img { display: block; max-inline-size: 100%; block-size: auto; border-radius: var(--radius); }
 
 .article-header { margin-block-end: 2rem; }
+.article-outline { margin-block-end: 1.75rem; border-block: 1px solid var(--border); font-size: 0.9375rem; }
+.article-outline > summary { cursor: pointer; padding-block: 0.75rem; font-weight: 600; }
+.article-outline ol { margin: 0 0 0.75rem; padding-inline-start: 1.5rem; }
+.article-outline li + li { margin-block-start: 0; }
+.article-outline a { display: block; padding: 0.4rem 0; text-decoration: none; }
+.chapter-pagination { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr)); gap: 1rem; margin-block-start: 2rem; }
+.chapter-pagination a { display: grid; gap: 0.4rem; padding: 1rem; border: 1px solid var(--border); border-radius: var(--radius); text-decoration: none; }
+.chapter-pagination a:hover { background: var(--bg-soft); }
+.chapter-pagination span { color: var(--fg-muted); font-size: 0.875rem; }
+.chapter-pagination strong { font-weight: 600; }
 .article-meta { display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; margin: 0; font-size: 0.875rem; color: var(--fg-muted); }
 .article-meta div { display: flex; gap: 0.4rem; }
 .article-meta dt::after { content: ":"; }
