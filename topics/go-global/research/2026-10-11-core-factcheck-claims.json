@@ -528,5 +528,139 @@
     "result": "still true",
     "checked_on": "2026-10-11",
     "scope": "发布规则对照平台原文，经历按作者及历史背景核对；视频核对页面元信息、播放器时长及 YC 章节表/转录，未声称完整观看。"
+  },
+  {
+    "id": "12-market-fit-1",
+    "page": "chapters/12-market-fit.md",
+    "passage": "Notion 在 2020 年推出首个非英语版本时，选择了韩语。它在发布说明中给出的理由，是韩国已经存在活跃的用户社区：有人写教材、办工作坊、制作视频。团队随后一起翻译了应用、常用模板和帮助中心，并表示先把韩语版本做好，再利用经验增加其他语言。[^src-notion-korean-launch]",
+    "sources": [
+      "src-notion-korean-launch"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "核对 2020 年韩语发布说明的已有社区、模板、应用与帮助中心；不把历史选择写成当前增长因果。"
+  },
+  {
+    "id": "12-market-fit-2",
+    "page": "chapters/12-market-fit.md",
+    "passage": "到了 2021 年推出日语版本时，Notion 的亚太负责人西勝清写道，他加入时公司已有一群使用英语产品的日本用户；日语发布同时配备了日语客服、帮助文章、案例与模板。这是团队对自身扩展过程的叙述，起点是已有使用和本地承接能力，不能把它缩成“加日语带来增长”的因果结论。[^src-notion-japanese-launch]",
+    "sources": [
+      "src-notion-japanese-launch"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "核对 2021 年西勝清原文的已有英语用户及日语客服、文章、案例、模板；不采用当前用户量或增长归因。"
+  },
+  {
+    "id": "12-market-fit-3",
+    "page": "chapters/12-market-fit.md",
+    "passage": "另一位经营者的经历，恰好说明只看宏观指标会漏掉什么。杨杰在 2024 年的复盘中说，团队扩大海外地区后，先按人口、收入等指标制定分区价格，后来又增加本地支付方式与八种语言，却没有得到期望中的转化改善。翻译工作通过 Excel 交给外部公司，短句缺少上下文，核心术语也缺乏校验；这些是他事后指出的问题。[^src-yang-localization-retrospective]",
+    "sources": [
+      "src-yang-localization-retrospective"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "核对 FounderPark 授权转载的杨杰自述：分区价格、八种语言、Excel 翻译及术语校验；未采纳普遍市场规模或唯一因果断言。"
+  },
+  {
+    "id": "12-market-fit-4",
+    "page": "chapters/12-market-fit.md",
+    "passage": "エムハンド的营销团队在 2023 年介绍了自己的月度成果报告：一部分数据来自访问分析，另一部分来自收到咨询之后的实际跟进。报告要区分真正的新业务咨询和其他来信，仅有网站统计数字还不够。他们已有线索表、月度摘要和趋势报告，由不同角色提供信息。[^src-mhand-report-practice]",
+    "sources": [
+      "src-mhand-report-practice"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "核对 2023 年エムハンド实际报告流程、咨询质量和三类模板；未采纳文中的广告效果归因。"
+  },
+  {
+    "id": "12-market-fit-5",
+    "page": "chapters/12-market-fit.md",
+    "passage": "另一种情况是工作已经在项目管理工具里完成。INI 的 PM 前原在实践文章中强调，任务需要写清完成条件：自己写完、内部复核通过和客户批准，是不同的结束点。文章还举出一个命名误会——看起来像“制作主视觉”的任务，实际是在等客户提供素材。[^src-ini-backlog-practice] 对我们的工具，这比“把 Done 翻成什么”更早：源记录中的完成，到底是谁确认的？",
+    "sources": [
+      "src-ini-backlog-practice"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "核对 INI 前原对任务完成条件及客户提供素材的命名例子；未采用当前产品功能限制。"
+  },
+  {
+    "id": "12-market-fit-6",
+    "page": "chapters/12-market-fit.md",
+    "passage": "再看 2026 年札幌的一场 JBUG 活动。主办方记录中，Gear8 的待島亘介绍了把客户邀请进 Backlog、集中制作和运营往来的做法；他已经长期使用这条路径，还展示了在既有工具中整理报告的实践。这是厂商刊载的活动记录，有产品推广背景，却仍提供了重要反证：如果客户已经在原系统确认任务，另发一份报告可能只是再维护一份副本。[^src-jbug-sapporo-practice]",
+    "sources": [
+      "src-jbug-sapporo-practice"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "核对 2026-06-17 厂商活动记录中的 Gear8 待島亘实践，保留自述与推广背景，不代表所有用户。"
+  },
+  {
+    "id": "12-market-fit-7",
+    "page": "chapters/12-market-fit.md",
+    "passage": "前面的实践也给出了可继续阅读的入口。[JBUG 社区首页](https://jbuginfo.backlog.com/)连接活动信息与报名站点，定位是用户交流项目管理经验；札幌那次记录则明确涉及网站制作角色。[^src-jbug-community][^src-jbug-sapporo-practice] 先读公开讲稿和回顾，挑与你的任务相近的讨论，再查看活动形式、参与条件和组织者的规则。历史活动能帮助认识问题，不能当作仍可报名的场次。",
+    "sources": [
+      "src-jbug-community",
+      "src-jbug-sapporo-practice"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "核对 JBUG 首页的社区定位、活动列表与 connpass 入口；未报名或确认历史活动仍可参与。"
+  },
+  {
+    "id": "12-market-fit-8",
+    "page": "chapters/12-market-fit.md",
+    "passage": "产品中不同层的文字，还可能由不同的人负责。Tally 的语言文档就明确区分：设置可以翻译系统默认消息；能够由表单作者编辑的问题标题等内容，仍需作者使用目标语言填写。[^src-tally-form-languages] “选择了语言”不等于整个交付都已经翻译，这一点对报告工具也成立。",
+    "sources": [
+      "src-tally-form-languages"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "核对 Tally 对系统消息与可编辑题目文字的翻译边界；未在账户里实测。"
+  },
+  {
+    "id": "12-market-fit-9",
+    "page": "chapters/12-market-fit.md",
+    "passage": "W3C 建议在可能产生歧义的场合明确月份和四位年份，或说明格式；它也提醒浏览器语言偏好不能直接替代文档上下文。[^src-w3c-date-formats] 因此，本例保留原始字符串，先要求操作者确认日期顺序，再生成供客户检查的预览。若输入无效，就停下来指出问题，不把 2 月的错误日期悄悄挪到 3 月。",
+    "sources": [
+      "src-w3c-date-formats"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "核对 W3C 对明确月份、四位年份及页面语言上下文的建议，不采用旧环境代码。"
+  },
+  {
+    "id": "12-market-fit-10",
+    "page": "chapters/12-market-fit.md",
+    "passage": "浏览器演示使用 `Intl.DateTimeFormat` 分别指定显示偏好与时区；预算使用 `Intl.NumberFormat` 明确指定 `USD`。这些选项在 API 中各自独立，不能把切换德语显示理解成把美元换成欧元。[^src-mdn-datetime-constructor][^src-mdn-numberformat-constructor] 示例将“截止日期”定义为一个日历日期，因此不随时区移动；“最近更新时间”定义为时刻，换时区后可能落在前一天。若你的产品约定的是“某日某地下午五点截止”，就需要同时保存日期、时间和时区，不能直接沿用这里的日期字段。",
+    "sources": [
+      "src-mdn-datetime-constructor",
+      "src-mdn-numberformat-constructor"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "核对 MDN 的 locale、calendar、numberingSystem、timeZone 与 currency/code 选项；实际运行仓库日期模型，验证文中合成输出，不主张完整 CSV 解析或客户偏好。"
+  },
+  {
+    "id": "12-market-fit-11",
+    "page": "chapters/12-market-fit.md",
+    "passage": "付款同样要拆开问。**买家在哪里、想用什么方式付；卖家以什么身份、经哪条通道收；交易怎样退款并交付凭证**，不能只确认其中一项。比如，截至 2026-10-11，Stripe 的 Konbini 文档把买家地点列为日本、展示币种列为 JPY，而“商家所在地”页签列出的可用账户地区是日本；文档另列入驻审核条件。这不能被解释为大陆个人把结账语言切成日语，就能启用该方式。[^src-stripe-konbini-market]",
+    "sources": [
+      "src-stripe-konbini-market"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "实际打开 Stripe 商家所在地页签，确认日本 Stripe 账户，并与客户日本、JPY、入驻审核分别核对；不推断大陆个人准入。"
+  },
+  {
+    "id": "12-market-fit-12",
+    "page": "chapters/12-market-fit.md",
+    "passage": "同一文档中，买家取得付款码后还要去便利店付现金；取得码不等于付款完成，退款又需要买家提供接收退款的账户信息。[^src-stripe-konbini-market] 这会改变交付、过期和客服流程。因此不能因为它是当地付款方式，就把它当作任何小工具都应优先接入的功能。",
+    "sources": [
+      "src-stripe-konbini-market"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "核对 Stripe 线下现金支付步骤和退款收款账户要求；未开通、付款或退款。"
   }
 ]
