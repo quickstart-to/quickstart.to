@@ -1,7 +1,7 @@
 ---
 title: 资源导航：带着一个问题，找到下一步材料
 description: 按找用户、发布、产品适配、反馈经营、交付恢复和名称许可整理资源，集中索引本书的样稿、演练与查询入口。
-order: 22
+order: 23
 volatility: high
 last_verified: 2026-10-10
 ---
@@ -22,7 +22,7 @@ last_verified: 2026-10-10
 
 如果你还没有真实使用者，先读[选品](/go-global/validate-idea)、[市场适配](/go-global/market-fit)和[冷启动](/go-global/launch)，把一个候选变成一份别人能尝试的材料；到了观察操作的阶段，再用[首次使用](/go-global/first-use)区分输入困难、操作错误和输出不合用。暂时用不到的投放、采购和主体细节，可以在相应决定发生时查阅。
 
-已经有人使用，先把[持续使用](/go-global/retention)中的任务记录做清楚，再沿[获客比较](/go-global/growth#用户为什么会在这里遇到你)选择下一条接触路径。准备花钱投放时进入[分平台操作](/go-global/platform-ads)；用户做不完任务时，先回到首次使用的恢复过程。访问、完成和再次使用对应不同的问题，不必按目录顺序来回读一遍。
+已经有人使用，先把[持续使用](/go-global/retention)中的任务记录做清楚，再沿[获客比较](/go-global/growth#用户为什么会在这里遇到你)选择下一条接触路径。准备花钱投放时进入[分平台操作](/go-global/platform-ads)；用户做不完任务时，先回到首次使用的恢复过程；收到求助后，用[客服与服务运营](/go-global/customer-support)安排调查、回复、跟进与容量。访问、完成和再次使用对应不同的问题，不必按目录顺序来回读一遍。
 
 准备接受收入，先用[收入模式](/go-global/revenue-models)辨认付款方。用户直接购买，接[具体报价](/go-global/pricing)与[收款交付](/go-global/payments)；团队提出试点或合同，接[团队采购](/go-global/team-procurement)；广告、赞助或联盟收入，则从收入模式的相应样稿开始。各条路最后都要接到[回款](/go-global/payouts)、[税务](/go-global/tax)和[经营账](/go-global/business-review)。经营身份、数据与权利的准备仍应在相关行为发生前完成，不能等读到后面的章节才处理。
 
@@ -41,6 +41,7 @@ last_verified: 2026-10-10
 | 陌生人打开产品，却做不完第一次任务 | [首次使用体验](/go-global/first-use) | [错误恢复演示](/go-global/first-use#first-demo-title)、[完整草稿](/go-global/first-use#first-output-title)和[求助样稿](/go-global/first-use#first-help-title) |
 | 找到了入口，但不知道怎样开口 | [冷启动获客](/go-global/launch#先找到工作发生的地方) | [英文邀请](/go-global/launch#lc-invite-title)、[演示材料](/go-global/launch#lc-sample-title) |
 | 有人试过，却不知道该改什么 | [持续使用与迭代](/go-global/retention) | [逐人记录](/go-global/retention#retention-records-title)、[一轮有限投入决定](/go-global/retention#retention-decision-title) |
+| 求助越来越多，回复后仍不知道是否解决 | [客服与服务运营](/go-global/customer-support) | [完整英语往来](/go-global/customer-support#support-thread)、[帮助文章](/go-global/customer-support#support-help)和[支持容量演算](/go-global/customer-support#support-capacity) |
 | 获客方式怎么选，投入是否值得 | [持续获客](/go-global/growth) | [渠道路线图](/go-global/growth#growth-loop-title)、[完整任务页](/go-global/growth#growth-page-title)、[付费获客账](/go-global/growth#growth-cost-title)与[触点归因演示](/go-global/growth#growth-demo-title) |
 | 准备试投广告，不知道怎样设置与复盘 | [分平台投放操作](/go-global/platform-ads) | [素材分镜](/go-global/platform-ads#ads-story-title)、[搜索词互动](/go-global/platform-ads#ads-demo-title)与[完整 AD-01 试验单](/go-global/platform-ads#ads-record-title) |
 | 用户不直接购买，还能怎样经营 | [收入模式](/go-global/revenue-models) | [付款关系图](/go-global/revenue-models#revenue-map-title)、[广告收益演算](/go-global/revenue-models#revenue-demo-title)、[英语赞助范围](/go-global/revenue-models#revenue-sponsor-title)与联盟佣金记录 |
@@ -221,7 +222,6 @@ last_verified: 2026-10-10
 
 下面几件事已有局部材料，但尚不能只靠一个入口从头做完。可以先用现有部分解决眼前的问题，也应知道它在哪里停下：
 
-- **日常客服与服务运营。** [求助样稿](/go-global/first-use#first-help-title)说明怎样提供最少信息，[漏单处理](/go-global/risk#一封付了钱却不能用先当作交付问题处理)示范一次故障沟通；工单分流、跨时区跟进、结案确认和帮助文档维护，还没有串成一个完整周期。
 - **产品测量与试验。** [任务机会](/go-global/retention#retention-demo-title)、[渠道归因](/go-global/growth#growth-demo-title)与[广告事件](/go-global/platform-ads#转化追踪先验证发生了什么)已分别展开。如何把最小事件定义接到采集、版本变更、去重、测试排除和报表核对，仍缺一份可以执行的完整示例。
 - **搜索、邮件和另一种语言市场的具体运营。** [任务页与分发](/go-global/growth#把任务页写到产品用得上的地方)可作为起点，[适配包](/go-global/market-fit#一份最小适配包可以怎样交出去)能检查语言和交付；搜索异常排查、许可邮件的维护周期，以及非英语市场的一轮完整进入决定，仍需继续展开。
 

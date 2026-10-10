@@ -1,7 +1,7 @@
 ---
 title: 分平台投放操作：从一条广告，到一次能解释的试验
 description: 展开 Google Search、Meta、Reddit、TikTok 和 LinkedIn 的账户前提、设置、素材与转化核对，用完整试验单和搜索词互动判断该改哪里、何时停投。
-order: 8
+order: 9
 volatility: high
 last_verified: 2026-10-10
 ---

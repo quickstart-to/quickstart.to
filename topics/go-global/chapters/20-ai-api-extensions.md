@@ -1,7 +1,7 @@
 ---
 title: AI、API 与插件：把一次演示做成可靠的工作环节
 description: 从客服草稿的完整推演出发，比较模板与 AI，核算有效结果成本，设计可恢复的 API 与最小权限插件，处理地区、数据、评估和宿主变化。
-order: 18
+order: 19
 volatility: high
 last_verified: 2026-10-10
 slug: ai-api-extensions

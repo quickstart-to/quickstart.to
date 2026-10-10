@@ -1847,3 +1847,43 @@
   accessed: "2026-10-10"
   claim: "Smoothcade 作者报告美国家庭游戏预发布小试：四个平台各 100 USD，TikTok 15 USD；正文 Google 830 点击、Reddit 484，不支持作者所称 Reddit 最多点击；未提供可比购买表，评论亦质疑样本/定向，不能得渠道效果排名。"
   excerpt: "excerpts/smoothcade-ad-experiment.md"
+
+- id: src-plausible-support-scaling
+  url: https://plausible.io/blog/scaling-customer-support
+  title: "How we scaled support for 4,000+ subscribers and 1,000+ monthly trials (without dedicated support personnel)"
+  publisher: "Marko Saric · Plausible"
+  accessed: 2026-10-10
+  claim: 作者在 2021 年描述常见问题改产品与文档、缩减不可承担的自托管支持、难以休假及开始培养替补；为历史经验，不证明当前支持政策或普遍容量
+  excerpt: excerpts/plausible-support-scaling.md
+
+- id: src-posthog-engineers-support
+  url: https://posthog.com/newsletter/engineers-do-support
+  title: "Doing support makes you a better engineer"
+  publisher: "Ian Vanagas · PostHog"
+  accessed: 2026-10-10
+  claim: 2024 年作者报告工程师轮值仍积压高优先级支持并挤掉长期改善，后加入专职支持工程师；历史经验不等于当前工具或 SLA
+  excerpt: excerpts/posthog-engineers-support.md
+
+- id: src-posthog-support-hero
+  url: https://posthog.com/handbook/engineering/operations/support-hero
+  title: "Support hero"
+  publisher: "PostHog Handbook"
+  accessed: 2026-10-10
+  claim: 公开手册要求不要让用户查自己能查的信息、说明额外请求的目的、明确谁等谁及跟进时间，并移交未完成工单；仅支持操作原则
+  excerpt: excerpts/posthog-support-hero.md
+
+- id: src-shaonan-cost-chain
+  url: https://shaonan.blog/posts/20231111-chengbendezhenxiang/
+  title: "成本的真相：从产品设计到业务决策"
+  publisher: "少楠"
+  accessed: 2026-10-10
+  claim: 作者在 2023 年分析功能的持续维护成本、扩张的沟通与培训成本及反馈研究的投入价值；不据此推断现行法规或通用费用
+  excerpt: excerpts/shaonan-cost-chain.md
+
+- id: src-kcs-reuse-review
+  url: https://library.serviceinnovation.org/KCS/KCS_v6/KCS_v6_Practices_Guide/030/030/040/020
+  title: "Technique 4.1: Reuse is Review"
+  publisher: "Consortium for Service Innovation"
+  accessed: 2026-10-10
+  claim: KCS v6 方法主张在文章复用时核查和改善内容并建立反馈纠正机制；未采用统计数字或承诺本例支持量下降
+  excerpt: excerpts/kcs-reuse-review.md
