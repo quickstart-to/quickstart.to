@@ -1,7 +1,7 @@
 ---
 title: 提现与结汇：把平台余额对到本人到账
 description: 从出款条件和真实开发者经历出发，用完整双币种算例核对扣费、换汇与到账，处理延迟、补材料和未解释差额。
-order: 11
+order: 12
 volatility: high
 last_verified: 2026-10-09
 ---

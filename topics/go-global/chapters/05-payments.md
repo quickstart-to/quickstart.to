@@ -1,7 +1,7 @@
 ---
 title: 收款与交付：从选择平台到开通服务
 description: 以大陆个人出售软件使用权为例，比较准入、回款与费用，完成一份路线决定，并用可复现演练检查付款、重复通知和退款后的权益。
-order: 10
+order: 11
 volatility: high
 last_verified: 2026-10-09
 ---

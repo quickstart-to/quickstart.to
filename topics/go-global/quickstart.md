@@ -55,6 +55,7 @@ last_verified: 2026-10-09
 <ul class="map-leaves">
 <li><a href="/go-global/revenue-models"><strong>收入模式</strong><span>售卖、广告、赞助等模式的取舍</span></a></li>
 <li><a href="/go-global/pricing"><strong>定价与订阅</strong><span>完整报价、支持成本与使用权益</span></a></li>
+<li><a href="/go-global/team-procurement"><strong>团队采购与合同交付</strong><span>试点、采购、验收与服务责任</span></a></li>
 <li><a href="/go-global/payments"><strong>收款与交付</strong><span>平台条件、付款确认与服务开通</span></a></li>
 <li><a href="/go-global/payouts"><strong>提现与结汇</strong><span>出款、兑换、到账与差额核对</span></a></li>
 </ul>
@@ -87,7 +88,6 @@ last_verified: 2026-10-09
 <details class="map-pending" id="map-pending">
 <summary><strong>继续拓展的分支</strong><span>已有部分讨论，尚未完整展开</span></summary>
 <ul>
-<li><strong>团队采购与合同交付</strong><span>从试点、验收到采购和服务责任</span></li>
 <li><strong>AI、API 与插件专项</strong><span>按产品补成本、权限、评估与宿主规则</span></li>
 <li><strong>名称、素材与代码权利</strong><span>从查询入口走到完整权利台账</span></li>
 <li><strong>分平台投放操作</strong><span>现有渠道比较与算账，仍需具体平台执行流程</span></li>
@@ -309,7 +309,7 @@ Plausible 的例子中，相关文章帮助读者认识产品的差异。Tally �
 </details>
 </section>
 
-面向复杂团队工作，还需要分别理解购买者和使用者的要求。本文选择的是较容易近距离了解的小团队任务，原生应用的分发与试用条件另见[应用商店路线](/go-global/app-stores)。
+面向复杂团队工作，还需要分别理解购买者和使用者的要求，具体试点与责任安排见[团队采购与合同交付](/go-global/team-procurement)。本文选择的是较容易近距离了解的小团队任务，原生应用的分发与试用条件另见[应用商店路线](/go-global/app-stores)。
 
 完整的逐人记录、观察口径和下一轮投入决定，见[持续使用与迭代](/go-global/retention)。
 

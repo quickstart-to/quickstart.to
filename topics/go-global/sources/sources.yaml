@@ -1421,3 +1421,51 @@
   claim: "大多数广告系列每日计费限额为平均每日预算的 2 倍，pay-for-conversions 等有例外；平均每日预算不能当成每一天的绝对花费上限"
   excerpt: excerpts/google-ads-spending.md
   archive: https://web.archive.org/web/20261010043319/https://support.google.com/google-ads/answer/10486637?hl=en
+
+- id: src-patio-enterprise-sales
+  url: https://training.kalzumeus.com/newsletters/archive/enterprise_sales
+  title: "Selling To The Fortune 500, Government, And Other Lovecraftian Horrors"
+  publisher: "Patrick McKenzie · Kalzumeus"
+  accessed: 2026-10-10
+  claim: "作者自述在日本独立经营 Appointment Reminder，通过逐项材料、电话及书面跟进取得医院订单；报告六个月约 25 小时文书工作及十余个未继续的相似机会，实际订单金额未公开。不采用其绕采购限额或企业价格不敏感的泛化建议"
+  excerpt: excerpts/patio-enterprise-sales.md
+
+- id: src-posthog-buying-software
+  url: https://posthog.com/founders/how-to-buy-software-enterprise
+  title: "How to buy software in an enterprise company"
+  publisher: "Charles Cook / Leon Daly · PostHog"
+  accessed: 2026-10-10
+  claim: "2024-08-15 的买方实践分析区分问题、已有工具、试用、内部批准、谈判与采购；不把作者所述周期和人数当行业统计，也不采用虚假资料或绕流程建议"
+  excerpt: excerpts/posthog-buying-software.md
+
+- id: src-zhang-saas-delivery
+  url: https://www.woshipm.com/chuangye/5589645.html
+  title: "2年整，我的第一次SaaS创业结束了"
+  publisher: "张浩然（SaaS 张大伦）· 人人都是产品经理原创"
+  accessed: 2026-10-10
+  claim: "作者在 2022-09-05 复盘住客云：部分酒店客户要求代运营、缺少执行岗位，作者坚持订阅工具而错失订单，后来转向另一业务；国内住宿业自述，不泛化到海外企业采购"
+  excerpt: excerpts/zhang-saas-delivery.md
+
+- id: src-heavybit-paid-pilot
+  url: https://www.heavybit.com/library/article/saas-poc-paid-pilot-program
+  title: "How to Execute SaaS POCs that Convert"
+  publisher: "Ashley Dotterweich · Heavybit"
+  accessed: 2026-10-10
+  claim: "2020-02-14 整理 Mitch Morando 的试点建议：收费、明确目标、客户共同投入和提前处理可终止的年合同；是实践建议而非转化率证明，不统一套用到个人开发者"
+  excerpt: excerpts/heavybit-paid-pilot.md
+
+- id: src-posthog-running-trials
+  url: https://posthog.com/handbook/growth/sales/running-trials
+  title: "Running trials"
+  publisher: "PostHog Handbook"
+  accessed: 2026-10-10
+  claim: "截至阅读日，手册要求书面成功标准与时间线，并让采购、法律与价格和技术验证并行；客户无法投入时可暂停，延期应明确原因与待完成事项。未引用其资格门槛、额度或周期作通用标准"
+  excerpt: excerpts/posthog-running-trials.md
+
+- id: src-eurlex-gdpr-processing
+  url: https://eur-lex.europa.eu/legal-content/EN/AUTO/?uri=CELEX:02016R0679-20160504
+  title: "Regulation (EU) 2016/679 — Article 28 and Chapter V"
+  publisher: "EUR-Lex · European Union"
+  accessed: 2026-10-10
+  claim: "在 GDPR 适用且代表控制者处理的条件下，第 28 条规定处理合同、指令、保密、安全、再委托、协助及结束后的返还/删除等；第三国传输另适用第五章，不能仅靠 DPA 判断跨境安排完成"
+  excerpt: excerpts/eurlex-gdpr-processing.md

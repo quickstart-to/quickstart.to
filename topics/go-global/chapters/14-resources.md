@@ -1,7 +1,7 @@
 ---
 title: 资源导航：带着一个问题，找到下一步材料
 description: 按找用户、发布、产品适配、反馈经营、交付恢复和名称许可整理资源，集中索引本书的样稿、演练与查询入口。
-order: 18
+order: 19
 volatility: high
 last_verified: 2026-10-10
 ---
@@ -34,6 +34,7 @@ last_verified: 2026-10-10
 | 获客方式怎么选，投入是否值得 | [持续获客](/go-global/growth) | [渠道路线图](/go-global/growth#growth-loop-title)、[完整任务页](/go-global/growth#growth-page-title)、[付费获客账](/go-global/growth#growth-cost-title)与[触点归因演示](/go-global/growth#growth-demo-title) |
 | 用户不直接购买，还能怎样经营 | [收入模式](/go-global/revenue-models) | [付款关系图](/go-global/revenue-models#revenue-map-title)、[广告收益演算](/go-global/revenue-models#revenue-demo-title)、[英语赞助范围](/go-global/revenue-models#revenue-sponsor-title)与联盟佣金记录 |
 | 想开始收费，但承诺说不清 | [定价与订阅](/go-global/pricing) | [完整英语报价](/go-global/pricing#pr-offer-title)、支持成本与权益时间线 |
+| 团队想用，采购和交付却谈不清 | [团队采购与合同交付](/go-global/team-procurement) | [试点范围](/go-global/team-procurement#team-brief-title)、[验收台](/go-global/team-procurement#team-demo-title)与[交接样稿](/go-global/team-procurement#team-handover-title) |
 | 平台能否接、付款后怎样交付 | [收款与交付](/go-global/payments) | 本人路径比较、业务询问信与事件顺序演练 |
 | 平台数字对不上银行入账 | [提现与结汇](/go-global/payouts#用一张表解释到账差额) | [双币种对账互动](/go-global/payouts#po-demo-title)、查款问题 |
 | 不知道该收哪些资料、怎样删除 | [合规底线](/go-global/compliance) | [数据流](/go-global/compliance#privacy-boundary-title)、隐私文案、[删除恢复演示](/go-global/compliance#privacy-deletion-title) |
@@ -205,7 +206,7 @@ last_verified: 2026-10-10
 本书的贯穿样例是浏览器工具。若你的产品不同，先检查发生变化的那部分：
 
 - **AI 产品：** 模型/地区可用性、输入数据安排、错误结果怎么处理、调用成本与滥用上限。现有合规和定价章提供部分判断方法，本书尚未给出完整的 AI 产品上线样例。
-- **团队或企业采购：** 使用者和购买者可能不同，还要展开试用验收、权限、合同范围、采购与支持安排。主体章不能替代销售和合同交付流程。
+- **团队或企业采购：** [团队采购与合同交付](/go-global/team-procurement)已展开操作者与批准人、试点范围、采购条件、合同责任和验收交接。它沿用本地处理的有限试点，真正的共享权限、系统接入或代运营仍需另定产品与服务范围。
 - **插件、扩展或 API：** 宿主政策、权限、版本兼容、限流和开发者接入会改变交付。本书的应用商店章聚焦手机应用，不能直接套用到所有分发平台。
 - **持续经营：** [持续获客](/go-global/growth)已比较搜索、社交视频、社区、合作、产品传播、应用市场、直接销售与投放，展开内容分发复盘和独立付费获客账；[经营复盘与退出](/go-global/business-review)把月度订单、现金与时间放在同一份记录中，再展开收尾。它们分开观察渠道效果与整体经营，不互相替代。
 

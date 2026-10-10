@@ -19,6 +19,7 @@ import ResourceMedia from '../../../../topics/go-global/assets/ResourceMedia.ast
 import GrowthMedia from '../../../../topics/go-global/assets/GrowthMedia.astro';
 import FirstUseMedia from '../../../../topics/go-global/assets/FirstUseMedia.astro';
 import BusinessReviewMedia from '../../../../topics/go-global/assets/BusinessReviewMedia.astro';
+import TeamProcurementMedia from '../../../../topics/go-global/assets/TeamProcurementMedia.astro';
 import RevenueMedia from '../../../../topics/go-global/assets/RevenueMedia.astro';
 
 export async function getStaticPaths() {
@@ -67,4 +68,5 @@ const { Content } = await render(entry);
   {topic.id === 'go-global' && chapter.slug === 'first-use' && <FirstUseMedia />}
   {topic.id === 'go-global' && chapter.slug === 'business-review' && <BusinessReviewMedia />}
   {topic.id === 'go-global' && chapter.slug === 'revenue-models' && <RevenueMedia />}
+  {topic.id === 'go-global' && chapter.slug === 'team-procurement' && <TeamProcurementMedia />}
 </TopicLayout>
