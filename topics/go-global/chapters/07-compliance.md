@@ -1,7 +1,7 @@
 ---
 title: 合规底线：先决定哪些数据不该收
 description: 从一个周报工具的具体取舍出发，完成数据流、隐私文案与删除演练，并按触发条件处理跨境、Cookie 和消费者退出。
-order: 9
+order: 10
 volatility: high
 last_verified: 2026-10-09
 ---

@@ -1,7 +1,7 @@
 ---
 title: 资源导航：带着一个问题，找到下一步材料
 description: 按找用户、发布、产品适配、反馈经营、交付恢复和名称许可整理资源，集中索引本书的样稿、演练与查询入口。
-order: 14
+order: 15
 volatility: high
 last_verified: 2026-10-10
 ---
@@ -28,6 +28,7 @@ last_verified: 2026-10-10
 | 不知道能服务哪一群人 | [市场与适配](/go-global/market-fit#把市场切入点写成一组服务条件) | [英语试用说明、合成输入和输出](/go-global/market-fit#market-copy-title) |
 | 找到了入口，但不知道怎样开口 | [冷启动获客](/go-global/launch#先找到工作发生的地方) | [英文邀请](/go-global/launch#lc-invite-title)、[演示材料](/go-global/launch#lc-sample-title) |
 | 有人试过，却不知道该改什么 | [持续使用与迭代](/go-global/retention) | [逐人记录](/go-global/retention#retention-records-title)、[一轮有限投入决定](/go-global/retention#retention-decision-title) |
+| 发布以后，还该把时间花在哪里 | [持续获客](/go-global/growth) | [完整任务页](/go-global/growth#growth-page-title)、[触点归因演示](/go-global/growth#growth-demo-title)与六周复盘 |
 | 想开始收费，但承诺说不清 | [定价与订阅](/go-global/pricing) | [完整英语报价](/go-global/pricing#pr-offer-title)、支持成本与权益时间线 |
 | 平台能否接、付款后怎样交付 | [收款与交付](/go-global/payments) | 本人路径比较、业务询问信与事件顺序演练 |
 | 平台数字对不上银行入账 | [提现与结汇](/go-global/payouts#用一张表解释到账差额) | [双币种对账互动](/go-global/payouts#po-demo-title)、查款问题 |
@@ -201,6 +202,6 @@ last_verified: 2026-10-10
 - **AI 产品：** 模型/地区可用性、输入数据安排、错误结果怎么处理、调用成本与滥用上限。现有合规和定价章提供部分判断方法，本书尚未给出完整的 AI 产品上线样例。
 - **团队或企业采购：** 使用者和购买者可能不同，还要展开试用验收、权限、合同范围、采购与支持安排。主体章不能替代销售和合同交付流程。
 - **插件、扩展或 API：** 宿主政策、权限、版本兼容、限流和开发者接入会改变交付。本书的应用商店章聚焦手机应用，不能直接套用到所有分发平台。
-- **持续获客与经营：** 冷启动之后的搜索内容、邮件、合作、投放，以及完整月度成本、现金安排和服务退出，还需要更完整的专门例子。当前资源能帮助开始调查，不能当成这些问题都已展开。
+- **持续经营：** [持续获客](/go-global/growth)已补一轮内容、许可分发与投入复盘；完整月度成本、现金安排和服务退出仍需专门例子，不能由一张获客时间表替代。
 
 如果新资料要求你先付费、安装工具或注册主体，先回到最初那个问题：它将帮你取得哪一项当前缺少的事实，或完成哪一件已经需要交付的工作？没有清楚答案时，保留链接就够了。

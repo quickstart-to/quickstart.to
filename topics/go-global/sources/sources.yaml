@@ -519,8 +519,9 @@
   title: 搜索引擎优化（SEO）入门指南
   publisher: Google Search Central
   accessed: 2026-10-10
-  claim: 不保证收录或排名；提供独有实用内容、描述性标题/链接、检查抓取与规范网址；站点地图不是排名保证
+  claim: 不保证收录或排名；提供独有实用内容、描述性标题/链接、检查抓取与规范网址；站点地图不是排名保证；更改影响可能数小时至数月，通常需数周评估，且并非所有更改都有明显效果
   excerpt: excerpts/google-seo-starter.md
+  archive: https://web.archive.org/web/20261010022314/https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=zh-cn
 - id: src-creem-trials
   url: https://docs.creem.io/features/trials
   title: Trials
@@ -701,7 +702,7 @@
   url: "https://www.v2ex.com/t/1160804"
   title: "想全职独立开发/合伙创业? 这里有些我的感想"
   publisher: "bbbblue · V2EX"
-  accessed: "2026-10-09"
+  accessed: "2026-10-10"
   claim: "2025-09-21作者在第12条回复自述内容带来搜索流量却未帮助产品；仅为具名账号的个案报告，不证明收入、普遍失败率或内容营销因果"
   excerpt: "excerpts/v2ex-traffic-lessons.md"
 - id: "src-ink-local-first"
@@ -1195,3 +1196,51 @@
   accessed: 2026-10-10
   claim: 许可入门网站按社区、宽松许可或共享改进等需要引导至候选许可，并提醒核对依赖的许可；资源章仅介绍用途，不替具体产品选择许可或认定第三方素材可使用
   excerpt: excerpts/choose-a-license.md
+
+- id: src-bannerbear-marketing-year
+  url: https://www.bannerbear.com/blog/one-year-of-marketing-a-saas-from-10k-to-20k-mrr/
+  title: "1 Year of Marketing a SaaS from $10K MRR to $27K MRR"
+  publisher: "Jon Yongfook · Bannerbear"
+  accessed: 2026-10-10
+  claim: "2021 年 12 月作者回顾技术文章、教程、可尝试演示、API 文档和知识库的持续投入，并明确没有各项活动的增长归因数据；采用行动与约束，不将总收入增长归给某一渠道"
+  excerpt: excerpts/bannerbear-marketing-year.md
+
+- id: src-plausible-marketing-choices
+  url: https://plausible.io/blog/best-marketing-practices
+  title: "15 best startup marketing practices we say “no” to (while growing our MRR by 1000% in 6 months)"
+  publisher: "Marko Saric · Plausible Analytics"
+  accessed: 2026-10-10
+  claim: "2020-09-15 作者说明当时不投广告、不建联盟计划及不自制播客的价值与容量取舍；这些是当时团队的选择，不证明付费获客普遍无效或当前仍维持相同策略"
+  excerpt: excerpts/plausible-marketing-choices.md
+
+- id: src-ico-email-marketing
+  url: https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/guidance-on-direct-marketing-using-electronic-mail/how-do-we-comply-with-the-pecr-electronic-mail-marketing-rules/
+  title: "How do we comply with the PECR electronic mail marketing rules?"
+  publisher: "UK Information Commissioner’s Office"
+  accessed: 2026-10-10
+  claim: "英国 PECR 电子邮件营销说明区分受邀/非受邀消息与收件人类型；个人订户的非受邀营销通常需同意或满足 soft opt-in 全部条件；单独积极同意、可撤回和有效退订入口，不泛化为所有国家规则"
+  excerpt: excerpts/ico-email-marketing.md
+
+- id: src-ga-campaign-url
+  url: https://support.google.com/analytics/answer/10917952?hl=en
+  title: "URL builders: Collect campaign data with custom URLs"
+  publisher: "Google Analytics Help"
+  accessed: 2026-10-10
+  claim: "官方介绍 utm_source、utm_medium、utm_campaign 等活动参数和大小写敏感的命名；有相应采集接入才在报表中出现，参数本身不证明真实使用、跨设备身份或因果贡献"
+  excerpt: excerpts/ga-campaign-url.md
+
+- id: src-ga-no-pii
+  url: https://support.google.com/analytics/answer/6366371?hl=en
+  title: "Best practices to avoid sending Personally Identifiable Information (PII)"
+  publisher: "Google Analytics Help"
+  accessed: 2026-10-10
+  claim: "Google 政策禁止向 Analytics 发送可识别个人的信息，URL 路径、参数及活动维度不得包含邮箱等 PII；采用数据范围规则，不采用页面中历史 analytics.js 示例代码"
+  excerpt: excerpts/ga-no-pii.md
+
+- id: src-search-console-performance
+  url: https://support.google.com/webmasters/answer/7576553?hl=en
+  title: "Performance report (Search results): Overview and basic setup"
+  publisher: "Google Search Console Help"
+  accessed: 2026-10-10
+  claim: "表现报告可按查询、页面等查看点击、展示与 CTR；这些指标描述搜索结果中的曝光和点击，不能代替产品任务完成，导出缺失值可能转为零"
+  excerpt: excerpts/search-console-performance.md
