@@ -1181,8 +1181,8 @@
   url: https://www.w3.org/WAI/test-evaluate/easy-checks/
   title: "Easy Checks – A First Review of Web Accessibility"
   publisher: W3C Web Accessibility Initiative
-  accessed: 2026-10-10
-  claim: 入门检查入口覆盖图像替代文字、键盘焦点、缩放、页面语言、表单标签等，明确只覆盖部分问题，不能代替全面无障碍评估；旧 preliminary 页面把此入口称为新版草稿
+  accessed: 2026-10-11
+  claim: 入门检查入口覆盖图像替代文字、键盘焦点、缩放、页面语言、表单标签等，明确只覆盖部分问题，不能代替全面无障碍评估
   excerpt: excerpts/w3c-easy-checks.md
 - id: src-wipo-brand-database
   url: https://www.wipo.int/en/web/global-brand-database
@@ -1251,7 +1251,7 @@
   url: https://www.bannerbear.com/blog/how-i-increased-my-saas-conversion-rate-by-7x/
   title: "How I Increased my SaaS Conversion Rate by 700%"
   publisher: "Jon Yongfook · Bannerbear"
-  accessed: 2026-10-10
+  accessed: 2026-10-11
   claim: "2023 年 8 月作者自述先怀疑引导，检查注册与项目活动后发现大量零活动账号，加入防滥用措施等改动后注册分母减少；比例变化不等于新增付费客户同幅增加，也不能证明引导改善"
   excerpt: excerpts/bannerbear-onboarding-diagnosis.md
 
@@ -1259,7 +1259,7 @@
   url: https://posthog.com/blog/how-we-built-email-onboarding
   title: "How we built our onboarding email flow (with actual performance data)"
   publisher: "Joe Black · PostHog"
-  accessed: 2026-10-10
+  accessed: 2026-10-11
   claim: "2024 年原文及 2025 年 2 月更新自述接入检查不可靠导致错误邮件、复杂流程增加维护负担、后续简化并按使用状态提供帮助；版本间转化定义变化，不据此推断因果改善，不采用营销许可或当前价格判断"
   excerpt: excerpts/posthog-onboarding-email.md
 
@@ -1267,7 +1267,7 @@
   url: https://www.nngroup.com/articles/empty-state-interface-design/
   title: "Designing Empty States in Complex Applications: 3 Guidelines"
   publisher: "Kate Kaplan · Nielsen Norman Group"
-  accessed: 2026-10-10
+  accessed: 2026-10-11
   claim: "2021-09-19 原始设计分析区分未配置、无结果和加载状态，建议空态说明原因并直达下一步，Loggly 示例提供真实接入与演示数据两条路径；不是效果实验或转化保证"
   excerpt: excerpts/nng-empty-states.md
 
@@ -1275,7 +1275,7 @@
   url: https://www.gov.uk/service-manual/user-research/using-moderated-usability-testing
   title: "Using moderated usability testing"
   publisher: "GOV.UK · User research community"
-  accessed: 2026-10-10
+  accessed: 2026-10-11
   claim: "任务观察应选择实际或可能用户，给中性目标而不提示答案，必要时帮助完全卡住者继续；合成资料会限制情境发现，辅助技术使用者宜用熟悉设备；采用研究方法而非行业转化基准"
   excerpt: excerpts/govuk-usability-testing.md
 
@@ -1283,7 +1283,7 @@
   url: https://www.w3.org/WAI/tutorials/forms/notifications/
   title: "User Notification · Forms Tutorial"
   publisher: "W3C Web Accessibility Initiative"
-  accessed: 2026-10-10
+  accessed: 2026-10-11
   claim: "表单反馈需说明成功或失败，错误指出对应字段、可行修复及返回入口；用相关描述与动态通知让错误可感知，提交后可聚焦错误字段；指引不等于产品已经完成全面可访问性评估"
   excerpt: excerpts/w3c-form-notifications.md
 

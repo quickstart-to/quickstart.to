@@ -153,5 +153,126 @@
     "result": "still true",
     "checked_on": "2026-10-11",
     "scope": "对照原文核对所采用的归属、背景和论述；历史经历不作为当前效果或普遍结论。"
+  },
+  {
+    "id": "16-first-use-1",
+    "page": "chapters/16-first-use.md",
+    "passage": "这里选择“样本可先试、自带文件可直达”，因为本例的输出短、操作可逆，也不需要先接入团队系统。Nielsen Norman Group 的空态设计文章展示过类似选择：Loggly 在没有日志时，同时提供接入真实来源和填入演示数据的入口。文章的重点是告诉用户当前为什么空着，并给出可以直接采取的动作。[^src-nng-empty-states]",
+    "sources": [
+      "src-nng-empty-states"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "对照原文核对所采用的方法或归属明确的经历；不据此保证转化改善、现代产品功能或全面可访问性。"
+  },
+  {
+    "id": "16-first-use-2",
+    "page": "chapters/16-first-use.md",
+    "passage": "没有输入时，空白区域可以展示一份输出的样子，并说明怎样开始。有文件却没有记录时，应告诉用户读到了表头、没有可生成的行。处理尚未结束时，说明正在做什么；处理失败时，说明哪一步没有完成。NN/G 特别提醒过把“仍在加载”错误显示为“没有记录”的问题：同样一块空白，会让用户作出完全不同的判断。[^src-nng-empty-states]",
+    "sources": [
+      "src-nng-empty-states"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "对照原文核对所采用的方法或归属明确的经历；不据此保证转化改善、现代产品功能或全面可访问性。"
+  },
+  {
+    "id": "16-first-use-3",
+    "page": "chapters/16-first-use.md",
+    "passage": "W3C 的表单指引要求错误能让用户知道哪个字段出了问题、如何修改，并能返回对应位置；提交结果也要清楚可感知。[^src-w3c-form-notifications] 对周报工具，“Invalid input”提供的信息太少。更有用的提示是：第 3 行的工时是 `two`，请输入以小时为单位的数字，例如 `2`；刚才写的项目说明仍然保留。",
+    "sources": [
+      "src-w3c-form-notifications"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "对照原文核对所采用的方法或归属明确的经历；不据此保证转化改善、现代产品功能或全面可访问性。"
+  },
+  {
+    "id": "16-first-use-4",
+    "page": "chapters/16-first-use.md",
+    "passage": "PostHog 的邮件引导复盘说明，上下文并不是设置一个标签就自然可靠。早期流程按有没有接入数据决定发送内容，检查却不可靠，用户反映收到错误邮件；后来流程增加到几十封模板，团队又因维护负担简化。2025 年的版本重新围绕数据是否进来、先选了哪个产品来安排帮助。[^src-posthog-onboarding-email]",
+    "sources": [
+      "src-posthog-onboarding-email"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "对照原文核对所采用的方法或归属明确的经历；不据此保证转化改善、现代产品功能或全面可访问性。"
+  },
+  {
+    "id": "16-first-use-5",
+    "page": "chapters/16-first-use.md",
+    "passage": "这个过程对小产品的启发是先弄清卡点，并能维护对应的帮助。还没有可靠使用状态，就不必安排一长串自动提醒。PostHog 作者也写到，越来越多时间花在回复用户邮件上；帮助入口意味着持续接待工作。它没有证明照抄那套流程会改善你的首次使用，更没有替你承担回复。[^src-posthog-onboarding-email]",
+    "sources": [
+      "src-posthog-onboarding-email"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "对照原文核对所采用的方法或归属明确的经历；不据此保证转化改善、现代产品功能或全面可访问性。"
+  },
+  {
+    "id": "16-first-use-6",
+    "page": "chapters/16-first-use.md",
+    "passage": "首次使用不只发生在开发者熟悉的宽屏和鼠标上。英文长标签、小屏、放大文字、键盘操作，都会暴露另一种“我不知道下一步在哪里”。W3C 的入门检查把可见键盘焦点、缩放、语言与表单标签列为基础项目，同时明确这些检查并不全面。[^src-w3c-easy-checks]",
+    "sources": [
+      "src-w3c-easy-checks"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "对照原文核对所采用的方法或归属明确的经历；不据此保证转化改善、现代产品功能或全面可访问性。"
+  },
+  {
+    "id": "16-first-use-7",
+    "page": "chapters/16-first-use.md",
+    "passage": "这时可以顺着同一个任务检查，而不另做一张脱离产品的清单：不用鼠标能否选择样本、改值、提交并定位错误；标签会不会在输入后消失；放大后错误和按钮是否仍可见；结果变化是否既有文字，也能被辅助技术感知。用拖放上传时仍要留普通选择文件的入口，不能只让鼠标手势通行。错误行的颜色可以辅助定位，但不能成为唯一提示。[^src-w3c-form-notifications]",
+    "sources": [
+      "src-w3c-form-notifications"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "对照原文核对所采用的方法或归属明确的经历；不据此保证转化改善、现代产品功能或全面可访问性。"
+  },
+  {
+    "id": "16-first-use-8",
+    "page": "chapters/16-first-use.md",
+    "passage": "本章的小演示保留了键盘控件、字段说明、动态反馈和静态过程。它们提供了可参考的做法，真实使用体验还需要进一步观察。GOV.UK 的研究方法提醒，辅助技术使用者通常有自己的熟悉设置，观察时尽量让他们使用自己的设备。[^src-govuk-usability-testing] 找到真实使用者之后，需要补上这种实际任务观察，不能用开发者的一次 Tab 键检查代替。",
+    "sources": [
+      "src-govuk-usability-testing"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "对照原文核对所采用的方法或归属明确的经历；不据此保证转化改善、现代产品功能或全面可访问性。"
+  },
+  {
+    "id": "16-first-use-9",
+    "page": "chapters/16-first-use.md",
+    "passage": "[持续使用章](/go-global/retention#有时该补的是基本功)引用过 flomo 的反思：有些人已经付费，却到期仍不知道已有功能。[^src-flomo-pricing-learning] 这说明引导值得认真做，但不能倒过来把所有流失都解释成引导不好。",
+    "sources": [
+      "src-flomo-pricing-learning"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "对照原文核对所采用的方法或归属明确的经历；不据此保证转化改善、现代产品功能或全面可访问性。"
+  },
+  {
+    "id": "16-first-use-10",
+    "page": "chapters/16-first-use.md",
+    "passage": "Bannerbear 创始人 Jon Yongfook 在 2023 年也曾怀疑注册到付费的比例太低，是否应该重做引导。他检查最近一批注册和项目活动，才发现大量账号没有走出第一步，怀疑存在自动化滥用。做了防滥用处理等调整以后，注册分母明显减少，比例变好；新增付费人数却没有按那个比例成倍增长。[^src-bannerbear-onboarding-diagnosis] 这是作者的自述，包含同时发生的多项改动。可以借鉴的是回到具体记录寻找原因，不能据此断定你的零活动账号也都是机器人。",
+    "sources": [
+      "src-bannerbear-onboarding-diagnosis"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "对照原文核对所采用的方法或归属明确的经历；不据此保证转化改善、现代产品功能或全面可访问性。"
+  },
+  {
+    "id": "16-first-use-11",
+    "page": "chapters/16-first-use.md",
+    "passage": "对于还只有几次试用的工具，先逐个观察比先画漏斗更有解释力。邀请一个实际或可能使用产品的人，给他能理解的任务目标，少提示具体按钮。GOV.UK 的方法指南强调任务不能把答案藏在说明里；完全卡住时可以帮他继续，以便了解后面的路径，但这次帮助应当进入记录。[^src-govuk-usability-testing]",
+    "sources": [
+      "src-govuk-usability-testing"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "对照原文核对所采用的方法或归属明确的经历；不据此保证转化改善、现代产品功能或全面可访问性。"
   }
 ]
