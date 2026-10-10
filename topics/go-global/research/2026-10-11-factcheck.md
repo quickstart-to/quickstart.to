@@ -28,6 +28,8 @@ YouTube 与 Amplitude 首次导航等待完整 load 超时，但页面已提交�
 
 ## 剩余范围
 
+技术检查：`pnpm validate` 与 `pnpm build` 通过；保留原有 4 项未引用来源警告。CI 的 build、guard 和 Cloudflare 预览也已通过。技术通过不替代以上证据结论或后续读者验收。
+
 第一阅读组的 `validate-idea`、`market-fit`、`launch`、`first-use` 尚待本轮复核；收费经营五页及条件路线四页也尚未完成。共享来源的新 `accessed` 日期不代表这些页面已经完成整页核验。`topic.yaml` 保持 draft，不据此宣布 beta。
 
 后续批次继续更新本主题的同一份 active PR。真实反馈与读者招募仍按 beta 计划执行，本批没有反馈 ID，也没有向任何人发送邀请。
