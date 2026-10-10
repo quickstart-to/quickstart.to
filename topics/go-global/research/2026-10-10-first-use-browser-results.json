@@ -1,0 +1,171 @@
+[
+  {
+    "test": "keyboard partial preview",
+    "state": "partial",
+    "focus": null,
+    "report": "Client update — Project North\nPARTIAL PREVIEW — Draft report row excluded.\n\nRecorded work\nResearch: 3 h\nIncluded subtotal: 3 h\n\nProject status: Waiting for the client review.\nNext step: Ask the client for feedback.\n\nDraft for review. Not sent to the client.",
+    "status": "Waiting for the client review.",
+    "downloadDisabled": true,
+    "previewHidden": false,
+    "errorCount": 0,
+    "overflow": false
+  },
+  {
+    "test": "repair preserves manual judgment",
+    "state": "ready",
+    "focus": null,
+    "report": "Client update — Project North\n\nRecorded work\nResearch: 3 h\nDraft report: 2 h\nTotal: 5 h\n\nProject status: Waiting for the client review.\nNext step: Ask the client for feedback.\n\nDraft for review. Not sent to the client.",
+    "status": "Waiting for the client review.",
+    "downloadDisabled": false,
+    "previewHidden": false,
+    "errorCount": 0,
+    "overflow": false
+  },
+  {
+    "test": "actual local download",
+    "filename": "project-north-draft.txt",
+    "text": "Client update — Project North\n\nRecorded work\nResearch: 3 h\nDraft report: 2 h\nTotal: 5 h\n\nProject status: Waiting for the client review.\nNext step: Ask the client for feedback.\n\nDraft for review. Not sent to the client.\n"
+  },
+  {
+    "test": "invalid hours",
+    "value": "",
+    "state": "error",
+    "errorCount": 1
+  },
+  {
+    "test": "invalid hours",
+    "value": "-1",
+    "state": "error",
+    "errorCount": 1
+  },
+  {
+    "test": "invalid hours",
+    "value": "1000.01",
+    "state": "error",
+    "errorCount": 1
+  },
+  {
+    "test": "invalid hours",
+    "value": "1.001",
+    "state": "error",
+    "errorCount": 1
+  },
+  {
+    "test": "invalid hours",
+    "value": "2h",
+    "state": "error",
+    "errorCount": 1
+  },
+  {
+    "test": "invalid hours",
+    "value": "1,5",
+    "state": "error",
+    "errorCount": 1
+  },
+  {
+    "test": "invalid hours",
+    "value": "Infinity",
+    "state": "error",
+    "errorCount": 1
+  },
+  {
+    "test": "valid boundary",
+    "value": "0",
+    "total": "3"
+  },
+  {
+    "test": "valid boundary",
+    "value": "1.5",
+    "total": "4.5"
+  },
+  {
+    "test": "valid boundary",
+    "value": "1000",
+    "total": "1003"
+  },
+  {
+    "test": "valid boundary",
+    "value": "0.29",
+    "total": "3.29"
+  },
+  {
+    "test": "missing manual fields",
+    "state": "error",
+    "focus": "first-project-status",
+    "report": "Client update — Project North\n\nRecorded work\nResearch: 3 h\nDraft report: 0.29 h\nTotal: 3.29 h\n\nProject status: Waiting for the client review.\nNext step: Ask the client for feedback.\n\nDraft for review. Not sent to the client.",
+    "status": "",
+    "downloadDisabled": true,
+    "previewHidden": true,
+    "errorCount": 2,
+    "overflow": false
+  },
+  {
+    "test": "empty input preserves work",
+    "state": "empty",
+    "focus": null,
+    "report": "Client update — Project North\n\nRecorded work\nResearch: 3 h\nDraft report: 0.29 h\nTotal: 3.29 h\n\nProject status: Waiting for the client review.\nNext step: Ask the client for feedback.\n\nDraft for review. Not sent to the client.",
+    "status": "Keep this judgment.",
+    "downloadDisabled": true,
+    "previewHidden": true,
+    "errorCount": 0,
+    "overflow": false
+  },
+  {
+    "test": "recover from empty",
+    "state": "ready",
+    "focus": null,
+    "report": "Client update — Project North\n\nRecorded work\nResearch: 3 h\nDraft report: 2 h\nTotal: 5 h\n\nProject status: Keep this judgment.\nNext step: Ask the client for feedback.\n\nDraft for review. Not sent to the client.",
+    "status": "Keep this judgment.",
+    "downloadDisabled": false,
+    "previewHidden": false,
+    "errorCount": 0,
+    "overflow": false
+  },
+  {
+    "test": "editing invalidates old preview",
+    "state": "editing",
+    "downloadDisabled": true
+  },
+  {
+    "test": "reset",
+    "state": "empty",
+    "focus": null,
+    "report": "Client update — Project North\n\nRecorded work\nResearch: 3 h\nDraft report: 2 h\nTotal: 5 h\n\nProject status: Keep this judgment.\nNext step: Ask the client for feedback.\n\nDraft for review. Not sent to the client.",
+    "status": "Draft ready for review.",
+    "downloadDisabled": true,
+    "previewHidden": true,
+    "errorCount": 0,
+    "overflow": false
+  },
+  {
+    "test": "dark and reduced motion",
+    "dark": true,
+    "reduced": true,
+    "overflow": false,
+    "report": "Client update — Project North\n\nRecorded work\nResearch: 3 h\nDraft report: 2 h\nTotal: 5 h\n\nProject status: Draft ready for review.\nNext step: Ask the client for feedback.\n\nDraft for review. Not sent to the client.",
+    "animation": "none"
+  },
+  {
+    "test": "no JavaScript",
+    "presetsDisabled": true,
+    "formHidden": true,
+    "resetHidden": true,
+    "static": "不操作也能看懂：错误、排除与修复的三种结果",
+    "fullReport": "一份已填好的客户更新草稿\n\nClient update — Project North\n\nRecorded work\nResearch: 3 h\nDraft report: 2 h\nTotal: 5 h\nProject status\nDraft ready for review.\nNext step\nAsk the client for feedback.\n\nDraft for review. Not sent to the client.\n\n把合计与原记录对照，再读状态和下一步。5 小时不能证明项目进展顺利，也不能证明客户已经批准。",
+    "records": 4
+  },
+  {
+    "test": "320 px reflow",
+    "width": 320,
+    "scrollWidth": 305,
+    "previewWidth": 237
+  },
+  {
+    "test": "root text size 200 percent",
+    "rootFont": "32px",
+    "bodyFont": "34px",
+    "scrollWidth": 1425,
+    "width": 1440,
+    "demoWidth": 765.8125
+  }
+]

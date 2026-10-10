@@ -1,7 +1,7 @@
 ---
 title: 风控与账户安全：恢复控制，继续服务
 description: 从遗留账号和凭据泄露的真实复盘出发，演练撤销旧访问与恢复服务，处理用户投诉、正式争议和数据事件。
-order: 14
+order: 15
 volatility: high
 last_verified: 2026-10-09
 ---

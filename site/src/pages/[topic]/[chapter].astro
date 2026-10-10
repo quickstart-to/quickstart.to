@@ -17,6 +17,7 @@ import RiskMedia from '../../../../topics/go-global/assets/RiskMedia.astro';
 import PrivacyMedia from '../../../../topics/go-global/assets/PrivacyMedia.astro';
 import ResourceMedia from '../../../../topics/go-global/assets/ResourceMedia.astro';
 import GrowthMedia from '../../../../topics/go-global/assets/GrowthMedia.astro';
+import FirstUseMedia from '../../../../topics/go-global/assets/FirstUseMedia.astro';
 
 export async function getStaticPaths() {
   const paths = [];
@@ -61,4 +62,5 @@ const { Content } = await render(entry);
   {topic.id === 'go-global' && chapter.slug === 'compliance' && <PrivacyMedia />}
   {topic.id === 'go-global' && chapter.slug === 'resources' && <ResourceMedia />}
   {topic.id === 'go-global' && chapter.slug === 'growth' && <GrowthMedia />}
+  {topic.id === 'go-global' && chapter.slug === 'first-use' && <FirstUseMedia />}
 </TopicLayout>

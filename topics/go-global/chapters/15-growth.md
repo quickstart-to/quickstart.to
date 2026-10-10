@@ -1,7 +1,7 @@
 ---
 title: 持续获客：让一次发布之后，仍有人找到你
 description: 从内容、同业合作、许可邮件和付费试验中选择可承担的路径，写出完整任务页，再用预算、使用记录和归因演示决定下一轮投入。
-order: 6
+order: 7
 volatility: high
 last_verified: 2026-10-10
 ---

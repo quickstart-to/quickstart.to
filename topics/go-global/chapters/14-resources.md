@@ -1,7 +1,7 @@
 ---
 title: 资源导航：带着一个问题，找到下一步材料
 description: 按找用户、发布、产品适配、反馈经营、交付恢复和名称许可整理资源，集中索引本书的样稿、演练与查询入口。
-order: 15
+order: 16
 volatility: high
 last_verified: 2026-10-10
 ---
@@ -26,6 +26,7 @@ last_verified: 2026-10-10
 |---|---|---|
 | 几个点子，先了解哪一个 | [选品与验证](/go-global/validate-idea#三个候选为什么只优先调查其中一个) | [完整工作成本演算](/go-global/validate-idea#vd-cost-title)与调查决定 |
 | 不知道能服务哪一群人 | [市场与适配](/go-global/market-fit#把市场切入点写成一组服务条件) | [英语试用说明、合成输入和输出](/go-global/market-fit#market-copy-title) |
+| 陌生人打开产品，却做不完第一次任务 | [首次使用体验](/go-global/first-use) | [错误恢复演示](/go-global/first-use#first-demo-title)、[完整草稿](/go-global/first-use#first-output-title)和[求助样稿](/go-global/first-use#first-help-title) |
 | 找到了入口，但不知道怎样开口 | [冷启动获客](/go-global/launch#先找到工作发生的地方) | [英文邀请](/go-global/launch#lc-invite-title)、[演示材料](/go-global/launch#lc-sample-title) |
 | 有人试过，却不知道该改什么 | [持续使用与迭代](/go-global/retention) | [逐人记录](/go-global/retention#retention-records-title)、[一轮有限投入决定](/go-global/retention#retention-decision-title) |
 | 发布以后，还该把时间花在哪里 | [持续获客](/go-global/growth) | [完整任务页](/go-global/growth#growth-page-title)、[触点归因演示](/go-global/growth#growth-demo-title)与六周复盘 |
