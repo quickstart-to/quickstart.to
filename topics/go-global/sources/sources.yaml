@@ -3,21 +3,21 @@
   url: https://www.notion.com/releases/2020-08-10
   title: "Notion in Korean 🇰🇷 🎊"
   publisher: Notion
-  accessed: 2026-10-09
+  accessed: 2026-10-10
   claim: 2020 年韩语发布以已有韩国用户社区为选择依据，同时翻译应用、常用模板和帮助中心；属于团队历史叙述，不证明地区普适性或增长归因
   excerpt: excerpts/notion-korean-launch.md
 - id: src-yang-localization-retrospective
   url: https://www.163.com/dy/article/J7G55TGH05566TJ2.html
   title: "创业者复盘：出海“本地化”过程中，我犯了哪些错？"
   publisher: 杨杰 · FounderPark 授权转载
-  accessed: 2026-10-09
+  accessed: 2026-10-10
   claim: 作者在 2024 年复盘中报告分区定价及增加语言未取得期望改善，并归因于支付路径、缺上下文翻译和术语校验等缺口；没有独立因果验证
   excerpt: excerpts/yang-localization-retrospective.md
 - id: src-tally-form-languages
   url: https://tally.so/help/supported-languages
   title: "Supported languages"
   publisher: Tally
-  accessed: 2026-10-09
+  accessed: 2026-10-10
   claim: 语言设置翻译系统默认文字；作者可编辑的问题标题等内容需要作者自行使用目标语言，不因语言设置自动翻译
   excerpt: excerpts/tally-form-languages.md
 - id: src-w3c-date-formats
@@ -31,14 +31,14 @@
   url: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat
   title: "Intl.DateTimeFormat() constructor"
   publisher: MDN Web Docs
-  accessed: 2026-10-09
+  accessed: 2026-10-10
   claim: locale、calendar、numberingSystem 与 timeZone 分别控制日期时间显示，未指定时区使用运行时默认；本例显式设置公历及命名时区
   excerpt: excerpts/mdn-datetime-constructor.md
 - id: src-mdn-numberformat-constructor
   url: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat
   title: "Intl.NumberFormat() constructor"
   publisher: MDN Web Docs
-  accessed: 2026-10-09
+  accessed: 2026-10-10
   claim: currency 模式需独立指定币种，currencyDisplay 可采用 ISO 币种代码；格式化不执行货币换算
   excerpt: excerpts/mdn-numberformat-constructor.md
 - id: src-postnitro-payment-migration
@@ -2056,3 +2056,46 @@
   accessed: "2026-10-10"
   claim: "邮件隐私保护会阻止发件人获知是否打开邮件；不能把打开记录当成可靠阅读/未阅读证据，功能不延伸到链接及附件"
   excerpt: "excerpts/apple-mail-privacy.md"
+- id: src-notion-japanese-launch
+  url: https://www.notion.com/blog/notion-launching-in-japanese
+  title: "Notion is now in Japanese! みなさん、こんにちは！"
+  publisher: 西勝清 · Notion
+  accessed: 2026-10-10
+  claim: 2021 年日本市场负责人报告发布前已有使用英语产品的日本社区，并随日语产品提供专门客服、帮助文章、案例与模板；是团队历史叙述，不证明翻译带来因果增长
+  excerpt: excerpts/notion-japanese-launch.md
+- id: src-mhand-report-practice
+  url: https://www.m-hand.co.jp/tokyo/blog/report-form/
+  title: Webサイトの成果を可視化する報告テンプレートの紹介
+  publisher: エムハンド · マーケターチーム
+  accessed: 2026-10-10
+  claim: 2023 年团队介绍月度网站成果报告，结合访问数据与实际咨询跟进，分别维护线索、摘要和趋势材料；支持任务结构，不代表小工作室购买意愿
+  excerpt: excerpts/mhand-report-practice.md
+- id: src-ini-backlog-practice
+  url: https://www.ini.co.jp/iniway/knowledge/website-tools.html
+  title: 〜Webサイト制作・開発は進捗管理ツールを活用しよう！〜 PM・ディレクション初心者のためのBacklog活用法【プロジェクト開始編】
+  publisher: 前原 · INI WAY
+  accessed: 2026-10-10
+  claim: INI 实践文章区分任务自身完成、内部复核与客户批准，并以主视觉素材请求说明任务命名歧义；不采用其页面功能限制作为现行规则
+  excerpt: excerpts/ini-backlog-practice.md
+- id: src-jbug-sapporo-practice
+  url: https://backlog.com/ja/blog/jbug-sapporo-eventreport/
+  title: Web制作現場のBacklog活用を学ぶ｜JBUGイベントレポート
+  publisher: makofujimoto · Backlog
+  accessed: 2026-10-10
+  claim: 2026-06-17 的活动回顾记录 Gear8 待島亘在 5 月 30 日分享邀请客户到 Backlog 集中制作运营往来和报告整理；为厂商刊载的经验记录，不证明工具普遍适合或独立报告没有市场
+  excerpt: excerpts/jbug-sapporo-practice.md
+- id: src-jbug-community
+  url: https://jbuginfo.backlog.com/
+  title: JBUG（ジェイバグ）｜Backlogユーザーコミュニティ
+  publisher: JBUG · Backlog
+  accessed: 2026-10-10
+  claim: 社区主页定位为 Backlog 用户经验交流并连接活动与 connpass 入口；不保证特定活动尚可报名、不授予营销许可
+  excerpt: excerpts/jbug-community.md
+- id: src-stripe-konbini-market
+  url: https://docs.stripe.com/payments/konbini
+  title: Konbini payments
+  publisher: Stripe
+  accessed: 2026-10-10
+  claim: Konbini 买家地点日本、展示币种 JPY，Business locations 页签列日本 Stripe 账户；取得付款码后需线下支付，退款需买家收款账户信息且另有入驻审核，不能推断大陆个人可用
+  excerpt: excerpts/stripe-konbini-market.md
+  archive: https://web.archive.org/web/20261010094812/https://docs.stripe.com/payments/konbini

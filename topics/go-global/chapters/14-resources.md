@@ -42,6 +42,7 @@ last_verified: 2026-10-10
 |---|---|---|
 | 几个点子，先了解哪一个 | [选品与验证](/go-global/validate-idea#三个候选为什么只优先调查其中一个) | [完整工作成本演算](/go-global/validate-idea#vd-cost-title)与调查决定 |
 | 不知道能服务哪一群人 | [市场与适配](/go-global/market-fit#把市场切入点写成一组服务条件) | [英语试用说明、合成输入和输出](/go-global/market-fit#market-copy-title) |
+| 想进入另一种语言市场 | [日语场景的工作与入口](/go-global/market-fit#japan-work) | [审阅材料](/go-global/market-fit#japan-review)、[投入与暂缓决定](/go-global/market-fit#japan-budget) |
 | 陌生人打开产品，却做不完第一次任务 | [首次使用体验](/go-global/first-use) | [错误恢复演示](/go-global/first-use#first-demo-title)、[完整草稿](/go-global/first-use#first-output-title)和[求助样稿](/go-global/first-use#first-help-title) |
 | 找到了入口，但不知道怎样开口 | [冷启动获客](/go-global/launch#先找到工作发生的地方) | [英文邀请](/go-global/launch#lc-invite-title)、[演示材料](/go-global/launch#lc-sample-title) |
 | 有人试过，却不知道该改什么 | [持续使用与迭代](/go-global/retention) | [逐人记录](/go-global/retention#retention-records-title)、[一轮有限投入决定](/go-global/retention#retention-decision-title) |
@@ -230,9 +231,7 @@ last_verified: 2026-10-10
 
 ## 这些问题，目前还没有完整操作篇
 
-下面几件事已有局部材料，但尚不能只靠一个入口从头做完。可以先用现有部分解决眼前的问题，也应知道它在哪里停下：
-
-- **进入另一种语言市场。** [适配包](/go-global/market-fit#一份最小适配包可以怎样交出去)能检查语言和交付；非英语市场的一轮完整进入决定，仍需补充当地任务、入口、服务条件与投入的连贯研究。
+[进入另一种语言市场](/go-global/market-fit#japan-work)已经用日语网站制作场景展开工作材料、接触入口、审阅、支持与付款条件，并给出一轮投入决定。它能帮助你形成自己的研究包；其他语言、地区以及真实客户需求，仍需按这条路径重新取证。
 
 收入模式也有深浅之分：广告、赞助和联盟已有演算或合作样稿，撮合、自愿支持和商业授权目前主要用于比较选择。插件专项深入 Chrome，投放章以 Search 的完整试验串起其他平台；它们没有覆盖每一种宿主和每一家平台的完整后台操作。
 

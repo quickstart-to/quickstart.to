@@ -3,7 +3,7 @@ export const REPORT_SAMPLE = Object.freeze({
   rawDate: '11/10/2026', budget: 1234.5, currency: 'USD',
   updatedAt: '2026-10-09T00:30:00Z',
 });
-export const REPORT_LOCALES = ['en-GB', 'en-US', 'de-DE'];
+export const REPORT_LOCALES = ['en-GB', 'en-US', 'de-DE', 'ja-JP'];
 export const REPORT_ZONES = ['Europe/London', 'America/Los_Angeles', 'Asia/Tokyo'];
 
 export function confirmReportDate(input, order) {

@@ -38,3 +38,32 @@ if (demo) {
   reset.hidden = false;
   render();
 }
+
+const budgetDemo = document.querySelector<HTMLElement>('[data-market-budget-demo]');
+if (budgetDemo) {
+  const form = budgetDemo.querySelector<HTMLFormElement>('[data-entry-form]')!;
+  const scope = form.querySelector<HTMLSelectElement>('#entry-scope')!;
+  const extra = form.querySelector<HTMLSelectElement>('#entry-extra')!;
+  const format = (n: number) => new Intl.NumberFormat('en-US').format(n);
+  const write = (key: string, value: string) => {
+    budgetDemo.querySelector<HTMLElement>(`[data-entry-${key}]`)!.textContent = value;
+  };
+  const update = () => {
+    const base = scope.value === 'full' ? { hours: 30, cash: 36000 } : { hours: 16, cash: 21000 };
+    const additional = Number(extra.value);
+    const hours = base.hours + additional;
+    const cash = base.cash + additional * 3000;
+    write('hours', `${hours} 小时`);
+    write('amount', `${format(cash)} JPY`);
+    write('time', hours > 20 ? `超出 ${hours - 20} 小时` : hours === 20 ? '时间已用尽，没有缓冲' : `剩余 ${20 - hours} 小时`);
+    write('cash', cash > 30000 ? `超出 ${format(cash - 30000)} JPY` : `剩余 ${format(30000 - cash)} JPY`);
+    write('decision', hours > 20 || cash > 30000
+      ? '计划超出本轮上限。重新约定范围或支持安排，再决定是否继续；既有支出不会因缩小计划退回。'
+      : '资源账未超限；仍需确认任务、参与者、审阅和支持安排，不能据此宣布进入市场。');
+    budgetDemo.dataset.overBudget = String(hours > 20 || cash > 30000);
+  };
+  form.addEventListener('change', update);
+  form.addEventListener('reset', () => setTimeout(update, 0));
+  form.hidden = false;
+  update();
+}

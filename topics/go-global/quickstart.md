@@ -25,7 +25,7 @@ last_verified: 2026-10-09
 <summary><strong>市场与需求</strong><span>先服务谁，为什么值得做</span></summary>
 <ul class="map-leaves">
 <li><a href="/go-global/validate-idea"><strong>选品与验证</strong><span>现有办法、候选取舍与试验</span></a></li>
-<li><a href="/go-global/market-fit"><strong>市场与适配</strong><span>地区、语言、格式与服务能力</span></a></li>
+<li><a href="/go-global/market-fit"><strong>市场与适配</strong><span>日语场景研究、适配与投入决定</span></a></li>
 </ul>
 </details>
 </li>
@@ -92,7 +92,7 @@ last_verified: 2026-10-09
 </nav>
 <figcaption id="map-caption">连线表示主题归属，可以按当前问题跳读。数据、支付和主体等准备，应在相应业务发生前处理。</figcaption>
 </figure>
-<p class="map-scope" id="map-pending">脑图连接的是已经写出的章节。非英语市场的一轮完整进入决定，还没有操作篇；<a href="/go-global/resources#这些问题目前还没有完整操作篇">查看现有材料与待补部分</a>。</p>
+<p class="map-scope" id="map-pending">脑图连接的是已经写出的章节；日语场景已补入市场适配，其他收入模式与宿主仍有深度差异。<a href="/go-global/resources#这些问题目前还没有完整操作篇">查看现有材料与待补部分</a>。</p>
 <p class="map-scope">本书聚焦软件与数字产品。跨境实物电商、物流和融资不在当前范围内。</p>
 </section>
 

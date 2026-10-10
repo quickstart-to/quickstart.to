@@ -1,0 +1,367 @@
+{
+  "interaction": {
+    "budget": [
+      {
+        "scope": "report",
+        "extra": "0",
+        "state": {
+          "total": "合计 16 小时、21,000 JPY",
+          "time": "剩余 4 小时",
+          "cash": "剩余 9,000 JPY",
+          "decision": "资源账未超限；仍需确认任务、参与者、审阅和支持安排，不能据此宣布进入市场。"
+        }
+      },
+      {
+        "scope": "report",
+        "extra": "4",
+        "state": {
+          "total": "合计 20 小时、33,000 JPY",
+          "time": "时间已用尽，没有缓冲",
+          "cash": "超出 3,000 JPY",
+          "decision": "计划超出本轮上限。重新约定范围或支持安排，再决定是否继续；既有支出不会因缩小计划退回。"
+        }
+      },
+      {
+        "scope": "report",
+        "extra": "10",
+        "state": {
+          "total": "合计 26 小时、51,000 JPY",
+          "time": "超出 6 小时",
+          "cash": "超出 21,000 JPY",
+          "decision": "计划超出本轮上限。重新约定范围或支持安排，再决定是否继续；既有支出不会因缩小计划退回。"
+        }
+      },
+      {
+        "scope": "full",
+        "extra": "0",
+        "state": {
+          "total": "合计 30 小时、36,000 JPY",
+          "time": "超出 10 小时",
+          "cash": "超出 6,000 JPY",
+          "decision": "计划超出本轮上限。重新约定范围或支持安排，再决定是否继续；既有支出不会因缩小计划退回。"
+        }
+      },
+      {
+        "scope": "full",
+        "extra": "4",
+        "state": {
+          "total": "合计 34 小时、48,000 JPY",
+          "time": "超出 14 小时",
+          "cash": "超出 18,000 JPY",
+          "decision": "计划超出本轮上限。重新约定范围或支持安排，再决定是否继续；既有支出不会因缩小计划退回。"
+        }
+      },
+      {
+        "scope": "full",
+        "extra": "10",
+        "state": {
+          "total": "合计 40 小时、66,000 JPY",
+          "time": "超出 20 小时",
+          "cash": "超出 36,000 JPY",
+          "decision": "计划超出本轮上限。重新约定范围或支持安排，再决定是否继续；既有支出不会因缩小计划退回。"
+        }
+      }
+    ],
+    "dates": [
+      {
+        "kind": "mdy-ja-Tokyo",
+        "state": {
+          "stored": "2026-11-10",
+          "deadline": "2026年11月10日",
+          "budget": "USD 1,234.50",
+          "time": "2026年10月9日 09:30 GMT+9",
+          "result": "已按你确认的格式生成预览。检查这个日期是不是原作者的意思；格式有效不代表理解正确。"
+        }
+      },
+      {
+        "kind": "dmy-ja",
+        "state": {
+          "stored": "2026-10-11",
+          "deadline": "2026年10月11日",
+          "budget": "USD 1,234.50",
+          "time": "2026年10月9日 09:30 GMT+9",
+          "result": "已按你确认的格式生成预览。检查这个日期是不是原作者的意思；格式有效不代表理解正确。"
+        }
+      },
+      {
+        "kind": "invalid",
+        "state": {
+          "stored": "尚未得到确定的日期",
+          "deadline": "待确认，不生成截止日期",
+          "budget": "USD 1,234.50",
+          "time": "2026年10月9日 09:30 GMT+9",
+          "result": "这不是一个有效的公历日期。预览保留待确认状态，不自动挪到下个月。"
+        }
+      },
+      {
+        "kind": "leap",
+        "state": {
+          "stored": "2024-02-29",
+          "deadline": "2024年2月29日",
+          "budget": "USD 1,234.50",
+          "time": "2026年10月9日 09:30 GMT+9",
+          "result": "已按你确认的格式生成预览。检查这个日期是不是原作者的意思；格式有效不代表理解正确。"
+        }
+      }
+    ],
+    "layout": [
+      {
+        "width": 1440,
+        "scroll": 1425,
+        "overflow": []
+      },
+      {
+        "width": 390,
+        "scroll": 375,
+        "overflow": [
+          {
+            "tag": "CODE",
+            "class": "",
+            "text": "project,next_step,due_date,budget_currency,budget_amount\nDemo website,Review hom"
+          },
+          {
+            "tag": "SPAN",
+            "class": "line",
+            "text": "project,next_step,due_date,budget_currency,budget_amount"
+          },
+          {
+            "tag": "SPAN",
+            "class": "",
+            "text": "budget_amount"
+          },
+          {
+            "tag": "SPAN",
+            "class": "line",
+            "text": "Demo website,Review homepage draft,2026-11-10,USD,1234.50"
+          },
+          {
+            "tag": "SPAN",
+            "class": "",
+            "text": "USD,"
+          },
+          {
+            "tag": "SPAN",
+            "class": "",
+            "text": "1234.50"
+          }
+        ]
+      },
+      {
+        "width": 320,
+        "scroll": 305,
+        "overflow": [
+          {
+            "tag": "CODE",
+            "class": "",
+            "text": "project,next_step,due_date,budget_currency,budget_amount\nDemo website,Review hom"
+          },
+          {
+            "tag": "SPAN",
+            "class": "line",
+            "text": "project,next_step,due_date,budget_currency,budget_amount"
+          },
+          {
+            "tag": "SPAN",
+            "class": "",
+            "text": "budget_currency,"
+          },
+          {
+            "tag": "SPAN",
+            "class": "",
+            "text": "budget_amount"
+          },
+          {
+            "tag": "SPAN",
+            "class": "line",
+            "text": "Demo website,Review homepage draft,2026-11-10,USD,1234.50"
+          },
+          {
+            "tag": "SPAN",
+            "class": "",
+            "text": "2026-11-10,"
+          },
+          {
+            "tag": "SPAN",
+            "class": "",
+            "text": "USD,"
+          },
+          {
+            "tag": "SPAN",
+            "class": "",
+            "text": "1234.50"
+          }
+        ]
+      }
+    ],
+    "reset": {
+      "total": "合计 16 小时、21,000 JPY",
+      "time": "剩余 4 小时",
+      "cash": "剩余 9,000 JPY",
+      "decision": "资源账未超限；仍需确认任务、参与者、审阅和支持安排，不能据此宣布进入市场。"
+    },
+    "dateReset": {
+      "stored": "尚未得到确定的日期",
+      "deadline": "待确认，不生成截止日期",
+      "budget": "USD 1,234.50",
+      "time": "9 Oct 2026, 01:30 GMT+1",
+      "result": "先确认源文件的日期顺序。显示语言和时区都不能替你作出这个判断。"
+    },
+    "tabTarget": {
+      "tag": "BUTTON",
+      "text": "恢复报告试用预算"
+    },
+    "keyboardReset": {
+      "total": "合计 16 小时、21,000 JPY",
+      "time": "剩余 4 小时",
+      "cash": "剩余 9,000 JPY",
+      "decision": "资源账未超限；仍需确认任务、参与者、审阅和支持安排，不能据此宣布进入市场。"
+    },
+    "keyboardDisclosure": true
+  },
+  "fallbackAndMobile": {
+    "updatedAmount": "合计 20 小时、33,000 JPY",
+    "mobile": {
+      "width": 320,
+      "scroll": 305,
+      "codeHasOwnScroll": [
+        {
+          "overflow": "auto",
+          "client": 273,
+          "scroll": 452
+        },
+        {
+          "overflow": "auto",
+          "client": 273,
+          "scroll": 312
+        }
+      ],
+      "overflowOutsideCode": []
+    },
+    "nojs": {
+      "formHidden": true,
+      "formatDisabled": true,
+      "total": "合计 16 小时、21,000 JPY",
+      "staticText": [
+        "查看固定算例与演示边界按月 / 日 / 年解释，日期值为 2026-11-10；按日 / 月 / 年解释，则为 2026-10-11。英式显示分别为 10 November 2026 和 11 October 2026。日语显示分别为 2026年11月10日 和 2026年10月11日。更换显示时区不会改变这两个日历日期。同一更新时间在 London 为 10 月 9 日 01:30，在 Los Angeles 为 10 月 8 日 17:30，在 Tokyo 为 10 月 9 日 09:30。原始时刻没有改变。本例只支持列出的格式、1900–2100 年的公历日期和固定合成字段，不是完整 CSV 解析器，也没有完成德文或日文界面的翻译。显示偏好不代表客户国籍。",
+        "固定结果与计算边界只试报告：无追加时为 16 小时、21,000 JPY；追加 4 小时后为 20 小时、33,000 JPY，时间用尽、现金超出 3,000 JPY；追加 10 小时后为 26 小时、51,000 JPY，两项均超限。扩界面与支持的基础预算为 30 小时、36,000 JPY，本来就超限。公式为基础时间 + 追加时间，基础支出 + 追加时间 × 3,000 JPY。已有支出不会因切换方案退回；本控件只比较计划，不模拟已经发生的执行。"
+      ],
+      "japanese": "\nJ-01 · サンプル\n制作進捗レポート\n案件：デモサイト\n作業：トップページの初稿作成\n社内確認：完了\nお客様の確認：未完了\n次の対応：初稿をご確認ください\n確認をお願いしたい日：2026年11月10日\n",
+      "nativeDisclosure": true
+    },
+    "map": {
+      "label": "市场与适配日语场景研究、适配与投入决定",
+      "details": "map-market",
+      "summary": "市场与需求先服务谁，为什么值得做",
+      "pending": "脑图连接的是已经写出的章节；日语场景已补入市场适配，其他收入模式与宿主仍有深度差异。查看现有材料与待补部分。"
+    }
+  },
+  "navigation": {
+    "url": "http://127.0.0.1:4321/go-global/market-fit#japan-budget",
+    "title": "市场与适配：进入另一种语言市场之前",
+    "outline": [
+      {
+        "text": "先看已经发生的使用，再决定扩到哪里",
+        "target": true
+      },
+      {
+        "text": "把市场切入点写成一组服务条件",
+        "target": true
+      },
+      {
+        "text": "从日语工作材料里，把候选重新缩小",
+        "target": true
+      },
+      {
+        "text": "找到入口以后，先争取讨论一项工作",
+        "target": true
+      },
+      {
+        "text": "沿一份真实交付检查语言，不只检查词表",
+        "target": true
+      },
+      {
+        "text": "日语审阅材料要让人看见“确认”发生在哪里",
+        "target": true
+      },
+      {
+        "text": "同一份输入，为什么会得到不同的日期",
+        "target": true
+      },
+      {
+        "text": "一份最小适配包，可以怎样交出去",
+        "target": true
+      },
+      {
+        "text": "支持时间与付款条件，会重新划定服务范围",
+        "target": true
+      },
+      {
+        "text": "把第一轮投入写成可以停止的决定",
+        "target": true
+      },
+      {
+        "text": "扩语言之前，先追踪哪里仍要你代劳",
+        "target": true
+      },
+      {
+        "text": "看当地工作与现成办法 先判断有没有新工具的位置",
+        "target": true
+      },
+      {
+        "text": "看一份日语审阅材料 把词语、动作和交付放在一起",
+        "target": true
+      },
+      {
+        "text": "算这一轮值得投入多少 支持条件变化后的进入决定",
+        "target": true
+      }
+    ],
+    "sources": [
+      "#source-src-notion-korean-launch",
+      "#source-src-notion-japanese-launch",
+      "#source-src-yang-localization-retrospective",
+      "#source-src-mhand-report-practice",
+      "#source-src-ini-backlog-practice",
+      "#source-src-jbug-sapporo-practice",
+      "#source-src-jbug-community",
+      "#source-src-jbug-sapporo-practice",
+      "#source-src-tally-form-languages",
+      "#source-src-w3c-date-formats",
+      "#source-src-mdn-datetime-constructor",
+      "#source-src-mdn-numberformat-constructor",
+      "#source-src-stripe-konbini-market",
+      "#source-src-stripe-konbini-market"
+    ],
+    "sourceClicked": "http://127.0.0.1:4321/go-global/market-fit#source-src-mhand-report-practice",
+    "resources": [
+      {
+        "text": "日语场景的工作与入口",
+        "href": "/go-global/market-fit#japan-work"
+      },
+      {
+        "text": "审阅材料",
+        "href": "/go-global/market-fit#japan-review"
+      },
+      {
+        "text": "投入与暂缓决定",
+        "href": "/go-global/market-fit#japan-budget"
+      },
+      {
+        "text": "进入另一种语言市场",
+        "href": "/go-global/market-fit#japan-work"
+      }
+    ]
+  },
+  "staticBuild": {
+    "pages": 30,
+    "chapterLinks": 26,
+    "chapterSources": 12,
+    "inlineScriptBytes": [
+      0,
+      4873,
+      1780,
+      245
+    ],
+    "errors": []
+  }
+}
