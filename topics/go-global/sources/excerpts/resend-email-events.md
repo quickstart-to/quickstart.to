@@ -6,3 +6,5 @@
 - email.sent 后仍会尝试向收件方服务器投递；email.delivered 定义为成功投递到收件方邮件服务器。
 - email.delivery_delayed 表示临时问题（例：邮箱满或收件服务器暂时异常）；email.bounced 表示收件方服务器永久拒收。
 - 只采用事件定义解释排查顺序。未真实发送邮件、配置账户、测试收件箱，也不把 opened/clicked 当作人已登录的证据。
+
+2026-10-10 补核（Ego TaskSpace 114）：本轮重读 Email Events 和 Suppression Events：sent、delivered、delayed、bounced、complained；hard bounce / spam complaint 可自动加入 suppression。未发送邮件。

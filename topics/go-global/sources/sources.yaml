@@ -533,7 +533,7 @@
   url: https://support.google.com/mail/answer/81126?hl=en
   title: Email sender guidelines
   publisher: Google Gmail Help
-  accessed: 2026-10-09
+  accessed: "2026-10-10"
   claim: 个人Gmail发件认证要求区分所有/批量发送者；建议SPF、DKIM、DMARC及清晰退订；配置不保证投递
   excerpt: excerpts/gmail-senders.md
 - id: src-cloudflare-secrets
@@ -943,8 +943,8 @@
   url: https://resend.com/docs/webhooks/event-types
   title: Event Types
   publisher: Resend
-  accessed: '2026-10-09'
-  claim: 官方将email.sent定义为API请求成功后尝试投递，将email.delivered定义为成功送达收件方邮件服务器，并区分临时延迟和永久退信；不代表已进主收件箱或完成登录
+  accessed: "2026-10-10"
+  claim: 官方将email.sent定义为API请求成功后尝试投递，将email.delivered定义为成功送达收件方邮件服务器，并区分临时延迟和永久退信；不代表已进主收件箱或完成登录；硬退信和垃圾邮件投诉可自动加入 suppression
   excerpt: excerpts/resend-email-events.md
 
 - id: src-supabase-backup-scope
@@ -1220,7 +1220,7 @@
   title: "How do we comply with the PECR electronic mail marketing rules?"
   publisher: "UK Information Commissioner’s Office"
   accessed: 2026-10-10
-  claim: "英国 PECR 电子邮件营销说明区分受邀/非受邀消息与收件人类型；个人订户的非受邀营销通常需同意或满足 soft opt-in 全部条件；单独积极同意、可撤回和有效退订入口，不泛化为所有国家规则"
+  claim: "英国 PECR 电子邮件营销说明区分受邀/非受邀消息与收件人类型；个人订户的非受邀营销通常需同意或满足 soft opt-in 全部条件；单独积极同意、可撤回和有效退订入口，建议记录同意并检查停止联系名单，不泛化为所有国家规则"
   excerpt: excerpts/ico-email-marketing.md
 
 - id: src-ga-campaign-url
@@ -1375,7 +1375,7 @@
   title: "FTC's Endorsement Guides: What People Are Asking"
   publisher: "US Federal Trade Commission"
   accessed: 2026-10-10
-  claim: "美国背书指引 FAQ 说明联盟佣金等重要商业关系应清楚披露，靠近推荐更易发现；单写 affiliate link 未必足够，不能歪曲使用经历"
+  claim: "美国背书指引 FAQ 说明联盟佣金等重要商业关系应清楚披露，靠近推荐更易发现；单写 affiliate link 未必足够，不能歪曲使用经历；视频的视听披露和平台工具须按清晰醒目要求核对，单放说明未必有效"
   excerpt: excerpts/ftc-affiliate-disclosure.md
   archive: https://web.archive.org/web/20261010041633/https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking
 
@@ -2007,3 +2007,52 @@
   accessed: 2026-10-10
   claim: "本次可见结果包含模板、营销报告及施工报告等不同任务；仅为带日期的公开观察，不支持固定排名、搜索量、地区偏好或需求验证"
   excerpt: excerpts/search-query-observation.md
+
+- id: src-jiayi-newsletter-practice
+  url: "https://sspai.com/post/91025"
+  title: "持续更新了 20 期 Newsletter，我有这些话想说"
+  publisher: "jiayifun · 少数派"
+  accessed: "2026-10-10"
+  claim: "作者在 2024 年复盘前两次停止与本次建立输入、标记、加工、发布流程；个人写作经历，不证明软件邮件营销效果"
+  excerpt: "excerpts/jiayi-newsletter-practice.md"
+
+- id: src-eric-newsletter-practice
+  url: "https://buffer.com/resources/newsletter-business/"
+  title: "How This Newsletter Business Became Profitable in 4 Months"
+  publisher: "Eric Lam · Buffer"
+  accessed: "2026-10-10"
+  claim: "作者根据读者来信扩展深度内容与服务，也用打开数据回访；只采用归属经验，并用 Apple 文档质疑打开率代理，不采纳营收和效果保证"
+  excerpt: "excerpts/eric-newsletter-practice.md"
+
+- id: src-ahrefs-creator-practice
+  url: "https://ahrefs.com/blog/sponsoring-creators/"
+  title: "We Spent >$1 Million Sponsoring Creators. Here’s What We Learned About B2B Influencer Marketing"
+  publisher: "Si Quan Ong · Ahrefs"
+  accessed: "2026-10-10"
+  claim: "2025 年原团队访谈描述从昂贵产品的播客推广转向免费入口、逐个审查创作者与事先约定报告；不采用报价档位或保证增量"
+  excerpt: "excerpts/ahrefs-creator-practice.md"
+
+- id: src-ftc-can-spam
+  url: "https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business"
+  title: "CAN-SPAM Act: A Compliance Guide for Business"
+  publisher: "FTC"
+  accessed: "2026-10-10"
+  claim: "美国商业邮件指南涵盖 B2B、真实路由/主题、邮寄地址及退订；混合服务与推广信息按主要目的判断，退出最迟 10 个工作日等要求不等于其他地区规则"
+  excerpt: "excerpts/ftc-can-spam.md"
+
+- id: src-youtube-branded-content
+  archive: "https://web.archive.org/web/20261010091818/https://support.google.com/youtube/answer/154235?hl=en"
+  url: "https://support.google.com/youtube/answer/154235?hl=en"
+  title: "Add branded content restrictions & disclosure labels"
+  publisher: "YouTube Help"
+  accessed: "2026-10-10"
+  claim: "2026-10-10 帮助页要求有品牌/赞助等关系的内容使用付费推广申报；平台标签不替代双方适用法律要求"
+  excerpt: "excerpts/youtube-branded-content.md"
+
+- id: src-apple-mail-privacy
+  url: "https://support.apple.com/guide/iphone/use-mail-privacy-protection-iphf084865c7/ios"
+  title: "在 iPhone 上使用邮件隐私保护"
+  publisher: "Apple 支持"
+  accessed: "2026-10-10"
+  claim: "邮件隐私保护会阻止发件人获知是否打开邮件；不能把打开记录当成可靠阅读/未阅读证据，功能不延伸到链接及附件"
+  excerpt: "excerpts/apple-mail-privacy.md"

@@ -1,0 +1,555 @@
+{
+  "interaction": {
+    "checks": [
+      {
+        "stage": "queue",
+        "purpose": "lesson",
+        "eligible": [
+          "E1",
+          "E4"
+        ],
+        "result": "08:00 · 建候选队列 · 第 2 封教程：2 条可建候选队列，6 条不进入发送流程。",
+        "rows": [
+          {
+            "id": "E1",
+            "state": "可建候选队列"
+          },
+          {
+            "id": "E2",
+            "state": "不进入：未确认"
+          },
+          {
+            "id": "E3",
+            "state": "不进入：没有教程许可"
+          },
+          {
+            "id": "E4",
+            "state": "可建候选队列"
+          },
+          {
+            "id": "E5",
+            "state": "不进入：投诉抑制"
+          },
+          {
+            "id": "E6",
+            "state": "不进入：退信抑制"
+          },
+          {
+            "id": "E7",
+            "state": "不进入：防止重复提交"
+          },
+          {
+            "id": "E8",
+            "state": "不进入：依据不明"
+          }
+        ]
+      },
+      {
+        "stage": "queue",
+        "purpose": "offers",
+        "eligible": [],
+        "result": "08:00 · 建候选队列 · 每周产品优惠：0 条可建候选队列，8 条不进入发送流程。",
+        "rows": [
+          {
+            "id": "E1",
+            "state": "不进入：没有每周优惠许可"
+          },
+          {
+            "id": "E2",
+            "state": "不进入：没有每周优惠许可"
+          },
+          {
+            "id": "E3",
+            "state": "不进入：没有每周优惠许可"
+          },
+          {
+            "id": "E4",
+            "state": "不进入：没有每周优惠许可"
+          },
+          {
+            "id": "E5",
+            "state": "不进入：没有每周优惠许可"
+          },
+          {
+            "id": "E6",
+            "state": "不进入：没有每周优惠许可"
+          },
+          {
+            "id": "E7",
+            "state": "不进入：没有每周优惠许可"
+          },
+          {
+            "id": "E8",
+            "state": "不进入：没有每周优惠许可"
+          }
+        ]
+      },
+      {
+        "stage": "check",
+        "purpose": "lesson",
+        "eligible": [
+          "E1"
+        ],
+        "result": "08:59 · 发前复核 · 第 2 封教程：1 条符合本例发送前条件，7 条不进入发送流程。",
+        "rows": [
+          {
+            "id": "E1",
+            "state": "可进入发送流程"
+          },
+          {
+            "id": "E2",
+            "state": "不进入：未确认"
+          },
+          {
+            "id": "E3",
+            "state": "不进入：没有教程许可"
+          },
+          {
+            "id": "E4",
+            "state": "不进入：已退订"
+          },
+          {
+            "id": "E5",
+            "state": "不进入：投诉抑制"
+          },
+          {
+            "id": "E6",
+            "state": "不进入：退信抑制"
+          },
+          {
+            "id": "E7",
+            "state": "不进入：防止重复提交"
+          },
+          {
+            "id": "E8",
+            "state": "不进入：依据不明"
+          }
+        ]
+      },
+      {
+        "stage": "check",
+        "purpose": "offers",
+        "eligible": [],
+        "result": "08:59 · 发前复核 · 每周产品优惠：0 条符合本例发送前条件，8 条不进入发送流程。",
+        "rows": [
+          {
+            "id": "E1",
+            "state": "不进入：没有每周优惠许可"
+          },
+          {
+            "id": "E2",
+            "state": "不进入：没有每周优惠许可"
+          },
+          {
+            "id": "E3",
+            "state": "不进入：没有每周优惠许可"
+          },
+          {
+            "id": "E4",
+            "state": "不进入：没有每周优惠许可"
+          },
+          {
+            "id": "E5",
+            "state": "不进入：没有每周优惠许可"
+          },
+          {
+            "id": "E6",
+            "state": "不进入：没有每周优惠许可"
+          },
+          {
+            "id": "E7",
+            "state": "不进入：没有每周优惠许可"
+          },
+          {
+            "id": "E8",
+            "state": "不进入：没有每周优惠许可"
+          }
+        ]
+      },
+      {
+        "stage": "import",
+        "purpose": "lesson",
+        "eligible": [
+          "E1"
+        ],
+        "result": "09:00 · 导入旧名单后 · 第 2 封教程：1 条符合本例发送前条件，7 条不进入发送流程。",
+        "rows": [
+          {
+            "id": "E1",
+            "state": "可进入发送流程"
+          },
+          {
+            "id": "E2",
+            "state": "不进入：未确认"
+          },
+          {
+            "id": "E3",
+            "state": "不进入：没有教程许可"
+          },
+          {
+            "id": "E4",
+            "state": "不进入：已退订"
+          },
+          {
+            "id": "E5",
+            "state": "不进入：投诉抑制"
+          },
+          {
+            "id": "E6",
+            "state": "不进入：退信抑制"
+          },
+          {
+            "id": "E7",
+            "state": "不进入：防止重复提交"
+          },
+          {
+            "id": "E8",
+            "state": "不进入：依据不明"
+          }
+        ]
+      },
+      {
+        "stage": "import",
+        "purpose": "offers",
+        "eligible": [],
+        "result": "09:00 · 导入旧名单后 · 每周产品优惠：0 条符合本例发送前条件，8 条不进入发送流程。",
+        "rows": [
+          {
+            "id": "E1",
+            "state": "不进入：没有每周优惠许可"
+          },
+          {
+            "id": "E2",
+            "state": "不进入：没有每周优惠许可"
+          },
+          {
+            "id": "E3",
+            "state": "不进入：没有每周优惠许可"
+          },
+          {
+            "id": "E4",
+            "state": "不进入：没有每周优惠许可"
+          },
+          {
+            "id": "E5",
+            "state": "不进入：没有每周优惠许可"
+          },
+          {
+            "id": "E6",
+            "state": "不进入：没有每周优惠许可"
+          },
+          {
+            "id": "E7",
+            "state": "不进入：没有每周优惠许可"
+          },
+          {
+            "id": "E8",
+            "state": "不进入：没有每周优惠许可"
+          }
+        ]
+      },
+      {
+        "stage": "paused",
+        "purpose": "lesson",
+        "eligible": [],
+        "result": "09:00 · 整个序列暂停 · 第 2 封教程：0 条符合本例发送前条件，8 条不进入发送流程。",
+        "rows": [
+          {
+            "id": "E1",
+            "state": "暂停；保留教程许可"
+          },
+          {
+            "id": "E2",
+            "state": "暂停；原状态：未确认"
+          },
+          {
+            "id": "E3",
+            "state": "暂停；原状态：没有教程许可"
+          },
+          {
+            "id": "E4",
+            "state": "暂停；原状态：已退订"
+          },
+          {
+            "id": "E5",
+            "state": "暂停；原状态：投诉抑制"
+          },
+          {
+            "id": "E6",
+            "state": "暂停；原状态：退信抑制"
+          },
+          {
+            "id": "E7",
+            "state": "暂停；原状态：防止重复提交"
+          },
+          {
+            "id": "E8",
+            "state": "暂停；原状态：依据不明"
+          }
+        ]
+      },
+      {
+        "stage": "paused",
+        "purpose": "offers",
+        "eligible": [],
+        "result": "09:00 · 整个序列暂停 · 每周产品优惠：0 条符合本例发送前条件，8 条不进入发送流程。",
+        "rows": [
+          {
+            "id": "E1",
+            "state": "不进入：没有每周优惠许可"
+          },
+          {
+            "id": "E2",
+            "state": "不进入：没有每周优惠许可"
+          },
+          {
+            "id": "E3",
+            "state": "不进入：没有每周优惠许可"
+          },
+          {
+            "id": "E4",
+            "state": "不进入：没有每周优惠许可"
+          },
+          {
+            "id": "E5",
+            "state": "不进入：没有每周优惠许可"
+          },
+          {
+            "id": "E6",
+            "state": "不进入：没有每周优惠许可"
+          },
+          {
+            "id": "E7",
+            "state": "不进入：没有每周优惠许可"
+          },
+          {
+            "id": "E8",
+            "state": "不进入：没有每周优惠许可"
+          }
+        ]
+      }
+    ],
+    "keyboard": {
+      "purpose": "lesson",
+      "focused": "<button type=\"reset\">恢复发前复核</button>",
+      "result": "08:59 · 发前复核 · 第 2 封教程：1 条符合本例发送前条件，7 条不进入发送流程。"
+    },
+    "reset": true
+  },
+  "layouts": {
+    "layouts": [
+      {
+        "width": 1440,
+        "docWidth": 1425,
+        "overflow": [],
+        "outline": [
+          {
+            "text": "先决定，下一封信为什么值得收到",
+            "target": true
+          },
+          {
+            "text": "两封邮件，走到一个能用的结果",
+            "target": true
+          },
+          {
+            "text": "退订之后，队列也要知道",
+            "target": true
+          },
+          {
+            "text": "没收到时，先分清断在哪一步",
+            "target": true
+          },
+          {
+            "text": "创作者愿意合作，先对齐他在替谁解释",
+            "target": true
+          },
+          {
+            "text": "把合作范围写到双方能据此工作",
+            "target": true
+          },
+          {
+            "text": "样片要改什么，不能只说“不够吸引人”",
+            "target": true
+          },
+          {
+            "text": "交付完成之后，再分别结账和看效果",
+            "target": true
+          }
+        ],
+        "captionWidth": 631.609375,
+        "forkColumns": "328px 328px"
+      },
+      {
+        "width": 390,
+        "docWidth": 375,
+        "overflow": [
+          {
+            "tag": "NAV",
+            "class": "",
+            "text": "先决定，下一封信为什么值得收到两封邮件，走到一个能用的结果退订之后，队列也要知道没收到时，先分清断在哪一步创作者愿意合作，先对齐他在替谁解释"
+          }
+        ],
+        "outline": [
+          {
+            "text": "先决定，下一封信为什么值得收到",
+            "target": true
+          },
+          {
+            "text": "两封邮件，走到一个能用的结果",
+            "target": true
+          },
+          {
+            "text": "退订之后，队列也要知道",
+            "target": true
+          },
+          {
+            "text": "没收到时，先分清断在哪一步",
+            "target": true
+          },
+          {
+            "text": "创作者愿意合作，先对齐他在替谁解释",
+            "target": true
+          },
+          {
+            "text": "把合作范围写到双方能据此工作",
+            "target": true
+          },
+          {
+            "text": "样片要改什么，不能只说“不够吸引人”",
+            "target": true
+          },
+          {
+            "text": "交付完成之后，再分别结账和看效果",
+            "target": true
+          }
+        ],
+        "captionWidth": 302.609375,
+        "forkColumns": "322.805px"
+      },
+      {
+        "width": 320,
+        "docWidth": 305,
+        "overflow": [],
+        "outline": [
+          {
+            "text": "先决定，下一封信为什么值得收到",
+            "target": true
+          },
+          {
+            "text": "两封邮件，走到一个能用的结果",
+            "target": true
+          },
+          {
+            "text": "退订之后，队列也要知道",
+            "target": true
+          },
+          {
+            "text": "没收到时，先分清断在哪一步",
+            "target": true
+          },
+          {
+            "text": "创作者愿意合作，先对齐他在替谁解释",
+            "target": true
+          },
+          {
+            "text": "把合作范围写到双方能据此工作",
+            "target": true
+          },
+          {
+            "text": "样片要改什么，不能只说“不够吸引人”",
+            "target": true
+          },
+          {
+            "text": "交付完成之后，再分别结账和看效果",
+            "target": true
+          }
+        ],
+        "captionWidth": 232.609375,
+        "forkColumns": "252.805px"
+      }
+    ],
+    "keyboardReset": true,
+    "keyboardDisclosure": true,
+    "keyboardSelect": "Native arrow/End commands did not change the value through Ego; selectOption exercised all values. No DOM value assignment was used."
+  },
+  "nojs": {
+    "result": {
+      "type": "string",
+      "value": "{\"hidden\":true,\"rows\":8,\"result\":\"08:59 · 第 2 封教程：1 条符合本例发送前条件，7 条不进入发送流程。\",\"sources\":10}"
+    }
+  },
+  "navigation": {
+    "navigation": {
+      "hash": "#把合作范围写到双方能据此工作",
+      "heading": "把合作范围写到双方能据此工作",
+      "overflow": []
+    },
+    "nojsDisclosure": {
+      "result": {
+        "type": "boolean",
+        "value": true
+      }
+    }
+  },
+  "integration": {
+    "chapter": {
+      "url": "http://127.0.0.1:4321/go-global/email-creators",
+      "title": "许可邮件与创作者合作：把答应的事交付好",
+      "previous": "/go-global/search-content",
+      "next": "/go-global/platform-ads"
+    },
+    "citation": {
+      "hash": "#source-src-ftc-affiliate-disclosure",
+      "source": "https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking"
+    },
+    "resource": {
+      "routes": [
+        {
+          "text": "许可邮件与创作者交付",
+          "href": "/go-global/email-creators"
+        },
+        {
+          "text": "许可邮件与创作者合作",
+          "href": "/go-global/email-creators"
+        },
+        {
+          "text": "两封邮件样稿",
+          "href": "/go-global/email-creators#email-letter-one"
+        },
+        {
+          "text": "发送状态互动",
+          "href": "/go-global/email-creators#email-lab-title"
+        },
+        {
+          "text": "合作范围",
+          "href": "/go-global/email-creators#creator-brief-title"
+        },
+        {
+          "text": "结算记录",
+          "href": "/go-global/email-creators#creator-settlement-title"
+        }
+      ],
+      "pending": false
+    }
+  },
+  "static-audit": {
+    "pages": 30,
+    "chapterLinks": 26,
+    "chapterSources": 10,
+    "inlineScriptBytes": [
+      2034,
+      4873,
+      1780,
+      245
+    ],
+    "errors": []
+  },
+  "date": "2026-10-10",
+  "scope": "Ego TaskSpace 114; local chapter and navigation. No real email, creator outreach or payments.",
+  "notes": [
+    "390 px initial measurement included a closed outline NAV; a later visible-only check with the outline open had no overflow.",
+    "All eight stage/purpose combinations used selectOption and independently specified expected eligible record IDs.",
+    "Keyboard Tab/Enter reset and disclosure verified; native select ArrowDown/End through the automation API did not change selection. Not a full accessibility audit.",
+    "320 px caption wrapping found visually and repaired; screenshots remain in /tmp/email-creators-review, not published."
+  ]
+}

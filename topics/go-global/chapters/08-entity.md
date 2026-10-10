@@ -1,7 +1,7 @@
 ---
 title: 身份与主体：让注册服务于真实业务
 description: 从经营登记、合同与账户条件判断是否需要新主体，比较完整维护成本，并用 Delaware LLC 和香港公司的具体义务说明设立之后的工作。
-order: 18
+order: 19
 volatility: high
 last_verified: 2026-10-09
 ---

@@ -24,6 +24,7 @@ import TeamProcurementMedia from '../../../../topics/go-global/assets/TeamProcur
 import AiApiMedia from '../../../../topics/go-global/assets/AiApiMedia.astro';
 import AdsMedia from '../../../../topics/go-global/assets/AdsMedia.astro';
 import RightsMedia from '../../../../topics/go-global/assets/RightsMedia.astro';
+import EmailCreatorsMedia from '../../../../topics/go-global/assets/EmailCreatorsMedia.astro';
 import SearchContentMedia from '../../../../topics/go-global/assets/SearchContentMedia.astro';
 import MeasurementMedia from '../../../../topics/go-global/assets/MeasurementMedia.astro';
 import SupportMedia from '../../../../topics/go-global/assets/SupportMedia.astro';
@@ -84,4 +85,5 @@ const headings = articleHeadings(entry.rendered?.html ?? '');
   {topic.id === 'go-global' && chapter.slug === 'customer-support' && <SupportMedia />}
   {topic.id === 'go-global' && chapter.slug === 'product-measurement' && <MeasurementMedia />}
   {topic.id === 'go-global' && chapter.slug === 'search-content' && <SearchContentMedia />}
+  {topic.id === 'go-global' && chapter.slug === 'email-creators' && <EmailCreatorsMedia />}
 </TopicLayout>

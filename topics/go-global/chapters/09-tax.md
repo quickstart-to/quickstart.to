@@ -1,7 +1,7 @@
 ---
 title: 税务：理清业务，再准备申报
 description: 分清 MoR 交易税、国内增值税和个人所得税，按真实合同确认所得类别、材料、外币折算与申报期间。
-order: 19
+order: 20
 volatility: high
 last_verified: 2026-10-09
 ---

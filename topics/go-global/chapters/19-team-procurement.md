@@ -1,7 +1,7 @@
 ---
 title: 团队采购与合同交付：把试用意向变成可承担的合作
 description: 从使用者、预算与采购责任出发，比较自助购买、有限试点和定制项目，完成试点范围、合同讨论稿、验收与交接，避免承诺超出交付能力。
-order: 14
+order: 15
 volatility: high
 last_verified: 2026-10-10
 slug: team-procurement

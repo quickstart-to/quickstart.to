@@ -1,7 +1,7 @@
 ---
 title: 资源导航：带着一个问题，找到下一步材料
 description: 按找用户、发布、产品适配、反馈经营、交付恢复和名称许可整理资源，集中索引本书的样稿、演练与查询入口。
-order: 25
+order: 26
 volatility: high
 last_verified: 2026-10-10
 ---
@@ -24,7 +24,9 @@ last_verified: 2026-10-10
 
 已经有人使用，先把[持续使用](/go-global/retention)中的任务记录做清楚，需要把记录接成报表时，进入[产品测量与试验](/go-global/product-measurement)核对采集和口径；再沿[获客比较](/go-global/growth#用户为什么会在这里遇到你)选择下一条接触路径。
 
-准备写搜索内容时进入[查询、收录与修订](/go-global/search-content)；准备花钱投放时进入[分平台操作](/go-global/platform-ads)；用户做不完任务时，先回到首次使用的恢复过程；收到求助后，用[客服与服务运营](/go-global/customer-support)安排调查、回复、跟进与容量。访问、完成和再次使用对应不同的问题，不必按目录顺序来回读一遍。
+准备写搜索内容时进入[查询、收录与修订](/go-global/search-content)；准备维护订阅或安排合作时进入[许可邮件与创作者交付](/go-global/email-creators)；准备花钱投放时进入[分平台操作](/go-global/platform-ads)。
+
+用户做不完任务时，先回到首次使用的恢复过程；收到求助后，用[客服与服务运营](/go-global/customer-support)安排调查、回复、跟进与容量。访问、完成和再次使用对应不同的问题，不必按目录顺序来回读一遍。
 
 准备接受收入，先用[收入模式](/go-global/revenue-models)辨认付款方。用户直接购买，接[具体报价](/go-global/pricing)与[收款交付](/go-global/payments)；团队提出试点或合同，接[团队采购](/go-global/team-procurement)；广告、赞助或联盟收入，则从收入模式的相应样稿开始。各条路最后都要接到[回款](/go-global/payouts)、[税务](/go-global/tax)和[经营账](/go-global/business-review)。经营身份、数据与权利的准备仍应在相关行为发生前完成，不能等读到后面的章节才处理。
 
@@ -47,6 +49,7 @@ last_verified: 2026-10-10
 | 求助越来越多，回复后仍不知道是否解决 | [客服与服务运营](/go-global/customer-support) | [完整英语往来](/go-global/customer-support#support-thread)、[帮助文章](/go-global/customer-support#support-help)和[支持容量演算](/go-global/customer-support#support-capacity) |
 | 获客方式怎么选，投入是否值得 | [持续获客](/go-global/growth) | [渠道路线图](/go-global/growth#growth-loop-title)、[完整任务页](/go-global/growth#growth-page-title)、[付费获客账](/go-global/growth#growth-cost-title)与[触点归因演示](/go-global/growth#growth-demo-title) |
 | 文章发布了，却不知该改内容还是查收录 | [搜索与内容运营](/go-global/search-content) | [英文页面改稿](/go-global/search-content#search-copy-title)、[发现路径](/go-global/search-content#search-route-title)、[搜索报表互动](/go-global/search-content#search-report-title)与[修订单](/go-global/search-content#search-decision-title) |
+| 有人订阅或愿意合作，后续怎样维护和交付 | [许可邮件与创作者合作](/go-global/email-creators) | [两封邮件样稿](/go-global/email-creators#email-letter-one)、[发送状态互动](/go-global/email-creators#email-lab-title)、[合作范围](/go-global/email-creators#creator-brief-title)与[结算记录](/go-global/email-creators#creator-settlement-title) |
 | 准备试投广告，不知道怎样设置与复盘 | [分平台投放操作](/go-global/platform-ads) | [素材分镜](/go-global/platform-ads#ads-story-title)、[搜索词互动](/go-global/platform-ads#ads-demo-title)与[完整 AD-01 试验单](/go-global/platform-ads#ads-record-title) |
 | 用户不直接购买，还能怎样经营 | [收入模式](/go-global/revenue-models) | [付款关系图](/go-global/revenue-models#revenue-map-title)、[广告收益演算](/go-global/revenue-models#revenue-demo-title)、[英语赞助范围](/go-global/revenue-models#revenue-sponsor-title)与联盟佣金记录 |
 | 想开始收费，但承诺说不清 | [定价与订阅](/go-global/pricing) | [完整英语报价](/go-global/pricing#pr-offer-title)、支持成本与权益时间线 |
@@ -229,7 +232,7 @@ last_verified: 2026-10-10
 
 下面几件事已有局部材料，但尚不能只靠一个入口从头做完。可以先用现有部分解决眼前的问题，也应知道它在哪里停下：
 
-- **邮件和另一种语言市场的具体运营。** [任务页与分发](/go-global/growth#把任务页写到产品用得上的地方)可作为起点，[适配包](/go-global/market-fit#一份最小适配包可以怎样交出去)能检查语言和交付；许可邮件的维护周期，以及非英语市场的一轮完整进入决定，仍需继续展开。
+- **进入另一种语言市场。** [适配包](/go-global/market-fit#一份最小适配包可以怎样交出去)能检查语言和交付；非英语市场的一轮完整进入决定，仍需补充当地任务、入口、服务条件与投入的连贯研究。
 
 收入模式也有深浅之分：广告、赞助和联盟已有演算或合作样稿，撮合、自愿支持和商业授权目前主要用于比较选择。插件专项深入 Chrome，投放章以 Search 的完整试验串起其他平台；它们没有覆盖每一种宿主和每一家平台的完整后台操作。
 

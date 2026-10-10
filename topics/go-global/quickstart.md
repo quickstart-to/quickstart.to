@@ -36,6 +36,7 @@ last_verified: 2026-10-09
 <li><a href="/go-global/launch"><strong>冷启动获客</strong><span>寻找同类任务、邀请与首次反馈</span></a></li>
 <li><a href="/go-global/growth"><strong>持续获客</strong><span>八类渠道比较、分发与投入复盘</span></a></li>
 <li><a href="/go-global/search-content"><strong>搜索与内容运营</strong><span>查询、收录排查、报表与旧文维护</span></a></li>
+<li><a href="/go-global/email-creators"><strong>许可邮件与创作者合作</strong><span>订阅维护、样片修改、授权与结算</span></a></li>
 <li><a href="/go-global/platform-ads"><strong>分平台投放操作</strong><span>五平台设置、素材与搜索词复盘</span></a></li>
 </ul>
 </details>
@@ -91,7 +92,7 @@ last_verified: 2026-10-09
 </nav>
 <figcaption id="map-caption">连线表示主题归属，可以按当前问题跳读。数据、支付和主体等准备，应在相应业务发生前处理。</figcaption>
 </figure>
-<p class="map-scope" id="map-pending">脑图连接的是已经写出的章节。邮件和非英语市场的具体运营，还没有完整操作篇；<a href="/go-global/resources#这些问题目前还没有完整操作篇">查看现有材料与待补部分</a>。</p>
+<p class="map-scope" id="map-pending">脑图连接的是已经写出的章节。非英语市场的一轮完整进入决定，还没有操作篇；<a href="/go-global/resources#这些问题目前还没有完整操作篇">查看现有材料与待补部分</a>。</p>
 <p class="map-scope">本书聚焦软件与数字产品。跨境实物电商、物流和融资不在当前范围内。</p>
 </section>
 

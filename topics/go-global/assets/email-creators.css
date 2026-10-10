@@ -1,0 +1,61 @@
+.email-media { margin: 2rem 0; line-height: 1.85; container-type: inline-size; }
+.email-media h3 { font-size: 1.12rem; line-height: 1.5; margin: 0 0 1rem; }
+.email-media p { margin: .85rem 0; }
+.email-caption, .email-kicker, .email-media figcaption { color: var(--fg-muted); font-size: .85rem; }
+.email-paper, .email-letter { padding: 1.25rem; background: var(--bg-soft); border: 1px solid var(--border); border-radius: .4rem; }
+.email-paper { border-top: 3px solid #527481; }
+.email-letter { border-left: 3px solid #527481; }
+.email-media [lang='en'] { line-height: 1.75; }
+.email-letter pre, .email-letter pre code { white-space: pre-wrap; overflow-wrap: anywhere; font-size: .85rem; }
+.email-media blockquote { margin-left: 0; margin-right: 0; }
+.email-node { background: var(--bg-soft); border: 1px solid var(--border); border-radius: .35rem; padding: 1rem; }
+.email-node :is(b,span) { display: block; }
+.email-node span { font-size: .9rem; margin-top: .5rem; }
+.email-fork { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.8rem 0 .8rem; }
+.email-fork > div { border-left: 2px solid #527481; background: var(--bg-soft); padding: .65rem 1rem; position: relative; }
+.email-fork > div::before { content: '↓'; position: absolute; top: -1.8rem; left: 50%; color: var(--accent); }
+.email-fork p { font-size: .9rem; }
+.email-arrow { color: var(--accent); font-size: .85rem; padding: .5rem; text-align: center; }
+.email-media summary { min-height: 44px; cursor: pointer; padding: .6rem 0; font-weight: 600; }
+.email-media summary::marker { color: var(--accent); }
+.email-lab { padding: 1.2rem; border: 1px solid var(--border); border-radius: .5rem; background: var(--bg-soft); }
+.email-lab label { display: block; margin: 1rem 0; }
+.email-lab :is(select,button) { font: inherit; color: var(--fg); background: var(--bg); padding: .55rem .7rem; min-height: 44px; border: 1px solid var(--border); border-radius: .3rem; }
+.email-lab select { display: block; width: 100%; margin-top: .4rem; }
+.email-lab button { cursor: pointer; }
+.email-media :is(select,button,summary):focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.email-result { background: var(--bg); border-left: 3px solid #527481; padding: .8rem 1rem; }
+.email-media table { width: 100%; table-layout: fixed; font-size: .88rem; }
+.email-media :is(td,th) { overflow-wrap: anywhere; }
+.email-records th:first-child { width: 12%; }
+.email-records caption { text-align: left; padding: .5rem 0; color: var(--fg-muted); font-size: .85rem; }
+.email-records [data-eligible='true'] th { border-left: 3px solid #527481; }
+.email-terms { margin: 0; }
+.email-terms > div { display: grid; grid-template-columns: 6rem 1fr; gap: 1rem; border-bottom: 1px solid var(--border); padding: .85rem 0; }
+.email-terms > div:last-child { border: 0; }
+.email-terms dt { font-weight: 600; }
+.email-terms dd { margin: 0; }
+.email-revision-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.email-revision-grid > div { padding: 1rem; border: 1px solid var(--border); border-top: 3px solid #a07866; border-radius: .35rem; }
+.email-revision-grid > div:last-child { border-top-color: #527481; background: var(--bg-soft); }
+@container (max-width: 540px) {
+ .email-fork, .email-revision-grid { grid-template-columns: 1fr; }
+ .email-fork { border-left: 1px solid #527481; padding-left: 1rem; margin-left: .2rem; }
+ .email-fork > div::before { content: '→'; top: .6rem; left: -1.2rem; }
+ .email-terms > div { grid-template-columns: 1fr; gap: .2rem; }
+ .email-records :is(table,tbody,tr,td,th[scope='row']),
+ .email-diagnostics :is(table,tbody,tr,td),
+ .email-settlement :is(table,tbody,tr,td) { display: block; }
+ .email-media thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+ .email-media tr { border-bottom: 1px solid var(--border); padding: .75rem 0; }
+ .email-media :is(th[scope='row'],td) { width: auto; border: 0; padding: .3rem .4rem; }
+ .email-records td:nth-child(2)::before { content: '记录：'; color: var(--fg-muted); }
+ .email-records td:nth-child(3)::before { content: '处理：'; color: var(--fg-muted); }
+ .email-diagnostics td:first-child, .email-settlement td:first-child { font-weight: 600; }
+ .email-diagnostics td:nth-child(2)::before { content: '核对：'; color: var(--fg-muted); }
+ .email-diagnostics td:nth-child(3)::before { content: '处理：'; color: var(--fg-muted); }
+ .email-settlement td:nth-child(2)::before { content: '价款：'; color: var(--fg-muted); }
+ .email-settlement td:nth-child(3)::before { content: '记录：'; color: var(--fg-muted); }
+}
+/* A block table needs a block caption too, to avoid a narrow anonymous table. */
+.email-records caption { display: block; width: 100%; }
