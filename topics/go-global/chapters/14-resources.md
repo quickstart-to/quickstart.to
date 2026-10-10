@@ -1,7 +1,7 @@
 ---
 title: 资源导航：带着一个问题，找到下一步材料
 description: 按找用户、发布、产品适配、反馈经营、交付恢复和名称许可整理资源，集中索引本书的样稿、演练与查询入口。
-order: 16
+order: 17
 volatility: high
 last_verified: 2026-10-10
 ---
@@ -36,6 +36,7 @@ last_verified: 2026-10-10
 | 不知道该收哪些资料、怎样删除 | [合规底线](/go-global/compliance) | [数据流](/go-global/compliance#privacy-boundary-title)、隐私文案、[删除恢复演示](/go-global/compliance#privacy-deletion-title) |
 | 想注册公司或询问税务 | [身份与主体](/go-global/entity)、[税务](/go-global/tax) | [一页主体方案](/go-global/entity#提交申请前写好一页主体方案)、[完整业务询问](/go-global/tax#带着一份完整问题去确认) |
 | 用户用不上，或发生故障 | [基础设施](/go-global/infrastructure)、[风控与账户安全](/go-global/risk) | 发布/恢复记录、账号依赖图和客服处理样例 |
+| 不知道下个月是否继续，或怎样停止服务 | [经营复盘与退出](/go-global/business-review) | [现金与时间演示](/go-global/business-review#review-demo-title)、[停服通知](/go-global/business-review#review-notice-title)和[收尾记录](/go-global/business-review#review-close-title) |
 | 产品确实需要手机原生能力 | [应用商店](/go-global/app-stores) | [测试记录与审核说明](/go-global/app-stores#把测试记录变成审核材料)、版本暂停演示 |
 
 </div>
@@ -203,6 +204,6 @@ last_verified: 2026-10-10
 - **AI 产品：** 模型/地区可用性、输入数据安排、错误结果怎么处理、调用成本与滥用上限。现有合规和定价章提供部分判断方法，本书尚未给出完整的 AI 产品上线样例。
 - **团队或企业采购：** 使用者和购买者可能不同，还要展开试用验收、权限、合同范围、采购与支持安排。主体章不能替代销售和合同交付流程。
 - **插件、扩展或 API：** 宿主政策、权限、版本兼容、限流和开发者接入会改变交付。本书的应用商店章聚焦手机应用，不能直接套用到所有分发平台。
-- **持续经营：** [持续获客](/go-global/growth)已补一轮内容、许可分发与投入复盘；完整月度成本、现金安排和服务退出仍需专门例子，不能由一张获客时间表替代。
+- **持续经营：** [持续获客](/go-global/growth)已补一轮内容、许可分发与投入复盘；[经营复盘与退出](/go-global/business-review)把月度订单、现金与时间放在同一份记录中，再展开收尾。它们分开观察渠道效果与整体经营，不互相替代。
 
 如果新资料要求你先付费、安装工具或注册主体，先回到最初那个问题：它将帮你取得哪一项当前缺少的事实，或完成哪一件已经需要交付的工作？没有清楚答案时，保留链接就够了。

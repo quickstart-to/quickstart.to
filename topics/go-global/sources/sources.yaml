@@ -497,8 +497,8 @@
   url: https://docs.creem.io/features/subscriptions/refunds-and-cancellations
   title: Refunds and Cancellations
   publisher: Creem
-  accessed: 2026-10-09
-  claim: 支持即时或期末取消、客户门户取消以及全额/部分退款；退款、取消、权益更新是分别处理的事项
+  accessed: 2026-10-10
+  claim: 支持即时或期末取消、客户门户取消以及全额/部分退款；退款、取消、权益更新分别处理，发起退款不等于资金已经到达客户账户
   excerpt: excerpts/creem-refunds-cancellations.md
 - id: src-reddit-spam
   url: https://support.reddithelp.com/hc/en-us/articles/360043504051-Spam
@@ -568,9 +568,11 @@
   url: https://www.cac.gov.cn/2021-08/20/c_1631050028355286.htm
   title: 中华人民共和国个人信息保护法
   publisher: 国家互联网信息办公室
-  accessed: 2026-10-09
+  accessed: 2026-10-10
   claim: 个人信息处理的地域范围、最小必要、合法依据、告知、委托、跨境、安全及删除义务
   excerpt: excerpts/cn-pipl.md
+  archive: https://web.archive.org/web/20261006141221/https://www.cac.gov.cn/2021-08/20/c_1631050028355286.htm
+
 - id: src-cn-internet-services
   url: https://www.nmpa.gov.cn/xxgk/fgwj/flxzhfg/20250416164819194.html
   title: 互联网信息服务管理办法（2024年修订文本）
@@ -673,7 +675,7 @@
   url: https://docs.creem.io/merchant-of-record/finance/refunds-and-chargebacks
   title: Refunds and Chargebacks
   publisher: Creem
-  accessed: 2026-10-09
+  accessed: 2026-10-10
   claim: MoR处理拒付不意味着卖家免损失：退款从出款扣除，原交易处理费不退、拒付另有费；过多拒付可能暂停账户
   excerpt: excerpts/creem-chargebacks.md
 - id: src-eu-consumer-rights-directive
@@ -819,8 +821,8 @@
   url: "https://www.derrickreimer.com/walking-away"
   title: "I’m Walking Away From the Product I Spent a Year Building"
   publisher: "Derrick Reimer"
-  accessed: "2026-10-09"
-  claim: "作者2019-05-17复盘Level：访谈、候补名单和付费预订未充分转化为团队试用；部分客户满意，但小团队切换动力弱，大团队要求更高的成熟度。支持其自述过程与反思，不推导普遍失败率或当前Slack用户需求"
+  accessed: "2026-10-10"
+  claim: "作者2019-05-17复盘Level：访谈、候补名单和付费预订未充分转化为团队试用；部分客户满意，但小团队切换动力弱，大团队要求更高的成熟度。作者还比较咨询、免费版和销售投入，与其小团队自举目标不合；支持其自述过程与反思，不推导普遍失败率或当前Slack用户需求"
   excerpt: "excerpts/level-validation-retrospective.md"
 
 - id: src-v2ex-builder-retrospective
@@ -990,7 +992,7 @@
   url: https://www.cr.gov.hk/tc/faq/local-company/dereg-striking-off-winding-up.htm
   title: "本地有限公司 — 撤銷註冊、剔除註冊及清盤"
   publisher: "香港公司注册处"
-  accessed: "2026-10-09"
+  accessed: "2026-10-10"
   claim: "问题 1–3：撤销注册适用于符合条件的不营运但有偿债能力公司，须核对全体成员同意、停业期间、债务/诉讼/资产及税务局不反对通知；解散前仍履行周年申报等责任"
   excerpt: excerpts/hk-cr-deregistration.md
 
@@ -1006,7 +1008,7 @@
   url: https://www.teeraprice.com/blog/closing-snapfile-dissolving-two-llcs
   title: "Closing SnapFile: How I Dissolved Two LLCs and What It Cost"
   publisher: "Teera Price"
-  accessed: "2026-10-09"
+  accessed: "2026-10-10"
   claim: "2025-09-02 作者报告关闭 Delaware、Nevada 两家 LLC，其中 Delaware 从未实际使用；处理多州登记、代理、账户及资料归档；仅采用维护与退出经历，不采用文中混淆的年报和现行费用"
   excerpt: excerpts/teera-snapfile-closure.md
 
@@ -1284,3 +1286,19 @@
   accessed: 2026-10-10
   claim: "表单反馈需说明成功或失败，错误指出对应字段、可行修复及返回入口；用相关描述与动态通知让错误可感知，提交后可聚焦错误字段；指引不等于产品已经完成全面可访问性评估"
   excerpt: excerpts/w3c-form-notifications.md
+
+- id: src-omnivore-cloud-closure
+  url: https://github.com/omnivore-app/omnivore
+  title: "Omnivore · repository README"
+  publisher: "Omnivore contributors"
+  accessed: 2026-10-10
+  claim: "README 表示云应用于 2024 年 11 月停止，项目现为完全自托管；采用代码与托管服务边界，不据此推断原云端导出窗口、全部用户迁移成功或当前部署支持质量"
+  excerpt: excerpts/omnivore-cloud-closure.md
+
+- id: src-v2ex-exit-portability
+  url: https://www.v2ex.com/t/1184451
+  title: "终于入了独立开发三件套的坑了，而且还是同时入了三个坑～"
+  publisher: "V2EX · margoxlive 及讨论参与者"
+  accessed: 2026-10-10
+  claim: "2026 年 1 月讨论中 guangfa 关心长期维护、迁移成本与通用导出格式；作者 margoxlive 回应本地存储和计划中的导入导出。采用有归属的用户担忧与作者答复，不认为计划已落地或本地应用永远可用"
+  excerpt: excerpts/v2ex-exit-portability.md
