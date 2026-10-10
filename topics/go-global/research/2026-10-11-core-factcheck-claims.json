@@ -1,0 +1,666 @@
+[
+  {
+    "id": "quickstart-1",
+    "page": "quickstart.md",
+    "passage": "中文开发者辣条加辣在 2025 年的一篇复盘里，写到自己做 AI 头像网站的经历：实现并不难，上线后却没有想清楚谁会来、从哪里来，以及面对已有产品，别人为什么要选自己的。他也知道应该验证需求，只是一直把写代码当成正事，把找用户留给上线以后。[^src-latiao-overseas-lessons]",
+    "sources": [
+      "src-latiao-overseas-lessons"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "对照原文核对所采用的归属、背景和论述；历史经历不作为当前效果或普遍结论。"
+  },
+  {
+    "id": "quickstart-2",
+    "page": "quickstart.md",
+    "passage": "Plausible 的经历能把这个问题讲得更具体。联合创始人 Marko Saric 在 2022 年的复盘中写到，产品早期已经在服务用户，但增长一度停滞。2019 年，一篇讨论单页应用的文章上了 Hacker News，带来一波访问；文章与产品关系不紧，团队当时看不出明显的直接收益。[^src-plausible-growth-story]",
+    "sources": [
+      "src-plausible-growth-story"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "对照原文核对所采用的归属、背景和论述；历史经历不作为当前效果或普遍结论。"
+  },
+  {
+    "id": "quickstart-3",
+    "page": "quickstart.md",
+    "passage": "2020 年 Marko 加入后，团队把定位收束到一个明确的比较上：面向想离开 Google Analytics 的人，提供简单、轻量、开源、重视隐私的替代方案。他们同时调整产品，统一名称和表达，整理网站结构，并围绕这些差异写文章。随后那篇讨论为什么离开 Google Analytics 的文章，再次带来大量关注，作者报告当月试用和业务增长也有所改善。[^src-plausible-growth-story]",
+    "sources": [
+      "src-plausible-growth-story"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "对照原文核对所采用的归属、背景和论述；历史经历不作为当前效果或普遍结论。"
+  },
+  {
+    "id": "quickstart-4",
+    "page": "quickstart.md",
+    "passage": "如果想看提问方法的具体讲解，可以补充观看 Eric Migicovsky 在 YC 的这场课。下面的中文要点依据 YC 配套转录整理，重点是把话题从“你会不会用”转向已经发生的事情。[^src-yc-talk-users-video][^src-yc-user-interview-notes]",
+    "sources": [
+      "src-yc-talk-users-video",
+      "src-yc-user-interview-notes"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "视频只核对标题与频道；具体提问及倾听要求逐项对照 YC 配套转录，未声称观看完整视频。"
+  },
+  {
+    "id": "quickstart-5",
+    "page": "quickstart.md",
+    "passage": "讲者后来在自己的页面补充，他做产品也常从自身需求出发，并不总是使用这套框架。访谈是一种了解陌生工作的方法；如果你就是使用者，也可以从自己的问题开始，再观察其他人是否有相近需要。[^src-eric-interview-update]",
+    "sources": [
+      "src-eric-interview-update"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "对照原文核对所采用的归属、背景和论述；历史经历不作为当前效果或普遍结论。"
+  },
+  {
+    "id": "quickstart-6",
+    "page": "quickstart.md",
+    "passage": "Plausible 的例子中，相关文章帮助读者认识产品的差异。Tally 则呈现了另一种联系。联合创始人 Marie Martens 在 2022 年的复盘里写道，他们进入表单工具市场时，选择用广泛的免费功能降低尝试门槛；免费表单上的品牌标记又让填写者认识了 Tally，作者将它列为重要的用户来源。[^src-tally-early-growth]",
+    "sources": [
+      "src-tally-early-growth"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "对照原文核对所采用的归属、背景和论述；历史经历不作为当前效果或普遍结论。"
+  },
+  {
+    "id": "quickstart-7",
+    "page": "quickstart.md",
+    "passage": "免费也有代价。Tally 的同一篇复盘谈到，小团队要控制功能复杂度、拒绝部分需求，并改善帮助文档，减少重复支持。文章没有提供足够的单位服务成本，无法替你的产品算出免费是否可持续。尤其当每次使用都带来模型调用或人工服务成本时，需要先算清自己承担得起多少尝试。[^src-tally-early-growth]",
+    "sources": [
+      "src-tally-early-growth"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "对照原文核对所采用的归属、背景和论述；历史经历不作为当前效果或普遍结论。"
+  },
+  {
+    "id": "quickstart-8",
+    "page": "quickstart.md",
+    "passage": "持续价值还包括你能否继续交付。Plausible 的复盘写到，新用户和较大网站增加以后，产品变慢，团队需要改进底层处理能力；后来支持请求增多，又投入文档和重复问题修复。增长之后的工作并没有只剩推广。[^src-plausible-growth-story]",
+    "sources": [
+      "src-plausible-growth-story"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "对照原文核对所采用的归属、背景和论述；历史经历不作为当前效果或普遍结论。"
+  },
+  {
+    "id": "13-retention-1",
+    "page": "chapters/13-retention.md",
+    "passage": "Amplitude 的留存方法把两个前提放在计算之前：什么动作代表产品的核心价值，以及人通常多久需要完成一次。按周发生的任务，用每天回来的人数评价，就可能把正常的使用节奏误读成流失。[^src-amplitude-usage-interval] 对早期小工具，这不意味着先装一套复杂分析系统；先把任务和观察窗口说清楚，往往更要紧。",
+    "sources": [
+      "src-amplitude-usage-interval"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "对照原文核对所采用的归属、背景和论述；历史经历不作为当前效果或普遍结论。"
+  },
+  {
+    "id": "13-retention-2",
+    "page": "chapters/13-retention.md",
+    "passage": "Superhuman 创始人 Rahul Vohra 回顾 2017 年的探索时，先询问已经体验过核心产品的人，再看他们真正重视什么。喜爱产品的人反复提到速度；同样重视速度、却还有障碍的人，帮助团队辨认出移动端、日历等缺口。日历原本并不是团队凭自身习惯会优先处理的功能，这次反馈改变了排序。[^src-superhuman-pmf]",
+    "sources": [
+      "src-superhuman-pmf"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "对照原文核对所采用的归属、背景和论述；历史经历不作为当前效果或普遍结论。"
+  },
+  {
+    "id": "13-retention-3",
+    "page": "chapters/13-retention.md",
+    "passage": "这里有用的不是一条满意度百分比，而是把“谁、得到什么、还缺什么”连起来。已经享受到核心价值的人，能解释该保护什么；想完成同类任务却受阻的人，能指出下一步缺口。原作者随后把强化已有优势和解决障碍同时放进路线图，按成本与影响安排工作。[^src-superhuman-pmf]",
+    "sources": [
+      "src-superhuman-pmf"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "对照原文核对所采用的归属、背景和论述；历史经历不作为当前效果或普遍结论。"
+  },
+  {
+    "id": "13-retention-4",
+    "page": "chapters/13-retention.md",
+    "passage": "但不能把它简化为“只听喜欢你的人”。D 的导入失败不会让他成为满意用户，问题却直接影响产品承诺。若你的样本只剩 A、B，就可能得出“大家都能独立使用”的假结论。研究为什么不用某项能力，也必须了解没用起来的人。Des Traynor 在 Intercom 的反馈文章中正是按待回答的问题区分新用户、熟练用户和未使用者，并提醒：一组相似请求首先是待核查的假设。[^src-intercom-feedback-mistakes]",
+    "sources": [
+      "src-intercom-feedback-mistakes"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "对照原文核对所采用的归属、背景和论述；历史经历不作为当前效果或普遍结论。"
+  },
+  {
+    "id": "13-retention-5",
+    "page": "chapters/13-retention.md",
+    "passage": "flomo 联合创始人少楠在 2025 年的回顾里写到，团队曾积极增加功能；第二年的续费数据与调研却让他们发现，有些付费用户甚至到期都不知道已有会员功能。团队因此转向新用户引导、功能介绍和续费提醒。[^src-flomo-pricing-learning]",
+    "sources": [
+      "src-flomo-pricing-learning"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "对照原文核对所采用的归属、背景和论述；历史经历不作为当前效果或普遍结论。"
+  },
+  {
+    "id": "13-retention-6",
+    "page": "chapters/13-retention.md",
+    "passage": "开发时间之外，还要看自己能不能长期接住。Intercom 的功能取舍文章专门提醒，容易上线的功能仍可能带来原先没估算的维护和支持。[^src-intercom-feature-support] 这组记录里，C 与 D 已用了开发者 **34 分钟**，D 还没做成；B 的 **12 分钟**则属于用户的额外工作。两种成本都要留下，但不能加在一起冒充同一种工时。",
+    "sources": [
+      "src-intercom-feature-support"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "对照原文核对所采用的归属、背景和论述；历史经历不作为当前效果或普遍结论。"
+  },
+  {
+    "id": "16-first-use-1",
+    "page": "chapters/16-first-use.md",
+    "passage": "这里选择“样本可先试、自带文件可直达”，因为本例的输出短、操作可逆，也不需要先接入团队系统。Nielsen Norman Group 的空态设计文章展示过类似选择：Loggly 在没有日志时，同时提供接入真实来源和填入演示数据的入口。文章的重点是告诉用户当前为什么空着，并给出可以直接采取的动作。[^src-nng-empty-states]",
+    "sources": [
+      "src-nng-empty-states"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "对照原文核对所采用的方法或归属明确的经历；不据此保证转化改善、现代产品功能或全面可访问性。"
+  },
+  {
+    "id": "16-first-use-2",
+    "page": "chapters/16-first-use.md",
+    "passage": "没有输入时，空白区域可以展示一份输出的样子，并说明怎样开始。有文件却没有记录时，应告诉用户读到了表头、没有可生成的行。处理尚未结束时，说明正在做什么；处理失败时，说明哪一步没有完成。NN/G 特别提醒过把“仍在加载”错误显示为“没有记录”的问题：同样一块空白，会让用户作出完全不同的判断。[^src-nng-empty-states]",
+    "sources": [
+      "src-nng-empty-states"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "对照原文核对所采用的方法或归属明确的经历；不据此保证转化改善、现代产品功能或全面可访问性。"
+  },
+  {
+    "id": "16-first-use-3",
+    "page": "chapters/16-first-use.md",
+    "passage": "W3C 的表单指引要求错误能让用户知道哪个字段出了问题、如何修改，并能返回对应位置；提交结果也要清楚可感知。[^src-w3c-form-notifications] 对周报工具，“Invalid input”提供的信息太少。更有用的提示是：第 3 行的工时是 `two`，请输入以小时为单位的数字，例如 `2`；刚才写的项目说明仍然保留。",
+    "sources": [
+      "src-w3c-form-notifications"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "对照原文核对所采用的方法或归属明确的经历；不据此保证转化改善、现代产品功能或全面可访问性。"
+  },
+  {
+    "id": "16-first-use-4",
+    "page": "chapters/16-first-use.md",
+    "passage": "PostHog 的邮件引导复盘说明，上下文并不是设置一个标签就自然可靠。早期流程按有没有接入数据决定发送内容，检查却不可靠，用户反映收到错误邮件；后来流程增加到几十封模板，团队又因维护负担简化。2025 年的版本重新围绕数据是否进来、先选了哪个产品来安排帮助。[^src-posthog-onboarding-email]",
+    "sources": [
+      "src-posthog-onboarding-email"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "对照原文核对所采用的方法或归属明确的经历；不据此保证转化改善、现代产品功能或全面可访问性。"
+  },
+  {
+    "id": "16-first-use-5",
+    "page": "chapters/16-first-use.md",
+    "passage": "这个过程对小产品的启发是先弄清卡点，并能维护对应的帮助。还没有可靠使用状态，就不必安排一长串自动提醒。PostHog 作者也写到，越来越多时间花在回复用户邮件上；帮助入口意味着持续接待工作。它没有证明照抄那套流程会改善你的首次使用，更没有替你承担回复。[^src-posthog-onboarding-email]",
+    "sources": [
+      "src-posthog-onboarding-email"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "对照原文核对所采用的方法或归属明确的经历；不据此保证转化改善、现代产品功能或全面可访问性。"
+  },
+  {
+    "id": "16-first-use-6",
+    "page": "chapters/16-first-use.md",
+    "passage": "首次使用不只发生在开发者熟悉的宽屏和鼠标上。英文长标签、小屏、放大文字、键盘操作，都会暴露另一种“我不知道下一步在哪里”。W3C 的入门检查把可见键盘焦点、缩放、语言与表单标签列为基础项目，同时明确这些检查并不全面。[^src-w3c-easy-checks]",
+    "sources": [
+      "src-w3c-easy-checks"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "对照原文核对所采用的方法或归属明确的经历；不据此保证转化改善、现代产品功能或全面可访问性。"
+  },
+  {
+    "id": "16-first-use-7",
+    "page": "chapters/16-first-use.md",
+    "passage": "这时可以顺着同一个任务检查，而不另做一张脱离产品的清单：不用鼠标能否选择样本、改值、提交并定位错误；标签会不会在输入后消失；放大后错误和按钮是否仍可见；结果变化是否既有文字，也能被辅助技术感知。用拖放上传时仍要留普通选择文件的入口，不能只让鼠标手势通行。错误行的颜色可以辅助定位，但不能成为唯一提示。[^src-w3c-form-notifications]",
+    "sources": [
+      "src-w3c-form-notifications"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "对照原文核对所采用的方法或归属明确的经历；不据此保证转化改善、现代产品功能或全面可访问性。"
+  },
+  {
+    "id": "16-first-use-8",
+    "page": "chapters/16-first-use.md",
+    "passage": "本章的小演示保留了键盘控件、字段说明、动态反馈和静态过程。它们提供了可参考的做法，真实使用体验还需要进一步观察。GOV.UK 的研究方法提醒，辅助技术使用者通常有自己的熟悉设置，观察时尽量让他们使用自己的设备。[^src-govuk-usability-testing] 找到真实使用者之后，需要补上这种实际任务观察，不能用开发者的一次 Tab 键检查代替。",
+    "sources": [
+      "src-govuk-usability-testing"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "对照原文核对所采用的方法或归属明确的经历；不据此保证转化改善、现代产品功能或全面可访问性。"
+  },
+  {
+    "id": "16-first-use-9",
+    "page": "chapters/16-first-use.md",
+    "passage": "[持续使用章](/go-global/retention#有时该补的是基本功)引用过 flomo 的反思：有些人已经付费，却到期仍不知道已有功能。[^src-flomo-pricing-learning] 这说明引导值得认真做，但不能倒过来把所有流失都解释成引导不好。",
+    "sources": [
+      "src-flomo-pricing-learning"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "对照原文核对所采用的方法或归属明确的经历；不据此保证转化改善、现代产品功能或全面可访问性。"
+  },
+  {
+    "id": "16-first-use-10",
+    "page": "chapters/16-first-use.md",
+    "passage": "Bannerbear 创始人 Jon Yongfook 在 2023 年也曾怀疑注册到付费的比例太低，是否应该重做引导。他检查最近一批注册和项目活动，才发现大量账号没有走出第一步，怀疑存在自动化滥用。做了防滥用处理等调整以后，注册分母明显减少，比例变好；新增付费人数却没有按那个比例成倍增长。[^src-bannerbear-onboarding-diagnosis] 这是作者的自述，包含同时发生的多项改动。可以借鉴的是回到具体记录寻找原因，不能据此断定你的零活动账号也都是机器人。",
+    "sources": [
+      "src-bannerbear-onboarding-diagnosis"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "对照原文核对所采用的方法或归属明确的经历；不据此保证转化改善、现代产品功能或全面可访问性。"
+  },
+  {
+    "id": "16-first-use-11",
+    "page": "chapters/16-first-use.md",
+    "passage": "对于还只有几次试用的工具，先逐个观察比先画漏斗更有解释力。邀请一个实际或可能使用产品的人，给他能理解的任务目标，少提示具体按钮。GOV.UK 的方法指南强调任务不能把答案藏在说明里；完全卡住时可以帮他继续，以便了解后面的路径，但这次帮助应当进入记录。[^src-govuk-usability-testing]",
+    "sources": [
+      "src-govuk-usability-testing"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "对照原文核对所采用的方法或归属明确的经历；不据此保证转化改善、现代产品功能或全面可访问性。"
+  },
+  {
+    "id": "01-validate-idea-1",
+    "page": "chapters/01-validate-idea.md",
+    "passage": "Jon Yongfook 在 2020 年 1 月宣布产品转向时，写过一个很具体的发现。他此前做的 Previewmojo，主要生成网页被分享时使用的 Open Graph 预览图。技术能够运行，发布时也有关注，但热度过去后，他发现不少用户并不熟悉或重视这个用途；对一些网站来说，这件事也没有频繁到值得专门解决。[^src-bannerbear-pivot]",
+    "sources": [
+      "src-bannerbear-pivot"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "原作者经历按历史归属核对，产品路径只确认公开文档；没有登录实测、套餐比较或结果保证。"
+  },
+  {
+    "id": "01-validate-idea-2",
+    "page": "chapters/01-validate-idea.md",
+    "passage": "与此同时，另一类请求反复出现：不需要 Open Graph 图片，能不能生成其他尺寸？他于是把产品转成 Bannerbear，覆盖更多社交图片用途，连同展示方式一起调整；也结束同时维护多个产品的安排，把精力集中下来。[^src-bannerbear-pivot]",
+    "sources": [
+      "src-bannerbear-pivot"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "原作者经历按历史归属核对，产品路径只确认公开文档；没有登录实测、套餐比较或结果保证。"
+  },
+  {
+    "id": "01-validate-idea-3",
+    "page": "chapters/01-validate-idea.md",
+    "passage": "熟悉这份工作有帮助，但也需要检查经验来自哪里。V2EX 账号 softlight 在 2023 年的页面搭建器复盘中提到，自己把公司里类似技术的价值外推到独立产品，花了很多精力做模板和组件扩展，后来才发现目标用户未必需要这种依赖开发能力的机制。原公司采用的是类似思路，并没有使用这个独立产品。[^src-v2ex-builder-retrospective]",
+    "sources": [
+      "src-v2ex-builder-retrospective"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "原作者经历按历史归属核对，产品路径只确认公开文档；没有登录实测、套餐比较或结果保证。"
+  },
+  {
+    "id": "01-validate-idea-4",
+    "page": "chapters/01-validate-idea.md",
+    "passage": "截至 2026-10-09，Toggl 的官方操作文档给出了一条直接路径：打开详细报告，按客户或项目及日期筛选，下载 PDF，再交给客户；需要更概括的视图时可使用汇总报告。对于已经在这里记录工时的人，“把工时整理给客户看”至少已有原生办法。[^src-toggl-client-report]",
+    "sources": [
+      "src-toggl-client-report"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "原作者经历按历史归属核对，产品路径只确认公开文档；没有登录实测、套餐比较或结果保证。"
+  },
+  {
+    "id": "01-validate-idea-5",
+    "page": "chapters/01-validate-idea.md",
+    "passage": "项目进度也有现成办法。Asana 的帮助文档说明，使用者可以选择项目状态，填写摘要和下一步，把里程碑等项目记录加入更新，再发布或打印。对于工作已经放在这个系统里的人，另做一个报告生成器，也需要拿出离开原流程的理由。[^src-asana-status-updates]",
+    "sources": [
+      "src-asana-status-updates"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "原作者经历按历史归属核对，产品路径只确认公开文档；没有登录实测、套餐比较或结果保证。"
+  },
+  {
+    "id": "01-validate-idea-6",
+    "page": "chapters/01-validate-idea.md",
+    "passage": "AgencyAnalytics 的产品页覆盖的工作又有所不同：接入营销数据，组织报告模板，安排发送，再补充专业评论。若要提供相近的交付，就不能只考虑最后那几张图，还要处理前面的数据连接和后面的解释。[^src-agencyanalytics-reporting]",
+    "sources": [
+      "src-agencyanalytics-reporting"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "原作者经历按历史归属核对，产品路径只确认公开文档；没有登录实测、套餐比较或结果保证。"
+  },
+  {
+    "id": "01-validate-idea-7",
+    "page": "chapters/01-validate-idea.md",
+    "passage": "Buffer 的早期经历说明，小信号可以支持有限投入。Joel Gascoigne 先用页面收集兴趣，再插入价格选项。那个阶段，即使点击付费方案，最后也只是留下邮箱；他随后才做出可用产品，并在发布后获得实际付款。可借鉴的是每一步暴露了新问题，不能把价格点击写成已经验证购买。[^src-buffer-early-validation]",
+    "sources": [
+      "src-buffer-early-validation"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "原作者经历按历史归属核对，产品路径只确认公开文档；没有登录实测、套餐比较或结果保证。"
+  },
+  {
+    "id": "01-validate-idea-8",
+    "page": "chapters/01-validate-idea.md",
+    "passage": "Level 则把这个问题往前推了一步。Derrick Reimer 在 2019 年的复盘中说，他已经做过访谈、积累名单，还向约 50 人卖出了 49 美元的预订。到了安排入门和团队试用时，却只有一部分人继续；有人付款后未使用，有人看过产品却没有带团队真正尝试。少量客户转为付费使用，而且喜欢产品，但这不足以解释如何让更多团队采用。[^src-level-validation-retrospective]",
+    "sources": [
+      "src-level-validation-retrospective"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "原作者经历按历史归属核对，产品路径只确认公开文档；没有登录实测、套餐比较或结果保证。"
+  },
+  {
+    "id": "01-validate-idea-9",
+    "page": "chapters/01-validate-idea.md",
+    "passage": "他又投入数周改进，为现有客户补功能，并分批邀请更多候补者。结果仍没有出现期待中的团队试用。进一步交流揭示出两个方向的困难：小团队觉得现有工具有些烦，却不值得搬走；更大团队的痛感可能更强，但要求产品更成熟。他重新围绕过去的行为访谈，发现不少表示问题很严重的人，并没有尝试改变流程或寻找替代。[^src-level-validation-retrospective]",
+    "sources": [
+      "src-level-validation-retrospective"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "原作者经历按历史归属核对，产品路径只确认公开文档；没有登录实测、套餐比较或结果保证。"
+  },
+  {
+    "id": "01-validate-idea-10",
+    "page": "chapters/01-validate-idea.md",
+    "passage": "Level 最后的取舍还与创始人想经营什么样的公司有关。他考虑过用咨询推动组织改变、扩大销售投入等办法，但这些与保持小团队、自筹资金并尽快盈利的目标不合。因此，停止这个方向不能被压缩成“需求不存在”；它也意味着在自己的资源和经营目标下，后续路径代价过高。[^src-level-validation-retrospective]",
+    "sources": [
+      "src-level-validation-retrospective"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "原作者经历按历史归属核对，产品路径只确认公开文档；没有登录实测、套餐比较或结果保证。"
+  },
+  {
+    "id": "02-launch-1",
+    "page": "chapters/02-launch.md",
+    "passage": "PostHog 联合创始人 James Hawkins 在 2024 年回顾早期获客时，写到一个容易被发布成绩遮住的过程。他们先从认识的人里寻找使用者，手工创建账号，帮助部署；发现真实使用里的问题后，才改成更容易自助部署的版本。随后通过群组、介绍等方式接触更多人，观察不认识他们的人会不会使用、会不会回来。[^src-posthog-first-users]",
+    "sources": [
+      "src-posthog-first-users"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "发布规则对照平台原文，经历按作者及历史背景核对；视频核对页面元信息、播放器时长及 YC 章节表/转录，未声称完整观看。"
+  },
+  {
+    "id": "02-launch-2",
+    "page": "chapters/02-launch.md",
+    "passage": "等到陌生人能够不靠创始人帮助用起来，团队才去 Hacker News 发布。这里有几个条件恰好连在一起：产品面向开发者，强调开源和自托管，也把部署门槛降了下来。公开发布把这个已经能运转的入口带给了更多相近的人。[^src-posthog-first-users]",
+    "sources": [
+      "src-posthog-first-users"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "发布规则对照平台原文，经历按作者及历史背景核对；视频核对页面元信息、播放器时长及 YC 章节表/转录，未声称完整观看。"
+  },
+  {
+    "id": "02-launch-3",
+    "page": "chapters/02-launch.md",
+    "passage": "也要看到他们有本例没有的条件。PostHog 接受融资，初期选择不收费，创始人投入强度很高；作者自己也说明，自筹资金时应更早考虑收费。一个每周只有两个晚上、准备异步支持的个人开发者，不能据此承诺随时在线，或把免费服务无限延长。[^src-posthog-first-users]",
+    "sources": [
+      "src-posthog-first-users"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "发布规则对照平台原文，经历按作者及历史背景核对；视频核对页面元信息、播放器时长及 YC 章节表/转录，未声称完整观看。"
+  },
+  {
+    "id": "02-launch-4",
+    "page": "chapters/02-launch.md",
+    "passage": "本轮读到的 Web Designer Forum 就提供了一个可以实际辨认的入口：它把自由职业与业务讨论、网站评审分成不同版面。前者适合观察设计师怎样经营和交付，后者的公开说明是请成员评审网站。两者能帮助回答的问题不同，不能看到“设计师社区”就把每个版面都当作产品招募区。[^src-webdesignerforum-boards]",
+    "sources": [
+      "src-webdesignerforum-boards"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "发布规则对照平台原文，经历按作者及历史背景核对；视频核对页面元信息、播放器时长及 YC 章节表/转录，未声称完整观看。"
+  },
+  {
+    "id": "02-launch-5",
+    "page": "chapters/02-launch.md",
+    "passage": "网站评审版的置顶规则说得更具体：只为宣传或获取链接的帖子，应放到分类广告区；它还列出至少 5 条帖子的参与门槛。这个页面最初发布于 2007 年，截至本次核验仍被置顶，但没有实际登录测试发帖权限。因此，这一晚能完成的是阅读和核对入口，不能把评审区当成注册后立即发布广告的地方，也不应为凑门槛灌水。[^src-webdesignerforum-review-rules]",
+    "sources": [
+      "src-webdesignerforum-review-rules"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "发布规则对照平台原文，经历按作者及历史背景核对；视频核对页面元信息、播放器时长及 YC 章节表/转录，未声称完整观看。"
+  },
+  {
+    "id": "02-launch-6",
+    "page": "chapters/02-launch.md",
+    "passage": "准备输入本身可能就是一道大门槛。V2EX 作者 loneranger1024 在 2025 年的聊天记录可视化复盘中，报告自己从小红书发现需求，也持续在那里推广；但复盘产品表现时，他把导出聊天记录的难度和上传私密资料的顾虑列为阻碍。这个国内消费工具不能证明海外工作室的需求，却具体展示了“感兴趣”之后还有哪些工作会让人停下来。[^src-v2ex-report-friction]",
+    "sources": [
+      "src-v2ex-report-friction"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "发布规则对照平台原文，经历按作者及历史背景核对；视频核对页面元信息、播放器时长及 YC 章节表/转录，未声称完整观看。"
+  },
+  {
+    "id": "02-launch-7",
+    "page": "chapters/02-launch.md",
+    "passage": "<strong>Show HN：</strong>作品需本人参与、能供人尝试；纯注册页或落地页不适合。准备直接演示，并留时间讨论；不要请朋友投票或评论。[^src-hn-show]",
+    "sources": [
+      "src-hn-show"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "发布规则对照平台原文，经历按作者及历史背景核对；视频核对页面元信息、播放器时长及 YC 章节表/转录，未声称完整观看。"
+  },
+  {
+    "id": "02-launch-8",
+    "page": "chapters/02-launch.md",
+    "passage": "<strong>Product Hunt：</strong>作者可以自行发布，无需另找 hunter。官方允许邀请访问和评论，但不能直接要求投票；这一做法不能原样搬到 Show HN。[^src-ph-launch]",
+    "sources": [
+      "src-ph-launch"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "发布规则对照平台原文，经历按作者及历史背景核对；视频核对页面元信息、播放器时长及 YC 章节表/转录，未声称完整观看。"
+  },
+  {
+    "id": "02-launch-9",
+    "page": "chapters/02-launch.md",
+    "passage": "<strong>Reddit：</strong>官方禁止重复或未经请求的大量互动，版主还会按本社区规则判断。先确认内容和位置，不把“推广低于某个比例”当成通行证，也不批量私信讨论参与者。[^src-reddit-spam]",
+    "sources": [
+      "src-reddit-spam"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "发布规则对照平台原文，经历按作者及历史背景核对；视频核对页面元信息、播放器时长及 YC 章节表/转录，未声称完整观看。"
+  },
+  {
+    "id": "02-launch-10",
+    "page": "chapters/02-launch.md",
+    "passage": "<strong>X：</strong>禁止批量、重复或无关的垃圾互动，以及操纵互动数据。围绕当前讨论作具体回应，不复制同一条推广回复去铺满帖子。[^src-x-authenticity]",
+    "sources": [
+      "src-x-authenticity"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "发布规则对照平台原文，经历按作者及历史背景核对；视频核对页面元信息、播放器时长及 YC 章节表/转录，未声称完整观看。"
+  },
+  {
+    "id": "02-launch-11",
+    "page": "chapters/02-launch.md",
+    "passage": "YC 的 Gustaf Alströmer 在下面这节课中，把找人、获得回应、演示、购买和开始使用分开讲。尤其是 8:45 开始的流程拆解，可以帮助读者把含糊的“推广没效果”拆成不同问题。这里采用的是步骤记录方法；片中的触达规模、创业公司关系网和销售假设，需要按自己的条件另行判断。[^src-yc-first-customers][^src-yc-first-customers-video]",
+    "sources": [
+      "src-yc-first-customers",
+      "src-yc-first-customers-video"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "发布规则对照平台原文，经历按作者及历史背景核对；视频核对页面元信息、播放器时长及 YC 章节表/转录，未声称完整观看。"
+  },
+  {
+    "id": "02-launch-12",
+    "page": "chapters/02-launch.md",
+    "passage": "V2EX 作者 bbbblue 在 2025 年的一条回复里报告，他们曾大量生成博客，搜索流量上升，却没给产品带来帮助；他自己怀疑内容与产品关系不够紧。这不是内容营销无效的证明，而是提醒我们：读完文章以后，读者是否还有使用产品的理由，需要单独检查。[^src-v2ex-traffic-lessons]",
+    "sources": [
+      "src-v2ex-traffic-lessons"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "发布规则对照平台原文，经历按作者及历史背景核对；视频核对页面元信息、播放器时长及 YC 章节表/转录，未声称完整观看。"
+  },
+  {
+    "id": "02-launch-13",
+    "page": "chapters/02-launch.md",
+    "passage": "Google 的入门指南也把有用、独有、易读的内容和清楚的标题、链接列为重点，并明确不保证收录或排名。先检查页面能否被发现和访问，再检查搜索表达与内容是否匹配；有人到了页面以后，仍然要回到前面的使用过程。站点地图不能代替这些工作。[^src-google-seo-starter]",
+    "sources": [
+      "src-google-seo-starter"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "发布规则对照平台原文，经历按作者及历史背景核对；视频核对页面元信息、播放器时长及 YC 章节表/转录，未声称完整观看。"
+  },
+  {
+    "id": "12-market-fit-1",
+    "page": "chapters/12-market-fit.md",
+    "passage": "Notion 在 2020 年推出首个非英语版本时，选择了韩语。它在发布说明中给出的理由，是韩国已经存在活跃的用户社区：有人写教材、办工作坊、制作视频。团队随后一起翻译了应用、常用模板和帮助中心，并表示先把韩语版本做好，再利用经验增加其他语言。[^src-notion-korean-launch]",
+    "sources": [
+      "src-notion-korean-launch"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "核对 2020 年韩语发布说明的已有社区、模板、应用与帮助中心；不把历史选择写成当前增长因果。"
+  },
+  {
+    "id": "12-market-fit-2",
+    "page": "chapters/12-market-fit.md",
+    "passage": "到了 2021 年推出日语版本时，Notion 的亚太负责人西勝清写道，他加入时公司已有一群使用英语产品的日本用户；日语发布同时配备了日语客服、帮助文章、案例与模板。这是团队对自身扩展过程的叙述，起点是已有使用和本地承接能力，不能把它缩成“加日语带来增长”的因果结论。[^src-notion-japanese-launch]",
+    "sources": [
+      "src-notion-japanese-launch"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "核对 2021 年西勝清原文的已有英语用户及日语客服、文章、案例、模板；不采用当前用户量或增长归因。"
+  },
+  {
+    "id": "12-market-fit-3",
+    "page": "chapters/12-market-fit.md",
+    "passage": "另一位经营者的经历，恰好说明只看宏观指标会漏掉什么。杨杰在 2024 年的复盘中说，团队扩大海外地区后，先按人口、收入等指标制定分区价格，后来又增加本地支付方式与八种语言，却没有得到期望中的转化改善。翻译工作通过 Excel 交给外部公司，短句缺少上下文，核心术语也缺乏校验；这些是他事后指出的问题。[^src-yang-localization-retrospective]",
+    "sources": [
+      "src-yang-localization-retrospective"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "核对 FounderPark 授权转载的杨杰自述：分区价格、八种语言、Excel 翻译及术语校验；未采纳普遍市场规模或唯一因果断言。"
+  },
+  {
+    "id": "12-market-fit-4",
+    "page": "chapters/12-market-fit.md",
+    "passage": "エムハンド的营销团队在 2023 年介绍了自己的月度成果报告：一部分数据来自访问分析，另一部分来自收到咨询之后的实际跟进。报告要区分真正的新业务咨询和其他来信，仅有网站统计数字还不够。他们已有线索表、月度摘要和趋势报告，由不同角色提供信息。[^src-mhand-report-practice]",
+    "sources": [
+      "src-mhand-report-practice"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "核对 2023 年エムハンド实际报告流程、咨询质量和三类模板；未采纳文中的广告效果归因。"
+  },
+  {
+    "id": "12-market-fit-5",
+    "page": "chapters/12-market-fit.md",
+    "passage": "另一种情况是工作已经在项目管理工具里完成。INI 的 PM 前原在实践文章中强调，任务需要写清完成条件：自己写完、内部复核通过和客户批准，是不同的结束点。文章还举出一个命名误会——看起来像“制作主视觉”的任务，实际是在等客户提供素材。[^src-ini-backlog-practice] 对我们的工具，这比“把 Done 翻成什么”更早：源记录中的完成，到底是谁确认的？",
+    "sources": [
+      "src-ini-backlog-practice"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "核对 INI 前原对任务完成条件及客户提供素材的命名例子；未采用当前产品功能限制。"
+  },
+  {
+    "id": "12-market-fit-6",
+    "page": "chapters/12-market-fit.md",
+    "passage": "再看 2026 年札幌的一场 JBUG 活动。主办方记录中，Gear8 的待島亘介绍了把客户邀请进 Backlog、集中制作和运营往来的做法；他已经长期使用这条路径，还展示了在既有工具中整理报告的实践。这是厂商刊载的活动记录，有产品推广背景，却仍提供了重要反证：如果客户已经在原系统确认任务，另发一份报告可能只是再维护一份副本。[^src-jbug-sapporo-practice]",
+    "sources": [
+      "src-jbug-sapporo-practice"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "核对 2026-06-17 厂商活动记录中的 Gear8 待島亘实践，保留自述与推广背景，不代表所有用户。"
+  },
+  {
+    "id": "12-market-fit-7",
+    "page": "chapters/12-market-fit.md",
+    "passage": "前面的实践也给出了可继续阅读的入口。[JBUG 社区首页](https://jbuginfo.backlog.com/)连接活动信息与报名站点，定位是用户交流项目管理经验；札幌那次记录则明确涉及网站制作角色。[^src-jbug-community][^src-jbug-sapporo-practice] 先读公开讲稿和回顾，挑与你的任务相近的讨论，再查看活动形式、参与条件和组织者的规则。历史活动能帮助认识问题，不能当作仍可报名的场次。",
+    "sources": [
+      "src-jbug-community",
+      "src-jbug-sapporo-practice"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "核对 JBUG 首页的社区定位、活动列表与 connpass 入口；未报名或确认历史活动仍可参与。"
+  },
+  {
+    "id": "12-market-fit-8",
+    "page": "chapters/12-market-fit.md",
+    "passage": "产品中不同层的文字，还可能由不同的人负责。Tally 的语言文档就明确区分：设置可以翻译系统默认消息；能够由表单作者编辑的问题标题等内容，仍需作者使用目标语言填写。[^src-tally-form-languages] “选择了语言”不等于整个交付都已经翻译，这一点对报告工具也成立。",
+    "sources": [
+      "src-tally-form-languages"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "核对 Tally 对系统消息与可编辑题目文字的翻译边界；未在账户里实测。"
+  },
+  {
+    "id": "12-market-fit-9",
+    "page": "chapters/12-market-fit.md",
+    "passage": "W3C 建议在可能产生歧义的场合明确月份和四位年份，或说明格式；它也提醒浏览器语言偏好不能直接替代文档上下文。[^src-w3c-date-formats] 因此，本例保留原始字符串，先要求操作者确认日期顺序，再生成供客户检查的预览。若输入无效，就停下来指出问题，不把 2 月的错误日期悄悄挪到 3 月。",
+    "sources": [
+      "src-w3c-date-formats"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "核对 W3C 对明确月份、四位年份及页面语言上下文的建议，不采用旧环境代码。"
+  },
+  {
+    "id": "12-market-fit-10",
+    "page": "chapters/12-market-fit.md",
+    "passage": "浏览器演示使用 `Intl.DateTimeFormat` 分别指定显示偏好与时区；预算使用 `Intl.NumberFormat` 明确指定 `USD`。这些选项在 API 中各自独立，不能把切换德语显示理解成把美元换成欧元。[^src-mdn-datetime-constructor][^src-mdn-numberformat-constructor] 示例将“截止日期”定义为一个日历日期，因此不随时区移动；“最近更新时间”定义为时刻，换时区后可能落在前一天。若你的产品约定的是“某日某地下午五点截止”，就需要同时保存日期、时间和时区，不能直接沿用这里的日期字段。",
+    "sources": [
+      "src-mdn-datetime-constructor",
+      "src-mdn-numberformat-constructor"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "核对 MDN 的 locale、calendar、numberingSystem、timeZone 与 currency/code 选项；实际运行仓库日期模型，验证文中合成输出，不主张完整 CSV 解析或客户偏好。"
+  },
+  {
+    "id": "12-market-fit-11",
+    "page": "chapters/12-market-fit.md",
+    "passage": "付款同样要拆开问。**买家在哪里、想用什么方式付；卖家以什么身份、经哪条通道收；交易怎样退款并交付凭证**，不能只确认其中一项。比如，截至 2026-10-11，Stripe 的 Konbini 文档把买家地点列为日本、展示币种列为 JPY，而“商家所在地”页签列出的可用账户地区是日本；文档另列入驻审核条件。这不能被解释为大陆个人把结账语言切成日语，就能启用该方式。[^src-stripe-konbini-market]",
+    "sources": [
+      "src-stripe-konbini-market"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "实际打开 Stripe 商家所在地页签，确认日本 Stripe 账户，并与客户日本、JPY、入驻审核分别核对；不推断大陆个人准入。"
+  },
+  {
+    "id": "12-market-fit-12",
+    "page": "chapters/12-market-fit.md",
+    "passage": "同一文档中，买家取得付款码后还要去便利店付现金；取得码不等于付款完成，退款又需要买家提供接收退款的账户信息。[^src-stripe-konbini-market] 这会改变交付、过期和客服流程。因此不能因为它是当地付款方式，就把它当作任何小工具都应优先接入的功能。",
+    "sources": [
+      "src-stripe-konbini-market"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "核对 Stripe 线下现金支付步骤和退款收款账户要求；未开通、付款或退款。"
+  }
+]

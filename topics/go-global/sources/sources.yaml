@@ -3,42 +3,42 @@
   url: https://www.notion.com/releases/2020-08-10
   title: "Notion in Korean 🇰🇷 🎊"
   publisher: Notion
-  accessed: 2026-10-10
+  accessed: 2026-10-11
   claim: 2020 年韩语发布以已有韩国用户社区为选择依据，同时翻译应用、常用模板和帮助中心；属于团队历史叙述，不证明地区普适性或增长归因
   excerpt: excerpts/notion-korean-launch.md
 - id: src-yang-localization-retrospective
   url: https://www.163.com/dy/article/J7G55TGH05566TJ2.html
   title: "创业者复盘：出海“本地化”过程中，我犯了哪些错？"
   publisher: 杨杰 · FounderPark 授权转载
-  accessed: 2026-10-10
+  accessed: 2026-10-11
   claim: 作者在 2024 年复盘中报告分区定价及增加语言未取得期望改善，并归因于支付路径、缺上下文翻译和术语校验等缺口；没有独立因果验证
   excerpt: excerpts/yang-localization-retrospective.md
 - id: src-tally-form-languages
   url: https://tally.so/help/supported-languages
   title: "Supported languages"
   publisher: Tally
-  accessed: 2026-10-10
+  accessed: 2026-10-11
   claim: 语言设置翻译系统默认文字；作者可编辑的问题标题等内容需要作者自行使用目标语言，不因语言设置自动翻译
   excerpt: excerpts/tally-form-languages.md
 - id: src-w3c-date-formats
   url: https://www.w3.org/International/questions/qa-date-format
   title: "Date formats"
   publisher: W3C Internationalization
-  accessed: 2026-10-10
+  accessed: 2026-10-11
   claim: 纯数字日期存在歧义；可用明确月份及四位年份或说明格式，浏览器语言偏好不能直接代替文档上下文
   excerpt: excerpts/w3c-date-formats.md
 - id: src-mdn-datetime-constructor
   url: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat
   title: "Intl.DateTimeFormat() constructor"
   publisher: MDN Web Docs
-  accessed: 2026-10-10
+  accessed: 2026-10-11
   claim: locale、calendar、numberingSystem 与 timeZone 分别控制日期时间显示，未指定时区使用运行时默认；本例显式设置公历及命名时区
   excerpt: excerpts/mdn-datetime-constructor.md
 - id: src-mdn-numberformat-constructor
   url: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat
   title: "Intl.NumberFormat() constructor"
   publisher: MDN Web Docs
-  accessed: 2026-10-10
+  accessed: 2026-10-11
   claim: currency 模式需独立指定币种，currencyDisplay 可采用 ISO 币种代码；格式化不执行货币换算
   excerpt: excerpts/mdn-numberformat-constructor.md
 - id: src-postnitro-payment-migration
@@ -461,7 +461,7 @@
   url: https://shaonan.blog/posts/20250413-flomo/
   title: flomo：一条长坡薄雪的道路
   publisher: 少楠 · flomo 联合创始人
-  accessed: 2026-10-10
+  accessed: 2026-10-11
   claim: 作者回顾初期表单收费及近一半纯支持付款，并报告第二年发现会员功能未被充分体验后转向引导、介绍与续费提醒；为归属明确的经历，不是独立验证的效果或海外需求
   excerpt: excerpts/flomo-pricing-learning.md
 - id: src-pinboard-pricing-change
@@ -482,14 +482,14 @@
   url: https://news.ycombinator.com/showhn.html
   title: Show HN Guidelines
   publisher: Hacker News
-  accessed: 2026-10-10
+  accessed: 2026-10-11
   claim: Show HN须为本人参与且可供尝试的作品；不接收纯落地页；不要请朋友投票或评论
   excerpt: excerpts/hn-show.md
 - id: src-ph-launch
   url: https://www.producthunt.com/launch
   title: Product Hunt Launch Guide
   publisher: Product Hunt
-  accessed: 2026-10-09
+  accessed: 2026-10-11
   claim: 鼓励作者自行发布，不要求第三方hunter；不能直接要求投票；发布入口为Submit/New Product
   excerpt: excerpts/ph-launch.md
   archive: https://web.archive.org/web/20261009063530/https://www.producthunt.com/launch
@@ -504,21 +504,21 @@
   url: https://support.reddithelp.com/hc/en-us/articles/360043504051-Spam
   title: Spam
   publisher: Reddit Help
-  accessed: 2026-10-09
+  accessed: 2026-10-11
   claim: 禁止重复或未经请求的大量互动；社区另有规则且由版主判定，不存在本文可据以宣传的统一推广比例
   excerpt: excerpts/reddit-spam.md
 - id: src-x-authenticity
   url: https://help.x.com/en/rules-and-policies/authenticity
   title: Authenticity
   publisher: X Help Center
-  accessed: 2026-10-09
+  accessed: 2026-10-11
   claim: 禁止批量未经请求的回复/私信、重复内容及互刷互动；不得通过新账号绕过封禁
   excerpt: excerpts/x-authenticity.md
 - id: src-google-seo-starter
   url: https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=zh-cn
   title: 搜索引擎优化（SEO）入门指南
   publisher: Google Search Central
-  accessed: 2026-10-10
+  accessed: 2026-10-11
   claim: 不保证收录或排名；提供独有实用内容、描述性标题/链接、检查抓取与规范网址；站点地图不是排名保证；更改影响可能数小时至数月，通常需数周评估，且并非所有更改都有明显效果
   excerpt: excerpts/google-seo-starter.md
   archive: https://web.archive.org/web/20261010022314/https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=zh-cn
@@ -735,7 +735,7 @@
   url: "https://dev-life.online/blog/yusubuda"
   title: "独立开发出海三个月，我犯了这些错"
   publisher: "辣条加辣 · 辣条的博客"
-  accessed: "2026-10-09"
+  accessed: 2026-10-11
   claim: "作者2025-04-25复盘先开发后考虑目标用户与触达的失败，并以AI头像网站为例；仅采用其自述行动和反思，不采纳平台最佳发布时间、hunter必要性或收入保证"
   excerpt: "excerpts/latiao-overseas-lessons.md"
 
@@ -743,7 +743,7 @@
   url: "https://plausible.io/blog/open-source-saas"
   title: "How we built a $1M ARR open source SaaS"
   publisher: "Marko Saric · Plausible Analytics"
-  accessed: "2026-10-09"
+  accessed: 2026-10-11
   claim: "联合创始人2022年复盘2019年无关主题流量、2020年营销合伙人加入后的定位与内容调整，以及后续产品性能和支持投入；采用其报告的行动与结果，不推导单一增长原因或收入承诺"
   excerpt: "excerpts/plausible-growth-story.md"
 
@@ -759,7 +759,7 @@
   url: "https://review.firstround.com/how-superhuman-built-an-engine-to-find-product-market-fit/"
   title: "How Superhuman Built an Engine to Find Product Market Fit"
   publisher: "Rahul Vohra · First Round Review"
-  accessed: "2026-10-09"
+  accessed: 2026-10-11
   claim: "Superhuman 创始人回顾按核心使用经历、实际价值和阻碍分组反馈，提升移动端及日历优先级，再比较投入与影响；本书不采用其 PMF 百分比、样本阈值或忽略所有不满意者的建议"
   excerpt: "excerpts/superhuman-pmf.md"
 
@@ -767,21 +767,21 @@
   url: https://amplitude.com/books/mastering-retention/your-critical-event-and-product-usage-interval
   title: Your critical event and product usage interval
   publisher: Amplitude
-  accessed: 2026-10-09
+  accessed: 2026-10-11
   claim: 留存分析方法强调先定义与核心价值相符的事件及自然使用周期，再解读回访；本书不采用其固定观察天数或百分位建议，也不声称演示等同平台默认留存算法
   excerpt: excerpts/amplitude-usage-interval.md
 - id: src-intercom-feedback-mistakes
   url: https://www.intercom.com/blog/5-mistakes-we-all-make-with-product-feedback/
   title: 5 product feedback mistakes we all make
   publisher: Des Traynor · Intercom
-  accessed: 2026-10-10
+  accessed: 2026-10-11
   claim: 2014 年方法文章按使用阶段与待回答的问题选择反馈对象，将重复反馈视为待验证的假设，并追问请求背后的任务；不采用排除所有免费用户或仅凭直觉跳过验证的泛化建议
   excerpt: excerpts/intercom-feedback-mistakes.md
 - id: src-intercom-feature-support
   url: https://www.intercom.com/blog/rarely-say-yes-to-feature-requests/
   title: Rarely say yes to feature requests
   publisher: Des Traynor · Intercom
-  accessed: 2026-10-09
+  accessed: 2026-10-11
   claim: 2014 年文章第 7 节讨论只估上线开发成本会漏掉维护与支持，第 6 节提醒局部点击增加不等于整体价值；不采用其全部筛选标准为通用规则
   excerpt: excerpts/intercom-feature-support.md
 
@@ -789,7 +789,7 @@
   url: "https://blog.tally.so/how-we-bootstrapped-tally-to-10k-mrr/"
   title: "How we bootstrapped Tally to $10k MRR"
   publisher: "Marie Martens · Tally"
-  accessed: "2026-10-10"
+  accessed: 2026-10-11
   claim: "联合创始人2022-02-11回顾免费表单降低尝试门槛、表单上的品牌标记带来用户，以及小团队通过限制复杂度和改善文档降低支持负担；属于历史自述，不代表当前套餐或免费策略的普遍效果"
   excerpt: "excerpts/tally-early-growth.md"
 
@@ -797,15 +797,15 @@
   url: "https://www.youtube.com/watch?v=MT4Ig2uqjTc"
   title: "Eric Migicovsky - How to Talk to Users"
   publisher: "Y Combinator · YouTube"
-  accessed: "2026-10-09"
-  claim: "YC于2019-07-25发布Eric Migicovsky的用户访谈讲座；播放器元数据为31分37秒、英文自动字幕并允许嵌入，具体提问内容另以YC配套转录核对"
+  accessed: 2026-10-11
+  claim: "YouTube 页面标题与 Y Combinator 频道确认该用户访谈讲座；本轮未重测完整播放、字幕或嵌入许可，中文提问要点以 YC 配套转录核对"
   excerpt: "excerpts/yc-talk-users-video.md"
 
 - id: src-yc-user-interview-notes
   url: "https://www.ycombinator.com/blog/startup-school-week-1-recap-kevin-hale-and-eric-migicovsky/"
   title: "Startup School Week 1 Recap: Kevin Hale and Eric Migicovsky"
   publisher: "Y Combinator"
-  accessed: "2026-10-09"
+  accessed: 2026-10-11
   claim: "2019-09-04官方配套转录的Eric段落讨论先了解用户过去实际遇到的问题、已尝试的办法及不足，避免在研究访谈中推销或只问假设性意愿；不将VC增长标准泛化给所有个人产品"
   excerpt: "excerpts/yc-user-interview-notes.md"
 
@@ -813,7 +813,7 @@
   url: "https://ericmigi.com/blog/startup-school-how-to-talk-to-users"
   title: "Startup School - How to talk to users"
   publisher: "Eric Migicovsky"
-  accessed: "2026-10-09"
+  accessed: 2026-10-11
   claim: "作者在讲座链接页的2025年补充中说明框架基于The Mom Test，自己做Pebble和Beeper时很少实际采用，常从自己想要的产品出发；仅为其个人方法自述"
   excerpt: "excerpts/eric-interview-update.md"
 
@@ -821,7 +821,7 @@
   url: "https://www.derrickreimer.com/walking-away"
   title: "I’m Walking Away From the Product I Spent a Year Building"
   publisher: "Derrick Reimer"
-  accessed: "2026-10-10"
+  accessed: 2026-10-11
   claim: "作者2019-05-17复盘Level：访谈、候补名单和付费预订未充分转化为团队试用；部分客户满意，但小团队切换动力弱，大团队要求更高的成熟度。作者还比较咨询、免费版和销售投入，与其小团队自举目标不合；支持其自述过程与反思，不推导普遍失败率或当前Slack用户需求"
   excerpt: "excerpts/level-validation-retrospective.md"
 
@@ -829,7 +829,7 @@
   url: "https://v2ex.com/t/980242"
   title: "复盘一个独立开发2年的项目"
   publisher: "softlight · V2EX"
-  accessed: "2026-10-09"
+  accessed: 2026-10-11
   claim: "账号softlight于2023-10-09复盘页面搭建器：把公司内部类似技术的价值外推到市场，投入可扩展架构后发现与目标用户需求错位；第77条回复明确原公司没有使用该产品。仅为作者自述，不证明市场规模或商业结果"
   excerpt: "excerpts/v2ex-builder-retrospective.md"
 
@@ -837,7 +837,7 @@
   url: https://www.bannerbear.com/blog/the-pivot/
   title: The Pivot
   publisher: Jon Yongfook · Bannerbear
-  accessed: '2026-10-10'
+  accessed: 2026-10-11
   claim: 作者2020年1月宣布从Previewmojo的Open Graph图片生成转向更多尺寸和用途，描述低任务频率、用户认知、反复出现的其他尺寸请求，以及收拢多产品投入；是当时的转向判断，不证明后续增长或普遍机会
   excerpt: excerpts/bannerbear-pivot.md
 
@@ -845,7 +845,7 @@
   url: https://support.toggl.com/en-us/article/how-to-generate-a-report-for-a-client-1vbg4xh/
   title: How to generate a report for a client?
   publisher: Toggl Knowledge Base
-  accessed: '2026-10-09'
+  accessed: 2026-10-11
   claim: 官方操作文档说明在Detailed report按Client或Project及日期筛选，下载PDF交给客户，需要概览时使用Summary report；仅核对文档所述能力，未执行账户操作或比较套餐
   excerpt: excerpts/toggl-client-report.md
 
@@ -853,7 +853,7 @@
   url: https://agencyanalytics.com/features/automated-marketing-reports
   title: Automated Marketing Reports That Impress Clients, Fast!
   publisher: AgencyAnalytics
-  accessed: '2026-10-09'
+  accessed: 2026-10-11
   claim: 产品页面描述接入营销平台数据、模板、定时交付及添加专业评论，部分套餐提供发送前审核；用于了解该类产品覆盖的工作，不采用节省时间、客户数量或收入等宣传数字，也不声称实测
   excerpt: excerpts/agencyanalytics-reporting.md
 
@@ -861,7 +861,7 @@
   url: https://help.asana.com/s/article/project-progress-and-status-updates
   title: Project progress and status updates
   publisher: Asana Help Center
-  accessed: '2026-10-09'
+  accessed: 2026-10-11
   claim: 官方文档说明选择项目状态、填写摘要和下一步、加入里程碑等项目记录并发布或打印状态更新；仅支持现有工作路径，不代表已登录实测、特定套餐承诺或工作室实际采用情况
   excerpt: excerpts/asana-status-updates.md
 
@@ -870,7 +870,7 @@
   url: https://posthog.com/founders/first-1000-users
   title: How we got our first 1,000 users
   publisher: James Hawkins · PostHog
-  accessed: 2026-10-10
+  accessed: 2026-10-11
   claim: 联合创始人2024年回顾从熟人手工帮助、简化部署、陌生人自助使用到Hacker News发布的历史过程；融资、免费和高强度支持是背景条件，不推导通用人数阈值或收入结果
   excerpt: excerpts/posthog-first-users.md
 
@@ -878,7 +878,7 @@
   url: https://www.webdesignerforum.co.uk/
   title: Forums - Web Designer Forum
   publisher: Web Designer Forum
-  accessed: '2026-10-09'
+  accessed: 2026-10-11
   claim: 公开首页分别设置Freelancing, Business and Legal Discussion及Website Reviews and Feedback版面；仅支持研究入口与版面目的，不代表成员需求、准许推广或已实际参与
   excerpt: excerpts/webdesignerforum-boards.md
 
@@ -886,7 +886,7 @@
   url: https://www.webdesignerforum.co.uk/topic/1997-website-review-rules/
   title: Website Review Rules
   publisher: Jo 90 · Web Designer Forum
-  accessed: 2026-10-10
+  accessed: 2026-10-11
   claim: 网站评审版仍置顶的2007年规则要求纯广告或获取链接帖子使用分类广告区，并列出至少5条帖子的参与门槛；仅核对公开规则，未登录测试当前发帖权限
   excerpt: excerpts/webdesignerforum-review-rules.md
 
@@ -894,7 +894,7 @@
   url: https://www.v2ex.com/t/1108613
   title: 从 0 到 2000 元，我花了 10 个月
   publisher: loneranger1024 · V2EX
-  accessed: '2026-10-09'
+  accessed: 2026-10-11
   claim: 作者2025-02-02复盘聊天记录可视化工具，从小红书发现线索并持续推广，认为导出记录门槛和上传隐私顾虑影响使用；仅为国内消费工具的作者自述，不证明海外需求或推广因果
   excerpt: excerpts/v2ex-report-friction.md
 
@@ -902,7 +902,7 @@
   url: https://www.ycombinator.com/library/Ip-how-to-get-your-first-customers
   title: How to get your first customers
   publisher: Gustaf Alströmer · Y Combinator
-  accessed: '2026-10-09'
+  accessed: 2026-10-11
   claim: YC配套文字与章节表区分找人、回应、演示、购买和开始使用；8分45秒为The sales funnel章节，仅借鉴过程记录，不沿用触达规模、样例转化率或所有企业均不应试用的建议
   excerpt: excerpts/yc-first-customers.md
 
@@ -910,7 +910,7 @@
   url: https://www.youtube.com/watch?v=hyYCn_kAngI
   title: How to Get Your First Customers | Startup School
   publisher: Y Combinator · YouTube
-  accessed: '2026-10-09'
+  accessed: 2026-10-11
   claim: 原站核对发布者、标题、2022-12-29发布日期及22分53秒时长；讲授内容以YC配套文字核对，未声称完整观看或保证各地可播放
   excerpt: excerpts/yc-first-customers-video.md
 
@@ -1181,8 +1181,8 @@
   url: https://www.w3.org/WAI/test-evaluate/easy-checks/
   title: "Easy Checks – A First Review of Web Accessibility"
   publisher: W3C Web Accessibility Initiative
-  accessed: 2026-10-10
-  claim: 入门检查入口覆盖图像替代文字、键盘焦点、缩放、页面语言、表单标签等，明确只覆盖部分问题，不能代替全面无障碍评估；旧 preliminary 页面把此入口称为新版草稿
+  accessed: 2026-10-11
+  claim: 入门检查入口覆盖图像替代文字、键盘焦点、缩放、页面语言、表单标签等，明确只覆盖部分问题，不能代替全面无障碍评估
   excerpt: excerpts/w3c-easy-checks.md
 - id: src-wipo-brand-database
   url: https://www.wipo.int/en/web/global-brand-database
@@ -1251,7 +1251,7 @@
   url: https://www.bannerbear.com/blog/how-i-increased-my-saas-conversion-rate-by-7x/
   title: "How I Increased my SaaS Conversion Rate by 700%"
   publisher: "Jon Yongfook · Bannerbear"
-  accessed: 2026-10-10
+  accessed: 2026-10-11
   claim: "2023 年 8 月作者自述先怀疑引导，检查注册与项目活动后发现大量零活动账号，加入防滥用措施等改动后注册分母减少；比例变化不等于新增付费客户同幅增加，也不能证明引导改善"
   excerpt: excerpts/bannerbear-onboarding-diagnosis.md
 
@@ -1259,7 +1259,7 @@
   url: https://posthog.com/blog/how-we-built-email-onboarding
   title: "How we built our onboarding email flow (with actual performance data)"
   publisher: "Joe Black · PostHog"
-  accessed: 2026-10-10
+  accessed: 2026-10-11
   claim: "2024 年原文及 2025 年 2 月更新自述接入检查不可靠导致错误邮件、复杂流程增加维护负担、后续简化并按使用状态提供帮助；版本间转化定义变化，不据此推断因果改善，不采用营销许可或当前价格判断"
   excerpt: excerpts/posthog-onboarding-email.md
 
@@ -1267,7 +1267,7 @@
   url: https://www.nngroup.com/articles/empty-state-interface-design/
   title: "Designing Empty States in Complex Applications: 3 Guidelines"
   publisher: "Kate Kaplan · Nielsen Norman Group"
-  accessed: 2026-10-10
+  accessed: 2026-10-11
   claim: "2021-09-19 原始设计分析区分未配置、无结果和加载状态，建议空态说明原因并直达下一步，Loggly 示例提供真实接入与演示数据两条路径；不是效果实验或转化保证"
   excerpt: excerpts/nng-empty-states.md
 
@@ -1275,7 +1275,7 @@
   url: https://www.gov.uk/service-manual/user-research/using-moderated-usability-testing
   title: "Using moderated usability testing"
   publisher: "GOV.UK · User research community"
-  accessed: 2026-10-10
+  accessed: 2026-10-11
   claim: "任务观察应选择实际或可能用户，给中性目标而不提示答案，必要时帮助完全卡住者继续；合成资料会限制情境发现，辅助技术使用者宜用熟悉设备；采用研究方法而非行业转化基准"
   excerpt: excerpts/govuk-usability-testing.md
 
@@ -1283,7 +1283,7 @@
   url: https://www.w3.org/WAI/tutorials/forms/notifications/
   title: "User Notification · Forms Tutorial"
   publisher: "W3C Web Accessibility Initiative"
-  accessed: 2026-10-10
+  accessed: 2026-10-11
   claim: "表单反馈需说明成功或失败，错误指出对应字段、可行修复及返回入口；用相关描述与动态通知让错误可感知，提交后可聚焦错误字段；指引不等于产品已经完成全面可访问性评估"
   excerpt: excerpts/w3c-form-notifications.md
 
@@ -2060,42 +2060,42 @@
   url: https://www.notion.com/blog/notion-launching-in-japanese
   title: "Notion is now in Japanese! みなさん、こんにちは！"
   publisher: 西勝清 · Notion
-  accessed: 2026-10-10
+  accessed: 2026-10-11
   claim: 2021 年日本市场负责人报告发布前已有使用英语产品的日本社区，并随日语产品提供专门客服、帮助文章、案例与模板；是团队历史叙述，不证明翻译带来因果增长
   excerpt: excerpts/notion-japanese-launch.md
 - id: src-mhand-report-practice
   url: https://www.m-hand.co.jp/tokyo/blog/report-form/
   title: Webサイトの成果を可視化する報告テンプレートの紹介
   publisher: エムハンド · マーケターチーム
-  accessed: 2026-10-10
+  accessed: 2026-10-11
   claim: 2023 年团队介绍月度网站成果报告，结合访问数据与实际咨询跟进，分别维护线索、摘要和趋势材料；支持任务结构，不代表小工作室购买意愿
   excerpt: excerpts/mhand-report-practice.md
 - id: src-ini-backlog-practice
   url: https://www.ini.co.jp/iniway/knowledge/website-tools.html
   title: 〜Webサイト制作・開発は進捗管理ツールを活用しよう！〜 PM・ディレクション初心者のためのBacklog活用法【プロジェクト開始編】
   publisher: 前原 · INI WAY
-  accessed: 2026-10-10
+  accessed: 2026-10-11
   claim: INI 实践文章区分任务自身完成、内部复核与客户批准，并以主视觉素材请求说明任务命名歧义；不采用其页面功能限制作为现行规则
   excerpt: excerpts/ini-backlog-practice.md
 - id: src-jbug-sapporo-practice
   url: https://backlog.com/ja/blog/jbug-sapporo-eventreport/
   title: Web制作現場のBacklog活用を学ぶ｜JBUGイベントレポート
   publisher: makofujimoto · Backlog
-  accessed: 2026-10-10
+  accessed: 2026-10-11
   claim: 2026-06-17 的活动回顾记录 Gear8 待島亘在 5 月 30 日分享邀请客户到 Backlog 集中制作运营往来和报告整理；为厂商刊载的经验记录，不证明工具普遍适合或独立报告没有市场
   excerpt: excerpts/jbug-sapporo-practice.md
 - id: src-jbug-community
   url: https://jbuginfo.backlog.com/
   title: JBUG（ジェイバグ）｜Backlogユーザーコミュニティ
   publisher: JBUG · Backlog
-  accessed: 2026-10-10
+  accessed: 2026-10-11
   claim: 社区主页定位为 Backlog 用户经验交流并连接活动与 connpass 入口；不保证特定活动尚可报名、不授予营销许可
   excerpt: excerpts/jbug-community.md
 - id: src-stripe-konbini-market
   url: https://docs.stripe.com/payments/konbini
   title: Konbini payments
   publisher: Stripe
-  accessed: 2026-10-10
+  accessed: 2026-10-11
   claim: Konbini 买家地点日本、展示币种 JPY，Business locations 页签列日本 Stripe 账户；取得付款码后需线下支付，退款需买家收款账户信息且另有入驻审核，不能推断大陆个人可用
   excerpt: excerpts/stripe-konbini-market.md
   archive: https://web.archive.org/web/20261010094812/https://docs.stripe.com/payments/konbini
