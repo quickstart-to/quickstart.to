@@ -1,0 +1,265 @@
+{
+  "date": "2026-10-09",
+  "environment": "Ego TaskSpace 70; local Astro development and final static preview; synthetic device demonstration only",
+  "note": "Initial pre-hydration selector observation was not used as an initialized-state result; this initial state was read after visible controls and final static markup were confirmed. Nine subsequent transition records are the previously executed UI actions; CSS/markup-only refinements did not change their logic.",
+  "initial": {
+    "old": 16,
+    "bad": 4,
+    "fixed": 0,
+    "result": "16 台仍是 v1.0；4 台为有缺陷的 v1.1；0 台装好 v1.2 修复版。",
+    "buttons": [
+      {
+        "text": "模拟下一台装上 v1.1",
+        "disabled": false
+      },
+      {
+        "text": "暂停 v1.1 发布",
+        "disabled": false
+      },
+      {
+        "text": "模拟受影响设备装好 v1.2 修复版",
+        "disabled": true
+      },
+      {
+        "text": "重置演示",
+        "disabled": false
+      }
+    ]
+  },
+  "transitions": [
+    {
+      "label": "one more",
+      "result": "15 台仍是 v1.0；5 台为有缺陷的 v1.1；0 台装好 v1.2 修复版。",
+      "explanation": "v1.1 仍在发布。本例再模拟一台安装，有缺陷版本的设备数会从 5 台增加到 6 台。",
+      "old": 15,
+      "bad": 5,
+      "fixed": 0,
+      "buttons": [
+        {
+          "text": "模拟下一台装上 v1.1",
+          "disabled": false
+        },
+        {
+          "text": "暂停 v1.1 发布",
+          "disabled": false
+        },
+        {
+          "text": "模拟受影响设备装好 v1.2 修复版",
+          "disabled": true
+        },
+        {
+          "text": "重置演示",
+          "disabled": false
+        }
+      ]
+    },
+    {
+      "label": "two more",
+      "result": "14 台仍是 v1.0；6 台为有缺陷的 v1.1；0 台装好 v1.2 修复版。",
+      "explanation": "v1.1 仍在发布。本例再模拟一台安装，有缺陷版本的设备数会从 6 台增加到 7 台。",
+      "old": 14,
+      "bad": 6,
+      "fixed": 0,
+      "buttons": [
+        {
+          "text": "模拟下一台装上 v1.1",
+          "disabled": false
+        },
+        {
+          "text": "暂停 v1.1 发布",
+          "disabled": false
+        },
+        {
+          "text": "模拟受影响设备装好 v1.2 修复版",
+          "disabled": true
+        },
+        {
+          "text": "重置演示",
+          "disabled": false
+        }
+      ]
+    },
+    {
+      "label": "halt at 6",
+      "result": "14 台仍是 v1.0；6 台为有缺陷的 v1.1；0 台装好 v1.2 修复版。",
+      "explanation": "v1.1 已暂停，但 6 台仍保留有问题的版本；没有自动退回 v1.0。下一步是修复并确认这些设备实际安装。",
+      "old": 14,
+      "bad": 6,
+      "fixed": 0,
+      "buttons": [
+        {
+          "text": "模拟下一台装上 v1.1",
+          "disabled": true
+        },
+        {
+          "text": "暂停 v1.1 发布",
+          "disabled": true
+        },
+        {
+          "text": "模拟受影响设备装好 v1.2 修复版",
+          "disabled": false
+        },
+        {
+          "text": "重置演示",
+          "disabled": false
+        }
+      ]
+    },
+    {
+      "label": "six actually repaired",
+      "result": "14 台仍是 v1.0；0 台为有缺陷的 v1.1；6 台装好 v1.2 修复版。",
+      "explanation": "本例中 6 台已实际装好修复版；暂停操作本身没有修复它们。v1.1 仍停止发布，其他设备维持原版本。",
+      "old": 14,
+      "bad": 0,
+      "fixed": 6,
+      "buttons": [
+        {
+          "text": "模拟下一台装上 v1.1",
+          "disabled": true
+        },
+        {
+          "text": "暂停 v1.1 发布",
+          "disabled": true
+        },
+        {
+          "text": "模拟受影响设备装好 v1.2 修复版",
+          "disabled": true
+        },
+        {
+          "text": "重置演示",
+          "disabled": false
+        }
+      ]
+    },
+    {
+      "label": "reset",
+      "result": "16 台仍是 v1.0；4 台为有缺陷的 v1.1；0 台装好 v1.2 修复版。",
+      "explanation": "v1.1 仍在发布。本例再模拟一台安装，有缺陷版本的设备数会从 4 台增加到 5 台。",
+      "old": 16,
+      "bad": 4,
+      "fixed": 0,
+      "buttons": [
+        {
+          "text": "模拟下一台装上 v1.1",
+          "disabled": false
+        },
+        {
+          "text": "暂停 v1.1 发布",
+          "disabled": false
+        },
+        {
+          "text": "模拟受影响设备装好 v1.2 修复版",
+          "disabled": true
+        },
+        {
+          "text": "重置演示",
+          "disabled": false
+        }
+      ]
+    },
+    {
+      "label": "all 20 installed",
+      "result": "0 台仍是 v1.0；20 台为有缺陷的 v1.1；0 台装好 v1.2 修复版。",
+      "explanation": "20 台都已装上有问题的版本。现在暂停不会撤回这些安装，仍需提供修复并确认安装结果。",
+      "old": 0,
+      "bad": 20,
+      "fixed": 0,
+      "buttons": [
+        {
+          "text": "模拟下一台装上 v1.1",
+          "disabled": true
+        },
+        {
+          "text": "暂停 v1.1 发布",
+          "disabled": false
+        },
+        {
+          "text": "模拟受影响设备装好 v1.2 修复版",
+          "disabled": true
+        },
+        {
+          "text": "重置演示",
+          "disabled": false
+        }
+      ]
+    },
+    {
+      "label": "halt at 20",
+      "result": "0 台仍是 v1.0；20 台为有缺陷的 v1.1；0 台装好 v1.2 修复版。",
+      "explanation": "v1.1 已暂停，但 20 台仍保留有问题的版本；没有自动退回 v1.0。下一步是修复并确认这些设备实际安装。",
+      "old": 0,
+      "bad": 20,
+      "fixed": 0,
+      "buttons": [
+        {
+          "text": "模拟下一台装上 v1.1",
+          "disabled": true
+        },
+        {
+          "text": "暂停 v1.1 发布",
+          "disabled": true
+        },
+        {
+          "text": "模拟受影响设备装好 v1.2 修复版",
+          "disabled": false
+        },
+        {
+          "text": "重置演示",
+          "disabled": false
+        }
+      ]
+    },
+    {
+      "label": "all 20 repaired",
+      "result": "0 台仍是 v1.0；0 台为有缺陷的 v1.1；20 台装好 v1.2 修复版。",
+      "explanation": "本例中 20 台已实际装好修复版；暂停操作本身没有修复它们。v1.1 仍停止发布，其他设备维持原版本。",
+      "old": 0,
+      "bad": 0,
+      "fixed": 20,
+      "buttons": [
+        {
+          "text": "模拟下一台装上 v1.1",
+          "disabled": true
+        },
+        {
+          "text": "暂停 v1.1 发布",
+          "disabled": true
+        },
+        {
+          "text": "模拟受影响设备装好 v1.2 修复版",
+          "disabled": true
+        },
+        {
+          "text": "重置演示",
+          "disabled": false
+        }
+      ]
+    },
+    {
+      "label": "final reset",
+      "result": "16 台仍是 v1.0；4 台为有缺陷的 v1.1；0 台装好 v1.2 修复版。",
+      "explanation": "v1.1 仍在发布。本例再模拟一台安装，有缺陷版本的设备数会从 4 台增加到 5 台。",
+      "old": 16,
+      "bad": 4,
+      "fixed": 0,
+      "buttons": [
+        {
+          "text": "模拟下一台装上 v1.1",
+          "disabled": false
+        },
+        {
+          "text": "暂停 v1.1 发布",
+          "disabled": false
+        },
+        {
+          "text": "模拟受影响设备装好 v1.2 修复版",
+          "disabled": true
+        },
+        {
+          "text": "重置演示",
+          "disabled": false
+        }
+      ]
+    }
+  ]
+}

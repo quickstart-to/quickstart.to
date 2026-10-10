@@ -1,0 +1,55 @@
+.pay-media { container-type: inline-size; margin: 2rem 0; color: var(--fg); font-size: .94rem; line-height: 1.7; }
+.pay-media h3 { margin: 0 0 1rem; font-size: 1.15rem; line-height: 1.5; }
+.pay-media p { margin: .8rem 0; }
+.pay-media .pay-kicker { margin: 0 0 .5rem; color: var(--fg-muted); font-size: .78rem; }
+.pay-media :is(figcaption, .pay-caption) { margin: 1rem 0 0; color: var(--fg-muted); font-size: .84rem; }
+.pay-media [hidden] { display: none !important; }
+.pay-media .pay-root { text-align: center; padding: .7rem; margin: 0; border: 1px solid var(--border); border-radius: .4rem; background: var(--bg-soft); font-weight: 650; }
+.pay-branches { list-style: none; padding: 1.7rem 0 0 1rem; margin: 0 0 0 1rem; border-left: 1px solid var(--accent); display: grid; gap: 1rem; }
+.pay-branches li { position: relative; margin: 0; padding: 1rem; border: 1px solid var(--border); border-radius: .4rem; }
+.pay-branches li::before { content: '→'; position: absolute; left: -1.1rem; top: .6rem; color: var(--accent); }
+.pay-branches :is(strong, span, small) { display: block; }
+.pay-branches small { margin-top: .5rem; color: var(--fg-muted); font-size: .8rem; }
+.pay-arrow { color: var(--accent); }
+.pay-flow-list { display: grid; gap: 1.6rem; list-style: none; padding: 0; margin: 0; }
+.pay-flow-list > li { position: relative; margin: 0; padding: 1rem; border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: .4rem; }
+.pay-flow-list > li + li::before { content: '↓'; position: absolute; top: -1.6rem; left: 50%; color: var(--accent); }
+.pay-flow-list > li > span { display: block; color: var(--fg-muted); margin-top: .25rem; }
+.pay-flow-list aside { border-top: 1px dashed var(--border); margin-top: .7rem; padding-top: .6rem; font-size: .84rem; }
+.pay-media .pay-sidepath { padding: 1rem; background: var(--bg-soft); border: 1px dashed var(--border); border-radius: .4rem; margin-top: 1.2rem; }
+.pay-replay { border: 1px solid var(--border); border-radius: .6rem; background: var(--bg-soft); padding: 1.2rem; }
+.pay-replay fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
+.pay-replay legend { margin-bottom: .6rem; font-size: .85rem; }
+.pay-buttons { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .6rem; }
+.pay-replay button { font: inherit; font-size: .88rem; line-height: 1.5; min-height: 44px; padding: .6rem .7rem; color: var(--fg); background: var(--bg); border: 1px solid var(--border); border-radius: .4rem; cursor: pointer; }
+.pay-replay button:disabled { opacity: .55; cursor: default; }
+.pay-replay button:not(:disabled):hover { border-color: var(--accent); }
+.pay-replay button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.pay-state { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin: 1rem 0; gap: .7rem; }
+.pay-state > div { min-width: 0; padding: .7rem; background: var(--bg); border: 1px solid var(--border); border-radius: .3rem; }
+.pay-state dt { color: var(--fg-muted); font-size: .78rem; }
+.pay-state dd { margin: .35rem 0 0; font-weight: 650; font-size: .94rem; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.pay-expiry { grid-column: 1 / -1; }
+.pay-replay .pay-result { padding: .8rem; border-left: 3px solid var(--accent); background: var(--bg); }
+.pay-details { border: 1px solid var(--border); padding: 1rem; border-radius: .4rem; }
+.pay-details summary { font-weight: 650; cursor: pointer; }
+.pay-details[open] summary { margin-bottom: 1rem; }
+.pay-details h3 { margin-top: 1.5rem; }
+.pay-comparison { container-type: inline-size; }
+@container (max-width: 500px) {
+  .pay-comparison table, .pay-comparison tbody, .pay-comparison tr, .pay-comparison td { display: block; }
+  .pay-comparison thead { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); }
+  .pay-comparison tr { margin-bottom: 1rem; border: 1px solid var(--border); border-radius: .4rem; overflow: hidden; }
+  .pay-comparison td { border: 0; padding: .75rem; }
+  .pay-comparison td:first-child { background: var(--bg-soft); font-weight: 650; font-size: 1rem; }
+  .pay-comparison td:nth-child(n+2)::before { display: block; margin-bottom: .3rem; color: var(--fg-muted); font-weight: 650; }
+  .pay-comparison td:nth-child(2)::before { content: '本例为什么考虑它'; }
+  .pay-comparison td:nth-child(3)::before { content: '什么会使我改变选择'; }
+}
+@container (min-width: 560px) {
+  .pay-branches { grid-template-columns: repeat(3, minmax(0, 1fr)); border-left: 0; border-top: 1px solid var(--accent); margin: 1.4rem 0 0; padding: 1.4rem 0 0; gap: .7rem; position: relative; }
+  .pay-branches::before { content: ''; position: absolute; width: 1px; height: 1.4rem; top: -1.4rem; left: 50%; background: var(--accent); }
+  .pay-branches li::before { content: '↓'; top: -1.5rem; left: 50%; }
+  .pay-branches li { padding: .8rem; }
+  .pay-buttons { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}

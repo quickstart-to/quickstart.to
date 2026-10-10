@@ -1,0 +1,51 @@
+.measurement-media { margin: 2rem 0; line-height: 1.8; container-type: inline-size; }
+.measurement-media h3 { font-size: 1.15rem; line-height: 1.5; margin: 0 0 1rem; }
+.measurement-media p { margin: .8rem 0; }
+.measurement-caption, .measurement-media figcaption { color: var(--fg-muted); font-size: .85rem; }
+.measurement-node { border: 1px solid var(--border); border-radius: .4rem; background: var(--bg-soft); padding: 1rem; }
+.measurement-node :is(b,span) { display: block; }
+.measurement-node span { margin-top: .4rem; font-size: .9rem; }
+.measurement-arrow { text-align: center; color: var(--accent); padding: .4rem; font-size: .85rem; }
+.measurement-fork { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1rem 0; }
+.measurement-fork > div { border-left: 2px solid var(--accent); padding: .5rem 1rem; background: var(--bg-soft); }
+.measurement-lab { border: 1px solid var(--border); border-radius: .5rem; padding: 1.25rem; background: var(--bg-soft); }
+.measurement-lab form { margin: 1rem 0; }
+.measurement-lab label { display: block; margin: 1rem 0; }
+.measurement-lab :is(select,button) { font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--border); border-radius: .3rem; padding: .5rem .7rem; min-height: 44px; }
+.measurement-lab select { display: block; width: 100%; margin-top: .4rem; }
+.measurement-lab button { cursor: pointer; }
+.measurement-lab [role='status'] { border-left: 3px solid var(--accent); padding: .6rem 1rem; background: var(--bg); }
+.measurement-media summary { cursor: pointer; min-height: 44px; padding: .7rem 0; font-weight: 600; }
+.measurement-media :is(button,select,summary):focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.measurement-bar { border: 1px solid var(--border); border-radius: .25rem; padding: .7rem; font-size: .88rem; background: linear-gradient(to right, color-mix(in srgb, var(--accent) 20%, transparent) var(--portion), var(--bg) var(--portion)); }
+.measurement-log table { width: 100%; table-layout: fixed; font-size: .86rem; }
+.measurement-log :is(td,th) { overflow-wrap: anywhere; }
+.measurement-log td:first-child { font-variant-numeric: tabular-nums; }
+.measurement-log th:first-child { width: 6rem; }
+@container (max-width: 540px) {
+ .measurement-fork { grid-template-columns: 1fr; }
+ .measurement-log table, .measurement-log tbody, .measurement-log tr, .measurement-log td { display: block; }
+ .measurement-log thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+ .measurement-log tr { border-bottom: 1px solid var(--border); padding: .6rem 0; }
+ .measurement-log td { border: 0; padding: .2rem 0; }
+ .measurement-log td:first-child { font-weight: 650; }
+ .measurement-log td:last-child::before { content: '报表处理：'; color: var(--fg-muted); }
+}
+
+.measurement-dictionary th:first-child { width: 11rem; }
+@container (max-width: 540px) { .measurement-dictionary td:last-child::before { content: '不能据此判断：'; } }
+
+.measurement-tasks { display: grid; grid-template-columns: repeat(3,1fr); gap: .6rem; margin: 1.4rem 0 .6rem; }
+.measurement-tasks > div { border: 1px solid var(--border); border-top: 3px solid var(--fg-muted); background: var(--bg); padding: .7rem; border-radius: .25rem; }
+.measurement-tasks b { display: block; font-size: 1.1rem; }
+.measurement-tasks span { font-size: .8rem; }
+.measurement-tasks [data-state='ready'] { border-top-color: #527481; background: color-mix(in srgb, #527481 9%, var(--bg)); }
+.measurement-tasks [data-state='blocked'] { border-top-color: #a04637; }
+@container (max-width: 400px) { .measurement-tasks { grid-template-columns: repeat(2,1fr); } }
+.measurement-fork { padding-top: 1rem; }
+.measurement-fork > div { position: relative; }
+.measurement-fork > div::before { content: '↓'; position: absolute; top: -1.8rem; left: 50%; color: var(--accent); }
+@container (max-width: 540px) {
+ .measurement-fork { border-left: 1px solid var(--accent); padding: 0 0 0 1rem; margin-left: .3rem; }
+ .measurement-fork > div::before { content: '→'; left: -1.1rem; top: .5rem; }
+}

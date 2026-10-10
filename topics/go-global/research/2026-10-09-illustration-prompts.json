@@ -1,0 +1,113 @@
+{
+  "date": "2026-10-09",
+  "tool": "built-in image_gen",
+  "transparentBackground": false,
+  "assets": [
+    {
+      "asset": "../assets/listen-build-learn-v2.png",
+      "mode": "built-in image_gen; style-transfer; opaque",
+      "inputs": [
+        {
+          "path": "../assets/listen-build-learn-v1.png",
+          "role": "original illustration; preserve explanatory purpose, redesign appearance"
+        }
+      ],
+      "prompt": "Use case: style-transfer.\nAsset type: lead editorial illustration in a practical field guide for independent software makers.\nInput image 1 is the current illustration to redesign. Preserve its IDEA: a maker listens to a remote user's actual work before designing a tool. Completely replace its sepia painterly visual language and recompose it.\nCreate a sophisticated contemporary 2D editorial illustration, landscape 16:9. Clean ivory-white field, generous negative space, precise dark charcoal contours, flat restrained terracotta and muted slate-blue color areas. Minimal almost invisible print texture only within some color shapes. Adult proportions, natural understated expressions, selective detail, not cute cartoons. Crisp shapes should read at 390px wide.\nScene: one seated maker in simple side profile at a very minimal workstation, pausing with a pencil to listen. The large screen shows a remote collaborator demonstrating one concrete work document, pointing to a problematic section. Only one small annotated draft beside the maker. Make the act of listening and the two people's eye lines the center of the composition. Keep the illustration open and airy, with strong hierarchy and a purposeful asymmetric composition. Do not fill every corner.\nRemove plants, coffee mugs, bookshelves, knit textures, woodgrain, busy walls, piles of generic paper and cinematic lighting. No photorealism, anime, watercolor wash, heavy paper grain, gradients, 3D clay, oversized limbs, generic corporate stock characters, globes, rockets, flags or money symbols. No legible text, fake handwriting, brands, logos or watermark. Screen/document contents are sparse abstract lines, not a real interface or data evidence. This is a conceptual editorial scene, not a screenshot."
+    },
+    {
+      "asset": "../assets/switching-workflow-v2.png",
+      "mode": "built-in image_gen; style-transfer; opaque",
+      "inputs": [
+        {
+          "path": "../assets/switching-workflow-v1.png",
+          "role": "original illustration; preserve explanatory purpose, redesign appearance"
+        },
+        {
+          "path": "../assets/listen-build-learn-v2.png",
+          "role": "series style reference"
+        }
+      ],
+      "prompt": "Use case: style-transfer. Asset type: editorial illustration for a practical digital-product field guide, landscape 16:9.\nInput image 1 is the old illustration: preserve the specified underlying idea, not its composition or detailed objects. Input image 2 is the new SERIES STYLE reference only: match its clean ivory-white background, crisp charcoal contours, restrained terracotta and muted slate-blue flat colors, selective detail and very light print texture. Recompose this image from scratch so the series is not seven versions of the same desktop.\nModern, grown-up, clean 2D editorial illustration; natural proportions for any hands; strong single focal action; simple readable silhouettes and generous breathing room at a 390px-wide display. No sepia wash, busy room, plants, coffee, woodgrain, heavy grain, fake handwriting, tiny UI text, real brands, watermark, globes, rockets, glossy 3D, or decorative clutter. No legible words or numbers. Make this conceptual artwork, never a fabricated screenshot or evidence.\nSCENE / IDEA: Changing tools also means moving context and rechecking it. Make a clean overhead close-up of one opened, modestly annotated notebook at left and one sparse tablet document at right. A single pair of hands in the central gap lifts one clearly recognizable note card from the notebook and compares it with the corresponding empty outlined slot on the tablet. A second small annotation still attached to the notebook hints at context that cannot simply be copied. Use a few broad abstract marks only. Emphasize the careful comparison across the gap, not a magical frictionless arrow. The plain white background occupies substantial space; no full person, room or computer keyboard."
+    },
+    {
+      "asset": "../assets/compare-work-samples-v2.png",
+      "mode": "built-in image_gen; style-transfer; opaque",
+      "inputs": [
+        {
+          "path": "../assets/compare-work-samples-v1.png",
+          "role": "original illustration; preserve explanatory purpose, redesign appearance"
+        },
+        {
+          "path": "../assets/listen-build-learn-v2.png",
+          "role": "series style reference"
+        }
+      ],
+      "prompt": "Use case: style-transfer. Asset type: editorial illustration for a practical digital-product field guide, landscape 16:9.\nInput image 1 is the old illustration: preserve the specified underlying idea, not its composition or detailed objects. Input image 2 is the new SERIES STYLE reference only: match its clean ivory-white background, crisp charcoal contours, restrained terracotta and muted slate-blue flat colors, selective detail and very light print texture. Recompose this image from scratch so the series is not seven versions of the same desktop.\nModern, grown-up, clean 2D editorial illustration; natural proportions for any hands; strong single focal action; simple readable silhouettes and generous breathing room at a 390px-wide display. No sepia wash, busy room, plants, coffee, woodgrain, heavy grain, fake handwriting, tiny UI text, real brands, watermark, globes, rockets, glossy 3D, or decorative clutter. No legible words or numbers. Make this conceptual artwork, never a fabricated screenshot or evidence.\nSCENE / IDEA: Similar-looking software screens serve different jobs. Create an almost top-down composition of THREE generously spaced work samples on a clean ivory field: a timesheet with a small simple clock symbol and a large sparse grid; a client progress update with a simple page thumbnail and two oversized annotation marks; a campaign analysis sheet with three simple bars and one trend curve. An understated hand with pencil hovers thoughtfully BETWEEN the samples, not a checkmark selecting a winner. Each of the three samples must have a different recognizable silhouette/structure, minimal abstract marks. Keep the complete comparison readable at phone width. No laptop, desk edge, coffee or other prop."
+    },
+    {
+      "asset": "../assets/show-the-work-v2.png",
+      "mode": "built-in image_gen; style-transfer; opaque",
+      "inputs": [
+        {
+          "path": "../assets/show-the-work-v1.png",
+          "role": "original illustration; preserve explanatory purpose, redesign appearance"
+        },
+        {
+          "path": "../assets/listen-build-learn-v2.png",
+          "role": "series style reference"
+        }
+      ],
+      "prompt": "Use case: style-transfer. Asset type: editorial illustration for a practical digital-product field guide, landscape 16:9.\nInput image 1 is the old illustration: preserve the specified underlying idea, not its composition or detailed objects. Input image 2 is the new SERIES STYLE reference only: match its clean ivory-white background, crisp charcoal contours, restrained terracotta and muted slate-blue flat colors, selective detail and very light print texture. Recompose this image from scratch so the series is not seven versions of the same desktop.\nModern, grown-up, clean 2D editorial illustration; natural proportions for any hands; strong single focal action; simple readable silhouettes and generous breathing room at a 390px-wide display. No sepia wash, busy room, plants, coffee, woodgrain, heavy grain, fake handwriting, tiny UI text, real brands, watermark, globes, rockets, glossy 3D, or decorative clutter. No legible words or numbers. Make this conceptual artwork, never a fabricated screenshot or evidence.\nSCENE / IDEA: A useful first contact is a discussion of a concrete result. Two adult colleagues facing each other across a minimal white surface, waist-up at a slight three-quarter angle. One offers a single clean client-update sheet; the other leans in and points with a pencil at ONE particular line to ask for clarification. A small cluster of three rough task-note cards lies beside the finished sheet as the input. Focus the eye on the shared sheet and the pointing gesture, with natural understated expressions. Contemporary ordinary clothing in terracotta and slate blue. No room furnishings, laptop, busy background or duplicate documents. This is a conversation, not a sales celebration."
+    },
+    {
+      "asset": "../assets/recover-the-missing-work-v2.png",
+      "mode": "built-in image_gen; style-transfer; opaque",
+      "inputs": [
+        {
+          "path": "../assets/recover-the-missing-work-v1.png",
+          "role": "original illustration; preserve explanatory purpose, redesign appearance"
+        },
+        {
+          "path": "../assets/listen-build-learn-v2.png",
+          "role": "series style reference"
+        }
+      ],
+      "prompt": "Use case: style-transfer. Asset type: editorial illustration for a practical digital-product field guide, landscape 16:9.\nInput image 1 is the old illustration: preserve the specified underlying idea, not its composition or detailed objects. Input image 2 is the new SERIES STYLE reference only: match its clean ivory-white background, crisp charcoal contours, restrained terracotta and muted slate-blue flat colors, selective detail and very light print texture. Recompose this image from scratch so the series is not seven versions of the same desktop.\nModern, grown-up, clean 2D editorial illustration; natural proportions for any hands; strong single focal action; simple readable silhouettes and generous breathing room at a 390px-wide display. No sepia wash, busy room, plants, coffee, woodgrain, heavy grain, fake handwriting, tiny UI text, real brands, watermark, globes, rockets, glossy 3D, or decorative clutter. No legible words or numbers. Make this conceptual artwork, never a fabricated screenshot or evidence.\nSCENE / IDEA: Restoring an older readable backup is not the same as recovering the latest work. Use a clean, near-overhead still-life, no full person: two small sets of work sheets separated by a broad gap. The current set has TWO pale sheets and ONE distinctive terracotta sheet. The archive folder on the other side is open and holds just the TWO pale matching sheets; beside that restored pair is a clear empty outlined space where the terracotta sheet would belong. A subtle pencil in one hand points at that absence. Give the terracotta sheet one bold unique abstract mark that makes the missing recent work immediately identifiable, without any dates, numbers or labels. Make all sheets large and easily counted, no tall stacks, no room or laptop. The visual focus is the difference between the two sets, not file storage hardware."
+    },
+    {
+      "asset": "../assets/choose-less-data-v2.png",
+      "mode": "built-in image_gen; style-transfer; opaque",
+      "inputs": [
+        {
+          "path": "../assets/choose-less-data-v1.png",
+          "role": "original illustration; preserve explanatory purpose, redesign appearance"
+        },
+        {
+          "path": "../assets/listen-build-learn-v2.png",
+          "role": "series style reference"
+        }
+      ],
+      "prompt": "Use case: style-transfer. Asset type: editorial illustration for a practical digital-product field guide, landscape 16:9.\nInput image 1 is the old illustration: preserve the specified underlying idea, not its composition or detailed objects. Input image 2 is the new SERIES STYLE reference only: match its clean ivory-white background, crisp charcoal contours, restrained terracotta and muted slate-blue flat colors, selective detail and very light print texture. Recompose this image from scratch so the series is not seven versions of the same desktop.\nModern, grown-up, clean 2D editorial illustration; natural proportions for any hands; strong single focal action; simple readable silhouettes and generous breathing room at a 390px-wide display. No sepia wash, busy room, plants, coffee, woodgrain, heavy grain, fake handwriting, tiny UI text, real brands, watermark, globes, rockets, glossy 3D, or decorative clutter. No legible words or numbers. Make this conceptual artwork, never a fabricated screenshot or evidence.\nSCENE / IDEA: Choose the minimum information that must leave the user's workspace. A visual metaphor, near-overhead still life. A large open slate-blue document folder securely resting on a clean ivory field contains several full-size work sheets with sparse abstract content. In the foreground one carefully drawn hand lifts only ONE much smaller terracotta information card away from that folder into an otherwise empty neutral out-tray. The many original sheets remain visibly in the source folder. A thin simple line on the surface separates the retained originals from the small outgoing card, without arrows or labels. Emphasize the scale contrast between the full documents and the small selected piece. No face, computer, coffee, plant, padlock, shield or decorative room. Do not imply that an entire client report is being uploaded."
+    },
+    {
+      "asset": "../assets/build-deliver-reconcile-v2.png",
+      "mode": "built-in image_gen; style-transfer; opaque",
+      "inputs": [
+        {
+          "path": "../assets/build-deliver-reconcile-v1.png",
+          "role": "original illustration; preserve explanatory purpose, redesign appearance"
+        },
+        {
+          "path": "../assets/listen-build-learn-v2.png",
+          "role": "series style reference"
+        }
+      ],
+      "prompt": "Use case: style-transfer. Asset type: editorial illustration for a practical digital-product field guide, landscape 16:9.\nInput image 1 is the old illustration: preserve the specified underlying idea, not its composition or detailed objects. Input image 2 is the new SERIES STYLE reference only: match its clean ivory-white background, crisp charcoal contours, restrained terracotta and muted slate-blue flat colors, selective detail and very light print texture. Recompose this image from scratch so the series is not seven versions of the same desktop.\nModern, grown-up, clean 2D editorial illustration; natural proportions for any hands; strong single focal action; simple readable silhouettes and generous breathing room at a 390px-wide display. No sepia wash, busy room, plants, coffee, woodgrain, heavy grain, fake handwriting, tiny UI text, real brands, watermark, globes, rockets, glossy 3D, or decorative clutter. No legible words or numbers. Make this conceptual artwork, never a fabricated screenshot or evidence.\nSCENE / IDEA: Delivering the work, the customer's payment, and the maker's received funds are separate things to check. Create three compact editorial vignettes arranged with generous white space across the canvas. First: a hand offers a finished digital-report sheet outward from a small understated screen. Second: a simple unbranded payment card beside one minimal order slip, no numbers or checkmark. Third: a hand carefully compares a small settlement slip with one open ledger containing a sparse grid. Keep each vignette to two or three large forms and avoid any connecting arrows: this is a conceptual scene, not an exact payment architecture. No full people, no overlapping or disembodied extra hands, no cash, coins, currency symbols, logos, fake receipts with readable details, plants, desk clutter or giant workstation. Make the three kinds of record visually different and readable as silhouettes at phone width.",
+      "refinement": {
+        "mode": "built-in image_gen; precise-object-edit",
+        "input": "first generated v2 draft, discarded from publication",
+        "prompt": "Use case: precise-object-edit.\nImage 1 is the payment editorial illustration to refine. Keep its clean ivory background, charcoal contours, restrained slate-blue and terracotta palette, light print texture and three-vignette concept. Keep landscape 16:9.\nCorrect the over-literal first scene: remove the person and the arm emerging from the laptop completely. Instead show a compact tablet with a simple abstract report on its screen, and a matching exported report sheet resting in front of it. In the middle vignette remove the floating hand: place the plain payment card naturally beside the order slip. Keep the third vignette as a settlement slip being compared with a sparse ledger; only ONE ordinary hand may enter from the bottom canvas edge and point at the ledger, with the slip resting on the ledger rather than held by another severed arm.\nEnlarge and balance the three groups to use the central vertical area well, with roughly 12 percent top and bottom margins; avoid a huge empty top half. Give each vignette a minimal common baseline shadow and comfortable white separation. No connecting arrows, faces, flying arms, extra fingers, legible text, currency amounts, logos, brand marks, success badges or new decorative props. This is a conceptual comparison of delivery, customer payment and settlement records, not transaction evidence."
+      }
+    }
+  ]
+}

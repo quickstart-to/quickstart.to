@@ -1,0 +1,103 @@
+{
+  "date": "2026-10-10",
+  "surface": "local Ego TaskSpace 80",
+  "results": [
+    {
+      "settlement": "later",
+      "support": "0",
+      "cash": "292 美元",
+      "time": "−379 美元",
+      "label": "按 48 小时计入时间估值后",
+      "pass": true
+    },
+    {
+      "settlement": "later",
+      "support": "6",
+      "cash": "292 美元",
+      "time": "−487 美元",
+      "label": "按 54 小时计入时间估值后",
+      "pass": true
+    },
+    {
+      "settlement": "later",
+      "support": "12",
+      "cash": "292 美元",
+      "time": "−595 美元",
+      "label": "按 60 小时计入时间估值后",
+      "pass": true
+    },
+    {
+      "settlement": "later",
+      "support": "24",
+      "cash": "292 美元",
+      "time": "−811 美元",
+      "label": "按 72 小时计入时间估值后",
+      "pass": true
+    },
+    {
+      "settlement": "now",
+      "support": "0",
+      "cash": "452 美元",
+      "time": "−379 美元",
+      "label": "按 48 小时计入时间估值后",
+      "pass": true
+    },
+    {
+      "settlement": "now",
+      "support": "6",
+      "cash": "452 美元",
+      "time": "−487 美元",
+      "label": "按 54 小时计入时间估值后",
+      "pass": true
+    },
+    {
+      "settlement": "now",
+      "support": "12",
+      "cash": "452 美元",
+      "time": "−595 美元",
+      "label": "按 60 小时计入时间估值后",
+      "pass": true
+    },
+    {
+      "settlement": "now",
+      "support": "24",
+      "cash": "452 美元",
+      "time": "−811 美元",
+      "label": "按 72 小时计入时间估值后",
+      "pass": true
+    }
+  ],
+  "reset": {
+    "cash": "292 美元",
+    "time": "−595 美元",
+    "label": "按 60 小时计入时间估值后"
+  },
+  "keyboard": {
+    "tabSupport": "review-support",
+    "tabReset": true,
+    "focusReset": "review-settlement",
+    "pass": true,
+    "nativeSelectArrows": "Trusted Arrow/Enter events delivered, but native chooser did not change selection through Ego. Not confirmed; selectOption changes, Tab order and keyboard reset verified."
+  },
+  "media": {
+    "width": 390,
+    "overflow": false,
+    "dark": true,
+    "reduced": true,
+    "animation": "none"
+  },
+  "narrow": {
+    "width": 320,
+    "scrollWidth": 305,
+    "overflow": false
+  },
+  "noScript": {
+    "disabled": true,
+    "resetHidden": true,
+    "cash": "292 美元",
+    "time": "−595 美元",
+    "notice": "The report tool will close on 10 December",
+    "rows": 4,
+    "detailsOpened": true
+  }
+}

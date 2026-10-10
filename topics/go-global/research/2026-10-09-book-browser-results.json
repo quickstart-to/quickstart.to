@@ -1,0 +1,646 @@
+{
+  "scope": "Final local static rendering and cross-chapter audit, not a new reading of every external source or a production test",
+  "browserPages": [
+    {
+      "slug": "quickstart",
+      "desktop": {
+        "title": "快速入门：从一个海外用户的真实问题开始",
+        "overflow": false,
+        "images": [
+          {
+            "src": "/_astro/listen-build-learn-v4.Vp2deiZd_1FEw8r.webp",
+            "width": 1672,
+            "alt": "开发者在视频交流中停笔倾听，对方指出报告上的一处问题，笔记本中留下对应标记。"
+          },
+          {
+            "src": "/_astro/switching-workflow-v4.CpeP6RkZ_Z1CGlLy.webp",
+            "width": 1672,
+            "alt": "一张工作记录移向新笔记本，红线仍连着旧本中的多处资料，表现迁移时不能丢下的上下文。"
+          }
+        ],
+        "citations": 6,
+        "rawMarkdown": false,
+        "initialIframes": 0,
+        "headings": [
+          "从你能理解、也能接触的人开始",
+          "先看旧办法为什么还能用",
+          "让一个小结果进入真实工作",
+          "沿着产品的使用方式去找用户",
+          "试用之后，再看它留下了什么",
+          "给下一轮投入一个具体理由",
+          "来源",
+          "内容与更新说明"
+        ]
+      },
+      "mobile": {
+        "overflow": false,
+        "articleWidth": 343,
+        "smallestBodyFont": 12.8
+      }
+    },
+    {
+      "slug": "validate-idea",
+      "desktop": {
+        "title": "选品与验证：怎样决定先做哪一个",
+        "overflow": false,
+        "images": [
+          {
+            "src": "/_astro/compare-work-samples-v4.CXf0TJf-_Zo1DdO.webp",
+            "width": 1672,
+            "alt": "俯视三类工作材料：秒表旁的工时表、带批注的网站项目样稿，以及覆盖描图纸的分析图表。"
+          }
+        ],
+        "citations": 7,
+        "rawMarkdown": false,
+        "initialIframes": 0,
+        "headings": [
+          "机会往往藏在一段反复发生的工作里",
+          "先走一遍现有办法，再寻找空缺",
+          "三个候选，为什么只优先调查其中一个",
+          "“生成很快”，为什么整件事可能更慢",
+          "有人愿意付钱，也要看他准备改变什么",
+          "把选择落实到下一段工作",
+          "来源",
+          "内容与更新说明"
+        ]
+      },
+      "mobile": {
+        "overflow": false,
+        "articleWidth": 343,
+        "smallestBodyFont": 12.48
+      }
+    },
+    {
+      "slug": "market-fit",
+      "desktop": {
+        "title": "市场与适配：选择一群自己能服务的人",
+        "overflow": false,
+        "images": [],
+        "citations": 6,
+        "rawMarkdown": false,
+        "initialIframes": 0,
+        "headings": [
+          "先看已经发生的使用，再决定扩到哪里",
+          "把市场切入点写成一组服务条件",
+          "沿一份真实交付检查语言，不只检查词表",
+          "同一份输入，为什么会得到不同的日期",
+          "一份最小适配包，可以怎样交出去",
+          "扩语言之前，先追踪哪里仍要你代劳",
+          "来源",
+          "内容与更新说明"
+        ]
+      },
+      "mobile": {
+        "overflow": false,
+        "articleWidth": 343,
+        "smallestBodyFont": 13.44
+      }
+    },
+    {
+      "slug": "launch",
+      "desktop": {
+        "title": "冷启动获客：让第一次接触走向真实使用",
+        "overflow": false,
+        "images": [
+          {
+            "src": "/_astro/show-the-work-v4.CEHen35-_ZjQfaH.webp",
+            "width": 1672,
+            "alt": "一人递出客户更新样稿，另一人用笔圈出需要解释的部分，旁边留着可以对照的原始材料。"
+          }
+        ],
+        "citations": 12,
+        "rawMarkdown": false,
+        "initialIframes": 0,
+        "headings": [
+          "公开发布之前，先让几个人走通",
+          "先找到工作发生的地方",
+          "写一条让人能作决定的邀请",
+          "有回复以后，把帮助和结果分开记",
+          "同一批数字，为什么会得出不同结论",
+          "把一次交流，变成以后仍然有用的入口",
+          "来源",
+          "内容与更新说明"
+        ]
+      },
+      "mobile": {
+        "overflow": false,
+        "articleWidth": 343,
+        "smallestBodyFont": 12.48
+      }
+    },
+    {
+      "slug": "infrastructure",
+      "desktop": {
+        "title": "基础设施：让用户用得上，出问题能恢复",
+        "overflow": false,
+        "images": [
+          {
+            "src": "/_astro/recover-the-missing-work-v4.DeEFoE46_Z2ceFoo.webp",
+            "width": 1672,
+            "alt": "两座建筑模型作对照：左边多了一间红色附屋，右边仍只有原来的建筑，比喻旧副本缺少后来新增的工作。"
+          }
+        ],
+        "citations": 11,
+        "rawMarkdown": false,
+        "initialIframes": 0,
+        "headings": [
+          "先决定，哪些东西现在就需要存在",
+          "页面很快，为什么生成结果仍然很慢",
+          "邮件已经发了，用户为什么还进不来",
+          "恢复旧版本，和找回用户的工作，是两回事",
+          "把恢复入口留在故障之外",
+          "来源",
+          "内容与更新说明"
+        ]
+      },
+      "mobile": {
+        "overflow": false,
+        "articleWidth": 343,
+        "smallestBodyFont": 12.48
+      }
+    },
+    {
+      "slug": "retention",
+      "desktop": {
+        "title": "持续使用与迭代：下一轮到底该改什么",
+        "overflow": false,
+        "images": [],
+        "citations": 5,
+        "rawMarkdown": false,
+        "initialIframes": 0,
+        "headings": [
+          "人没有回来，任务回来了吗",
+          "反馈要分组，不能只留下满意的人",
+          "有时该补的是基本功",
+          "两个晚上的工作，怎样选出来",
+          "改完之后，怎样再去问",
+          "来源",
+          "内容与更新说明"
+        ]
+      },
+      "mobile": {
+        "overflow": false,
+        "articleWidth": 343,
+        "smallestBodyFont": 12.8
+      }
+    },
+    {
+      "slug": "pricing",
+      "desktop": {
+        "title": "定价与订阅：写一份自己能兑现的报价",
+        "overflow": false,
+        "images": [],
+        "citations": 7,
+        "rawMarkdown": false,
+        "initialIframes": 0,
+        "headings": [
+          "先看谁为哪一段工作付钱",
+          "第一笔付款，和持续价值，还隔着一次回访",
+          "把这份英语报价真正写出来",
+          "20 美元，能不能撑住你答应的服务",
+          "如果后来增加订阅，重做这张权益时间线",
+          "改价格之前，先找出旧报价哪里不成立",
+          "来源",
+          "内容与更新说明"
+        ]
+      },
+      "mobile": {
+        "overflow": false,
+        "articleWidth": 343,
+        "smallestBodyFont": 12.48
+      }
+    },
+    {
+      "slug": "payments",
+      "desktop": {
+        "title": "收款与交付：从选择平台到开通服务",
+        "overflow": false,
+        "images": [
+          {
+            "src": "/_astro/build-deliver-reconcile-v4.D3nTF2WF_JEJqr.webp",
+            "width": 1672,
+            "alt": "报告及导出副本、付款卡与订单、账本与到账记录分为三组，账本中的一行被单独标出核对。"
+          }
+        ],
+        "citations": 35,
+        "rawMarkdown": false,
+        "initialIframes": 0,
+        "headings": [
+          "从交付的东西开始选路线",
+          "先确认本人能够收款，再决定接哪一家",
+          "一笔 20 美元订单，到底花掉多少",
+          "审核的是你的生意，也包括你怎样对待买家",
+          "付款确认之后，服务才能知道该给谁什么",
+          "真正上线前，再接上平台和故障恢复",
+          "来源",
+          "内容与更新说明"
+        ]
+      },
+      "mobile": {
+        "overflow": false,
+        "articleWidth": 343,
+        "smallestBodyFont": 12.48
+      }
+    },
+    {
+      "slug": "payouts",
+      "desktop": {
+        "title": "提现与结汇：把平台余额对到本人到账",
+        "overflow": false,
+        "images": [],
+        "citations": 14,
+        "rawMarkdown": false,
+        "initialIframes": 0,
+        "headings": [
+          "先画出自己的资金路径",
+          "余额在哪个阶段，决定下一步做什么",
+          "把门槛、申请动作与出款日放在一起看",
+          "用一张表解释到账差额",
+          "交易费之外，还要算出款与换汇",
+          "收汇、结汇与申报，分别确认",
+          "钱没到，按停留阶段排查",
+          "接下来怎么用",
+          "来源",
+          "内容与更新说明"
+        ]
+      },
+      "mobile": {
+        "overflow": false,
+        "articleWidth": 343,
+        "smallestBodyFont": 13.12
+      }
+    },
+    {
+      "slug": "compliance",
+      "desktop": {
+        "title": "合规底线：先决定哪些数据不该收",
+        "overflow": false,
+        "images": [
+          {
+            "src": "/_astro/choose-less-data-v4.C_CnPhqs_Z1yDsnS.webp",
+            "width": 1672,
+            "alt": "完整工作资料留在档案盒中，只有一张小信息卡穿过窄口，比喻按用途限制传出的信息。"
+          }
+        ],
+        "citations": 12,
+        "rawMarkdown": false,
+        "initialIframes": 0,
+        "headings": [
+          "把隐私变成产品取舍，而不只是政策措辞",
+          "第一轮：接触真实数据前，把边界画出来",
+          "第二轮：让隐私说明与删除路径说同一件事",
+          "第三轮：按业务变化补上条件性工作",
+          "业务变大后，复查假设；出事时，按记录行动",
+          "来源",
+          "内容与更新说明"
+        ]
+      },
+      "mobile": {
+        "overflow": false,
+        "articleWidth": 343,
+        "smallestBodyFont": 13.12
+      }
+    },
+    {
+      "slug": "entity",
+      "desktop": {
+        "title": "身份与主体：让注册服务于真实业务",
+        "overflow": false,
+        "images": [],
+        "citations": 22,
+        "rawMarkdown": false,
+        "initialIframes": 0,
+        "headings": [
+          "先分开四个问题",
+          "什么变化值得重新评估主体",
+          "提交申请前，写好一页主体方案",
+          "美国例子：Delaware LLC 怎么推进",
+          "香港例子：本地私人股份有限公司怎么推进",
+          "用同一张清单审查服务商报价",
+          "停止产品以后，主体还没有自动结束",
+          "来源",
+          "内容与更新说明"
+        ]
+      },
+      "mobile": {
+        "overflow": false,
+        "articleWidth": 343,
+        "smallestBodyFont": 13.12
+      }
+    },
+    {
+      "slug": "tax",
+      "desktop": {
+        "title": "税务：理清业务，再准备申报",
+        "overflow": false,
+        "images": [],
+        "citations": 13,
+        "rawMarkdown": false,
+        "initialIframes": 0,
+        "headings": [
+          "先区分三层税务问题",
+          "第一步：画出谁向谁提供什么",
+          "第二步：分别确认居民身份、所得类别和来源",
+          "第三步：核对国内增值税的具体条件",
+          "第四步：把订单、结算和税务口径分开保存",
+          "第五步：按适用条款建立申报日历",
+          "第六步：境外抵免只核对符合条件的所得税",
+          "有了境外公司，再增加一层核对",
+          "带着一份完整问题去确认",
+          "来源",
+          "内容与更新说明"
+        ]
+      },
+      "mobile": {
+        "overflow": false,
+        "articleWidth": 343,
+        "smallestBodyFont": 13.12
+      }
+    },
+    {
+      "slug": "app-stores",
+      "desktop": {
+        "title": "应用商店：从手机任务到持续发布",
+        "overflow": false,
+        "images": [],
+        "citations": 19,
+        "rawMarkdown": false,
+        "initialIframes": 0,
+        "headings": [
+          "先决定是否需要商店分发",
+          "个人与组织账号先按真实身份选择",
+          "Google Play 新个人账号先安排真实测试",
+          "把测试记录变成审核材料",
+          "先判断商品和地区，再选择支付入口",
+          "更新出问题时，暂停能做什么",
+          "注册支持、商家资格和银行到账分别确认",
+          "中国境内 APP 服务另核对备案",
+          "用四个里程碑验收",
+          "来源",
+          "内容与更新说明"
+        ]
+      },
+      "mobile": {
+        "overflow": false,
+        "articleWidth": 343,
+        "smallestBodyFont": 13.12
+      }
+    },
+    {
+      "slug": "risk",
+      "desktop": {
+        "title": "风控与账户安全：恢复控制，继续服务",
+        "overflow": false,
+        "images": [],
+        "citations": 12,
+        "rawMarkdown": false,
+        "initialIframes": 0,
+        "headings": [
+          "先保护能控制其他服务的账号",
+          "怀疑凭据泄露时，先确认谁还能访问",
+          "一封“付了钱却不能用”，先当作交付问题处理",
+          "收到正式争议后，先看期限和原因",
+          "数据事件采用独立的响应流程",
+          "来源",
+          "内容与更新说明"
+        ]
+      },
+      "mobile": {
+        "overflow": false,
+        "articleWidth": 343,
+        "smallestBodyFont": 13.12
+      }
+    }
+  ],
+  "registry": {
+    "checkedAt": "2026-10-09T14:49:06.084Z",
+    "pages": [
+      {
+        "file": "quickstart.md",
+        "title": "快速入门：从一个海外用户的真实问题开始",
+        "order": 0,
+        "verified": "2026-10-09",
+        "volatility": "medium",
+        "sources": 6,
+        "missing": [],
+        "images": [
+          "./assets/listen-build-learn-v4.png",
+          "./assets/switching-workflow-v4.png"
+        ]
+      },
+      {
+        "file": "chapters/01-validate-idea.md",
+        "title": "选品与验证：怎样决定先做哪一个",
+        "order": 1,
+        "verified": "2026-10-09",
+        "volatility": "medium",
+        "sources": 7,
+        "missing": [],
+        "images": [
+          "../assets/compare-work-samples-v4.png"
+        ]
+      },
+      {
+        "file": "chapters/12-market-fit.md",
+        "title": "市场与适配：选择一群自己能服务的人",
+        "order": 2,
+        "verified": "2026-10-09",
+        "volatility": "medium",
+        "sources": 6,
+        "missing": [],
+        "images": []
+      },
+      {
+        "file": "chapters/02-launch.md",
+        "title": "冷启动获客：让第一次接触走向真实使用",
+        "order": 3,
+        "verified": "2026-10-09",
+        "volatility": "high",
+        "sources": 12,
+        "missing": [],
+        "images": [
+          "../assets/show-the-work-v4.png"
+        ]
+      },
+      {
+        "file": "chapters/03-infrastructure.md",
+        "title": "基础设施：让用户用得上，出问题能恢复",
+        "order": 4,
+        "verified": "2026-10-09",
+        "volatility": "high",
+        "sources": 11,
+        "missing": [],
+        "images": [
+          "../assets/recover-the-missing-work-v4.png"
+        ]
+      },
+      {
+        "file": "chapters/13-retention.md",
+        "title": "持续使用与迭代：下一轮到底该改什么",
+        "order": 5,
+        "verified": "2026-10-09",
+        "volatility": "medium",
+        "sources": 5,
+        "missing": [],
+        "images": []
+      },
+      {
+        "file": "chapters/04-pricing.md",
+        "title": "定价与订阅：写一份自己能兑现的报价",
+        "order": 6,
+        "verified": "2026-10-09",
+        "volatility": "high",
+        "sources": 7,
+        "missing": [],
+        "images": []
+      },
+      {
+        "file": "chapters/05-payments.md",
+        "title": "收款与交付：从选择平台到开通服务",
+        "order": 7,
+        "verified": "2026-10-09",
+        "volatility": "high",
+        "sources": 35,
+        "missing": [],
+        "images": [
+          "../assets/build-deliver-reconcile-v4.png"
+        ]
+      },
+      {
+        "file": "chapters/06-payouts.md",
+        "title": "提现与结汇：把平台余额对到本人到账",
+        "order": 8,
+        "verified": "2026-10-09",
+        "volatility": "high",
+        "sources": 14,
+        "missing": [],
+        "images": []
+      },
+      {
+        "file": "chapters/07-compliance.md",
+        "title": "合规底线：先决定哪些数据不该收",
+        "order": 9,
+        "verified": "2026-10-09",
+        "volatility": "high",
+        "sources": 12,
+        "missing": [],
+        "images": [
+          "../assets/choose-less-data-v4.png"
+        ]
+      },
+      {
+        "file": "chapters/08-entity.md",
+        "title": "身份与主体：让注册服务于真实业务",
+        "order": 10,
+        "verified": "2026-10-09",
+        "volatility": "high",
+        "sources": 22,
+        "missing": [],
+        "images": []
+      },
+      {
+        "file": "chapters/09-tax.md",
+        "title": "税务：理清业务，再准备申报",
+        "order": 11,
+        "verified": "2026-10-09",
+        "volatility": "high",
+        "sources": 13,
+        "missing": [],
+        "images": []
+      },
+      {
+        "file": "chapters/10-app-stores.md",
+        "title": "应用商店：从手机任务到持续发布",
+        "order": 12,
+        "verified": "2026-10-09",
+        "volatility": "high",
+        "sources": 19,
+        "missing": [],
+        "images": []
+      },
+      {
+        "file": "chapters/11-risk.md",
+        "title": "风控与账户安全：恢复控制，继续服务",
+        "order": 13,
+        "verified": "2026-10-09",
+        "volatility": "high",
+        "sources": 12,
+        "missing": [],
+        "images": []
+      }
+    ],
+    "sourceCount": 154,
+    "citedSources": 150,
+    "unused": [
+      "src-ls-fees",
+      "src-ls-getting-paid",
+      "src-paypal-c2-consumer-fees",
+      "src-pg-manual-recruiting"
+    ],
+    "sourceDates": [
+      "2026-10-09"
+    ]
+  },
+  "static": {
+    "checkedAt": "2026-10-09T15:04:40.239Z",
+    "htmlPages": 15,
+    "scope": "Final build including final changelog: internal href/src, fragments, label/ARIA targets, duplicate IDs; compliance previous non-source IDs",
+    "preservedComplianceIds": 15,
+    "errors": []
+  },
+  "entityKeyboard": {
+    "checkedAt": "2026-10-09T14:58:14.797Z",
+    "method": "Focused native select; trusted CDP Input.dispatchKeyEvent char typeahead; reset via keyboard Enter. Arrow keys not confirmed.",
+    "results": [
+      {
+        "character": "只",
+        "expected": "setup",
+        "value": "setup",
+        "a": "450 USD",
+        "b": "650 USD",
+        "focused": "en-scope",
+        "visible": true
+      },
+      {
+        "character": "之",
+        "expected": "annual",
+        "value": "setup",
+        "a": "450 USD",
+        "b": "650 USD",
+        "focused": "en-scope",
+        "visible": true
+      },
+      {
+        "character": "设",
+        "expected": "first",
+        "value": "setup",
+        "a": "450 USD",
+        "b": "650 USD",
+        "focused": "en-scope",
+        "visible": true
+      },
+      {
+        "reset": true,
+        "value": "first",
+        "a": "1900 USD",
+        "b": "1800 USD",
+        "focusVisible": true
+      }
+    ],
+    "isolatedAnnual": {
+      "character": "之",
+      "value": "annual",
+      "a": "1450 USD",
+      "b": "1150 USD",
+      "focusVisible": true
+    },
+    "isolatedFirst": {
+      "character": "设",
+      "value": "first",
+      "a": "1900 USD",
+      "b": "1800 USD",
+      "focusVisible": true
+    },
+    "interpretation": "Initial isolated character selects setup; rapid consecutive characters did not change it. Later isolated characters select annual and first correctly. Native typeahead and Enter reset are confirmed; arrow-key operation is not."
+  }
+}

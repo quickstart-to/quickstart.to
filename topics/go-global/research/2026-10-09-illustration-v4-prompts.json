@@ -1,0 +1,86 @@
+{
+  "date": "2026-10-09",
+  "tool": "built-in image_gen",
+  "transparent_background": false,
+  "assets": [
+    {
+      "asset": "../assets/listen-build-learn-v4.png",
+      "purpose": "开篇：先观察用户的一份实际工作，再决定产品。",
+      "mode": "generate",
+      "inputs": [],
+      "prompt": "Use case: illustration-story. Create one original horizontal 16:9 editorial illustration for a thoughtful Chinese field guide about building products for overseas users. Art direction: contemporary magazine reportage illustration, elegant fine charcoal/ink contours, selective crosshatching, restrained diluted gouache washes in slate blue, warm gray and a very small brick-red accent, clean ivory-white ground. Natural adult proportions, understated faces, generous breathing room, artful asymmetry. It must look like an intentionally composed drawing, not a stock corporate vector, not 3D, not retro stained paper. Subject: a quiet moment of listening in a remote product research conversation. Three-quarter over-the-shoulder view of a developer sitting at a simple table, pen paused above a notebook. Across the table a modest laptop shows another adult demonstrating a real piece of work by pointing at one correction on a report. The foreground notebook has one matching brick-red annotation, suggesting attention to the specific problem. The actual shared work and attentive posture are the focal point; only these essential objects, no plant, lamp, coffee, decorative charts, globe or rocket. Large clear silhouettes remain intelligible at 360 px wide. Scene fills the central 80 percent of the wide composition with a calm irregular wash behind it, no card border. No readable words, letters, numerals, brands, logos, invented UI text or success badges. All report marks are sparse intentional strokes. Avoid the saturated cobalt/orange palette, oversized cartoon heads, floating interface panels, document icon collages, heavy paper grain and glossy effects. This is visibly an illustrative scene, not documentary evidence. Opaque background."
+    },
+    {
+      "asset": "../assets/compare-work-samples-v4.png",
+      "purpose": "选品：界面相似的报告对应不同工作。",
+      "mode": "generate with style reference",
+      "inputs": [
+        {
+          "path": "../assets/listen-build-learn-v4.png",
+          "role": "style reference only; new composition"
+        }
+      ],
+      "prompt": "Use case: illustration-story. One horizontal 16:9 commissioned editorial illustration for a long-form practical field guide. Input image 1 is a STYLE REFERENCE only, not an edit target: match its fine charcoal/ink contours, selective crosshatching, soft slate-blue and warm-gray gouache washes with sparing brick-red emphasis, clean ivory-white ground, sober hand-drawn magazine character and clear silhouettes. Create a different composition for the described subject. The medium is a drawing, never photoreal or evidence of a real event. No readable text, numerals, logos, watermarks, tiny UI, invented handwriting, success badges, thick black outlines, saturated cobalt/orange, 3D, plastic, stock vector figures, heavy vintage paper grain, decorative plants/cups/globes/rockets. Use few essential elements and enough negative space; essential relations must read at 360px wide. Opaque background. An overhead observational drawing of three genuinely different kinds of working material, casually laid out with considered asymmetry across a pale ground. Left: a small physical analogue stopwatch partly overlapping a ruled time worksheet. Center, largest: a folded website project sketch with three broad design blocks and a separate margin annotation connected with a fine brick-red bracket. Right: an analytics plotting sheet with a modest line plot and a translucent tracing sheet offset over it. All marks are abstract and sparse, not legible words, not data claims. The differently structured tasks, not piles of paper, are the subject. No large tablet-shaped icon panels, no equal podiums, no upright cards. Fine purposeful pen drawing with subtle wash; let the graphite geometry and one red annotation organize the wide scene."
+    },
+    {
+      "asset": "../assets/switching-workflow-v4.png",
+      "purpose": "迁移成本：工具里的资料与上下文要一起带走。",
+      "mode": "generate with style reference",
+      "inputs": [
+        {
+          "path": "../assets/listen-build-learn-v4.png",
+          "role": "style reference only; new composition"
+        }
+      ],
+      "prompt": "Use case: illustration-story. One horizontal 16:9 commissioned editorial illustration for a long-form practical field guide. Input image 1 is a STYLE REFERENCE only, not an edit target: match its fine charcoal/ink contours, selective crosshatching, soft slate-blue and warm-gray gouache washes with sparing brick-red emphasis, clean ivory-white ground, sober hand-drawn magazine character and clear silhouettes. Create a different composition for the described subject. The medium is a drawing, never photoreal or evidence of a real event. No readable text, numerals, logos, watermarks, tiny UI, invented handwriting, success badges, thick black outlines, saturated cobalt/orange, 3D, plastic, stock vector figures, heavy vintage paper grain, decorative plants/cups/globes/rockets. Use few essential elements and enough negative space; essential relations must read at 360px wide. Opaque background. A close-up editorial still life about moving a working system, not merely copying one file. On the left an open worn but clean ring notebook with a restrained handful of tabbed notes and a small folded annotation sheet tucked into its binding. On the right a clean new slim organizer stands partly open with one obvious unfilled section. One long brick-red thread runs from a single note being lifted between the two organizers BACK through the other tabs in the old binding. The thread's loops are the focal point: the note still has dependencies. No hands, people or laptop, no decorative scene. Strong shallow diagonal from old binding to new opening; do not arrange three flat icon cards. Distinguish quiet intricate context on the left from empty space on the right. Not a flowchart, not an effortless finished migration."
+    },
+    {
+      "asset": "../assets/show-the-work-v4.png",
+      "purpose": "获客：让讨论围绕一个可以查看和指出问题的结果。",
+      "mode": "generate with style reference",
+      "inputs": [
+        {
+          "path": "../assets/listen-build-learn-v4.png",
+          "role": "style reference only; new composition"
+        }
+      ],
+      "prompt": "Use case: illustration-story. One horizontal 16:9 commissioned editorial illustration for a long-form practical field guide. Input image 1 is a STYLE REFERENCE only, not an edit target: match its fine charcoal/ink contours, selective crosshatching, soft slate-blue and warm-gray gouache washes with sparing brick-red emphasis, clean ivory-white ground, sober hand-drawn magazine character and clear silhouettes. Create a different composition for the described subject. The medium is a drawing, never photoreal or evidence of a real event. No readable text, numerals, logos, watermarks, tiny UI, invented handwriting, success badges, thick black outlines, saturated cobalt/orange, 3D, plastic, stock vector figures, heavy vintage paper grain, decorative plants/cups/globes/rockets. Use few essential elements and enough negative space; essential relations must read at 360px wide. Opaque background. A high-angle, intimate editorial scene of a practical critique, distinctly different from a laptop call. We see only the shoulders and forearms of two naturally proportioned adult colleagues at opposite corners of a light work surface; no faces. One person slides a SINGLE large sample client update toward the other; the other uses a graphite pencil to circle one ambiguous part in brick red. One small source task note rests beside the large output, showing material to compare. The large sample and the two restrained gestures make a strong diagonal through the frame. Crop bodies at the shoulders in a believable drawing; keep anatomically natural hands with five digits, no floating arms, no handshake. Quiet close observation, no conference furniture, stock meeting scene, sales pitch, laptop, card collage or celebratory expression."
+    },
+    {
+      "asset": "../assets/recover-the-missing-work-v4.png",
+      "purpose": "恢复：旧副本可读，但不含之后新增的内容。",
+      "mode": "generate with style reference",
+      "inputs": [
+        {
+          "path": "../assets/listen-build-learn-v4.png",
+          "role": "style reference only; new composition"
+        }
+      ],
+      "prompt": "Use case: illustration-story. One horizontal 16:9 commissioned editorial illustration for a long-form practical field guide. Input image 1 is a STYLE REFERENCE only, not an edit target: match its fine charcoal/ink contours, selective crosshatching, soft slate-blue and warm-gray gouache washes with sparing brick-red emphasis, clean ivory-white ground, sober hand-drawn magazine character and clear silhouettes. Create a different composition for the described subject. The medium is a drawing, never photoreal or evidence of a real event. No readable text, numerals, logos, watermarks, tiny UI, invented handwriting, success badges, thick black outlines, saturated cobalt/orange, 3D, plastic, stock vector figures, heavy vintage paper grain, decorative plants/cups/globes/rockets. Use few essential elements and enough negative space; essential relations must read at 360px wide. Opaque background. A conceptual editorial still life about an older copy missing subsequent work, using a pair of small architectural WORKSHOP MODELS as a visual metaphor. Two simple pale-gray low-rise workshop models on separate thin bases, seen from a high three-quarter angle with generous white space between. They share an unmistakably identical original structure: a plain rectangular low building with two dark openings. The LEFT current model has a small brick-red annex physically attached to its right wall. The RIGHT earlier model has the same main building but no annex; at the corresponding edge is only bare blank base, clearly exposed. No loose missing piece anywhere, no reconstruction arrow, no ghost annex, no dashed outline promising recovery. The viewer sees that an older intact original can still lack a later addition. Fine precise ink-and-gouache drawn construction, no photoreal render, no city, no people, no labels or dates. Models are large, restrained and immediately distinguishable, not technical infrastructure diagrams."
+    },
+    {
+      "asset": "../assets/choose-less-data-v4.png",
+      "purpose": "合规：完整工作文件留在本地，按用途只送出必要信息。",
+      "mode": "generate with style reference",
+      "inputs": [
+        {
+          "path": "../assets/listen-build-learn-v4.png",
+          "role": "style reference only; new composition"
+        }
+      ],
+      "prompt": "Use case: illustration-story. One horizontal 16:9 commissioned editorial illustration for a long-form practical field guide. Input image 1 is a STYLE REFERENCE only, not an edit target: match its fine charcoal/ink contours, selective crosshatching, soft slate-blue and warm-gray gouache washes with sparing brick-red emphasis, clean ivory-white ground, sober hand-drawn magazine character and clear silhouettes. Create a different composition for the described subject. The medium is a drawing, never photoreal or evidence of a real event. No readable text, numerals, logos, watermarks, tiny UI, invented handwriting, success badges, thick black outlines, saturated cobalt/orange, 3D, plastic, stock vector figures, heavy vintage paper grain, decorative plants/cups/globes/rockets. Use few essential elements and enough negative space; essential relations must read at 360px wide. Opaque background. A metaphor of selective disclosure, drawn as a physical archive and a narrow outgoing mail slot. A single closed pale archive box on the left with an open top revealing several full-size work sheets safely remaining INSIDE. A narrow standalone partition in the middle has one small horizontal mail slot at midheight. Exactly ONE small brick-red information slip is passing halfway through that slot toward the empty right-hand space. It is visibly much smaller than the sheets and emerges without moving the entire archive. The box and partition form distinct large silhouettes; angled editorial composition, no floating UI panels. No arrows, locks, shields, padlocks, approval seals, cloud or magic barrier; the partition is a metaphor for a deliberate scope decision, not a guarantee of security. Faint slate wash under objects, plenty of clean white around them."
+    },
+    {
+      "asset": "../assets/build-deliver-reconcile-v4.png",
+      "purpose": "收款：交付、付款与到账需要各自对应的记录。",
+      "mode": "generate with style reference",
+      "inputs": [
+        {
+          "path": "../assets/listen-build-learn-v4.png",
+          "role": "style reference only; new composition"
+        }
+      ],
+      "prompt": "Use case: illustration-story. One horizontal 16:9 commissioned editorial illustration for a long-form practical field guide. Input image 1 is a STYLE REFERENCE only, not an edit target: match its fine charcoal/ink contours, selective crosshatching, soft slate-blue and warm-gray gouache washes with sparing brick-red emphasis, clean ivory-white ground, sober hand-drawn magazine character and clear silhouettes. Create a different composition for the described subject. The medium is a drawing, never photoreal or evidence of a real event. No readable text, numerals, logos, watermarks, tiny UI, invented handwriting, success badges, thick black outlines, saturated cobalt/orange, 3D, plastic, stock vector figures, heavy vintage paper grain, decorative plants/cups/globes/rockets. Use few essential elements and enough negative space; essential relations must read at 360px wide. Opaque background. A calm top-down editorial drawing of an unfinished reconciliation on a pale tabletop. Three clearly separated groups, arranged in a gentle shallow arc rather than a straight icon row. On the LEFT a folded client report with a simple abstract design block and an export copy partly underneath. At CENTER a narrow order slip rests across a plain slate-gray payment card, without any readable card numbers or brand. On the RIGHT an open bookkeeping ledger with a sparse ruled grid and a separate bank-transfer slip alongside it; one thin brick-red pencil line marks a row that is being checked, not a completed check mark. No connecting arrows or continuity implying automatic payout; the gaps matter. Natural material edges and fine ink hatching, restrained soft washes, no hands, people, screens, money piles, currency signs, coins, figures or fictional transaction evidence. Each group has a different silhouette and similar visual weight, easily legible as three records at small scale."
+    }
+  ]
+}

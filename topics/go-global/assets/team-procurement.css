@@ -1,0 +1,72 @@
+.team-media { margin: 2rem 0; font-size: .94rem; line-height: 1.8; container-type: inline-size; }
+.team-media h3 { margin: 0 0 1rem; font-size: 1.15rem; line-height: 1.5; }
+.team-media h4 { margin: 0 0 .8rem; font-size: 1rem; }
+.team-media p { margin: .8rem 0; }
+.team-caption, .team-media figcaption { font-size: .85rem; color: var(--fg-muted); }
+.team-media figcaption { margin-top: 1rem; }
+.team-role-center, .team-flow-start, .team-flow-gate { padding: 1rem; background: var(--bg-soft); border: 1px solid var(--accent); border-radius: .35rem; }
+:is(.team-role-center, .team-flow-start, .team-flow-gate) > * { display: block; }
+.team-roles ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; list-style: none; margin: 1.5rem 0 0; padding: 0; }
+.team-roles li { position: relative; border-left: 2px solid var(--accent); padding: .5rem .8rem; margin: 0; }
+.team-roles li::before { content: ''; position: absolute; left: -2px; top: -1.5rem; height: 1.5rem; border-left: 1px solid var(--border); }
+.team-roles li > * { display: block; }
+.team-roles li span { margin-top: .4rem; color: var(--fg-muted); }
+.team-brief, .team-demo, .team-handover { background: var(--bg-soft); border: 1px solid var(--border); border-radius: .5rem; padding: 1.15rem; }
+.team-brief dl { margin: 0; }
+.team-brief dl > div { padding: .8rem 0; border-top: 1px solid var(--border); }
+.team-brief dt { font-weight: 650; margin-bottom: .3rem; }
+.team-brief dd { margin: 0; }
+.team-flow-lanes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+.team-flow-lanes > div { position: relative; padding: 1rem; border: 1px solid var(--border); border-radius: .35rem; }
+.team-flow-lanes > div::before, .team-flow-lanes > div::after { content: '↓'; position: absolute; left: calc(50% - .5rem); color: var(--accent); }
+.team-flow-lanes > div::before { top: -1.8rem; }
+.team-flow-lanes > div::after { bottom: -1.9rem; }
+.team-flow-lanes ol { margin: 0; padding: 0; list-style: none; }
+.team-flow-lanes li { margin: 0; }
+.team-flow-lanes li + li::before { content: '↓'; display: block; color: var(--accent); margin: .3rem 0; }
+.team-flow-outcomes { position: relative; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; border-top: 1px solid var(--accent); margin: 1.5rem 0 0; padding: 1.2rem 0 0; }
+.team-flow-outcomes::before { content: ''; position: absolute; width: 1px; height: 1.5rem; top: -1.5rem; left: 50%; background: var(--accent); }
+.team-flow-outcomes > div { position: relative; }
+.team-flow-outcomes > div::before { content: ''; position: absolute; border-left: 1px solid var(--accent); width: 1px; height: 1.2rem; top: -1.2rem; left: .7rem; }
+.team-flow-outcomes strong, .team-flow-outcomes span { display: block; }
+.team-flow-outcomes span { color: var(--fg-muted); }
+.team-letter { border-block: 1px solid var(--border); padding: .8rem 0; }
+.team-letter summary { cursor: pointer; min-height: 44px; padding: .3rem 0; font-weight: 600; }
+.team-letter [lang='en'], .team-change [lang='en'] { border-left: 2px solid var(--accent); padding-left: 1rem; }
+.team-change { border-block: 1px solid var(--border); padding: 1.1rem 0; }
+.team-demo fieldset { border: 0; min-width: 0; padding: 0; margin: 1rem 0; }
+.team-demo legend { font-weight: 650; margin-bottom: .5rem; }
+.team-demo label { display: block; margin: 1rem 0 .4rem; font-size: .9rem; }
+.team-demo :is(select, button) { font: inherit; font-size: .9rem; color: var(--fg); background: var(--bg); border: 1px solid var(--border); border-radius: .3rem; min-height: 44px; padding: .6rem; }
+.team-demo select { width: 100%; }
+.team-demo button { cursor: pointer; }
+.team-demo .team-checkbox { display: flex; gap: .6rem; align-items: center; min-height: 44px; }
+.team-demo input[type='checkbox'] { flex-shrink: 0; width: 1.15rem; height: 1.15rem; accent-color: var(--accent); }
+.team-demo-actions { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1rem; }
+.team-demo-result { padding: .5rem 1rem; border-left: 3px solid var(--accent); background: var(--bg); font-variant-numeric: tabular-nums; }
+.team-media :is(button, select, input, summary):focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.team-table { margin: 1.5rem 0; container-type: inline-size; }
+.team-table table { width: 100%; table-layout: fixed; }
+.team-table :is(th, td) { overflow-wrap: anywhere; }
+.team-table th:first-child { width: 20%; }
+@container (max-width: 540px) {
+  .team-roles ul, .team-flow-lanes, .team-flow-outcomes { grid-template-columns: 1fr; }
+  .team-flow-lanes { position: relative; margin-left: .5rem; padding-left: 1.2rem; border-left: 1px solid var(--accent); }
+  .team-flow-lanes::before, .team-flow-lanes::after { content: ''; position: absolute; left: -1px; width: 1px; height: 2rem; background: var(--accent); }
+  .team-flow-lanes::before { top: -2rem; }
+  .team-flow-lanes::after { bottom: -2rem; }
+  .team-flow-lanes > div::before { content: ''; left: -1.2rem; width: 1.2rem; top: 1.6rem; border-top: 1px solid var(--accent); }
+  .team-flow-lanes > div::after { content: none; }
+  .team-flow-outcomes { border-top: 0; border-left: 1px solid var(--accent); margin-left: .5rem; padding: 0 0 0 1.2rem; }
+  .team-flow-outcomes::before { left: -1px; }
+  .team-flow-outcomes > div::before { border-left: 0; border-top: 1px solid var(--accent); width: 1.2rem; height: 1px; left: -1.2rem; top: .8rem; }
+  .team-records td:nth-child(2)::before { content: '首次检查：'; font-weight: 650; }
+  .team-records td:nth-child(3)::before { content: '修复后复测：'; font-weight: 650; }
+  .team-table table, .team-table tbody, .team-table tr, .team-table td { display: block; }
+  .team-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .team-table tr { padding: .8rem; border: 1px solid var(--border); border-radius: .35rem; margin-bottom: .8rem; }
+  .team-table td { border: 0; padding: .3rem 0; }
+  .team-table td:first-child { font-weight: 650; }
+  .team-routes td:nth-child(2)::before { content: '要证明什么：'; font-weight: 650; }
+  .team-routes td:nth-child(3)::before { content: '工作与取舍：'; font-weight: 650; }
+}

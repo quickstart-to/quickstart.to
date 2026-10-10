@@ -1,7 +1,9 @@
 ---
 import Base from './Base.astro';
+import ContentNote from '../components/ContentNote.astro';
 import { uiLangFor, t } from '../i18n';
-import type { Topic, Chapter } from '../lib/topics';
+import { getQuickstart, type Topic, type Chapter } from '../lib/topics';
+import { articleHeadings } from '../lib/article-headings';
 
 interface Props {
   topic: Topic;
@@ -9,54 +11,83 @@ interface Props {
   /** "quickstart" | chapter slug | "changelog" */
   current: string;
   title: string;
+  /** The rendered body already supplies the page's main heading. */
+  titleInContent?: boolean;
   description?: string;
   path: string;
   lastVerified?: string;
   volatility?: 'high' | 'medium' | 'low';
-  /** Show the AI-authorship notice and disclaimer (false for the changelog). */
+  sourcesHref?: string;
+  /** Show the content-and-updates note and disclaimer (false for the changelog). */
   isContent?: boolean;
 }
 
-const { topic, chapters, current, title, description, path, lastVerified, volatility, isContent = true } = Astro.props;
+const { topic, chapters, current, title, titleInContent = false, description, path, lastVerified, volatility, sourcesHref, isContent = true } = Astro.props;
 const { slug, lang, status, disclaimer } = topic.data;
 const ui = uiLangFor(lang);
 const pageTitle = current === 'quickstart' ? `${topic.data.title} · quickstart.to` : `${title} · ${topic.data.title}`;
+const quickstart = await getQuickstart(topic.id);
+const readingOrder = [
+  { href: `/${slug}`, title: t(ui, 'topic.quickstart'), slug: 'quickstart', sections: articleHeadings(quickstart?.rendered?.html ?? '') },
+  ...chapters.map((chapter) => ({
+    href: `/${slug}/${chapter.slug}`,
+    title: chapter.entry.data.title,
+    slug: chapter.slug,
+    sections: articleHeadings(chapter.entry.rendered?.html ?? ''),
+  })),
+];
+const currentIndex = readingOrder.findIndex((page) => page.slug === current);
+const sections = readingOrder[currentIndex]?.sections ?? [];
+const previous = currentIndex > 0 ? readingOrder[currentIndex - 1] : undefined;
+const next = currentIndex >= 0 ? readingOrder[currentIndex + 1] : undefined;
 ---
 
 <Base title={pageTitle} description={description ?? topic.data.summary} contentLang={lang} path={path}>
   <aside class="sidebar" slot="sidebar">
-    <nav aria-label={topic.data.title}>
-      <p class="sidebar-topic">
-        <a href={`/${slug}`}>{topic.data.title}</a>
-      </p>
-      <p data-ui lang={ui}>
-        <span class={`badge badge-${status}`} data-i18n={`status.${status}`}>{t(ui, `status.${status}`)}</span>
-      </p>
-      <ol class="toc">
-        <li>
-          <a href={`/${slug}`} aria-current={current === 'quickstart' ? 'page' : undefined} data-ui lang={ui} data-i18n="topic.quickstart">
-            {t(ui, 'topic.quickstart')}
+    <details class="book-menu" data-book-menu>
+      <summary data-ui lang={ui}><span data-i18n="topic.directory">{t(ui, 'topic.directory')}</span><span class="book-menu-count" aria-hidden="true">{readingOrder.length}</span></summary>
+      <nav aria-label={topic.data.title}>
+        <p class="sidebar-topic">
+          <a href={`/${slug}`}>{topic.data.title}</a>
+        </p>
+        <p data-ui lang={ui}>
+          <span class={`badge badge-${status}`} data-i18n={`status.${status}`}>{t(ui, `status.${status}`)}</span>
+        </p>
+        <ol class="toc">
+          {readingOrder.map((page) => (
+            <li>
+              {page.sections.length ? (
+                <details class="toc-chapter" open={current === page.slug}>
+                  <summary>
+                    <a href={page.href} aria-current={current === page.slug ? 'page' : undefined} data-ui={page.slug === 'quickstart' || undefined} lang={page.slug === 'quickstart' ? ui : undefined} data-i18n={page.slug === 'quickstart' ? 'topic.quickstart' : undefined}>{page.title}</a>
+                    <span class="toc-chevron" aria-hidden="true"></span>
+                  </summary>
+                  <ol class="toc-sections">
+                    {page.sections.map((section) => (
+                      <li><a href={`${current === page.slug ? '' : page.href}#${encodeURIComponent(section.slug)}`} data-current-section={current === page.slug || undefined}>{section.text}</a></li>
+                    ))}
+                  </ol>
+                </details>
+              ) : (
+                <a href={page.href} aria-current={current === page.slug ? 'page' : undefined} data-ui={page.slug === 'quickstart' || undefined} lang={page.slug === 'quickstart' ? ui : undefined} data-i18n={page.slug === 'quickstart' ? 'topic.quickstart' : undefined}>{page.title}</a>
+              )}
+            </li>
+          ))}
+        </ol>
+        {chapters.length === 0 && (
+          <p class="muted" data-ui lang={ui} data-i18n="topic.noChapters">{t(ui, 'topic.noChapters')}</p>
+        )}
+        <p class="toc-secondary" data-ui lang={ui}>
+          <a href={`/${slug}/changelog`} aria-current={current === 'changelog' ? 'page' : undefined} data-i18n="topic.changelog">
+            {t(ui, 'topic.changelog')}
           </a>
-        </li>
-        {chapters.map((c) => (
-          <li>
-            <a href={`/${slug}/${c.slug}`} aria-current={current === c.slug ? 'page' : undefined}>{c.entry.data.title}</a>
-          </li>
-        ))}
-      </ol>
-      {chapters.length === 0 && (
-        <p class="muted" data-ui lang={ui} data-i18n="topic.noChapters">{t(ui, 'topic.noChapters')}</p>
-      )}
-      <p class="toc-secondary" data-ui lang={ui}>
-        <a href={`/${slug}/changelog`} aria-current={current === 'changelog' ? 'page' : undefined} data-i18n="topic.changelog">
-          {t(ui, 'topic.changelog')}
-        </a>
-      </p>
-    </nav>
+        </p>
+      </nav>
+    </details>
   </aside>
 
   <article class="prose">
-    <header class="article-header">
+    {!titleInContent && <header class="article-header">
       <h1>{title}</h1>
       {(lastVerified || volatility) && (
         <dl class="article-meta" data-ui lang={ui}>
@@ -74,15 +105,74 @@ const pageTitle = current === 'quickstart' ? `${topic.data.title} · quickstart.
           )}
         </dl>
       )}
-    </header>
+    </header>}
+
+    {isContent && current !== 'quickstart' && sections.length > 1 && (
+      <details class="article-outline">
+        <summary id="article-outline-title" data-ui lang={ui} data-i18n="topic.onThisPage">{t(ui, 'topic.onThisPage')}</summary>
+        <nav aria-labelledby="article-outline-title">
+          <ol>{sections.map((section) => <li><a href={`#${encodeURIComponent(section.slug)}`}>{section.text}</a></li>)}</ol>
+        </nav>
+      </details>
+    )}
 
     <slot />
 
+    {isContent && (previous || next) && (
+      <nav class="chapter-pagination" aria-label={t(ui, 'topic.readingOrder')}>
+        {previous && <a href={previous.href} rel="prev"><span data-ui lang={ui} data-i18n="topic.previous">{t(ui, 'topic.previous')}</span><strong>{previous.title}</strong></a>}
+        {next && <a href={next.href} rel="next"><span data-ui lang={ui} data-i18n="topic.next">{t(ui, 'topic.next')}</span><strong>{next.title}</strong></a>}
+      </nav>
+    )}
+
     {isContent && (
       <footer class="article-footer">
-        <p class="notice" data-ui lang={ui} data-i18n="notice.ai">{t(ui, 'notice.ai')}</p>
+        <ContentNote ui={ui} sourcesHref={sourcesHref} changelogHref={`/${slug}/changelog`} />
         {disclaimer && <p class="notice notice-warn">{disclaimer}</p>}
       </footer>
     )}
   </article>
 </Base>
+
+<script>
+  const menu = document.querySelector<HTMLDetailsElement>('[data-book-menu]');
+  if (menu) {
+    const desktop = window.matchMedia('(min-width: 60rem)');
+    const directory = menu.querySelector('nav');
+    const currentPage = menu.querySelector<HTMLAnchorElement>('a[aria-current="page"]');
+    const revealCurrentPage = () => {
+      if (!directory || !currentPage || !menu.open) return;
+      // Scroll only the directory, never the article or its incoming fragment.
+      directory.scrollTop += currentPage.getBoundingClientRect().top - directory.getBoundingClientRect().top - 12;
+    };
+    const adaptMenu = () => {
+      // Keep keyboard focus visible when a resize closes the directory.
+      if (!desktop.matches && menu.contains(document.activeElement)) menu.querySelector('summary')?.focus();
+      menu.open = desktop.matches;
+    };
+    adaptMenu();
+    desktop.addEventListener('change', adaptMenu);
+    menu.addEventListener('toggle', revealCurrentPage);
+
+    const sectionLinks = [...menu.querySelectorAll<HTMLAnchorElement>('[data-current-section]')];
+    const markFragment = () => {
+      for (const link of sectionLinks) {
+        if (new URL(link.href).hash === window.location.hash) link.setAttribute('aria-current', 'location');
+        else link.removeAttribute('aria-current');
+      }
+    };
+    markFragment();
+    window.addEventListener('hashchange', markFragment);
+    for (const link of sectionLinks) {
+      link.addEventListener('click', (event) => {
+        if (desktop.matches || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+        const target = document.getElementById(decodeURIComponent(link.hash.slice(1)));
+        if (!target) return;
+        // Collapse before native fragment navigation calculates the heading's position.
+        menu.open = false;
+        target.tabIndex = -1;
+        target.focus({ preventScroll: true });
+      });
+    }
+  }
+</script>

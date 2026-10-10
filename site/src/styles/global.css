@@ -39,7 +39,13 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 
-html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  /* Progressive enhancement; authored copy also contains ordinary spaces. */
+  text-autospace: normal;
+}
+pre, code, kbd, samp { text-autospace: no-autospace; }
 
 body {
   margin: 0;
@@ -111,8 +117,16 @@ a:hover { text-decoration-thickness: 2px; }
 /* ---------- sidebar ---------- */
 .sidebar { font-size: 0.9375rem; line-height: 1.5; }
 @media (min-width: 60rem) {
-  .sidebar nav { position: sticky; inset-block-start: 1.5rem; max-block-size: calc(100dvb - 3rem); overflow-y: auto; }
+  .book-menu { position: sticky; inset-block-start: 1.5rem; }
+  .book-menu > nav { max-block-size: calc(100dvb - 11rem); }
 }
+.book-menu > nav { overflow-y: auto; overscroll-behavior: contain; scrollbar-gutter: stable; }
+@media (max-width: 59.999rem) {
+  .book-menu > nav { max-block-size: min(65dvb, 36rem); }
+}
+.book-menu > summary { cursor: pointer; padding: 0.7rem 0.6rem; border-block-end: 1px solid var(--border); font-weight: 600; }
+.book-menu-count { margin-inline-start: 0.6rem; font-size: 0.8rem; color: var(--fg-muted); font-weight: 400; }
+.book-menu[open] > summary { margin-block-end: 1rem; }
 .sidebar-topic { margin: 0 0 0.5rem; font-weight: 650; }
 .sidebar-topic a { color: var(--fg); text-decoration: none; }
 .toc { list-style: none; margin: 1rem 0; padding: 0; display: grid; gap: 0.125rem; }
@@ -122,6 +136,16 @@ a:hover { text-decoration-thickness: 2px; }
 }
 .toc a:hover, .toc-secondary a:hover { background: var(--bg-soft); color: var(--fg); }
 .toc a[aria-current="page"], .toc-secondary a[aria-current="page"] { background: var(--accent-soft); color: var(--accent); font-weight: 600; }
+.toc-chapter > summary { display: flex; align-items: center; list-style: none; cursor: pointer; border-radius: var(--radius); }
+.toc-chapter > summary::-webkit-details-marker { display: none; }
+.toc-chapter > summary > a { flex: 1; min-inline-size: 0; }
+.toc-chevron { display: grid; place-items: center; flex: 0 0 2rem; min-block-size: 2.75rem; font-size: 1.25rem; color: var(--fg-muted); }
+.toc-chevron::before { content: '›'; line-height: 1; }
+.toc-chapter[open] > summary .toc-chevron::before { transform: rotate(90deg); }
+.toc-chapter > summary:hover { background: var(--bg-soft); }
+.toc-sections { list-style: none; margin: 0.25rem 0 0.65rem 0.8rem; padding: 0 0 0 0.5rem; border-inline-start: 1px solid var(--border); font-size: 0.875rem; }
+.toc-sections a { padding-block: 0.45rem; }
+.toc-sections a[aria-current="location"] { color: var(--accent); background: var(--accent-soft); box-shadow: inset 2px 0 var(--accent); }
 .toc-secondary { border-block-start: 1px solid var(--border); padding-block-start: 0.75rem; }
 
 /* ---------- badges ---------- */
@@ -158,6 +182,16 @@ a:hover { text-decoration-thickness: 2px; }
 .prose img { display: block; max-inline-size: 100%; block-size: auto; border-radius: var(--radius); }
 
 .article-header { margin-block-end: 2rem; }
+.article-outline { margin-block-end: 1.75rem; border-block: 1px solid var(--border); font-size: 0.9375rem; }
+.article-outline > summary { cursor: pointer; padding-block: 0.75rem; font-weight: 600; }
+.article-outline ol { margin: 0 0 0.75rem; padding-inline-start: 1.5rem; }
+.article-outline li + li { margin-block-start: 0; }
+.article-outline a { display: block; padding: 0.4rem 0; text-decoration: none; }
+.chapter-pagination { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr)); gap: 1rem; margin-block-start: 2rem; }
+.chapter-pagination a { display: grid; gap: 0.4rem; padding: 1rem; border: 1px solid var(--border); border-radius: var(--radius); text-decoration: none; }
+.chapter-pagination a:hover { background: var(--bg-soft); }
+.chapter-pagination span { color: var(--fg-muted); font-size: 0.875rem; }
+.chapter-pagination strong { font-weight: 600; }
 .article-meta { display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; margin: 0; font-size: 0.875rem; color: var(--fg-muted); }
 .article-meta div { display: flex; gap: 0.4rem; }
 .article-meta dt::after { content: ":"; }

@@ -1,9 +1,58 @@
 # Citation targets for go-global. Schema: docs/content-guide.md §6
+- id: src-notion-korean-launch
+  url: https://www.notion.com/releases/2020-08-10
+  title: "Notion in Korean 🇰🇷 🎊"
+  publisher: Notion
+  accessed: 2026-10-10
+  claim: 2020 年韩语发布以已有韩国用户社区为选择依据，同时翻译应用、常用模板和帮助中心；属于团队历史叙述，不证明地区普适性或增长归因
+  excerpt: excerpts/notion-korean-launch.md
+- id: src-yang-localization-retrospective
+  url: https://www.163.com/dy/article/J7G55TGH05566TJ2.html
+  title: "创业者复盘：出海“本地化”过程中，我犯了哪些错？"
+  publisher: 杨杰 · FounderPark 授权转载
+  accessed: 2026-10-10
+  claim: 作者在 2024 年复盘中报告分区定价及增加语言未取得期望改善，并归因于支付路径、缺上下文翻译和术语校验等缺口；没有独立因果验证
+  excerpt: excerpts/yang-localization-retrospective.md
+- id: src-tally-form-languages
+  url: https://tally.so/help/supported-languages
+  title: "Supported languages"
+  publisher: Tally
+  accessed: 2026-10-10
+  claim: 语言设置翻译系统默认文字；作者可编辑的问题标题等内容需要作者自行使用目标语言，不因语言设置自动翻译
+  excerpt: excerpts/tally-form-languages.md
+- id: src-w3c-date-formats
+  url: https://www.w3.org/International/questions/qa-date-format
+  title: "Date formats"
+  publisher: W3C Internationalization
+  accessed: 2026-10-10
+  claim: 纯数字日期存在歧义；可用明确月份及四位年份或说明格式，浏览器语言偏好不能直接代替文档上下文
+  excerpt: excerpts/w3c-date-formats.md
+- id: src-mdn-datetime-constructor
+  url: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat
+  title: "Intl.DateTimeFormat() constructor"
+  publisher: MDN Web Docs
+  accessed: 2026-10-10
+  claim: locale、calendar、numberingSystem 与 timeZone 分别控制日期时间显示，未指定时区使用运行时默认；本例显式设置公历及命名时区
+  excerpt: excerpts/mdn-datetime-constructor.md
+- id: src-mdn-numberformat-constructor
+  url: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat
+  title: "Intl.NumberFormat() constructor"
+  publisher: MDN Web Docs
+  accessed: 2026-10-10
+  claim: currency 模式需独立指定币种，currencyDisplay 可采用 ISO 币种代码；格式化不执行货币换算
+  excerpt: excerpts/mdn-numberformat-constructor.md
+- id: src-postnitro-payment-migration
+  url: https://www.indiehackers.com/post/200-paying-customers-and-endless-headaches-with-lemon-squeezy-later-we-switched-to-paddle-not-all-that-glitters-is-gold-c352234aa6
+  title: "200+ paying customers and endless headaches with Lemon Squeezy later, we switched to Paddle: Not all that glitters is gold! 💔"
+  publisher: Muneeb Awan · Indie Hackers
+  accessed: 2026-10-09
+  claim: PostNitro 作者于 2024-11-04 报告费用、结算与订阅状态问题后，自 11 月让新客户走 Paddle、老客户留原平台；仅为归属明确的迁移经历，不证明当前故障率、价格或大陆准入
+  excerpt: excerpts/postnitro-payment-migration.md
 - id: src-paddle-countries
   url: https://www.paddle.com/help/start/intro-to-paddle/which-countries-are-supported-by-paddle
   title: Which countries are supported by Paddle?
   publisher: Paddle
-  accessed: '2026-10-08'
+  accessed: '2026-10-09'
   claim: Paddle 支持除列明的受制裁/不支持国家外的全球卖家；列表中无中国
   excerpt: excerpts/paddle-countries.md
   archive: https://web.archive.org/web/20261008083819/https://www.paddle.com/help/start/intro-to-paddle/which-countries-are-supported-by-paddle
@@ -11,21 +60,21 @@
   url: https://www.paddle.com/help/start/account-verification/what-is-business-verification
   title: Business Identification
   publisher: Paddle
-  accessed: '2026-10-08'
+  accessed: '2026-10-09'
   claim: 业务主体认证步骤不适用于个人或个体经营者；人工审核约 2–4 个工作日
   excerpt: excerpts/paddle-business-verification.md
 - id: src-paddle-domain-review
   url: https://www.paddle.com/help/start/account-verification/what-is-domain-verification
   title: Domain Review
   publisher: Paddle
-  accessed: '2026-10-08'
-  claim: 所有卖家需通过域名审核，人工审核约 5–7 个工作日，只能在获批域名上发起结账
+  accessed: '2026-10-09'
+  claim: 真实结账需域名审核；网站需产品/价格/条款/退款/隐私信息及HTTPS；人工审核预计5–7工作日，sandbox免域名审核
   excerpt: excerpts/paddle-domain-review.md
 - id: src-paddle-pricing
   url: https://www.paddle.com/pricing
   title: Pricing
   publisher: Paddle
-  accessed: '2026-10-08'
+  accessed: '2026-10-09'
   claim: 标准费率 5% + 50¢ 每笔结账交易
   excerpt: excerpts/paddle-pricing.md
   archive: https://web.archive.org/web/20261008083841/https://www.paddle.com/pricing
@@ -33,28 +82,28 @@
   url: https://www.paddle.com/help/manage/get-paid/when-and-how-do-i-get-paid
   title: When and how do I get paid?
   publisher: Paddle
-  accessed: '2026-10-08'
+  accessed: '2026-10-09'
   claim: 每月出款，门槛最低 $100，15 日前发出；方式为电汇或 Payoneer
   excerpt: excerpts/paddle-payout-schedule.md
 - id: src-paddle-payout-fees
   url: https://www.paddle.com/help/manage/get-paid/is-there-a-fee-taken-for-payouts
   title: Is there a fee taken for payouts?
   publisher: Paddle
-  accessed: '2026-10-08'
-  claim: 币种与收款银行所在国不一致时走 SWIFT，收 $/€/£15 电汇费
+  accessed: "2026-10-09"
+  claim: "电汇费适用币种与路径条件；费用在出款发票前扣除，发票金额为发送金额；非余额币种汇兑差最多 1.5%，接收机构可能另收费"
   excerpt: excerpts/paddle-payout-fees.md
 - id: src-paddle-payout-currency
   url: https://www.paddle.com/help/manage/get-paid/can-i-be-paid-in-my-local-currency
   title: Can I be paid in my local currency?
   publisher: Paddle
-  accessed: '2026-10-08'
+  accessed: '2026-10-09'
   claim: 出款币种包括人民币（CNY）；换成非余额币种最多收 1.5% 汇兑差
   excerpt: excerpts/paddle-payout-currency.md
 - id: src-ls-countries
   url: https://docs.lemonsqueezy.com/help/getting-started/supported-countries
   title: Supported Countries
   publisher: Lemon Squeezy
-  accessed: '2026-10-08'
+  accessed: '2026-10-09'
   claim: 需能在支持国家收银行或 PayPal 出款；PayPal 出款覆盖 200+ 国家地区；银行出款列表无中国
   excerpt: excerpts/ls-countries.md
   archive: https://web.archive.org/web/20261008083903/https://docs.lemonsqueezy.com/help/getting-started/supported-countries
@@ -77,7 +126,7 @@
   url: https://polar.sh/docs/merchant-of-record/supported-countries
   title: Supported countries
   publisher: Polar
-  accessed: '2026-10-08'
+  accessed: '2026-10-09'
   claim: 出款依赖 Stripe Connect Express，支持国家列表含香港、不含中国大陆
   excerpt: excerpts/polar-countries.md
   archive: https://web.archive.org/web/20261008083958/https://polar.sh/docs/merchant-of-record/supported-countries
@@ -85,7 +134,7 @@
   url: https://www.creem.io/pricing
   title: Pricing
   publisher: Creem
-  accessed: '2026-10-08'
+  accessed: '2026-10-09'
   claim: 3.9% + 40¢ 每笔；每月 1 日、15 日出款
   excerpt: excerpts/creem-pricing.md
   archive: https://web.archive.org/web/20261008084208/https://www.creem.io/pricing
@@ -93,22 +142,22 @@
   url: https://docs.creem.io/merchant-of-record/supported-countries
   title: Supported Countries
   publisher: Creem
-  accessed: '2026-10-08'
-  claim: 支持 87 个商户国家，含 China（*：有出款限额）；出款费 7 EUR/USD 或 1% 取高
+  accessed: '2026-10-09'
+  claim: 商户支持列表含 China*，中国路径另有出款限额；通用本地银行出款费 7 EUR/USD 或 1% 取高，不作为支付宝最终报价
   excerpt: excerpts/creem-countries.md
 - id: src-creem-payouts
   url: https://docs.creem.io/merchant-of-record/finance/payouts
   title: Payouts
   publisher: Creem
-  accessed: '2026-10-08'
-  claim: 中国：个人收款走支付宝，单笔上限 5 万元、每年 30–60 万元；企业走本地银行；账户名须与 KYC 身份一致
+  accessed: "2026-10-09"
+  claim: "中国个人同名支付宝及通道限额；可用余额 50 USD/EUR、手动申请与每月 1/15 日窗口；银行转账 7 USD/EUR 与 1% 取高；取消会跳过本期且不能同周期重提"
   excerpt: excerpts/creem-payouts.md
   archive: https://web.archive.org/web/20261008084141/https://docs.creem.io/merchant-of-record/finance/payouts
 - id: src-dodo-merchant-countries
   url: https://docs.dodopayments.com/miscellaneous/accepted-countries-and-territories
   title: Countries Eligible for Merchant Acceptance
   publisher: Dodo Payments
-  accessed: '2026-10-08'
+  accessed: '2026-10-09'
   claim: 商户准入国家含 China；个人账户以本人证件签发国判定
   excerpt: excerpts/dodo-merchant-countries.md
   archive: https://web.archive.org/web/20261008084231/https://docs.dodopayments.com/miscellaneous/accepted-countries-and-territories
@@ -116,29 +165,29 @@
   url: https://dodopayments.com/pricing
   title: Pricing
   publisher: Dodo Payments
-  accessed: '2026-10-08'
-  claim: 4% + 40¢；美国以外 +1.5%；订阅 +0.5%；出款 <$1000 收 $5；非美国商户 USD SWIFT 出款 $25
+  accessed: '2026-10-09'
+  claim: 美国境内卡/钱包基础费4% + 40¢；非美国卡/APM +1.5%，订阅 +0.5%；ACH/SEPA另用1.5%封顶15美元/欧元且不加上述附加费；退款$1，拒付$30；出款<$1000收$5，非美国商户USD SWIFT出款$25
   excerpt: excerpts/dodo-pricing.md
   archive: https://web.archive.org/web/20261008084254/https://dodopayments.com/pricing
 - id: src-dodo-payouts
   url: https://docs.dodopayments.com/features/payouts/payout-structure
   title: Payouts Process
   publisher: Dodo Payments
-  accessed: '2026-10-08'
-  claim: 默认出款门槛 $100，可设最低 $50
+  accessed: "2026-10-09"
+  claim: "验证、合并余额门槛与出款周期；Success 表示发往银行；保留款已排除在可用余额外，失败冲回金额及费用；解释跨期余额、接收费、账户更改与追踪步骤"
   excerpt: excerpts/dodo-payouts.md
 - id: src-gumroad-getting-paid
   url: https://gumroad.com/help/article/13-getting-paid
   title: Getting paid by Gumroad
   publisher: Gumroad
-  accessed: '2026-10-08'
+  accessed: '2026-10-09'
   claim: 无银行出款的国家只能用 PayPal；PayPal 出款为美元，收 2%；银行出款国家表无中国
   excerpt: excerpts/gumroad-getting-paid.md
 - id: src-stripe-mp-eligibility
   url: https://docs.stripe.com/payments/managed-payments/eligibility
   title: Managed Payments eligibility
   publisher: Stripe
-  accessed: '2026-10-08'
+  accessed: '2026-10-09'
   claim: 业务须位于支持地区；亚太仅澳大利亚、香港、日本、新加坡
   excerpt: excerpts/stripe-mp-eligibility.md
 - id: src-paypal-c2-consumer-fees
@@ -153,42 +202,1900 @@
   url: https://www.safe.gov.cn/safe/2007/0105/5320.html
   title: （已修改）国家外汇管理局关于印发《个人外汇管理办法实施细则》的通知
   publisher: 国家外汇管理局
-  accessed: '2026-10-08'
+  accessed: "2026-10-09"
   claim: 个人结汇/购汇年度总额及经营性/非经营性分类；原文末尾注明2016年修改及2023年删除第三十九条
   excerpt: excerpts/safe-individual-fx-rules.md
 - id: src-tax-foreign-income-2020-3
   url: https://guangdong.chinatax.gov.cn/gdsw/zssw_grsdsggpxxxzl_zcwj/2020-02/24/content_142e4afa49fe4315b636a35fb51513e2.shtml
   title: 财政部 税务总局关于境外所得有关个人所得税政策的公告（2020年第3号）
   publisher: 国家税务总局广东省税务局（转载）
-  accessed: '2026-10-08'
-  claim: 境外所得按劳务提供地、特许权使用地等规则认定；居民个人确属境外所得的适用次年3月1日至6月30日申报规定
+  accessed: '2026-10-09'
+  claim: 境外所得按劳务提供地、权利使用地等认定；规定居民个人境外所得申报期间、地点、所得税限额抵免及凭证要求
   excerpt: excerpts/tax-foreign-income-2020-3.md
 - id: src-safe-effective-rules-2026
   url: https://www.safe.gov.cn/safe/2026/0805/27766.html
   title: 现行有效外汇管理主要法规目录（截至2026年6月30日）
   publisher: 国家外汇管理局
-  accessed: '2026-10-08'
+  accessed: "2026-10-09"
   claim: 目录第1页列个人外汇实施细则及修改脚注；第14页列汇发〔2022〕22号申报细则
   excerpt: excerpts/safe-effective-rules-2026.md
 - id: src-safe-bop-rules-2022
   url: https://www.safe.gov.cn/safe/2022/0804/21280.html
   title: 国家外汇管理局关于印发《通过银行进行国际收支统计申报业务实施细则》的通知
   publisher: 国家外汇管理局
-  accessed: '2026-10-08'
+  accessed: "2026-10-09"
   claim: 附件第8条：居民个人单笔等值1万美元以下（含）免填申报信息；第12条：需申报的涉外收入在解付或结汇日后五个工作日内申报
   excerpt: excerpts/safe-bop-rules-2022.md
 - id: src-safe-bop-consultation-2026
   url: https://www.safe.gov.cn/safe/2026/0929/27953.html
   title: 国家外汇管理局关于《通过银行进行国际收支统计申报业务实施细则（征求意见稿）》公开征求意见的通知
   publisher: 国家外汇管理局
-  accessed: '2026-10-08'
+  accessed: "2026-10-09"
   claim: 2026年9月30日发布修订征求意见通知，反馈截止2026年10月30日；本页不是新细则施行通知
   excerpt: excerpts/safe-bop-consultation-2026.md
 - id: src-tax-iit-implementation
   url: https://fgk.chinatax.gov.cn/zcfgk/c100010/c5194444/content.html
   title: 中华人民共和国个人所得税法实施条例
   publisher: 国家税务总局政策法规库
-  accessed: '2026-10-08'
-  claim: 第3条按劳务提供地、特许权使用地等认定境内所得，不以支付地点为唯一依据；第6条定义劳务报酬、特许权使用费和经营所得
+  accessed: '2026-10-09'
+  claim: 规定住所、所得来源与类别、境外纳税凭证及外币所得折算；支付地点不单独决定所得来源，银行换汇价不替代个税折算规则
   excerpt: excerpts/tax-iit-implementation.md
   archive: https://web.archive.org/web/20261008092708/https://fgk.chinatax.gov.cn/zcfgk/c100010/c5194444/content.html
+- id: src-paddle-identity-verification
+  url: https://www.paddle.com/help/start/account-verification/what-is-identity-verification
+  title: "Identity Verification"
+  publisher: Paddle
+  accessed: '2026-10-09'
+  claim: 个人仍须身份验证；可能要求政府证件、地址证明和活体检查；人工审核预计1–3个工作日
+  excerpt: excerpts/paddle-identity-verification.md
+  archive: https://web.archive.org/web/20261008095536/https://www.paddle.com/help/start/account-verification/what-is-identity-verification
+- id: src-paddle-aup
+  url: https://www.paddle.com/help/start/intro-to-paddle/what-am-i-not-allowed-to-sell-on-paddle
+  title: "Understanding Paddle’s Acceptable Use Policy (AUP): What Am I Not Allowed To Sell?"
+  publisher: Paddle
+  accessed: '2026-10-09'
+  claim: 以软件为主；纯人工服务、实物、侵权产品等不支持；部分AI人像、VPN等属于受限类别而非一般放行
+  excerpt: excerpts/paddle-aup.md
+  archive: https://web.archive.org/web/20261008095829/https://www.paddle.com/help/start/intro-to-paddle/what-am-i-not-allowed-to-sell-on-paddle
+- id: src-creem-account-reviews
+  url: https://docs.creem.io/merchant-of-record/account-reviews/account-reviews
+  title: "Account Reviews"
+  publisher: Creem
+  accessed: '2026-10-09'
+  claim: 真实收款前须账户审核；产品已上线、价格/条款/隐私/支持邮箱可见；通常1–2工作日，高峰可至3日；生成式AI等受限产品需额外审核
+  excerpt: excerpts/creem-account-reviews.md
+- id: src-creem-payout-accounts
+  url: https://docs.creem.io/merchant-of-record/finance/payout-accounts
+  title: "Payout Accounts"
+  publisher: Creem
+  accessed: "2026-10-09"
+  claim: "业务/KYC/KYB/出款账户及团队审核分步；每店独立默认账户；费表将 7 美元或 1% 列于 Bank Transfer，不是支付宝完整报价"
+  excerpt: excerpts/creem-payout-accounts.md
+- id: src-dodo-verification
+  url: https://docs.dodopayments.com/miscellaneous/verification-process
+  title: "Account Verification"
+  publisher: Dodo Payments
+  accessed: '2026-10-09'
+  claim: 个人按产品信息→政府证件及自拍KYC→银行验证申请；账户同名；通常1–3工作日；真实收款与出款另有不同条件
+  excerpt: excerpts/dodo-verification.md
+- id: src-dodo-merchant-acceptance
+  url: https://docs.dodopayments.com/miscellaneous/merchant-acceptance
+  title: "Merchant Acceptance Policy"
+  publisher: Dodo Payments
+  accessed: '2026-10-09'
+  claim: 支持软件和数字产品但排除主要价值来自人工劳动的服务、实物、游戏及多种高风险类别；生成式AI等需额外审核
+  excerpt: excerpts/dodo-merchant-acceptance.md
+  archive: https://web.archive.org/web/20261008095728/https://docs.dodopayments.com/miscellaneous/merchant-acceptance
+- id: src-dodo-test-live
+  url: https://docs.dodopayments.com/miscellaneous/test-mode-vs-live-mode
+  title: "Test Mode vs Live Mode"
+  publisher: Dodo Payments
+  accessed: '2026-10-09'
+  claim: 测试不产生真实资金；产品/API密钥/webhook分环境，身份与银行资料跨环境共享；测试仍会发送真实邮件
+  excerpt: excerpts/dodo-test-live.md
+- id: src-creem-test-mode
+  url: https://docs.creem.io/getting-started/test-mode
+  title: "Test Mode"
+  publisher: Creem
+  accessed: '2026-10-09'
+  claim: 测试与生产分别配置密钥、API地址、产品和webhook；官方提供成功、拒绝等测试卡，不产生真实付款
+  excerpt: excerpts/creem-test-mode.md
+- id: src-creem-quickstart
+  url: https://docs.creem.io/getting-started/quickstart
+  title: "Quickstart"
+  publisher: Creem
+  accessed: '2026-10-09'
+  claim: 支持创建产品及分享支付链接；生产应用应使用webhook在服务端可靠接收付款事件
+  excerpt: excerpts/creem-quickstart.md
+- id: src-creem-webhooks
+  url: https://docs.creem.io/code/webhooks
+  title: "Webhooks"
+  publisher: Creem
+  accessed: '2026-10-09'
+  claim: 接收事件前验证签名；重复投递需幂等；订阅按已付款事件开通，期末取消在当前周期结束前仍有效
+  excerpt: excerpts/creem-webhooks.md
+- id: src-stripe-global
+  url: https://stripe.com/global
+  title: Stripe global availability
+  publisher: Stripe
+  accessed: '2026-10-09'
+  claim: 支付服务开通地区正文列表包含香港、未列中国大陆；网站语言地区选择器不是支付准入列表
+  excerpt: excerpts/stripe-global.md
+  archive: https://web.archive.org/web/20261008112923/https://stripe.com/global
+- id: src-stripe-tax-how
+  url: https://docs.stripe.com/tax/how-tax-works
+  title: How Stripe Tax works
+  publisher: Stripe
+  accessed: '2026-10-09'
+  claim: 税务合规需识别义务、注册、计算收取以及申报缴纳；Stripe及合作方提供自动化工具，不能把接入税额计算等同于已完成所有步骤
+  excerpt: excerpts/stripe-tax-how.md
+  archive: https://web.archive.org/web/20261008113229/https://docs.stripe.com/tax/how-tax-works
+- id: src-apple-payment-guidelines
+  url: https://developer.apple.com/app-store/review/guidelines/
+  title: App Review Guidelines — 3.1 Payments
+  publisher: Apple
+  accessed: '2026-10-09'
+  claim: 3.1.1规定应用内数字功能使用IAP；3.1.1(a)与3.1.3另列美国店面、特定地区授权及应用类别等例外条件
+  excerpt: excerpts/apple-payment-guidelines.md
+  archive: https://web.archive.org/web/20261008113029/https://developer.apple.com/app-store/review/guidelines/
+- id: src-google-play-payments
+  url: https://support.google.com/googleplay/android-developer/answer/9858738?hl=en
+  title: Payments — Play Console Help
+  publisher: Google
+  accessed: '2026-10-09'
+  claim: Play分发应用的数字功能交易原则上须用Play结算，第3、8、9节列例外；符合地区条件的替代结算或外链须按适用计划要求办理
+  excerpt: excerpts/google-play-payments.md
+  archive: https://web.archive.org/web/20261008112943/https://support.google.com/googleplay/android-developer/answer/9858738?hl=en
+- id: src-delaware-formation
+  url: https://corp.delaware.gov/howtoform/
+  title: "How to Form a New Business Entity"
+  publisher: Delaware Division of Corporations
+  accessed: "2026-10-09"
+  claim: "主体选择、州内实体地址的注册代理、名称预留非必需及设立文件；页面旧年度税数字已与现行法冲突，费用不再据此引用"
+  excerpt: excerpts/delaware-formation.md
+  archive: https://web.archive.org/web/20261008123715/https://corp.delaware.gov/howtoform/
+- id: src-irs-llc
+  url: https://www.irs.gov/businesses/small-businesses-self-employed/limited-liability-company-llc
+  title: "Limited liability company (LLC)"
+  publisher: Internal Revenue Service
+  accessed: "2026-10-09"
+  claim: LLC依州法设立；联邦税务分类依成员人数与选择而定，单成员通常为disregarded entity，两名以上通常为partnership，另有选择与例外
+  excerpt: excerpts/irs-llc.md
+  archive: https://web.archive.org/web/20261008123811/https://www.irs.gov/businesses/small-businesses-self-employed/limited-liability-company-llc
+- id: src-irs-ein
+  url: https://www.irs.gov/businesses/employer-identification-number
+  title: "Employer identification number"
+  publisher: Internal Revenue Service
+  accessed: "2026-10-09"
+  claim: 直接向IRS申请EIN免费；先完成州设立；主要经营地在美国境外的国际申请人可电话或提交SS-4传真、邮寄申请
+  excerpt: excerpts/irs-ein.md
+  archive: https://web.archive.org/web/20261002101401/https://www.irs.gov/businesses/employer-identification-number
+- id: src-irs-5472
+  url: https://www.irs.gov/instructions/i5472
+  title: "Instructions for Form 5472 (12/2024)"
+  publisher: Internal Revenue Service
+  accessed: "2026-10-09"
+  claim: foreign-owned U.S. disregarded entity有须报告关联交易时需5472附pro forma 1120；出资与分配可能属于须报告交易；违规未报有25000美元罚款
+  excerpt: excerpts/irs-5472.md
+- id: src-fincen-boi-2026
+  url: https://www.fincen.gov/boi
+  title: "Beneficial Ownership Information Reporting"
+  publisher: Financial Crimes Enforcement Network
+  accessed: "2026-10-09"
+  claim: 2026年8月11日更新说明终局规则下美国公司免报BOI，外国报告实体另有要求；不能沿用旧的美国公司一律申报说法
+  excerpt: excerpts/fincen-boi-2026.md
+  archive: https://web.archive.org/web/20261008123938/https://www.fincen.gov/boi
+- id: src-hk-cr-incorporation
+  url: https://www.cr.gov.hk/en/services/register-company.htm
+  title: "How to register a new company?"
+  publisher: 香港公司注册处
+  accessed: "2026-10-09"
+  claim: 香港本地股份有限公司按类型/名称核对，提交NNC1、章程及IRBR1和费用；获批后取得公司注册及商业登记证明，另核业务许可
+  excerpt: excerpts/hk-cr-incorporation.md
+  archive: https://web.archive.org/web/20261008123943/https://www.cr.gov.hk/en/services/register-company.htm
+- id: src-hk-cr-incorporation-faq
+  url: https://www.cr.gov.hk/en/faq/local-company/incorporation.htm
+  title: "Local Limited Companies — Incorporation FAQ"
+  publisher: 香港公司注册处
+  accessed: "2026-10-09"
+  claim: 非香港居民可设本地有限公司；注册地址须在香港；私人公司须公司秘书及至少一名自然人董事，唯一董事不能兼任秘书
+  excerpt: excerpts/hk-cr-incorporation-faq.md
+- id: src-hk-cr-annual-return
+  url: https://www.cr.gov.hk/en/compliance/annual-return/private-company.htm
+  title: "Annual Return — Local Private Company"
+  publisher: 香港公司注册处
+  accessed: "2026-10-09"
+  claim: 一般本地私人公司须在成立周年后42日内交NAR1；按期交付的年度登记费105港元，不是公司全年总维护费
+  excerpt: excerpts/hk-cr-annual-return.md
+  archive: https://web.archive.org/web/20261008123926/https://www.cr.gov.hk/en/compliance/annual-return/private-company.htm
+- id: src-hk-ird-bir51
+  url: https://www.ird.gov.hk/eng/tax/bir51e_notes.htm
+  title: "Notes and Instructions — Form BIR51"
+  publisher: 香港税务局
+  accessed: "2026-10-09"
+  claim: 离岸利润不课税主张须提供理由并能用证据支持；业务账簿记录有保存义务；报税资料与平台结算不是同一事项
+  excerpt: excerpts/hk-ird-bir51.md
+  archive: https://web.archive.org/web/20261008124306/https://www.ird.gov.hk/eng/tax/bir51e_notes.htm
+- id: src-hk-ird-profits-returns
+  url: https://www.ird.gov.hk/eng/tax/bus_cpt.htm
+  title: "Completion of Profits Tax Returns and Supplementary Forms"
+  publisher: 香港税务局
+  accessed: "2026-10-09"
+  claim: 公司利得税申报支持文件一般含经审计财务报表，原文列不活动公司等例外；委托服务商不解除纳税人申报义务
+  excerpt: excerpts/hk-ird-profits-returns.md
+  archive: https://web.archive.org/web/20261008124344/https://www.ird.gov.hk/eng/tax/bus_cpt.htm
+- id: src-cn-market-registration
+  url: https://www.mee.gov.cn/zcwj/gwywj/202108/t20210824_860263.shtml
+  title: "中华人民共和国市场主体登记管理条例（国务院令第746号）"
+  publisher: 国务院（生态环境部转载中国政府网）
+  accessed: "2026-10-09"
+  claim: 第三条规定市场主体登记原则及法律行政法规例外，第十六条列申请材料；平台个人账户准入不能代替经营登记适用判断
+  excerpt: excerpts/cn-market-registration.md
+  archive: https://web.archive.org/web/20260518110200/https://www.mee.gov.cn/zcwj/gwywj/202108/t20210824_860263.shtml
+- id: src-tax-iit-law
+  url: https://fgk.chinatax.gov.cn/zcfgk/c100009/c5193028/content.html
+  title: "中华人民共和国个人所得税法"
+  publisher: 国家税务总局政策法规库
+  accessed: "2026-10-09"
+  claim: 规定居民个人与境内外所得、所得类别和计税口径，以及综合所得、经营所得、无扣缴义务人和境外所得的不同申报期间
+  excerpt: excerpts/tax-iit-law.md
+  archive: https://web.archive.org/web/20261005064423/https://fgk.chinatax.gov.cn/zcfgk/c100009/c5193028/content.html
+- id: src-tax-vat-implementation-2026
+  url: https://fgk.chinatax.gov.cn/zcfgk/c100010/c5246349/content.html
+  title: "中华人民共和国增值税法实施条例"
+  publisher: 国家税务总局政策法规库
+  accessed: '2026-10-09'
+  claim: 自2026年1月1日施行；自然人属于小规模纳税人；第九条跨境软件服务零税率有境外单位及完全境外消费等条件，第四十八条另规定申报要求
+  excerpt: excerpts/tax-vat-implementation-2026.md
+  archive: https://web.archive.org/web/20261008124706/https://fgk.chinatax.gov.cn/zcfgk/c100010/c5246349/content.html
+- id: src-tax-calendar-2026
+  url: https://fgk.chinatax.gov.cn/zcfgk/c102424/c5245729/content.html
+  title: "国家税务总局办公厅关于明确2026年度申报纳税期限的通知"
+  publisher: 国家税务总局办公厅
+  accessed: '2026-10-09'
+  claim: 对每月或每季度期满后15日内申报的税种，2026年各月有节假日顺延；具体申报日不能只按法条15日机械推算
+  excerpt: excerpts/tax-calendar-2026.md
+  archive: https://web.archive.org/web/20261008124632/https://fgk.chinatax.gov.cn/zcfgk/c102424/c5245729/content.html
+
+- id: src-flomo-pricing-learning
+  url: https://shaonan.blog/posts/20250413-flomo/
+  title: flomo：一条长坡薄雪的道路
+  publisher: 少楠 · flomo 联合创始人
+  accessed: 2026-10-10
+  claim: 作者回顾初期表单收费及近一半纯支持付款，并报告第二年发现会员功能未被充分体验后转向引导、介绍与续费提醒；为归属明确的经历，不是独立验证的效果或海外需求
+  excerpt: excerpts/flomo-pricing-learning.md
+- id: src-pinboard-pricing-change
+  url: https://blog.pinboard.in/2014/12/new_pricing_policy/
+  title: New Pricing Policy
+  publisher: Maciej Cegłowski · Pinboard
+  accessed: 2026-10-09
+  claim: 2014 年原始公告将 2015 年新账户基础收费改为年费，主要解释为降低旧方案的沟通混淆，并保留既有账户安排；不代表现行报价
+  excerpt: excerpts/pinboard-pricing-change.md
+- id: src-creem-subscriptions
+  url: https://docs.creem.io/features/subscriptions/introduction
+  title: Subscriptions
+  publisher: Creem
+  accessed: 2026-10-09
+  claim: 订阅按周期扣款；试用、未付款、有效和期末取消为不同状态；生产应使用webhook同步权益
+  excerpt: excerpts/creem-subscriptions.md
+- id: src-hn-show
+  url: https://news.ycombinator.com/showhn.html
+  title: Show HN Guidelines
+  publisher: Hacker News
+  accessed: 2026-10-10
+  claim: Show HN须为本人参与且可供尝试的作品；不接收纯落地页；不要请朋友投票或评论
+  excerpt: excerpts/hn-show.md
+- id: src-ph-launch
+  url: https://www.producthunt.com/launch
+  title: Product Hunt Launch Guide
+  publisher: Product Hunt
+  accessed: 2026-10-09
+  claim: 鼓励作者自行发布，不要求第三方hunter；不能直接要求投票；发布入口为Submit/New Product
+  excerpt: excerpts/ph-launch.md
+  archive: https://web.archive.org/web/20261009063530/https://www.producthunt.com/launch
+- id: src-creem-refunds-cancellations
+  url: https://docs.creem.io/features/subscriptions/refunds-and-cancellations
+  title: Refunds and Cancellations
+  publisher: Creem
+  accessed: 2026-10-10
+  claim: 支持即时或期末取消、客户门户取消以及全额/部分退款；退款、取消、权益更新分别处理，发起退款不等于资金已经到达客户账户
+  excerpt: excerpts/creem-refunds-cancellations.md
+- id: src-reddit-spam
+  url: https://support.reddithelp.com/hc/en-us/articles/360043504051-Spam
+  title: Spam
+  publisher: Reddit Help
+  accessed: 2026-10-09
+  claim: 禁止重复或未经请求的大量互动；社区另有规则且由版主判定，不存在本文可据以宣传的统一推广比例
+  excerpt: excerpts/reddit-spam.md
+- id: src-x-authenticity
+  url: https://help.x.com/en/rules-and-policies/authenticity
+  title: Authenticity
+  publisher: X Help Center
+  accessed: 2026-10-09
+  claim: 禁止批量未经请求的回复/私信、重复内容及互刷互动；不得通过新账号绕过封禁
+  excerpt: excerpts/x-authenticity.md
+- id: src-google-seo-starter
+  url: https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=zh-cn
+  title: 搜索引擎优化（SEO）入门指南
+  publisher: Google Search Central
+  accessed: 2026-10-10
+  claim: 不保证收录或排名；提供独有实用内容、描述性标题/链接、检查抓取与规范网址；站点地图不是排名保证；更改影响可能数小时至数月，通常需数周评估，且并非所有更改都有明显效果
+  excerpt: excerpts/google-seo-starter.md
+  archive: https://web.archive.org/web/20261010022314/https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=zh-cn
+- id: src-creem-trials
+  url: https://docs.creem.io/features/trials
+  title: Trials
+  publisher: Creem
+  accessed: 2026-10-09
+  claim: 免费试用验证并保存卡，期满收常规价；付费试用先收试用费且取消不自动退费，免费/付费均处于 trialing，第一次常规付款后变为 active；改试用设置只影响之后新建订阅
+  excerpt: excerpts/creem-trials.md
+- id: src-gmail-senders
+  url: https://support.google.com/mail/answer/81126?hl=en
+  title: Email sender guidelines
+  publisher: Google Gmail Help
+  accessed: "2026-10-10"
+  claim: 个人Gmail发件认证要求区分所有/批量发送者；建议SPF、DKIM、DMARC及清晰退订；配置不保证投递
+  excerpt: excerpts/gmail-senders.md
+- id: src-cloudflare-secrets
+  url: https://developers.cloudflare.com/workers/configuration/secrets/
+  title: Secrets
+  publisher: Cloudflare Workers Docs
+  accessed: 2026-10-09
+  claim: 敏感API密钥使用secrets而非配置中的明文vars；本地密钥文件不提交Git；环境需分别配置
+  excerpt: excerpts/cloudflare-secrets.md
+- id: src-creem-subscription-changes
+  url: https://docs.creem.io/features/subscriptions/managing
+  title: Managing Subscriptions
+  publisher: Creem
+  accessed: 2026-10-09
+  claim: 升级/降级立即生效，差额处理按update_behavior；改产品价格仅用于新结账，既有订阅不自动变价且迁移不自动通知客户
+  excerpt: excerpts/creem-subscription-changes.md
+- id: src-cloudflare-registrar
+  url: https://developers.cloudflare.com/registrar/
+  title: Cloudflare Registrar
+  publisher: Cloudflare Docs
+  accessed: 2026-10-09
+  claim: Cloudflare Registrar默认开启域名自动续费；域名购买和续费、DNS及密钥是不同运维事项
+  excerpt: excerpts/cloudflare-registrar.md
+- id: src-eu-gdpr-business
+  url: https://europa.eu/youreurope/business/governance-and-sustainability/digital-and-data-compliance/data-protection-gdpr/index_en.htm
+  title: Data protection under GDPR
+  publisher: Your Europe · European Union
+  accessed: 2026-10-09
+  claim: GDPR适用范围、合法处理依据、处理者合同、跨境传输及数据主体权利；删除权存在例外
+  excerpt: excerpts/eu-gdpr-business.md
+- id: src-cn-pipl
+  url: https://www.cac.gov.cn/2021-08/20/c_1631050028355286.htm
+  title: 中华人民共和国个人信息保护法
+  publisher: 国家互联网信息办公室
+  accessed: 2026-10-10
+  claim: 个人信息处理的地域范围、最小必要、合法依据、告知、委托、跨境、安全及删除义务
+  excerpt: excerpts/cn-pipl.md
+  archive: https://web.archive.org/web/20261006141221/https://www.cac.gov.cn/2021-08/20/c_1631050028355286.htm
+
+- id: src-cn-internet-services
+  url: https://www.nmpa.gov.cn/xxgk/fgwj/flxzhfg/20250416164819194.html
+  title: 互联网信息服务管理办法（2024年修订文本）
+  publisher: 国家药品监督管理局 · 国务院法规转载
+  accessed: 2026-10-09
+  claim: 境内互联网信息服务的许可与备案区分；不能仅按软件是否收费推定具体许可类别
+  excerpt: excerpts/cn-internet-services.md
+- id: src-cn-internet-services-draft
+  url: https://www.cac.gov.cn/2026-07/03/c_1784822399677167.htm
+  title: 关于《互联网信息服务管理办法（修订草案征求意见稿）》再次公开征求意见的通知
+  publisher: 国家互联网信息办公室
+  accessed: 2026-10-09
+  claim: 2026年7月3日发布的文本明确为修订草案征求意见稿，不能当作已生效规则
+  excerpt: excerpts/cn-internet-services-draft.md
+- id: src-cn-app-filing
+  url: http://www.hunan.gov.cn/zqt/zcsd/202308/t20230809_29456035.html
+  title: 工业和信息化部关于开展移动互联网应用程序备案工作的通知
+  publisher: 工业和信息化部 · 湖南省人民政府转载
+  accessed: 2026-10-09
+  claim: 在中国境内从事互联网信息服务的APP主办者须备案；网站备案不能替代APP信息补充
+  excerpt: excerpts/cn-app-filing.md
+- id: src-eu-cookies
+  url: https://europa.eu/youreurope/business/growing/digitalising/online-privacy/index_en.htm
+  title: Online privacy
+  publisher: Your Europe · European Union
+  accessed: 2026-10-09
+  claim: 严格必要Cookie与需同意的追踪Cookie不同；需要同意时须先取得同意再设置，撤回应同样方便
+  excerpt: excerpts/eu-cookies.md
+- id: src-eu-withdrawal
+  url: https://europa.eu/youreurope/citizens/consumers/shopping/returns/index_en.htm
+  title: Returns
+  publisher: Your Europe · European Union
+  accessed: 2026-10-09
+  claim: 欧盟远程消费合同通常有14天撤回期；数字内容和已完全履行服务的例外有明确同意等条件，不能笼统排除SaaS退款
+  excerpt: excerpts/eu-withdrawal.md
+- id: src-apple-enrollment
+  url: https://developer.apple.com/programs/enroll/
+  title: Become a member
+  publisher: Apple Developer
+  accessed: 2026-10-09
+  claim: 个人以法定姓名注册并显示为卖家；需双重认证；年费99美元或当地币种；组织验证另有要求
+  excerpt: excerpts/apple-enrollment.md
+- id: src-apple-payouts
+  url: https://developer.apple.com/help/app-store-connect/getting-paid/overview-of-receiving-payments/
+  title: Overview of receiving payments
+  publisher: Apple Developer
+  accessed: 2026-10-09
+  claim: 收款需有效付费App协议、银行资料、达到地区门槛及适用开票要求；按Apple财务月结算，可能有银行费
+  excerpt: excerpts/apple-payouts.md
+- id: src-google-play-enrollment
+  url: https://support.google.com/googleplay/android-developer/answer/6112435?hl=en
+  title: Get started with Play Console
+  publisher: Google Play Console Help
+  accessed: 2026-10-09
+  claim: 注册费25美元一次性；需身份核验，新个人账号有测试及Android设备验证要求
+  excerpt: excerpts/google-play-enrollment.md
+- id: src-google-play-testing
+  url: https://support.google.com/googleplay/android-developer/answer/14151465?hl=en
+  title: App testing requirements for new personal developer accounts
+  publisher: Google Play Console Help
+  accessed: 2026-10-09
+  claim: 2023年11月13日后创建的个人账号须至少12名测试者连续加入封闭测试14天，满足条件后申请生产权限而非自动上线
+  excerpt: excerpts/google-play-testing.md
+- id: src-google-play-locations
+  url: https://support.google.com/googleplay/android-developer/answer/9306917?hl=en
+  title: Supported locations for developer and merchant registration
+  publisher: Google Play Console Help
+  accessed: 2026-10-09
+  claim: 官方表China行开发者与商家注册均为支持、默认币种USD；不等于个案银行账户核验通过
+  excerpt: excerpts/google-play-locations.md
+- id: src-owasp-authentication
+  url: https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html
+  title: Authentication Cheat Sheet
+  publisher: OWASP Cheat Sheet Series
+  accessed: 2026-10-09
+  claim: 认证防护包括多因素认证及登录限速；需兼顾账户锁定安全与可用性
+  excerpt: excerpts/owasp-authentication.md
+- id: src-stripe-disputes-response
+  url: https://docs.stripe.com/disputes/responding
+  title: 回应争议
+  publisher: Stripe Docs
+  accessed: 2026-10-09
+  claim: 争议需按个案截止日回应，证据应针对争议原因；正式争议须走争议流程而非额外退款
+  excerpt: excerpts/stripe-disputes-response.md
+- id: src-cn-small-data-processors
+  url: https://www.cac.gov.cn/2026-07/24/c_1786638889704872.htm
+  title: 小型个人信息处理者个人信息保护简化措施规定
+  publisher: 国家互联网信息办公室、公安部
+  accessed: 2026-10-09
+  claim: 2026年9月1日起对境内处理不满10万人个人信息的处理者提供有条件简化措施，不等于免除个人信息保护义务
+  excerpt: excerpts/cn-small-data-processors.md
+- id: src-cn-cross-border-data
+  url: https://www.cac.gov.cn/2024-03/22/c_1712776611775634.htm
+  title: 促进和规范数据跨境流动规定
+  publisher: 国家互联网信息办公室
+  accessed: 2026-10-09
+  claim: 数据出境机制按数据类别、人数和场景区分，符合条件可豁免三项机制，但仍须依法履行告知等义务
+  excerpt: excerpts/cn-cross-border-data.md
+- id: src-creem-chargebacks
+  url: https://docs.creem.io/merchant-of-record/finance/refunds-and-chargebacks
+  title: Refunds and Chargebacks
+  publisher: Creem
+  accessed: 2026-10-10
+  claim: MoR处理拒付不意味着卖家免损失：退款从出款扣除，原交易处理费不退、拒付另有费；过多拒付可能暂停账户
+  excerpt: excerpts/creem-chargebacks.md
+- id: src-eu-consumer-rights-directive
+  url: https://commission.europa.eu/law/law-topic/consumer-protection-law/consumer-contract-law/consumer-rights-directive_en
+  title: Consumer rights directive
+  publisher: European Commission
+  accessed: 2026-10-09
+  claim: 欧盟消费者权利指令涵盖售前信息与远程合同撤回；2023/2673修订自2026年6月19日起适用，具体实施需核对成员国
+  excerpt: excerpts/eu-consumer-rights-directive.md
+
+- id: "src-buffer-early-validation"
+  url: "https://buffer.com/resources/idea-to-paying-customers-in-7-weeks-how-we-did-it/"
+  title: "Idea to Paying Customers in 7 Weeks: How We Did It"
+  publisher: "Joel Gascoigne · Buffer"
+  accessed: "2026-10-09"
+  claim: "作者回顾Buffer早期先验证兴趣、再加入价格页观察付费档选择，随后开发产品；首单后转向营销和客户理解，属于历史亲历报告而非可复制收益保证"
+  excerpt: "excerpts/buffer-early-validation.md"
+- id: "src-hertz-first-dollar"
+  url: "https://juejin.cn/post/7524658995723943987"
+  title: "第一次赚美元！纯新手深度复盘网站出海，一文掌握全流程"
+  publisher: "赫兹（droidHZ）· 稀土掘金"
+  accessed: "2026-10-09"
+  claim: "作者于2025-07-08自述因无海外公司和海外银行卡选择Creem与支付宝，并报告网站订阅收入；未据此核实本人账户到账或其他平台现行准入"
+  excerpt: "excerpts/hertz-first-dollar.md"
+- id: "src-v2ex-traffic-lessons"
+  url: "https://www.v2ex.com/t/1160804"
+  title: "想全职独立开发/合伙创业? 这里有些我的感想"
+  publisher: "bbbblue · V2EX"
+  accessed: "2026-10-10"
+  claim: "2025-09-21作者在第12条回复自述内容带来搜索流量却未帮助产品；仅为具名账号的个案报告，不证明收入、普遍失败率或内容营销因果"
+  excerpt: "excerpts/v2ex-traffic-lessons.md"
+- id: "src-ink-local-first"
+  url: "https://www.inkandswitch.com/local-first/"
+  title: "Local-first software: You own your data, in spite of the cloud"
+  publisher: "Martin Kleppmann、Adam Wiggins、Peter van Hardenberg、Mark McGranaghan · Ink & Switch"
+  accessed: "2026-10-09"
+  claim: "2019年研究基于原型讨论本地数据控制、隐私、备份与多人协作的取舍；本地处理可减少集中持有数据，但不自动完成法律合规"
+  excerpt: "excerpts/ink-local-first.md"
+- id: "src-plausible-boundaries"
+  url: "https://plausible.io/when-not-to-use-plausible"
+  title: "When Plausible is not the right fit"
+  publisher: "Plausible Analytics"
+  accessed: "2026-10-09"
+  claim: "厂商说明不提供会话回放、个人跨会话历史等能力，并要求避免在URL和自定义事件中发送个人资料；只支持其设计取舍，不采纳其概括性合规承诺"
+  excerpt: "excerpts/plausible-boundaries.md"
+  archive: https://web.archive.org/web/20261009015521/https://plausible.io/when-not-to-use-plausible
+- id: src-fr-online-withdrawal
+  url: https://www.francenum.gouv.fr/guides-et-conseils/developpement-commercial/gestion-de-la-relation-client/la-retractation-en-1-clic
+  title: La rétractation en 1 clic, une nouvelle obligation pour les e-commerçants
+  publisher: France Num
+  accessed: '2026-10-09'
+  claim: 法国官方2026-10-02更新指南说明自6月19日起适用的在线撤回功能：可见入口、法定期间可用、合同识别与确认、持久载体回执；仅作为法国实施示例，不泛化到全部国家或所有合同
+  excerpt: excerpts/fr-online-withdrawal.md
+  archive: https://web.archive.org/web/20260921102337/https://www.francenum.gouv.fr/guides-et-conseils/developpement-commercial/gestion-de-la-relation-client/la-retractation-en-1-clic
+
+- id: src-latiao-overseas-lessons
+  url: "https://dev-life.online/blog/yusubuda"
+  title: "独立开发出海三个月，我犯了这些错"
+  publisher: "辣条加辣 · 辣条的博客"
+  accessed: "2026-10-09"
+  claim: "作者2025-04-25复盘先开发后考虑目标用户与触达的失败，并以AI头像网站为例；仅采用其自述行动和反思，不采纳平台最佳发布时间、hunter必要性或收入保证"
+  excerpt: "excerpts/latiao-overseas-lessons.md"
+
+- id: src-plausible-growth-story
+  url: "https://plausible.io/blog/open-source-saas"
+  title: "How we built a $1M ARR open source SaaS"
+  publisher: "Marko Saric · Plausible Analytics"
+  accessed: "2026-10-09"
+  claim: "联合创始人2022年复盘2019年无关主题流量、2020年营销合伙人加入后的定位与内容调整，以及后续产品性能和支持投入；采用其报告的行动与结果，不推导单一增长原因或收入承诺"
+  excerpt: "excerpts/plausible-growth-story.md"
+
+- id: src-pg-manual-recruiting
+  url: "https://paulgraham.com/ds.html"
+  title: "Do Things that Don't Scale"
+  publisher: "Paul Graham"
+  accessed: "2026-10-09"
+  claim: "2013年文章结合作者接触的创业团队讨论早期逐个招募用户、帮助完成使用和关注初期体验；属于特定创业环境下的经验分析，不证明普遍成功率或适用于任何地区的触达许可"
+  excerpt: "excerpts/pg-manual-recruiting.md"
+
+- id: src-superhuman-pmf
+  url: "https://review.firstround.com/how-superhuman-built-an-engine-to-find-product-market-fit/"
+  title: "How Superhuman Built an Engine to Find Product Market Fit"
+  publisher: "Rahul Vohra · First Round Review"
+  accessed: "2026-10-09"
+  claim: "Superhuman 创始人回顾按核心使用经历、实际价值和阻碍分组反馈，提升移动端及日历优先级，再比较投入与影响；本书不采用其 PMF 百分比、样本阈值或忽略所有不满意者的建议"
+  excerpt: "excerpts/superhuman-pmf.md"
+
+- id: src-amplitude-usage-interval
+  url: https://amplitude.com/books/mastering-retention/your-critical-event-and-product-usage-interval
+  title: Your critical event and product usage interval
+  publisher: Amplitude
+  accessed: 2026-10-09
+  claim: 留存分析方法强调先定义与核心价值相符的事件及自然使用周期，再解读回访；本书不采用其固定观察天数或百分位建议，也不声称演示等同平台默认留存算法
+  excerpt: excerpts/amplitude-usage-interval.md
+- id: src-intercom-feedback-mistakes
+  url: https://www.intercom.com/blog/5-mistakes-we-all-make-with-product-feedback/
+  title: 5 product feedback mistakes we all make
+  publisher: Des Traynor · Intercom
+  accessed: 2026-10-10
+  claim: 2014 年方法文章按使用阶段与待回答的问题选择反馈对象，将重复反馈视为待验证的假设，并追问请求背后的任务；不采用排除所有免费用户或仅凭直觉跳过验证的泛化建议
+  excerpt: excerpts/intercom-feedback-mistakes.md
+- id: src-intercom-feature-support
+  url: https://www.intercom.com/blog/rarely-say-yes-to-feature-requests/
+  title: Rarely say yes to feature requests
+  publisher: Des Traynor · Intercom
+  accessed: 2026-10-09
+  claim: 2014 年文章第 7 节讨论只估上线开发成本会漏掉维护与支持，第 6 节提醒局部点击增加不等于整体价值；不采用其全部筛选标准为通用规则
+  excerpt: excerpts/intercom-feature-support.md
+
+- id: src-tally-early-growth
+  url: "https://blog.tally.so/how-we-bootstrapped-tally-to-10k-mrr/"
+  title: "How we bootstrapped Tally to $10k MRR"
+  publisher: "Marie Martens · Tally"
+  accessed: "2026-10-10"
+  claim: "联合创始人2022-02-11回顾免费表单降低尝试门槛、表单上的品牌标记带来用户，以及小团队通过限制复杂度和改善文档降低支持负担；属于历史自述，不代表当前套餐或免费策略的普遍效果"
+  excerpt: "excerpts/tally-early-growth.md"
+
+- id: src-yc-talk-users-video
+  url: "https://www.youtube.com/watch?v=MT4Ig2uqjTc"
+  title: "Eric Migicovsky - How to Talk to Users"
+  publisher: "Y Combinator · YouTube"
+  accessed: "2026-10-09"
+  claim: "YC于2019-07-25发布Eric Migicovsky的用户访谈讲座；播放器元数据为31分37秒、英文自动字幕并允许嵌入，具体提问内容另以YC配套转录核对"
+  excerpt: "excerpts/yc-talk-users-video.md"
+
+- id: src-yc-user-interview-notes
+  url: "https://www.ycombinator.com/blog/startup-school-week-1-recap-kevin-hale-and-eric-migicovsky/"
+  title: "Startup School Week 1 Recap: Kevin Hale and Eric Migicovsky"
+  publisher: "Y Combinator"
+  accessed: "2026-10-09"
+  claim: "2019-09-04官方配套转录的Eric段落讨论先了解用户过去实际遇到的问题、已尝试的办法及不足，避免在研究访谈中推销或只问假设性意愿；不将VC增长标准泛化给所有个人产品"
+  excerpt: "excerpts/yc-user-interview-notes.md"
+
+- id: src-eric-interview-update
+  url: "https://ericmigi.com/blog/startup-school-how-to-talk-to-users"
+  title: "Startup School - How to talk to users"
+  publisher: "Eric Migicovsky"
+  accessed: "2026-10-09"
+  claim: "作者在讲座链接页的2025年补充中说明框架基于The Mom Test，自己做Pebble和Beeper时很少实际采用，常从自己想要的产品出发；仅为其个人方法自述"
+  excerpt: "excerpts/eric-interview-update.md"
+
+- id: src-level-validation-retrospective
+  url: "https://www.derrickreimer.com/walking-away"
+  title: "I’m Walking Away From the Product I Spent a Year Building"
+  publisher: "Derrick Reimer"
+  accessed: "2026-10-10"
+  claim: "作者2019-05-17复盘Level：访谈、候补名单和付费预订未充分转化为团队试用；部分客户满意，但小团队切换动力弱，大团队要求更高的成熟度。作者还比较咨询、免费版和销售投入，与其小团队自举目标不合；支持其自述过程与反思，不推导普遍失败率或当前Slack用户需求"
+  excerpt: "excerpts/level-validation-retrospective.md"
+
+- id: src-v2ex-builder-retrospective
+  url: "https://v2ex.com/t/980242"
+  title: "复盘一个独立开发2年的项目"
+  publisher: "softlight · V2EX"
+  accessed: "2026-10-09"
+  claim: "账号softlight于2023-10-09复盘页面搭建器：把公司内部类似技术的价值外推到市场，投入可扩展架构后发现与目标用户需求错位；第77条回复明确原公司没有使用该产品。仅为作者自述，不证明市场规模或商业结果"
+  excerpt: "excerpts/v2ex-builder-retrospective.md"
+
+- id: src-bannerbear-pivot
+  url: https://www.bannerbear.com/blog/the-pivot/
+  title: The Pivot
+  publisher: Jon Yongfook · Bannerbear
+  accessed: '2026-10-10'
+  claim: 作者2020年1月宣布从Previewmojo的Open Graph图片生成转向更多尺寸和用途，描述低任务频率、用户认知、反复出现的其他尺寸请求，以及收拢多产品投入；是当时的转向判断，不证明后续增长或普遍机会
+  excerpt: excerpts/bannerbear-pivot.md
+
+- id: src-toggl-client-report
+  url: https://support.toggl.com/en-us/article/how-to-generate-a-report-for-a-client-1vbg4xh/
+  title: How to generate a report for a client?
+  publisher: Toggl Knowledge Base
+  accessed: '2026-10-09'
+  claim: 官方操作文档说明在Detailed report按Client或Project及日期筛选，下载PDF交给客户，需要概览时使用Summary report；仅核对文档所述能力，未执行账户操作或比较套餐
+  excerpt: excerpts/toggl-client-report.md
+
+- id: src-agencyanalytics-reporting
+  url: https://agencyanalytics.com/features/automated-marketing-reports
+  title: Automated Marketing Reports That Impress Clients, Fast!
+  publisher: AgencyAnalytics
+  accessed: '2026-10-09'
+  claim: 产品页面描述接入营销平台数据、模板、定时交付及添加专业评论，部分套餐提供发送前审核；用于了解该类产品覆盖的工作，不采用节省时间、客户数量或收入等宣传数字，也不声称实测
+  excerpt: excerpts/agencyanalytics-reporting.md
+
+- id: src-asana-status-updates
+  url: https://help.asana.com/s/article/project-progress-and-status-updates
+  title: Project progress and status updates
+  publisher: Asana Help Center
+  accessed: '2026-10-09'
+  claim: 官方文档说明选择项目状态、填写摘要和下一步、加入里程碑等项目记录并发布或打印状态更新；仅支持现有工作路径，不代表已登录实测、特定套餐承诺或工作室实际采用情况
+  excerpt: excerpts/asana-status-updates.md
+
+
+- id: src-posthog-first-users
+  url: https://posthog.com/founders/first-1000-users
+  title: How we got our first 1,000 users
+  publisher: James Hawkins · PostHog
+  accessed: 2026-10-10
+  claim: 联合创始人2024年回顾从熟人手工帮助、简化部署、陌生人自助使用到Hacker News发布的历史过程；融资、免费和高强度支持是背景条件，不推导通用人数阈值或收入结果
+  excerpt: excerpts/posthog-first-users.md
+
+- id: src-webdesignerforum-boards
+  url: https://www.webdesignerforum.co.uk/
+  title: Forums - Web Designer Forum
+  publisher: Web Designer Forum
+  accessed: '2026-10-09'
+  claim: 公开首页分别设置Freelancing, Business and Legal Discussion及Website Reviews and Feedback版面；仅支持研究入口与版面目的，不代表成员需求、准许推广或已实际参与
+  excerpt: excerpts/webdesignerforum-boards.md
+
+- id: src-webdesignerforum-review-rules
+  url: https://www.webdesignerforum.co.uk/topic/1997-website-review-rules/
+  title: Website Review Rules
+  publisher: Jo 90 · Web Designer Forum
+  accessed: 2026-10-10
+  claim: 网站评审版仍置顶的2007年规则要求纯广告或获取链接帖子使用分类广告区，并列出至少5条帖子的参与门槛；仅核对公开规则，未登录测试当前发帖权限
+  excerpt: excerpts/webdesignerforum-review-rules.md
+
+- id: src-v2ex-report-friction
+  url: https://www.v2ex.com/t/1108613
+  title: 从 0 到 2000 元，我花了 10 个月
+  publisher: loneranger1024 · V2EX
+  accessed: '2026-10-09'
+  claim: 作者2025-02-02复盘聊天记录可视化工具，从小红书发现线索并持续推广，认为导出记录门槛和上传隐私顾虑影响使用；仅为国内消费工具的作者自述，不证明海外需求或推广因果
+  excerpt: excerpts/v2ex-report-friction.md
+
+- id: src-yc-first-customers
+  url: https://www.ycombinator.com/library/Ip-how-to-get-your-first-customers
+  title: How to get your first customers
+  publisher: Gustaf Alströmer · Y Combinator
+  accessed: '2026-10-09'
+  claim: YC配套文字与章节表区分找人、回应、演示、购买和开始使用；8分45秒为The sales funnel章节，仅借鉴过程记录，不沿用触达规模、样例转化率或所有企业均不应试用的建议
+  excerpt: excerpts/yc-first-customers.md
+
+- id: src-yc-first-customers-video
+  url: https://www.youtube.com/watch?v=hyYCn_kAngI
+  title: How to Get Your First Customers | Startup School
+  publisher: Y Combinator · YouTube
+  accessed: '2026-10-09'
+  claim: 原站核对发布者、标题、2022-12-29发布日期及22分53秒时长；讲授内容以YC配套文字核对，未声称完整观看或保证各地可播放
+  excerpt: excerpts/yc-first-customers-video.md
+
+- id: src-cheng-infrastructure-migration
+  url: https://www.chengxiaobai.com/trouble-maker/migrate-to-cloudflare.html
+  title: 开发者的窘境
+  publisher: 程小白
+  accessed: '2026-10-09'
+  claim: 作者2022-08-21复盘静态博客收拢至GitHub与Cloudflare Pages，移除收益不明的分流和图床副本、将少量图片随代码管理；采用其维护取舍，不沿用历史服务限制或地域性能结论
+  excerpt: excerpts/cheng-infrastructure-migration.md
+
+- id: src-gitlab-database-postmortem
+  url: https://about.gitlab.com/blog/postmortem-of-database-outage-of-january-31/
+  title: Postmortem of database outage of January 31
+  publisher: GitLab
+  accessed: '2026-10-09'
+  claim: 2017-02-10原始复盘说明主库误删、备份工具版本不匹配、告警邮件被拒收，最终依靠约6小时前的快照恢复且有数据缺口；历史事故不代表当前GitLab服务或小产品的普遍故障概率
+  excerpt: excerpts/gitlab-database-postmortem.md
+
+- id: src-cloudflare-placement
+  url: https://developers.cloudflare.com/workers/configuration/placement/
+  title: Placement
+  publisher: Cloudflare Workers Docs
+  accessed: '2026-10-09'
+  claim: 官方文档解释默认靠近请求入口运行与靠近后端运行的取舍，多次数据库往返会累积延迟；只支持位置与请求路径关系，不承诺具体地域性能或推荐某付费计划
+  excerpt: excerpts/cloudflare-placement.md
+  archive: https://web.archive.org/web/20261009071543/https://developers.cloudflare.com/workers/configuration/placement/
+
+- id: src-resend-email-events
+  url: https://resend.com/docs/webhooks/event-types
+  title: Event Types
+  publisher: Resend
+  accessed: "2026-10-10"
+  claim: 官方将email.sent定义为API请求成功后尝试投递，将email.delivered定义为成功送达收件方邮件服务器，并区分临时延迟和永久退信；不代表已进主收件箱或完成登录；硬退信和垃圾邮件投诉可自动加入 suppression
+  excerpt: excerpts/resend-email-events.md
+
+- id: src-supabase-backup-scope
+  url: https://supabase.com/docs/guides/platform/backups
+  title: Database Backups
+  publisher: Supabase Docs
+  accessed: '2026-10-09'
+  claim: 官方说明数据库备份包含Storage对象元数据而非对象文件，恢复旧数据库备份不会找回后来删除的对象；仅用于核对备份范围，不采用套餐、价格或无损恢复承诺
+  excerpt: excerpts/supabase-backup-scope.md
+
+- id: src-yeekal-payout-retrospective
+  url: https://yeekal.com/indie-dev/creem-payout-to-alipay/
+  title: "通过wise中转，creem海外收款方案终于闭环了"
+  publisher: Yeekal
+  accessed: "2026-10-09"
+  claim: "作者 2026-02-03 报告首次支付宝直达因材料审核失败，后改用中转；仅作归属明确的个人经历，含推荐利益，不支持账户资格、用途填写建议或成功保证"
+  excerpt: excerpts/yeekal-payout-retrospective.md
+
+- id: src-delaware-llc-tax-current
+  url: https://corp.delaware.gov/alt-entitytaxinstructions/
+  title: "LLC/LP/GP Franchise Tax Instructions"
+  publisher: "Delaware Division of Corporations"
+  accessed: "2026-10-09"
+  claim: "LLC 年度税现为 400 美元，无年度报告；前一日历年度税于次年 6 月 1 日前缴纳，年内曾在记录中有效即按全年计，不按月份分摊"
+  excerpt: excerpts/delaware-llc-tax-current.md
+  archive: https://web.archive.org/web/20261009122656/https://corp.delaware.gov/alt-entitytaxinstructions/
+
+- id: src-delaware-llc-tax-law
+  url: https://delcode.delaware.gov/title6/c018/sc11/index.html
+  title: "Delaware Code Title 6 §18-1107 — Taxation of limited liability companies and registered series"
+  publisher: "Delaware General Assembly"
+  accessed: "2026-10-09"
+  claim: "§18-1107(b) 年度税 400 美元；(c) 一般次年 6 月 1 日到期，终止存在的相关证书提交前须缴当年全额税款"
+  excerpt: excerpts/delaware-llc-tax-law.md
+
+- id: src-delaware-hb400-2026
+  url: https://legis.delaware.gov/BillDetail/143069
+  title: "House Bill 400 — 153rd General Assembly, 85 Del. Laws c. 273"
+  publisher: "Delaware General Assembly"
+  accessed: "2026-10-09"
+  claim: "2026-05-21 签署；已读 Session Law 第 23 节将 LLC 年税由 300 改 400，第 45 节规定该节自 2026-01-01 生效"
+  excerpt: excerpts/delaware-hb400-2026.md
+
+- id: src-hk-cr-deregistration
+  url: https://www.cr.gov.hk/tc/faq/local-company/dereg-striking-off-winding-up.htm
+  title: "本地有限公司 — 撤銷註冊、剔除註冊及清盤"
+  publisher: "香港公司注册处"
+  accessed: "2026-10-10"
+  claim: "问题 1–3：撤销注册适用于符合条件的不营运但有偿债能力公司，须核对全体成员同意、停业期间、债务/诉讼/资产及税务局不反对通知；解散前仍履行周年申报等责任"
+  excerpt: excerpts/hk-cr-deregistration.md
+
+- id: src-hayden-atlas-experience
+  url: https://haydenbi.com/posts/stripe-atlas-to-register-us-company-in-2026
+  title: "2026 Stripe Atlas 注册美国公司实操指南"
+  publisher: "Hayden Bi"
+  accessed: "2026-10-09"
+  claim: "作者 2026-03-07 报告选择 Atlas LLC、填写本人国内地址、注册付款受阻后联系支持解决；是本人经历，不采用普遍更稳妥、保证开户、优惠和处理时长等主张"
+  excerpt: excerpts/hayden-atlas-experience.md
+
+- id: src-teera-snapfile-closure
+  url: https://www.teeraprice.com/blog/closing-snapfile-dissolving-two-llcs
+  title: "Closing SnapFile: How I Dissolved Two LLCs and What It Cost"
+  publisher: "Teera Price"
+  accessed: "2026-10-10"
+  claim: "2025-09-02 作者报告关闭 Delaware、Nevada 两家 LLC，其中 Delaware 从未实际使用；处理多州登记、代理、账户及资料归档；仅采用维护与退出经历，不采用文中混淆的年报和现行费用"
+  excerpt: excerpts/teera-snapfile-closure.md
+
+- id: src-tax-vat-export-2026-11
+  url: http://heilongjiang.chinatax.gov.cn/art/2026/2/9/art_16401_578530.html
+  title: "财政部 税务总局关于出口业务增值税和消费税政策的公告（2026年第11号）"
+  publisher: "财政部、税务总局（黑龙江省税务局转载）"
+  accessed: "2026-10-09"
+  claim: "第一条（二）解释完全境外消费；第六条规定相关跨境服务实行简易计税的免税范围及进项不得抵扣退税；第七条有合同、收入等排除情形，第九条规定备案申报；自2026-01-01施行"
+  excerpt: excerpts/tax-vat-export-2026-11.md
+
+- id: src-v2ex-indie-tax-questions
+  url: https://cn.v2ex.com/t/948520
+  title: "独立开发者如何报税"
+  publisher: "john990 · V2EX"
+  accessed: "2026-10-09"
+  claim: "2023-06-14 原发帖人将美元收入、换汇额度、申报和维护支出混在同一问题；仅作归属明确的困惑，不采用评论中的税务结论或规避建议，无完整申报结果"
+  excerpt: excerpts/v2ex-indie-tax-questions.md
+
+- id: src-jesse-bookkeeping-experience
+  url: https://www.jessesquires.com/blog/2023/12/07/going-indie-4/
+  title: "Going Indie: bookkeeping and invoicing"
+  publisher: "Jesse Squires"
+  accessed: "2026-10-09"
+  claim: "作者 2023-12-07 在美国独立开发/咨询语境中报告每周五整理账务、附收据及首年漏记支出的经历；只采用及时留证的方法，不外推美国扣除项目、开户或软件现行可用性"
+  excerpt: excerpts/jesse-bookkeeping-experience.md
+
+- id: src-shudao-sticki-porting
+  url: https://shudao.wang/blog/weekly/weekly-173
+  title: 独立开发周记 173：安卓鸿蒙双开，踩坑永无止境
+  publisher: WANG Shudao
+  accessed: 2026-10-09
+  claim: 作者 2026-06-07 报告 Sticki Android
+    迁移中的抠图引擎取舍、设备组件差异和配置遗漏；采用历史经历，不据此判断当前库兼容性或审批周期
+  excerpt: excerpts/shudao-sticki-porting.md
+
+- id: src-shudao-sticki-launch
+  url: https://www.shudao.wang/blog/weekly/weekly-174
+  title: 独立开发周记 174：应用上架但零下载
+  publisher: WANG Shudao
+  accessed: 2026-10-09
+  claim: 作者 2026-06-14 报告 Sticki Android 在等待审核、提交工单后获准上架，发文时尚无下载；不推断工单导致获批或商店普遍无流量
+  excerpt: excerpts/shudao-sticki-launch.md
+
+- id: src-panic-transmit-ios-retirement
+  url: https://blog.panic.com/the-future-of-transmit-ios/
+  title: The Future of Transmit iOS
+  publisher: Cabel · Panic
+  accessed: 2026-10-09
+  claim: 2018-01-05 原文解释因收入不足覆盖持续开发而停售 Transmit
+    iOS，并安排最后更新、保持同步及近期购买者支持；只采用当时决策，不外推现行下载/退款规则
+  excerpt: excerpts/panic-transmit-ios-retirement.md
+
+- id: src-apple-app-review
+  url: https://developer.apple.com/app-store/review/guidelines/
+  title: App Review Guidelines — completeness, minimum functionality and privacy
+  publisher: Apple
+  accessed: 2026-10-09
+  claim: 2.1、2.2、2.3 要求可运行版本、真实元数据、可访问审核路径并将测试放在 TestFlight；4.2 超出重包网页的价值；5.1.1
+    隐私、数据最少化、无必要账号不强制登录及创建账号须可删除
+  excerpt: excerpts/apple-app-review.md
+
+- id: src-apple-testflight
+  url: https://developer.apple.com/testflight/
+  title: TestFlight — Beta testing made simple
+  publisher: Apple
+  accessed: 2026-10-09
+  claim: 外部测试首个构建须通过 TestFlight 审核；测试信息、反馈入口和外测材料，以及测试结束后另选版本送正式审核
+  excerpt: excerpts/apple-testflight.md
+
+- id: src-apple-phased-release
+  url: https://developer.apple.com/help/app-store-connect/update-your-app/release-a-version-update-in-phases/
+  title: Release a version update in phases
+  publisher: Apple
+  accessed: 2026-10-09
+  claim: 更新可按七天 1/2/5/10/20/50/100% 面向符合条件的自动更新用户分阶段；任何人仍可手动下载；暂停累计最多30天，非首次上架功能
+  excerpt: excerpts/apple-phased-release.md
+
+- id: src-google-play-staged-rollout
+  url: https://support.google.com/googleplay/android-developer/answer/6346149?hl=en
+  title: Release app updates with staged rollouts
+  publisher: Google Play Console Help
+  accessed: 2026-10-09
+  claim: 分阶段发布限版本更新，非首次发布；暂停后不再把该阶段版本给更多用户，已有该版本的用户仍保留；恢复及比例需要操作
+  excerpt: excerpts/google-play-staged-rollout.md
+  archive: https://web.archive.org/web/20260925062337/https://support.google.com/googleplay/android-developer/answer/6346149?hl=en
+
+- id: src-apple-review-replies
+  url: https://developer.apple.com/help/app-store-connect/manage-submissions-to-app-review/reply-to-app-review-messages/
+  title: Reply to App Review messages
+  publisher: Apple
+  accessed: 2026-10-09
+  claim: 可在 App Review 回复拒审原因并附截图/材料；若仅元数据问题，修正后可重送同一构建
+  excerpt: excerpts/apple-review-replies.md
+
+- id: src-google-play-review-preparation
+  url: https://support.google.com/googleplay/android-developer/answer/9859455?hl=en
+  title: Prepare your app for review
+  publisher: Google Play Console Help
+  accessed: 2026-10-09
+  claim: App content 涵盖隐私、广告、目标年龄/评级、敏感权限与访问说明，受限应用需提供全部可访问信息并维护声明
+  excerpt: excerpts/google-play-review-preparation.md
+
+- id: src-apple-app-privacy-details
+  url: https://developer.apple.com/app-store/app-privacy-details/
+  title: App privacy details on the App Store
+  publisher: Apple
+  accessed: 2026-10-09
+  claim: 上架/更新需提供应用与第三方集成的数据实践；声明按实际收集核对并保持更新，不只看自己写的代码
+  excerpt: excerpts/apple-app-privacy-details.md
+
+
+- id: src-google-play-account-information
+  url: https://support.google.com/googleplay/android-developer/answer/13628312?hl=en
+  title: Required information to create a Play Console developer account
+  publisher: Google Play Console Help
+  accessed: 2026-10-09
+  claim: 个人开发者名称可与法定姓名不同，但 Google Play 公开法定姓名、国家和开发者邮箱；变现时公开完整地址，特定地区可能还需额外公开信息
+  excerpt: excerpts/google-play-account-information.md
+
+- id: src-allen-aws-incident
+  url: https://www.cnblogs.com/AllenMaster/p/15095254.html
+  title: "AWS 安全信息泄露-----21天烧了27万"
+  publisher: "Grant_Allen · 博客园"
+  accessed: "2026-10-09"
+  claim: "作者 2021-08-03 报告遗留 IAM 账号被利用，删除资源后再次出现新资源，后来移除权限；日志判断修正最初 access key 泄露猜测；不采用未发表的费用处理结果"
+  excerpt: excerpts/allen-aws-incident.md
+
+- id: src-cloudflare-2023-incident
+  url: https://blog.cloudflare.com/thanksgiving-2023-security-incident/
+  title: "Thanksgiving 2023 security incident"
+  publisher: "Matthew Prince、John Graham-Cumming、Grant Bourzikas · Cloudflare"
+  accessed: "2026-10-09"
+  claim: "2024-02-01 官方复盘称，2023 年 11 月事件涉及之前失窃且误认为未使用、未轮换的一个访问令牌及三个服务账号凭据；采用事故自述及凭据清点教训，不作独立调查结论"
+  excerpt: excerpts/cloudflare-2023-incident.md
+
+- id: src-github-2fa-recovery
+  url: https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/recovering-your-account-if-you-lose-your-2fa-credentials
+  title: "Recovering your account if you lose your 2FA credentials"
+  publisher: "GitHub Docs"
+  accessed: 2026-10-10
+  claim: "可用恢复码、预先配置的其他认证或符合条件的恢复因素恢复；没有可用恢复方法时将永久失去访问，支持不能仅凭请求恢复；不承诺个案恢复时间"
+  excerpt: excerpts/github-2fa-recovery.md
+
+- id: src-github-secret-removal
+  url: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository
+  title: "Removing sensitive data from a repository"
+  publisher: "GitHub Docs"
+  accessed: "2026-10-09"
+  claim: "敏感凭据泄露应先撤销或轮换；重写仓库历史不能自行清除其他克隆、分叉及缓存；不提供或执行本仓库历史改写"
+  excerpt: excerpts/github-secret-removal.md
+
+- id: src-cn-cyber-incident-report
+  url: https://www.cac.gov.cn/2025-09/15/c_1759583017717009.htm
+  title: "国家网络安全事件报告管理办法"
+  publisher: "国家互联网信息办公室"
+  accessed: "2026-10-09"
+  claim: "2025-11-01 起施行；第二/四条限定境内网络运营者及较大以上事件的分类报告路径和时限，第七条允许先报已知基础情况后补报，第八条处理结束后 30 日内总结；附件分级不能仅以个人信息数量判断"
+  excerpt: excerpts/cn-cyber-incident-report.md
+
+- id: src-eurlex-gdpr-breach
+  url: https://eur-lex.europa.eu/legal-content/EN/AUTO/?uri=CELEX:02016R0679-20160504
+  title: "Regulation (EU) 2016/679 — consolidated text, Articles 3, 33 and 34"
+  publisher: "EUR-Lex · European Union"
+  accessed: "2026-10-09"
+  claim: "第三条适用范围；第三十三条控制者知悉个人数据泄露后无不当延迟且可行时 72 小时内通知监管机关（不太可能构成权利自由风险例外），处理者及时告知控制者、控制者记录事件；第三十四条高风险个人告知及其例外"
+  excerpt: excerpts/eurlex-gdpr-breach.md
+
+- id: src-w3c-easy-checks
+  url: https://www.w3.org/WAI/test-evaluate/easy-checks/
+  title: "Easy Checks – A First Review of Web Accessibility"
+  publisher: W3C Web Accessibility Initiative
+  accessed: 2026-10-10
+  claim: 入门检查入口覆盖图像替代文字、键盘焦点、缩放、页面语言、表单标签等，明确只覆盖部分问题，不能代替全面无障碍评估；旧 preliminary 页面把此入口称为新版草稿
+  excerpt: excerpts/w3c-easy-checks.md
+- id: src-wipo-brand-database
+  url: https://www.wipo.int/en/web/global-brand-database
+  title: "Global Brand Database"
+  publisher: WIPO
+  accessed: 2026-10-10
+  claim: 数据库说明列出参与的国家/地区等商标集合，可按关键词、名称、商品服务及图像等检索，同时提醒考虑国家或地区知识产权注册簿；这里只核对入口和覆盖说明，不判断任何名称可注册或可使用
+  excerpt: excerpts/wipo-brand-database.md
+- id: src-choose-a-license
+  url: https://choosealicense.com/
+  title: "Choose an open source license"
+  publisher: GitHub · Choose a License contributors
+  accessed: 2026-10-10
+  claim: 许可入门网站按社区、宽松许可或共享改进等需要引导至候选许可，并提醒核对依赖的许可；资源章仅介绍用途，不替具体产品选择许可或认定第三方素材可使用
+  excerpt: excerpts/choose-a-license.md
+
+- id: src-bannerbear-marketing-year
+  url: https://www.bannerbear.com/blog/one-year-of-marketing-a-saas-from-10k-to-20k-mrr/
+  title: "1 Year of Marketing a SaaS from $10K MRR to $27K MRR"
+  publisher: "Jon Yongfook · Bannerbear"
+  accessed: 2026-10-10
+  claim: "2021 年 12 月作者回顾技术文章、教程、可尝试演示、API 文档和知识库的持续投入，并明确没有各项活动的增长归因数据；采用行动与约束，不将总收入增长归给某一渠道"
+  excerpt: excerpts/bannerbear-marketing-year.md
+
+- id: src-plausible-marketing-choices
+  url: https://plausible.io/blog/best-marketing-practices
+  title: "15 best startup marketing practices we say “no” to (while growing our MRR by 1000% in 6 months)"
+  publisher: "Marko Saric · Plausible Analytics"
+  accessed: 2026-10-10
+  claim: "2020-09-15 作者说明当时不投广告、不建联盟计划及不自制播客的价值与容量取舍；这些是当时团队的选择，不证明付费获客普遍无效或当前仍维持相同策略"
+  excerpt: excerpts/plausible-marketing-choices.md
+
+- id: src-ico-email-marketing
+  url: https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/guidance-on-direct-marketing-using-electronic-mail/how-do-we-comply-with-the-pecr-electronic-mail-marketing-rules/
+  title: "How do we comply with the PECR electronic mail marketing rules?"
+  publisher: "UK Information Commissioner’s Office"
+  accessed: 2026-10-10
+  claim: "英国 PECR 电子邮件营销说明区分受邀/非受邀消息与收件人类型；个人订户的非受邀营销通常需同意或满足 soft opt-in 全部条件；单独积极同意、可撤回和有效退订入口，建议记录同意并检查停止联系名单，不泛化为所有国家规则"
+  excerpt: excerpts/ico-email-marketing.md
+
+- id: src-ga-campaign-url
+  url: https://support.google.com/analytics/answer/10917952?hl=en
+  title: "URL builders: Collect campaign data with custom URLs"
+  publisher: "Google Analytics Help"
+  accessed: 2026-10-10
+  claim: "官方介绍 utm_source、utm_medium、utm_campaign 等活动参数和大小写敏感的命名；有相应采集接入才在报表中出现，参数本身不证明真实使用、跨设备身份或因果贡献"
+  excerpt: excerpts/ga-campaign-url.md
+
+- id: src-ga-no-pii
+  url: https://support.google.com/analytics/answer/6366371?hl=en
+  title: "Best practices to avoid sending Personally Identifiable Information (PII)"
+  publisher: "Google Analytics Help"
+  accessed: 2026-10-10
+  claim: "Google 政策禁止向 Analytics 发送可识别个人的信息，URL 路径、参数及活动维度不得包含邮箱等 PII；采用数据范围规则，不采用页面中历史 analytics.js 示例代码"
+  excerpt: excerpts/ga-no-pii.md
+
+- id: src-search-console-performance
+  url: https://support.google.com/webmasters/answer/7576553?hl=en
+  title: "Performance report (Search results): Overview and basic setup"
+  publisher: "Google Search Console Help"
+  accessed: 2026-10-10
+  claim: "表现报告可按查询、页面等查看点击、展示与 CTR（点击除以曝光）；平均排名是聚合值，结果受时间/地点/设备等影响；指标不能代替产品任务完成，导出缺失值可能转为零"
+  excerpt: excerpts/search-console-performance.md
+
+- id: src-bannerbear-onboarding-diagnosis
+  url: https://www.bannerbear.com/blog/how-i-increased-my-saas-conversion-rate-by-7x/
+  title: "How I Increased my SaaS Conversion Rate by 700%"
+  publisher: "Jon Yongfook · Bannerbear"
+  accessed: 2026-10-10
+  claim: "2023 年 8 月作者自述先怀疑引导，检查注册与项目活动后发现大量零活动账号，加入防滥用措施等改动后注册分母减少；比例变化不等于新增付费客户同幅增加，也不能证明引导改善"
+  excerpt: excerpts/bannerbear-onboarding-diagnosis.md
+
+- id: src-posthog-onboarding-email
+  url: https://posthog.com/blog/how-we-built-email-onboarding
+  title: "How we built our onboarding email flow (with actual performance data)"
+  publisher: "Joe Black · PostHog"
+  accessed: 2026-10-10
+  claim: "2024 年原文及 2025 年 2 月更新自述接入检查不可靠导致错误邮件、复杂流程增加维护负担、后续简化并按使用状态提供帮助；版本间转化定义变化，不据此推断因果改善，不采用营销许可或当前价格判断"
+  excerpt: excerpts/posthog-onboarding-email.md
+
+- id: src-nng-empty-states
+  url: https://www.nngroup.com/articles/empty-state-interface-design/
+  title: "Designing Empty States in Complex Applications: 3 Guidelines"
+  publisher: "Kate Kaplan · Nielsen Norman Group"
+  accessed: 2026-10-10
+  claim: "2021-09-19 原始设计分析区分未配置、无结果和加载状态，建议空态说明原因并直达下一步，Loggly 示例提供真实接入与演示数据两条路径；不是效果实验或转化保证"
+  excerpt: excerpts/nng-empty-states.md
+
+- id: src-govuk-usability-testing
+  url: https://www.gov.uk/service-manual/user-research/using-moderated-usability-testing
+  title: "Using moderated usability testing"
+  publisher: "GOV.UK · User research community"
+  accessed: 2026-10-10
+  claim: "任务观察应选择实际或可能用户，给中性目标而不提示答案，必要时帮助完全卡住者继续；合成资料会限制情境发现，辅助技术使用者宜用熟悉设备；采用研究方法而非行业转化基准"
+  excerpt: excerpts/govuk-usability-testing.md
+
+- id: src-w3c-form-notifications
+  url: https://www.w3.org/WAI/tutorials/forms/notifications/
+  title: "User Notification · Forms Tutorial"
+  publisher: "W3C Web Accessibility Initiative"
+  accessed: 2026-10-10
+  claim: "表单反馈需说明成功或失败，错误指出对应字段、可行修复及返回入口；用相关描述与动态通知让错误可感知，提交后可聚焦错误字段；指引不等于产品已经完成全面可访问性评估"
+  excerpt: excerpts/w3c-form-notifications.md
+
+- id: src-omnivore-cloud-closure
+  url: https://github.com/omnivore-app/omnivore
+  title: "Omnivore · repository README"
+  publisher: "Omnivore contributors"
+  accessed: 2026-10-10
+  claim: "README 表示云应用于 2024 年 11 月停止，项目现为完全自托管；采用代码与托管服务边界，不据此推断原云端导出窗口、全部用户迁移成功或当前部署支持质量"
+  excerpt: excerpts/omnivore-cloud-closure.md
+
+- id: src-v2ex-exit-portability
+  url: https://www.v2ex.com/t/1184451
+  title: "终于入了独立开发三件套的坑了，而且还是同时入了三个坑～"
+  publisher: "V2EX · margoxlive 及讨论参与者"
+  accessed: 2026-10-10
+  claim: "2026 年 1 月讨论中 guangfa 关心长期维护、迁移成本与通用导出格式；作者 margoxlive 回应本地存储和计划中的导入导出。采用有归属的用户担忧与作者答复，不认为计划已落地或本地应用永远可用"
+  excerpt: excerpts/v2ex-exit-portability.md
+
+- id: src-photopea-revenue-mix
+  url: https://news.ycombinator.com/item?id=26769141
+  title: "Hi guys, I am Ivan, the creator of Photopea :)"
+  publisher: "Ivan Kutskir (IvanK_net) · Hacker News"
+  accessed: 2026-10-10
+  claim: "2021-04-11 作者自述过去 12 个月约九成收入来自广告，其余来自付费隐藏广告和自托管授权；仅为历史收入结构自述，未独立审计或外推当前规模"
+  excerpt: excerpts/photopea-revenue-mix.md
+
+- id: src-axiaoxin-adsense-milestone
+  url: https://blog.axiaoxin.com/post/new-adsense-1uaday/
+  title: "【一人公司里程碑】全新企业AdSense账号历经28天，单日收入终于达到了1美元——正式进入1美元俱乐部！"
+  publisher: "阿小信的博客"
+  accessed: 2026-10-10
+  claim: "2025-09-20 作者报告新建多语言工具/内容站、申请企业 AdSense、持续改善内容功能后某日达到 1 美元；当时中国为主要流量来源，经历不证明审核或稳定利润"
+  excerpt: excerpts/axiaoxin-adsense-milestone.md
+
+- id: src-adsense-eligibility
+  url: https://support.google.com/adsense/answer/9724?hl=en
+  title: "Eligibility requirements for AdSense"
+  publisher: "Google AdSense Help"
+  accessed: 2026-10-10
+  claim: "官方要求原创高质量内容、符合政策、能够访问提交站点 HTML，申请者需达到年龄条件；资格要求不等于个案通过承诺"
+  excerpt: excerpts/adsense-eligibility.md
+  archive: https://web.archive.org/web/20261010040408/https://support.google.com/adsense/answer/9724?hl=en
+
+- id: src-adsense-program-policy
+  url: https://support.google.com/adsense/answer/48182?hl=en
+  title: "AdSense Program policies"
+  publisher: "Google AdSense Help"
+  accessed: 2026-10-10
+  claim: "禁止自身点击、人工膨胀展示/点击、普通非激励广告鼓励点击，以及误导为菜单/导航/下载的展示；网页与应用内 WebView 集成要求有别"
+  excerpt: excerpts/adsense-program-policy.md
+  archive: https://web.archive.org/web/20261010041225/https://support.google.com/adsense/answer/48182?hl=en
+
+- id: src-adsense-rpm
+  url: https://support.google.com/adsense/answer/190515?hl=en
+  title: "Revenue per thousand impressions (RPM)"
+  publisher: "Google AdSense Help"
+  accessed: 2026-10-10
+  claim: "RPM 为估计收益除以对应页面浏览、广告展示或查询数再乘 1000；页面 RPM 与广告展示 RPM 分母不同，不是实际已到账收益"
+  excerpt: excerpts/adsense-rpm.md
+
+- id: src-adsense-page-view
+  url: https://support.google.com/adsense/answer/191124?hl=en
+  title: "Page view"
+  publisher: "Google AdSense Help"
+  accessed: 2026-10-10
+  claim: "AdSense 页面浏览量按访问展示 Google 广告的页面计算，同页广告位数量不改变一次页面浏览的计数"
+  excerpt: excerpts/adsense-page-view.md
+
+- id: src-adsense-earnings
+  url: https://support.google.com/adsense/answer/9745?hl=en
+  title: "What's the difference between earnings and payments?"
+  publisher: "Google AdSense Help"
+  accessed: 2026-10-10
+  claim: "区分当月估计收益、扣除无效活动后的最终收益和含借贷调整的余额；不提供所有账户统一付款时间或到账承诺"
+  excerpt: excerpts/adsense-earnings.md
+  archive: https://web.archive.org/web/20261010041448/https://support.google.com/adsense/answer/9745?hl=en
+
+- id: src-css-tricks-2020-revenue
+  url: https://css-tricks.com/thank-you-2020-edition/
+  title: "Thank You (2020 Edition)"
+  publisher: "Chris Coyier · CSS-Tricks"
+  accessed: 2026-10-10
+  claim: "2020-12-31 作者自述流量创新高但疫情期间赞助预算缩减或取消，尝试电商未完全补上损失；这是历史经营复盘而非当前产品或收益承诺"
+  excerpt: excerpts/css-tricks-2020-revenue.md
+
+- id: src-ftc-affiliate-disclosure
+  url: https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking
+  title: "FTC's Endorsement Guides: What People Are Asking"
+  publisher: "US Federal Trade Commission"
+  accessed: 2026-10-10
+  claim: "美国背书指引 FAQ 说明联盟佣金等重要商业关系应清楚披露，靠近推荐更易发现；单写 affiliate link 未必足够，不能歪曲使用经历；视频的视听披露和平台工具须按清晰醒目要求核对，单放说明未必有效"
+  excerpt: excerpts/ftc-affiliate-disclosure.md
+  archive: https://web.archive.org/web/20261010041633/https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking
+
+- id: src-adsense-availability
+  url: https://support.google.com/adsense/answer/13402307?hl=en
+  title: "AdSense availability"
+  publisher: "Google AdSense Help"
+  accessed: 2026-10-10
+  claim: "官方可注册国家/地区表的 Asia Pacific 栏列有 China；地区列入不代替具体申请者、站点与收款资料的审核"
+  excerpt: excerpts/adsense-availability.md
+  archive: https://web.archive.org/web/20261010041346/https://support.google.com/adsense/answer/13402307?hl=en
+
+- id: src-screenstudio-channel-dependence
+  url: https://www.indiehackers.com/post/how-buildinpublic-brought-the-first-10-customers-for-screen-studio-and-later-became-the-main-marketing-challenge-ea7c6f0eb1
+  title: "How #buildinpublic Brought the First 10 Customers for Screen Studio and Later Became the Main Marketing Challenge"
+  publisher: "Sveta Bay · Indie Hackers"
+  accessed: 2026-10-10
+  claim: "2023-07-31 刊载的 Adam Pietrasiak 创始人叙述：公开开发、CEO 点赞后传播及支持性早期购买，后来依赖个人 Twitter 账号并感到持续发帖压力；非独立渠道审计"
+  excerpt: excerpts/screenstudio-channel-dependence.md
+
+- id: src-simplero-channel-experiments
+  url: https://saasclub.io/podcast/power-of-purpose-saas-calvin-correli-simplero/
+  title: "From Broke Freelancer to $2M ARR Bootstrapped SaaS Growth"
+  publisher: "Omer Khan · SaaS Club · Calvin Correli"
+  accessed: 2026-10-10
+  claim: "第 187 期历史访谈原站文字稿，33:31–35:12 嘉宾报告 AdWords/代理未达结果、联盟未改变其观察到的整体增长并增加管理负担，同时明确一位挪威伙伴带来许多客户；不支持普遍渠道无效结论"
+  excerpt: excerpts/simplero-channel-experiments.md
+
+- id: src-google-ai-discovery
+  url: https://developers.google.com/search/docs/appearance/ai-features?hl=zh-cn
+  title: "AI 功能和您的网站"
+  publisher: "Google Search Central"
+  accessed: 2026-10-10
+  claim: "Google AI 概览与 AI 模式沿用搜索基本要求，无额外 AI 文件或特殊标记要求，符合要求仍不保证抓取、索引或展示；AI 功能表现计入 GSC Web 搜索，不外推其他问答产品"
+  excerpt: excerpts/google-ai-discovery.md
+  archive: https://web.archive.org/web/20261010043655/https://developers.google.com/search/docs/appearance/ai-features?hl=zh-cn
+
+- id: src-google-ads-spending
+  url: https://support.google.com/google-ads/answer/10486637?hl=en
+  title: "About spending limits"
+  publisher: "Google Ads Help"
+  accessed: 2026-10-10
+  claim: "大多数广告系列每日计费限额为平均每日预算的 2 倍，pay-for-conversions 等有例外；平均每日预算不能当成每一天的绝对花费上限"
+  excerpt: excerpts/google-ads-spending.md
+  archive: https://web.archive.org/web/20261010043319/https://support.google.com/google-ads/answer/10486637?hl=en
+
+- id: src-patio-enterprise-sales
+  url: https://training.kalzumeus.com/newsletters/archive/enterprise_sales
+  title: "Selling To The Fortune 500, Government, And Other Lovecraftian Horrors"
+  publisher: "Patrick McKenzie · Kalzumeus"
+  accessed: 2026-10-10
+  claim: "作者自述在日本独立经营 Appointment Reminder，通过逐项材料、电话及书面跟进取得医院订单；报告六个月约 25 小时文书工作及十余个未继续的相似机会，实际订单金额未公开。不采用其绕采购限额或企业价格不敏感的泛化建议"
+  excerpt: excerpts/patio-enterprise-sales.md
+
+- id: src-posthog-buying-software
+  url: https://posthog.com/founders/how-to-buy-software-enterprise
+  title: "How to buy software in an enterprise company"
+  publisher: "Charles Cook / Leon Daly · PostHog"
+  accessed: 2026-10-10
+  claim: "2024-08-15 的买方实践分析区分问题、已有工具、试用、内部批准、谈判与采购；不把作者所述周期和人数当行业统计，也不采用虚假资料或绕流程建议"
+  excerpt: excerpts/posthog-buying-software.md
+
+- id: src-zhang-saas-delivery
+  url: https://www.woshipm.com/chuangye/5589645.html
+  title: "2年整，我的第一次SaaS创业结束了"
+  publisher: "张浩然（SaaS 张大伦）· 人人都是产品经理原创"
+  accessed: 2026-10-10
+  claim: "作者在 2022-09-05 复盘住客云：部分酒店客户要求代运营、缺少执行岗位，作者坚持订阅工具而错失订单，后来转向另一业务；国内住宿业自述，不泛化到海外企业采购"
+  excerpt: excerpts/zhang-saas-delivery.md
+
+- id: src-heavybit-paid-pilot
+  url: https://www.heavybit.com/library/article/saas-poc-paid-pilot-program
+  title: "How to Execute SaaS POCs that Convert"
+  publisher: "Ashley Dotterweich · Heavybit"
+  accessed: 2026-10-10
+  claim: "2020-02-14 整理 Mitch Morando 的试点建议：收费、明确目标、客户共同投入和提前处理可终止的年合同；是实践建议而非转化率证明，不统一套用到个人开发者"
+  excerpt: excerpts/heavybit-paid-pilot.md
+
+- id: src-posthog-running-trials
+  url: https://posthog.com/handbook/growth/sales/running-trials
+  title: "Running trials"
+  publisher: "PostHog Handbook"
+  accessed: 2026-10-10
+  claim: "截至阅读日，手册要求书面成功标准与时间线，并让采购、法律与价格和技术验证并行；客户无法投入时可暂停，延期应明确原因与待完成事项。未引用其资格门槛、额度或周期作通用标准"
+  excerpt: excerpts/posthog-running-trials.md
+
+- id: src-eurlex-gdpr-processing
+  url: https://eur-lex.europa.eu/legal-content/EN/AUTO/?uri=CELEX:02016R0679-20160504
+  title: "Regulation (EU) 2016/679 — Article 28 and Chapter V"
+  publisher: "EUR-Lex · European Union"
+  accessed: 2026-10-10
+  claim: "在 GDPR 适用且代表控制者处理的条件下，第 28 条规定处理合同、指令、保密、安全、再委托、协助及结束后的返还/删除等；第三国传输另适用第五章，不能仅靠 DPA 判断跨境安排完成"
+  excerpt: excerpts/eurlex-gdpr-processing.md
+
+- id: src-hamel-product-evals
+  url: "https://hamel.dev/blog/posts/evals/"
+  title: "Your AI Product Needs Evals"
+  publisher: "Hamel Husain"
+  accessed: 2026-10-10
+  claim: "2024-03-29 对参与 Rechat Lucy 助手的实践复盘：提示词迭代遇到回归和可见性问题，采用按任务的确定性检查、人工/模型评价及实际使用比较；不是统一上线阈值或成功率证明。"
+  excerpt: excerpts/hamel-product-evals.md
+
+- id: src-simon-building-llms
+  url: "https://simonwillison.net/2025/May/15/building-on-llms/"
+  title: "Building software on top of Large Language Models"
+  publisher: "Simon Willison"
+  accessed: 2026-10-10
+  claim: "2025-05-15 PyCon 工作坊讲义以外部邮件和工具调用解释提示注入及应用侧权限问题，并讨论任务评价；未采用旧模型排行、价格或其安全方案作为保证。"
+  excerpt: excerpts/simon-building-llms.md
+
+- id: src-anthropic-supported-regions
+  url: "https://www.anthropic.com/supported-countries"
+  title: "Supported Regions Policy"
+  publisher: "Anthropic"
+  accessed: 2026-10-10
+  claim: "截至 2026-10-10，政策适用应用、API 及云平台/授权转售模型；未列地区不支持，明确限制实际所在地、注册/总部及多数持有/控制；支持列表不含中国大陆。未判断其他供应商或个案准入。"
+  excerpt: excerpts/anthropic-supported-regions.md
+
+- id: src-anthropic-commercial-retention
+  url: "https://privacy.claude.com/en/articles/7996866-how-long-do-you-store-my-organization-s-data"
+  title: "How long do you store my organization’s data?"
+  publisher: "Anthropic Privacy Center"
+  accessed: 2026-10-10
+  claim: "商业产品 API 常规保留说明单列 Files API、另行约定、使用政策及法律等例外，并另述其他商业产品、Covered Models 与反馈；不引用为所有产品无条件删除保证。"
+  excerpt: excerpts/anthropic-commercial-retention.md
+
+- id: src-bannerbear-api-jobs
+  url: "https://developers.bannerbear.com/v5/"
+  title: "Bannerbear API Reference — Async / Sync"
+  publisher: "Bannerbear"
+  accessed: 2026-10-10
+  claim: "主要异步模式提交后返回 202，可轮询或 webhook 取结果；另有同步模式。仅作为真实产品接口取舍，不声称教学 D1 与其全部语义一致。"
+  excerpt: excerpts/bannerbear-api-jobs.md
+
+- id: src-stripe-api-idempotency
+  url: "https://docs.stripe.com/api/idempotent_requests"
+  title: "Idempotent requests — Stripe API Reference"
+  publisher: "Stripe"
+  accessed: 2026-10-10
+  claim: "相同幂等标识用于恢复重复请求；文档区分 API v1/v2 失败语义，v1 参数比较与保留窗口。仅借鉴契约明确，不将其期限或计费规则移植到教学 API。"
+  excerpt: excerpts/stripe-api-idempotency.md
+
+- id: src-chrome-active-tab
+  url: "https://developer.chrome.com/docs/extensions/develop/concepts/activeTab"
+  title: "The activeTab permission"
+  publisher: "Google Chrome for Developers"
+  accessed: 2026-10-10
+  claim: "用户明确调用后临时获取当前标签主框架来源的访问，跨来源导航或关闭撤销；受限页面不可访问，脚本注入另需 scripting。不是持续全部站点访问。"
+  excerpt: excerpts/chrome-active-tab.md
+
+- id: src-chrome-worker-lifecycle
+  url: "https://developer.chrome.com/docs/extensions/develop/concepts/service-workers/lifecycle"
+  title: "The extension service worker lifecycle"
+  publisher: "Google Chrome for Developers"
+  accessed: 2026-10-10
+  claim: "Chrome 扩展 Service Worker 应能承受意外终止；关闭后全局变量丢失，应持久化需恢复状态。未将后台常驻或固定存活期限作为承诺。"
+  excerpt: excerpts/chrome-worker-lifecycle.md
+
+- id: src-chrome-extension-data
+  url: "https://developer.chrome.com/docs/webstore/program-policies/user-data-faq?hl=en"
+  title: "Updated Privacy Policy & Secure Handling Requirements"
+  publisher: "Google Chrome Web Store"
+  accessed: 2026-10-10
+  claim: "用户数据包括网页内容与个人通信，本地处理仍须披露；处理用户数据的产品至少需隐私政策与安全处理，显著说明和同意须按适用要求在产品内完成。"
+  excerpt: excerpts/chrome-extension-data.md
+
+- id: src-owen-extension-trust
+  url: "https://www.owenyoung.com/blog/fake-open-source"
+  title: "对“假开源”事件的反省"
+  publisher: "Owen Young"
+  accessed: 2026-10-10
+  claim: "作者于 2023-08-06 自述重写后闭源产品与旧开源项目、公开文档仓库的混淆，报告调整目录、README 和官网入口措辞。只作沟通与产品承诺案例，不裁定争议或采用文末许可法律概括。"
+  excerpt: excerpts/owen-extension-trust.md
+
+- id: src-chrome-remote-code
+  url: "https://developer.chrome.com/docs/extensions/develop/migrate/remote-hosted-code?hl=en"
+  title: "Deal with remote hosted code violations"
+  publisher: "Google Chrome for Developers"
+  accessed: 2026-10-10
+  claim: "Manifest V3 的远程托管代码规则涉及浏览器执行的外部 JavaScript/WASM及依赖；数据与代码有别，存在用途受限的特殊 API 情形，不以远端执行代码作为常规更新办法。"
+  excerpt: excerpts/chrome-remote-code.md
+
+- id: "src-uspto-clearance"
+  url: "https://www.uspto.gov/trademarks/search/comprehensive-clearance-search-similar-trademarks"
+  title: "Comprehensive clearance search for similar trademarks"
+  publisher: "USPTO"
+  accessed: "2026-10-10"
+  claim: "美国商标清查指南涵盖相同或相关商品服务的近似标志、联邦登记与互联网普通法使用等；不将无检索结果等同允许使用或注册。"
+  excerpt: "excerpts/uspto-clearance.md"
+  archive: "https://web.archive.org/web/20261010062216/https://www.uspto.gov/trademarks/search/comprehensive-clearance-search-similar-trademarks"
+
+- id: "src-github-no-license"
+  url: "https://choosealicense.com/no-permission/"
+  title: "No License"
+  publisher: "GitHub · Choose a License contributors"
+  accessed: "2026-10-10"
+  claim: "公开 GitHub 仓库的查看/fork 条件不等于一般开源再利用许可；没有许可时应询问、协商或选择替代，保留法律例外的适用边界。"
+  excerpt: "excerpts/github-no-license.md"
+
+- id: "src-openclaw-naming"
+  url: "https://openclaw.ai/blog/introducing-openclaw"
+  title: "Introducing OpenClaw"
+  publisher: "Peter Steinberger · OpenClaw"
+  accessed: "2026-10-10"
+  claim: "作者于 2026-01-29 回顾 Clawd/Moltbot/OpenClaw 命名：自述收到 Anthropic 法律团队请其重新考虑名称的请求，后来查询商标、购买域名并准备迁移代码；未独立认定侵权或清查结果。"
+  excerpt: "excerpts/openclaw-naming.md"
+
+- id: "src-nathan-seva"
+  url: "https://nathanbarry.com/rename/"
+  title: "There and back again: the story of renaming ConvertKit"
+  publisher: "Nathan Barry"
+  accessed: "2026-10-10"
+  claim: "2020-08-04 回顾 2018 年从 ConvertKit 改名 Seva 后因部分受众对文化/宗教含义的意见而退回旧名；意见存在分歧，需沟通并重做发布材料，不指该公司当前名称。"
+  excerpt: "excerpts/nathan-seva.md"
+
+- id: "src-xifeng-font-claim"
+  url: "https://www.anji66.net/article/id/100.html"
+  title: "被方正字体投诉侵权说起"
+  publisher: "西枫里人"
+  accessed: "2026-10-10"
+  claim: "作者于 2018-04-27 自述收到旧客户转来的字体投诉，先删字，后来设计人员称使用的是相近字体；只借鉴找回原始版本的需要，不采纳作者对侵权是否成立的判断或旧字体推荐。"
+  excerpt: "excerpts/xifeng-font-claim.md"
+
+- id: "src-inter-ofl"
+  url: "https://github.com/rsms/inter/blob/v4.1/LICENSE.txt"
+  title: "Inter v4.1 — LICENSE.txt"
+  publisher: "The Inter Project Authors"
+  accessed: "2026-10-10"
+  claim: "Inter 4.1 随附 SIL OFL 1.1：允许使用/嵌入/再分发并有随副本保留声明许可、不得单卖字体等条件；修改名称规则针对声明的 Reserved Font Names；用字体制成的文档不必改用 OFL。"
+  excerpt: "excerpts/inter-ofl.md"
+
+- id: "src-lodash-license"
+  url: "https://github.com/lodash/lodash/blob/4.17.21/LICENSE"
+  title: "Lodash 4.17.21 — LICENSE"
+  publisher: "OpenJS Foundation and other contributors"
+  accessed: "2026-10-10"
+  claim: "指定版本的 MIT 许可要求保留版权及许可声明，文件亦说明外部库各有许可；只是许可阅读样例，不推荐旧版本或声称已核对产品依赖树/安全。"
+  excerpt: "excerpts/lodash-license.md"
+
+- id: "src-unsplash-rights"
+  url: "https://unsplash.com/terms"
+  title: "Terms & Conditions"
+  publisher: "Unsplash"
+  accessed: "2026-10-10"
+  claim: "第 5 节普通图片版权许可不包括图片中的商标、可识别人物及艺术作品等全部其他权利，具体用途可能需额外许可；不将普通许可泛化到 Unsplash+ 或任意照片。"
+  excerpt: "excerpts/unsplash-rights.md"
+
+- id: "src-ccby4-rights"
+  url: "https://creativecommons.org/licenses/by/4.0/legalcode.en"
+  title: "Attribution 4.0 International — Legal Code"
+  publisher: "Creative Commons"
+  accessed: "2026-10-10"
+  claim: "CC BY 4.0 第 3 节规定分享时的署名、声明、原材料/许可链接及修改标示；第 2 节限定权利范围，不授予专利/商标等全部其他权利。"
+  excerpt: "excerpts/ccby4-rights.md"
+
+- id: "src-cn-copyright2020"
+  url: "https://policy.mofcom.gov.cn/claw/clawContent.shtml?id=87976"
+  title: "中华人民共和国著作权法（2020修正）"
+  publisher: "全国人大常委会 · 商务部全球法规网转载法律文本"
+  accessed: "2026-10-10"
+  claim: "核对 2020-11-11 修订、2021-06-01 施行文本：第 15 条汇编与原作品权利，第 19 条委托创作归属，第 26/27 条许可/转让合同，第 52 条民事责任类型；不作跨境个案法律判断。"
+  excerpt: "excerpts/cn-copyright2020.md"
+
+- id: "src-mpl20"
+  url: "https://www.mozilla.org/en-US/MPL/2.0/"
+  title: "Mozilla Public License, version 2.0"
+  publisher: "Mozilla"
+  accessed: "2026-10-10"
+  claim: "第 3.1/3.2 节规定 Covered Software 源码/可执行形式分发的条件及源码取得方式，第 3.3/3.4 节涉及较大作品和声明；不据此概括其他许可。"
+  excerpt: "excerpts/mpl20.md"
+
+- id: "src-mpl-faq"
+  url: "https://www.mozilla.org/en-US/MPL/2.0/FAQ/"
+  title: "MPL 2.0 FAQ"
+  publisher: "Mozilla"
+  accessed: "2026-10-10"
+  claim: "FAQ 第 5/6/11/16/17 问解释文件级边界、压缩 JavaScript 和服务器功能/客户端代码的分发区别；只对 MPL 示例，不推及 GPL/AGPL 或任意 SaaS。"
+  excerpt: "excerpts/mpl-faq.md"
+
+- id: "src-usco-ai-copyright"
+  url: "https://www.copyright.gov/newsnet/2025/1060.html"
+  title: "Copyright Office Releases Part 2 of Artificial Intelligence Report"
+  publisher: "U.S. Copyright Office"
+  accessed: "2026-10-10"
+  claim: "2025-01-29 官方报告发布说明将生成输出的可保护性与足够的人类表达贡献联系起来，区分创作性安排/修改和仅提供提示词；仅美国范围，不声称全球 AI 输出权属已解决。"
+  excerpt: "excerpts/usco-ai-copyright.md"
+
+- id: "src-ads-google-search"
+  url: "https://support.google.com/google-ads/answer/9510373?hl=en"
+  title: "Create a Search campaign"
+  publisher: "Google Ads Help"
+  accessed: "2026-10-10"
+  claim: "Search 创建顺序、目标、搜索合作伙伴/展示网络、语言、标准广告组、素材及最终 URL；官方说明新用户流程可能不同，不作为实测后台截图。"
+  excerpt: "excerpts/ads-google-search.md"
+
+- id: "src-ads-google-total-budget"
+  url: "https://support.google.com/google-ads/answer/10486938?hl=en"
+  title: "About campaign total budgets"
+  publisher: "Google Ads Help"
+  accessed: "2026-10-10"
+  claim: "总预算适用于新建 Search 等系列，需起止日期；现有日预算系列不能改预算类型；无每日消费上限，总计收费不超过系列总预算，Search 可用 Maximize clicks 等策略。"
+  excerpt: "excerpts/ads-google-total-budget.md"
+  archive: "https://web.archive.org/web/20261010065915/https://support.google.com/google-ads/answer/10486938?hl=en"
+
+- id: "src-ads-google-limits"
+  url: "https://support.google.com/google-ads/answer/10486637?hl=en"
+  title: "About spending limits"
+  publisher: "Google Ads Help"
+  accessed: "2026-10-10"
+  claim: "多数日预算系列的单日可计费上限为平均日预算两倍，整月通常为 30.4 倍；预算变动/开始日期和按转化付费例外另算，served 与 billed cost 不同。"
+  excerpt: "excerpts/ads-google-limits.md"
+
+- id: "src-ads-google-verification-cn"
+  url: "https://support.google.com/adspolicy/answer/9872280?hl=en&co=GENIE.CountryCode%3DCN"
+  title: "Document requirements for advertiser verification — China"
+  publisher: "Google Advertising Policies"
+  accessed: "2026-10-10"
+  claim: "China 项分别列组织与个人验证文件；提交信息须与 payments profile 匹配；存在个人文件路径不等于广告、付款或账户一定通过。"
+  excerpt: "excerpts/ads-google-verification-cn.md"
+
+- id: "src-ads-google-goals"
+  url: "https://support.google.com/google-ads/answer/11461796?hl=en"
+  title: "About primary and secondary conversion actions"
+  publisher: "Google Ads Help"
+  accessed: "2026-10-10"
+  claim: "主要转化在其标准目标用于出价时参与优化并进入 Conversions；次要通常仅观察，但加入 custom goal 也会参与出价，不承诺改成次要即可在任何情况下排除。"
+  excerpt: "excerpts/ads-google-goals.md"
+
+- id: "src-ads-google-location"
+  url: "https://support.google.com/google-ads/answer/1722038?hl=en"
+  title: "About advanced location options"
+  publisher: "Google Ads Help"
+  accessed: "2026-10-10"
+  claim: "默认 Presence or Interest 包括对地区有兴趣的人；Presence 限可能位于或经常位于目标地区的人；定位不能保证百分百准确。"
+  excerpt: "excerpts/ads-google-location.md"
+
+- id: "src-ads-google-match"
+  url: "https://support.google.com/google-ads/answer/7478529?hl=en"
+  title: "About keyword matching options"
+  publisher: "Google Ads Help"
+  accessed: "2026-10-10"
+  claim: "正向 phrase/exact 按含义或意图匹配，不是逐字比较；宽匹配覆盖更广，平台推荐与 Smart Bidding 搭配，本文窄范围探索是有代价的教学取舍。"
+  excerpt: "excerpts/ads-google-match.md"
+
+- id: "src-ads-google-negative"
+  url: "https://support.google.com/google-ads/answer/2453972?hl=en"
+  title: "About negative keywords"
+  publisher: "Google Ads Help"
+  accessed: "2026-10-10"
+  claim: "Search 否定广泛/词组/完全匹配规则不同；否定词不自动覆盖所有近似变体，排除过多会减少触达；不将本地合成表筛选冒充完整匹配引擎。"
+  excerpt: "excerpts/ads-google-negative.md"
+
+- id: "src-ads-meta-structure"
+  url: "https://www.facebook.com/business/help/621956575422138"
+  title: "Meta 广告管理工具中的广告层级有哪些？"
+  publisher: "Meta Business 帮助中心"
+  accessed: "2026-10-10"
+  claim: "系列选择目标；广告组定义受众/版位/预算排期；广告层配置素材、链接和代表业务的身份；系列预算等条件仍须另核。"
+  excerpt: "excerpts/ads-meta-structure.md"
+
+- id: "src-ads-meta-objectives"
+  url: "https://zh-cn.facebook.com/business/help/1438417719786914"
+  title: "如何在 Meta 广告管理工具中选择合适的广告目标"
+  publisher: "Meta Business 帮助中心"
+  accessed: "2026-10-10"
+  claim: "当前六类目标区分流量、潜在客户、销量、知名度、互动和应用推广；Traffic 与 Sales 的目标含义不同，不承诺选 Sales 就盈利。"
+  excerpt: "excerpts/ads-meta-objectives.md"
+
+- id: "src-ads-meta-budget"
+  url: "https://www.facebook.com/business/help/190490051321426"
+  title: "单日预算简介"
+  publisher: "Meta Business 帮助中心"
+  accessed: "2026-10-10"
+  claim: "单日预算是周内平均目标；完整一周预算不变且关闭广告组预算共享的例子为单日最高 175%、周最高 7 倍；开启共享/周中修改等有不同计算，不泛化 75% 规则。"
+  excerpt: "excerpts/ads-meta-budget.md"
+
+- id: "src-ads-reddit-standard"
+  url: "https://business.reddithelp.com/s/article/Set-up-a-Reddit-Ads-Campaign"
+  title: "Standard Campaigns"
+  publisher: "Reddit Ads Help"
+  accessed: "2026-10-10"
+  claim: "Standard 系列分 campaign、ad group、ad；分别设置目标/可选总花费上限、人群排期出价和素材跟踪，发布前可 review 并用 test URL 检查；未实际创建。"
+  excerpt: "excerpts/ads-reddit-standard.md"
+
+- id: "src-ads-reddit-audience"
+  url: "https://business.reddithelp.com/s/article/reddit-audiences"
+  title: "Reddit Audiences"
+  publisher: "Reddit Ads Help"
+  accessed: "2026-10-10"
+  claim: "community targeting 按社区订阅/近期活动触达人，广告不局限于所选 subreddit 内；不是所有社区可投；automated targeting 会拓宽到所选受众外。"
+  excerpt: "excerpts/ads-reddit-audience.md"
+
+- id: "src-ads-tiktok-regions"
+  url: "https://ads.tiktok.com/resources/help/article/available-countries-and-regions-for-ad-account-creation-in-bc"
+  title: "Available countries and regions for self-serve ad account creation in Business Center"
+  publisher: "TikTok Business Help"
+  accessed: "2026-10-10"
+  claim: "2026-10-10 阅读的自助开户列表未列中国大陆；此结论只限 Business Center 不经代表的自助创建路径，不推出所有合法代表/代理路线均禁止。"
+  excerpt: "excerpts/ads-tiktok-regions.md"
+
+- id: "src-ads-tiktok-budget"
+  url: "https://ads.tiktok.com/resources/help/article/budget?lang=en"
+  title: "About budgets for ads in TikTok Ads Manager"
+  publisher: "TikTok Business Help"
+  accessed: "2026-10-10"
+  claim: "2026-07 更新文档列每日系列预算超过 50 USD、广告组超过 20 USD；广告组总预算最低按天数计算；总预算非每日均分，上线后不能切换预算类型。"
+  excerpt: "excerpts/ads-tiktok-budget.md"
+
+- id: "src-ads-tiktok-setup"
+  url: "https://ads.tiktok.com/help/article/campaign-set-up?lang=en"
+  title: "How to set up an ad campaign in TikTok Ads Manager"
+  publisher: "TikTok Business Help"
+  accessed: "2026-10-10"
+  claim: "campaign/ad group/ad 三层；创建时选择目标和 Manual/Search/Smart+，关联 TikTok 账号或 Authorized post、预算等，保存草稿及发布前复核；不混同三类系列。"
+  excerpt: "excerpts/ads-tiktok-setup.md"
+
+- id: "src-ads-linkedin-setup"
+  url: "https://www.linkedin.com/help/lms/answer/a6554922?lang=en"
+  title: "Create an ad set in Campaign Manager"
+  publisher: "LinkedIn Marketing Solutions Help"
+  accessed: "2026-10-10"
+  claim: "当前 ad set 流程覆盖目标、人群、格式、版位、预算、出价和转化；多数格式需关联 Page；DGB 开启时预算等在系列层；上线需付款方式及审核。"
+  excerpt: "excerpts/ads-linkedin-setup.md"
+
+- id: "src-ads-linkedin-budget"
+  url: "https://www.linkedin.com/help/lms/answer/a415995?lang=en"
+  title: "Campaign and ad set budgets"
+  publisher: "LinkedIn Marketing Solutions Help"
+  accessed: "2026-10-10"
+  claim: "日/总/日加总预算按层级与排期区分；持续日预算可单日高达两倍、周内最多七倍；总预算有期限相关最低要求且总计不超总额，不援引旧统一最低数字。"
+  excerpt: "excerpts/ads-linkedin-budget.md"
+
+- id: "src-posthog-developer-marketing"
+  url: "https://posthog.com/newsletter/marketing-for-devs"
+  title: "40 things we’ve learned about marketing for developers"
+  publisher: "Ian Vanagas · PostHog"
+  accessed: "2026-10-10"
+  claim: "2025-07-21 团队分享广告/内容经验，提醒品牌搜索可能接住原有需求，代理仍需持续指导，建议每渠道约 500 USD/两周是其经验而非平台最低或个人保证。"
+  excerpt: "excerpts/posthog-developer-marketing.md"
+
+- id: "src-bannerbear-qualified-signups"
+  url: "https://www.bannerbear.com/blog/how-i-increased-my-saas-conversion-rate-by-7x/"
+  title: "How I Increased my SaaS Conversion Rate by 700%"
+  publisher: "Jon Yongfook · Bannerbear"
+  accessed: "2026-10-10"
+  claim: "2023-08 创始人自述异常注册清理、入口修改、开始低预算 Google Ads 同时发生；后续月末更新 754 注册/64 新客，不能据此拆出广告因果效果或复制转化率。"
+  excerpt: "excerpts/bannerbear-qualified-signups.md"
+
+- id: "src-ads-meta-test"
+  url: "https://zh-cn.facebook.com/business/help/2040882565969969"
+  title: "测试事件工具：验证 Meta 的应用和网页浏览器事件"
+  publisher: "Meta Business 帮助中心"
+  accessed: "2026-10-10"
+  claim: "Meta 测试事件工具可观察接收、参数和去重；清除动态不会从事件管理、广告报告和受众创建结果中删除，不能当隔离沙盒。"
+  excerpt: "excerpts/ads-meta-test.md"
+
+- id: "src-ads-tiktok-adgroup"
+  url: "https://ads.tiktok.com/help/article/create-ad-group?lang=en"
+  title: "How to create an ad group in TikTok Ads Manager"
+  publisher: "TikTok Business Help"
+  accessed: "2026-10-10"
+  claim: "Manual 标准流程在广告组设置版位、人群、预算排期及 Bidding and Optimization；与系列目标/广告素材分开。"
+  excerpt: "excerpts/ads-tiktok-adgroup.md"
+
+- id: "src-smoothcade-ad-experiment"
+  url: "https://www.reddit.com/r/gamedev/comments/1gprdse/i_spent_100_on_ads_on_facebook_reddit_twitterx/"
+  title: "I spent $100 on ads on Facebook, Reddit, Twitter/X, and Google Ads. Here’s the results!"
+  publisher: "u/biddum1 · r/gamedev"
+  accessed: "2026-10-10"
+  claim: "Smoothcade 作者报告美国家庭游戏预发布小试：四个平台各 100 USD，TikTok 15 USD；正文 Google 830 点击、Reddit 484，不支持作者所称 Reddit 最多点击；未提供可比购买表，评论亦质疑样本/定向，不能得渠道效果排名。"
+  excerpt: "excerpts/smoothcade-ad-experiment.md"
+
+- id: src-plausible-support-scaling
+  url: https://plausible.io/blog/scaling-customer-support
+  title: "How we scaled support for 4,000+ subscribers and 1,000+ monthly trials (without dedicated support personnel)"
+  publisher: "Marko Saric · Plausible"
+  accessed: 2026-10-10
+  claim: 作者在 2021 年描述常见问题改产品与文档、缩减不可承担的自托管支持、难以休假及开始培养替补；为历史经验，不证明当前支持政策或普遍容量
+  excerpt: excerpts/plausible-support-scaling.md
+
+- id: src-posthog-engineers-support
+  url: https://posthog.com/newsletter/engineers-do-support
+  title: "Doing support makes you a better engineer"
+  publisher: "Ian Vanagas · PostHog"
+  accessed: 2026-10-10
+  claim: 2024 年作者报告工程师轮值仍积压高优先级支持并挤掉长期改善，后加入专职支持工程师；历史经验不等于当前工具或 SLA
+  excerpt: excerpts/posthog-engineers-support.md
+
+- id: src-posthog-support-hero
+  url: https://posthog.com/handbook/engineering/operations/support-hero
+  title: "Support hero"
+  publisher: "PostHog Handbook"
+  accessed: 2026-10-10
+  claim: 公开手册要求不要让用户查自己能查的信息、说明额外请求的目的、明确谁等谁及跟进时间，并移交未完成工单；仅支持操作原则
+  excerpt: excerpts/posthog-support-hero.md
+
+- id: src-shaonan-cost-chain
+  url: https://shaonan.blog/posts/20231111-chengbendezhenxiang/
+  title: "成本的真相：从产品设计到业务决策"
+  publisher: "少楠"
+  accessed: 2026-10-10
+  claim: 作者在 2023 年分析功能的持续维护成本、扩张的沟通与培训成本及反馈研究的投入价值；不据此推断现行法规或通用费用
+  excerpt: excerpts/shaonan-cost-chain.md
+
+- id: src-kcs-reuse-review
+  url: https://library.serviceinnovation.org/KCS/KCS_v6/KCS_v6_Practices_Guide/030/030/040/020
+  title: "Technique 4.1: Reuse is Review"
+  publisher: "Consortium for Service Innovation"
+  accessed: 2026-10-10
+  claim: KCS v6 方法主张在文章复用时核查和改善内容并建立反馈纠正机制；未采用统计数字或承诺本例支持量下降
+  excerpt: excerpts/kcs-reuse-review.md
+
+- id: src-segment-measurement-plan
+  url: "https://www.twilio.com/docs/segment/protocols/tracking-plan/best-practices"
+  title: "Data Collection Best Practices"
+  publisher: "Twilio · Segment"
+  accessed: "2026-10-10"
+  claim: "建议从业务目标定义少量核心事件，保持事件与属性命名稳定；也说明先多采集再分析有不同利弊"
+  excerpt: "excerpts/segment-measurement-plan.md"
+
+- id: src-posthog-autocapture-scope
+  url: "https://posthog.com/docs/product-analytics/autocapture"
+  title: "Autocapture"
+  publisher: "PostHog"
+  accessed: "2026-10-10"
+  claim: "交互自动采集可以配置 URL/元素/属性筛选；关闭交互自动采集不等于关闭导航采集，表单值并非全部自动采集"
+  excerpt: "excerpts/posthog-autocapture-scope.md"
+
+- id: src-stripe-measurement-webhooks
+  url: "https://docs.stripe.com/webhooks"
+  title: "Receive Stripe events in your webhook endpoint"
+  publisher: "Stripe"
+  accessed: "2026-10-10"
+  claim: "事件可能重复且不保证生成顺序；需验签、记录事件 ID 并按业务对象识别重复，本文不涉及准入推荐"
+  excerpt: "excerpts/stripe-measurement-webhooks.md"
+
+- id: src-ms-experiment-srm
+  url: "https://www.microsoft.com/en-us/research/articles/diagnosing-sample-ratio-mismatch-in-a-b-testing/"
+  title: "Diagnosing Sample Ratio Mismatch in A/B Testing"
+  publisher: "Microsoft Experimentation Platform"
+  accessed: "2026-10-10"
+  claim: "2020 年原团队描述 MSN 轮播试验中活跃用户被机器人过滤，结果在排查后翻转；SRM 是诊断信号，不是简单看两组比例是否相等"
+  excerpt: "excerpts/ms-experiment-srm.md"
+
+- id: src-meituan-experiment-unit
+  url: "https://tech.meituan.com/2023/08/24/AB-test-practice-in-meituan.html"
+  title: "如何提供一个可信的AB测试解决方案"
+  publisher: "王鹏、永斌、中锋 · 美团技术团队"
+  accessed: "2026-10-10"
+  claim: "2023 年履约实践说明区域间共享运力、样本单位和分析单位改变实验设计及方差估计；不能把重复行为当独立样本"
+  excerpt: "excerpts/meituan-experiment-unit.md"
+
+- id: src-miller-peeking
+  url: "https://www.evanmiller.org/how-not-to-run-an-ab-test.html"
+  title: "How Not To Run an A/B Test"
+  publisher: "Evan Miller"
+  accessed: "2026-10-10"
+  claim: "固定样本检验反复看显著性并见好就停会增加假阳性；提供每组样本量 n≈16p(1−p)/δ² 的粗略规划规则，不是通用试验计算器"
+  excerpt: "excerpts/miller-peeking.md"
+
+- id: src-miller-sample-planning
+  url: "https://www.evanmiller.org/ab-testing/sample-size.html#!20;80;5;5;0"
+  title: "Sample Size Calculator"
+  publisher: "Evan Miller"
+  accessed: "2026-10-10"
+  claim: "2026-10-10 在页面核对基线 20%、绝对 MDE 5 个百分点、功效 80%、显著性 5% 时显示每组 1030；本文粗估规则为 1024，不能误称与该计算器完全相同"
+  excerpt: "excerpts/miller-sample-planning.md"
+
+- id: src-dashthis-csv-workflow
+  url: "https://dashthis.com/integrations/create-reports-from-csv/"
+  title: "Create Reports From CSV Files"
+  publisher: "DashThis"
+  accessed: "2026-10-10"
+  claim: "产品页描述上传 CSV、建立模板、连接仪表盘和再次导入更新；仅作现有替代的公开功能说明，未试用或比较效果"
+  excerpt: "excerpts/dashthis-csv-workflow.md"
+
+- id: src-ahrefs-content-audit
+  url: "https://ahrefs.com/blog/content-audit/"
+  title: "Follow Our Content Audit Process (Template Included)"
+  publisher: "Joshua Hardwick · Ahrefs"
+  accessed: "2026-10-10"
+  claim: "2023 年作者说明按页面用途审计，并因产品变化重写最初于 2019 年发布的索引指南；不采用增长数字或供应商工具分数"
+  excerpt: "excerpts/ahrefs-content-audit.md"
+
+- id: src-google-url-inspection
+  url: "https://support.google.com/webmasters/answer/9012289?hl=en"
+  title: "URL Inspection Tool"
+  publisher: "Google Search Console Help"
+  accessed: "2026-10-10"
+  claim: "已有索引信息与实时测试不同；实时测试不能预测规范页，显示已在 Google 上也不保证具体查询展示"
+  excerpt: "excerpts/google-url-inspection.md"
+
+- id: src-google-noindex
+  url: "https://developers.google.com/search/docs/crawling-indexing/block-indexing"
+  title: "使用 noindex 阻止搜索引擎编入索引"
+  publisher: "Google Search Central"
+  accessed: "2026-10-10"
+  claim: "noindex 可由 HTML 元标记或 HTTP 响应头表达；抓取工具需要能访问页面才读得到，robots.txt 阻挡不能替代它"
+  excerpt: "excerpts/google-noindex.md"
+
+- id: src-google-recrawl
+  url: "https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl?hl=en"
+  title: "Ask Google to recrawl your URLs"
+  publisher: "Google Search Central"
+  accessed: "2026-10-10"
+  claim: "重新抓取可能需要几天到几周，重复请求不加速，不保证进入搜索结果；少量用 URL Inspection，较多可提交站点地图"
+  excerpt: "excerpts/google-recrawl.md"
+
+- id: src-search-console-discrepancies
+  url: "https://support.google.com/webmasters/answer/17010575?hl=en"
+  title: "Performance report (Search results): Troubleshooting data discrepancies"
+  publisher: "Google Search Console Help"
+  accessed: "2026-10-10"
+  claim: "查询表因隐私和行数限制不完整，聚合与筛选可能改变总数；除 24 小时视图外常规日报按太平洋时间"
+  excerpt: "excerpts/search-console-discrepancies.md"
+
+- id: src-google-search-spam
+  url: "https://developers.google.com/search/docs/essentials/spam-policies?hl=en"
+  title: "Spam policies for Google web search"
+  publisher: "Google Search Central"
+  accessed: "2026-10-10"
+  claim: "规模化内容滥用涉及主要为操纵排名而生成、缺少用户价值的大量页面，不以生成方式区分是否适用"
+  excerpt: "excerpts/google-search-spam.md"
+
+- id: src-search-query-observation
+  url: https://www.google.com/search?q=client+weekly+report+template
+  title: "公开查询观察：client weekly report template"
+  publisher: Google Search
+  accessed: 2026-10-10
+  claim: "本次可见结果包含模板、营销报告及施工报告等不同任务；仅为带日期的公开观察，不支持固定排名、搜索量、地区偏好或需求验证"
+  excerpt: excerpts/search-query-observation.md
+
+- id: src-jiayi-newsletter-practice
+  url: "https://sspai.com/post/91025"
+  title: "持续更新了 20 期 Newsletter，我有这些话想说"
+  publisher: "jiayifun · 少数派"
+  accessed: "2026-10-10"
+  claim: "作者在 2024 年复盘前两次停止与本次建立输入、标记、加工、发布流程；个人写作经历，不证明软件邮件营销效果"
+  excerpt: "excerpts/jiayi-newsletter-practice.md"
+
+- id: src-eric-newsletter-practice
+  url: "https://buffer.com/resources/newsletter-business/"
+  title: "How This Newsletter Business Became Profitable in 4 Months"
+  publisher: "Eric Lam · Buffer"
+  accessed: "2026-10-10"
+  claim: "作者根据读者来信扩展深度内容与服务，也用打开数据回访；只采用归属经验，并用 Apple 文档质疑打开率代理，不采纳营收和效果保证"
+  excerpt: "excerpts/eric-newsletter-practice.md"
+
+- id: src-ahrefs-creator-practice
+  url: "https://ahrefs.com/blog/sponsoring-creators/"
+  title: "We Spent >$1 Million Sponsoring Creators. Here’s What We Learned About B2B Influencer Marketing"
+  publisher: "Si Quan Ong · Ahrefs"
+  accessed: "2026-10-10"
+  claim: "2025 年原团队访谈描述从昂贵产品的播客推广转向免费入口、逐个审查创作者与事先约定报告；不采用报价档位或保证增量"
+  excerpt: "excerpts/ahrefs-creator-practice.md"
+
+- id: src-ftc-can-spam
+  url: "https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business"
+  title: "CAN-SPAM Act: A Compliance Guide for Business"
+  publisher: "FTC"
+  accessed: "2026-10-10"
+  claim: "美国商业邮件指南涵盖 B2B、真实路由/主题、邮寄地址及退订；混合服务与推广信息按主要目的判断，退出最迟 10 个工作日等要求不等于其他地区规则"
+  excerpt: "excerpts/ftc-can-spam.md"
+
+- id: src-youtube-branded-content
+  archive: "https://web.archive.org/web/20261010091818/https://support.google.com/youtube/answer/154235?hl=en"
+  url: "https://support.google.com/youtube/answer/154235?hl=en"
+  title: "Add branded content restrictions & disclosure labels"
+  publisher: "YouTube Help"
+  accessed: "2026-10-10"
+  claim: "2026-10-10 帮助页要求有品牌/赞助等关系的内容使用付费推广申报；平台标签不替代双方适用法律要求"
+  excerpt: "excerpts/youtube-branded-content.md"
+
+- id: src-apple-mail-privacy
+  url: "https://support.apple.com/guide/iphone/use-mail-privacy-protection-iphf084865c7/ios"
+  title: "在 iPhone 上使用邮件隐私保护"
+  publisher: "Apple 支持"
+  accessed: "2026-10-10"
+  claim: "邮件隐私保护会阻止发件人获知是否打开邮件；不能把打开记录当成可靠阅读/未阅读证据，功能不延伸到链接及附件"
+  excerpt: "excerpts/apple-mail-privacy.md"
+- id: src-notion-japanese-launch
+  url: https://www.notion.com/blog/notion-launching-in-japanese
+  title: "Notion is now in Japanese! みなさん、こんにちは！"
+  publisher: 西勝清 · Notion
+  accessed: 2026-10-10
+  claim: 2021 年日本市场负责人报告发布前已有使用英语产品的日本社区，并随日语产品提供专门客服、帮助文章、案例与模板；是团队历史叙述，不证明翻译带来因果增长
+  excerpt: excerpts/notion-japanese-launch.md
+- id: src-mhand-report-practice
+  url: https://www.m-hand.co.jp/tokyo/blog/report-form/
+  title: Webサイトの成果を可視化する報告テンプレートの紹介
+  publisher: エムハンド · マーケターチーム
+  accessed: 2026-10-10
+  claim: 2023 年团队介绍月度网站成果报告，结合访问数据与实际咨询跟进，分别维护线索、摘要和趋势材料；支持任务结构，不代表小工作室购买意愿
+  excerpt: excerpts/mhand-report-practice.md
+- id: src-ini-backlog-practice
+  url: https://www.ini.co.jp/iniway/knowledge/website-tools.html
+  title: 〜Webサイト制作・開発は進捗管理ツールを活用しよう！〜 PM・ディレクション初心者のためのBacklog活用法【プロジェクト開始編】
+  publisher: 前原 · INI WAY
+  accessed: 2026-10-10
+  claim: INI 实践文章区分任务自身完成、内部复核与客户批准，并以主视觉素材请求说明任务命名歧义；不采用其页面功能限制作为现行规则
+  excerpt: excerpts/ini-backlog-practice.md
+- id: src-jbug-sapporo-practice
+  url: https://backlog.com/ja/blog/jbug-sapporo-eventreport/
+  title: Web制作現場のBacklog活用を学ぶ｜JBUGイベントレポート
+  publisher: makofujimoto · Backlog
+  accessed: 2026-10-10
+  claim: 2026-06-17 的活动回顾记录 Gear8 待島亘在 5 月 30 日分享邀请客户到 Backlog 集中制作运营往来和报告整理；为厂商刊载的经验记录，不证明工具普遍适合或独立报告没有市场
+  excerpt: excerpts/jbug-sapporo-practice.md
+- id: src-jbug-community
+  url: https://jbuginfo.backlog.com/
+  title: JBUG（ジェイバグ）｜Backlogユーザーコミュニティ
+  publisher: JBUG · Backlog
+  accessed: 2026-10-10
+  claim: 社区主页定位为 Backlog 用户经验交流并连接活动与 connpass 入口；不保证特定活动尚可报名、不授予营销许可
+  excerpt: excerpts/jbug-community.md
+- id: src-stripe-konbini-market
+  url: https://docs.stripe.com/payments/konbini
+  title: Konbini payments
+  publisher: Stripe
+  accessed: 2026-10-10
+  claim: Konbini 买家地点日本、展示币种 JPY，Business locations 页签列日本 Stripe 账户；取得付款码后需线下支付，退款需买家收款账户信息且另有入驻审核，不能推断大陆个人可用
+  excerpt: excerpts/stripe-konbini-market.md
+  archive: https://web.archive.org/web/20261010094812/https://docs.stripe.com/payments/konbini

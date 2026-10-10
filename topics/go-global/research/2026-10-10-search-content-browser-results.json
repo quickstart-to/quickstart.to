@@ -1,0 +1,122 @@
+{
+  "viewport": {
+    "width": 320,
+    "scroll": 305,
+    "overflow": []
+  },
+  "states": [
+    {
+      "period": "a",
+      "scope": "page",
+      "text": "A 期 · 完整页面汇总：1200 次曝光、24 次点击，点击率 2.00%。B 期为 2200 次曝光、40 次点击，点击率 1.82%。",
+      "decision": "从 A 期到 B 期，点击变多、总点击率变低；先拆查询构成，不能据此认定标题变差或用户质量下降。"
+    },
+    {
+      "period": "a",
+      "scope": "visible",
+      "text": "A 期 · 仅可见查询：1100 次曝光、20 次点击，点击率 1.82%。B 期为 2100 次曝光、35 次点击，点击率 1.67%。",
+      "decision": "只加可见查询无法还原完整页面。真实差额要排查隐私省略、行数限制与聚合方式，不擅自补查询或分配转化。"
+    },
+    {
+      "period": "a",
+      "scope": "task",
+      "text": "A 期 · CSV 任务查询：100 次曝光、10 次点击，点击率 10.00%。B 期为 100 次曝光、15 次点击，点击率 15.00%。",
+      "decision": "任务查询两期曝光相同，从 A 期到 B 期，点击率从 10% 到 15%；可继续检查页面用途，但无对照，不能归因于改稿。"
+    },
+    {
+      "period": "a",
+      "scope": "broad",
+      "text": "A 期 · 宽泛模板查询：1000 次曝光、10 次点击，点击率 1.00%。B 期为 2000 次曝光、20 次点击，点击率 1.00%。",
+      "decision": "从 A 期到 B 期，宽泛查询曝光和点击同时翻倍，点击率仍是 1%；它在总量中的占比变大，会拉低全页点击率。"
+    },
+    {
+      "period": "a",
+      "scope": "empty",
+      "text": "A 期 · 未观察查询：0 次曝光、0 次点击，点击率不适用。B 期为 0 次曝光、0 次点击，点击率不适用。",
+      "decision": "没有观察记录，点击率不适用；不等于没人有这个需求，也不支持新建页面或宣布该方向失败。"
+    },
+    {
+      "period": "b",
+      "scope": "page",
+      "text": "B 期 · 完整页面汇总：2200 次曝光、40 次点击，点击率 1.82%。A 期为 1200 次曝光、24 次点击，点击率 2.00%。",
+      "decision": "从 A 期到 B 期，点击变多、总点击率变低；先拆查询构成，不能据此认定标题变差或用户质量下降。"
+    },
+    {
+      "period": "b",
+      "scope": "visible",
+      "text": "B 期 · 仅可见查询：2100 次曝光、35 次点击，点击率 1.67%。A 期为 1100 次曝光、20 次点击，点击率 1.82%。",
+      "decision": "只加可见查询无法还原完整页面。真实差额要排查隐私省略、行数限制与聚合方式，不擅自补查询或分配转化。"
+    },
+    {
+      "period": "b",
+      "scope": "task",
+      "text": "B 期 · CSV 任务查询：100 次曝光、15 次点击，点击率 15.00%。A 期为 100 次曝光、10 次点击，点击率 10.00%。",
+      "decision": "任务查询两期曝光相同，从 A 期到 B 期，点击率从 10% 到 15%；可继续检查页面用途，但无对照，不能归因于改稿。"
+    },
+    {
+      "period": "b",
+      "scope": "broad",
+      "text": "B 期 · 宽泛模板查询：2000 次曝光、20 次点击，点击率 1.00%。A 期为 1000 次曝光、10 次点击，点击率 1.00%。",
+      "decision": "从 A 期到 B 期，宽泛查询曝光和点击同时翻倍，点击率仍是 1%；它在总量中的占比变大，会拉低全页点击率。"
+    },
+    {
+      "period": "b",
+      "scope": "empty",
+      "text": "B 期 · 未观察查询：0 次曝光、0 次点击，点击率不适用。A 期为 0 次曝光、0 次点击，点击率不适用。",
+      "decision": "没有观察记录，点击率不适用；不等于没人有这个需求，也不支持新建页面或宣布该方向失败。"
+    }
+  ],
+  "reset": "B 期 · 完整页面汇总：2200 次曝光、40 次点击，点击率 1.82%。A 期为 1200 次曝光、24 次点击，点击率 2.00%。",
+  "map": {
+    "count": 25,
+    "search": "",
+    "pending": "脑图连接的是已经写出的章节。邮件和非英语市场的具体运营，还没有完整操作篇；查看现有材料与待补部分。"
+  },
+  "resources": {
+    "searchLinks": [
+      "/go-global/search-content",
+      "/go-global/search-content",
+      "/go-global/search-content#search-copy-title",
+      "/go-global/search-content#search-route-title",
+      "/go-global/search-content#search-report-title",
+      "/go-global/search-content#search-decision-title"
+    ],
+    "legacy": true
+  },
+  "checkedOn": "2026-10-10",
+  "environment": "Ego / local Astro development server; SC-01 synthetic records",
+  "staticAudit": {
+    "pages": 29,
+    "chapterLinks": 25,
+    "chapterSources": 12,
+    "inlineScriptBytes": [
+      2098,
+      4873,
+      1780,
+      245
+    ],
+    "errors": []
+  },
+  "keyboard": {
+    "periodAtoB": true,
+    "tabToScope": true,
+    "enterReset": true,
+    "nativeDisclosureWithScriptsDisabled": true
+  },
+  "noJavaScript": {
+    "formHidden": true,
+    "inputRows": 3,
+    "diagnosticDisclosures": 3,
+    "baselineClicks": 40
+  },
+  "screenshotsReviewed": [
+    "desktop-report",
+    "phone-report",
+    "phone-route",
+    "phone-copy"
+  ],
+  "limitations": [
+    "No production GSC or customer data",
+    "Map label text was hidden while branch collapsed; link target and static chapter coverage checked, visible navigation pending deployment review"
+  ]
+}

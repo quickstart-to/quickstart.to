@@ -1,0 +1,142 @@
+{
+  "checkedAt": "2026-10-10T02:04:43.377Z",
+  "results": [
+    {
+      "category": "users",
+      "visible": [
+        "PostHog：首批使用者怎样走到公开发布",
+        "Web Designer Forum：先读评审区的边界"
+      ],
+      "count": "“找用户”：2 份材料。点击“全部”恢复完整列表。",
+      "pressed": [
+        "users"
+      ]
+    },
+    {
+      "category": "distribution",
+      "visible": [
+        "Show HN：作品到了适合发布的阶段吗",
+        "Google 搜索：先让任务页可发现、可理解"
+      ],
+      "count": "“发布与搜索”：2 份材料。点击“全部”恢复完整列表。",
+      "pressed": [
+        "distribution"
+      ]
+    },
+    {
+      "category": "product",
+      "visible": [
+        "W3C：日期为什么不能只交给翻译",
+        "W3C：做一次无障碍初检"
+      ],
+      "count": "“产品适配”：2 份材料。点击“全部”恢复完整列表。",
+      "pressed": [
+        "product"
+      ]
+    },
+    {
+      "category": "operation",
+      "visible": [
+        "flomo：从愿意付钱，再看有没有用到价值",
+        "Intercom：让反馈对应到具体的一群人"
+      ],
+      "count": "“反馈与经营”：2 份材料。点击“全部”恢复完整列表。",
+      "pressed": [
+        "operation"
+      ]
+    },
+    {
+      "category": "recovery",
+      "visible": [
+        "GitHub：失去第二因素以后怎样恢复"
+      ],
+      "count": "“交付与恢复”：1 份材料。点击“全部”恢复完整列表。",
+      "pressed": [
+        "recovery"
+      ]
+    },
+    {
+      "category": "rights",
+      "visible": [
+        "WIPO：产品名称先查哪些线索",
+        "Choose a License：先分清自己的代码和依赖"
+      ],
+      "count": "“名称与许可”：2 份材料。点击“全部”恢复完整列表。",
+      "pressed": [
+        "rights"
+      ]
+    },
+    {
+      "category": "all",
+      "visible": [
+        "PostHog：首批使用者怎样走到公开发布",
+        "Web Designer Forum：先读评审区的边界",
+        "Show HN：作品到了适合发布的阶段吗",
+        "Google 搜索：先让任务页可发现、可理解",
+        "W3C：日期为什么不能只交给翻译",
+        "W3C：做一次无障碍初检",
+        "flomo：从愿意付钱，再看有没有用到价值",
+        "Intercom：让反馈对应到具体的一群人",
+        "GitHub：失去第二因素以后怎样恢复",
+        "WIPO：产品名称先查哪些线索",
+        "Choose a License：先分清自己的代码和依赖"
+      ],
+      "count": "全部 11 份外部材料。选择一项当前任务即可缩小范围。",
+      "pressed": [
+        "all"
+      ]
+    }
+  ],
+  "keyboard": {
+    "focused": "找用户",
+    "focusVisible": true,
+    "visible": 2,
+    "count": "“找用户”：2 份材料。点击“全部”恢复完整列表。"
+  },
+  "reset": {
+    "focused": "全部",
+    "visible": 11
+  },
+  "mobile": {
+    "overflow": false,
+    "tableCells": "block",
+    "columns": "343px",
+    "reducedMotion": true
+  },
+  "fallback": {
+    "controlsHidden": true,
+    "visibleCards": 11,
+    "noscript": "筛选需要 JavaScript；上面的全部资源和链接仍可直接阅读。",
+    "copy": true,
+    "overflow": false
+  },
+  "downloads": [
+    "infrastructure-drill.mjs",
+    "payment-delivery-drill.mjs",
+    "credential-rotation-drill.mjs"
+  ],
+  "downloadByteChecks": [
+    {
+      "filename": "infrastructure-drill.mjs",
+      "bytes": 5060,
+      "sha256": "5c86d282885116f796c04189c20d814bec7c034ef9c5c3ea0f60c20ad6ed68c0",
+      "matchesBuiltDownload": true
+    },
+    {
+      "filename": "payment-delivery-drill.mjs",
+      "bytes": 10529,
+      "sha256": "abfe5375c7351c9c513e056da1c5d84fcdcf092293f918b339675b1e0f4c5023",
+      "matchesBuiltDownload": true
+    },
+    {
+      "filename": "credential-rotation-drill.mjs",
+      "bytes": 4069,
+      "sha256": "d2a9fb12e9610d6e792655c8e4b041d1394e4082dd79264d737282bda985020d",
+      "matchesBuiltDownload": true
+    }
+  ],
+  "staticAudit": {
+    "topicHtmlPages": 16,
+    "errors": []
+  }
+}

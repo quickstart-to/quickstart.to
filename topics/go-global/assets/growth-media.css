@@ -1,0 +1,80 @@
+.growth-media { margin: 2rem 0; font-size: .94rem; line-height: 1.75; container-type: inline-size; }
+.growth-media h3 { margin: 0 0 1rem; font-size: 1.15rem; line-height: 1.5; }
+.growth-media h4 { margin: 1.1rem 0 .4rem; font-size: 1rem; }
+.growth-media p { margin: .8rem 0; }
+.growth-media [hidden] { display: none !important; }
+.growth-kicker, .growth-media figcaption { font-size: .84rem; color: var(--fg-muted); }
+.growth-entry { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .8rem; padding-bottom: 1.5rem; position: relative; }
+.growth-entry::after { content: ''; position: absolute; left: calc((100% - 1.6rem) / 6); right: calc((100% - 1.6rem) / 6); bottom: 0; border-bottom: 2px solid var(--accent); }
+.growth-entry > div { position: relative; border: 1px solid var(--border); border-radius: .4rem; padding: .8rem; background: var(--bg-soft); }
+.growth-entry > div::after { content: ''; position: absolute; top: 100%; left: 50%; height: 1.5rem; border-left: 2px solid var(--accent); }
+.growth-entry strong, .growth-entry span, .growth-entry small, .growth-path strong, .growth-path span { display: block; }
+.growth-entry small { color: var(--fg-muted); margin-top: .4rem; }
+.growth-discovery .growth-merge { margin: 0 0 1rem; text-align: center; color: var(--accent); font-size: .85rem; }
+.growth-path { list-style: none; margin: 0; padding: 0; }
+.growth-path li, .growth-path li + li { position: relative; margin: 0 0 1.6rem; padding: .8rem 1rem; border: 1px solid var(--border); border-radius: .4rem; }
+.growth-path li:not(:last-child)::after { content: '↓'; position: absolute; top: 100%; left: 50%; line-height: 1.6rem; color: var(--accent); }
+.growth-return { border: 1px solid var(--accent); padding: .7rem 1rem; border-radius: .4rem; }
+.growth-sample, .growth-note, .growth-demo { padding: 1.1rem; border: 1px solid var(--border); border-radius: .5rem; background: var(--bg-soft); }
+.growth-sample > summary { cursor: pointer; font-weight: 600; }
+.growth-sample[open] > summary { margin-bottom: 1rem; }
+.growth-sample blockquote { margin: 1rem 0; padding: .5rem 1rem; background: var(--bg); border-left: 3px solid var(--accent); font-style: normal; color: var(--fg); }
+.growth-note [lang] { border-left: 2px solid var(--border); padding-left: .8rem; }
+.growth-table { container-type: inline-size; margin: 1.5rem 0; }
+.growth-table table { width: 100%; table-layout: fixed; }
+.growth-options-table th:first-child { width: 20%; }
+.growth-table th, .growth-table td { overflow-wrap: anywhere; }
+.growth-demo .growth-table th:first-child { width: 4rem; }
+.growth-demo fieldset { border: 0; padding: 0; margin: 1.3rem 0; min-width: 0; }
+.growth-demo legend { font-weight: 650; margin-bottom: .6rem; }
+.growth-options { display: grid; gap: .5rem; }
+.growth-demo label { display: flex; align-items: center; gap: .6rem; padding: .6rem; border: 1px solid var(--border); border-radius: .35rem; min-height: 44px; cursor: pointer; background: var(--bg); }
+.growth-demo input { width: 1.1rem; height: 1.1rem; flex: 0 0 1.1rem; accent-color: var(--accent); }
+.growth-demo label:has(input:checked) { border-color: var(--accent); }
+.growth-demo label:has(input:focus-visible) { outline: 2px solid var(--accent); outline-offset: 2px; }
+.growth-evidence { margin-top: .8rem; }
+.growth-fixed { border-left: 3px solid var(--accent); padding: .6rem .8rem; background: var(--bg); }
+.growth-bars { list-style: none; margin: 1.2rem 0; padding: 0; display: grid; gap: .7rem; }
+.growth-bars li, .growth-bars li + li { display: grid; grid-template-columns: 6rem 1.5rem 1fr; gap: .6rem; align-items: center; margin: 0; font-size: .9rem; }
+.growth-bars b { font-variant-numeric: tabular-nums; }
+.growth-bars li > div { background: var(--border); height: .65rem; border-radius: .15rem; overflow: hidden; }
+.growth-bars i { display: block; height: 100%; background: var(--accent); }
+.growth-demo [role='status'] { font-size: .88rem; }
+.growth-demo button { font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--border); border-radius: .35rem; min-height: 44px; padding: .6rem 1rem; cursor: pointer; }
+.growth-demo button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+@container (max-width: 540px) {
+  .growth-table table, .growth-table tbody, .growth-table tr, .growth-table td { display: block; }
+  .growth-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .growth-table tr { padding: .7rem; border: 1px solid var(--border); border-radius: .35rem; margin-bottom: .8rem; background: var(--bg); }
+  .growth-table td { border: 0; padding: .3rem 0; }
+  .growth-table tbody th { display: block; width: auto !important; border: 0; padding: 0 0 .3rem; color: var(--accent); }
+  .growth-table td:first-child { font-weight: 650; }
+  .growth-table td::before { color: var(--fg-muted); font-weight: 650; }
+  .growth-options-table td:nth-child(2)::before { content: '条件与材料：'; }
+  .growth-options-table td:nth-child(3)::before { content: '代价与条件：'; }
+  .growth-budget-table td:nth-child(2)::before { content: '投入：'; }
+  .growth-budget-table td:nth-child(3)::before { content: '留下的结果：'; }
+  .growth-record-table td:nth-child(2)::before { content: '接触顺序：'; }
+  .growth-record-table td:nth-child(3)::before { content: '使用结果：'; }
+}
+
+.growth-cost { padding: 1.1rem; border: 1px solid var(--border); border-radius: .5rem; background: var(--bg-soft); }
+.growth-cost fieldset { margin: 1rem 0; padding: 0; min-width: 0; border: 0; }
+.growth-cost legend { font-weight: 650; margin-bottom: .8rem; }
+.growth-cost label { display: block; }
+.growth-cost input[type='range'] { display: block; width: 100%; min-height: 44px; margin: .2rem 0 .8rem; accent-color: var(--accent); cursor: pointer; }
+.growth-cost-results { display: grid; gap: .7rem; margin: 1rem 0; }
+.growth-cost-results > div { padding: .8rem; border-left: 3px solid var(--accent); background: var(--bg); }
+.growth-cost dt { font-size: .85rem; color: var(--fg-muted); }
+.growth-cost dd { margin: .2rem 0 0; font-weight: 650; font-variant-numeric: tabular-nums; }
+.growth-cost [role='status'] { font-size: .86rem; }
+.growth-cost button { font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--border); border-radius: .35rem; min-height: 44px; padding: .6rem 1rem; cursor: pointer; }
+.growth-cost :is(input, button):focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+@container (max-width: 540px) {
+  .growth-entry { grid-template-columns: 1fr; padding: 0 0 0 1rem; gap: .6rem; border-left: 2px solid var(--accent); }
+  .growth-entry::after { display: none; }
+  .growth-entry > div::after { top: 50%; left: -1rem; width: 1rem; height: 0; border-left: 0; border-top: 2px solid var(--accent); }
+  .growth-discovery .growth-merge { text-align: left; padding: .7rem 0; }
+  .growth-cost-table td:nth-child(2)::before { content: '美元：'; }
+  .growth-cost-table td:nth-child(3)::before { content: '口径：'; }
+}

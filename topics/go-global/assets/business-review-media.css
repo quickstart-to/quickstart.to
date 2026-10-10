@@ -1,0 +1,60 @@
+.review-media { margin: 2rem 0; font-size: .94rem; line-height: 1.75; container-type: inline-size; }
+.review-media h3 { margin: 0 0 1rem; font-size: 1.15rem; line-height: 1.5; }
+.review-media h4 { margin: 0 0 .6rem; font-size: 1rem; }
+.review-media p { margin: .8rem 0; }
+.review-media [hidden] { display: none !important; }
+.review-caption, .review-media figcaption { font-size: .85rem; color: var(--fg-muted); }
+.review-money-start, .review-exit-start, .review-exit-end { padding: .9rem 1rem; border: 1px solid var(--accent); border-radius: .4rem; background: var(--bg-soft); }
+.review-money-start > *, .review-exit-start > *, .review-exit-end > * { display: block; }
+.review-money-start span, .review-exit-start span, .review-exit-end span { margin-top: .4rem; }
+.review-money-start b { margin-top: .6rem; font-size: .88rem; }
+.review-money-branches { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-top: 1.5rem; }
+.review-money-branches > div { position: relative; padding: 1rem; border: 1px solid var(--border); border-radius: .4rem; }
+.review-money-branches > div::before { content: ''; position: absolute; height: 1.5rem; width: 1px; background: var(--accent); top: -1.5rem; left: 50%; }
+.review-money-branches strong { color: var(--accent); font-variant-numeric: tabular-nums; }
+.review-time-step { border-top: 1px dashed var(--border); margin-top: 1rem; padding-top: .5rem; }
+.review-time-step > span { font-size: .85rem; color: var(--fg-muted); }
+.review-demo, .review-notice { padding: 1.15rem; border: 1px solid var(--border); border-radius: .5rem; background: var(--bg-soft); }
+.review-demo fieldset { border: 0; padding: 0; margin: 1.3rem 0; min-width: 0; }
+.review-demo legend { font-weight: 650; margin-bottom: .5rem; }
+.review-demo label { display: block; margin: .6rem 0 .3rem; }
+.review-demo select { display: block; width: 100%; min-height: 44px; padding: .6rem; font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--border); border-radius: .3rem; }
+.review-demo select:disabled { opacity: .75; }
+.review-demo button { min-height: 44px; padding: .6rem 1rem; font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--border); border-radius: .3rem; cursor: pointer; }
+.review-demo :is(button, select, summary):focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.review-demo details { margin-top: 1rem; }
+.review-demo summary { cursor: pointer; min-height: 44px; padding: .5rem 0; }
+.review-results { display: grid; grid-template-columns: 1fr 1fr; gap: .6rem; margin-bottom: 1rem; }
+.review-results > div { padding: .7rem; border: 1px solid var(--border); border-radius: .3rem; background: var(--bg); }
+.review-results > div:nth-child(3), .review-results > p { grid-column: 1 / -1; }
+.review-results span, .review-results strong { display: block; }
+.review-results span { font-size: .85rem; color: var(--fg-muted); }
+.review-results strong { font-size: 1.3rem; font-variant-numeric: tabular-nums; }
+.review-results p { font-size: .87rem; }
+.review-exit-lanes { display: grid; grid-template-columns: 1fr; gap: 1rem; border-left: 2px solid var(--accent); margin-left: .6rem; padding-left: 1rem; }
+.review-exit-lanes > div { position: relative; border: 1px solid var(--border); border-radius: .4rem; padding: 1rem; }
+.review-exit-lanes > div::before { position: absolute; content: ''; width: 1rem; height: 1px; background: var(--accent); left: -1rem; top: 1.8rem; }
+.review-exit-lanes aside { border-top: 1px dashed var(--border); padding-top: .6rem; font-size: .85rem; color: var(--fg-muted); }
+.review-connector { text-align: center; font-size: .85rem; color: var(--accent); }
+.review-notice [lang='en'] { line-height: 1.8; }
+.review-notice > div { border-left: 2px solid var(--accent); padding-left: 1rem; }
+.review-table { margin: 1.5rem 0; container-type: inline-size; }
+.review-table table { width: 100%; table-layout: fixed; }
+.review-table :is(th, td) { overflow-wrap: anywhere; }
+@container (max-width: 540px) {
+  .review-money-branches { grid-template-columns: 1fr; border-left: 1px solid var(--accent); margin-left: .5rem; padding-left: 1rem; }
+  .review-money-branches > div::before { width: 1rem; height: 1px; top: 1.8rem; left: -1rem; }
+  .review-results { grid-template-columns: 1fr; }
+  .review-table table, .review-table tbody, .review-table tr, .review-table td { display: block; }
+  .review-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .review-table tr { padding: .75rem; border: 1px solid var(--border); border-radius: .35rem; margin-bottom: .8rem; background: var(--bg); }
+  .review-table td { border: 0; padding: .3rem 0; }
+  .review-table td:first-child { font-weight: 650; }
+  .review-table td::before { color: var(--fg-muted); font-weight: 650; }
+  .review-ledger td:nth-child(2)::before { content: '金额或用时：'; }
+  .review-ledger td:nth-child(3)::before { content: '核对依据：'; }
+  .review-choice td:nth-child(2)::before { content: '接下来承担：'; }
+  .review-choice td:nth-child(3)::before { content: '这次判断：'; }
+  .review-close-table td:nth-child(2)::before { content: '已留依据：'; }
+  .review-close-table td:nth-child(3)::before { content: '下一步与依赖：'; }
+}

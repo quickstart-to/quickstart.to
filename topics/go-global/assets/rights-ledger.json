@@ -1,0 +1,152 @@
+{
+  "example_id": "R-01",
+  "recorded_on": "2026-10-10",
+  "kind": "教学取舍记录；不是真实产品权利清查",
+  "scope": "本地 CSV 周报工具的拟发布材料，不含真实采购或商标检索",
+  "result": "功能研究可继续；对外品牌与包含待核材料的发布包仍待确认",
+  "records": [
+    {
+      "id": "R01-01",
+      "material": "对外名称",
+      "planned_use": "网站与客户材料",
+      "evidence_status": "尚无已完成清查的候选及目标国家",
+      "version": "未确定",
+      "missing_evidence": "候选拼写、目标地区、近似结果、查询日期与个案判断",
+      "source_urls": [],
+      "decision": "暂缓对外定名与品牌采购；继续以 R-01 为内部工作代号",
+      "reopen_when": "选定目标地区与候选后补初筛及必要专业清查",
+      "proposed_owner_role": "经营者",
+      "actual_file": null,
+      "sha256": null,
+      "actual_release": null,
+      "modification_plan": "名称尚未确定",
+      "conditions_to_resolve": "按实际目标地区核对候选与近似标志",
+      "delivered_notice_location": null,
+      "verification_evidence": []
+    },
+    {
+      "id": "R01-02",
+      "material": "装饰合影",
+      "planned_use": "介绍页",
+      "evidence_status": "原始材料与其他权利未确认",
+      "version": "未取得",
+      "missing_evidence": "原始照片、授权范围及必要的其他权利",
+      "source_urls": [
+        "https://unsplash.com/terms"
+      ],
+      "decision": "本版不引入；改用自有界面和合成报告",
+      "reopen_when": "只有任务确需人物且取得适用材料后再评估",
+      "proposed_owner_role": "内容制作者",
+      "actual_file": null,
+      "sha256": null,
+      "actual_release": null,
+      "modification_plan": "本版不引入",
+      "conditions_to_resolve": "若改变删除决定，核对原始材料及具体用途",
+      "delivered_notice_location": null,
+      "verification_evidence": []
+    },
+    {
+      "id": "R01-03",
+      "material": "Inter 字体",
+      "planned_use": "拟自托管网页字体副本",
+      "evidence_status": "许可已阅读，具体字体文件未取得",
+      "version": "4.1 / SIL OFL 1.1",
+      "missing_evidence": "实际文件与校验值、随副本提供的版权声明和许可",
+      "source_urls": [
+        "https://github.com/rsms/inter/blob/v4.1/LICENSE.txt"
+      ],
+      "decision": "保留候选，尚未加入任何 R-01 包",
+      "reopen_when": "锁定实际文件并落实条件，检查接收方可取得的许可",
+      "proposed_owner_role": "开发者",
+      "actual_file": null,
+      "sha256": null,
+      "actual_release": null,
+      "modification_plan": "拟使用未修改字体；实际文件待核",
+      "conditions_to_resolve": "按实际文件的 OFL 落实随副本声明、许可等条件",
+      "delivered_notice_location": null,
+      "verification_evidence": []
+    },
+    {
+      "id": "R01-04",
+      "material": "Lodash 许可阅读样例",
+      "planned_use": "说明浏览器依赖的许可核对",
+      "evidence_status": "已阅读版本许可，未评估产品采用必要性与安全",
+      "version": "4.17.21 / MIT",
+      "missing_evidence": "真实锁文件、直接/间接依赖、构建产物、安全与兼容性核对",
+      "source_urls": [
+        "https://github.com/lodash/lodash/blob/4.17.21/LICENSE"
+      ],
+      "decision": "不把该旧版本加入产品；仅作许可阅读示例",
+      "reopen_when": "真实选型后另按采用版本建立记录",
+      "proposed_owner_role": "开发者",
+      "actual_file": null,
+      "sha256": null,
+      "actual_release": null,
+      "modification_plan": "仅阅读许可，未加入产品",
+      "conditions_to_resolve": "实际采用依赖时，另按锁定版本核对许可与构建产物",
+      "delivered_notice_location": null,
+      "verification_evidence": []
+    },
+    {
+      "id": "R01-05",
+      "material": "无许可代码片段",
+      "planned_use": "拟作简单格式化",
+      "evidence_status": "教学设定：公开仓库未找到使用许可",
+      "version": "未知",
+      "missing_evidence": "原始地址与适用授权；或独立实现记录",
+      "source_urls": [
+        "https://choosealicense.com/no-permission/"
+      ],
+      "decision": "本版不引入；独立实现所需功能",
+      "reopen_when": "如改用第三方实现，重新核对实际文件许可",
+      "proposed_owner_role": "开发者",
+      "actual_file": null,
+      "sha256": null,
+      "actual_release": null,
+      "modification_plan": "拟独立实现，不复制片段",
+      "conditions_to_resolve": "第三方实现须有适用许可；独立实现保留创作记录",
+      "delivered_notice_location": null,
+      "verification_evidence": []
+    },
+    {
+      "id": "R01-06",
+      "material": "委托标志",
+      "planned_use": "网站、产品界面和推广",
+      "evidence_status": "教学设定：只有收据与源文件，无明确权利约定",
+      "version": "教学源文件 / 无实际采购",
+      "missing_evidence": "权属与许可/转让约定、第三方材料、地域/期限/修改/交付范围",
+      "source_urls": [
+        "https://policy.mofcom.gov.cn/claw/clawContent.shtml?id=87976"
+      ],
+      "decision": "暂不公开使用；准备范围询问",
+      "reopen_when": "取得覆盖用途的书面安排并独立处理名称清查",
+      "proposed_owner_role": "经营者与创作者",
+      "actual_file": null,
+      "sha256": null,
+      "actual_release": null,
+      "modification_plan": "拟缩放与适配布局；范围待书面确认",
+      "conditions_to_resolve": "核对权属、第三方材料、地域、期限、修改与后续交付",
+      "delivered_notice_location": null,
+      "verification_evidence": []
+    },
+    {
+      "id": "R01-07",
+      "material": "合成项目行与介绍图",
+      "planned_use": "演示输入、产品介绍",
+      "evidence_status": "制作计划，未形成真实发布包",
+      "version": "R-01 计划",
+      "missing_evidence": "实际输入/图像、创作记录、所含第三方材料核对",
+      "source_urls": [],
+      "decision": "保留自有界面与合成数据方案，不使用真实客户材料",
+      "reopen_when": "完成制作并核对最终文件后更新记录",
+      "proposed_owner_role": "内容制作者",
+      "actual_file": null,
+      "sha256": null,
+      "actual_release": null,
+      "modification_plan": "拟自行创作合成数据及介绍图",
+      "conditions_to_resolve": "核对实际创作及所含第三方材料；不用真实客户资料",
+      "delivered_notice_location": null,
+      "verification_evidence": []
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+.revenue-media { margin: 2rem 0; font-size: .94rem; line-height: 1.75; container-type: inline-size; }
+.revenue-media h3 { margin: 0 0 1rem; font-size: 1.15rem; line-height: 1.5; }
+.revenue-media h4 { margin: 0 0 .6rem; font-size: 1rem; }
+.revenue-media p { margin: .8rem 0; }
+.revenue-media [hidden] { display: none !important; }
+.revenue-caption, .revenue-media figcaption { font-size: .85rem; color: var(--fg-muted); }
+.revenue-map-start { padding: 1rem; border: 1px solid var(--accent); border-radius: .4rem; background: var(--bg-soft); }
+.revenue-map-start > * { display: block; }
+.revenue-map-start span { margin-top: .4rem; }
+.revenue-map-branches { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+.revenue-map-branches > div { position: relative; padding: 1rem; border: 1px solid var(--border); border-radius: .4rem; }
+.revenue-map-branches > div::before { content: ''; position: absolute; width: 1px; height: 1.5rem; background: var(--accent); top: -1.5rem; left: 50%; }
+.revenue-map-branches aside { border-top: 1px dashed var(--border); padding-top: .6rem; font-size: .85rem; color: var(--fg-muted); }
+.revenue-demo, .revenue-sponsor, .revenue-disclosure { padding: 1.15rem; border: 1px solid var(--border); border-radius: .5rem; background: var(--bg-soft); }
+.revenue-demo fieldset { border: 0; padding: 0; margin: 1.3rem 0; min-width: 0; }
+.revenue-demo legend { font-weight: 650; margin-bottom: .5rem; }
+.revenue-demo label { display: block; margin: .7rem 0 0; }
+.revenue-demo input[type='range'] { display: block; width: 100%; min-height: 44px; margin: 0; accent-color: var(--accent); cursor: pointer; }
+.revenue-demo input:disabled { cursor: default; }
+.revenue-demo output, .revenue-results strong { font-variant-numeric: tabular-nums; }
+.revenue-demo button { min-height: 44px; padding: .6rem 1rem; font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--border); border-radius: .3rem; cursor: pointer; }
+.revenue-demo :is(button, input, summary):focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.revenue-demo details { margin-top: 1rem; }
+.revenue-demo summary { cursor: pointer; min-height: 44px; padding: .5rem 0; }
+.revenue-results { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .6rem; margin-bottom: 1rem; }
+.revenue-results > div { padding: .7rem; border: 1px solid var(--border); border-radius: .3rem; background: var(--bg); }
+.revenue-results > p { grid-column: 1 / -1; font-size: .87rem; }
+.revenue-results span, .revenue-results strong { display: block; }
+.revenue-results span { font-size: .85rem; color: var(--fg-muted); }
+.revenue-results strong { font-size: 1.25rem; }
+.revenue-settlement ol { list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.8rem; padding: 0; margin: 1.25rem 0; }
+.revenue-settlement li { position: relative; padding: .8rem; margin: 0; border: 1px solid var(--border); border-radius: .4rem; }
+.revenue-settlement li + li::before { content: '→'; color: var(--accent); position: absolute; left: -1.45rem; top: .8rem; }
+.revenue-settlement li > * { display: block; }
+.revenue-settlement li span { margin-top: .5rem; font-size: .85rem; color: var(--fg-muted); }
+.revenue-sponsor > div { border-left: 2px solid var(--accent); padding-left: 1rem; }
+.revenue-sponsor [lang='en'], .revenue-disclosure [lang='en'] { line-height: 1.8; }
+.revenue-table { margin: 1.5rem 0; container-type: inline-size; }
+.revenue-table table { width: 100%; table-layout: fixed; }
+.revenue-table th:first-child { width: 18%; }
+.revenue-table :is(th, td) { overflow-wrap: anywhere; }
+@container (max-width: 600px) {
+  .revenue-map-branches { position: relative; grid-template-columns: 1fr; border-left: 1px solid var(--accent); margin-left: .5rem; padding-left: 1rem; }
+  .revenue-map-branches::before { content: ''; position: absolute; top: -1.5rem; left: -1px; width: 1px; height: 1.5rem; background: var(--accent); }
+  .revenue-map-branches > div::before { width: 1rem; height: 1px; top: 1.8rem; left: -1rem; }
+  .revenue-results { grid-template-columns: 1fr; }
+  .revenue-settlement ol { grid-template-columns: 1fr; gap: 1.8rem; }
+  .revenue-settlement li + li::before { content: '↓'; top: -1.7rem; left: 1rem; }
+}
+@container (max-width: 540px) {
+  .revenue-table table, .revenue-table tbody, .revenue-table tr, .revenue-table td { display: block; }
+  .revenue-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .revenue-table tr { padding: .75rem; border: 1px solid var(--border); border-radius: .35rem; margin-bottom: .8rem; background: var(--bg); }
+  .revenue-table td { border: 0; padding: .3rem 0; }
+  .revenue-table td:first-child { font-weight: 650; }
+  .revenue-table td::before { color: var(--fg-muted); font-weight: 650; }
+  .revenue-model-table td:nth-child(2)::before { content: '买的是什么：'; }
+  .revenue-model-table td:nth-child(3)::before { content: '验证与工作：'; }
+}

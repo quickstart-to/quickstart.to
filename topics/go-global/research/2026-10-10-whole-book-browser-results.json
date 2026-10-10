@@ -1,0 +1,342 @@
+{
+  "date": "2026-10-10",
+  "baseline": "a76256fac2cd79c284ff1b397789cef8ff3cad70",
+  "pagesReviewed": 23,
+  "before": {
+    "firstUseTitleTopAt390": 1210.9921875,
+    "firstUseSidebarHeight": 1048.2421875,
+    "allPagesWithoutViewportOverflow": true
+  },
+  "after": [
+    {
+      "path": "/go-global",
+      "titleTopAt390": 209,
+      "noViewportOverflow": true,
+      "directoryClosed": true,
+      "headingCount": 7,
+      "outlineCount": 0,
+      "missingHeadings": [],
+      "rawMarkdown": false,
+      "previous": null,
+      "next": "/go-global/validate-idea"
+    },
+    {
+      "path": "/go-global/validate-idea",
+      "titleTopAt390": 209,
+      "noViewportOverflow": true,
+      "directoryClosed": true,
+      "headingCount": 6,
+      "outlineCount": 6,
+      "missingHeadings": [],
+      "rawMarkdown": false,
+      "previous": "/go-global",
+      "next": "/go-global/market-fit"
+    },
+    {
+      "path": "/go-global/market-fit",
+      "titleTopAt390": 209,
+      "noViewportOverflow": true,
+      "directoryClosed": true,
+      "headingCount": 6,
+      "outlineCount": 6,
+      "missingHeadings": [],
+      "rawMarkdown": false,
+      "previous": "/go-global/validate-idea",
+      "next": "/go-global/launch"
+    },
+    {
+      "path": "/go-global/launch",
+      "titleTopAt390": 209,
+      "noViewportOverflow": true,
+      "directoryClosed": true,
+      "headingCount": 6,
+      "outlineCount": 6,
+      "missingHeadings": [],
+      "rawMarkdown": false,
+      "previous": "/go-global/market-fit",
+      "next": "/go-global/infrastructure"
+    },
+    {
+      "path": "/go-global/infrastructure",
+      "titleTopAt390": 209,
+      "noViewportOverflow": true,
+      "directoryClosed": true,
+      "headingCount": 5,
+      "outlineCount": 5,
+      "missingHeadings": [],
+      "rawMarkdown": false,
+      "previous": "/go-global/launch",
+      "next": "/go-global/first-use"
+    },
+    {
+      "path": "/go-global/first-use",
+      "titleTopAt390": 209,
+      "noViewportOverflow": true,
+      "directoryClosed": true,
+      "headingCount": 8,
+      "outlineCount": 8,
+      "missingHeadings": [],
+      "rawMarkdown": false,
+      "previous": "/go-global/infrastructure",
+      "next": "/go-global/retention"
+    },
+    {
+      "path": "/go-global/retention",
+      "titleTopAt390": 209,
+      "noViewportOverflow": true,
+      "directoryClosed": true,
+      "headingCount": 5,
+      "outlineCount": 5,
+      "missingHeadings": [],
+      "rawMarkdown": false,
+      "previous": "/go-global/first-use",
+      "next": "/go-global/growth"
+    },
+    {
+      "path": "/go-global/growth",
+      "titleTopAt390": 209,
+      "noViewportOverflow": true,
+      "directoryClosed": true,
+      "headingCount": 9,
+      "outlineCount": 9,
+      "missingHeadings": [],
+      "rawMarkdown": false,
+      "previous": "/go-global/retention",
+      "next": "/go-global/platform-ads"
+    },
+    {
+      "path": "/go-global/platform-ads",
+      "titleTopAt390": 209,
+      "noViewportOverflow": true,
+      "directoryClosed": true,
+      "headingCount": 11,
+      "outlineCount": 11,
+      "missingHeadings": [],
+      "rawMarkdown": false,
+      "previous": "/go-global/growth",
+      "next": "/go-global/revenue-models"
+    },
+    {
+      "path": "/go-global/revenue-models",
+      "titleTopAt390": 209,
+      "noViewportOverflow": true,
+      "directoryClosed": true,
+      "headingCount": 6,
+      "outlineCount": 6,
+      "missingHeadings": [],
+      "rawMarkdown": false,
+      "previous": "/go-global/platform-ads",
+      "next": "/go-global/pricing"
+    },
+    {
+      "path": "/go-global/pricing",
+      "titleTopAt390": 209,
+      "noViewportOverflow": true,
+      "directoryClosed": true,
+      "headingCount": 6,
+      "outlineCount": 6,
+      "missingHeadings": [],
+      "rawMarkdown": false,
+      "previous": "/go-global/revenue-models",
+      "next": "/go-global/team-procurement"
+    },
+    {
+      "path": "/go-global/team-procurement",
+      "titleTopAt390": 209,
+      "noViewportOverflow": true,
+      "directoryClosed": true,
+      "headingCount": 8,
+      "outlineCount": 8,
+      "missingHeadings": [],
+      "rawMarkdown": false,
+      "previous": "/go-global/pricing",
+      "next": "/go-global/payments"
+    },
+    {
+      "path": "/go-global/payments",
+      "titleTopAt390": 209,
+      "noViewportOverflow": true,
+      "directoryClosed": true,
+      "headingCount": 6,
+      "outlineCount": 6,
+      "missingHeadings": [],
+      "rawMarkdown": false,
+      "previous": "/go-global/team-procurement",
+      "next": "/go-global/payouts"
+    },
+    {
+      "path": "/go-global/payouts",
+      "titleTopAt390": 209,
+      "noViewportOverflow": true,
+      "directoryClosed": true,
+      "headingCount": 8,
+      "outlineCount": 8,
+      "missingHeadings": [],
+      "rawMarkdown": false,
+      "previous": "/go-global/payments",
+      "next": "/go-global/compliance"
+    },
+    {
+      "path": "/go-global/compliance",
+      "titleTopAt390": 209,
+      "noViewportOverflow": true,
+      "directoryClosed": true,
+      "headingCount": 5,
+      "outlineCount": 5,
+      "missingHeadings": [],
+      "rawMarkdown": false,
+      "previous": "/go-global/payouts",
+      "next": "/go-global/entity"
+    },
+    {
+      "path": "/go-global/entity",
+      "titleTopAt390": 209,
+      "noViewportOverflow": true,
+      "directoryClosed": true,
+      "headingCount": 7,
+      "outlineCount": 7,
+      "missingHeadings": [],
+      "rawMarkdown": false,
+      "previous": "/go-global/compliance",
+      "next": "/go-global/tax"
+    },
+    {
+      "path": "/go-global/tax",
+      "titleTopAt390": 209,
+      "noViewportOverflow": true,
+      "directoryClosed": true,
+      "headingCount": 9,
+      "outlineCount": 9,
+      "missingHeadings": [],
+      "rawMarkdown": false,
+      "previous": "/go-global/entity",
+      "next": "/go-global/app-stores"
+    },
+    {
+      "path": "/go-global/app-stores",
+      "titleTopAt390": 209,
+      "noViewportOverflow": true,
+      "directoryClosed": true,
+      "headingCount": 9,
+      "outlineCount": 9,
+      "missingHeadings": [],
+      "rawMarkdown": false,
+      "previous": "/go-global/tax",
+      "next": "/go-global/ai-api-extensions"
+    },
+    {
+      "path": "/go-global/ai-api-extensions",
+      "titleTopAt390": 209,
+      "noViewportOverflow": true,
+      "directoryClosed": true,
+      "headingCount": 7,
+      "outlineCount": 7,
+      "missingHeadings": [],
+      "rawMarkdown": false,
+      "previous": "/go-global/app-stores",
+      "next": "/go-global/rights-clearance"
+    },
+    {
+      "path": "/go-global/rights-clearance",
+      "titleTopAt390": 209,
+      "noViewportOverflow": true,
+      "directoryClosed": true,
+      "headingCount": 7,
+      "outlineCount": 7,
+      "missingHeadings": [],
+      "rawMarkdown": false,
+      "previous": "/go-global/ai-api-extensions",
+      "next": "/go-global/risk"
+    },
+    {
+      "path": "/go-global/risk",
+      "titleTopAt390": 209,
+      "noViewportOverflow": true,
+      "directoryClosed": true,
+      "headingCount": 5,
+      "outlineCount": 5,
+      "missingHeadings": [],
+      "rawMarkdown": false,
+      "previous": "/go-global/rights-clearance",
+      "next": "/go-global/business-review"
+    },
+    {
+      "path": "/go-global/business-review",
+      "titleTopAt390": 209,
+      "noViewportOverflow": true,
+      "directoryClosed": true,
+      "headingCount": 7,
+      "outlineCount": 7,
+      "missingHeadings": [],
+      "rawMarkdown": false,
+      "previous": "/go-global/risk",
+      "next": "/go-global/resources"
+    },
+    {
+      "path": "/go-global/resources",
+      "titleTopAt390": 209,
+      "noViewportOverflow": true,
+      "directoryClosed": true,
+      "headingCount": 8,
+      "outlineCount": 8,
+      "missingHeadings": [],
+      "rawMarkdown": false,
+      "previous": "/go-global/business-review",
+      "next": null
+    }
+  ],
+  "controls": {
+    "language": {
+      "menu": "Book contents23",
+      "toc": "On this page",
+      "prev": "Previous"
+    },
+    "desktop": {
+      "menuOpen": true,
+      "width": 1425,
+      "viewport": 1440
+    },
+    "resize": {
+      "menuOpen": false,
+      "focus": "SUMMARY"
+    },
+    "narrow": [
+      {
+        "path": "/go-global/resources",
+        "width": 305,
+        "viewport": 320,
+        "menuOpen": false
+      },
+      {
+        "path": "/go-global/growth",
+        "width": 305,
+        "viewport": 320,
+        "menuOpen": false
+      },
+      {
+        "path": "/go-global/tax",
+        "width": 305,
+        "viewport": 320,
+        "menuOpen": false
+      },
+      {
+        "path": "/go-global/platform-ads",
+        "width": 305,
+        "viewport": 320,
+        "menuOpen": false
+      }
+    ]
+  },
+  "noJavaScript": {
+    "menu": true,
+    "outline": true,
+    "hash": "#%E8%BF%99%E4%BA%9B%E9%97%AE%E9%A2%98%E7%9B%AE%E5%89%8D%E8%BF%98%E6%B2%A1%E6%9C%89%E5%AE%8C%E6%95%B4%E6%93%8D%E4%BD%9C%E7%AF%87",
+    "top": -0.2109375,
+    "previous": "/go-global/business-review"
+  },
+  "static": {
+    "htmlPages": 26,
+    "mindMapChapterLinks": 22,
+    "errors": []
+  }
+}

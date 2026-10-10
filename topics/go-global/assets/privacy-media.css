@@ -1,0 +1,40 @@
+.privacy-media { margin: 2rem 0; padding: 1.15rem; border: 1px solid var(--border); border-radius: .6rem; background: var(--bg-soft); font-size: .94rem; line-height: 1.75; container-type: inline-size; }
+.privacy-media h3 { margin: 0 0 1rem; font-size: 1.15rem; line-height: 1.5; }
+.privacy-media p { margin: .8rem 0; }
+.privacy-media figcaption, .privacy-kicker { font-size: .82rem; color: var(--fg-muted); }
+.privacy-media [hidden] { display: none !important; }
+.privacy-local { border: 2px solid var(--accent); border-radius: .45rem; padding: .85rem; background: var(--bg); }
+.privacy-local strong { display: block; color: var(--accent); }
+.privacy-path { list-style: none; padding: 0; display: grid; gap: 1.8rem; margin: .8rem 0 1.2rem; }
+.privacy-path li { position: relative; background: var(--bg); border: 1px solid var(--border); padding: .65rem; margin: 0; border-radius: .35rem; text-align: center; }
+.privacy-path li + li { margin: 0; }
+.privacy-path li:not(:last-child)::after { content: '↓'; position: absolute; left: 50%; top: 100%; height: 1.8rem; color: var(--accent); }
+.privacy-data-paths { display: grid; gap: 1rem; margin-top: 1rem; }
+.privacy-data-paths > div { padding: .85rem; border: 1px solid var(--border); border-radius: .4rem; }
+.privacy-data-paths strong { color: var(--accent); }
+.privacy-actions { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1rem; }
+.privacy-actions button { color: var(--fg); background: var(--bg); font: inherit; padding: .65rem .8rem; border: 1px solid var(--border); border-radius: .35rem; min-height: 44px; text-align: left; max-width: 100%; cursor: pointer; }
+.privacy-actions button:disabled { opacity: .55; cursor: default; }
+.privacy-actions button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.privacy-records { margin: 1rem 0; }
+.privacy-records > div { padding: .6rem 0; border-bottom: 1px solid var(--border); }
+.privacy-records dt { color: var(--fg-muted); font-size: .84rem; }
+.privacy-records dd { margin: .2rem 0 0; font-weight: 650; overflow-wrap: anywhere; }
+.privacy-result { padding: .8rem; background: var(--bg); border-left: 3px solid var(--accent); }
+.privacy-case { margin: 1.5rem 0; padding: .5rem 1rem; background: var(--bg-soft); border-left: 3px solid var(--accent); }
+.privacy-table { container-type: inline-size; }
+@container (min-width: 500px) {
+  .privacy-data-paths { grid-template-columns: 1fr 1fr; }
+  .privacy-local .privacy-path { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1.8rem; }
+  .privacy-local .privacy-path li:not(:last-child)::after { content: '→'; left: 100%; top: 50%; transform: translateY(-50%); width: 1.8rem; }
+}
+@container (max-width: 500px) {
+  .privacy-table table, .privacy-table tbody, .privacy-table tr, .privacy-table td { display: block; }
+  .privacy-table thead { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); }
+  .privacy-table tr { margin-bottom: 1rem; border: 1px solid var(--border); border-radius: .4rem; overflow: hidden; }
+  .privacy-table td { border: 0; padding: .75rem; }
+  .privacy-table td:first-child { background: var(--bg-soft); font-weight: 650; }
+  .privacy-table td:nth-child(n+2)::before { display: block; color: var(--fg-muted); font-weight: 650; margin-bottom: .3rem; }
+  .privacy-data-table td:nth-child(2)::before { content: '首版决定'; }
+  .privacy-data-table td:nth-child(3)::before { content: '怎样证明承诺落地'; }
+}

@@ -1,0 +1,116 @@
+{
+  "baseline": "e0a64c5a43a7464900672024a4cc50fd118d44a9",
+  "date": "2026-10-10",
+  "tool": "Ego TaskSpace 125",
+  "scope": "Local focused browser QA after full deployed-text review; no external-policy reverification",
+  "initialReview": {
+    "pages": 27,
+    "outlineLinks": 189,
+    "invalidOutline": [],
+    "loadedImages": 7,
+    "mobileVisualWidth": 390
+  },
+  "folds": [
+    {
+      "slug": "market-fit",
+      "width": 390,
+      "open": true,
+      "overflow": false,
+      "codeBlocks": 2,
+      "textChars": 828,
+      "markdownLeak": false
+    },
+    {
+      "slug": "market-fit",
+      "width": 320,
+      "open": true,
+      "overflow": false,
+      "codeBlocks": 2,
+      "textChars": 828,
+      "markdownLeak": false
+    },
+    {
+      "slug": "market-fit",
+      "width": 1440,
+      "open": true,
+      "overflow": false,
+      "codeBlocks": 2,
+      "textChars": 828,
+      "markdownLeak": false
+    },
+    {
+      "id": "market-copy-title",
+      "fragmentOpened": true,
+      "targetHeight": 27.59375
+    },
+    {
+      "slug": "growth",
+      "width": 390,
+      "open": true,
+      "overflow": false,
+      "codeBlocks": 0,
+      "textChars": 1374,
+      "markdownLeak": false
+    },
+    {
+      "slug": "growth",
+      "width": 320,
+      "open": true,
+      "overflow": false,
+      "codeBlocks": 0,
+      "textChars": 1374,
+      "markdownLeak": false
+    },
+    {
+      "slug": "growth",
+      "width": 1440,
+      "open": true,
+      "overflow": false,
+      "codeBlocks": 0,
+      "textChars": 1374,
+      "markdownLeak": false
+    },
+    {
+      "id": "growth-page-title",
+      "fragmentOpened": true,
+      "targetHeight": 27.59375
+    }
+  ],
+  "noJsMarket": {
+    "noJsOpen": true,
+    "modelDisabled": true
+  },
+  "focusedChecks": {
+    "noJsGrowth": {
+      "open": true,
+      "modelDisabled": true
+    },
+    "allAttribution": "列出全部已知参与：搜索 3、同业文章 2、许可邮件 2、来源未知 1。已知渠道参与 7 次，另有 1 人来源未知。独立完成并用上的始终是 5 人。各栏可能包含同一个人，不能相加当成用户数。",
+    "fullRefund": "媒体费 120 美元，退款 10 人；剩 0 位未退款新客。没有未退款新客，人均值无法计算。列明投入后的余量为 −214 美元。购买人数固定，这不是预算改变后的获客预测。",
+    "costReset": "媒体费 120 美元，退款 2 人；剩 8 位未退款新客。列明获客投入为 21.75 美元 / 人。列明投入后的余量为 −54 美元。购买人数固定，这不是预算改变后的获客预测。",
+    "links": [
+      {
+        "url": "/go-global/email-creators#许可服务通知与市场规则要分开看",
+        "target": "许可、服务通知与市场规则要分开看"
+      },
+      {
+        "url": "/go-global/email-creators#创作者愿意合作先对齐他在替谁解释",
+        "target": "创作者愿意合作，先对齐他在替谁解释"
+      },
+      {
+        "url": "/go-global/growth#一年营销里文章只是其中一部分",
+        "target": "一年营销里，文章只是其中一部分"
+      },
+      {
+        "url": "/go-global/resources#这些问题目前还没有完整操作篇",
+        "target": "这些问题，目前还没有完整操作篇"
+      }
+    ],
+    "format": {
+      "stored": "2026-11-10",
+      "deadline": "2026年11月10日"
+    },
+    "extraBudget": "\n合计 20 小时、33,000 JPY\n开发者时间时间已用尽，没有缓冲外部支出超出 3,000 JPY\n计划超出本轮上限。重新约定范围或支持安排，再决定是否继续；既有支出不会因缩小计划退回。\n",
+    "budgetReset": "\n合计 16 小时、21,000 JPY\n开发者时间剩余 4 小时外部支出剩余 9,000 JPY\n资源账未超限；仍需确认任务、参与者、审阅和支持安排，不能据此宣布进入市场。\n"
+  }
+}
