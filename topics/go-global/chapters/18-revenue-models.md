@@ -1,7 +1,7 @@
 ---
 title: 收入模式：除了卖产品，还可以由谁付钱？
 description: 比较用户付费、广告、赞助、联盟佣金、服务与授权、撮合及自愿支持；用广告账和合作样稿，把流量、收入、成本与实际到账连起来。
-order: 11
+order: 12
 volatility: high
 last_verified: 2026-10-10
 slug: revenue-models

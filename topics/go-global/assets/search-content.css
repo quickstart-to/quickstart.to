@@ -1,0 +1,52 @@
+.search-media { margin: 2rem 0; line-height: 1.8; container-type: inline-size; }
+.search-media h3 { font-size: 1.12rem; line-height: 1.5; margin: 0 0 1rem; }
+.search-media p { margin: .8rem 0; }
+.search-caption, .search-media figcaption, .search-kicker { color: var(--fg-muted); font-size: .85rem; }
+.search-paper { padding: 1.35rem; border: 1px solid var(--border); border-top: 3px solid #527481; border-radius: .35rem; background: var(--bg-soft); }
+.search-paper [lang='en'] { line-height: 1.7; }
+.search-transform { margin: 1.4rem 0; }
+.search-transform > div:not(.search-arrow) { background: var(--bg); padding: .8rem 1rem; border: 1px solid var(--border); border-radius: .25rem; }
+.search-transform pre { white-space: pre-wrap; overflow-wrap: anywhere; font-size: .85rem; }
+.search-node { padding: 1rem; border: 1px solid var(--border); background: var(--bg-soft); border-radius: .35rem; }
+.search-node :is(b,span) { display: block; }
+.search-node span { font-size: .9rem; margin-top: .5rem; }
+.search-arrow { text-align: center; color: var(--accent); font-size: .85rem; padding: .4rem; }
+.search-fork { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.7rem 0 .7rem; }
+.search-fork > div { border-left: 2px solid var(--accent); background: var(--bg-soft); padding: .7rem 1rem; position: relative; }
+.search-fork > div::before { content: '↓'; position: absolute; top: -1.7rem; left: 50%; color: var(--accent); }
+.search-fork p { font-size: .9rem; }
+.search-media summary { cursor: pointer; padding: .7rem 0; min-height: 44px; font-weight: 600; }
+.search-diagnosis { padding: 0 1rem; border-left: 2px solid #527481; }
+.search-lab { padding: 1.25rem; border: 1px solid var(--border); border-radius: .5rem; background: var(--bg-soft); }
+.search-lab label { display: block; margin: 1rem 0; }
+.search-lab :is(select,button) { font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--border); border-radius: .3rem; padding: .5rem .7rem; min-height: 44px; }
+.search-lab select { width: 100%; display: block; margin-top: .4rem; }
+.search-lab button { cursor: pointer; }
+.search-media :is(select,button,summary):focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.search-lab [role='status'] { border-left: 3px solid var(--accent); padding: .7rem 1rem; background: var(--bg); }
+.search-metrics { display: grid; grid-template-columns: repeat(3,1fr); gap: .6rem; margin: 1.3rem 0; }
+.search-metrics > div { padding: .7rem; border-bottom: 2px solid #527481; background: var(--bg); }
+.search-metrics b { display: block; font-size: 1.25rem; font-variant-numeric: tabular-nums; }
+.search-metrics span { font-size: .8rem; }
+.search-report-table table, .search-choices table { table-layout: fixed; width: 100%; font-size: .88rem; }
+.search-report-table th:first-child { width: 48%; }
+.search-report-table caption { text-align: left; color: var(--fg-muted); font-size: .8rem; padding: .7rem 0; }
+.search-media :is(td,th) { overflow-wrap: anywhere; }
+.search-report-table [data-selected='true'] td:first-child { border-left: 3px solid #527481; }
+@container (max-width: 540px) {
+ .search-fork { grid-template-columns: 1fr; border-left: 1px solid var(--accent); padding-left: 1rem; margin-left: .2rem; }
+ .search-fork > div::before { content: '→'; left: -1.15rem; top: .6rem; }
+ .search-choices table, .search-choices tbody, .search-choices tr, .search-choices td { display: block; }
+ .search-choices thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+ .search-choices tr { padding: .7rem 0; border-bottom: 1px solid var(--border); }
+ .search-choices td { border: 0; padding: .3rem 0; }
+ .search-choices td:first-child { font-weight: 600; }
+ .search-choices td:nth-child(2)::before { content: '已有办法：'; color: var(--fg-muted); }
+ .search-choices td:nth-child(3)::before { content: '本例取舍：'; color: var(--fg-muted); }
+}
+@container (max-width: 330px) {
+ .search-metrics { grid-template-columns: 1fr; gap: .2rem; }
+ .search-metrics > div { display: flex; gap: .8rem; align-items: baseline; }
+ .search-report-table :is(th,td) { padding: .5rem .2rem; font-size: .78rem; }
+}
+.search-diagnosis pre, .search-diagnosis pre code { white-space: pre-wrap; overflow-wrap: anywhere; }

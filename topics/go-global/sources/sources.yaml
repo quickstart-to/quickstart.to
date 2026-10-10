@@ -1244,7 +1244,7 @@
   title: "Performance report (Search results): Overview and basic setup"
   publisher: "Google Search Console Help"
   accessed: 2026-10-10
-  claim: "表现报告可按查询、页面等查看点击、展示与 CTR；这些指标描述搜索结果中的曝光和点击，不能代替产品任务完成，导出缺失值可能转为零"
+  claim: "表现报告可按查询、页面等查看点击、展示与 CTR（点击除以曝光）；平均排名是聚合值，结果受时间/地点/设备等影响；指标不能代替产品任务完成，导出缺失值可能转为零"
   excerpt: excerpts/search-console-performance.md
 
 - id: src-bannerbear-onboarding-diagnosis
@@ -1409,7 +1409,7 @@
   title: "AI 功能和您的网站"
   publisher: "Google Search Central"
   accessed: 2026-10-10
-  claim: "Google AI 概览与 AI 模式沿用搜索基本要求，无额外 AI 文件或特殊标记要求，符合要求仍不保证抓取、索引或展示；不外推其他问答产品"
+  claim: "Google AI 概览与 AI 模式沿用搜索基本要求，无额外 AI 文件或特殊标记要求，符合要求仍不保证抓取、索引或展示；AI 功能表现计入 GSC Web 搜索，不外推其他问答产品"
   excerpt: excerpts/google-ai-discovery.md
   archive: https://web.archive.org/web/20261010043655/https://developers.google.com/search/docs/appearance/ai-features?hl=zh-cn
 
@@ -1943,3 +1943,67 @@
   accessed: "2026-10-10"
   claim: "2026-10-10 在页面核对基线 20%、绝对 MDE 5 个百分点、功效 80%、显著性 5% 时显示每组 1030；本文粗估规则为 1024，不能误称与该计算器完全相同"
   excerpt: "excerpts/miller-sample-planning.md"
+
+- id: src-dashthis-csv-workflow
+  url: "https://dashthis.com/integrations/create-reports-from-csv/"
+  title: "Create Reports From CSV Files"
+  publisher: "DashThis"
+  accessed: "2026-10-10"
+  claim: "产品页描述上传 CSV、建立模板、连接仪表盘和再次导入更新；仅作现有替代的公开功能说明，未试用或比较效果"
+  excerpt: "excerpts/dashthis-csv-workflow.md"
+
+- id: src-ahrefs-content-audit
+  url: "https://ahrefs.com/blog/content-audit/"
+  title: "Follow Our Content Audit Process (Template Included)"
+  publisher: "Joshua Hardwick · Ahrefs"
+  accessed: "2026-10-10"
+  claim: "2023 年作者说明按页面用途审计，并因产品变化重写最初于 2019 年发布的索引指南；不采用增长数字或供应商工具分数"
+  excerpt: "excerpts/ahrefs-content-audit.md"
+
+- id: src-google-url-inspection
+  url: "https://support.google.com/webmasters/answer/9012289?hl=en"
+  title: "URL Inspection Tool"
+  publisher: "Google Search Console Help"
+  accessed: "2026-10-10"
+  claim: "已有索引信息与实时测试不同；实时测试不能预测规范页，显示已在 Google 上也不保证具体查询展示"
+  excerpt: "excerpts/google-url-inspection.md"
+
+- id: src-google-noindex
+  url: "https://developers.google.com/search/docs/crawling-indexing/block-indexing"
+  title: "使用 noindex 阻止搜索引擎编入索引"
+  publisher: "Google Search Central"
+  accessed: "2026-10-10"
+  claim: "noindex 可由 HTML 元标记或 HTTP 响应头表达；抓取工具需要能访问页面才读得到，robots.txt 阻挡不能替代它"
+  excerpt: "excerpts/google-noindex.md"
+
+- id: src-google-recrawl
+  url: "https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl?hl=en"
+  title: "Ask Google to recrawl your URLs"
+  publisher: "Google Search Central"
+  accessed: "2026-10-10"
+  claim: "重新抓取可能需要几天到几周，重复请求不加速，不保证进入搜索结果；少量用 URL Inspection，较多可提交站点地图"
+  excerpt: "excerpts/google-recrawl.md"
+
+- id: src-search-console-discrepancies
+  url: "https://support.google.com/webmasters/answer/17010575?hl=en"
+  title: "Performance report (Search results): Troubleshooting data discrepancies"
+  publisher: "Google Search Console Help"
+  accessed: "2026-10-10"
+  claim: "查询表因隐私和行数限制不完整，聚合与筛选可能改变总数；除 24 小时视图外常规日报按太平洋时间"
+  excerpt: "excerpts/search-console-discrepancies.md"
+
+- id: src-google-search-spam
+  url: "https://developers.google.com/search/docs/essentials/spam-policies?hl=en"
+  title: "Spam policies for Google web search"
+  publisher: "Google Search Central"
+  accessed: "2026-10-10"
+  claim: "规模化内容滥用涉及主要为操纵排名而生成、缺少用户价值的大量页面，不以生成方式区分是否适用"
+  excerpt: "excerpts/google-search-spam.md"
+
+- id: src-search-query-observation
+  url: https://www.google.com/search?q=client+weekly+report+template
+  title: "公开查询观察：client weekly report template"
+  publisher: Google Search
+  accessed: 2026-10-10
+  claim: "本次可见结果包含模板、营销报告及施工报告等不同任务；仅为带日期的公开观察，不支持固定排名、搜索量、地区偏好或需求验证"
+  excerpt: excerpts/search-query-observation.md
