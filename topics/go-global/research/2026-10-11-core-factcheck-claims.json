@@ -1,0 +1,157 @@
+[
+  {
+    "id": "quickstart-1",
+    "page": "quickstart.md",
+    "passage": "中文开发者辣条加辣在 2025 年的一篇复盘里，写到自己做 AI 头像网站的经历：实现并不难，上线后却没有想清楚谁会来、从哪里来，以及面对已有产品，别人为什么要选自己的。他也知道应该验证需求，只是一直把写代码当成正事，把找用户留给上线以后。[^src-latiao-overseas-lessons]",
+    "sources": [
+      "src-latiao-overseas-lessons"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "对照原文核对所采用的归属、背景和论述；历史经历不作为当前效果或普遍结论。"
+  },
+  {
+    "id": "quickstart-2",
+    "page": "quickstart.md",
+    "passage": "Plausible 的经历能把这个问题讲得更具体。联合创始人 Marko Saric 在 2022 年的复盘中写到，产品早期已经在服务用户，但增长一度停滞。2019 年，一篇讨论单页应用的文章上了 Hacker News，带来一波访问；文章与产品关系不紧，团队当时看不出明显的直接收益。[^src-plausible-growth-story]",
+    "sources": [
+      "src-plausible-growth-story"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "对照原文核对所采用的归属、背景和论述；历史经历不作为当前效果或普遍结论。"
+  },
+  {
+    "id": "quickstart-3",
+    "page": "quickstart.md",
+    "passage": "2020 年 Marko 加入后，团队把定位收束到一个明确的比较上：面向想离开 Google Analytics 的人，提供简单、轻量、开源、重视隐私的替代方案。他们同时调整产品，统一名称和表达，整理网站结构，并围绕这些差异写文章。随后那篇讨论为什么离开 Google Analytics 的文章，再次带来大量关注，作者报告当月试用和业务增长也有所改善。[^src-plausible-growth-story]",
+    "sources": [
+      "src-plausible-growth-story"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "对照原文核对所采用的归属、背景和论述；历史经历不作为当前效果或普遍结论。"
+  },
+  {
+    "id": "quickstart-4",
+    "page": "quickstart.md",
+    "passage": "如果想看提问方法的具体讲解，可以补充观看 Eric Migicovsky 在 YC 的这场课。下面的中文要点依据 YC 配套转录整理，重点是把话题从“你会不会用”转向已经发生的事情。[^src-yc-talk-users-video][^src-yc-user-interview-notes]",
+    "sources": [
+      "src-yc-talk-users-video",
+      "src-yc-user-interview-notes"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "视频只核对标题与频道；具体提问及倾听要求逐项对照 YC 配套转录，未声称观看完整视频。"
+  },
+  {
+    "id": "quickstart-5",
+    "page": "quickstart.md",
+    "passage": "讲者后来在自己的页面补充，他做产品也常从自身需求出发，并不总是使用这套框架。访谈是一种了解陌生工作的方法；如果你就是使用者，也可以从自己的问题开始，再观察其他人是否有相近需要。[^src-eric-interview-update]",
+    "sources": [
+      "src-eric-interview-update"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "对照原文核对所采用的归属、背景和论述；历史经历不作为当前效果或普遍结论。"
+  },
+  {
+    "id": "quickstart-6",
+    "page": "quickstart.md",
+    "passage": "Plausible 的例子中，相关文章帮助读者认识产品的差异。Tally 则呈现了另一种联系。联合创始人 Marie Martens 在 2022 年的复盘里写道，他们进入表单工具市场时，选择用广泛的免费功能降低尝试门槛；免费表单上的品牌标记又让填写者认识了 Tally，作者将它列为重要的用户来源。[^src-tally-early-growth]",
+    "sources": [
+      "src-tally-early-growth"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "对照原文核对所采用的归属、背景和论述；历史经历不作为当前效果或普遍结论。"
+  },
+  {
+    "id": "quickstart-7",
+    "page": "quickstart.md",
+    "passage": "免费也有代价。Tally 的同一篇复盘谈到，小团队要控制功能复杂度、拒绝部分需求，并改善帮助文档，减少重复支持。文章没有提供足够的单位服务成本，无法替你的产品算出免费是否可持续。尤其当每次使用都带来模型调用或人工服务成本时，需要先算清自己承担得起多少尝试。[^src-tally-early-growth]",
+    "sources": [
+      "src-tally-early-growth"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "对照原文核对所采用的归属、背景和论述；历史经历不作为当前效果或普遍结论。"
+  },
+  {
+    "id": "quickstart-8",
+    "page": "quickstart.md",
+    "passage": "持续价值还包括你能否继续交付。Plausible 的复盘写到，新用户和较大网站增加以后，产品变慢，团队需要改进底层处理能力；后来支持请求增多，又投入文档和重复问题修复。增长之后的工作并没有只剩推广。[^src-plausible-growth-story]",
+    "sources": [
+      "src-plausible-growth-story"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "对照原文核对所采用的归属、背景和论述；历史经历不作为当前效果或普遍结论。"
+  },
+  {
+    "id": "13-retention-1",
+    "page": "chapters/13-retention.md",
+    "passage": "Amplitude 的留存方法把两个前提放在计算之前：什么动作代表产品的核心价值，以及人通常多久需要完成一次。按周发生的任务，用每天回来的人数评价，就可能把正常的使用节奏误读成流失。[^src-amplitude-usage-interval] 对早期小工具，这不意味着先装一套复杂分析系统；先把任务和观察窗口说清楚，往往更要紧。",
+    "sources": [
+      "src-amplitude-usage-interval"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "对照原文核对所采用的归属、背景和论述；历史经历不作为当前效果或普遍结论。"
+  },
+  {
+    "id": "13-retention-2",
+    "page": "chapters/13-retention.md",
+    "passage": "Superhuman 创始人 Rahul Vohra 回顾 2017 年的探索时，先询问已经体验过核心产品的人，再看他们真正重视什么。喜爱产品的人反复提到速度；同样重视速度、却还有障碍的人，帮助团队辨认出移动端、日历等缺口。日历原本并不是团队凭自身习惯会优先处理的功能，这次反馈改变了排序。[^src-superhuman-pmf]",
+    "sources": [
+      "src-superhuman-pmf"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "对照原文核对所采用的归属、背景和论述；历史经历不作为当前效果或普遍结论。"
+  },
+  {
+    "id": "13-retention-3",
+    "page": "chapters/13-retention.md",
+    "passage": "这里有用的不是一条满意度百分比，而是把“谁、得到什么、还缺什么”连起来。已经享受到核心价值的人，能解释该保护什么；想完成同类任务却受阻的人，能指出下一步缺口。原作者随后把强化已有优势和解决障碍同时放进路线图，按成本与影响安排工作。[^src-superhuman-pmf]",
+    "sources": [
+      "src-superhuman-pmf"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "对照原文核对所采用的归属、背景和论述；历史经历不作为当前效果或普遍结论。"
+  },
+  {
+    "id": "13-retention-4",
+    "page": "chapters/13-retention.md",
+    "passage": "但不能把它简化为“只听喜欢你的人”。D 的导入失败不会让他成为满意用户，问题却直接影响产品承诺。若你的样本只剩 A、B，就可能得出“大家都能独立使用”的假结论。研究为什么不用某项能力，也必须了解没用起来的人。Des Traynor 在 Intercom 的反馈文章中正是按待回答的问题区分新用户、熟练用户和未使用者，并提醒：一组相似请求首先是待核查的假设。[^src-intercom-feedback-mistakes]",
+    "sources": [
+      "src-intercom-feedback-mistakes"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "对照原文核对所采用的归属、背景和论述；历史经历不作为当前效果或普遍结论。"
+  },
+  {
+    "id": "13-retention-5",
+    "page": "chapters/13-retention.md",
+    "passage": "flomo 联合创始人少楠在 2025 年的回顾里写到，团队曾积极增加功能；第二年的续费数据与调研却让他们发现，有些付费用户甚至到期都不知道已有会员功能。团队因此转向新用户引导、功能介绍和续费提醒。[^src-flomo-pricing-learning]",
+    "sources": [
+      "src-flomo-pricing-learning"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "对照原文核对所采用的归属、背景和论述；历史经历不作为当前效果或普遍结论。"
+  },
+  {
+    "id": "13-retention-6",
+    "page": "chapters/13-retention.md",
+    "passage": "开发时间之外，还要看自己能不能长期接住。Intercom 的功能取舍文章专门提醒，容易上线的功能仍可能带来原先没估算的维护和支持。[^src-intercom-feature-support] 这组记录里，C 与 D 已用了开发者 **34 分钟**，D 还没做成；B 的 **12 分钟**则属于用户的额外工作。两种成本都要留下，但不能加在一起冒充同一种工时。",
+    "sources": [
+      "src-intercom-feature-support"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "对照原文核对所采用的归属、背景和论述；历史经历不作为当前效果或普遍结论。"
+  }
+]

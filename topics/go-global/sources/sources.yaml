@@ -461,7 +461,7 @@
   url: https://shaonan.blog/posts/20250413-flomo/
   title: flomo：一条长坡薄雪的道路
   publisher: 少楠 · flomo 联合创始人
-  accessed: 2026-10-10
+  accessed: 2026-10-11
   claim: 作者回顾初期表单收费及近一半纯支持付款，并报告第二年发现会员功能未被充分体验后转向引导、介绍与续费提醒；为归属明确的经历，不是独立验证的效果或海外需求
   excerpt: excerpts/flomo-pricing-learning.md
 - id: src-pinboard-pricing-change
@@ -735,7 +735,7 @@
   url: "https://dev-life.online/blog/yusubuda"
   title: "独立开发出海三个月，我犯了这些错"
   publisher: "辣条加辣 · 辣条的博客"
-  accessed: "2026-10-09"
+  accessed: 2026-10-11
   claim: "作者2025-04-25复盘先开发后考虑目标用户与触达的失败，并以AI头像网站为例；仅采用其自述行动和反思，不采纳平台最佳发布时间、hunter必要性或收入保证"
   excerpt: "excerpts/latiao-overseas-lessons.md"
 
@@ -743,7 +743,7 @@
   url: "https://plausible.io/blog/open-source-saas"
   title: "How we built a $1M ARR open source SaaS"
   publisher: "Marko Saric · Plausible Analytics"
-  accessed: "2026-10-09"
+  accessed: 2026-10-11
   claim: "联合创始人2022年复盘2019年无关主题流量、2020年营销合伙人加入后的定位与内容调整，以及后续产品性能和支持投入；采用其报告的行动与结果，不推导单一增长原因或收入承诺"
   excerpt: "excerpts/plausible-growth-story.md"
 
@@ -759,7 +759,7 @@
   url: "https://review.firstround.com/how-superhuman-built-an-engine-to-find-product-market-fit/"
   title: "How Superhuman Built an Engine to Find Product Market Fit"
   publisher: "Rahul Vohra · First Round Review"
-  accessed: "2026-10-09"
+  accessed: 2026-10-11
   claim: "Superhuman 创始人回顾按核心使用经历、实际价值和阻碍分组反馈，提升移动端及日历优先级，再比较投入与影响；本书不采用其 PMF 百分比、样本阈值或忽略所有不满意者的建议"
   excerpt: "excerpts/superhuman-pmf.md"
 
@@ -767,21 +767,21 @@
   url: https://amplitude.com/books/mastering-retention/your-critical-event-and-product-usage-interval
   title: Your critical event and product usage interval
   publisher: Amplitude
-  accessed: 2026-10-09
+  accessed: 2026-10-11
   claim: 留存分析方法强调先定义与核心价值相符的事件及自然使用周期，再解读回访；本书不采用其固定观察天数或百分位建议，也不声称演示等同平台默认留存算法
   excerpt: excerpts/amplitude-usage-interval.md
 - id: src-intercom-feedback-mistakes
   url: https://www.intercom.com/blog/5-mistakes-we-all-make-with-product-feedback/
   title: 5 product feedback mistakes we all make
   publisher: Des Traynor · Intercom
-  accessed: 2026-10-10
+  accessed: 2026-10-11
   claim: 2014 年方法文章按使用阶段与待回答的问题选择反馈对象，将重复反馈视为待验证的假设，并追问请求背后的任务；不采用排除所有免费用户或仅凭直觉跳过验证的泛化建议
   excerpt: excerpts/intercom-feedback-mistakes.md
 - id: src-intercom-feature-support
   url: https://www.intercom.com/blog/rarely-say-yes-to-feature-requests/
   title: Rarely say yes to feature requests
   publisher: Des Traynor · Intercom
-  accessed: 2026-10-09
+  accessed: 2026-10-11
   claim: 2014 年文章第 7 节讨论只估上线开发成本会漏掉维护与支持，第 6 节提醒局部点击增加不等于整体价值；不采用其全部筛选标准为通用规则
   excerpt: excerpts/intercom-feature-support.md
 
@@ -789,7 +789,7 @@
   url: "https://blog.tally.so/how-we-bootstrapped-tally-to-10k-mrr/"
   title: "How we bootstrapped Tally to $10k MRR"
   publisher: "Marie Martens · Tally"
-  accessed: "2026-10-10"
+  accessed: 2026-10-11
   claim: "联合创始人2022-02-11回顾免费表单降低尝试门槛、表单上的品牌标记带来用户，以及小团队通过限制复杂度和改善文档降低支持负担；属于历史自述，不代表当前套餐或免费策略的普遍效果"
   excerpt: "excerpts/tally-early-growth.md"
 
@@ -797,15 +797,15 @@
   url: "https://www.youtube.com/watch?v=MT4Ig2uqjTc"
   title: "Eric Migicovsky - How to Talk to Users"
   publisher: "Y Combinator · YouTube"
-  accessed: "2026-10-09"
-  claim: "YC于2019-07-25发布Eric Migicovsky的用户访谈讲座；播放器元数据为31分37秒、英文自动字幕并允许嵌入，具体提问内容另以YC配套转录核对"
+  accessed: 2026-10-11
+  claim: "YouTube 页面标题与 Y Combinator 频道确认该用户访谈讲座；本轮未重测完整播放、字幕或嵌入许可，中文提问要点以 YC 配套转录核对"
   excerpt: "excerpts/yc-talk-users-video.md"
 
 - id: src-yc-user-interview-notes
   url: "https://www.ycombinator.com/blog/startup-school-week-1-recap-kevin-hale-and-eric-migicovsky/"
   title: "Startup School Week 1 Recap: Kevin Hale and Eric Migicovsky"
   publisher: "Y Combinator"
-  accessed: "2026-10-09"
+  accessed: 2026-10-11
   claim: "2019-09-04官方配套转录的Eric段落讨论先了解用户过去实际遇到的问题、已尝试的办法及不足，避免在研究访谈中推销或只问假设性意愿；不将VC增长标准泛化给所有个人产品"
   excerpt: "excerpts/yc-user-interview-notes.md"
 
@@ -813,7 +813,7 @@
   url: "https://ericmigi.com/blog/startup-school-how-to-talk-to-users"
   title: "Startup School - How to talk to users"
   publisher: "Eric Migicovsky"
-  accessed: "2026-10-09"
+  accessed: 2026-10-11
   claim: "作者在讲座链接页的2025年补充中说明框架基于The Mom Test，自己做Pebble和Beeper时很少实际采用，常从自己想要的产品出发；仅为其个人方法自述"
   excerpt: "excerpts/eric-interview-update.md"
 
