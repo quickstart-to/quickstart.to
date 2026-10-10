@@ -274,5 +274,115 @@
     "result": "still true",
     "checked_on": "2026-10-11",
     "scope": "对照原文核对所采用的方法或归属明确的经历；不据此保证转化改善、现代产品功能或全面可访问性。"
+  },
+  {
+    "id": "01-validate-idea-1",
+    "page": "chapters/01-validate-idea.md",
+    "passage": "Jon Yongfook 在 2020 年 1 月宣布产品转向时，写过一个很具体的发现。他此前做的 Previewmojo，主要生成网页被分享时使用的 Open Graph 预览图。技术能够运行，发布时也有关注，但热度过去后，他发现不少用户并不熟悉或重视这个用途；对一些网站来说，这件事也没有频繁到值得专门解决。[^src-bannerbear-pivot]",
+    "sources": [
+      "src-bannerbear-pivot"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "原作者经历按历史归属核对，产品路径只确认公开文档；没有登录实测、套餐比较或结果保证。"
+  },
+  {
+    "id": "01-validate-idea-2",
+    "page": "chapters/01-validate-idea.md",
+    "passage": "与此同时，另一类请求反复出现：不需要 Open Graph 图片，能不能生成其他尺寸？他于是把产品转成 Bannerbear，覆盖更多社交图片用途，连同展示方式一起调整；也结束同时维护多个产品的安排，把精力集中下来。[^src-bannerbear-pivot]",
+    "sources": [
+      "src-bannerbear-pivot"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "原作者经历按历史归属核对，产品路径只确认公开文档；没有登录实测、套餐比较或结果保证。"
+  },
+  {
+    "id": "01-validate-idea-3",
+    "page": "chapters/01-validate-idea.md",
+    "passage": "熟悉这份工作有帮助，但也需要检查经验来自哪里。V2EX 账号 softlight 在 2023 年的页面搭建器复盘中提到，自己把公司里类似技术的价值外推到独立产品，花了很多精力做模板和组件扩展，后来才发现目标用户未必需要这种依赖开发能力的机制。原公司采用的是类似思路，并没有使用这个独立产品。[^src-v2ex-builder-retrospective]",
+    "sources": [
+      "src-v2ex-builder-retrospective"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "原作者经历按历史归属核对，产品路径只确认公开文档；没有登录实测、套餐比较或结果保证。"
+  },
+  {
+    "id": "01-validate-idea-4",
+    "page": "chapters/01-validate-idea.md",
+    "passage": "截至 2026-10-09，Toggl 的官方操作文档给出了一条直接路径：打开详细报告，按客户或项目及日期筛选，下载 PDF，再交给客户；需要更概括的视图时可使用汇总报告。对于已经在这里记录工时的人，“把工时整理给客户看”至少已有原生办法。[^src-toggl-client-report]",
+    "sources": [
+      "src-toggl-client-report"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "原作者经历按历史归属核对，产品路径只确认公开文档；没有登录实测、套餐比较或结果保证。"
+  },
+  {
+    "id": "01-validate-idea-5",
+    "page": "chapters/01-validate-idea.md",
+    "passage": "项目进度也有现成办法。Asana 的帮助文档说明，使用者可以选择项目状态，填写摘要和下一步，把里程碑等项目记录加入更新，再发布或打印。对于工作已经放在这个系统里的人，另做一个报告生成器，也需要拿出离开原流程的理由。[^src-asana-status-updates]",
+    "sources": [
+      "src-asana-status-updates"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "原作者经历按历史归属核对，产品路径只确认公开文档；没有登录实测、套餐比较或结果保证。"
+  },
+  {
+    "id": "01-validate-idea-6",
+    "page": "chapters/01-validate-idea.md",
+    "passage": "AgencyAnalytics 的产品页覆盖的工作又有所不同：接入营销数据，组织报告模板，安排发送，再补充专业评论。若要提供相近的交付，就不能只考虑最后那几张图，还要处理前面的数据连接和后面的解释。[^src-agencyanalytics-reporting]",
+    "sources": [
+      "src-agencyanalytics-reporting"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "原作者经历按历史归属核对，产品路径只确认公开文档；没有登录实测、套餐比较或结果保证。"
+  },
+  {
+    "id": "01-validate-idea-7",
+    "page": "chapters/01-validate-idea.md",
+    "passage": "Buffer 的早期经历说明，小信号可以支持有限投入。Joel Gascoigne 先用页面收集兴趣，再插入价格选项。那个阶段，即使点击付费方案，最后也只是留下邮箱；他随后才做出可用产品，并在发布后获得实际付款。可借鉴的是每一步暴露了新问题，不能把价格点击写成已经验证购买。[^src-buffer-early-validation]",
+    "sources": [
+      "src-buffer-early-validation"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "原作者经历按历史归属核对，产品路径只确认公开文档；没有登录实测、套餐比较或结果保证。"
+  },
+  {
+    "id": "01-validate-idea-8",
+    "page": "chapters/01-validate-idea.md",
+    "passage": "Level 则把这个问题往前推了一步。Derrick Reimer 在 2019 年的复盘中说，他已经做过访谈、积累名单，还向约 50 人卖出了 49 美元的预订。到了安排入门和团队试用时，却只有一部分人继续；有人付款后未使用，有人看过产品却没有带团队真正尝试。少量客户转为付费使用，而且喜欢产品，但这不足以解释如何让更多团队采用。[^src-level-validation-retrospective]",
+    "sources": [
+      "src-level-validation-retrospective"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "原作者经历按历史归属核对，产品路径只确认公开文档；没有登录实测、套餐比较或结果保证。"
+  },
+  {
+    "id": "01-validate-idea-9",
+    "page": "chapters/01-validate-idea.md",
+    "passage": "他又投入数周改进，为现有客户补功能，并分批邀请更多候补者。结果仍没有出现期待中的团队试用。进一步交流揭示出两个方向的困难：小团队觉得现有工具有些烦，却不值得搬走；更大团队的痛感可能更强，但要求产品更成熟。他重新围绕过去的行为访谈，发现不少表示问题很严重的人，并没有尝试改变流程或寻找替代。[^src-level-validation-retrospective]",
+    "sources": [
+      "src-level-validation-retrospective"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "原作者经历按历史归属核对，产品路径只确认公开文档；没有登录实测、套餐比较或结果保证。"
+  },
+  {
+    "id": "01-validate-idea-10",
+    "page": "chapters/01-validate-idea.md",
+    "passage": "Level 最后的取舍还与创始人想经营什么样的公司有关。他考虑过用咨询推动组织改变、扩大销售投入等办法，但这些与保持小团队、自筹资金并尽快盈利的目标不合。因此，停止这个方向不能被压缩成“需求不存在”；它也意味着在自己的资源和经营目标下，后续路径代价过高。[^src-level-validation-retrospective]",
+    "sources": [
+      "src-level-validation-retrospective"
+    ],
+    "result": "still true",
+    "checked_on": "2026-10-11",
+    "scope": "原作者经历按历史归属核对，产品路径只确认公开文档；没有登录实测、套餐比较或结果保证。"
   }
 ]

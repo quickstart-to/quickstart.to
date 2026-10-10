@@ -821,7 +821,7 @@
   url: "https://www.derrickreimer.com/walking-away"
   title: "I’m Walking Away From the Product I Spent a Year Building"
   publisher: "Derrick Reimer"
-  accessed: "2026-10-10"
+  accessed: 2026-10-11
   claim: "作者2019-05-17复盘Level：访谈、候补名单和付费预订未充分转化为团队试用；部分客户满意，但小团队切换动力弱，大团队要求更高的成熟度。作者还比较咨询、免费版和销售投入，与其小团队自举目标不合；支持其自述过程与反思，不推导普遍失败率或当前Slack用户需求"
   excerpt: "excerpts/level-validation-retrospective.md"
 
@@ -829,7 +829,7 @@
   url: "https://v2ex.com/t/980242"
   title: "复盘一个独立开发2年的项目"
   publisher: "softlight · V2EX"
-  accessed: "2026-10-09"
+  accessed: 2026-10-11
   claim: "账号softlight于2023-10-09复盘页面搭建器：把公司内部类似技术的价值外推到市场，投入可扩展架构后发现与目标用户需求错位；第77条回复明确原公司没有使用该产品。仅为作者自述，不证明市场规模或商业结果"
   excerpt: "excerpts/v2ex-builder-retrospective.md"
 
@@ -837,7 +837,7 @@
   url: https://www.bannerbear.com/blog/the-pivot/
   title: The Pivot
   publisher: Jon Yongfook · Bannerbear
-  accessed: '2026-10-10'
+  accessed: 2026-10-11
   claim: 作者2020年1月宣布从Previewmojo的Open Graph图片生成转向更多尺寸和用途，描述低任务频率、用户认知、反复出现的其他尺寸请求，以及收拢多产品投入；是当时的转向判断，不证明后续增长或普遍机会
   excerpt: excerpts/bannerbear-pivot.md
 
@@ -845,7 +845,7 @@
   url: https://support.toggl.com/en-us/article/how-to-generate-a-report-for-a-client-1vbg4xh/
   title: How to generate a report for a client?
   publisher: Toggl Knowledge Base
-  accessed: '2026-10-09'
+  accessed: 2026-10-11
   claim: 官方操作文档说明在Detailed report按Client或Project及日期筛选，下载PDF交给客户，需要概览时使用Summary report；仅核对文档所述能力，未执行账户操作或比较套餐
   excerpt: excerpts/toggl-client-report.md
 
@@ -853,7 +853,7 @@
   url: https://agencyanalytics.com/features/automated-marketing-reports
   title: Automated Marketing Reports That Impress Clients, Fast!
   publisher: AgencyAnalytics
-  accessed: '2026-10-09'
+  accessed: 2026-10-11
   claim: 产品页面描述接入营销平台数据、模板、定时交付及添加专业评论，部分套餐提供发送前审核；用于了解该类产品覆盖的工作，不采用节省时间、客户数量或收入等宣传数字，也不声称实测
   excerpt: excerpts/agencyanalytics-reporting.md
 
@@ -861,7 +861,7 @@
   url: https://help.asana.com/s/article/project-progress-and-status-updates
   title: Project progress and status updates
   publisher: Asana Help Center
-  accessed: '2026-10-09'
+  accessed: 2026-10-11
   claim: 官方文档说明选择项目状态、填写摘要和下一步、加入里程碑等项目记录并发布或打印状态更新；仅支持现有工作路径，不代表已登录实测、特定套餐承诺或工作室实际采用情况
   excerpt: excerpts/asana-status-updates.md
 
