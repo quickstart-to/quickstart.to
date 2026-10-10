@@ -43,3 +43,37 @@ if (demo) {
   reset.hidden = false;
   redraw();
 }
+
+const cost = document.querySelector<HTMLElement>('[data-growth-cost]');
+if (cost) {
+  const spend = cost.querySelector<HTMLInputElement>('[data-growth-spend]')!;
+  const refunds = cost.querySelector<HTMLInputElement>('[data-growth-refunds]')!;
+  const reset = cost.querySelector<HTMLButtonElement>('[data-growth-cost-reset]')!;
+  const money = (value: number) => `${value < 0 ? '−' : ''}${Math.abs(value)} 美元`;
+  const renderCost = () => {
+    const media = Number(spend.value);
+    const returned = Number(refunds.value);
+    const kept = 10 - returned;
+    const unit = kept ? `${((media + 54) / kept).toFixed(2)} 美元 / 人` : '无未退款新客，无法计算';
+    const margin = kept * 20 - 40 - media - 54;
+    cost.querySelector<HTMLOutputElement>('[data-growth-spend-label]')!.value = money(media);
+    cost.querySelector<HTMLOutputElement>('[data-growth-refunds-label]')!.value = `${returned} 人`;
+    spend.setAttribute('aria-valuetext', money(media));
+    refunds.setAttribute('aria-valuetext', `${returned} 人`);
+    cost.querySelector<HTMLElement>('[data-growth-kept]')!.textContent = `${kept} 人`;
+    cost.querySelector<HTMLElement>('[data-growth-unit]')!.textContent = unit;
+    cost.querySelector<HTMLElement>('[data-growth-margin]')!.textContent = money(margin);
+    cost.querySelector<HTMLElement>('[data-growth-cost-status]')!.textContent = `媒体费 ${money(media)}，退款 ${returned} 人；剩 ${kept} 位未退款新客。${kept ? `列明获客投入为 ${unit}。` : '没有未退款新客，人均值无法计算。'}列明投入后的余量为 ${money(margin)}。购买人数固定，这不是预算改变后的获客预测。`;
+  };
+  spend.addEventListener('input', renderCost);
+  refunds.addEventListener('input', renderCost);
+  reset.addEventListener('click', () => {
+    spend.value = '120';
+    refunds.value = '2';
+    renderCost();
+    spend.focus();
+  });
+  renderCost();
+  cost.querySelector<HTMLFieldSetElement>('[data-growth-cost-controls]')!.disabled = false;
+  reset.hidden = false;
+}

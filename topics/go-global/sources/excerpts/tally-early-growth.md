@@ -3,7 +3,7 @@
 - 原文：https://blog.tally.so/how-we-bootstrapped-tally-to-10k-mrr/
 - 作者：Marie Martens，Tally联合创始人。
 - 发布：2022-02-11；回顾2020年夏开始开发至2022年初的历程。
-- 阅读：2026-10-09，ego浏览器读取原文全文。
+- 阅读：2026-10-09 初读，2026-10-10 在 Ego 重读原文正文，核对品牌标记和支持成本机制。
 - 类型：有归属的创业复盘，作者同时推广自己的产品；经营结果未经独立审计。
 
 > Free users have a 'Made with Tally' badge on their forms

@@ -29,7 +29,7 @@ last_verified: 2026-10-10
 | 陌生人打开产品，却做不完第一次任务 | [首次使用体验](/go-global/first-use) | [错误恢复演示](/go-global/first-use#first-demo-title)、[完整草稿](/go-global/first-use#first-output-title)和[求助样稿](/go-global/first-use#first-help-title) |
 | 找到了入口，但不知道怎样开口 | [冷启动获客](/go-global/launch#先找到工作发生的地方) | [英文邀请](/go-global/launch#lc-invite-title)、[演示材料](/go-global/launch#lc-sample-title) |
 | 有人试过，却不知道该改什么 | [持续使用与迭代](/go-global/retention) | [逐人记录](/go-global/retention#retention-records-title)、[一轮有限投入决定](/go-global/retention#retention-decision-title) |
-| 发布以后，还该把时间花在哪里 | [持续获客](/go-global/growth) | [完整任务页](/go-global/growth#growth-page-title)、[触点归因演示](/go-global/growth#growth-demo-title)与六周复盘 |
+| 获客方式怎么选，投入是否值得 | [持续获客](/go-global/growth) | [渠道路线图](/go-global/growth#growth-loop-title)、[完整任务页](/go-global/growth#growth-page-title)、[付费获客账](/go-global/growth#growth-cost-title)与[触点归因演示](/go-global/growth#growth-demo-title) |
 | 用户不直接购买，还能怎样经营 | [收入模式](/go-global/revenue-models) | [付款关系图](/go-global/revenue-models#revenue-map-title)、[广告收益演算](/go-global/revenue-models#revenue-demo-title)、[英语赞助范围](/go-global/revenue-models#revenue-sponsor-title)与联盟佣金记录 |
 | 想开始收费，但承诺说不清 | [定价与订阅](/go-global/pricing) | [完整英语报价](/go-global/pricing#pr-offer-title)、支持成本与权益时间线 |
 | 平台能否接、付款后怎样交付 | [收款与交付](/go-global/payments) | 本人路径比较、业务询问信与事件顺序演练 |
@@ -205,6 +205,6 @@ last_verified: 2026-10-10
 - **AI 产品：** 模型/地区可用性、输入数据安排、错误结果怎么处理、调用成本与滥用上限。现有合规和定价章提供部分判断方法，本书尚未给出完整的 AI 产品上线样例。
 - **团队或企业采购：** 使用者和购买者可能不同，还要展开试用验收、权限、合同范围、采购与支持安排。主体章不能替代销售和合同交付流程。
 - **插件、扩展或 API：** 宿主政策、权限、版本兼容、限流和开发者接入会改变交付。本书的应用商店章聚焦手机应用，不能直接套用到所有分发平台。
-- **持续经营：** [持续获客](/go-global/growth)已补一轮内容、许可分发与投入复盘；[经营复盘与退出](/go-global/business-review)把月度订单、现金与时间放在同一份记录中，再展开收尾。它们分开观察渠道效果与整体经营，不互相替代。
+- **持续经营：** [持续获客](/go-global/growth)已比较搜索、社交视频、社区、合作、产品传播、应用市场、直接销售与投放，展开内容分发复盘和独立付费获客账；[经营复盘与退出](/go-global/business-review)把月度订单、现金与时间放在同一份记录中，再展开收尾。它们分开观察渠道效果与整体经营，不互相替代。
 
 如果新资料要求你先付费、安装工具或注册主体，先回到最初那个问题：它将帮你取得哪一项当前缺少的事实，或完成哪一件已经需要交付的工作？没有清楚答案时，保留链接就够了。

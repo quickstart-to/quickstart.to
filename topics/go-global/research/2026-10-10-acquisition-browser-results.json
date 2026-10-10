@@ -1,0 +1,181 @@
+{
+  "cases": [
+    {
+      "media": 120,
+      "refunds": 2,
+      "actual": [
+        "8 人",
+        "21.75 美元 / 人",
+        "−54 美元"
+      ],
+      "pass": true
+    },
+    {
+      "media": 120,
+      "refunds": 0,
+      "actual": [
+        "10 人",
+        "17.40 美元 / 人",
+        "−14 美元"
+      ],
+      "pass": true
+    },
+    {
+      "media": 0,
+      "refunds": 2,
+      "actual": [
+        "8 人",
+        "6.75 美元 / 人",
+        "66 美元"
+      ],
+      "pass": true
+    },
+    {
+      "media": 240,
+      "refunds": 2,
+      "actual": [
+        "8 人",
+        "36.75 美元 / 人",
+        "−174 美元"
+      ],
+      "pass": true
+    },
+    {
+      "media": 120,
+      "refunds": 10,
+      "actual": [
+        "0 人",
+        "无未退款新客，无法计算",
+        "−214 美元"
+      ],
+      "pass": true
+    },
+    {
+      "media": 240,
+      "refunds": 10,
+      "actual": [
+        "0 人",
+        "无未退款新客，无法计算",
+        "−334 美元"
+      ],
+      "pass": true
+    }
+  ],
+  "attribution": [
+    {
+      "supplement": false,
+      "mode": "first",
+      "actual": [
+        2,
+        2,
+        0,
+        1
+      ],
+      "pass": true
+    },
+    {
+      "supplement": false,
+      "mode": "last",
+      "actual": [
+        2,
+        0,
+        2,
+        1
+      ],
+      "pass": true
+    },
+    {
+      "supplement": false,
+      "mode": "all",
+      "actual": [
+        3,
+        2,
+        2,
+        1
+      ],
+      "pass": true
+    },
+    {
+      "supplement": true,
+      "mode": "first",
+      "actual": [
+        2,
+        3,
+        0,
+        0
+      ],
+      "pass": true
+    },
+    {
+      "supplement": true,
+      "mode": "last",
+      "actual": [
+        2,
+        0,
+        3,
+        0
+      ],
+      "pass": true
+    },
+    {
+      "supplement": true,
+      "mode": "all",
+      "actual": [
+        3,
+        3,
+        3,
+        0
+      ],
+      "pass": true
+    }
+  ],
+  "keyboardBeforeReset": {
+    "spend": "140",
+    "refunds": "1",
+    "margin": "−54 美元",
+    "unit": "21.56 美元 / 人",
+    "focus": "growth-refunds"
+  },
+  "keyboardReset": {
+    "spend": "120",
+    "refunds": "2",
+    "margin": "−54 美元",
+    "focus": "growth-spend"
+  },
+  "mobile": {
+    "w": 390,
+    "scroll": 375,
+    "controls": [
+      {
+        "id": "growth-spend",
+        "height": 44
+      },
+      {
+        "id": "growth-refunds",
+        "height": 44
+      }
+    ],
+    "tableRows": 8
+  },
+  "width320": {
+    "viewport": 320,
+    "scroll": 305
+  },
+  "noScript": {
+    "title": "持续获客：选对渠道，把访问变成使用 · 中国开发者出海：找到海外用户，做出有持续价值的产品",
+    "ready": "complete",
+    "costDisabled": true,
+    "attributionDisabled": true,
+    "resetsHidden": [
+      true,
+      true
+    ],
+    "unit": "21.75 美元 / 人",
+    "margin": "−54 美元",
+    "sourceCount": 14,
+    "fallbacks": [
+      "未启用脚本，上方保留首次接触的结果。按最后接触则是搜索 2、同业文章 0、许可邮件 2、未知 1；列全部参与则是搜索 3、同业文章 2、许可邮件 2，共 7 次已知渠道参与，另有 1 人来源未知，仍只有 5 人。",
+      "上方保留默认算式。若 10 人全部退款，未退款新客为 0，人均值无法计算，余量为 −214 美元；费用和已花的时间没有随退款消失。"
+    ]
+  }
+}

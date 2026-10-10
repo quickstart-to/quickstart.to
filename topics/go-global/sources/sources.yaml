@@ -789,7 +789,7 @@
   url: "https://blog.tally.so/how-we-bootstrapped-tally-to-10k-mrr/"
   title: "How we bootstrapped Tally to $10k MRR"
   publisher: "Marie Martens · Tally"
-  accessed: "2026-10-09"
+  accessed: "2026-10-10"
   claim: "联合创始人2022-02-11回顾免费表单降低尝试门槛、表单上的品牌标记带来用户，以及小团队通过限制复杂度和改善文档降低支持负担；属于历史自述，不代表当前套餐或免费策略的普遍效果"
   excerpt: "excerpts/tally-early-growth.md"
 
@@ -1387,3 +1387,37 @@
   claim: "官方可注册国家/地区表的 Asia Pacific 栏列有 China；地区列入不代替具体申请者、站点与收款资料的审核"
   excerpt: excerpts/adsense-availability.md
   archive: https://web.archive.org/web/20261010041346/https://support.google.com/adsense/answer/13402307?hl=en
+
+- id: src-screenstudio-channel-dependence
+  url: https://www.indiehackers.com/post/how-buildinpublic-brought-the-first-10-customers-for-screen-studio-and-later-became-the-main-marketing-challenge-ea7c6f0eb1
+  title: "How #buildinpublic Brought the First 10 Customers for Screen Studio and Later Became the Main Marketing Challenge"
+  publisher: "Sveta Bay · Indie Hackers"
+  accessed: 2026-10-10
+  claim: "2023-07-31 刊载的 Adam Pietrasiak 创始人叙述：公开开发、CEO 点赞后传播及支持性早期购买，后来依赖个人 Twitter 账号并感到持续发帖压力；非独立渠道审计"
+  excerpt: excerpts/screenstudio-channel-dependence.md
+
+- id: src-simplero-channel-experiments
+  url: https://saasclub.io/podcast/power-of-purpose-saas-calvin-correli-simplero/
+  title: "From Broke Freelancer to $2M ARR Bootstrapped SaaS Growth"
+  publisher: "Omer Khan · SaaS Club · Calvin Correli"
+  accessed: 2026-10-10
+  claim: "第 187 期历史访谈原站文字稿，33:31–35:12 嘉宾报告 AdWords/代理未达结果、联盟未改变其观察到的整体增长并增加管理负担，同时明确一位挪威伙伴带来许多客户；不支持普遍渠道无效结论"
+  excerpt: excerpts/simplero-channel-experiments.md
+
+- id: src-google-ai-discovery
+  url: https://developers.google.com/search/docs/appearance/ai-features?hl=zh-cn
+  title: "AI 功能和您的网站"
+  publisher: "Google Search Central"
+  accessed: 2026-10-10
+  claim: "Google AI 概览与 AI 模式沿用搜索基本要求，无额外 AI 文件或特殊标记要求，符合要求仍不保证抓取、索引或展示；不外推其他问答产品"
+  excerpt: excerpts/google-ai-discovery.md
+  archive: https://web.archive.org/web/20261010043655/https://developers.google.com/search/docs/appearance/ai-features?hl=zh-cn
+
+- id: src-google-ads-spending
+  url: https://support.google.com/google-ads/answer/10486637?hl=en
+  title: "About spending limits"
+  publisher: "Google Ads Help"
+  accessed: 2026-10-10
+  claim: "大多数广告系列每日计费限额为平均每日预算的 2 倍，pay-for-conversions 等有例外；平均每日预算不能当成每一天的绝对花费上限"
+  excerpt: excerpts/google-ads-spending.md
+  archive: https://web.archive.org/web/20261010043319/https://support.google.com/google-ads/answer/10486637?hl=en
