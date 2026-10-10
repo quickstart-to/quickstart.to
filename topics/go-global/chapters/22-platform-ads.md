@@ -8,7 +8,9 @@ last_verified: 2026-10-10
 
 广告上线以后，最容易得到的是一张不断变化的报表：曝光、点击、注册，还有一个看起来越来越低的单次成效费用。最难回答的反而是，来的人是否需要你的产品，以及这笔钱有没有买到下一次值得继续的理由。
 
-[持续获客](/go-global/growth)讨论了何时选择付费渠道。这一章把它往前推进一步：怎样准备账户，把目标翻成平台设置，让素材和落地页说同一件事，再沿着实际使用找到问题。下面展开 Google Search、Meta、Reddit、TikTok 和 LinkedIn 五种操作路径；本章以网站试用、购买和团队线索为对象，应用安装、商店广告、X 和 Microsoft Ads 的具体操作另有账户与测量要求。
+[持续获客](/go-global/growth)讨论了何时选择付费渠道。这一章把它往前推进一步：怎样准备账户，把目标翻成平台设置，让素材和落地页说同一件事，再沿着实际使用找到问题。
+
+下面用 Google Search 展开一份从设置到复盘的完整教学试验；Meta、Reddit、TikTok 和 LinkedIn 则侧重准入、设置与素材准备，尚未展开同等深度的试验记录。本章以网站试用、购买和团队线索为对象，应用安装、商店广告、X 和 Microsoft Ads 的具体操作另有账户与测量要求。
 
 <figure class="ads-media ads-route" aria-labelledby="ads-route-title">
 <h2 id="ads-route-title">先找到用户此刻在做什么</h2>

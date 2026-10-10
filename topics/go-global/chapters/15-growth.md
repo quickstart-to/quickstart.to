@@ -94,7 +94,9 @@ Bannerbear 创始人 Jon Yongfook 在 2021 年底回顾营销工作时，列出�
 
 页面要独立有用。不能先写很长的泛论，再把真正的示例藏到注册后；也不必为了让工具显得重要，故意把可以直接复制的模板写得不好。下面是一份完成的英文页面样稿，字段整理和项目判断分别交代。
 
-<article class="growth-media growth-sample" lang="en" aria-labelledby="growth-page-title">
+<details class="growth-media growth-sample">
+<summary>展开完整英文任务页：输入、草稿与下一步</summary>
+<div lang="en" aria-labelledby="growth-page-title">
 <p class="growth-kicker">Worked page · fictional data</p>
 <h3 id="growth-page-title">Turn project rows into a weekly client update</h3>
 <p>You have a spreadsheet of work completed this week. Your client needs a short update: what changed, what is waiting, and what happens next.</p>
@@ -107,7 +109,8 @@ Bannerbear 创始人 Jon Yongfook 在 2021 年底回顾营销工作时，列出�
 <p>If you prepare one short update, copying this structure may be enough. If gathering the rows takes work every week, compare your usual process with the fictional spreadsheet example below.</p>
 <p><a href="/go-global#report-demo-title">Try the fictional input and edit the project judgment</a>. No account or client file is needed for this example.</p>
 <p>If your sheet calls the time column “Duration”, first check its unit and map the column. Do not rename minutes as hours. Review the total and write the project status yourself before sending an update.</p>
-</article>
+</div>
+</details>
 
 这里的入口直接连接本书已有的合成演示，读者可以实际改数字和判断。它不是一个已经运营的周报产品网站；将文案用于自己的产品时，按钮、格式要求和数据处理必须与实现相符。
 
@@ -115,9 +118,7 @@ Bannerbear 创始人 Jon Yongfook 在 2021 年底回顾营销工作时，列出�
 
 搜索上的基础工作另算一小块时间：确认页面能访问、标题准确、站内有入口、正文和演示说明能够被读取，再检查 Google 是否已经发现它。Google 的指南明确说，改动的影响可能从几小时到几个月不等，也不保证每项改动都有效。[^src-google-seo-starter] 因此，第六周可以决定还要不要花时间，不能仅凭这一天没有搜索客户，就宣判这类内容永远无效。
 
-AI 搜索也不必另起一套空泛文章。截至 2026-10-10，Google 对 AI 概览和 AI 模式的说明仍以搜索基本要求和有用内容为基础，不要求额外的 AI 专用文本文件或特殊标记；符合要求也不保证被收录或展示。[^src-google-ai-discovery] 这项说明只覆盖 Google 的相应功能，不能外推所有问答产品。与其承诺“做了某种格式就会被 AI 推荐”，先把输入、方法、适用条件和可核对的结果讲清楚。
-
-确定要持续经营搜索内容后，接着读[搜索与内容运营](/go-global/search-content)：从查询和现有替代写页面，再排查发现与收录、解释点击率变化，并决定旧页怎样维护。
+决定持续经营这条路之后，再读[搜索与内容运营](/go-global/search-content)：查询与现有替代怎样改变页面，发现与收录在哪里排查，点击率变化怎样解释，以及旧页和 AI 搜索相关材料如何维护。这里先把这份任务页的分发和投入记录做完。
 
 ## 分发材料，也安排好后续联系
 
@@ -134,11 +135,9 @@ AI 搜索也不必另起一套空泛文章。截至 2026-10-10，Google 对 AI �
 
 有些读者看过材料后想等下一版，可以让他们单独选择接收相关更新。先说明发什么、由谁发、如何退出，再按这个范围联系；只为了拿到样例而留的地址，不直接搬进营销名单。本例不需要买名单、批量抓取邮箱，或为了测试转化而给陌生人连发邮件。
 
-真实发送前仍要按目标市场和收件人类型核对。以英国 ICO 对 PECR 的说明为例，规则区分受邀与非受邀消息、个人与机构订户；针对个人订户的非受邀营销，需要同意或满足特定例外的全部条件，同意本身要求积极动作并可撤回。[^src-ico-email-marketing] 这不是把英语用户当成英国用户，也不是用一段通用勾选文案完成所有地区的合规。把所在市场、名单如何取得、所发内容和退出方式带入核对；发件认证与投递另外见[基础设施](/go-global/infrastructure)。
+准备真实发送时，把所在市场、收件人类型、名单取得方式、内容与退出安排交给[许可邮件的规则核对](/go-global/email-creators#许可服务通知与市场规则要分开看)。本例只延续对方明确选择的联系范围；后面的六周记录会把维护这段关系的时间也算进去。
 
-合作也可能付费：购买一期教程的展示，按约定线索结算，或按最终成交返佣，支付对象和争议点并不相同。先写清谁提供材料、是否能独立评价、何时确认结果、退款如何处理；涉及推荐关系时还要核对披露规则。例如美国 FTC 的指引要求清楚说明影响推荐判断的重要商业关系，单写一个模糊的联盟标签未必足够。[^src-ftc-affiliate-disclosure] 找伙伴不是让对方假装偶然发现你的产品。
-
-订阅建立以后的欢迎、后续帮助、退订与队列维护，以及合作的样片修改、使用权和结算，继续看[许可邮件与创作者合作](/go-global/email-creators)。
+如果合作改为付费制作或成交返佣，就需要另一份范围和结算约定。[创作者合作](/go-global/email-creators#创作者愿意合作先对齐他在替谁解释)已经展开候选比较、样片修订、披露、使用权与结算。先做本例这一次获准引用，不必为了试一条分发路径同时搭建整套合作体系。
 
 ## 六周之后，先读记录，再看渠道排名
 

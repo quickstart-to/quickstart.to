@@ -227,14 +227,15 @@ W3C 建议在可能产生歧义的场合明确月份和四位年份，或说明�
 
 现在回到本例的英语异步试用。只发一个网址，仍然把许多理解工作留给对方。更完整的交付是：一段范围说明、一份合成输入、一个已经填好的输出、一个失败后的处理办法。下面是可以一起发送的**英文教学样稿**；没有向任何人发出，也没有真实试用结果。
 
-<aside class="market-media market-copy" aria-labelledby="market-copy-title">
+<details class="market-media market-copy">
+<summary>展开英语试用包：范围说明、合成 CSV 与完整输出</summary>
+
 <h3 id="market-copy-title">样稿：先约定输入与输出</h3>
 <div lang="en" class="market-example">
 <p><strong>Turn a project CSV into a client progress update.</strong></p>
 <p>This pilot runs in your browser. The CSV stays on your device. It creates a draft for you to check and download; it does not send anything to your client or decide whether a project is on track.</p>
 <p>Start with the sample below. Confirm the date format used in your file, then check the deadline and currency in the preview. Keep your usual reporting method available while trying this version.</p>
 </div>
-</aside>
 
 ```csv
 project,next_step,due_date,budget_currency,budget_amount
@@ -250,6 +251,8 @@ Due date: 10 November 2026
 Project budget: USD 1,234.50
 Project status: Awaiting client review
 ```
+
+</details>
 
 这份输出把数据整理和人工判断放在了一起，后者仍由负责人确认。客户是否真的需要预算字段，也需要观察；真实任务不需要时就删除，不能因为演示里有，就要求对方多收集一项信息。下载后是否仍需重排格式、补写解释，回到[选品章的完整工作成本](/go-global/validate-idea)一起计算。
 

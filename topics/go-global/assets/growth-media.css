@@ -16,6 +16,8 @@
 .growth-path li:not(:last-child)::after { content: '↓'; position: absolute; top: 100%; left: 50%; line-height: 1.6rem; color: var(--accent); }
 .growth-return { border: 1px solid var(--accent); padding: .7rem 1rem; border-radius: .4rem; }
 .growth-sample, .growth-note, .growth-demo { padding: 1.1rem; border: 1px solid var(--border); border-radius: .5rem; background: var(--bg-soft); }
+.growth-sample > summary { cursor: pointer; font-weight: 600; }
+.growth-sample[open] > summary { margin-bottom: 1rem; }
 .growth-sample blockquote { margin: 1rem 0; padding: .5rem 1rem; background: var(--bg); border-left: 3px solid var(--accent); font-style: normal; color: var(--fg); }
 .growth-note [lang] { border-left: 2px solid var(--border); padding-left: .8rem; }
 .growth-table { container-type: inline-size; margin: 1.5rem 0; }

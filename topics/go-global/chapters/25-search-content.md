@@ -37,7 +37,7 @@ slug: search-content
 
 最后一行是一种工作表达，不是一张流量预测。先用它限定内容，再请熟悉英语、确实做这类汇报的人看：“你会这样描述这件事吗？表格里已有的东西和仍要补的东西是否清楚？”需要确认的是任务和用语，不只是语法。若对方平时只复制一封邮件、根本不需要导入 CSV，就让模板成为答案，停止扩建转换工具的内容。
 
-中文开发者 bbbblue 在 V2EX 的一次复盘回复中，报告自己曾生成大量博客，搜索量上去后，对产品却没有帮助；他也怀疑文章与产品关系不大。这是作者自述，没有可复核的转化后台。可借鉴的警告很具体：写作前若没说清文章怎样接到产品能完成的工作，访问量上涨并不能替你补上这一段。[^src-v2ex-traffic-lessons]
+[持续获客章中的流量反例](/go-global/growth#一年营销里文章只是其中一部分)提醒我们，访问增长与产品用途可能脱节。这里把它变成写作前的一项判断：读者取得答案以后，还有什么需要工具完成？对 SC-01，值得验证的是反复整理工时，单封邮件模板已经够用的人不必被劝去注册。
 
 ## 一篇页面，先交付一个不用猜的结果
 
@@ -49,7 +49,7 @@ SC-01 沿用获客章任务页的用途，另设一段待改文案：“Create a
 <p class="search-kicker">SC-01 · 可供改写的英文首屏</p>
 <h3 id="search-copy-title" lang="en">Turn project hours into a weekly client-update draft</h3>
 <div lang="en">
-<p>Start with a small CSV containing <code>project</code>, <code>task</code>, and <code>hours</code>. The tool groups recorded hours by project. You add the status, next step, and any request for your client.</p>
+<p>Start with a small CSV containing <code>project</code>, <code>task</code>, and <code>hours</code>. Use one project per file; the tool totals its recorded hours. You add the status, next step, and any request for your client.</p>
 <p>Your CSV stays in this browser. No upload or account is needed to try the fictional sample.</p>
 <div class="search-transform">
 <div><b>Source rows</b><pre>project,task,hours

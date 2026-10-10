@@ -58,6 +58,7 @@
 .market-proof-document h4 { font-size: 1.2rem; }
 .market-proof-notes p { margin: 0 0 1rem; }
 .market-copy summary { cursor: pointer; font-weight: 600; }
+.market-copy[open] > summary { margin-bottom: 1rem; }
 .market-plan-options { display: grid; gap: 1rem; }
 .market-plan-options article { padding: .9rem 1rem; border: 1px solid var(--border); border-radius: .5rem; }
 .market-plan-options article:first-child { border-left: 3px solid #527481; }

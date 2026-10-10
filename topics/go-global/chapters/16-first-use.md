@@ -148,7 +148,7 @@ PostHog 的邮件引导复盘说明，上下文并不是设置一个标签就自
 
 <aside class="first-media first-help" aria-label="英文错误帮助与求助样稿">
 <h3>在错误旁放这一段</h3>
-<div lang="en"><p><strong>Row 3: hours must be a number.</strong> Use decimal hours, for example 2 or 1.5. Your project status and next step are still here. Your CSV has not been uploaded.</p><p>If the value looks correct but the error remains, send the error code HOURS_FORMAT, the row number, and a made-up row with the same structure. Please do not send client files or screenshots containing client details.</p><p>For this pilot, questions are handled by email. I will reply by 14 October 2026, 12:00 UTC. If that misses your deadline, use your usual reporting method for this update.</p></div>
+<div lang="en"><p><strong>Row 3: hours must be a number.</strong> Use decimal hours, for example 2 or 1.5. Your project status and next step are still here. Your CSV has not been uploaded.</p><p>If the value looks correct but the error remains, send the error code HOURS_FORMAT, the row number, and a made-up row with the same structure. Please do not send client files or screenshots containing client details.</p><p>For this pilot, questions are handled by email. I will reply by 13 October 2026, 12:00 UTC. If that misses your deadline, use your usual reporting method for this update.</p></div>
 <h3>一份足够开始排查的求助</h3>
 <div lang="en"><p><strong>Subject:</strong> HOURS_FORMAT when creating a preview</p><p>I selected a CSV and reached the preview step. Row 3 is flagged. A made-up row with the same structure is: Project North,Draft report,two. I expected to enter two hours. My written status is still present. No client file is attached.</p></div>
 </aside>
