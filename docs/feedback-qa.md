@@ -14,7 +14,7 @@ On `quickstart-to-feedback-staging.rewriteso.workers.dev`, used ego-browser and 
 
 The synthetic resolution explicitly says PR #10 predates the test report. This verifies the integration, not a reader-triggered correction. No independent reader acceptance, email receipt, real payment integration or full accessibility audit is claimed.
 
-`pnpm build`, `pnpm check`, all five Worker/D1 lifecycle tests and all six published drills passed. Production and staging dry-runs resolved to different D1 bindings. Actual scheduled cleanup and production smoke checks remain pending in this record.
+`pnpm build`, `pnpm check`, all five Worker/D1 lifecycle tests and all six published drills passed. Production and staging dry-runs resolved to different D1 bindings. The actual PR preview deployment for `b698b3f` exposed only `ASSETS` and `FEEDBACK_ENABLED=false` in Cloudflare's deployment binding list; its config endpoint returned disabled and `/api/me` returned 503. Actual scheduled cleanup and production smoke checks remain pending in this record.
 
 ## Local validation — 2026-10-10
 

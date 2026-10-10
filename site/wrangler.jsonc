@@ -19,7 +19,7 @@
   "observability": { "enabled": false },
   "logpush": false,
   "vars": {
-    "FEEDBACK_ENABLED": "false",
+    "FEEDBACK_ENABLED": "true",
     "SITE_ORIGIN": "https://quickstart.to",
     "GITHUB_CLIENT_ID": "Ov23ctbRim2E89PPLXes"
   },

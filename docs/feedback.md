@@ -1,6 +1,6 @@
 # Feedback service: first delivery
 
-This service is implemented but **disabled by default**. Merging code does not enable submissions. A local test uses synthetic readers and mocked GitHub, Turnstile and mail responses; it does not prove production OAuth, delivery to an inbox, or independent reader acceptance.
+Production and the separate staging environment are explicitly configured to enable feedback; branch/PR previews stay disabled and have no reader database or credentials. The Worker still refuses submissions when any required binding or secret is missing. See [deployment environments](deploy.md#feedback-environments) and the dated [acceptance record](feedback-qa.md) for what has actually been exercised. Email remains disabled. Local tests use synthetic readers and mocked providers; they do not establish independent reader acceptance.
 
 ## Scope and architecture
 

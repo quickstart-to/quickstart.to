@@ -5,7 +5,7 @@ Updated 2026-10-11. This document replaces the early handoff draft; detailed con
 ## Current release boundary
 
 - Production has one draft topic, a quickstart and 26 chapters. The last whole-book review distinguishes source verification, editorial repair and technical QA; it does not establish independent reader acceptance.
-- The first feedback implementation adds GitHub login, quoted reports, moderation, evidence/PR-linked resolution, personal results, optional email, export and deletion. It stays disabled until production resources and real-provider checks are complete; see [feedback operations](feedback.md).
+- Feedback has separate production/staging resources for GitHub login, quoted reports, moderation, evidence/PR-linked resolution, personal results, export and deletion. Real-provider staging checks passed; branch/PR previews stay disabled, and email remains unconfigured. The exact deployment and scheduled-execution results are recorded in [feedback QA](feedback-qa.md).
 - PRs #9 (feedback) and #10 (subscription recovery and beta scope) are merged. CI and the main Cloudflare build passed for `a280f27`.
 - CI runs content/build checks, types, typography, feedback lifecycle tests and existing published drills. The weekly review workflow is installed on `main`; its first manual run [38068409515](https://github.com/quickstart-to/quickstart.to/actions/runs/38068409515) succeeded with zero metadata-overdue pages as of 2026-10-11. It does not check external link reachability, research sources or modify content. A successful manual run is not evidence of a scheduled invocation.
 - The first reader round and beta promotion are still pending. Do not promote based on a passing build or this status document.
