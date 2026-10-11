@@ -42,7 +42,7 @@ Cloudflare's [Cron Triggers documentation](https://developers.cloudflare.com/wor
 
 ### Next diagnostic step
 
-Ask Cloudflare support to inspect dispatch for the two saved schedules and versions above. The narrow question is why no `scheduled` invocation or D1 effect was observed beyond the documented propagation window, despite the deployed handlers and schedule records. Supply the minimal scheduled-only reproduction if requested; do not send credentials, account exports or raw HTTP tails. No support message has been sent.
+Ask Cloudflare support to inspect dispatch for the two saved schedules and versions above. The narrow question is why no `scheduled` invocation or D1 effect was observed beyond the documented propagation window, despite the deployed handlers and schedule records. Supply the minimal scheduled-only reproduction if requested; do not send credentials, account exports or raw HTTP tails. With explicit maintainer authorization, the diagnostic request was submitted to Cloudflare support on 2026-10-11. The portal confirmed submission; a response and a successful repeat test are still pending. The private case receipt stays outside Git.
 
 After dispatch is understood, repeat the expired/unexpired fixture test and require both a successful real scheduled invocation and the expected D1 difference. Only then enable production feedback, verify the independent production OAuth/Turnstile setup and run the synthetic account/report/export/delete smoke check. Production activation is still pending.
 
