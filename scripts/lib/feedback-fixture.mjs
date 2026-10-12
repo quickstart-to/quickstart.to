@@ -5,11 +5,11 @@ import { build } from 'esbuild';
 import { Miniflare, convertV4MiniflareOptions } from 'miniflare';
 const bundle = await build({ stdin: { contents: `import handler from './site/worker/index.ts'; export default { async fetch(request,env,ctx) { if(new URL(request.url).pathname==='/__test/scheduled') { const jobs=[]; await handler.scheduled({cron:'0 * * * *'},env,{waitUntil(p){jobs.push(p)}}); await Promise.all(jobs); return Response.json({ok:true}); } return handler.fetch(request,env,ctx); } };`, resolveDir: process.cwd() }, bundle: true, write: false, format: 'esm', platform: 'browser', target: 'es2022' });
 const manifest = JSON.parse(readFileSync('site/worker/content.generated.json','utf8'));
-const migration = readFileSync('site/migrations/0001_feedback.sql','utf8');
+const migration = ['0001_feedback.sql','0002_annotations.sql'].map(file=>readFileSync(`site/migrations/${file}`,'utf8').replace(/^--.*$/gm,'')).join('\n');
 const ORIGIN = 'https://quickstart.test';
 const ADMIN = 'test-admin-secret-never-for-production';
 const authHeaders = { Authorization: `Bearer ${ADMIN}` };
-export async function fixture(enabled = true, preview = false) {
+export async function fixture(enabled = true, preview = false, beforeUpgrade) {
   const origin = preview ? 'http://localhost:8788' : ORIGIN;
   const interceptors = [];
   const mock = { get: origin => ({ intercept: ({ path, method = 'GET' }) => ({ reply: (status, body) => interceptors.push({ origin, path, method, status, body }) }) }) };
@@ -33,7 +33,10 @@ export async function fixture(enabled = true, preview = false) {
     const item = interceptors.splice(index,1)[0]; return Response.json(item.body,{status:item.status});
   } }));
   const db = await mf.getD1Database('DB');
-  await db.exec(migration.replace(/\n/g,' '));
+  const migrations=migration.split('CREATE TABLE annotations');
+  await db.exec(migrations[0].replace(/\n/g,' '));
+  if(beforeUpgrade)await beforeUpgrade(db);
+  await db.exec(('CREATE TABLE annotations'+migrations[1]).replace(/\n/g,' '));
   const request = async (path, { method = 'GET', body, cookie, csrf, headers = {}, origin = ORIGIN } = {}) => {
     const response = await mf.dispatchFetch(ORIGIN+path, { method, headers: { ...headers, ...(cookie ? { Cookie: cookie } : {}), ...(csrf ? { 'X-CSRF-Token': csrf } : {}), ...(body ? { 'Content-Type': 'application/json', Origin: origin } : {}) }, body: body ? JSON.stringify(body) : undefined, redirect: 'manual' });
     const data = response.headers.get('Content-Type')?.includes('application/json') ? await response.json() : null;

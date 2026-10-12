@@ -1,3 +1,4 @@
+import { annotationRequest, interactionExport, bumpInteractions } from './annotations';
 import manifest from './content.generated.json';
 
 interface Env {
@@ -7,7 +8,7 @@ interface Env {
   ADMIN_TOKEN?: string; RATE_LIMIT_SALT?: string;
   RESEND_API_KEY?: string; EMAIL_FROM?: string;
 }
-type ReadyEnv = Env & { DB: D1Database; SITE_ORIGIN: string; RATE_LIMIT_SALT: string };
+export type ReadyEnv = Env & { DB: D1Database; SITE_ORIGIN: string; RATE_LIMIT_SALT: string };
 type Session = { user_id: string; csrf: string; display_name: string; email: string | null };
 type Feedback = { id: string; user_id: string; path: string; status: string; visibility: string; request_hash: string };
 const pages = manifest.pages as Record<string, { text: string }>;
@@ -158,7 +159,7 @@ async function createFeedback(request: Request, env: ReadyEnv) {
   await challenge(request, env, data, 'feedback');
   await rate(env, `feedback:${user.user_id}`, 10, DAY);
   const id = crypto.randomUUID();
-  await env.DB.prepare('INSERT INTO feedback(id,user_id,request_id,request_hash,path,content_sha,exact,prefix,suffix,kind,body,notify_email,created_at) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?) ON CONFLICT(user_id,request_id) DO NOTHING').bind(id,user.user_id,requestId,requestHash,path,contentSha,exact,prefix,suffix,kind,body,notify ? 1 : 0,Date.now()).run();
+  await env.DB.batch([env.DB.prepare('INSERT INTO feedback(id,user_id,request_id,request_hash,path,content_sha,exact,prefix,suffix,kind,body,notify_email,created_at) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?) ON CONFLICT(user_id,request_id) DO NOTHING').bind(id,user.user_id,requestId,requestHash,path,contentSha,exact,prefix,suffix,kind,body,notify ? 1 : 0,Date.now()),bumpInteractions(env)]);
   const saved = await env.DB.prepare('SELECT id,request_hash FROM feedback WHERE user_id=? AND request_id=?').bind(user.user_id, requestId).first<{ id: string; request_hash: string }>();
   if (saved?.request_hash !== requestHash) fail(409, 'idempotency_conflict');
   return json({ id: saved!.id, status: 'received' }, 201);
@@ -194,7 +195,7 @@ async function admin(request: Request, env: ReadyEnv, path: string) {
     const status = text(data.status, 20); const visibility = text(data.visibility, 20);
     if (!['open','triaged','accepted'].includes(status) || !['pending','public','hidden'].includes(visibility)) fail(400, 'invalid_input');
     const finalStatus = ['resolved','rejected'].includes(item!.status) ? item!.status : status;
-    await env.DB.prepare("UPDATE feedback SET status=CASE WHEN status IN ('resolved','rejected') THEN status ELSE ? END,visibility=? WHERE id=?").bind(finalStatus,visibility,id).run();
+    await env.DB.batch([env.DB.prepare("UPDATE feedback SET status=CASE WHEN status IN ('resolved','rejected') THEN status ELSE ? END,visibility=? WHERE id=?").bind(finalStatus,visibility,id),bumpInteractions(env)]);
     return json({ id, status: finalStatus, visibility });
   }
   const outcome = text(data.outcome, 20); const summary = text(data.summary, 4000, 3);
@@ -210,16 +211,21 @@ async function admin(request: Request, env: ReadyEnv, path: string) {
     if (existing.request_hash !== requestHash) fail(409, 'already_resolved');
     return json({ id, status: item!.status });
   }
+  let mergedSha: string | null = null;
   if (pr) {
     const number = pr.match(/^https:\/\/github\.com\/quickstart-to\/quickstart\.to\/pull\/([1-9]\d*)$/)?.[1];
     if (!number) fail(400, 'invalid_pr');
-    const details = await (await upstream(`https://api.github.com/repos/quickstart-to/quickstart.to/pulls/${number}`, { headers: { Accept: 'application/vnd.github+json', 'User-Agent': 'quickstart-to' } })).json() as { merged_at: string | null; base: { ref: string } };
+    const details = await (await upstream(`https://api.github.com/repos/quickstart-to/quickstart.to/pulls/${number}`, { headers: { Accept: 'application/vnd.github+json', 'User-Agent': 'quickstart-to' } })).json() as { merged_at: string | null; merge_commit_sha?: string; base: { ref: string } };
     if (!details.merged_at || details.base?.ref !== 'main') fail(409, 'pr_not_merged');
+    if (details.merge_commit_sha && /^[a-f0-9]{40}$/.test(details.merge_commit_sha)) mergedSha = details.merge_commit_sha;
+    if (outcome==='updated' && !mergedSha) fail(502,'provider_unavailable');
   }
   const now = Date.now(); const status = outcome === 'rejected' ? 'rejected' : 'resolved';
   await env.DB.batch([
+    bumpInteractions(env),
     env.DB.prepare('INSERT INTO resolutions VALUES(?,?,?,?,?,?,?) ON CONFLICT(feedback_id) DO NOTHING').bind(id,outcome,summary,JSON.stringify(sources),pr,requestHash,now),
     env.DB.prepare('UPDATE feedback SET status=? WHERE id=? AND EXISTS(SELECT 1 FROM resolutions WHERE feedback_id=? AND request_hash=?)').bind(status,id,id,requestHash),
+    ...(mergedSha ? [env.DB.prepare('INSERT INTO resolution_versions VALUES(?,?,?) ON CONFLICT(feedback_id) DO NOTHING').bind(id,mergedSha,`/${item!.path.split('/')[1]}/changelog`)] : []),
     env.DB.prepare('INSERT INTO email_outbox(feedback_id,next_attempt,created_at) SELECT id,?,? FROM feedback WHERE id=? AND notify_email=1 ON CONFLICT(feedback_id) DO NOTHING').bind(now,now,id),
   ]);
   const saved = await env.DB.prepare('SELECT request_hash FROM resolutions WHERE feedback_id=?').bind(id).first<{ request_hash: string }>();
@@ -232,8 +238,10 @@ async function handle(request: Request, env: Env) {
   if (path === '/api/feedback/config' && request.method === 'GET') return json({ enabled: ready(env), revision: manifest.revision, site_key: ready(env) ? env.TURNSTILE_SITE_KEY : null, email_enabled: ready(env) && !!env.RESEND_API_KEY && !!env.EMAIL_FROM });
   if (!ready(env)) fail(503, 'feedback_unavailable');
   if (url.origin !== env.SITE_ORIGIN) fail(403, 'origin_mismatch');
-  if (path.startsWith('/api/admin/')) return admin(request, env, path);
+  if (path.startsWith('/api/admin/') && !path.startsWith('/api/admin/annotations')) return admin(request, env, path);
   if (request.method !== 'GET') await rate(env, `ip:${request.headers.get('CF-Connecting-IP') ?? 'local'}`, 40, 3600000);
+  const interaction = await annotationRequest(request, env, { json, fail, text, payload, authenticated, challenge, digest, rate, sameOrigin, pages, revision: manifest.revision });
+  if (interaction) return interaction;
   if (path === '/api/auth/start' && request.method === 'POST') return login(request, env);
   if (path === '/api/auth/callback' && request.method === 'GET') return callback(request, env);
   if (path === '/api/me' && request.method === 'GET') {
@@ -259,13 +267,13 @@ async function handle(request: Request, env: Env) {
   if (path === '/api/me/export' && request.method === 'GET') {
     const user = await authenticated(request, env);
     const result = await env.DB.prepare(`SELECT ${publicColumns} ${joins} WHERE f.user_id=? ORDER BY f.created_at`).bind(user.user_id).all();
-    return Response.json({ account: { name: user.display_name, email: user.email }, feedback: result.results }, { headers: { ...headers, 'Content-Disposition': 'attachment; filename="quickstart-account.json"' } });
+    return Response.json({ account: { name: user.display_name, email: user.email }, feedback: result.results, ...await interactionExport(env,user.user_id) }, { headers: { ...headers, 'Content-Disposition': 'attachment; filename="quickstart-account.json"' } });
   }
   if (path === '/api/me' && request.method === 'DELETE') {
     const user = await authenticated(request, env, true); const data = await payload(request);
     if (data.confirm !== 'delete') fail(400, 'confirmation_required');
     await challenge(request, env, data, 'delete');
-    await env.DB.prepare('DELETE FROM users WHERE id=?').bind(user.user_id).run();
+    await env.DB.batch([env.DB.prepare('DELETE FROM users WHERE id=?').bind(user.user_id),bumpInteractions(env)]);
     return Response.json({ ok: true }, { headers: { ...headers, 'Set-Cookie': setCookie(env, 'session', '', 0) } });
   }
   return fail(404, 'not_found');
@@ -301,3 +309,5 @@ export default {
   },
   async scheduled(_event: ScheduledController, env: Env, ctx: ExecutionContext) { ctx.waitUntil(maintenance(env)); },
 };
+
+export { json, fail, text, payload, authenticated, challenge, digest, rate, sameOrigin };

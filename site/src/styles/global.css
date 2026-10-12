@@ -225,3 +225,21 @@ a:hover { text-decoration-thickness: 2px; }
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; }
 }
+
+/* CSS Highlights preserve text nodes, anchors, selection and inline controls. */
+::highlight(qs-one) { background-color: #f3cc6150; }
+::highlight(qs-few) { background-color: #e7b84685; }
+::highlight(qs-many) { background-color: #d99b23b5; }
+::highlight(qs-own) { background-color: #66b7cf80; text-decoration: underline; }
+@media (prefers-color-scheme: dark) {
+  ::highlight(qs-one) { background-color: #b985374d; }
+  ::highlight(qs-few) { background-color: #b9853780; }
+  ::highlight(qs-many) { background-color: #b98537b0; }
+  ::highlight(qs-own) { background-color: #367f9680; }
+}
+.interaction-count { display: block; color: var(--fg-muted); font-size: .72rem; font-weight: normal; }
+
+@media (min-width: 60rem) { body.annotations-open .page { inline-size: calc(100% - min(30rem, 45vw)); margin-inline: 0; grid-template-columns: minmax(0,1fr); } body.annotations-open .sidebar { display: none; } }
+
+.toc-chapter > summary { flex-wrap: wrap; }
+.toc-chapter > summary > .interaction-count { flex: 0 0 100%; order: 3; padding-inline: .6rem; }

@@ -29,5 +29,7 @@ jobs:
         run: pnpm check
       - name: Test feedback lifecycle
         run: pnpm test:feedback
+      - name: Test annotations and discussions
+        run: pnpm test:annotations
       - name: Test published drills
         run: pnpm test:drills

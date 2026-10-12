@@ -3,46 +3,64 @@ interface Props { path: string }
 const { path } = Astro.props;
 ---
 <section id="feedback" class="feedback" data-feedback data-path={path} lang="zh-CN" aria-labelledby="feedback-title">
-  <h2 id="feedback-title">内容反馈</h2>
-  <p data-feedback-availability>反馈入口尚未开放。开放后，你可以选中文章中的一段文字，说明有误、过期或没看懂的地方。</p>
+  <h2 id="feedback-title" data-a-i18n="title">划线与讨论</h2>
+  <p data-feedback-availability data-a-i18n="unavailable">反馈入口尚未开放。开放后，你可以选中文章中的一段文字，说明有误、过期或没看懂的地方。</p>
   <noscript><p>提交和查看反馈需要 JavaScript；正文和来源仍可直接阅读。</p></noscript>
   <div data-feedback-enabled hidden>
-    <p>先写下问题，提交时再登录。反馈经审核后公开，处理结果保存在“我的反馈”。<a href="/privacy">隐私与反馈说明</a></p>
-    <button type="button" data-feedback-open>写反馈</button>
-    <button type="button" data-feedback-mine>我的反馈</button>
+    <p><span data-a-i18n="intro">选中文章文字，保存划线、讨论或反馈问题，提交时再登录。</span> <a href="/privacy" data-a-i18n="privacy">隐私与反馈说明</a></p>
+    <button type="button" data-feedback-open data-a-i18n="compose">写讨论或反馈</button><button type="button" data-feedback-browse data-a-i18n="browse">查看讨论与反馈</button>
+    <label class="feedback-check"><input type="checkbox" data-feedback-highlights checked /><span data-a-i18n="highlights">显示公开划线</span></label><p data-feedback-highlight-status></p>
+    <button type="button" data-feedback-mine data-a-i18n="mine">我的反馈</button>
     <p data-feedback-account></p>
-    <details data-feedback-settings hidden><summary>账号设置</summary>
-      <a href="/api/me/export">导出我的资料与反馈</a>
-      <button type="button" data-feedback-logout>退出登录</button>
-      <button type="button" data-feedback-delete>删除账号与我的反馈</button>
+    <details data-feedback-settings hidden><summary data-a-i18n="settings">账号设置</summary>
+      <a href="/api/me/export" data-a-i18n="export">导出我的资料与反馈</a>
+      <button type="button" data-feedback-logout data-a-i18n="logout">退出登录</button>
+      <button type="button" data-feedback-delete data-a-i18n="delete">删除账号与我的反馈</button>
     </details>
-    <div data-feedback-items aria-live="polite"></div>
+    <div data-feedback-items></div>
   </div>
   <p data-feedback-status role="status"></p>
-  <button type="button" class="feedback-selection" data-feedback-selection hidden>反馈所选段落</button>
+  <button type="button" class="feedback-selection" data-feedback-selection data-a-i18n="selection" hidden>反馈所选段落</button>
   <dialog aria-labelledby="feedback-dialog-title" data-feedback-dialog>
     <form data-feedback-form>
-      <h2 id="feedback-dialog-title">告诉我们哪里需要改进</h2>
+      <h2 id="feedback-dialog-title" data-a-i18n="compose">告诉我们哪里需要改进</h2>
       <blockquote data-feedback-quote hidden></blockquote>
-      <p data-feedback-whole>这条反馈针对整篇文章。也可以先关闭窗口、选中正文，再打开反馈。</p>
-      <label for="feedback-kind">问题类型</label>
-      <select id="feedback-kind" name="kind"><option value="confused">没看懂</option><option value="incorrect">有误</option><option value="outdated">已过期</option><option value="supplement">补充资料</option></select>
-      <label for="feedback-body">问题说明</label>
+      <p data-feedback-whole data-a-i18n="whole">这条反馈针对整篇文章。也可以先关闭窗口、选中正文，再打开反馈。</p>
+      <label for="feedback-kind" data-a-i18n="kind">问题类型</label>
+      <select id="feedback-kind" name="kind"><option value="highlight" data-a-i18n="highlight">只划线</option><option value="discussion" data-a-i18n="discussion">讨论</option><option value="confused" selected data-a-i18n="confused">没看懂</option><option value="incorrect" data-a-i18n="incorrect">有误</option><option value="outdated" data-a-i18n="outdated">已过期</option><option value="supplement" data-a-i18n="supplement">补充资料</option></select>
+      <label for="feedback-body" data-a-i18n="body">问题说明</label>
       <textarea id="feedback-body" name="body" rows="5" minlength="3" maxlength="3000" required placeholder="请描述卡住的位置或需要核对的事实；有原始资料时可以附上链接。不要填写账号、账单或其他私密信息。"></textarea>
-      <label class="feedback-check"><input name="consent" type="checkbox" required />我同意审核后公开这条反馈及 GitHub 用户名，文字按 CC BY-SA 4.0 授权。</label>
-      <label class="feedback-check" data-feedback-email hidden><input name="notify_email" type="checkbox" />处理后通过我的 GitHub 已验证主邮箱通知我。</label>
-      <p data-feedback-login-note>提交时使用 GitHub 登录；草稿仅保存在本浏览器，7 天后自动清理。</p>
+      <label class="feedback-check"><input name="consent" type="checkbox" required /><span data-a-i18n="consent">我同意审核后公开这条互动及 GitHub 用户名，文字按 CC BY-SA 4.0 授权。</span></label>
+      <label class="feedback-check" data-feedback-email hidden><input name="notify_email" type="checkbox" /><span data-a-i18n="email">处理后通过我的已验证邮箱通知我。</span></label>
+      <p data-feedback-login-note data-a-i18n="loginNote">提交时使用 GitHub 登录；草稿仅保存在本浏览器，7 天后自动清理。</p>
       <div data-feedback-challenge></div>
       <p data-feedback-form-status role="status"></p>
-      <div class="feedback-actions"><button type="submit" data-feedback-submit>登录并继续</button><button type="button" data-feedback-close>关闭并保留草稿</button><button type="button" data-feedback-discard>丢弃草稿</button></div>
+      <div class="feedback-actions"><button type="submit" data-feedback-submit>登录并继续</button><button type="button" data-feedback-close data-a-i18n="closeDraft">关闭并保留草稿</button><button type="button" data-feedback-discard data-a-i18n="discard">丢弃草稿</button></div>
+    </form>
+  </dialog>
+  <dialog data-feedback-panel class="annotation-panel" aria-labelledby="annotation-panel-title">
+    <header><h2 id="annotation-panel-title" data-a-i18n="title">划线与讨论</h2><button type="button" data-feedback-panel-close data-a-i18n="close">关闭</button></header>
+    <nav class="annotation-tabs" aria-label="划线与讨论"><button type="button" data-tab="discussions" data-a-i18n="discussions">讨论</button><button type="button" data-tab="feedback" data-a-i18n="feedback">反馈</button><button type="button" data-tab="personal" data-a-i18n="personal">我的参与</button></nav>
+    <button type="button" data-feedback-refresh data-a-i18n="refresh">刷新互动</button>
+    <p data-feedback-panel-status role="status"></p><div data-feedback-thread-list></div>
+    <details data-feedback-old><summary data-a-i18n="old">针对旧版本的划线与反馈</summary><div data-feedback-old-list></div></details>
+  </dialog>
+  <dialog data-feedback-bubble class="annotation-bubble" aria-labelledby="annotation-bubble-title">
+    <h2 id="annotation-bubble-title"></h2><div data-feedback-bubble-comments></div><button type="button" data-feedback-bubble-open data-a-i18n="openThread">展开完整讨论</button><button type="button" data-feedback-bubble-close data-a-i18n="close">关闭</button>
+  </dialog>
+  <dialog data-feedback-action-dialog aria-labelledby="annotation-action-title">
+    <form data-feedback-action-form><h2 id="annotation-action-title"></h2><p data-feedback-action-hint></p>
+      <label data-feedback-reason-label><span data-a-i18n="reason">举报原因（仅维护者可见）</span><textarea name="reason" rows="4" minlength="3" maxlength="1000"></textarea></label>
+      <div data-feedback-action-challenge></div><p data-feedback-action-status role="status"></p>
+      <button type="submit" data-a-i18n="confirm">确认</button><button type="button" data-feedback-action-close data-a-i18n="cancel">取消</button>
     </form>
   </dialog>
   <dialog data-feedback-delete-dialog aria-labelledby="feedback-delete-title">
-    <h2 id="feedback-delete-title">删除账号与反馈</h2>
-    <p>将删除本站账号、所有会话、你的反馈及对应处理记录。公开内容也会移除；已发出的邮件和备份中的保留副本不能即时撤回。此操作不能在本站恢复。</p>
+    <h2 id="feedback-delete-title" data-a-i18n="deleteTitle">删除账号与反馈</h2>
+    <p data-a-i18n="deleteHint">将删除本站账号、所有会话、你的反馈及对应处理记录。公开内容也会移除；已发出的邮件和备份中的保留副本不能即时撤回。此操作不能在本站恢复。</p>
     <div data-feedback-delete-challenge></div>
     <p data-feedback-delete-status role="status"></p>
-    <button type="button" data-feedback-confirm-delete>确认删除</button><button type="button" data-feedback-cancel-delete>取消</button>
+    <button type="button" data-feedback-confirm-delete data-a-i18n="deleteConfirm">确认删除</button><button type="button" data-feedback-cancel-delete data-a-i18n="cancel">取消</button>
   </dialog>
 </section>
 <script>
@@ -51,9 +69,9 @@ const { path } = Astro.props;
 <style>
   .feedback { margin-block: 2rem; padding-block-start: 1.5rem; border-block-start: 1px solid var(--border); }
   .feedback h2 { font-size: 1.3rem; margin-block: 0 1rem; }
-  .feedback button, .feedback select, .feedback textarea { font: inherit; color: var(--fg); background: var(--bg-soft); border: 1px solid var(--border); border-radius: .4rem; padding: .55rem .75rem; min-height: 44px; }
-  .feedback button { cursor: pointer; margin-block: .3rem; }
-  .feedback button:disabled { cursor: wait; opacity: .6; }
+  .feedback :global(button), .feedback select, .feedback textarea { font: inherit; color: var(--fg); background: var(--bg-soft); border: 1px solid var(--border); border-radius: .4rem; padding: .55rem .75rem; min-height: 44px; }
+  .feedback :global(button) { cursor: pointer; margin-block: .3rem; }
+  .feedback :global(button:disabled) { cursor: wait; opacity: .6; }
   .feedback .feedback-selection { position: fixed; inset-inline-end: 1rem; inset-block-end: 1rem; z-index: 20; border-color: var(--accent); box-shadow: 0 2px 12px #0003; }
   .feedback label:not(.feedback-check) { display: block; margin-block: 1rem .3rem; }
   .feedback textarea, .feedback select { width: 100%; }
@@ -61,10 +79,25 @@ const { path } = Astro.props;
   .feedback input { flex: 0 0 auto; }
   .feedback dialog { width: min(38rem, calc(100% - 1rem)); max-height: 90dvh; overflow-y: auto; color: var(--fg); background: var(--bg); border: 1px solid var(--border); border-radius: .6rem; padding: 1.25rem; }
   .feedback dialog::backdrop { background: #0009; }
-  .feedback blockquote { overflow-wrap: anywhere; max-height: 10rem; overflow: auto; margin-inline: 0; }
+  .feedback .annotation-panel::backdrop { background: transparent; }
+  .feedback :global(blockquote) { overflow-wrap: anywhere; max-height: 10rem; overflow: auto; margin-inline: 0; }
   .feedback-actions { display: flex; flex-wrap: wrap; gap: .5rem; }
   .feedback :global(.feedback-item) { margin-block: 1.5rem; padding: 1rem; background: var(--bg-soft); border-radius: .5rem; overflow-wrap: anywhere; }
   .feedback :global(.feedback-item p) { white-space: pre-wrap; }
   .feedback :global(.feedback-result) { border-inline-start: 3px solid var(--accent); padding-inline-start: 1rem; }
   .feedback [hidden] { display: none !important; }
+
+  .feedback .annotation-panel { margin: 0 0 0 auto; inset: 0; width: min(30rem, 45vw); max-width: 100vw; height: 100dvh; max-height: 100dvh; border-radius: 0; }
+  .annotation-panel header { display: flex; justify-content: space-between; align-items: start; gap: 1rem; }
+  .annotation-tabs { display: flex; flex-wrap: wrap; gap: .3rem; }
+  .annotation-tabs [aria-pressed="true"] { border-color: var(--accent); font-weight: 700; }
+  .feedback .annotation-bubble { position: fixed; inset: auto; margin: 0; width: min(24rem, calc(100vw - 1rem)); max-height: min(60dvh, 24rem); box-shadow: 0 8px 32px #0003; z-index: 30; }
+  .feedback :global(.annotation-card) { border-block-end: 1px solid var(--border); padding-block: 1rem; overflow-wrap: anywhere; }
+  .feedback :global(.annotation-card blockquote) { border-inline-start: 3px solid var(--accent); padding-inline-start: .8rem; }
+  .feedback :global(.annotation-card p) { white-space: pre-wrap; }
+  .feedback :global(.annotation-reply) { margin-inline-start: .75rem; border-inline-start: 2px solid var(--border); padding-inline-start: .75rem; }
+  .feedback :global(.annotation-card:focus) { outline: 2px solid var(--accent); }
+  @media (max-width: 59.99rem) {
+    .feedback .annotation-panel { inset: auto 0 0; width: 100%; height: 85dvh; max-height: 85dvh; border-radius: 1rem 1rem 0 0; margin: 0; }
+  }
 </style>

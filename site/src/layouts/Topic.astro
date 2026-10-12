@@ -60,7 +60,7 @@ const next = currentIndex >= 0 ? readingOrder[currentIndex + 1] : undefined;
               {page.sections.length ? (
                 <details class="toc-chapter" open={current === page.slug}>
                   <summary>
-                    <a href={page.href} aria-current={current === page.slug ? 'page' : undefined} data-ui={page.slug === 'quickstart' || undefined} lang={page.slug === 'quickstart' ? ui : undefined} data-i18n={page.slug === 'quickstart' ? 'topic.quickstart' : undefined}>{page.title}</a>
+                    <a href={page.href} aria-current={current === page.slug ? 'page' : undefined} data-ui={page.slug === 'quickstart' || undefined} lang={page.slug === 'quickstart' ? ui : undefined} data-i18n={page.slug === 'quickstart' ? 'topic.quickstart' : undefined}>{page.title}</a><span class="interaction-count" data-interaction-path={page.href}></span>
                     <span class="toc-chevron" aria-hidden="true"></span>
                   </summary>
                   <ol class="toc-sections">
@@ -70,7 +70,7 @@ const next = currentIndex >= 0 ? readingOrder[currentIndex + 1] : undefined;
                   </ol>
                 </details>
               ) : (
-                <a href={page.href} aria-current={current === page.slug ? 'page' : undefined} data-ui={page.slug === 'quickstart' || undefined} lang={page.slug === 'quickstart' ? ui : undefined} data-i18n={page.slug === 'quickstart' ? 'topic.quickstart' : undefined}>{page.title}</a>
+                <a href={page.href} aria-current={current === page.slug ? 'page' : undefined} data-ui={page.slug === 'quickstart' || undefined} lang={page.slug === 'quickstart' ? ui : undefined} data-i18n={page.slug === 'quickstart' ? 'topic.quickstart' : undefined}>{page.title}</a><span class="interaction-count" data-interaction-path={page.href}></span>
               )}
             </li>
           ))}
