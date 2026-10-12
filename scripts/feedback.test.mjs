@@ -58,7 +58,7 @@ test('submit → private queue → moderation → merged revision → public rep
     const resolution={outcome:'updated',summary:'Synthetic verification result.',sources:['https://example.test/source'],pr_url:'https://github.com/quickstart-to/quickstart.to/pull/999'};
     f.mock.get('https://api.github.com').intercept({path:'/repos/quickstart-to/quickstart.to/pulls/999'}).reply(200,{merged_at:null,base:{ref:'main'}});
     assert.equal((await f.request(`/api/admin/feedback/${id}/resolve`,{method:'POST',headers:authHeaders,body:resolution})).status,409);
-    f.mock.get('https://api.github.com').intercept({path:'/repos/quickstart-to/quickstart.to/pulls/999'}).reply(200,{merged_at:'2026-10-10T00:00:00Z',base:{ref:'main'}});
+    f.mock.get('https://api.github.com').intercept({path:'/repos/quickstart-to/quickstart.to/pulls/999'}).reply(200,{merged_at:'2026-10-10T00:00:00Z',merge_commit_sha:'1'.repeat(40),base:{ref:'main'}});
     assert.equal((await f.request(`/api/admin/feedback/${id}/resolve`,{method:'POST',headers:authHeaders,body:resolution})).status,200);
     assert.equal((await f.request(`/api/admin/feedback/${id}/resolve`,{method:'POST',headers:authHeaders,body:resolution})).status,200);
     const publicItems=(await f.request('/api/feedback?path=/go-global')).data.items;assert.equal(publicItems[0].summary,resolution.summary);assert.equal(publicItems[0].status,'resolved');assert.ok(!JSON.stringify(publicItems).includes('@example.test'));
