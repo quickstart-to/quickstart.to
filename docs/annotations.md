@@ -75,4 +75,9 @@ Production migration and real-provider acceptance are release gates, not satisfi
 - Deployed the final form-validation fix at `66f50bed10ab12bfca2c0521b67b39878108765f` (Worker `7e920b5c-c5f1-4823-9508-535ecb8eebe8`) and verified that exact config revision plus the short-draft/highlight switch in staging. This last change only disables the unused hidden message field; the full provider lifecycle above ran on `ac64205`.
 - CI and Workers Builds passed the implementation commit. Branch preview reports `enabled=false`, `site_key=null`, with the exact implementation revision and readable article. Production was read back as `ddb2b9af73073192a485c40e7f4d1da6483f119e`, enabled; no production schema migration or feature deployment was performed.
 
-Outstanding release gates: private production export and additive migration before merge-triggered deployment; exact merged-production revision and production annotation smoke; independent readers. Other P2/P3 capabilities remain in the complete product checklist. This PR is ready for code review, not a claim that production or P2 is accepted.
+## Production migration — 2026-10-12
+
+- Exported production D1 privately before applying `0002_annotations.sql`; 16 migration statements completed successfully. Exported again and loaded both dumps into SQLite. `users`, `sessions`, `feedback`, `resolutions` and `email_outbox` compared identically row-for-row, with zero rows in each before and after. Populated historical preservation remains covered by the seeded automated test. Private backups and signed export URLs are outside Git with operator-only permissions.
+- The previous production Worker remained at `ddb2b9a` during the additive upgrade. No production annotation submissions have been made at this stage.
+
+Outstanding release gates: exact merged-production revision and production annotation lifecycle acceptance; independent readers. Other P2/P3 capabilities remain in the complete product checklist. This PR is ready for code review, not a claim that production or P2 is accepted.
