@@ -5,6 +5,33 @@ import { fixture, authHeaders } from './lib/feedback-fixture.mjs';
 test('feedback is unavailable until explicitly configured',async()=>{
   const f=await fixture(false);try{assert.equal((await f.request('/api/feedback/config')).data.enabled,false);assert.equal((await f.request('/api/me')).status,503);}finally{await f.mf.dispose();}
 });
+test('scheduled cleanup removes expired credentials and counters while preserving live records',async()=>{
+  const f=await fixture();try{
+    const now=Date.now();
+    await f.db.prepare('INSERT INTO users VALUES(?,?,?,?,?)').bind('cleanup-user','cleanup-github','Synthetic cleanup fixture',null,now).run();
+    const tables=[['sessions','token_hash'],['oauth_states','state_hash'],['rate_limits','key']];
+    for(const [key,expiry] of [['expired',now-3600000],['control',now+86400000]]) {
+      await f.db.batch([
+        f.db.prepare('INSERT INTO sessions VALUES(?,?,?,?)').bind(key,'cleanup-user','synthetic-csrf',expiry),
+        f.db.prepare('INSERT INTO oauth_states VALUES(?,?,?,?)').bind(key,'synthetic-verifier','/go-global',expiry),
+        f.db.prepare('INSERT INTO rate_limits VALUES(?,?,?)').bind(key,1,expiry),
+      ]);
+    }
+    // Repeat a successful run: an overdue task is safe to recover on the next invocation.
+    for(let run=0;run<2;run++) {
+      assert.equal((await f.request('/__test/scheduled')).status,200);
+      for(const [table,column] of tables) {
+        assert.deepEqual((await f.db.prepare(`SELECT ${column} AS key,expires_at FROM ${table}`).all()).results,[{key:'control',expires_at:now+86400000}]);
+      }
+      assert.equal((await f.db.prepare('SELECT count(*) AS n FROM users').first()).n,1);
+    }
+    // Previously live records become eligible once they expire.
+    for(const [table] of tables) await f.db.prepare(`UPDATE ${table} SET expires_at=?`).bind(now-3600000).run();
+    assert.equal((await f.request('/__test/scheduled')).status,200);
+    for(const [table] of tables) assert.equal((await f.db.prepare(`SELECT count(*) AS n FROM ${table}`).first()).n,0);
+    assert.equal((await f.db.prepare('SELECT count(*) AS n FROM users').first()).n,1);
+  }finally{await f.mf.dispose();}
+});
 test('OAuth state, browser binding, PKCE and logout protect sessions',async()=>{
   const f=await fixture();try{
     assert.equal((await f.request('/api/auth/start',{method:'POST',origin:'https://attacker.test',body:{}})).status,403);
