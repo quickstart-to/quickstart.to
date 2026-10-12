@@ -1,6 +1,6 @@
 # Feedback service: first delivery
 
-This service is implemented but **disabled by default**. Merging code does not enable submissions. A local test uses synthetic readers and mocked GitHub, Turnstile and mail responses; it does not prove production OAuth, delivery to an inbox, or independent reader acceptance.
+This PR proposes production activation after real staging cleanup passed on 2026-10-12; the current live production service remains disabled until the reviewed release is deployed. The separate staging environment enables feedback. Branch/PR previews stay disabled and have no reader database or credentials. The Worker still refuses submissions when any required binding or secret is missing. See [deployment environments](deploy.md#feedback-environments), the [activation and rollback procedure](deploy.md#feedback-activation-and-rollback) and the dated [acceptance record](feedback-qa.md) for what has actually been exercised. Email remains disabled. Local tests use synthetic readers and mocked providers; they do not establish independent reader acceptance.
 
 ## Scope and architecture
 
@@ -22,7 +22,7 @@ pnpm test:drills
 pnpm exec wrangler deploy --dry-run --config site/wrangler.jsonc
 ```
 
-The feedback tests run the actual Worker and D1 migration in Miniflare. Only external provider responses are substituted, and unexpected external requests fail. Tests cover the disabled service, OAuth replay/CSRF, moderation, private/public boundaries, quote/revision mismatch, duplicate submissions, merged-PR requirements, account deletion and rate limits. The browser QA record must state which paths were actually exercised.
+The feedback tests run the actual Worker and D1 migration in Miniflare. Only external provider responses are substituted, and unexpected external requests fail. Tests cover the disabled service, OAuth replay/CSRF, moderation, private/public boundaries, quote/revision mismatch, duplicate submissions, merged-PR requirements, account deletion and rate limits. Cleanup coverage checks all three expiring tables, preserves live records across repeated runs, and removes those records once expired. The browser QA record must state which paths were actually exercised.
 
 ## Enable a deployment
 
