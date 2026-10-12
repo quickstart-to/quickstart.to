@@ -107,7 +107,7 @@ async function initialize(root: HTMLElement) {
   function submissionAction(){return replyTarget?'reply':['highlight','discussion'].includes(field<HTMLSelectElement>('kind').value)?'annotation':'feedback';}
   function renderKind(){
     const kind=field<HTMLSelectElement>('kind');const highlight=kind.value==='highlight'&&!replyTarget;
-    kind.disabled=!!replyTarget;field<HTMLTextAreaElement>('body').required=!highlight;
+    kind.disabled=!!replyTarget;field<HTMLTextAreaElement>('body').required=!highlight;field<HTMLTextAreaElement>('body').disabled=highlight;
     field<HTMLTextAreaElement>('body').hidden=highlight;root.querySelector<HTMLLabelElement>('label[for="feedback-body"]')!.hidden=highlight;
     el('whole').textContent=replyTarget?tr('replying')+replyTarget.name:tr('whole');el('whole').hidden=!!quote.exact&&!replyTarget;
     root.querySelector('#feedback-dialog-title')!.textContent=tr(replyTarget?'replyTitle':'compose');
