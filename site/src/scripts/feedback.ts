@@ -131,7 +131,7 @@ async function initialize(root: HTMLElement) {
   function locate(item:Item){
     const result=located(item);if(!result){el('panel-status').textContent=tr('oldHint');return;}
     const parent=result.range.startContainer.parentElement!;let ancestor=parent.closest('details');while(ancestor){ancestor.open=true;ancestor=ancestor.parentElement?.closest('details')??null;}
-    panel.close();window.getSelection()?.removeAllRanges();window.getSelection()?.addRange(result.range);parent.tabIndex=-1;parent.focus({preventScroll:true});parent.scrollIntoView({block:'center'});
+    parent.tabIndex=-1;opener=parent;panel.close();window.getSelection()?.removeAllRanges();window.getSelection()?.addRange(result.range);parent.focus({preventScroll:true});parent.scrollIntoView({block:'center'});
   }
   function paint(){
     const css=CSS as unknown as {highlights?:Map<string,unknown>};
@@ -186,7 +186,7 @@ async function initialize(root: HTMLElement) {
     tab=nextTab;activeThread=id;await renderList();
     if(id){const card=panel.querySelector<HTMLElement>(`[data-thread-id="${CSS.escape(id)}"]`);if(card?.closest('[data-feedback-old]'))el<HTMLDetailsElement>('old').open=true;card?.focus();card?.scrollIntoView({block:'nearest'});}
   }
-  panel.addEventListener('close',()=>{document.body.classList.remove('annotations-open');if(opener?.isConnected)opener.focus();});
+  panel.addEventListener('close',()=>{document.body.classList.remove('annotations-open');if(opener?.isConnected)opener.focus({preventScroll:true});});
   function card(item:Item){
     const article=document.createElement('article');article.className='annotation-card';article.dataset.threadId=item.id;article.tabIndex=-1;
     article.append(textNode('p',`${item.display_name} · ${tr(item.kind as CopyKey)} · ${item.visibility==='public'?tr('public'):tr(item.visibility==='pending'?'pending':'hidden')}`));

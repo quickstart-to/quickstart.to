@@ -46,7 +46,7 @@ const { path } = Astro.props;
     <details data-feedback-old><summary data-a-i18n="old">针对旧版本的划线与反馈</summary><div data-feedback-old-list></div></details>
   </dialog>
   <dialog data-feedback-bubble class="annotation-bubble" aria-labelledby="annotation-bubble-title">
-    <h2 id="annotation-bubble-title"></h2><div data-feedback-bubble-comments></div><button type="button" data-feedback-bubble-open data-a-i18n="openThread">展开完整讨论</button><button type="button" data-feedback-bubble-close data-a-i18n="close">关闭</button>
+    <h2 id="annotation-bubble-title"></h2><div data-feedback-bubble-comments></div><div class="feedback-actions"><button type="button" data-feedback-bubble-open data-a-i18n="openThread">展开完整讨论</button><button type="button" data-feedback-bubble-close data-a-i18n="close">关闭</button></div>
   </dialog>
   <dialog data-feedback-action-dialog aria-labelledby="annotation-action-title">
     <form data-feedback-action-form><h2 id="annotation-action-title"></h2><p data-feedback-action-hint></p>
@@ -92,6 +92,9 @@ const { path } = Astro.props;
   .annotation-tabs { display: flex; flex-wrap: wrap; gap: .3rem; }
   .annotation-tabs [aria-pressed="true"] { border-color: var(--accent); font-weight: 700; }
   .feedback .annotation-bubble { position: fixed; inset: auto; margin: 0; width: min(24rem, calc(100vw - 1rem)); max-height: min(60dvh, 24rem); box-shadow: 0 8px 32px #0003; z-index: 30; }
+  .feedback .annotation-bubble[open] { display: flex; flex-direction: column; overflow: hidden; }
+  .annotation-bubble h2, .annotation-bubble .feedback-actions { flex-shrink: 0; }
+  [data-feedback-bubble-comments] { min-height: 0; overflow-y: auto; overflow-wrap: anywhere; }
   .feedback :global(.annotation-card) { border-block-end: 1px solid var(--border); padding-block: 1rem; overflow-wrap: anywhere; }
   .feedback :global(.annotation-card blockquote) { border-inline-start: 3px solid var(--accent); padding-inline-start: .8rem; }
   .feedback :global(.annotation-card p) { white-space: pre-wrap; }
