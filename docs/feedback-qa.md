@@ -64,6 +64,22 @@ The proposed production configuration now sets `FEEDBACK_ENABLED=true`, while br
 
 Remaining release work: review/merge the engineering PR, verify its exact live revision, then perform the real production account/report/export/delete smoke test and production scheduled-cleanup check using the [activation and rollback procedure](deploy.md#feedback-activation-and-rollback). Email and independent reader acceptance remain separate, uncompleted gates.
 
+## Production activation and acceptance — 2026-10-12
+
+Merged [PR #11](https://github.com/quickstart-to/quickstart.to/pull/11) at 01:51:03 UTC. Main-branch CI and the Cloudflare production build passed. The live config returned the exact merged revision `f934b24f95721ef0d61e3b90d24f4da2d5e42f3b`, `enabled=true`, the production Turnstile site key and `email_enabled=false`. Inspected the live quickstart and privacy page; reading remains available. PR #12 remains unmerged.
+
+Used ego-browser and the actual production providers for an explicitly synthetic acceptance report:
+
+- Completed the login Turnstile challenge and GitHub identity/email authorization. GitHub's authorization button required a human browser interaction; after the maintainer authorized, the real PKCE callback returned to production with the account authenticated and the saved draft restored.
+- Completed a new submission challenge and submitted the report with consent and a 91-character paragraph quotation. It appeared in the personal list as pending; the public list contained zero reports before moderation.
+- Retrieved the report using the actual operator CLI, published it and resolved it against already merged PR #11. The personal view displayed the result and PR link. “定位原文” selected the complete original 91-character paragraph. The synthetic resolution explicitly states that PR #11 predates the report and does not represent a reader-triggered correction.
+- Downloaded the actual JSON export through account settings. It contained the account fields and exactly the synthetic report, quotation, resolved status and PR #11 link. Removed the downloaded personal-data copy after checking it.
+- Completed the separate deletion challenge and used the real deletion interface. The page reported deletion, `/api/me` became anonymous and the public list returned to zero. Scoped D1 reads confirmed zero remaining test-account, session, report, resolution and outbox rows. No unrelated reader records were deleted.
+
+The production schedules API reports the hourly trigger was created at **01:52:05.545819 UTC**. At 02:03 UTC, the private live tail had no scheduled event and all three overdue fixture rows remained alongside their live controls. The 02:00 slot was only eight minutes after trigger creation, within the documented propagation window; this is not a passed cleanup check or an established dispatch failure. The production frequency remains `0 * * * *`; the next acceptance slot is 03:00 UTC. Synthetic cleanup fixtures remain in place for that observation.
+
+Production scheduled cleanup remains pending. Email delivery, independent reader acceptance and content beta promotion are separate, uncompleted gates.
+
 ## Local validation — 2026-10-10
 
 ## What was exercised
