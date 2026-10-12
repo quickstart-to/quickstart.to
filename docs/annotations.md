@@ -1,6 +1,6 @@
 # Formal annotations and discussions
 
-This engineering change implements the approved reading interaction in [design §6](design.md#6-账号与互动体系). The [full delivery checklist](product-delivery.md) remains the acceptance baseline. This is an unmerged change; production at `ddb2b9a` still uses the earlier report interface. No topic content or verification dates change.
+This engineering change implements the approved reading interaction in [design §6](design.md#6-账号与互动体系). The [full delivery checklist](product-delivery.md) remains the acceptance baseline. PR #15 is merged and production is verified at `f01731305b626dfb80b4c07fe66c8dcc8c24895d`. No topic content or verification dates change.
 
 ## Reader behavior
 
@@ -80,4 +80,14 @@ Production migration and real-provider acceptance are release gates, not satisfi
 - Exported production D1 privately before applying `0002_annotations.sql`; 16 migration statements completed successfully. Exported again and loaded both dumps into SQLite. `users`, `sessions`, `feedback`, `resolutions` and `email_outbox` compared identically row-for-row, with zero rows in each before and after. Populated historical preservation remains covered by the seeded automated test. Private backups and signed export URLs are outside Git with operator-only permissions.
 - The previous production Worker remained at `ddb2b9a` during the additive upgrade. No production annotation submissions have been made at this stage.
 
-Outstanding release gates: exact merged-production revision and production annotation lifecycle acceptance; independent readers. Other P2/P3 capabilities remain in the complete product checklist. This PR is ready for code review, not a claim that production or P2 is accepted.
+## Production acceptance — 2026-10-12
+
+- PR #15 merged as `f01731305b626dfb80b4c07fe66c8dcc8c24895d`; main CI and Workers Build passed. The live `/api/feedback/config` returned that exact revision with feedback enabled and email disabled. Reading and the revised `/privacy` page remained available.
+- Actual GitHub OAuth returned successfully and restored the selected quotation and discussion draft. The new consenting maintainer site's account had zero prior feedback/annotations/replies/likes/reports. All reader writes below used real production Turnstile; no synthetic widget or provider bypass was installed.
+- A clearly labelled synthetic discussion stayed pending, visible to its owner and absent publicly. After scoped D1 publication, its first reply stayed owner-only pending and public reply count remained zero. Scoped publication yielded one distinct reader and two public comments. A second pending reply preserved its explicit `reply_to` target and did not increase public counts. Root like/unlike produced 1/0; a public reply like produced 1.
+- A report temporarily hid the root and emptied public summary/cache results. Scoped D1 changes restored only the labelled test root, marked its report reviewed and published only its first test reply, advancing the cache epoch. These operations establish production hiding/restoration behavior, not real-provider admin CLI acceptance; the admin API/CLI path remains covered locally.
+- Highlight-only creation succeeded with an empty body even after a two-character draft. After scoped publication of that same author's second root, the public list contained two roots but summary and passage bubble still counted one distinct reader, with two public comments. Personal highlighting and locate-passage focus worked. The 390px production drawer fitted the viewport without horizontal overflow; its screenshot was inspected privately because it contains the maintainer username. Removing the owned highlight through real Turnstile reduced public roots to one.
+- The actual browser JSON download included one annotation, two replies, one current reply like and one private report (zero legacy feedback). The explicit reply target was present. The download is private and outside Git.
+- Final production account deletion is pending: Turnstile presented an interactive human-verification challenge before confirmation. The browser was handed to the maintainer; no verification prompt was automated, and the account and remaining synthetic records have not yet been removed. Do not claim production deletion acceptance or clean test state until the challenge, deletion and scoped D1/public-cache checks finish.
+
+Independent readers are still outstanding. Other P2/P3 capabilities remain in the complete product checklist; this release does not establish P2 completion.
