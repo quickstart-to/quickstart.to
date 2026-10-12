@@ -22,6 +22,14 @@ GitHub Actions `CI` runs the same validate + build on every PR so problems show 
 | Root directory | `/` |
 | Node version | from `.node-version` (22) |
 
+## Confirm the live release before the next merge
+
+A successful build check is not the final production state. After each main-branch merge, wait for its Workers Build to finish, then read `https://quickstart.to/api/feedback/config` and require `revision` to equal the merged commit. Also inspect a distinctive changed page. The config endpoint exposes the revision even while feedback is disabled. Do not merge the next release until this check passes.
+
+On 2026-10-11, the newer `a280f27` build completed before the older `70c4410` build, and a subsequent live check returned the older revision with its older pricing page. This establishes an out-of-order release outcome; the build checks alone did not reveal it. If it recurs, inspect active build/deployment history, rebuild and deploy the current merged main commit from a clean checkout, then verify the live revision again. Do not deploy an unmerged feature branch as the repair.
+
+Serial merges with an exact live-revision check are the current operational safeguard, not a guarantee that the provider prevents stale deployments. Before allowing concurrent releases, add and verify deployment ordering or stale-build protection in the hosting pipeline; a pre-deploy revision check alone can still race with another deployment.
+
 ## Domains
 
 | Host | Behavior |
@@ -42,6 +50,49 @@ GitHub Actions `CI` runs the same validate + build on every PR so problems show 
 pnpm deploy   # requires `wrangler login` on the maintainer machine
 ```
 
-## P2 additions
+## Feedback environments
 
-D1 database, Turnstile keys, OAuth secrets and email credentials are added as Worker bindings/secrets in `site/wrangler.jsonc` and via `wrangler secret put` — never committed.
+`site/wrangler.jsonc` declares two independent D1 bindings. Database IDs and OAuth client IDs are public configuration; credentials are Worker secrets and never committed.
+
+| Deployment | Database | OAuth callback | Availability |
+|---|---|---|---|
+| Production (`--env ''`) | `quickstart-feedback` | `https://quickstart.to/api/auth/callback` | Controlled by the top-level `FEEDBACK_ENABLED` |
+| Staging (`--env staging`) | `quickstart-feedback-staging` | `https://quickstart-to-feedback-staging.rewriteso.workers.dev/api/auth/callback` | Real-provider acceptance; synthetic reports only |
+| Branch/PR preview | None | None | Always disabled in `previews.vars` |
+
+Production and staging have separate GitHub OAuth apps, hostname-bound managed Turnstile widgets, admin tokens and rate-limit salts. Neither has email sending configured. Preview bindings come from the `previews` block, not the production bindings; do not add production credentials through the dashboard's preview base configuration or `wrangler preview secret`.
+
+On a machine with multiple Cloudflare accounts, set `CLOUDFLARE_ACCOUNT_ID` to the account owning this project's Worker before running Wrangler. Keep that operator setting outside the repository.
+
+```sh
+# Build once before deploying the separate staging Worker.
+pnpm build
+pnpm exec wrangler d1 migrations apply quickstart-feedback-staging --remote --env staging --config site/wrangler.jsonc
+pnpm exec wrangler deploy --env staging --config site/wrangler.jsonc
+
+# Production schema migrations are explicit; Workers Builds does not run them.
+pnpm exec wrangler d1 migrations apply quickstart-feedback --remote --env '' --config site/wrangler.jsonc
+```
+
+Both databases received `0001_feedback.sql` on 2026-10-11. Later migrations require an export and a deployment plan. Both environments declare hourly cleanup; acceptance of actual scheduled execution is recorded separately in [feedback QA](feedback-qa.md).
+
+After adding or changing a Cron Trigger, allow for propagation before diagnosing a missed invocation: Cloudflare documents up to 15 minutes ([Cron Triggers](https://developers.cloudflare.com/workers/configuration/cron-triggers/), read 2026-10-11). For staging acceptance, insert uniquely named synthetic expired session/OAuth/rate-limit rows and matching unexpired controls, observe a real scheduled invocation, then confirm only the expired rows disappeared. A temporary faster staging schedule can shorten this check; restore the committed hourly schedule afterward and remove remaining synthetic fixtures. Keep any live tail private and retain only the invocation outcome and aggregate counts in the acceptance record.
+
+Workers observability and Logpush are explicitly disabled in the deployment configuration. Temporary operator tails can still contain request metadata and must remain private. The production D1 dashboard showed a 30-day Time Travel window on 2026-10-11; the privacy page states that dated configuration and does not promise immediate erasure of historical copies. Re-check the published statement when changing the hosting plan or backup settings.
+
+## Feedback activation and rollback
+
+Prepare activation in the existing engineering PR after real staging cleanup passes. Setting `FEEDBACK_ENABLED=true` in that PR is a proposed release configuration; production remains closed until the reviewed PR is merged and its exact revision is deployed. Keep content PRs separate and serialize releases using the live-revision check above.
+
+Before merge, require the dated staging acceptance record, passing CI, independent production OAuth/Turnstile configuration, all five required production secrets, applied D1 migrations and a production dry-run with the production database. The OAuth callback must be exactly `https://quickstart.to/api/auth/callback`; the production Turnstile widget must allow `quickstart.to`. These configuration checks do not replace the following production smoke test.
+
+After merge and deployment:
+
+1. Require the live config revision to equal the merged commit, `enabled=true`, the production site key and `email_enabled=false`. Inspect reading and `/privacy` as well as the feedback controls. Branch/PR previews must still return disabled configuration and have no database binding.
+2. In ego-browser, use a consenting test account for real GitHub login and Turnstile submission. Label the report as a synthetic acceptance test; verify pending visibility and its personal result. Exercise operator triage/resolution against an already merged PR, stating explicitly if that PR predates the test report. Do not claim a reader-triggered correction.
+3. Export and delete the synthetic account through the real interface. Confirm only its account, sessions, reports, resolutions and outbox rows are gone; do not delete unrelated reader data. Record aggregate outcomes without account details or credentials.
+4. Observe production's hourly scheduled execution after activation. Check that overdue session/OAuth/rate-limit rows are removed and live controls survive, using uniquely named synthetic fixtures. Retain only invocation outcomes and scoped counts. A successful invocation while feedback is disabled is insufficient: `maintenance()` returns without work unless the full feedback configuration is ready.
+
+If the live revision, provider flow, privacy boundary or cleanup check fails, close feedback promptly by deploying the current merged revision with `FEEDBACK_ENABLED=false`, then require the config endpoint to report disabled and `/api/me` to return 503. Keep static reading available and retain D1 data; never roll back by dropping the database. Record the temporary override and prepare the matching reviewed configuration change before the next deployment. With feedback disabled, maintenance is also inactive; resume and verify overdue cleanup when restoring the service.
+
+Scheduled deletes already select all expired records, so a later successful run can recover overdue cleanup and repeat runs leave live records intact. This is recovery behavior, not evidence that Cron never misses a run. During activation acceptance, inspect Cron history and overdue counts; no automatic missed-run alert is currently installed. Email stays unavailable until a sender and actual delivery/retry acceptance are separately completed.
