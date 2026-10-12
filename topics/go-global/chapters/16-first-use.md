@@ -3,7 +3,7 @@ title: 首次使用体验：让陌生人独立完成一件事
 description: 从入口、样本和输入准备走到第一份可用输出，展开空态、错误恢复、求助和任务观察；用可操作的报告样本区分完成演示、独立使用与真正用上。
 order: 5
 volatility: medium
-last_verified: 2026-10-10
+last_verified: 2026-10-11
 slug: first-use
 ---
 
